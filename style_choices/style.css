@@ -104,6 +104,22 @@ input[type="color"] {
   width: 100%;
 }
 
+#settings > div {
+  margin-left: var(--marginLG);
+}
+
+#settings > div.flex-wrap button {
+  margin-bottom: var(--marginSM);
+}
+
+#modelmerger_interp_description {
+  color: var(--colorTextTertiary);
+  padding: var(--paddingSM);
+  margin: var(--margin);
+  background-color: var(--colorFillQuaternary) !important;
+  border-color: transparent !important;
+}
+
 /* Favicon workaround */
 .icon-container {
   background-image: var(--favicon);
@@ -340,6 +356,23 @@ span.gr-box.gr-text-input {
   background: var(--colorFill);
 }
 
+[id$="2img_subseed_show"] {
+  border: 1px solid var(--colorFill);
+  color: var(--colorText);
+  transition: all 0.3s ease-in-out;
+  border-radius: var(--borderRadius) !important;
+  backdrop-filter: blur(24px);
+  padding: 8px;
+  height: 36px;
+  margin: 0;
+  font-size: var(--fontSize);
+  background: var(--colorFillSecondary);
+}
+
+[id$="2img_subseed_row"] {
+  padding: var(--padding) 0;
+}
+
 /* Gradio app font */
 /*----------------------------------------------------------------*/
 
@@ -550,7 +583,7 @@ div.svelte-10ogue4 .flex.row.w-full.flex-wrap.gap-4 > button {
 
 /* Galleries */
 /*----------------------------------------------------------------*/
-div.svelte-10ogue4 .gr-block.gr-box.relative.w-full.border-dashed,
+
 [id$="_gallery"].gr-block.gr-box,
 #img2img_img2img_tab,
 #img2img_img2img_sketch_tab,
@@ -567,6 +600,16 @@ div.svelte-10ogue4 .gr-block.gr-box.relative.w-full.border-dashed,
   box-shadow: 0 0 0 0.2em transparent;
   border: 2px solid var(--colorBorder) !important;
   padding: var(--paddingXS) !important;
+  box-sizing: content-box;
+}
+
+[id$="2img_script_container"] [data-testid="image"] {
+  border-radius: var(--borderRadius) !important;
+  background: var(--galleryBackground) !important;
+  transition: all 1s ease-in-out;
+  box-shadow: 0 0 0 0.2em transparent;
+  border: 2px solid var(--colorBorder) !important;
+  box-sizing: content-box;
 }
 
 #img2img_batch_tab,
@@ -979,6 +1022,21 @@ input[type="radio"]:checked + span {
 .dark .gr-block.gr-box {
   row-gap: 1.1ch;
   padding: var(--padding) 0;
+}
+#txt2img_hires_steps,
+#txt2img_denoising_strength,
+#txt2img_hr_scale,
+#txt2img_hr_resize_x,
+#txt2img_hr_resize_y {
+  padding: var(--padding) 0 !important;
+}
+
+#txtimg_hr_finalres {
+  margin-left: 8px;
+  display: inline-block;
+  padding: 16px;
+  background-color: var(--colorFillQuaternary);
+  color: var(--colorPrimary);
 }
 
 #tab_modelmerger .gr-input-label,
