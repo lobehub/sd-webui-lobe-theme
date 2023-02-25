@@ -2,7 +2,7 @@
 
 ## Screenshots
 
-
+![](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/blob/main/assets/screenshot.png?raw=true)
 
 ## Installation
 As an extension (recommended)
