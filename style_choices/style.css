@@ -839,10 +839,23 @@ input[type="radio"]:checked + span {
 }
 
 #txt2img_interrupt,
+#img2img_interrup {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+#txt2img_skip,
+#img2img_skip {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+#txt2img_interrupt,
 #img2img_interrupt,
 #txt2img_skip,
 #img2img_skip {
-  background: var(--colorBgContainer);
+  background: var(--colorError);
+  border-color: var(--colorErrorBorder);
   z-index: 11;
   transition: all 0.3s ease-in-out;
 }
@@ -851,7 +864,8 @@ input[type="radio"]:checked + span {
 #img2img_interrupt:hover,
 #txt2img_skip:hover,
 #img2img_skip:hover {
-  background: var(--colorFill);
+  background: var(--colorErrorHover);
+  border-color: var(--colorErrorBorderHover);
   color: var(--colorText);
   z-index: 11;
 }
