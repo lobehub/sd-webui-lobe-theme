@@ -1035,7 +1035,6 @@ input[type="radio"]:checked + span {
   margin-left: 8px;
   display: inline-block;
   padding: 16px;
-  background-color: var(--colorFillQuaternary);
   color: var(--colorPrimary);
 }
 
