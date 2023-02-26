@@ -105,7 +105,7 @@ input[type="color"] {
 }
 
 #settings > div {
-  margin-left: var(--marginLG);
+  margin-left: 200px;
 }
 
 #settings > div.flex-wrap button {
@@ -260,6 +260,10 @@ option {
 .dark ul.dark\:bg-gray-700 {
   background: var(--colorBgElevated) !important;
   box-shadow: var(--boxShadow) !important;
+}
+
+#setting_CLIP_stop_at_last_layers {
+  display: block !important;
 }
 
 /* Prompt Translator */
