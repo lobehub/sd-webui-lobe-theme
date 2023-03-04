@@ -531,29 +531,62 @@ span.gr-box.gr-text-input {
 }
 
 #script_list select {
-  margin-top: var(--marginXL);
+  margin: var(--margin) 0;
 }
 
 [id$="_seed_row"] {
   padding: 0;
 }
 
-div.svelte-10ogue4 > .p-3.border.border-gray-200 {
+[id$="_row_aspect_ratio"],
+[id$="_row_resolutions"] {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  width: 150px;
+}
+
+[id$="_script_container"] > div.svelte-10ogue4 {
   background-color: var(--colorFillTertiary) !important;
   border-color: transparent !important;
   transition: all 0.3s ease-in-out;
   margin-bottom: var(--marginSM);
+  margin-top: 0;
+  padding: var(--padding);
+  border-radius: var(--borderRadius);
 }
 
-div.svelte-10ogue4 .flex.row.w-full.flex-wrap.gap-4 {
+[id$="_script_container"] > div .p-3.border.border-gray-200 {
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+[id$="_script_container"].svelte-10ogue4 > * + *:not(.absolute),
+[id$="_script_container"].svelte-10ogue4 > *:not(.absolute) {
+  border-radius: var(--borderRadius) !important;
+}
+
+[id$="_script_container"].svelte-10ogue4
+  > div
+  > div
+  .flex.row.w-full.flex-wrap.gap-4 {
   margin-top: var(--marginLG);
 }
 
-div.svelte-10ogue4 .flex.row.w-full.flex-wrap.gap-4 > div {
+[id$="_script_container"].svelte-10ogue4
+  > div
+  > div
+  .flex.row.w-full.flex-wrap.gap-4
+  > div {
   padding: 0 !important;
 }
 
-div.svelte-10ogue4 .flex.row.w-full.flex-wrap.gap-4 > button {
+[id$="_script_container"].svelte-10ogue4
+  > div
+  > div
+  .flex.row.w-full.flex-wrap.gap-4
+  > button {
   margin: 0 !important;
 }
 
@@ -587,6 +620,10 @@ div.svelte-10ogue4 .flex.row.w-full.flex-wrap.gap-4 > button {
 
 /* Galleries */
 /*----------------------------------------------------------------*/
+
+#pnginfo_image {
+  max-width: 90%;
+}
 
 [id$="_gallery"].gr-block.gr-box,
 #img2img_img2img_tab,
@@ -886,7 +923,7 @@ input[type="radio"]:checked + span {
 }
 
 #txt2img_interrupt,
-#img2img_interrup {
+#img2img_interrupt {
   border-top-right-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
 }
@@ -1444,3 +1481,13 @@ add this to webui.py besides prevent_thread_lock=True, ->
 favicon_path="favicon.svg",
 
 */
+
+div.svelte-10ogue4 > * + *:not(.absolute),
+div.svelte-10ogue4 > *:not(.absolute) {
+  border: unset !important;
+}
+
+#txt2img_styles > label > div,
+#img2img_styles > label > div {
+  min-height: 32px !important;
+}
