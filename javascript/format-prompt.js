@@ -4,7 +4,7 @@ class Converter {
   }
 
   static convertStr(srt) {
-    return srt.replace(/：/g, ":").replace(/（/g, "(").replace(/）/g, ")");
+    return srt.replace(/：/g, ':').replace(/（/g, '(').replace(/）/g, ')');
   }
 
   static convertStr2Array(str) {
@@ -22,9 +22,9 @@ class Converter {
           arr.push(str.substring(start, match.index));
           start = match.index;
         }
-        if (match[0] === "(" || match[0] === "<" || match[0] === "[") {
+        if (match[0] === '(' || match[0] === '<' || match[0] === '[') {
           depth++;
-        } else if (match[0] === ")" || match[0] === ">" || match[0] === "]") {
+        } else if (match[0] === ')' || match[0] === '>' || match[0] === ']') {
           depth--;
         }
         if (depth === 0) {
@@ -44,7 +44,7 @@ class Converter {
       let start = 0;
       let inBracket = false;
       for (let i = 0; i < str.length; i++) {
-        if (str[i] === "," && !inBracket) {
+        if (str[i] === ',' && !inBracket) {
           arr.push(str.substring(start, i).trim());
           start = i + 1;
         } else if (str[i].match(bracketRegex)) {
@@ -59,7 +59,7 @@ class Converter {
     const cleanStr = (str) => {
       let arr = splitByBracket(str);
       arr = arr.flatMap((s) => splitByComma(s));
-      return arr.filter((s) => s !== "");
+      return arr.filter((s) => s !== '');
     };
 
     return cleanStr(str)
@@ -69,9 +69,9 @@ class Converter {
       })
       .filter(Boolean)
       .sort((a, b) => {
-        return a.includes("<") && !b.includes("<")
+        return a.includes('<') && !b.includes('<')
           ? 1
-          : b.includes("<") && !a.includes("<")
+          : b.includes('<') && !a.includes('<')
           ? -1
           : 0;
       });
@@ -79,17 +79,17 @@ class Converter {
 
   static convertArray2Str(array) {
     const newArray = array.map((item) => {
-      if (item.includes("<")) return item;
+      if (item.includes('<')) return item;
       const newItem = item
-        .replace(/\s+/g, " ")
-        .replace([/\，|\.|\。/g, ","])
-        .replace([/\“|\‘|\”|\"|\\|\//g, ""])
-        .replace(/\, /g, ",")
-        .replace(/\,\,/g, ",")
-        .replace(/\,/g, ", ");
-      return Converter.convertStr2Array(newItem).join(", ");
+        .replace(/\s+/g, ' ')
+        .replace([/\，|\.|\。/g, ','])
+        .replace([/\“|\‘|\”|\"|\\|\//g, ''])
+        .replace(/\, /g, ',')
+        .replace(/\,\,/g, ',')
+        .replace(/\,/g, ', ');
+      return Converter.convertStr2Array(newItem).join(', ');
     });
-    return newArray.join(", ");
+    return newArray.join(', ');
   }
 
   static convert(input) {
@@ -105,8 +105,8 @@ class Converter {
     const square_bracket_multiplier = 1 / 1.05;
 
     const brackets = {
-      "{": { stack: [], multiplier: curly_bracket_multiplier },
-      "[": { stack: [], multiplier: square_bracket_multiplier },
+      '{': { stack: [], multiplier: curly_bracket_multiplier },
+      '[': { stack: [], multiplier: square_bracket_multiplier },
     };
 
     function multiply_range(start_position, multiplier) {
@@ -120,8 +120,8 @@ class Converter {
 
       if (word in brackets) {
         brackets[word].stack.push(res.length);
-      } else if (word == "}" || word == "]") {
-        const bracket = brackets[word === "}" ? "{" : "["];
+      } else if (word == '}' || word == ']') {
+        const bracket = brackets[word === '}' ? '{' : '['];
         if (bracket.stack.length > 0) {
           multiply_range(bracket.stack.pop(), bracket.multiplier);
         }
@@ -137,7 +137,7 @@ class Converter {
     }
 
     if (res.length == 0) {
-      res = [["", 1.0]];
+      res = [['', 1.0]];
     }
 
     let i = 0;
@@ -150,7 +150,7 @@ class Converter {
       }
     }
 
-    let result = "";
+    let result = '';
     for (const [word, value] of res) {
       result += value === 1.0 ? word : `(${word}:${value.toString()})`;
     }
@@ -158,17 +158,17 @@ class Converter {
   }
 
   static dispatchInputEvent(target) {
-    let inputEvent = new Event("input");
-    Object.defineProperty(inputEvent, "target", { value: target });
+    let inputEvent = new Event('input');
+    Object.defineProperty(inputEvent, 'target', { value: target });
     target.dispatchEvent(inputEvent);
   }
 
   static onClickConvert(type) {
-    const default_prompt = "";
-    const default_negative = "";
+    const default_prompt = '';
+    const default_negative = '';
 
     const prompt = gradioApp().querySelector(
-      `#${type}_prompt > label > textarea`
+      `#${type}_prompt > label > textarea`,
     );
     const result = Converter.convert(prompt.value);
     prompt.value =
@@ -177,7 +177,7 @@ class Converter {
         : result;
     Converter.dispatchInputEvent(prompt);
     const negprompt = gradioApp().querySelector(
-      `#${type}_neg_prompt > label > textarea`
+      `#${type}_neg_prompt > label > textarea`,
     );
     const negResult = Converter.convert(negprompt.value);
     negprompt.value =
@@ -190,12 +190,12 @@ class Converter {
   }
 
   static createButton(id, innerHTML, onClick) {
-    const button = document.createElement("button");
+    const button = document.createElement('button');
     button.id = id;
-    button.type = "button";
+    button.type = 'button';
     button.innerHTML = innerHTML;
-    button.className = "lg secondary gradio-button tool svelte-1ipelgc";
-    button.addEventListener("click", onClick);
+    button.className = 'lg secondary gradio-button tool svelte-1ipelgc';
+    button.addEventListener('click', onClick);
     return button;
   }
 
@@ -206,14 +206,14 @@ class Converter {
     if (!generateBtn || !actionsColumn || nai2local) return;
     const convertBtn = Converter.createButton(
       `${type}_nai2localconvert`,
-      "🪄",
-      () => Converter.onClickConvert(type)
+      '🪄',
+      () => Converter.onClickConvert(type),
     );
     actionsColumn.parentNode.append(convertBtn);
   }
 }
 
 onUiUpdate(() => {
-  Converter.addPromptButton("txt2img");
-  Converter.addPromptButton("img2img");
+  Converter.addPromptButton('txt2img');
+  Converter.addPromptButton('img2img');
 });

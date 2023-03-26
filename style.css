@@ -170,18 +170,18 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
   -webkit-appearance: button;
 }
 /**
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -189,9 +189,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 /**
@@ -236,8 +236,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type="checkbox"],
-[type="radio"] {
+[type='checkbox'],
+[type='radio'] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -246,15 +246,15 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 /**
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type="search"] {
+[type='search'] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -263,7 +263,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type="search"]::-webkit-search-decoration {
+[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 /**
@@ -367,9 +367,9 @@ template {
   --paddingXL: calc(8px * var(--paddingBase));
   /* Shadow */
   --boxShadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08),
-  0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+    0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
   --boxShadowSecondary: 0 6px 16px 0 rgba(0, 0, 0, 0.08),
-  0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+    0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
   /* Border */
   --borderRadiusBase: 2;
   --borderRadiusXS: calc(1px * var(--borderRadiusBase));
@@ -377,9 +377,10 @@ template {
   --borderRadius: calc(3px * var(--borderRadiusBase));
   --borderRadiusLG: calc(4px * var(--borderRadiusBase));
   /* Other */
-  --logo: url("https://gw.alipayobjects.com/zos/bmw-prod/9ecb2822-1592-4cb0-a087-ce0097fef2ca.svg");
-  --favicon: url("https://gw.alipayobjects.com/zos/bmw-prod/51a51720-8a30-4430-b6c9-be5712364f04.svg");
-  --galleryBackground: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACPTkDJAAAAZUlEQVRIDe2VMQoAMAgDa9/g/1/oIzrpZBCh2dLFkkoDF0Fz99OdiOjks+2/7S8fRRmMMIVoRGSoYzvvqF8ZIMKlC1GhQBc6IkPzq32QmdAzkEGihpWOSPsAss8HegYySNSw0hE9WQ4StafZFqkAAAAASUVORK5CYII=) 0% 0% / 20px;
+  --logo: url('https://gw.alipayobjects.com/zos/bmw-prod/9ecb2822-1592-4cb0-a087-ce0097fef2ca.svg');
+  --favicon: url('https://gw.alipayobjects.com/zos/bmw-prod/51a51720-8a30-4430-b6c9-be5712364f04.svg');
+  --galleryBackground: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACPTkDJAAAAZUlEQVRIDe2VMQoAMAgDa9/g/1/oIzrpZBCh2dLFkkoDF0Fz99OdiOjks+2/7S8fRRmMMIVoRGSoYzvvqF8ZIMKlC1GhQBc6IkPzq32QmdAzkEGihpWOSPsAss8HegYySNSw0hE9WQ4StafZFqkAAAAASUVORK5CYII=)
+    0% 0% / 20px;
 }
 :root {
   /* Colors */
@@ -429,10 +430,10 @@ template {
   --link-text-color-visited: var(--secondary-500);
   --loader-color: var(--color-accent);
   /* Typography */
-  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-mono: "Hack", "IBM Plex Mono", "ui-monospace", "Consolas", monospace;
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-mono: 'Hack', 'IBM Plex Mono', 'ui-monospace', 'Consolas', monospace;
   --prose-header-text-weight: 600;
   --prose-text-weight: 400;
   --section-header-text-weight: 400;
@@ -500,8 +501,10 @@ template {
   --block-label-background-fill: var(--background-fill-primary);
   --block-label-border-color: var(--border-color-primary);
   --block-label-padding: var(--spacing-sm) var(--spacing-lg);
-  --block-label-radius: calc(var(--radius-lg) - 1px) 0 calc(var(--radius-lg) - 1px) 0;
-  --block-label-right-radius: 0 calc(var(--radius-lg) - 1px) 0 calc(var(--radius-lg) - 1px);
+  --block-label-radius: calc(var(--radius-lg) - 1px) 0
+    calc(var(--radius-lg) - 1px) 0;
+  --block-label-right-radius: 0 calc(var(--radius-lg) - 1px) 0
+    calc(var(--radius-lg) - 1px);
   --block-label-text-color: var(--neutral-500);
   --block-label-text-size: var(--text-sm);
   --block-padding: var(--spacing-xl) calc(var(--spacing-xl) + 2px);
@@ -536,7 +539,9 @@ template {
   --button-primary-text-color: var(--primary-600);
   --button-primary-text-color-hover: var(--button-primary-text-color);
   --button-secondary-background-fill: var(--neutral-200);
-  --button-secondary-background-fill-hover: var(--button-secondary-background-fill);
+  --button-secondary-background-fill-hover: var(
+    --button-secondary-background-fill
+  );
   --button-secondary-border-color: var(--neutral-200);
   --button-secondary-border-color-hover: var(--button-secondary-border-color);
   --button-secondary-text-color: var(--neutral-700);
@@ -559,8 +564,12 @@ template {
   --checkbox-border-radius: var(--radius-sm);
   --checkbox-border-width: var(--input-border-width);
   --checkbox-label-background-fill: var(--button-secondary-background-fill);
-  --checkbox-label-background-fill-hover: var(--button-secondary-background-fill-hover);
-  --checkbox-label-background-fill-selected: var(--checkbox-label-background-fill);
+  --checkbox-label-background-fill-hover: var(
+    --button-secondary-background-fill-hover
+  );
+  --checkbox-label-background-fill-selected: var(
+    --checkbox-label-background-fill
+  );
   --checkbox-label-border-color: var(--border-color-primary);
   --checkbox-label-border-color-hover: var(--checkbox-label-border-color);
   --checkbox-label-border-width: var(--input-border-width);
@@ -642,10 +651,10 @@ template {
   --color-accent-soft: var(--neutral-700);
   --loader-color: var(--color-accent);
   /* Typography */
-  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-mono: "Hack", "IBM Plex Mono", "ui-monospace", "Consolas", monospace;
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-mono: 'Hack', 'IBM Plex Mono', 'ui-monospace', 'Consolas', monospace;
   --prose-header-text-weight: 600;
   --prose-text-weight: 400;
   --section-header-text-weight: 400;
@@ -715,8 +724,10 @@ template {
   --block-title-text-color: var(--neutral-200);
   --block-info-text-size: var(--text-sm);
   --block-label-padding: var(--spacing-sm) var(--spacing-lg);
-  --block-label-radius: calc(var(--radius-lg) - 1px) 0 calc(var(--radius-lg) - 1px) 0;
-  --block-label-right-radius: 0 calc(var(--radius-lg) - 1px) 0 calc(var(--radius-lg) - 1px);
+  --block-label-radius: calc(var(--radius-lg) - 1px) 0
+    calc(var(--radius-lg) - 1px) 0;
+  --block-label-right-radius: 0 calc(var(--radius-lg) - 1px) 0
+    calc(var(--radius-lg) - 1px);
   --block-label-text-size: var(--text-sm);
   --block-padding: var(--spacing-xl) calc(var(--spacing-xl) + 2px);
   --block-radius: var(--radius-lg);
@@ -747,7 +758,9 @@ template {
   --button-primary-border-color-hover: var(--button-primary-border-color);
   --button-primary-text-color-hover: var(--button-primary-text-color);
   --button-secondary-background-fill: var(--neutral-600);
-  --button-secondary-background-fill-hover: var(--button-secondary-background-fill);
+  --button-secondary-background-fill-hover: var(
+    --button-secondary-background-fill
+  );
   --button-secondary-border-color: var(--neutral-600);
   --button-secondary-border-color-hover: var(--button-secondary-border-color);
   --button-secondary-text-color-hover: var(--button-secondary-text-color);
@@ -771,8 +784,12 @@ template {
   --checkbox-border-color-selected: var(--secondary-600);
   --checkbox-border-width: var(--input-border-width);
   --checkbox-label-background-fill: var(--button-secondary-background-fill);
-  --checkbox-label-background-fill-hover: var(--button-secondary-background-fill-hover);
-  --checkbox-label-background-fill-selected: var(--checkbox-label-background-fill);
+  --checkbox-label-background-fill-hover: var(
+    --button-secondary-background-fill-hover
+  );
+  --checkbox-label-background-fill-selected: var(
+    --checkbox-label-background-fill
+  );
   --checkbox-label-border-color: var(--border-color-primary);
   --checkbox-label-border-color-hover: var(--checkbox-label-border-color);
   --checkbox-label-border-width: var(--input-border-width);
@@ -817,7 +834,7 @@ template {
   align-items: center;
 }
 #quicksettings:before {
-  content: "";
+  content: '';
   display: block;
   background: var(--logo) no-repeat;
   width: 129px;
@@ -828,7 +845,7 @@ template {
   margin-top: 12px;
 }
 #quicksettings:after {
-  content: "";
+  content: '';
   display: block;
   position: fixed;
   width: 100vw;
@@ -875,48 +892,48 @@ template {
   border: none;
   border-bottom: 2px solid var(--colorPrimary) !important;
 }
-input[type="range"] {
+input[type='range'] {
   -webkit-appearance: none !important ;
   background: transparent !important;
 }
-input[type="range"]:focus {
+input[type='range']:focus {
   outline: none !important;
 }
-input[type="range"]::-webkit-slider-runnable-track {
+input[type='range']::-webkit-slider-runnable-track {
   cursor: pointer !important;
   height: 6px !important;
   border-radius: 3px !important;
   background: var(--colorFill) !important;
   opacity: 0.6 !important;
 }
-input[type="range"]:hover::-webkit-slider-runnable-track {
+input[type='range']:hover::-webkit-slider-runnable-track {
   background: var(--colorPrimary) !important;
   opacity: 1 !important;
   transition: all 0.2s ease-in-out;
 }
-input[type="range"]::-moz-range-track {
+input[type='range']::-moz-range-track {
   cursor: pointer !important;
   height: 6px !important;
   border-radius: 3px !important;
   background: var(--colorPrimary) !important;
 }
-input[type="range"]:hover::-moz-range-track {
+input[type='range']:hover::-moz-range-track {
   background: var(--colorPrimary) !important;
   transition: all 0.2s ease-in-out;
 }
-input[type="range"]::-ms-fill-upper,
-input[type="range"]::-ms-fill-lower {
+input[type='range']::-ms-fill-upper,
+input[type='range']::-ms-fill-lower {
   cursor: pointer !important;
   height: 6px !important;
   border-radius: 3px !important;
   background: var(--colorPrimary) !important;
 }
-input[type="range"]:hover::-ms-fill-upper,
-input[type="range"]:hover::-ms-fill-lower {
+input[type='range']:hover::-ms-fill-upper,
+input[type='range']:hover::-ms-fill-lower {
   background: var(--colorBgElevated) !important;
   transition: all 0.2s ease-in-out;
 }
-input[type="range"]::-webkit-slider-thumb {
+input[type='range']::-webkit-slider-thumb {
   border: 2px solid var(--colorText) !important;
   height: 16px !important;
   width: 16px !important;
@@ -926,12 +943,12 @@ input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none !important;
   margin-top: -5px !important;
 }
-input[type="range"]:active::-webkit-slider-thumb {
+input[type='range']:active::-webkit-slider-thumb {
   box-shadow: 0 0 3px var(--colorPrimary) !important;
   border: 2px solid var(--colorPrimary) !important;
   background: var(--colorBgElevated) !important;
 }
-input[type="range"]::-moz-range-thumb {
+input[type='range']::-moz-range-thumb {
   border: 2px solid var(--colorText) !important;
   height: 16px !important;
   width: 16px !important;
@@ -941,12 +958,12 @@ input[type="range"]::-moz-range-thumb {
   margin-top: -5px !important;
   z-index: 999;
 }
-input[type="range"]:active::-moz-range-thumb {
+input[type='range']:active::-moz-range-thumb {
   box-shadow: 0 0 3px var(--colorPrimary) !important;
   border: 2px solid var(--colorPrimary) !important;
   background: var(--colorBgElevated) !important;
 }
-input[type="range"]::-ms-thumb {
+input[type='range']::-ms-thumb {
   border: 2px solid var(--colorText) !important;
   height: 16px !important;
   width: 16px !important;
@@ -955,25 +972,25 @@ input[type="range"]::-ms-thumb {
   cursor: pointer !important;
   margin-top: -5px !important;
 }
-input[type="range"]:active::-ms-thumb {
+input[type='range']:active::-ms-thumb {
   box-shadow: 0 0 3px var(--colorPrimary) !important;
   border: 2px solid var(--colorPrimary) !important;
   background: var(--colorBgElevated) !important;
 }
-[id$="2img_prompt"] textarea {
+[id$='2img_prompt'] textarea {
   color: rgba(208, 226, 178, 0.98) !important;
   max-height: 84px;
   overflow-y: auto;
 }
-[id$="2img_prompt"] textarea:focus {
+[id$='2img_prompt'] textarea:focus {
   color: rgba(244, 255, 225, 0.98) !important;
 }
-[id$="2img_neg_prompt"] textarea {
+[id$='2img_neg_prompt'] textarea {
   color: rgba(236, 210, 213, 0.98) !important;
   max-height: 84px;
   overflow-y: auto;
 }
-[id$="2img_neg_prompt"] textarea:focus {
+[id$='2img_neg_prompt'] textarea:focus {
   color: rgba(255, 240, 242, 0.98) !important;
 }
 .block.token-counter span {
@@ -1001,13 +1018,13 @@ div.svelte-awbtu4 .gradio-file {
 .block.svelte-mppz8v {
   background: transparent;
 }
-[id$="_script_container"] {
+[id$='_script_container'] {
   margin-top: 24px;
 }
-[id$="_script_container"] .block.svelte-mppz8v {
+[id$='_script_container'] .block.svelte-mppz8v {
   border: unset !important;
 }
-[id$="_script_container"] > div:not(.absolute) {
+[id$='_script_container'] > div:not(.absolute) {
   background-color: var(--colorFillTertiary) !important;
   border-color: transparent !important;
   transition: all 0.3s ease-in-out !important;
@@ -1025,7 +1042,11 @@ div.svelte-awbtu4 .gradio-file {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), transparent) !important;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.8),
+    transparent
+  ) !important;
   opacity: 0;
 }
 .extra-network-thumbs .actions .additional > ul:hover {
@@ -1053,8 +1074,8 @@ div.svelte-awbtu4 .gradio-file {
   opacity: 1;
 }
 /* Plugin */
-[id$="_row_aspect_ratio"],
-[id$="_row_resolutions"] {
+[id$='_row_aspect_ratio'],
+[id$='_row_resolutions'] {
   display: inline-block !important;
   margin: 0;
   padding: 0;
@@ -1068,7 +1089,11 @@ div.svelte-awbtu4 .gradio-file {
   -moz-osx-font-smoothing: grayscale;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  background-image: radial-gradient(circle 600px at calc(100% - 300px) 300px, var(--colorPrimaryBgHover), var(--colorBgLayout));
+  background-image: radial-gradient(
+    circle 600px at calc(100% - 300px) 300px,
+    var(--colorPrimaryBgHover),
+    var(--colorBgLayout)
+  );
   background-repeat: no-repeat;
 }
 #txtimg_hr_finalres {

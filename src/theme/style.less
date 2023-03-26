@@ -1,21 +1,21 @@
 /* Root */
-@import "utils/normalize";
+@import 'utils/normalize';
 
 /* Var */
-@import "var/antd";
-@import "var/gradioRoot";
-@import "var/gradioDark";
+@import 'var/antd';
+@import 'var/gradioRoot';
+@import 'var/gradioDark';
 
 /* Components */
-@import "components/header";
-@import "components/sliders";
-@import "components/prompt-textarea";
-@import "components/gallery";
-@import "components/script-container";
-@import "components/extra-network";
+@import 'components/header';
+@import 'components/sliders';
+@import 'components/prompt-textarea';
+@import 'components/gallery';
+@import 'components/script-container';
+@import 'components/extra-network';
 
 /* Plugin */
-@import "plugin/aspect_ratio";
+@import 'plugin/aspect_ratio';
 
 /* Theme Fix*/
 .gradio-container {
@@ -26,18 +26,18 @@
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   background-image: radial-gradient(
-          circle 600px at calc(100% - 300px) 300px,
-          var(--colorPrimaryBgHover),
-          var(--colorBgLayout)
+    circle 600px at calc(100% - 300px) 300px,
+    var(--colorPrimaryBgHover),
+    var(--colorBgLayout)
   );
   background-repeat: no-repeat;
 }
-
 
 #txtimg_hr_finalres {
   color: var(--colorPrimary) !important;
 }
 
-#interrogate, #deepbooru {
- max-height: 72px;;
+#interrogate,
+#deepbooru {
+  max-height: 72px;
 }
