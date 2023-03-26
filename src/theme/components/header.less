@@ -1,0 +1,72 @@
+#quicksettings {
+  position: fixed;
+  z-index: 1000;
+  flex-wrap: nowrap;
+  top: 12px;
+  display: flex;
+  align-items: center;
+  &:before {
+    content: "";
+    display: block;
+    background: var(--logo) no-repeat;
+    width: 129px;
+    height: 26px;
+    z-index: 1000;
+    margin-right: 36px;
+    margin-left: 16px;
+    margin-top: 12px;
+  }
+  &:after {
+    content: "";
+    display: block;
+    position: fixed;
+    width: 100vw;
+    height: 121px;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    border-block-end: 1px solid var(--colorBorderSecondary);
+    background: var(--colorFillQuaternary);
+    backdrop-filter: blur(24px);
+  }
+  > * {
+    z-index: 1000;
+  }
+  button.svelte-1ipelgc {
+    margin-bottom: 3px;
+  }
+}
+
+#tabs {
+  > .tabitem {
+    background: transparent;
+    border: none;
+    padding: var(--padding);
+    margin-top: 118px;
+  }
+
+  > div:first-child {
+    position: fixed;
+    top: 90px;
+    z-index: 1000;
+    flex-wrap: nowrap;
+    width: 100%;
+    border: none;
+
+    > button {
+      border: none;
+      border-bottom: 2px solid transparent !important;
+      flex: none;
+      &:hover {
+        border: none;
+        border-bottom: 2px solid var(--colorPrimary) !important;
+        flex: none;
+      }
+      &.selected {
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid var(--colorPrimary) !important;
+      }
+    }
+  }
+}
