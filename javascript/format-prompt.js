@@ -194,6 +194,7 @@ class Converter {
     button.id = id;
     button.type = 'button';
     button.innerHTML = innerHTML;
+    button.title = 'Format prompt~🪄';
     button.className = 'lg secondary gradio-button tool svelte-1ipelgc';
     button.addEventListener('click', onClick);
     return button;
@@ -202,10 +203,10 @@ class Converter {
   static addPromptButton(type) {
     const generateBtn = gradioApp().querySelector(`#${type}_generate`);
     const actionsColumn = gradioApp().querySelector(`#${type}_style_create`);
-    const nai2local = gradioApp().querySelector(`#${type}_nai2localconvert`);
+    const nai2local = gradioApp().querySelector(`#${type}_formatconvert`);
     if (!generateBtn || !actionsColumn || nai2local) return;
     const convertBtn = Converter.createButton(
-      `${type}_nai2localconvert`,
+      `${type}_formatconvert`,
       '🪄',
       () => Converter.onClickConvert(type),
     );

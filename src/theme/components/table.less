@@ -1,0 +1,26 @@
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid var(--colorBorder) !important;
+  padding: 12px !important;
+}
+
+th {
+  background: var(--colorFillTertiary);
+  border-bottom: 4px solid var(--colorBorder) !important;
+}
+
+tr:hover td {
+  background: var(--colorPrimaryBgHover);
+}
+
+tr:nth-child(odd) td {
+  background: var(--colorFillQuaternary);
+}
+
+tr:nth-child(odd):hover td {
+  background: var(--colorPrimaryBgHover);
+}

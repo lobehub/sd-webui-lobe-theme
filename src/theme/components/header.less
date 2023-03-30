@@ -29,9 +29,29 @@
     background: var(--colorFillQuaternary);
     backdrop-filter: blur(24px);
   }
-  > * {
-    z-index: 1000;
+
+  .dropdown-arrow {
+    min-width: 16px;
+    min-height: 16px;
   }
+
+  > div,
+  > fieldset {
+    min-width: 32px !important;
+  }
+
+  > * {
+    z-index: 1001;
+  }
+
+  ul.options {
+    top: 88px !important;
+    backdrop-filter: blur(24px) !important;
+    max-height: 320px !important;
+    border: 2px solid var(--colorBorder);
+    border-radius: var(--borderRadius);
+  }
+
   button.svelte-1ipelgc {
     margin-bottom: 3px;
   }

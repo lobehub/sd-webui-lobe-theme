@@ -1,0 +1,29 @@
+.gradio-button {
+  border-radius: var(--borderRadius) !important;
+  min-width: 36px;
+  min-height: 36px;
+}
+
+#txt2img_interrupt,
+#txt2img_skip,
+#img2img_interrupt,
+#img2img_skip {
+  background: var(--colorError) !important;
+  &:hover {
+    background: var(--colorErrorHover) !important;
+  }
+  &:active {
+    background: var(--colorErrorActive) !important;
+  }
+}
+
+#txt2img_interrupt,
+#img2img_interrupt {
+  border-radius: var(--borderRadius) 0 0 var(--borderRadius) !important;
+  border-right: 1px solid var(--colorErrorBg);
+}
+
+#txt2img_skip,
+#img2img_skip {
+  border-radius: 0 var(--borderRadius) var(--borderRadius) 0 !important;
+}
