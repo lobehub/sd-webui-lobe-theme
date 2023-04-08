@@ -1,1 +1,5 @@
-module.exports = require('@umijs/lint/dist/config/stylelint')
+module.exports = {
+  plugins: ['stylelint-less'],
+  rules: {},
+  ...require.resolve('@umijs/lint/dist/config/stylelint'),
+}

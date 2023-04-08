@@ -36,4 +36,5 @@ lambda/mock/index.js
 # test
 **/test-output
 config.yml
+yarn.lock
 

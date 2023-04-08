@@ -5,7 +5,8 @@
   top: 12px;
   display: flex;
   align-items: center;
-  &:before {
+
+  &::before {
     content: '';
     display: block;
     background: var(--logo) no-repeat;
@@ -16,7 +17,8 @@
     margin-left: 16px;
     margin-top: 12px;
   }
-  &:after {
+
+  &::after {
     content: '';
     display: block;
     position: fixed;
@@ -77,11 +79,13 @@
       border: none;
       border-bottom: 2px solid transparent !important;
       flex: none;
+
       &:hover {
         border: none;
         border-bottom: 2px solid var(--colorPrimary) !important;
         flex: none;
       }
+
       &.selected {
         background: transparent;
         border: none;

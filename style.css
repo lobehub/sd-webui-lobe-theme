@@ -9,7 +9,7 @@
 html {
   line-height: 1.15;
   /* 1 */
-  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   /* 2 */
 }
 /* Sections
@@ -173,7 +173,7 @@ button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
-  -webkit-appearance: button;
+  appearance: button;
 }
 /**
  * Remove the inner border and padding in Firefox.
@@ -255,7 +255,7 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type='search'] {
-  -webkit-appearance: textfield;
+  appearance: textfield;
   /* 1 */
   outline-offset: -2px;
   /* 2 */
@@ -264,14 +264,14 @@ textarea {
  * Remove the inner padding in Chrome and Safari on macOS.
  */
 [type='search']::-webkit-search-decoration {
-  -webkit-appearance: none;
+  appearance: none;
 }
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
+  appearance: button;
   /* 1 */
   font: inherit;
   /* 2 */
@@ -366,9 +366,9 @@ template {
   --paddingLG: calc(6px * var(--paddingBase));
   --paddingXL: calc(8px * var(--paddingBase));
   /* Shadow */
-  --boxShadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
-  --boxShadowSecondary: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12),
-    0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  --boxShadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgb(0 0 0 / 12%), 0 9px 28px 8px rgb(0 0 0 / 5%);
+  --boxShadowSecondary: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgb(0 0 0 / 12%),
+    0 9px 28px 8px rgb(0 0 0 / 5%);
   /* Border */
   --borderRadiusBase: 2;
   --borderRadiusXS: calc(1px * var(--borderRadiusBase));
@@ -378,7 +378,7 @@ template {
   /* Other */
   --logo: url('https://gw.alipayobjects.com/zos/bmw-prod/9ecb2822-1592-4cb0-a087-ce0097fef2ca.svg');
   --favicon: url('https://gw.alipayobjects.com/zos/bmw-prod/51a51720-8a30-4430-b6c9-be5712364f04.svg');
-  --galleryBackground: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACPTkDJAAAAZUlEQVRIDe2VMQoAMAgDa9/g/1/oIzrpZBCh2dLFkkoDF0Fz99OdiOjks+2/7S8fRRmMMIVoRGSoYzvvqF8ZIMKlC1GhQBc6IkPzq32QmdAzkEGihpWOSPsAss8HegYySNSw0hE9WQ4StafZFqkAAAAASUVORK5CYII=)
+  --galleryBackground: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACPTkDJAAAAZUlEQVRIDe2VMQoAMAgDa9/g/1/oIzrpZBCh2dLFkkoDF0Fz99OdiOjks+2/7S8fRRmMMIVoRGSoYzvvqF8ZIMKlC1GhQBc6IkPzq32QmdAzkEGihpWOSPsAss8HegYySNSw0hE9WQ4StafZFqkAAAAASUVORK5CYII=')
     0% 0% / 20px;
 }
 :root {
@@ -429,7 +429,7 @@ template {
   --link-text-color-visited: var(--secondary-500);
   --loader-color: var(--color-accent);
   /* Typography */
-  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+  --font: -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, 'Helvetica Neue', arial, 'Noto Sans', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --font-mono: 'Hack', 'IBM Plex Mono', 'ui-monospace', 'Consolas', monospace;
   --prose-header-text-weight: 600;
@@ -445,7 +445,7 @@ template {
   --prose-text-size: var(--text-md);
   --section-header-text-size: var(--text-md);
   /* Spacing */
-  --form-gap-width: 0px;
+  --form-gap-width: 0;
   --spacing-lg: 8px;
   --spacing-md: 6px;
   --spacing-sm: 4px;
@@ -488,7 +488,7 @@ template {
   --block-shadow: none;
   --block-title-background-fill: none;
   --block-title-border-color: none;
-  --block-title-border-width: 0px;
+  --block-title-border-width: 0;
   --block-title-padding: 0;
   --block-title-radius: none;
   --block-title-text-weight: 400;
@@ -570,7 +570,7 @@ template {
   --checkbox-label-text-size: var(--text-md);
   --checkbox-shadow: var(--input-shadow);
   /* Input */
-  --input-border-width: 0px;
+  --input-border-width: 0;
   --input-shadow: none;
   --input-text-weight: 400;
   --input-background-fill: var(--neutral-100);
@@ -641,7 +641,7 @@ template {
   --color-accent-soft: var(--neutral-700);
   --loader-color: var(--color-accent);
   /* Typography */
-  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+  --font: -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, 'Helvetica Neue', arial, 'Noto Sans', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --font-mono: 'Hack', 'IBM Plex Mono', 'ui-monospace', 'Consolas', monospace;
   --prose-header-text-weight: 600;
@@ -657,7 +657,7 @@ template {
   --prose-text-size: var(--text-md);
   --section-header-text-size: var(--text-md);
   /* Spacing */
-  --form-gap-width: 0px;
+  --form-gap-width: 0;
   --spacing-lg: 8px;
   --spacing-md: 6px;
   --spacing-sm: 4px;
@@ -700,7 +700,7 @@ template {
   --block-shadow: none;
   --block-title-background-fill: none;
   --block-title-border-color: none;
-  --block-title-border-width: 0px;
+  --block-title-border-width: 0;
   --block-title-padding: 0;
   --block-title-radius: none;
   --block-title-text-weight: 400;
@@ -782,7 +782,7 @@ template {
   --checkbox-label-text-size: var(--text-md);
   --checkbox-shadow: var(--input-shadow);
   /* Input */
-  --input-border-width: 0px;
+  --input-border-width: 0;
   --input-shadow: none;
   --input-text-weight: 400;
   --input-background-fill: var(--neutral-700);
@@ -831,7 +831,7 @@ template {
   display: flex;
   align-items: center;
 }
-#quicksettings:before {
+#quicksettings::before {
   content: '';
   display: block;
   background: var(--logo) no-repeat;
@@ -842,7 +842,7 @@ template {
   margin-left: 16px;
   margin-top: 12px;
 }
-#quicksettings:after {
+#quicksettings::after {
   content: '';
   display: block;
   position: fixed;
@@ -906,7 +906,7 @@ template {
   border-bottom: 2px solid var(--colorPrimary) !important;
 }
 input[type='range'] {
-  -webkit-appearance: none !important ;
+  appearance: none !important;
   background: transparent !important;
 }
 input[type='range']:focus {
@@ -953,7 +953,7 @@ input[type='range']::-webkit-slider-thumb {
   border-radius: 16px !important;
   background: var(--colorBgElevated) !important;
   cursor: pointer !important;
-  -webkit-appearance: none !important;
+  appearance: none !important;
   margin-top: -5px !important;
 }
 input[type='range']:active::-webkit-slider-thumb {
@@ -1146,14 +1146,13 @@ div.svelte-awbtu4 .gradio-file {
 #image_browser_tabs_container [id$='_browser_gallery_controls'] {
   align-items: flex-end;
 }
-/* Theme Fix*/
+/* Theme Fix */
 .gradio-container {
   font-size: var(--fontSize);
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   background-image: radial-gradient(
     circle 600px at calc(100% - 300px) 300px,
     var(--colorPrimaryBgHover),

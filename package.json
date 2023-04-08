@@ -12,16 +12,18 @@
   "scripts": {
     "build": "gulp build",
     "dev": "gulp watch",
-    "lint": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\" --fix",
+    "lint": "eslint \"{src,javascript}/**/*.{js,jsx,ts,tsx}\" --fix",
     "prepare": "husky install",
     "prettier": "prettier -c --write \"**/**\"",
     "release": "semantic-release",
     "setup": "umi setup",
+    "stylelint": "stylelint \"src/**/*.less\" --fix && stylelint \"./style.css\" --fix",
     "test": "npm run lint",
     "type-check": "tsc -p tsconfig-check.json"
   },
   "lint-staged": {
     "*.{less,css}": [
+      "stylelint --fix",
       "prettier --write"
     ],
     "*.{md,json}": [
@@ -57,6 +59,7 @@
     "semantic-release": "^19",
     "semantic-release-config-gitmoji": "^1",
     "stylelint": "^15.4.0",
+    "stylelint-less": "^1.0.6",
     "typescript": "^5.0.0",
     "umi": "^4.0.64"
   }
