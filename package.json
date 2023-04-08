@@ -16,8 +16,19 @@
     "type-check": "tsc -p tsconfig-check.json"
   },
   "lint-staged": {
-    "*.{js,jsx,less,css,md,json}": [
+    "*.{less,css}": [
       "prettier --write"
+    ],
+    "*.{md,json}": [
+      "prettier --write --no-error-on-unmatched-pattern"
+    ],
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --parser=typescript --write"
     ]
   },
   "dependencies": {},
