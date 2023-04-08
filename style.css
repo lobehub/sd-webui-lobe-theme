@@ -366,10 +366,9 @@ template {
   --paddingLG: calc(6px * var(--paddingBase));
   --paddingXL: calc(8px * var(--paddingBase));
   /* Shadow */
-  --boxShadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08),
-    0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
-  --boxShadowSecondary: 0 6px 16px 0 rgba(0, 0, 0, 0.08),
-    0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  --boxShadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  --boxShadowSecondary: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+    0 9px 28px 8px rgba(0, 0, 0, 0.05);
   /* Border */
   --borderRadiusBase: 2;
   --borderRadiusXS: calc(1px * var(--borderRadiusBase));
@@ -430,9 +429,8 @@ template {
   --link-text-color-visited: var(--secondary-500);
   --loader-color: var(--color-accent);
   /* Typography */
-  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --font-mono: 'Hack', 'IBM Plex Mono', 'ui-monospace', 'Consolas', monospace;
   --prose-header-text-weight: 600;
   --prose-text-weight: 400;
@@ -501,10 +499,8 @@ template {
   --block-label-background-fill: var(--background-fill-primary);
   --block-label-border-color: var(--border-color-primary);
   --block-label-padding: var(--spacing-sm) var(--spacing-lg);
-  --block-label-radius: calc(var(--radius-lg) - 1px) 0
-    calc(var(--radius-lg) - 1px) 0;
-  --block-label-right-radius: 0 calc(var(--radius-lg) - 1px) 0
-    calc(var(--radius-lg) - 1px);
+  --block-label-radius: calc(var(--radius-lg) - 1px) 0 calc(var(--radius-lg) - 1px) 0;
+  --block-label-right-radius: 0 calc(var(--radius-lg) - 1px) 0 calc(var(--radius-lg) - 1px);
   --block-label-text-color: var(--neutral-500);
   --block-label-text-size: var(--text-sm);
   --block-padding: var(--spacing-xl) calc(var(--spacing-xl) + 2px);
@@ -539,9 +535,7 @@ template {
   --button-primary-text-color: var(--primary-600);
   --button-primary-text-color-hover: var(--button-primary-text-color);
   --button-secondary-background-fill: var(--neutral-200);
-  --button-secondary-background-fill-hover: var(
-    --button-secondary-background-fill
-  );
+  --button-secondary-background-fill-hover: var(--button-secondary-background-fill);
   --button-secondary-border-color: var(--neutral-200);
   --button-secondary-border-color-hover: var(--button-secondary-border-color);
   --button-secondary-text-color: var(--neutral-700);
@@ -564,12 +558,8 @@ template {
   --checkbox-border-radius: var(--radius-sm);
   --checkbox-border-width: var(--input-border-width);
   --checkbox-label-background-fill: var(--button-secondary-background-fill);
-  --checkbox-label-background-fill-hover: var(
-    --button-secondary-background-fill-hover
-  );
-  --checkbox-label-background-fill-selected: var(
-    --checkbox-label-background-fill
-  );
+  --checkbox-label-background-fill-hover: var(--button-secondary-background-fill-hover);
+  --checkbox-label-background-fill-selected: var(--checkbox-label-background-fill);
   --checkbox-label-border-color: var(--border-color-primary);
   --checkbox-label-border-color-hover: var(--checkbox-label-border-color);
   --checkbox-label-border-width: var(--input-border-width);
@@ -651,9 +641,8 @@ template {
   --color-accent-soft: var(--neutral-700);
   --loader-color: var(--color-accent);
   /* Typography */
-  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --font-mono: 'Hack', 'IBM Plex Mono', 'ui-monospace', 'Consolas', monospace;
   --prose-header-text-weight: 600;
   --prose-text-weight: 400;
@@ -724,10 +713,8 @@ template {
   --block-title-text-color: var(--neutral-200);
   --block-info-text-size: var(--text-sm);
   --block-label-padding: var(--spacing-sm) var(--spacing-lg);
-  --block-label-radius: calc(var(--radius-lg) - 1px) 0
-    calc(var(--radius-lg) - 1px) 0;
-  --block-label-right-radius: 0 calc(var(--radius-lg) - 1px) 0
-    calc(var(--radius-lg) - 1px);
+  --block-label-radius: calc(var(--radius-lg) - 1px) 0 calc(var(--radius-lg) - 1px) 0;
+  --block-label-right-radius: 0 calc(var(--radius-lg) - 1px) 0 calc(var(--radius-lg) - 1px);
   --block-label-text-size: var(--text-sm);
   --block-padding: var(--spacing-xl) calc(var(--spacing-xl) + 2px);
   --block-radius: var(--radius-lg);
@@ -758,9 +745,7 @@ template {
   --button-primary-border-color-hover: var(--button-primary-border-color);
   --button-primary-text-color-hover: var(--button-primary-text-color);
   --button-secondary-background-fill: var(--neutral-600);
-  --button-secondary-background-fill-hover: var(
-    --button-secondary-background-fill
-  );
+  --button-secondary-background-fill-hover: var(--button-secondary-background-fill);
   --button-secondary-border-color: var(--neutral-600);
   --button-secondary-border-color-hover: var(--button-secondary-border-color);
   --button-secondary-text-color-hover: var(--button-secondary-text-color);
@@ -784,12 +769,8 @@ template {
   --checkbox-border-color-selected: var(--secondary-600);
   --checkbox-border-width: var(--input-border-width);
   --checkbox-label-background-fill: var(--button-secondary-background-fill);
-  --checkbox-label-background-fill-hover: var(
-    --button-secondary-background-fill-hover
-  );
-  --checkbox-label-background-fill-selected: var(
-    --checkbox-label-background-fill
-  );
+  --checkbox-label-background-fill-hover: var(--button-secondary-background-fill-hover);
+  --checkbox-label-background-fill-selected: var(--checkbox-label-background-fill);
   --checkbox-label-border-color: var(--border-color-primary);
   --checkbox-label-border-color-hover: var(--checkbox-label-border-color);
   --checkbox-label-border-width: var(--input-border-width);
@@ -1127,11 +1108,7 @@ div.svelte-awbtu4 .gradio-file {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.8),
-    transparent
-  ) !important;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), transparent) !important;
   opacity: 0;
 }
 .extra-network-thumbs .actions .additional > ul:hover {

@@ -1,25 +1,45 @@
 {
   "name": "sd-web-ui-kitchen-theme",
   "version": "1.0.0",
-  "main": "index.js",
-  "author": "canisminor1990 <i@canisminor.cc>",
   "license": "MIT",
+  "author": "canisminor1990 <i@canisminor.cc>",
+  "main": "index.js",
   "scripts": {
+    "build": "gulp build",
     "dev": "gulp watch",
-    "build": "gulp less",
-    "prettier": "prettier --write **/*.{js,jsx,tsx,ts,less,css,md,json}"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "husky": "4.3.8",
-    "gulp": "^4.0.2",
-    "gulp-less": "^5.0.0",
-    "lint-staged": "^13.2.0",
-    "prettier": "^2.8.7"
+    "lint": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\" --fix",
+    "prepare": "husky install",
+    "prettier": "prettier -c --write \"**/**\"",
+    "release": "semantic-release",
+    "setup": "umi setup"
   },
   "lint-staged": {
     "*.{js,jsx,less,css,md,json}": [
       "prettier --write"
     ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "^17",
+    "@umijs/lint": "^4.0.64",
+    "commitlint": "^17",
+    "commitlint-config-gitmoji": "^2",
+    "eslint": "^8",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-import-resolver-typescript": "^2.2.1",
+    "gulp": "^4.0.2",
+    "gulp-less": "^5.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "gulp-use-tsconfig": "^1.5.4",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
+    "prettier": "^2",
+    "prettier-plugin-organize-imports": "^3",
+    "prettier-plugin-packagejson": "^2",
+    "semantic-release": "^19",
+    "semantic-release-config-gitmoji": "^1",
+    "stylelint": "^15.4.0",
+    "typescript": "^5.0.0",
+    "umi": "^4.0.64"
   }
 }
