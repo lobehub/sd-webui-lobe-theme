@@ -1,9 +1,14 @@
 {
   "name": "sd-web-ui-kitchen-theme",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/canisminor1990/sd-web-ui-kitchen-theme.git"
+  },
   "license": "MIT",
   "author": "canisminor1990 <i@canisminor.cc>",
-  "main": "index.js",
+  "sideEffects": false,
+  "main": "style.css",
   "scripts": {
     "build": "gulp build",
     "dev": "gulp watch",
