@@ -6,6 +6,7 @@
     "url": "https://github.com/canisminor1990/sd-web-ui-kitchen-theme.git"
   },
   "license": "MIT",
+  "private": true,
   "author": "canisminor1990 <i@canisminor.cc>",
   "sideEffects": false,
   "main": "style.css",
