@@ -56,7 +56,7 @@
     "prettier": "^2",
     "prettier-plugin-organize-imports": "^3",
     "prettier-plugin-packagejson": "^2",
-    "semantic-release": "^19",
+    "semantic-release": "^21",
     "semantic-release-config-gitmoji": "^1",
     "stylelint": "^15.4.0",
     "stylelint-less": "^1.0.6",
