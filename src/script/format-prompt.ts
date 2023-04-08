@@ -27,7 +27,7 @@ class Converter {
    */
   static convertStr2Array(str: string): string[] {
     // 匹配各种括号中的内容，包括括号本身
-    const bracketRegex = /(\(|\)|<|>|\[|\])/g
+    const bracketRegex = /([()<>[\]])/g
 
     /**
      * 将字符串按照各种括号分割成数组
@@ -113,11 +113,11 @@ class Converter {
       if (item.includes('<')) return item
       const newItem = item
         .replace(/\s+/g, ' ')
-        .replace(/\，|\.|\。/g, ',')
-        .replace(/\“|\‘|\”|\"|\\|\//g, '')
-        .replace(/\, /g, ',')
-        .replace(/\,\,/g, ',')
-        .replace(/\,/g, ', ')
+        .replace(/，|\.\|。/g, ',')
+        .replace(/“|‘|”|"|\/'/g, '')
+        .replace(/, /g, ',')
+        .replace(/,,/g, ',')
+        .replace(/,/g, ', ')
       return Converter.convertStr2Array(newItem).join(', ')
     })
     return newArray.join(', ')
@@ -129,7 +129,7 @@ class Converter {
    * @returns 转换后的字符串
    */
   static convert(input: string): string {
-    const re_attention = /\{|\[|\}|\]|[^\{\}\[\]]+/gmu
+    const re_attention = /\{|\[|\}|\]|[^{}[\]]+/gmu
 
     let text = Converter.convertStr(input)
     const textArray = Converter.convertStr2Array(text)
@@ -161,7 +161,7 @@ class Converter {
 
       if (word in brackets) {
         brackets[word].stack.push(res.length)
-      } else if (word == '}' || word == ']') {
+      } else if (word === '}' || word === ']') {
         const bracket = brackets[word === '}' ? '{' : '[']
         if (bracket.stack.length > 0) {
           multiply_range(bracket.stack.pop()!, bracket.multiplier)
@@ -171,19 +171,19 @@ class Converter {
       }
     }
 
-    for (const bracketType in brackets) {
-      for (const pos of brackets[bracketType].stack) {
+    Object.keys(brackets).forEach((bracketType) => {
+      brackets[bracketType].stack.forEach((pos) => {
         multiply_range(pos, brackets[bracketType].multiplier)
-      }
-    }
+      })
+    })
 
-    if (res.length == 0) {
+    if (res.length === 0) {
       res = [['', 1.0]]
     }
 
     let i = 0
     while (i + 1 < res.length) {
-      if (res[i][1] == res[i + 1][1]) {
+      if (res[i][1] === res[i + 1][1]) {
         res[i][0] += res[i + 1][0]
         res.splice(i + 1, 1)
       } else {

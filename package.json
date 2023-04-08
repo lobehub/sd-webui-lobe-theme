@@ -11,7 +11,9 @@
     "prepare": "husky install",
     "prettier": "prettier -c --write \"**/**\"",
     "release": "semantic-release",
-    "setup": "umi setup"
+    "setup": "umi setup",
+    "test": "npm run lint",
+    "type-check": "tsc -p tsconfig-check.json"
   },
   "lint-staged": {
     "*.{js,jsx,less,css,md,json}": [
