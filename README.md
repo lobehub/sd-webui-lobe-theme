@@ -74,9 +74,13 @@ Launch your WebUI with argument --theme=dark. For example, on Windows your webui
 set COMMANDLINE_ARGS= --theme=dark
 ```
 
+<br/>
+
 ## 👀 Screenshots
 
 ![](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/blob/main/assets/screenshot.png?raw=true)
+
+<br/>
 
 ## 📦 Installation
 
@@ -88,3 +92,17 @@ git clone "https://github.com/canisminor1990/sd-web-ui-kitchen-theme" extensions
 ```
 
 (The second argument specifies the name of the folder, you can choose whatever you like).
+
+<br/>
+
+## 🔗 Credits
+- stable-diffusion-webui：https://github.com/AUTOMATIC1111/stable-diffusion-webui
+- gradio-theme-gallery: https://huggingface.co/spaces/gradio/theme-gallery
+- gradio-types: https://github.com/vnrat/sd-webui-3d-open-pose-editor/tree/4e7a400f7c42a5f9413d182413d950b2f5a58c79/src/%40types
+
+*before `1.0.0` version*
+
+- sd-web-ui-quickcs: https://github.com/Gerschel/sd-web-ui-quickcss/
+- Dark-Themes-SD-WebUI-Automatic1111: https://github.com/Nacurutu/Dark-Themes-SD-WebUI-Automatic1111
+
+<br/>
