@@ -1,5 +1,7 @@
 # Changelog
 
+## [1.0.1](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.0.0...v1.0.1) (2023-04-10)
+
 # 1.0.0 (2023-04-08)
 
 
