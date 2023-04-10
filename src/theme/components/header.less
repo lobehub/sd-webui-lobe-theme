@@ -5,6 +5,15 @@
   top: 12px;
   display: flex;
   align-items: center;
+  width: 100vw;
+
+  span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
+
 
   &::before {
     content: '';
@@ -16,21 +25,11 @@
     margin-right: 36px;
     margin-left: 16px;
     margin-top: 12px;
+    @media screen and (max-width: 640px) {
+      display: none;
+    }
   }
 
-  &::after {
-    content: '';
-    display: block;
-    position: fixed;
-    width: 100vw;
-    height: 121px;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    border-block-end: 1px solid var(--colorBorderSecondary);
-    background: var(--colorFillQuaternary);
-    backdrop-filter: blur(24px);
-  }
 
   .dropdown-arrow {
     min-width: 16px;
@@ -40,16 +39,16 @@
   > div,
   > fieldset {
     min-width: 32px !important;
+    @media screen and (max-width: 640px) {
+      flex: 1;
+      max-width: 50%;
+    }
   }
 
-  > * {
-    z-index: 1001;
-  }
+
 
   ul.options {
-    top: 88px !important;
-    backdrop-filter: blur(24px) !important;
-    max-height: 320px !important;
+
     border: 2px solid var(--colorBorder);
     border-radius: var(--borderRadius);
   }
@@ -67,13 +66,27 @@
     margin-top: 118px;
   }
 
-  > div:first-child {
+  > .tab-nav:first-child {
     position: fixed;
     top: 90px;
-    z-index: 1000;
+    z-index: 999;
     flex-wrap: nowrap;
+    overflow-y: auto;
     width: 100%;
     border: none;
+    &::before {
+      content: '';
+      display: block;
+      position: fixed;
+      width: 100vw;
+      height: 121px;
+      top: 0;
+      left: 0;
+      border-block-end: 1px solid var(--colorBorderSecondary);
+      background: var(--colorFillQuaternary);
+      backdrop-filter: blur(24px);
+      z-index: -1;
+    }
 
     > button {
       border: none;
@@ -94,3 +107,4 @@
     }
   }
 }
+

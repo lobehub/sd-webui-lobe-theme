@@ -13,6 +13,8 @@
   "scripts": {
     "build": "gulp build",
     "dev": "gulp watch",
+    "dev:with-sd": "concurrently \"gulp watch\" \"npm run sd-debug\"",
+    "sd-debug": "cd ../../ && ./webui.sh ",
     "lint": "eslint \"{src,javascript}/**/*.{js,jsx,ts,tsx}\" --fix",
     "prepare": "husky install",
     "prettier": "prettier -c --write \"**/**\"",
@@ -45,6 +47,7 @@
     "@umijs/lint": "^4.0.64",
     "commitlint": "^17",
     "commitlint-config-gitmoji": "^2",
+    "concurrently": "^8.0.1",
     "eslint": "^8",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-import-resolver-typescript": "^3.5.5",

@@ -367,8 +367,7 @@ template {
   --paddingXL: calc(8px * var(--paddingBase));
   /* Shadow */
   --boxShadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgb(0 0 0 / 12%), 0 9px 28px 8px rgb(0 0 0 / 5%);
-  --boxShadowSecondary: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgb(0 0 0 / 12%),
-    0 9px 28px 8px rgb(0 0 0 / 5%);
+  --boxShadowSecondary: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgb(0 0 0 / 12%), 0 9px 28px 8px rgb(0 0 0 / 5%);
   /* Border */
   --borderRadiusBase: 2;
   --borderRadiusXS: calc(1px * var(--borderRadiusBase));
@@ -378,8 +377,7 @@ template {
   /* Other */
   --logo: url('https://gw.alipayobjects.com/zos/bmw-prod/9ecb2822-1592-4cb0-a087-ce0097fef2ca.svg');
   --favicon: url('https://gw.alipayobjects.com/zos/bmw-prod/51a51720-8a30-4430-b6c9-be5712364f04.svg');
-  --galleryBackground: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACPTkDJAAAAZUlEQVRIDe2VMQoAMAgDa9/g/1/oIzrpZBCh2dLFkkoDF0Fz99OdiOjks+2/7S8fRRmMMIVoRGSoYzvvqF8ZIMKlC1GhQBc6IkPzq32QmdAzkEGihpWOSPsAss8HegYySNSw0hE9WQ4StafZFqkAAAAASUVORK5CYII=')
-    0% 0% / 20px;
+  --galleryBackground: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACPTkDJAAAAZUlEQVRIDe2VMQoAMAgDa9/g/1/oIzrpZBCh2dLFkkoDF0Fz99OdiOjks+2/7S8fRRmMMIVoRGSoYzvvqF8ZIMKlC1GhQBc6IkPzq32QmdAzkEGihpWOSPsAss8HegYySNSw0hE9WQ4StafZFqkAAAAASUVORK5CYII=') 0% 0% / 20px;
 }
 :root {
   /* Colors */
@@ -830,6 +828,13 @@ template {
   top: 12px;
   display: flex;
   align-items: center;
+  width: 100vw;
+}
+#quicksettings span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
 }
 #quicksettings::before {
   content: '';
@@ -842,18 +847,10 @@ template {
   margin-left: 16px;
   margin-top: 12px;
 }
-#quicksettings::after {
-  content: '';
-  display: block;
-  position: fixed;
-  width: 100vw;
-  height: 121px;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  border-block-end: 1px solid var(--colorBorderSecondary);
-  background: var(--colorFillQuaternary);
-  backdrop-filter: blur(24px);
+@media screen and (max-width: 640px) {
+  #quicksettings::before {
+    display: none;
+  }
 }
 #quicksettings .dropdown-arrow {
   min-width: 16px;
@@ -863,13 +860,14 @@ template {
 #quicksettings > fieldset {
   min-width: 32px !important;
 }
-#quicksettings > * {
-  z-index: 1001;
+@media screen and (max-width: 640px) {
+  #quicksettings > div,
+  #quicksettings > fieldset {
+    flex: 1;
+    max-width: 50%;
+  }
 }
 #quicksettings ul.options {
-  top: 88px !important;
-  backdrop-filter: blur(24px) !important;
-  max-height: 320px !important;
   border: 2px solid var(--colorBorder);
   border-radius: var(--borderRadius);
 }
@@ -882,25 +880,39 @@ template {
   padding: var(--padding);
   margin-top: 118px;
 }
-#tabs > div:first-child {
+#tabs > .tab-nav:first-child {
   position: fixed;
   top: 90px;
-  z-index: 1000;
+  z-index: 999;
   flex-wrap: nowrap;
+  overflow-y: auto;
   width: 100%;
   border: none;
 }
-#tabs > div:first-child > button {
+#tabs > .tab-nav:first-child::before {
+  content: '';
+  display: block;
+  position: fixed;
+  width: 100vw;
+  height: 121px;
+  top: 0;
+  left: 0;
+  border-block-end: 1px solid var(--colorBorderSecondary);
+  background: var(--colorFillQuaternary);
+  backdrop-filter: blur(24px);
+  z-index: -1;
+}
+#tabs > .tab-nav:first-child > button {
   border: none;
   border-bottom: 2px solid transparent !important;
   flex: none;
 }
-#tabs > div:first-child > button:hover {
+#tabs > .tab-nav:first-child > button:hover {
   border: none;
   border-bottom: 2px solid var(--colorPrimary) !important;
   flex: none;
 }
-#tabs > div:first-child > button.selected {
+#tabs > .tab-nav:first-child > button.selected {
   background: transparent;
   border: none;
   border-bottom: 2px solid var(--colorPrimary) !important;
@@ -994,6 +1006,8 @@ input[type='range']:active::-ms-thumb {
   border-radius: var(--borderRadius) !important;
   min-width: 36px;
   min-height: 36px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 #txt2img_interrupt,
 #txt2img_skip,
@@ -1153,11 +1167,7 @@ div.svelte-awbtu4 .gradio-file {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-size-adjust: 100%;
-  background-image: radial-gradient(
-    circle 600px at calc(100% - 300px) 300px,
-    var(--colorPrimaryBgHover),
-    var(--colorBgLayout)
-  );
+  background-image: radial-gradient(circle 600px at calc(100% - 300px) 300px, var(--colorPrimaryBgHover), var(--colorBgLayout));
   background-repeat: no-repeat;
 }
 #txtimg_hr_finalres {
