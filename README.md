@@ -24,7 +24,7 @@
 
 ![](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/blob/main/assets/screenshot.webp?raw=true)
 
-English | [简体中文](<(./README-zh_CN.md)>)
+English | [简体中文](./README-zh_CN.md)
 
 <br/>
 
