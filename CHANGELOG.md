@@ -1,5 +1,12 @@
 # Changelog
 
+# [1.1.0](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.0.1...v1.1.0) (2023-04-14)
+
+
+### ✨ Features
+
+* support light/dark mode ([135f4fc](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/135f4fc))
+
 ## [1.0.1](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.0.0...v1.0.1) (2023-04-10)
 
 # 1.0.0 (2023-04-08)
