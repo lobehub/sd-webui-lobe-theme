@@ -30,7 +30,7 @@
       "stylelint --fix",
       "prettier --write"
     ],
-    "*.{md,json}": [
+    "*.{json}": [
       "prettier --write --no-error-on-unmatched-pattern"
     ],
     "*.{js,jsx}": [

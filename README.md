@@ -62,6 +62,18 @@ http://localhost:7860/?__theme=dark
 
 <br/>
 
+## ⚒️ Recommended Settings
+
+Extra-Networks
+
+- thumbs
+- width: 86
+- height: 128
+
+![](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/blob/main/assets/extra-networks.webp?raw=true)
+
+<br/>
+
 ## ⌨️ Local Development
 
 You can use Gitpod for online development:

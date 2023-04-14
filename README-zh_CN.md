@@ -63,6 +63,19 @@ http://localhost:7860/?__theme=dark
 
 <br/>
 
+## ⚒️ 推荐设置
+
+Extra-Networks 扩展模型视窗
+
+- 拇指视图
+- 卡牌宽度: 86
+- 卡牌高度: 128
+
+![](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/blob/main/assets/extra-networks.webp?raw=true)
+
+<br/>
+
+
 ## ⌨️ 本地开发
 
 你可以使用 Gitpod 进行在线开发：
