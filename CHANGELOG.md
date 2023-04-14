@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.1.0...v1.1.1) (2023-04-14)
+
+
+### 🐛 Bug Fixes
+
+* scrollbar ([2dce630](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/2dce630))
+
 # [1.1.0](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.0.1...v1.1.0) (2023-04-14)
 
 
