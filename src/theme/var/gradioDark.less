@@ -1,40 +1,40 @@
 .dark {
   /* Colors */
-  --neutral-50: var(--colorText);
-  --neutral-100: var(--colorText);
-  --neutral-200: var(--colorTextSecondary);
-  --neutral-300: var(--colorTextTertiary);
-  --neutral-400: var(--colorTextQuaternary);
-  --neutral-500: var(--colorFill);
-  --neutral-600: var(--colorFillSecondary);
-  --neutral-700: var(--colorFillTertiary);
-  --neutral-800: var(--colorFillQuaternary);
-  --neutral-900: var(--colorBgElevated);
+  --neutral-50: var(--color-text);
+  --neutral-100: var(--color-text);
+  --neutral-200: var(--color-text-secondary);
+  --neutral-300: var(--color-text-tertiary);
+  --neutral-400: var(--color-text-quaternary);
+  --neutral-500: var(--color-fill);
+  --neutral-600: var(--color-fill-secondary);
+  --neutral-700: var(--color-fill-tertiary);
+  --neutral-800: var(--color-fill-quaternary);
+  --neutral-900: var(--color-bg-elevated);
   --neutral-950: var(--colorBgContainer);
-  --primary-50: #eff6ff;
-  --primary-100: #dbeafe;
-  --primary-200: #bfdbfe;
-  --primary-300: #93c5fd;
-  --primary-400: var(--colorPrimaryTextHover);
-  --primary-500: var(--colorPrimaryText);
-  --primary-600: var(--colorPrimary);
-  --primary-700: var(--colorPrimary);
-  --primary-800: var(--colorPrimaryBorder);
-  --primary-900: var(--colorPrimaryBgHover);
-  --primary-950: var(--colorPrimaryBg);
-  --secondary-50: #eff6ff;
-  --secondary-100: #dbeafe;
-  --secondary-200: #bfdbfe;
-  --secondary-300: #93c5fd;
-  --secondary-400: var(--colorPrimaryTextHover);
-  --secondary-500: var(--colorPrimaryText);
-  --secondary-600: var(--colorPrimary);
-  --secondary-700: var(--colorPrimary);
-  --secondary-800: var(--colorPrimaryBorder);
-  --secondary-900: var(--colorPrimaryBgHover);
-  --secondary-950: var(--colorPrimaryBg);
-  --error-text-color: #ef4444;
-  --error-background-fill: var(--colorErrorBg);
+  --primary-50: var(--blue-1);
+  --primary-100: var(--blue-1);
+  --primary-200: var(--blue-2);
+  --primary-300: var(--blue-3);
+  --primary-400: var(--blue-4);
+  --primary-500: var(--blue-5);
+  --primary-600: var(--blue-6);
+  --primary-700: var(--blue-7);
+  --primary-800: var(--blue-8);
+  --primary-900: var(--blue-9);
+  --primary-950: var(--blue-9);
+  --secondary-50: var(--blue-1);
+  --secondary-100: var(--blue-1);
+  --secondary-200: var(--blue-2);
+  --secondary-300: var(--blue-3);
+  --secondary-400: var(--blue-4);
+  --secondary-500: var(--blue-5);
+  --secondary-600: var(--blue-6);
+  --secondary-700: var(--blue-7);
+  --secondary-800: var(--blue-8);
+  --secondary-900: var(--blue-9);
+  --secondary-950: var(--blue-9);
+  --error-text-color: var(--color-error);
+  --error-background-fill: var(--color-error-bg);
   --background-fill-primary: var(--neutral-950);
   --background-fill-secondary: var(--neutral-900);
   --stat-background-fill: var(--primary-500);
@@ -47,42 +47,40 @@
   --loader-color: var(--color-accent);
 
   /* Typography */
-  --font: -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, 'Helvetica Neue', arial, 'Noto Sans', sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  --font-mono: 'Hack', 'IBM Plex Mono', 'ui-monospace', 'Consolas', monospace;
+  --font: var(--font-family);
   --prose-header-text-weight: 600;
   --prose-text-weight: 400;
   --section-header-text-weight: 400;
-  --text-lg: var(--fontSizeLG);
-  --text-md: var(--fontSize);
-  --text-sm: var(--fontSizeSM);
-  --text-xl: var(--fontSizeXL);
-  --text-xs: var(--fontSizeSM);
-  --text-xxl: var(--fontSizeXL);
-  --text-xxs: var(--fontSizeSM);
+  --text-lg: var(--font-size-lg);
+  --text-md: var(--font-size);
+  --text-sm: var(--font-size-sm);
+  --text-xl: var(--font-size-xl);
+  --text-xs: var(--font-size-sm);
+  --text-xxl: var(--font-size-xl);
+  --text-xxs: var(--font-size-sm);
   --prose-text-size: var(--text-md);
   --section-header-text-size: var(--text-md);
 
   /* Spacing */
   --form-gap-width: 0;
-  --spacing-lg: 8px;
-  --spacing-md: 6px;
-  --spacing-sm: 4px;
-  --spacing-xl: 10px;
-  --spacing-xs: 2px;
-  --spacing-xxl: 16px;
-  --spacing-xxs: 1px;
+  --spacing-xxl: var(--size-lg);
+  --spacing-xl: var(--size-md);
+  --spacing-lg: var(--size-ms);
+  --spacing-md: var(--size);
+  --spacing-sm: var(--size-sm);
+  --spacing-xs: var(--size-xs);
+  --spacing-xxs: var(--size-xxs);
   --layout-gap: var(--spacing-xxl);
 
   /* Border */
   --error-border-width: 1px;
-  --radius-lg: var(--borderRadiusLG);
-  --radius-md: var(--borderRadius);
-  --radius-sm: var(--borderRadiusSM);
-  --radius-xl: var(--borderRadiusXS);
-  --radius-xs: var(--borderRadiusSM);
-  --radius-xxl: var(--borderRadiusLG);
-  --radius-xxs: var(--borderRadiusXS);
+  --radius-lg: var(--border-radius-lg);
+  --radius-md: var(--border-radius);
+  --radius-sm: var(--border-radius-sm);
+  --radius-xl: var(--border-radius-xs);
+  --radius-xs: var(--border-radius-sm);
+  --radius-xxl: var(--border-radius-lg);
+  --radius-xxs: var(--border-radius-xs);
   --border-color-accent: var(--neutral-600);
   --border-color-primary: var(--neutral-700);
   --error-border-color: var(--border-color-primary);
@@ -91,16 +89,16 @@
 
   /* BoxShadow */
   --shadow-spread: 1px;
-  --shadow-drop: var(--boxShadow);
-  --shadow-drop-lg: var(--boxShadowSecondary);
-  --shadow-inset: var(--boxShadow) inset;
+  --shadow-drop: var(--box-shadow);
+  --shadow-drop-lg: var(--box-shadow-secondary);
+  --shadow-inset: var(--box-shadow) inset;
 
   /* Body */
   --body-text-weight: 400;
   --body-background-fill: var(--background-fill-primary);
-  --body-text-color: var(--neutral-100);
-  --body-text-color-subdued: var(--neutral-400);
-  --body-text-size: var(--text-md);
+  --body-text-color: var(--color-text);
+  --body-text-color-subdued: var(--color-text-tertiary);
+  --body-text-size: var(--font-size);
 
   /* Block */
   --block-border-width: 1px;
@@ -133,34 +131,34 @@
 
   /* Panel */
   --panel-border-width: 0;
-  --panel-background-fill: var(--background-fill-secondary);
+  --panel-background-fill: var(--color-fill-quaternary);
   --panel-border-color: var(--border-color-primary);
 
   /* Button */
   --button-primary-text-color: white;
-  --button-secondary-text-color: white;
+  --button-secondary-text-color: var(--color-text);
   --button-large-text-weight: 600;
   --button-shadow: none;
   --button-shadow-active: none;
   --button-shadow-hover: none;
   --button-small-text-weight: 400;
   --button-transition: background-color 0.2s ease;
-  --button-border-width: var(--input-border-width);
+  --button-border-width: 1px;
   --button-cancel-background-fill: var(--button-secondary-background-fill);
   --button-cancel-background-fill-hover: var(--button-cancel-background-fill);
   --button-cancel-border-color: var(--button-secondary-border-color);
   --button-cancel-border-color-hover: var(--button-cancel-border-color);
   --button-cancel-text-color: var(--button-secondary-text-color);
   --button-cancel-text-color-hover: var(--button-cancel-text-color);
-  --button-primary-background-fill: var(--primary-700);
-  --button-primary-background-fill-hover: var(--button-primary-background-fill);
+  --button-primary-background-fill: var(--primary-600);
+  --button-primary-background-fill-hover: var(--primary-700);
   --button-primary-border-color: var(--primary-600);
-  --button-primary-border-color-hover: var(--button-primary-border-color);
+  --button-primary-border-color-hover: var(--primary-700);
   --button-primary-text-color-hover: var(--button-primary-text-color);
   --button-secondary-background-fill: var(--neutral-600);
-  --button-secondary-background-fill-hover: var(--button-secondary-background-fill);
-  --button-secondary-border-color: var(--neutral-600);
-  --button-secondary-border-color-hover: var(--button-secondary-border-color);
+  --button-secondary-background-fill-hover: var(--neutral-500);
+  --button-secondary-border-color: var(--neutral-700);
+  --button-secondary-border-color-hover: var(--neutral-600);
   --button-secondary-text-color-hover: var(--button-secondary-text-color);
   --button-large-padding: var(--spacing-lg) calc(2 * var(--spacing-lg));
   --button-large-radius: var(--radius-lg);
@@ -197,7 +195,7 @@
   --checkbox-shadow: var(--input-shadow);
 
   /* Input */
-  --input-border-width: 0;
+  --input-border-width: 1px;
   --input-shadow: none;
   --input-text-weight: 400;
   --input-background-fill: var(--neutral-700);

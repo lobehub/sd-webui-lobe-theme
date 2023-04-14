@@ -4,9 +4,8 @@
 <h1 align="center">Kitchen Stable Diffusion WebUI</h1>
 
 <div align="center">
-  Kitchen Theme for <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui" target="_blank">AUTOMATIC1111/stable-diffusion-web-ui</a>
+  Kitchen WebUI 适配主题 <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui" target="_blank">AUTOMATIC1111/stable-diffusion-web-ui</a>
 
-<br/>
 <br/>
 
 <!-- SHIELD GROUP -->
@@ -24,36 +23,37 @@
 
 ![](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/blob/main/assets/screenshot.webp?raw=true)
 
-English | [简体中文](<(./README-zh_CN.md)>)
+[English](./README.md) | 简体中文
 
 <br/>
 
-> ⚠️⚠️⚠️ Warning: minimum requirements gradio-3.23.0 & sd-webui [4c1ad74](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commit/4c1ad743e3baf1246db0711aa0107debf036a12b)
-
-## ✨ Features
-
-- 🌈 Supports light and dark themes.
-- 🪄 Supports Prompt formatting.
-- 🎨 Based on Antd CSS Token.
+> ⚠️⚠️⚠️ 警告：最低要求 gradio-3.23.0 & sd-webui [4c1ad74](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commit/4c1ad743e3baf1246db0711aa0107debf036a12b)
 
 <br/>
 
-## 📦 Installation
+## ✨ 特性
 
-As an extension (recommended)
-Either clone the repo into your extensions folder:
+- 🌈 支持亮暗色主题。
+- 🪄 支持 Prompt 格式化。
+- 🎨 基于 Antd CSS Token。
+
+<br/>
+
+## 📦 安装
+
+作为扩展（推荐） 将存储库克隆到您的扩展文件夹中：
 
 ```shell
 git clone "https://github.com/canisminor1990/sd-web-ui-kitchen-theme" extensions/kitchen-theme
 ```
 
-The current theme supports both light and dark themes. If you want to force dark mode, use the `--theme=dark` argument to launch your WebUI. For example, on Windows, your `webui-user.bat` should include:
+当前主题支持亮暗色双主题，如果你想强制使用暗色模式，使用参数 `--theme=dark` 启动您的 WebUI。例如，在 Windows 上，您的 `webui-user.bat` 应包括：
 
 ```shell
 set COMMANDLINE_ARGS= --theme=dark
 ```
 
-Alternatively, you can switch directly through URL Props:
+或通过 URL Props 直接切换
 
 ```shell
 http://localhost:7860/?__theme=light
@@ -62,13 +62,13 @@ http://localhost:7860/?__theme=dark
 
 <br/>
 
-## ⌨️ Local Development
+## ⌨️ 本地开发
 
-You can use Gitpod for online development:
+你可以使用 Gitpod 进行在线开发：
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/canisminor1990/sd-web-ui-kitchen-theme)
 
-Or clone it for local development:
+或者克隆到本地开发:
 
 ```bash
 $ git clone https://github.com/canisminor1990/sd-web-ui-kitchen-theme.git
@@ -79,7 +79,7 @@ $ npm start
 
 <br/>
 
-## 🔗 Credits
+## 🔗 链接
 
 - stable-diffusion-webui：https://github.com/AUTOMATIC1111/stable-diffusion-webui
 - gradio-theme-gallery: https://huggingface.co/spaces/gradio/theme-gallery

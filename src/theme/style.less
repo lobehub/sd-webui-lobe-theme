@@ -3,12 +3,16 @@
 
 /* Var */
 @import 'var/antd';
+@import 'var/antd-extra';
 @import 'var/gradioRoot';
 @import 'var/gradioDark';
 
 /* Components */
+@import 'components/container';
 @import 'components/scrollbar';
+@import 'components/options';
 @import 'components/header';
+@import 'components/modal';
 @import 'components/sliders';
 @import 'components/button';
 @import 'components/table';
@@ -18,26 +22,57 @@
 @import 'components/extra-network';
 
 /* Plugin */
-@import 'plugin/aspect_ratio';
-@import 'plugin/image_browser';
+@import 'plugin/aspect-ratio';
+@import 'plugin/image-browser';
+@import 'plugin/preset-manager';
 
-/* Theme Fix */
-.gradio-container {
-  font-size: var(--fontSize);
-  margin: 0;
+/* Root */
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  color: var(--color-text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-size-adjust: 100%;
-  background-image: radial-gradient(
-    circle 600px at calc(100% - 300px) 300px,
-    var(--colorPrimaryBgHover),
-    var(--colorBgLayout)
-  );
+}
+
+code {
+  font-family: var(--font-family-code);
+}
+
+h1 {
+  font-size: var(--font-size-heading1);
+  line-height: var(--line-height-heading1);
+}
+h2 {
+  font-size: var(--font-size-heading2);
+  line-height: var(--line-height-heading2);
+}
+h3 {
+  font-size: var(--font-size-heading3);
+  line-height: var(--line-height-heading3);
+}
+h4 {
+  font-size: var(--font-size-heading4);
+  line-height: var(--line-height-heading4);
+}
+h5 {
+  font-size: var(--font-size-heading5);
+  line-height: var(--line-height-heading5);
+}
+
+/* Theme Fix */
+.gradio-container {
+  font-size: var(--font-size);
+  color: var(--color-text);
+  margin: 0;
+  background-image: var(--color-body-background);
   background-repeat: no-repeat;
 }
 
 #txtimg_hr_finalres {
-  color: var(--colorPrimary) !important;
+  color: var(--color-primary) !important;
 }
 
 #interrogate,
