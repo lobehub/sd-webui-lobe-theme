@@ -7,6 +7,7 @@
   Kitchen WebUI 适配主题 <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui" target="_blank">AUTOMATIC1111/stable-diffusion-web-ui</a>
 
 <br/>
+<br/>
 
 <!-- SHIELD GROUP -->
 
