@@ -76,6 +76,27 @@ Extra-Networks 扩展模型视窗
 <br/>
 
 
+## 🪄 提示词格式化
+
+![](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/blob/main/assets/prompt-formatting.webp?raw=true)
+
+> 全角标点转半角，去除多余空格，补充缺失逗号，把 Extra-Networks 模型移动到末尾
+
+格式化前
+
+```text
+photorealistic   photo of a handsome male (wizard  :1.2）， <lora:LuisapHotlineStyle:0.5> <lora:ElegantHanfuRuqunStyle:0.2>    short beard, white wizard  shirt, (with golden    trim:0.8), 
+```
+
+格式化后
+
+```text
+photorealistic photo of a handsome male, (wizard:1.2), short beard, white wizard shirt, (with golden trim:0.8), <lora:LuisapHotlineStyle:0.5>, <lora:ElegantHanfuRuqunStyle:0.2>
+```
+
+<br/>
+
+
 ## ⌨️ 本地开发
 
 你可以使用 Gitpod 进行在线开发：

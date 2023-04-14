@@ -74,6 +74,26 @@ Extra-Networks
 
 <br/>
 
+## 🪄 Prompt formatting
+
+![](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/blob/main/assets/prompt-formatting.webp?raw=true)
+
+> Convert full-width punctuation to half-width, remove extra spaces, add missing commas, and move the Extra-Networks model to the end.
+
+Before
+
+```text
+photorealistic   photo of a handsome male (wizard  :1.2）， <lora:LuisapHotlineStyle:0.5> <lora:ElegantHanfuRuqunStyle:0.2>    short beard, white wizard  shirt, (with golden    trim:0.8), 
+```
+
+After
+
+```text
+photorealistic photo of a handsome male, (wizard:1.2), short beard, white wizard shirt, (with golden trim:0.8), <lora:LuisapHotlineStyle:0.5>, <lora:ElegantHanfuRuqunStyle:0.2>
+```
+
+<br/>
+
 ## ⌨️ Local Development
 
 You can use Gitpod for online development:
