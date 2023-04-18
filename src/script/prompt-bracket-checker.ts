@@ -56,21 +56,17 @@ class BracketChecker {
  * @param id_prompt 包含文本框的元素的 ID
  * @param id_counter 显示计数器的元素的 ID
  */
-function setupBracketChecking(idPrompt: string, idCounter: string): void {
+const setupBracketChecking = (idPrompt: string, idCounter: string): void => {
   const textarea = gradioApp().querySelector(`#${idPrompt} > label > textarea`) as HTMLTextAreaElement
   const counter = gradioApp().getElementById(idCounter) as HTMLElement
   const bracketChecker = new BracketChecker(textarea, counter)
   textarea.addEventListener('input', bracketChecker.check)
 }
 
-const shadowRootLoaded = setInterval(() => {
-  const shadowRoot = document.querySelector('gradio-app')?.shadowRoot
-  if (!shadowRoot) return
-  const shadowTextArea = shadowRoot.querySelector(`#txt2img_prompt > label > textarea`) as HTMLTextAreaElement
-  if (!shadowTextArea) return
-  clearInterval(shadowRootLoaded)
-  ;['txt2img', 'txt2img_neg', 'img2img', 'img2img_neg'].forEach((prompt) => {
+onUiUpdate(() => {
+  const elements = ['txt2img', 'txt2img_neg', 'img2img', 'img2img_neg']
+  elements.forEach((prompt) => {
     setupBracketChecking(`${prompt}_prompt`, `${prompt}_token_counter`)
     setupBracketChecking(`${prompt}_prompt`, `${prompt}_negative_token_counter`)
   })
-}, 1000)
+})

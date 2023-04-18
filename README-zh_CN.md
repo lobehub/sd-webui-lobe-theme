@@ -118,7 +118,6 @@ $ npm start
 
 - stable-diffusion-webui：https://github.com/AUTOMATIC1111/stable-diffusion-webui
 - gradio-theme-gallery: https://huggingface.co/spaces/gradio/theme-gallery
-- gradio-types: https://github.com/vnrat/sd-webui-3d-open-pose-editor/tree/4e7a400f7c42a5f9413d182413d950b2f5a58c79/src/%40types
 - _before `1.0.0` version_
   - sd-web-ui-quickcs: https://github.com/Gerschel/sd-web-ui-quickcss/
   - Dark-Themes-SD-WebUI-Automatic1111: https://github.com/Nacurutu/Dark-Themes-SD-WebUI-Automatic1111

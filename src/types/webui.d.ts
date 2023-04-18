@@ -1,65 +1,37 @@
-declare const onUiUpdate: (callback: () => void) => void
-declare const onUiLoaded: (callback: () => void) => void
-declare const onUiTabChange: (callback: () => void) => void
-declare const switch_to_txt2img: () => void
-declare const switch_to_img2img: () => void
-interface Window {
-  threedopenpose: {
-    onResize: (width: number, height: number) => void
-    onChangeCameraNear: (value: number) => void
-    onChangeCameraFar: (value: number) => void
-    onChangeCameraFocalLength: (value: number) => void
-    onChangeHeadSize: (value: number) => void
-    onChangeNoseToNeck: (value: number) => void
-    onChangeShoulderWidth: (value: number) => void
-    onChangeShoulderToHip: (value: number) => void
-    onChangeArmLength: (value: number) => void
-    onChangeForearm: (value: number) => void
-    onChangeUpperArm: (value: number) => void
-    onChangeHandSize: (value: number) => void
-    onChangeHips: (value: number) => void
-    onChangeLegLength: (value: number) => void
-    onChangeThigh: (value: number) => void
-    onChangeLowerLeg: (value: number) => void
-    onChangeFootSize: (value: number) => void
-    detectImage: () => void
-    setBackground: () => void
-    saveScene: () => void
-    loadScene: () => void
-    restoreLastSavedScene: () => void
-    undo: () => void
-    redo: () => void
-    randomPose: () => void
-    copyBodyZ: () => void
-    copyBodyX: () => void
-    removeBody: () => void
-    onChangeMoveMode: (value: boolean) => void
-    onChangeOnlyHand: (value: boolean) => void
-    onChangeEnablePreview: (value: boolean) => void
-    makeImages: () => void
-    sendTxt2img: (
-      pose_image: string | null,
-      pose_target: string,
-      depth_image: string | null,
-      depth_target: string,
-      normal_image: string | null,
-      normal_target: string,
-      canny_image: string | null,
-      canny_target: string
-    ) => void
-    sendImg2img: (
-      pose_image: string,
-      pose_target: string,
-      depth_image: string,
-      depth_target: string,
-      normal_image: string,
-      normal_target: string,
-      canny_image: string,
-      canny_target: string
-    ) => void
-    downloadPoseImage: (image: string | null) => void
-    downloadDepthImage: (image: string | null) => void
-    downloadNormalImage: (image: string | null) => void
-    downloadCannyImage: (image: string | null) => void
-  }
-}
+// ui.js
+
+declare const set_theme: (theme: string) => void
+declare const all_gallery_buttons: () => Element[]
+declare const selected_gallery_button: () => Element | null
+declare const selected_gallery_index: () => number
+declare const extract_image_from_gallery: (gallery: Element[]) => Element[]
+declare const args_to_array: (args: IArguments) => any[]
+declare const switch_to_txt2img: () => any[]
+declare const switch_to_img2img_tab: (no: number) => void
+declare const switch_to_img2img: () => any[]
+declare const switch_to_sketch: () => any[]
+declare const switch_to_inpaint_sketch: () => any[]
+declare const switch_to_inpaint: () => any[]
+declare const switch_to_extras: () => any[]
+declare const get_tab_index: (tabId: string) => number
+declare const create_tab_index_args: (tabId: string, args: any[]) => any[]
+declare const get_img2img_tab_index: () => any[]
+declare const create_submit_args: (args: any[]) => any[]
+declare const showSubmitButtons: (tabname: string, show: boolean) => void
+declare const submit: () => any[]
+declare const submit_img2img: () => any[]
+declare const modelmerger: () => any[]
+declare const ask_for_style_name: (
+  arg0: any,
+  prompt_text: string,
+  negative_prompt_text: string
+) => [string, string, string]
+declare const confirm_clear_prompt: (prompt: string, negative_prompt: string) => [string, string]
+declare const recalculatePromptTokens: (name: string) => void
+declare const recalculate_prompts_txt2img: () => any[]
+declare const recalculate_prompts_img2img: () => any[]
+declare const update_txt2img_tokens: (...args: any[]) => any
+declare const update_img2img_tokens: (...args: any[]) => any
+declare const restart_reload: () => any[]
+declare const updateInput: (target: Element) => void
+declare const selectCheckpoint: (name: string) => void

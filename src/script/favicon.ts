@@ -14,6 +14,6 @@ class FaviconHandler {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+onUiLoaded(() => {
   FaviconHandler.setFavicon()
 })
