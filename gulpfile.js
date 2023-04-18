@@ -1,19 +1,12 @@
 const gulp = require('gulp')
-const less = require('gulp-less')
-const ts = require('gulp-typescript')
+const shell = require('gulp-shell')
 
-const tsProject = ts.createProject('tsconfig.json')
-gulp.task('compile', () => {
-  return gulp.src('src/script/**/*.ts').pipe(tsProject()).pipe(gulp.dest('javascript'))
-})
+gulp.task('umi-build', shell.task('yarn umi build'))
+gulp.task('mv', shell.task('mv ./dist/index.js ./javascript/index.js && mv ./dist/index.css ./style.css'))
+gulp.task('clean', shell.task('rm -r dist'))
 
-gulp.task('less', () => {
-  return gulp.src('src/theme/*.less').pipe(less()).pipe(gulp.dest('./'))
-})
-
-gulp.task('build', gulp.parallel('compile', 'less'))
+gulp.task('build', gulp.series('umi-build', 'mv', 'clean'))
 
 gulp.task('watch', () => {
-  gulp.watch('src/theme/**/*', gulp.parallel('less'))
-  gulp.watch('src/script/**/*', gulp.parallel('compile'))
+  gulp.watch('src/**/*', gulp.series('build'))
 })
