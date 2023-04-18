@@ -10,16 +10,15 @@
   "author": "canisminor1990 <i@canisminor.cc>",
   "sideEffects": false,
   "scripts": {
-    "build": "gulp build",
-    "dev": "gulp watch",
-    "dev:with-sd": "concurrently \"gulp watch\" \"npm run sd-debug\"",
+    "build": "umi build",
+    "dev": "umi build",
     "lint": "eslint \"{src,javascript}/**/*.{js,jsx,ts,tsx}\" --fix",
     "prepare": "husky install",
     "prettier": "prettier -c --write \"**/**\"",
     "release": "semantic-release",
-    "sd-debug": "cd ../../ && ./webui.sh ",
+    "sd-debug": "cd ../../ && ./webui.sh",
     "setup": "umi setup",
-    "stat": "npm run dev",
+    "start": "umi build",
     "stylelint": "stylelint \"src/**/*.less\" --fix && stylelint \"./style.css\" --fix",
     "test": "npm run lint",
     "type-check": "tsc -p tsconfig-check.json"
@@ -56,8 +55,6 @@
     "eslint": "^8",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-import-resolver-typescript": "^3.5.5",
-    "gulp": "^4",
-    "gulp-shell": "^0.8.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.1",
     "object-to-css-variables": "^0.2.1",
@@ -73,6 +70,7 @@
     "stylelint": "^15.4.0",
     "stylelint-less": "^1.0.6",
     "typescript": "^5.0.0",
-    "umi": "^4.0.64"
+    "umi": "^4.0.64",
+    "webpack-shell-plugin-next": "^2.3.1"
   }
 }

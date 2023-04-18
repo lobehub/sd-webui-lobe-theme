@@ -1,3 +1,13 @@
-module.exports = {
-  displayTypes: ['feat', 'fix', 'styles', 'pref'],
-};
+/scripts
+/config
+/example
+_test_
+__test__
+
+/node_modules
+jest*
+/es
+/lib
+/docs
+/dist
+/javascript
