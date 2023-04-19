@@ -42,10 +42,13 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@ant-design/icons": "^5.0.1",
     "@commitlint/cli": "^17",
     "@types/node": "^18",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-rnd": "^8.0.0",
+    "@types/styled-components": "^5.1.26",
     "@umijs/lint": "^4.0.64",
     "antd": "^5.4.2",
     "antd-style": "^3.0.0",
@@ -58,12 +61,16 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.2.1",
     "object-to-css-variables": "^0.2.1",
+    "polished": "^4.2.2",
     "prettier": "^2",
     "prettier-plugin-organize-imports": "^3",
     "prettier-plugin-packagejson": "^2",
     "query-string": "^8.1.0",
+    "re-resizable": "^6.9.9",
     "react": "^18",
     "react-dom": "^18",
+    "react-layout-kit": "^1.6.1",
+    "react-rnd": "^10.4.1",
     "semantic-release": "^21",
     "semantic-release-config-gitmoji": "^1",
     "styled-components": "^5.3.9",
@@ -71,6 +78,7 @@
     "stylelint-less": "^1.0.6",
     "typescript": "^5.0.0",
     "umi": "^4.0.64",
+    "use-merge-value": "^1.2.0",
     "webpack-shell-plugin-next": "^2.3.1"
   }
 }

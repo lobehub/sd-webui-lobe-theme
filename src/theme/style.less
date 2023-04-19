@@ -11,7 +11,7 @@
 @import 'components/container';
 @import 'components/scrollbar';
 @import 'components/options';
-//@import 'components/header';
+@import 'components/header';
 @import 'components/modal';
 @import 'components/sliders';
 @import 'components/button';
@@ -35,7 +35,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-size-adjust: 100%;
+  background-image: var(--color-body-background);
+  background-repeat: no-repeat;
 }
+
 
 code {
   font-family: var(--font-family-code);
@@ -67,13 +70,18 @@ h5 {
   color: var(--color-text);
 }
 
+.dark, .light {
+  div {
+    color: var(--color-text);
+  }
+}
+
 /* Theme Fix */
 .gradio-container {
   font-size: var(--font-size);
   color: var(--color-text);
   margin: 0;
-  background-image: var(--color-body-background);
-  background-repeat: no-repeat;
+  background: transparent !important;
 }
 
 #txtimg_hr_finalres {

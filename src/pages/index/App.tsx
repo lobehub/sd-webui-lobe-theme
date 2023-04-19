@@ -4,14 +4,16 @@ import React, { useEffect, useState } from 'react'
 import Layout from './Layout'
 
 const App: React.FC = () => {
-  const [appearance, setAppearance] = useState<string>('auto')
+  const [appearance, setAppearance] = useState<string>('dark')
   useEffect(() => {
-    setAppearance(String(qs.parseUrl(window.location.href).query.__theme) || 'auto')
+    const themeMode = String(qs.parseUrl(window.location.href).query.__theme) || 'dark'
+    setAppearance(themeMode)
+    document.body.classList.add(themeMode)
   }, [])
 
   return (
     <ThemeProvider appearance={appearance}>
-      <Layout />
+      <Layout themeMode={appearance} />
     </ThemeProvider>
   )
 }

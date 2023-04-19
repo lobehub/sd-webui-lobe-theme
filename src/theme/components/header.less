@@ -1,16 +1,4 @@
 #quicksettings {
-  position: fixed;
-  z-index: 1000;
-  flex-wrap: nowrap;
-  top: 12px;
-  display: flex;
-  align-items: center;
-
-  > * {
-    @media screen and (max-width: 640px) {
-      display: none;
-    }
-  }
 
   span {
     white-space: nowrap;
@@ -19,17 +7,17 @@
     width: 100%;
   }
 
-  &::before {
-    content: '';
-    display: block;
-    background: var(--logo) no-repeat;
-    width: 129px;
-    height: 26px;
-    z-index: 1000;
-    margin-right: 36px;
-    margin-left: 16px;
-    margin-top: 12px;
-  }
+  //&::before {
+  //  content: '';
+  //  display: block;
+  //  background: var(--logo) no-repeat;
+  //  width: 129px;
+  //  height: 26px;
+  //  z-index: 1000;
+  //  margin-right: 36px;
+  //  margin-left: 16px;
+  //  margin-top: 12px;
+  //}
 
   .dropdown-arrow {
     min-width: 16px;
@@ -39,9 +27,6 @@
   > div,
   > fieldset {
     min-width: 240px !important;
-    @media screen and (max-width: 640px) {
-      max-width: 160px;
-    }
   }
 
   button.svelte-1ipelgc {
@@ -57,45 +42,46 @@
     margin-top: 118px;
   }
 
-  > .tab-nav:first-child {
-    position: fixed;
-    top: 90px;
-    z-index: 999;
-    flex-wrap: nowrap;
-    overflow-y: auto;
-    width: 100%;
+
+}
+
+#header {
+  //position: fixed;
+  //top: 90px;
+  //z-index: 999;
+  //flex-wrap: nowrap;
+  //width: 100%;
+  //border: none;
+  //&::before {
+  //  content: '';
+  //  display: block;
+  //  position: fixed;
+  //  width: 100vw;
+  //  height: 121px;
+  //  top: 0;
+  //  left: 0;
+  //  border-block-end: 1px solid var(--color-border-secondary);
+  //  background: var(--color-header);
+  //  backdrop-filter: blur(24px);
+  //  z-index: -1;
+  //}
+
+   button {
     border: none;
-    &::before {
-      content: '';
-      display: block;
-      position: fixed;
-      width: 100vw;
-      height: 121px;
-      top: 0;
-      left: 0;
-      border-block-end: 1px solid var(--color-border-secondary);
-      background: var(--color-header);
-      backdrop-filter: blur(24px);
-      z-index: -1;
+    border-bottom: 3px solid transparent !important;
+    flex: none;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      border: none;
+      border-bottom: 3px solid var(--color-primary) !important;
+      flex: none;
     }
 
-    > button {
+    &.selected {
+      background: transparent;
       border: none;
-      border-bottom: 3px solid transparent !important;
-      flex: none;
-      transition: all 0.2s ease-in-out;
-
-      &:hover {
-        border: none;
-        border-bottom: 3px solid var(--color-primary) !important;
-        flex: none;
-      }
-
-      &.selected {
-        background: transparent;
-        border: none;
-        border-bottom: 3px solid var(--color-primary) !important;
-      }
+      border-bottom: 3px solid var(--color-primary) !important;
     }
   }
 }
