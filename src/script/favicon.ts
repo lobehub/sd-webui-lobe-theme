@@ -14,6 +14,8 @@ class FaviconHandler {
   }
 }
 
-onUiLoaded(() => {
+onUiLoaded(() => {})
+
+export default () => {
   FaviconHandler.setFavicon()
-})
+}
