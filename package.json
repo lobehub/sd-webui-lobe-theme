@@ -19,12 +19,12 @@
     "sd-debug": "cd ../../ && ./webui.sh",
     "setup": "umi setup",
     "start": "umi build",
-    "stylelint": "stylelint \"src/**/*.less\" --fix && stylelint \"./style.css\" --fix",
+    "stylelint": "stylelint \"src/**/*.less\" --fix",
     "test": "npm run lint",
     "type-check": "tsc -p tsconfig-check.json"
   },
   "lint-staged": {
-    "*.{less,css}": [
+    "*.{less}": [
       "stylelint --fix",
       "prettier --write"
     ],
@@ -76,6 +76,8 @@
     "semantic-release-config-gitmoji": "^1",
     "styled-components": "^5.3.9",
     "stylelint": "^15.4.0",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-recommended": "^12.0.0",
     "stylelint-less": "^1.0.6",
     "stylelint-order": "^6.0.3",
     "typescript": "^5.0.0",

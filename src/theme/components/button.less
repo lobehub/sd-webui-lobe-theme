@@ -7,6 +7,17 @@
 }
 
 #txt2img_interrupt,
+#img2img_interrupt {
+  border-radius: var(--border-radius) 0 0 var(--border-radius) !important;
+  border-right: 1px solid var(--color-error-bg);
+}
+
+#txt2img_skip,
+#img2img_skip {
+  border-radius: 0 var(--border-radius) var(--border-radius) 0 !important;
+}
+
+#txt2img_interrupt,
 #txt2img_skip,
 #img2img_interrupt,
 #img2img_skip {
@@ -22,17 +33,6 @@
     background: var(--color-error-active) !important;
     color: #fff !important;
   }
-}
-
-#txt2img_interrupt,
-#img2img_interrupt {
-  border-radius: var(--border-radius) 0 0 var(--border-radius) !important;
-  border-right: 1px solid var(--color-error-bg);
-}
-
-#txt2img_skip,
-#img2img_skip {
-  border-radius: 0 var(--border-radius) var(--border-radius) 0 !important;
 }
 
 .gradio-button.secondary-down,

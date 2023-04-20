@@ -7,7 +7,6 @@
 
 .tabitem,
 .gradio-tabitem {
-  background: var(--color-fill-quaternary);
   border: none !important;
   border-radius: var(--container-radius);
   background: var(--panel-background-fill);
@@ -27,21 +26,23 @@
   border: none !important;
   gap: 8px;
   margin-bottom: 8px;
+
   button {
     cursor: pointer;
     border: none !important;
     background: var(--color-fill-quaternary) !important;
-    flex: none;
     transition: all 0.2s ease-in-out;
     padding: 8px !important;
     border-radius: 4px !important;
     flex: 1 !important;
+
     &:hover {
       border: none !important;
       color: var(--color-text) !important;
       background: var(--color-fill-tertiary) !important;
       flex: none;
     }
+
     &.selected {
       border: none !important;
       background: var(--color-fill-secondary) !important;
@@ -57,9 +58,10 @@
   background: var(--color-fill-quaternary);
 }
 
-[id$='2img_tools'] > div {
+[id$="2img_tools"] > div {
   display: flex;
   justify-content: center;
+
   button {
     max-width: unset !important;
   }
@@ -86,6 +88,7 @@
 
 .wrap.svelte-1p9xokt.svelte-1p9xokt.svelte-1p9xokt {
   gap: 8px !important;
+
   > label {
     flex: 1 !important;
     white-space: nowrap;
@@ -93,7 +96,7 @@
   }
 }
 
-[id$='_settings'] {
+[id$="_settings"] {
   div.svelte-15lo0d8 > *,
   div.svelte-15lo0d8 > .form > * {
     min-width: unset !important;
