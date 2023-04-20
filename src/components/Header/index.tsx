@@ -65,7 +65,7 @@ const Header: React.FC<HeaderProps> = ({ children, themeMode }) => {
         <Logo themeMode={themeMode} style={{ paddingRight: 16 }} />
         {children}
         <Space.Compact>
-          <a href="https://github.com/canisminor1990/sd-web-ui-kitchen-theme" target="_blank">
+          <a href="https://github.com/canisminor1990/sd-web-ui-kitchen-theme" target="_blank" rel="noreferrer">
             <Button icon={<GithubOutlined />} />
           </a>
           <Button icon={themeIcon[themeMode]} onClick={handleSetTheme} />

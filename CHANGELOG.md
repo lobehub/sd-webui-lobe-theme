@@ -2,15 +2,13 @@
 
 # [1.2.0](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.1.2...v1.2.0) (2023-04-20)
 
-
 ### ✨ Features
 
-* add react layout ([b1b6263](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/b1b6263))
-
+- add react layout ([b1b6263](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/b1b6263))
 
 ### 🐛 Bug Fixes
 
-* build ([c84f2cb](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/c84f2cb))
+- build ([c84f2cb](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/c84f2cb))
 
 ## [1.1.2](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.1.1...v1.1.2) (2023-04-18)
 
