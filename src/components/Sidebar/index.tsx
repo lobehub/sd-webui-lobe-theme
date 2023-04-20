@@ -1,15 +1,30 @@
 import { DraggablePanel } from '@/components'
-import React from 'react'
+import { useResponsive } from 'antd-style'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 const SidebarView = styled.div`
   padding: 16px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+
   #quicksettings {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     justify-content: stretch;
+
+    > div > div > div > label {
+      max-width: 80%;
+    }
+
+    input[type='number'],
+    textarea {
+      height: 20px !important;
+      padding: 4px;
+    }
 
     > * {
       flex: 1;
@@ -39,8 +54,10 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ children }) => {
+  const { mobile } = useResponsive()
+  const [expand, setExpand] = useState<boolean>(!mobile)
   return (
-    <DraggablePanel placement="right" defaultSize={{ width: 280 }}>
+    <DraggablePanel placement="left" defaultSize={{ width: 280 }} isExpand={expand} onExpandChange={setExpand}>
       <SidebarView>{children}</SidebarView>
     </DraggablePanel>
   )

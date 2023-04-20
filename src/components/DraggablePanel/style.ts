@@ -116,6 +116,7 @@ export const useStyle = createStyles(({ token }, prefix: string) => {
         background: ${rgba(token.colorBgContainer, 0.75)};
         backdrop-filter: blur(40px);
         overflow: hidden;
+        position: relative;
       `
     ),
     float: cx(
@@ -127,6 +128,7 @@ export const useStyle = createStyles(({ token }, prefix: string) => {
         backdrop-filter: blur(40px);
         box-shadow: ${token.boxShadowSecondary};
         z-index: 2000;
+        position: relative;
       `
     ),
     leftHandle: cx(

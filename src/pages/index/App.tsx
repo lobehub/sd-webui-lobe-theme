@@ -1,26 +1,32 @@
-import { Header, Sidebar } from '@/components'
-import React, { useEffect, useRef } from 'react'
+import { Content, Header, Sidebar } from '@/components'
+import { Spin } from 'antd'
+import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 
 const View = styled.div`
-  width: 100vw;
-  height: 100vh;
   display: flex;
   flex-direction: row !important;
+  flex: 1;
+  overflow: hidden;
+  position: relative;
 `
 
 const MainView = styled.div`
   flex: 1;
+  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  position: relative;
 `
 
-const Content = styled.div`
-  overflow-x: hidden;
-  overflow-y: auto;
-  flex: 1;
+const LoadingBox = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
 interface AppProps {
@@ -28,6 +34,7 @@ interface AppProps {
 }
 
 const App: React.FC<AppProps> = ({ themeMode }) => {
+  const [loading, setLoading] = useState(true)
   const sidebarRef: any = useRef<HTMLElement>()
   const mainRef: any = useRef<HTMLElement>()
   const headerRef: any = useRef<HTMLElement>()
@@ -39,23 +46,39 @@ const App: React.FC<AppProps> = ({ themeMode }) => {
       if (sidebar) sidebarRef.current?.appendChild(sidebar)
       if (header) headerRef.current?.appendChild(header)
       if (main) mainRef.current?.appendChild(main)
+      setLoading(false)
     })
   }, [])
 
   return (
-    <View>
-      <MainView>
-        <Header themeMode={themeMode}>
-          <div id="header" ref={headerRef} />
-        </Header>
+    <MainView>
+      <Header themeMode={themeMode}>
+        {loading && (
+          <LoadingBox>
+            <Spin size="small" />
+          </LoadingBox>
+        )}
+        <div id="header" ref={headerRef} />
+      </Header>
+      <View>
+        <Sidebar>
+          {loading && (
+            <LoadingBox>
+              <Spin size="small" />
+            </LoadingBox>
+          )}
+          <div id="sidebar" ref={sidebarRef} />
+        </Sidebar>
         <Content>
-          <div ref={mainRef} />
+          {loading && (
+            <LoadingBox>
+              <Spin tip="Loading" size="large" />
+            </LoadingBox>
+          )}
+          <div id="content" ref={mainRef} />
         </Content>
-      </MainView>
-      <Sidebar>
-        <div ref={sidebarRef} />
-      </Sidebar>
-    </View>
+      </View>
+    </MainView>
   )
 }
 

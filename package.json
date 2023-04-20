@@ -14,7 +14,7 @@
     "dev": "umi build",
     "lint": "eslint \"{src,javascript}/**/*.{js,jsx,ts,tsx}\" --fix",
     "prepare": "husky install",
-    "prettier": "prettier -c --write \"**/**\"",
+    "prettier": "prettier -c --write \"**/**\" && npm run lint && npm run stylelint",
     "release": "semantic-release",
     "sd-debug": "cd ../../ && ./webui.sh",
     "setup": "umi setup",

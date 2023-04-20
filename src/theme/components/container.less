@@ -58,7 +58,7 @@
   background: var(--color-fill-quaternary);
 }
 
-[id$="2img_tools"] > div {
+[id$='2img_tools'] > div {
   display: flex;
   justify-content: center;
 
@@ -96,10 +96,29 @@
   }
 }
 
-[id$="_settings"] {
+[id$='_settings'] {
   div.svelte-15lo0d8 > *,
   div.svelte-15lo0d8 > .form > * {
     min-width: unset !important;
     flex: 1;
+  }
+}
+
+#tab_settings {
+  button.svelte-1g805jl {
+    background: transparent !important;
+    border-radius: 0 !important;
+
+    &:hover {
+      background: transparent !important;
+      border-radius: 0 !important;
+    }
+
+    &.selected {
+      border: none !important;
+      background: transparent !important;
+      border-left: 2px solid var(--color-primary) !important;
+      border-radius: 0 !important;
+    }
   }
 }

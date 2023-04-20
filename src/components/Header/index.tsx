@@ -1,8 +1,9 @@
 import { DraggablePanel } from '@/components'
 import { GithubOutlined } from '@ant-design/icons'
 import { Button, Space } from 'antd'
+import { useResponsive } from 'antd-style'
 import qs from 'query-string'
-import React, { useCallback } from 'react'
+import React, { useCallback, useState } from 'react'
 import styled from 'styled-components'
 import Logo from './Logo'
 import { themeIcon } from './style'
@@ -13,6 +14,7 @@ const HeaderView = styled.div`
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
 
   #header {
     .tab-nav {
@@ -52,6 +54,8 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ children, themeMode }) => {
+  const { mobile } = useResponsive()
+  const [expand, setExpand] = useState<boolean>(!mobile)
   const handleSetTheme = useCallback(() => {
     const theme = themeMode === 'light' ? 'dark' : 'light'
     const gradioURL = qs.parseUrl(window.location.href)
@@ -60,15 +64,21 @@ const Header: React.FC<HeaderProps> = ({ children, themeMode }) => {
   }, [themeMode])
 
   return (
-    <DraggablePanel placement="top" defaultSize={{ height: 'auto' }}>
-      <HeaderView>
-        <Logo themeMode={themeMode} style={{ paddingRight: 16 }} />
+    <DraggablePanel placement="top" defaultSize={{ height: 'auto' }} isExpand={expand} onExpandChange={setExpand}>
+      <HeaderView style={{ flexDirection: mobile ? 'column' : 'row' }}>
+        <Logo themeMode={themeMode} />
         {children}
         <Space.Compact>
-          <a href="https://github.com/canisminor1990/sd-web-ui-kitchen-theme" target="_blank" rel="noreferrer">
-            <Button icon={<GithubOutlined />} />
+          <a href="https://civitai.com/" target="_blank" rel="noreferrer">
+            <Button
+              title="Civitai"
+              icon={<img src="https://civitai.com/favicon.ico" width={20} style={{ padding: 2 }} />}
+            />
           </a>
-          <Button icon={themeIcon[themeMode]} onClick={handleSetTheme} />
+          <a href="https://github.com/canisminor1990/sd-web-ui-kitchen-theme" target="_blank" rel="noreferrer">
+            <Button title="Github" icon={<GithubOutlined />} />
+          </a>
+          <Button title="Switch Theme" icon={themeIcon[themeMode]} onClick={handleSetTheme} />
         </Space.Compact>
       </HeaderView>
     </DraggablePanel>

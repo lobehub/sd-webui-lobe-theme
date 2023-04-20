@@ -71,6 +71,12 @@ Extra-Networks 扩展模型视窗
 
 ![](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/blob/main/assets/extra-networks.webp?raw=true)
 
+Quick-Setting 快捷设置
+
+```txt
+sd_model_checkpoint, sd_vae, CLIP_stop_at_last_layers, img2img_background_color, img2img_color_correction, samples_save, samples_format, grid_save, return_grid,  n_rows, live_previews_enable, show_progress_every_n_steps, live_preview_refresh_period
+```
+
 <br/>
 
 ## 🪄 提示词格式化
