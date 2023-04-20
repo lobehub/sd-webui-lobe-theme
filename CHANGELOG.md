@@ -1,5 +1,12 @@
 # Changelog
 
+# [1.3.0](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.2.2...v1.3.0) (2023-04-20)
+
+
+### ✨ Features
+
+* add prompt editor ([1428cc1](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/1428cc1))
+
 ## [1.2.2](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.2.1...v1.2.2) (2023-04-20)
 
 ## [1.2.1](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.2.0...v1.2.1) (2023-04-20)
