@@ -11,9 +11,9 @@ import App from './App'
 
 const Root: React.FC = () => {
   setupStyled({ ThemeContext })
-  const [appearance, setAppearance] = useState<'light' | 'dark'>('dark')
+  const [appearance, setAppearance] = useState<'light' | 'dark'>('light')
   useEffect(() => {
-    const themeMode: any = String(qs.parseUrl(window.location.href).query.__theme) || 'dark'
+    const themeMode: any = String(qs.parseUrl(window.location.href).query.__theme) || 'light'
     setAppearance(themeMode)
     document.body.classList.add(themeMode)
   }, [])

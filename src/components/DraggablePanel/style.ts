@@ -1,4 +1,5 @@
 import { createStyles, css, cx } from 'antd-style'
+import { rgba } from 'polished'
 
 export const useStyle = createStyles(({ token }, prefix: string) => {
   const commonHandle = css`
@@ -112,7 +113,8 @@ export const useStyle = createStyles(({ token }, prefix: string) => {
     fixed: cx(
       `${prefix}-fixed`,
       css`
-        background: ${token.colorBgContainer};
+        background: ${rgba(token.colorBgContainer, 0.75)};
+        backdrop-filter: blur(40px);
         overflow: hidden;
       `
     ),
@@ -121,7 +123,8 @@ export const useStyle = createStyles(({ token }, prefix: string) => {
       css`
         overflow: hidden;
         border-radius: 8px;
-        background: ${token.colorBgElevated};
+        background: ${rgba(token.colorBgElevated, 0.75)};
+        backdrop-filter: blur(40px);
         box-shadow: ${token.boxShadowSecondary};
         z-index: 2000;
       `

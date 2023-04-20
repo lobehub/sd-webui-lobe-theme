@@ -1,4 +1,4 @@
-import { DraggablePanel, Header } from '@/components'
+import { Header, Sidebar } from '@/components'
 import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 
@@ -21,10 +21,6 @@ const Content = styled.div`
   overflow-x: hidden;
   overflow-y: auto;
   flex: 1;
-`
-
-const Sidebar = styled.div`
-  padding: 16px;
 `
 
 interface AppProps {
@@ -56,9 +52,9 @@ const App: React.FC<AppProps> = ({ themeMode }) => {
           <div ref={mainRef} />
         </Content>
       </MainView>
-      <DraggablePanel placement="right">
-        <Sidebar ref={sidebarRef} />
-      </DraggablePanel>
+      <Sidebar>
+        <div ref={sidebarRef} />
+      </Sidebar>
     </View>
   )
 }
