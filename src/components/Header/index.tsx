@@ -66,13 +66,21 @@ const Header: React.FC<HeaderProps> = ({ children, themeMode }) => {
   return (
     <DraggablePanel placement="top" defaultSize={{ height: 'auto' }} isExpand={expand} onExpandChange={setExpand}>
       <HeaderView style={{ flexDirection: mobile ? 'column' : 'row' }}>
-        <Logo themeMode={themeMode} />
+        <a href="https://github.com/canisminor1990/sd-web-ui-kitchen-theme" target="_blank" rel="noreferrer">
+          <Logo themeMode={themeMode} />
+        </a>
         {children}
         <Space.Compact>
           <a href="https://civitai.com/" target="_blank" rel="noreferrer">
             <Button
               title="Civitai"
               icon={<img src="https://civitai.com/favicon.ico" width={20} style={{ padding: 2 }} />}
+            />
+          </a>
+          <a href="https://www.birme.net/?target_width=512&target_height=512" target="_blank" rel="noreferrer">
+            <Button
+              title="Birme"
+              icon={<img src="https://www.birme.net/static/images/favicon.png" width={16} style={{ padding: 4 }} />}
             />
           </a>
           <a href="https://github.com/canisminor1990/sd-web-ui-kitchen-theme" target="_blank" rel="noreferrer">

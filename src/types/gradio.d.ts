@@ -1,8 +1,8 @@
 // scripts.js
 
 declare const gradioApp: () => DocumentFragment
-declare const get_uiCurrentTab: () => Element | null
-declare const get_uiCurrentTabContent: () => Element | null
+declare const get_uiCurrentTab: () => HTMLElement
+declare const get_uiCurrentTabContent: () => HTMLElement
 declare const uiUpdateCallbacks: ((m: unknown) => void)[]
 declare const uiLoadedCallbacks: ((m: unknown) => void)[]
 declare const uiTabChangeCallbacks: ((m: unknown) => void)[]

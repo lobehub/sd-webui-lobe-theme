@@ -10,6 +10,8 @@ const ContentView = styled.div`
 
 interface ContentProps {
   children: React.ReactNode
+
+  loading?: boolean
 }
 
 const Content: React.FC<ContentProps> = ({ children }) => {

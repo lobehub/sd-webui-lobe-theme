@@ -1,7 +1,7 @@
 /**
  * 转换器工具类
  */
-class Converter {
+export class Converter {
   /**
    * 将数字四舍五入到小数点后四位
    * @param value 数字

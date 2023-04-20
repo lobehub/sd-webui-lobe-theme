@@ -1,7 +1,9 @@
 import { Content, Header, Sidebar } from '@/components'
+import { useAppStore } from '@/store'
 import { Spin } from 'antd'
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
+import { shallow } from 'zustand/shallow'
 
 const View = styled.div`
   display: flex;
@@ -34,6 +36,7 @@ interface AppProps {
 }
 
 const App: React.FC<AppProps> = ({ themeMode }) => {
+  const [setCurrentTab] = useAppStore((st) => [st.setCurrentTab], shallow)
   const [loading, setLoading] = useState(true)
   const sidebarRef: any = useRef<HTMLElement>()
   const mainRef: any = useRef<HTMLElement>()
@@ -47,6 +50,9 @@ const App: React.FC<AppProps> = ({ themeMode }) => {
       if (header) headerRef.current?.appendChild(header)
       if (main) mainRef.current?.appendChild(main)
       setLoading(false)
+    })
+    onUiUpdate(() => {
+      setCurrentTab()
     })
   }, [])
 
@@ -69,7 +75,7 @@ const App: React.FC<AppProps> = ({ themeMode }) => {
           )}
           <div id="sidebar" ref={sidebarRef} />
         </Sidebar>
-        <Content>
+        <Content loading={loading}>
           {loading && (
             <LoadingBox>
               <Spin tip="Loading" size="large" />

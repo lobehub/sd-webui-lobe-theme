@@ -32,8 +32,9 @@ English | [简体中文](./README-zh_CN.md)
 
 ## ✨ Features
 
-- 🌈 Supports light and dark themes.
+- 🌈 Supports light and dark themes with switch button.
 - 🪄 Supports Prompt formatting.
+- 🎛️ Quick Setting in draggable sidebar.
 - 🎨 Based on Antd CSS Token.
 
 <br/>
