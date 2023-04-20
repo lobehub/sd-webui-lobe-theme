@@ -27,7 +27,7 @@ export default defineConfig({
     memo.plugin('shell').use(WebpackShellPlugin, [
       {
         onBuildExit: {
-          scripts: process.platform === 'darwin' ? mac : win,
+          scripts: process.platform === 'win32' ? win : mac,
           blocking: false,
           parallel: false,
         },
