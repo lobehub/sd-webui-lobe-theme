@@ -1,6 +1,6 @@
+import { DraggablePanel } from '@/components'
 import { GithubOutlined } from '@ant-design/icons'
 import { Button, Space } from 'antd'
-import { rgba } from 'polished'
 import qs from 'query-string'
 import React, { useCallback } from 'react'
 import styled from 'styled-components'
@@ -13,9 +13,7 @@ const HeaderView = styled.div`
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
-  background: ${({ theme }) => rgba(theme.colorBgContainer, 0.5)};
-  border-bottom: 1px solid ${({ theme }) => theme.colorBorderSecondary};
-  backdrop-filter: blur(40px);
+
   #header {
     .tab-nav {
       border: none !important;
@@ -62,16 +60,18 @@ const Header: React.FC<HeaderProps> = ({ children, themeMode }) => {
   }, [themeMode])
 
   return (
-    <HeaderView>
-      <Logo themeMode={themeMode} style={{ paddingRight: 16 }} />
-      {children}
-      <Space.Compact>
-        <a href="https://github.com/canisminor1990/sd-web-ui-kitchen-theme" target="_blank">
-          <Button icon={<GithubOutlined />} />
-        </a>
-        <Button icon={themeIcon[themeMode]} onClick={handleSetTheme} />
-      </Space.Compact>
-    </HeaderView>
+    <DraggablePanel placement="top" defaultSize={{ height: 'auto' }}>
+      <HeaderView>
+        <Logo themeMode={themeMode} style={{ paddingRight: 16 }} />
+        {children}
+        <Space.Compact>
+          <a href="https://github.com/canisminor1990/sd-web-ui-kitchen-theme" target="_blank">
+            <Button icon={<GithubOutlined />} />
+          </a>
+          <Button icon={themeIcon[themeMode]} onClick={handleSetTheme} />
+        </Space.Compact>
+      </HeaderView>
+    </DraggablePanel>
   )
 }
 

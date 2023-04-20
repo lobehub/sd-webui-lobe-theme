@@ -26,8 +26,6 @@
 
 [English](./README.md) | 简体中文
 
-<br/>
-
 > ⚠️⚠️⚠️ 警告：最低要求 gradio-3.23.0 & sd-webui [4c1ad74](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commit/4c1ad743e3baf1246db0711aa0107debf036a12b)
 
 <br/>
@@ -75,7 +73,6 @@ Extra-Networks 扩展模型视窗
 
 <br/>
 
-
 ## 🪄 提示词格式化
 
 ![](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/blob/main/assets/prompt-formatting.webp?raw=true)
@@ -85,7 +82,7 @@ Extra-Networks 扩展模型视窗
 格式化前
 
 ```text
-photorealistic   photo of a handsome male (wizard  :1.2）， <lora:LuisapHotlineStyle:0.5> <lora:ElegantHanfuRuqunStyle:0.2>    short beard, white wizard  shirt, (with golden    trim:0.8), 
+photorealistic   photo of a handsome male (wizard  :1.2）， <lora:LuisapHotlineStyle:0.5> <lora:ElegantHanfuRuqunStyle:0.2>    short beard, white wizard  shirt, (with golden    trim:0.8),
 ```
 
 格式化后
@@ -95,7 +92,6 @@ photorealistic photo of a handsome male, (wizard:1.2), short beard, white wizard
 ```
 
 <br/>
-
 
 ## ⌨️ 本地开发
 

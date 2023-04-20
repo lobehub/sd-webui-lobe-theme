@@ -1,9 +1,29 @@
-.extra-network-thumbs {
+.extra-networks {
+  .tab-nav{
+    align-items: center;
+    > * {
+      height: 40px !important;
+      margin: 0 !important;
+    }
+  }
+
+  .extra-network-subdirs.extra-network-subdirs-thumbs {
+    align-items: center;
+    > * {
+      height: 32px !important;
+      margin: 0 !important;
+    }
+  }
+
   .actions {
     .name {
       background: linear-gradient(0deg, rgb(0 0 0 / 80%), transparent);
       font-weight: 500;
       text-shadow: 0 1px 1px rgb(0 0 0 / 90%);
+    }
+
+    .additional {
+      display: none;
     }
 
     .additional > ul {
@@ -25,6 +45,10 @@
       transform: scale(1.5);
       z-index: 500;
       box-shadow: 0 6px 24px -4px rgb(0 0 0 / 80%);
+
+      .additional {
+        display: block;
+      }
     }
   }
 

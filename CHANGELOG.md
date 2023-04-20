@@ -16,17 +16,15 @@
 
 ## [1.1.1](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.1.0...v1.1.1) (2023-04-14)
 
-
 ### 🐛 Bug Fixes
 
-* scrollbar ([2dce630](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/2dce630))
+- scrollbar ([2dce630](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/2dce630))
 
 # [1.1.0](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.0.1...v1.1.0) (2023-04-14)
 
-
 ### ✨ Features
 
-* support light/dark mode ([135f4fc](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/135f4fc))
+- support light/dark mode ([135f4fc](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/135f4fc))
 
 ## [1.0.1](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.0.0...v1.0.1) (2023-04-10)
 

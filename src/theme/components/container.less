@@ -1,3 +1,10 @@
+.gradio-container {
+  font-size: var(--font-size);
+  color: var(--color-text);
+  margin: 16px 0 0 !important;
+  background: transparent !important;
+}
+
 .tabitem,
 .gradio-tabitem {
   background: var(--color-fill-quaternary);
@@ -41,6 +48,7 @@
       color: var(--color-text) !important;
       flex: none;
       font-weight: 600;
+      border-bottom: 2px solid var(--color-primary) !important;
     }
   }
 }
@@ -58,17 +66,19 @@
 }
 
 .image-buttons button {
-  min-width: min(160px,100%) !important;
+  min-width: min(160px, 100%) !important;
 }
 
 #img2img_label_copy_to_img2img {
   display: none;
 }
 
-#img2img_copy_to_img2img, .gap.compact, .image-buttons, .image_buttons_extras {
+#img2img_copy_to_img2img,
+.gap.compact,
+.image-buttons,
+.image_buttons_extras {
   gap: 8px !important;
 }
-
 
 .padded.svelte-mppz8v {
   padding: 6px;
@@ -76,17 +86,17 @@
 
 .wrap.svelte-1p9xokt.svelte-1p9xokt.svelte-1p9xokt {
   gap: 8px !important;
-  > label  {
+  > label {
     flex: 1 !important;
     white-space: nowrap;
-    border-radius: var(--border-radius)!important;
+    border-radius: var(--border-radius) !important;
   }
 }
 
-[id$="_settings"] {
-  div.svelte-15lo0d8>*, div.svelte-15lo0d8>.form>* {
+[id$='_settings'] {
+  div.svelte-15lo0d8 > *,
+  div.svelte-15lo0d8 > .form > * {
     min-width: unset !important;
     flex: 1;
   }
 }
-
