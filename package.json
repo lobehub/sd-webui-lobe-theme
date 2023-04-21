@@ -31,7 +31,7 @@
     "*.{json}": [
       "prettier --write --no-error-on-unmatched-pattern"
     ],
-    "*.{js,jsx}": [
+    "*.{jsx}": [
       "eslint --fix",
       "prettier --write"
     ],

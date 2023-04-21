@@ -24,3 +24,5 @@ yarn-error.log
 .npmrc
 .env
 .env.local
+style.css
+javascript/index.js
