@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.4.0...v1.4.1) (2023-04-21)
+
+
+### 🐛 Bug Fixes
+
+* dragpanel auto hide in mobile view, fixed ([a7e5d47](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/a7e5d47)), closes [#35](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/issues/35)
+
 # [1.4.0](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.3.2...v1.4.0) (2023-04-21)
 
 
