@@ -9,10 +9,9 @@
 
 ## [1.3.1](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.3.0...v1.3.1) (2023-04-21)
 
-
 ### 🐛 Bug Fixes
 
-* send func, tags lost ([0be6f28](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/0be6f28))
+- send func, tags lost ([0be6f28](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/0be6f28))
 
 # [1.3.0](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.2.2...v1.3.0) (2023-04-20)
 
