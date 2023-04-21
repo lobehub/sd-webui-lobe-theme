@@ -8,7 +8,7 @@ const SidebarView = styled.div`
   padding: 16px;
   overflow-x: hidden;
   overflow-y: auto;
-  height: 100%;
+  height: -webkit-fill-available;
 
   #quicksettings {
     width: 100%;
