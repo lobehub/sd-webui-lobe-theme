@@ -1,6 +1,7 @@
-import React, { useCallback } from 'react'
+import React, { useCallback, useMemo } from 'react'
 import { WithContext, ReactTagsProps as WithContextProps } from 'react-tag-input'
 import styled from 'styled-components'
+import { suggestions } from './utils'
 
 export interface TagItem {
   id: string
@@ -79,24 +80,32 @@ const View = styled.div<{ type: PromptType }>`
   /* Styles for suggestions */
   .ReactTags__suggestions {
     position: absolute;
+    z-index: 1000;
   }
   ul {
     list-style-type: none;
-    box-shadow: 0.05em 0.01em 0.5em rgba(0, 0, 0, 0.2);
-    background: white;
-    width: 200px;
+    box-shadow: var(--box-shadow);
+    background: var(--color-bg-container);
+    width: 248px;
+    max-height: 480px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0;
+    border-radius: var(--border-radius);
     li {
-      border-bottom: 1px solid #ddd;
-      padding: 5px 10px;
+      font-size: 12px;
+      padding: 4px 8px;
       margin: 0;
       &.ReactTags__activeSuggestion {
-        background: #b7cfe0;
+        background: var(--color-primary);
+        color: #fff;
         cursor: pointer;
       }
       mark {
-        text-decoration: underline;
-        background: none;
         font-weight: 600;
+        color: #fff;
+        background: var(--color-primary-hover);
+        border-radius: 2px;
       }
     }
   }
@@ -120,19 +129,24 @@ interface TagListProps {
   tags: TagItem[]
   setTags: (tags: TagItem[]) => void
   type: PromptType
+  setValue: (tags: TagItem[]) => void
 }
 
-const TagList: React.FC<TagListProps> = ({ tags, setTags, type }) => {
+const TagList: React.FC<TagListProps> = ({ tags, setTags, type, setValue }) => {
   const handleDelete = useCallback(
     (i: number) => {
-      setTags(tags.filter((tag, index) => index !== i))
+      const newTags = tags.filter((tag, index) => index !== i)
+      setTags(newTags)
+      setValue(newTags)
     },
     [tags]
   )
 
   const handleAddition = useCallback(
     (tag: TagItem) => {
-      setTags([...tags, tag])
+      const newTags = [...tags, tag]
+      setTags(newTags)
+      setValue(newTags)
     },
     [tags]
   )
@@ -143,6 +157,7 @@ const TagList: React.FC<TagListProps> = ({ tags, setTags, type }) => {
       newTags.splice(currPos, 1)
       newTags.splice(newPos, 0, tag)
       setTags(newTags)
+      setValue(newTags)
     },
     [tags]
   )
@@ -152,9 +167,12 @@ const TagList: React.FC<TagListProps> = ({ tags, setTags, type }) => {
       const newTags = [...tags]
       newTags[i] = tag
       setTags(newTags)
+      setValue(newTags)
     },
     [tags]
   )
+
+  const suggestionData = useMemo(() => suggestions[type], [type])
 
   return (
     <View type={type}>
@@ -165,6 +183,7 @@ const TagList: React.FC<TagListProps> = ({ tags, setTags, type }) => {
         handleAddition={handleAddition}
         handleDrag={handleDrag}
         onTagUpdate={handleTagUpdate}
+        suggestions={suggestionData}
         inputFieldPosition="bottom"
         inline
         autocomplete

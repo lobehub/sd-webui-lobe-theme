@@ -3,7 +3,7 @@ import { BoldOutlined, GithubOutlined } from '@ant-design/icons'
 import { Button, Space } from 'antd'
 import { useResponsive } from 'antd-style'
 import qs from 'query-string'
-import React, { useCallback, useState } from 'react'
+import React, {useCallback, useEffect, useState} from 'react'
 import styled from 'styled-components'
 import Logo from './Logo'
 import { civitaiLogo, themeIcon } from './style'
@@ -15,6 +15,7 @@ const HeaderView = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+  height: -webkit-fill-available;
 
   #tabs.header {
     .tab-nav {
@@ -62,6 +63,10 @@ const Header: React.FC<HeaderProps> = ({ children, themeMode }) => {
     gradioURL.query.__theme = theme
     window.location.replace(qs.stringifyUrl(gradioURL))
   }, [themeMode])
+
+  useEffect(() => {
+    setExpand(!mobile)
+  },[mobile])
 
   return (
     <DraggablePanel placement="top" defaultSize={{ height: 'auto' }} isExpand={expand} onExpandChange={setExpand}>

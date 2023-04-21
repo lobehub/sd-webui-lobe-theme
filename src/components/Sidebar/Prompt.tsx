@@ -53,9 +53,16 @@ const Prompt: React.FC<PromptProps> = ({ type }) => {
     } catch {}
   }, [tags])
 
+  const setCurrentValue = useCallback((currentTags: TagItem[]) => {
+    try {
+      const textarea: HTMLTextAreaElement | any = get_uiCurrentTabContent().querySelector(id)
+      if (textarea) textarea.value = currentTags.map((t) => t.text).join(', ')
+    } catch {}
+  }, [])
+
   return (
     <View>
-      <TagList type={type} tags={tags} setTags={setTags} />
+      <TagList type={type} tags={tags} setTags={setTags} setValue={setCurrentValue} />
       <BtnGroup>
         <Btn title="Load Prompt" onClick={getValue}>
           🔄
