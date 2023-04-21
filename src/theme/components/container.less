@@ -5,81 +5,8 @@
   background: transparent !important;
 }
 
-.tabitem,
-.gradio-tabitem {
-  border: none !important;
-  border-radius: var(--container-radius);
-  background: var(--panel-background-fill);
-  padding: var(--spacing-lg);
-  margin-bottom: var(--spacing-lg);
-}
-
-#tabs {
-  > .tabitem,
-  > .gradio-tabitem {
-    background: transparent !important;
-    padding: 0 !important;
-  }
-}
-
-.tab-nav {
-  border: none !important;
-  gap: 8px;
-  margin-bottom: 8px;
-
-  button {
-    cursor: pointer;
-    border: none !important;
-    background: var(--color-fill-quaternary) !important;
-    transition: all 0.2s ease-in-out;
-    padding: 8px !important;
-    border-radius: 4px !important;
-    flex: 1 !important;
-
-    &:hover {
-      border: none !important;
-      color: var(--color-text) !important;
-      background: var(--color-fill-tertiary) !important;
-      flex: none;
-    }
-
-    &.selected {
-      border: none !important;
-      background: var(--color-fill-secondary) !important;
-      color: var(--color-text) !important;
-      flex: none;
-      font-weight: 600;
-      border-bottom: 2px solid var(--color-primary) !important;
-    }
-  }
-}
-
 .selected.svelte-1g805jl {
   background: var(--color-fill-quaternary);
-}
-
-[id$='2img_tools'] > div {
-  display: flex;
-  justify-content: center;
-
-  button {
-    max-width: unset !important;
-  }
-}
-
-.image-buttons button {
-  min-width: min(160px, 100%) !important;
-}
-
-#img2img_label_copy_to_img2img {
-  display: none;
-}
-
-#img2img_copy_to_img2img,
-.gap.compact,
-.image-buttons,
-.image_buttons_extras {
-  gap: 8px !important;
 }
 
 .padded.svelte-mppz8v {
@@ -96,29 +23,20 @@
   }
 }
 
-[id$='_settings'] {
-  div.svelte-15lo0d8 > *,
-  div.svelte-15lo0d8 > .form > * {
-    min-width: unset !important;
-    flex: 1;
-  }
+.block.svelte-mppz8v {
+  background: transparent;
 }
 
-#tab_settings {
-  button.svelte-1g805jl {
-    background: transparent !important;
-    border-radius: 0 !important;
+.block.gradio-accordion.svelte-mppz8v.padded {
+  background-color: var(--color-fill-tertiary) !important;
+  border-color: transparent !important;
+  transition: all 0.3s ease-in-out !important;
+  margin-bottom: var(--size-ms) !important;
+  margin-top: 0 !important;
+  padding: 12px !important;
+  border-radius: var(--border-radius) !important;
+}
 
-    &:hover {
-      background: transparent !important;
-      border-radius: 0 !important;
-    }
-
-    &.selected {
-      border: none !important;
-      background: transparent !important;
-      border-left: 2px solid var(--color-primary) !important;
-      border-radius: 0 !important;
-    }
-  }
+div.svelte-1oo81b7 > *:not(.absolute) {
+  border-radius: var(--border-radius) !important;
 }

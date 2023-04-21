@@ -1,0 +1,50 @@
+[id$='_row_aspect_ratio'],
+[id$='_row_resolutions'],
+[id$='_container_aspect_ratio'] {
+  display: flex !important;
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+}
+
+#arc_show_calculator_button {
+  background: var(--color-fill) !important;
+}
+
+[id$='_container_aspect_ratio'] {
+  background-color: var(--color-fill-tertiary) !important;
+  border-color: transparent !important;
+  transition: all 0.3s ease-in-out !important;
+  margin-bottom: var(--size-ms) !important;
+  margin-top: 0 !important;
+  padding: 12px !important;
+  border-radius: var(--border-radius) !important;
+  gap: 4px !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  flex-direction: row !important;
+  #txt2img_row_aspect_ratio,
+  #txt2img_row_resolutions {
+    max-width: unset;
+    width: unset;
+    flex: 1;
+    display: flex !important;
+  }
+  button {
+    align-items: center !important;
+    justify-content: center !important;
+    border: var(--button-border-width) solid var(--button-secondary-border-color) !important;
+    border-radius: var(--input-radius) !important;
+    background: var(--button-secondary-background-fill) !important;
+    position: relative !important;
+    font-weight: var(--input-text-weight) !important;
+    font-size: 12px !important;
+    line-height: var(--line-sm) !important;
+    padding: 4px 8px !important;
+    cursor: pointer;
+    flex: 1 1 0% !important;
+    min-height: 32px !important;
+  }
+}
