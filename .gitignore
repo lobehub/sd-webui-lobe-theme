@@ -16,7 +16,6 @@ package-lock.json
 # misc
 .DS_Store
 .eslintcache
-.husky
 
 # umi
 /src/.umi

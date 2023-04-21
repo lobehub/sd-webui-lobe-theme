@@ -2,24 +2,21 @@
 
 ## [1.4.1](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.4.0...v1.4.1) (2023-04-21)
 
-
 ### 🐛 Bug Fixes
 
-* dragpanel auto hide in mobile view, fixed ([a7e5d47](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/a7e5d47)), closes [#35](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/issues/35)
+- dragpanel auto hide in mobile view, fixed ([a7e5d47](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/a7e5d47)), closes [#35](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/issues/35)
 
 # [1.4.0](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.3.2...v1.4.0) (2023-04-21)
 
-
 ### ✨ Features
 
-* add suggestions to prompt editor ([bebebe4](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/bebebe4))
+- add suggestions to prompt editor ([bebebe4](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/bebebe4))
 
 ## [1.3.2](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.3.1...v1.3.2) (2023-04-21)
 
-
 ### 🐛 Bug Fixes
 
-* sidebar height ([74a4d2c](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/74a4d2c))
+- sidebar height ([74a4d2c](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/74a4d2c))
 
 ## [1.3.1](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.3.0...v1.3.1) (2023-04-21)
 
