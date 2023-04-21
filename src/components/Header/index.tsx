@@ -1,12 +1,12 @@
 import { DraggablePanel } from '@/components'
-import { GithubOutlined } from '@ant-design/icons'
+import { BoldOutlined, GithubOutlined } from '@ant-design/icons'
 import { Button, Space } from 'antd'
 import { useResponsive } from 'antd-style'
 import qs from 'query-string'
 import React, { useCallback, useState } from 'react'
 import styled from 'styled-components'
 import Logo from './Logo'
-import { themeIcon } from './style'
+import { civitaiLogo, themeIcon } from './style'
 
 const HeaderView = styled.div`
   padding: 16px 24px;
@@ -16,7 +16,7 @@ const HeaderView = styled.div`
   justify-content: space-between;
   gap: 12px;
 
-  #header {
+  #tabs.header {
     .tab-nav {
       border: none !important;
       margin: 0 !important;
@@ -65,23 +65,17 @@ const Header: React.FC<HeaderProps> = ({ children, themeMode }) => {
 
   return (
     <DraggablePanel placement="top" defaultSize={{ height: 'auto' }} isExpand={expand} onExpandChange={setExpand}>
-      <HeaderView style={{ flexDirection: mobile ? 'column' : 'row' }}>
+      <HeaderView id="header" style={{ flexDirection: mobile ? 'column' : 'row' }}>
         <a href="https://github.com/canisminor1990/sd-web-ui-kitchen-theme" target="_blank" rel="noreferrer">
           <Logo themeMode={themeMode} />
         </a>
         {children}
         <Space.Compact>
           <a href="https://civitai.com/" target="_blank" rel="noreferrer">
-            <Button
-              title="Civitai"
-              icon={<img src="https://civitai.com/favicon.ico" width={20} style={{ padding: 2 }} />}
-            />
+            <Button title="Civitai" icon={civitaiLogo} />
           </a>
           <a href="https://www.birme.net/?target_width=512&target_height=512" target="_blank" rel="noreferrer">
-            <Button
-              title="Birme"
-              icon={<img src="https://www.birme.net/static/images/favicon.png" width={16} style={{ padding: 4 }} />}
-            />
+            <Button title="Birme" icon={<BoldOutlined />} />
           </a>
           <a href="https://github.com/canisminor1990/sd-web-ui-kitchen-theme" target="_blank" rel="noreferrer">
             <Button title="Github" icon={<GithubOutlined />} />

@@ -1,9 +1,7 @@
 import { DraggablePanel } from '@/components'
-import { useAppStore } from '@/store'
 import { useResponsive } from 'antd-style'
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { shallow } from 'zustand/shallow'
 import PromptGroup from './PromptGroup'
 
 const SidebarView = styled.div`
@@ -64,11 +62,10 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ children, loading }) => {
   const { mobile } = useResponsive()
   const [expand, setExpand] = useState<boolean>(!mobile)
-  const [currentTab] = useAppStore((st) => [st.currentTab], shallow)
   return (
     <DraggablePanel placement="left" defaultSize={{ width: 280 }} isExpand={expand} onExpandChange={setExpand}>
       <SidebarView>
-        {!loading && ['tab_txt2img', 'tab_img2img'].includes(currentTab) && <PromptGroup />}
+        {!loading && <PromptGroup />}
         {children}
       </SidebarView>
     </DraggablePanel>

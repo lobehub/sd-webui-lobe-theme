@@ -47,7 +47,10 @@ const App: React.FC<AppProps> = ({ themeMode }) => {
       const header = gradioApp().querySelector('#tabs > .tab-nav:first-child')
       const main = gradioApp().querySelector('.app')
       if (sidebar) sidebarRef.current?.appendChild(sidebar)
-      if (header) headerRef.current?.appendChild(header)
+      if (header) {
+        headerRef.current?.appendChild(header)
+        headerRef.current.id = 'tabs'
+      }
       if (main) mainRef.current?.appendChild(main)
       setLoading(false)
     })
@@ -64,7 +67,7 @@ const App: React.FC<AppProps> = ({ themeMode }) => {
             <Spin size="small" />
           </LoadingBox>
         )}
-        <div id="header" ref={headerRef} />
+        <div ref={headerRef} className="header" />
       </Header>
       <View>
         <Sidebar>
