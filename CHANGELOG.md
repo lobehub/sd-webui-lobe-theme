@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.2](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.4.1...v1.4.2) (2023-04-21)
+
+
+### 🐛 Bug Fixes
+
+* init theme error ([edaa043](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/edaa043))
+
 ## [1.4.1](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.4.0...v1.4.1) (2023-04-21)
 
 
