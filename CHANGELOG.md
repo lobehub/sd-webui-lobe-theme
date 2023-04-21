@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.2](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.3.1...v1.3.2) (2023-04-21)
+
+
+### 🐛 Bug Fixes
+
+* sidebar height ([74a4d2c](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/74a4d2c))
+
 ## [1.3.1](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.3.0...v1.3.1) (2023-04-21)
 
 
