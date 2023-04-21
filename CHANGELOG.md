@@ -1,5 +1,12 @@
 # Changelog
 
+# [1.4.0](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.3.2...v1.4.0) (2023-04-21)
+
+
+### ✨ Features
+
+* add suggestions to prompt editor ([bebebe4](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/bebebe4))
+
 ## [1.3.2](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.3.1...v1.3.2) (2023-04-21)
 
 
