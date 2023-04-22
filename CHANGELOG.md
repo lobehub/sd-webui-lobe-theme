@@ -2,26 +2,23 @@
 
 ## [1.6.2](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.6.1...v1.6.2) (2023-04-22)
 
-
 ### 🐛 Bug Fixes
 
-* setting crash ([4f1a030](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/4f1a030)), closes [#46](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/issues/46)
-* try to fix header bug ([afdbe53](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/afdbe53)), closes [#46](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/issues/46)
+- setting crash ([4f1a030](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/4f1a030)), closes [#46](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/issues/46)
+- try to fix header bug ([afdbe53](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/afdbe53)), closes [#46](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/issues/46)
 
 ## [1.6.2](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.6.1...v1.6.2) (2023-04-22)
 
-
 ### 🐛 Bug Fixes
 
-* setting crash ([4f1a030](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/4f1a030)), closes [#46](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/issues/46)
-* try to fix header bug ([afdbe53](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/afdbe53)), closes [#46](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/issues/46)
+- setting crash ([4f1a030](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/4f1a030)), closes [#46](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/issues/46)
+- try to fix header bug ([afdbe53](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/afdbe53)), closes [#46](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/issues/46)
 
 ## [1.6.2](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.6.1...v1.6.2) (2023-04-22)
 
-
 ### 🐛 Bug Fixes
 
-* try to fix header bug ([afdbe53](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/afdbe53)), closes [#46](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/issues/46)
+- try to fix header bug ([afdbe53](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/afdbe53)), closes [#46](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/issues/46)
 
 ## [1.6.1](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.6.0...v1.6.1) (2023-04-22)
 
