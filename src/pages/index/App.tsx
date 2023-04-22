@@ -1,5 +1,7 @@
 import { Content, ExtraNetworkSidebar, Header, Sidebar } from '@/components'
+import { WebuiSetting } from '@/components/Header/Setting'
 import { useAppStore } from '@/store'
+import { useLocalStorageState } from 'ahooks'
 import { Spin } from 'antd'
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
@@ -36,6 +38,7 @@ interface AppProps {
 }
 
 const App: React.FC<AppProps> = ({ themeMode }) => {
+  const [setting] = useLocalStorageState<WebuiSetting>('SD-KITCHEN-SETTING')
   const [currentTab, setCurrentTab] = useAppStore((st) => [st.currentTab, st.setCurrentTab], shallow)
   const [loading, setLoading] = useState(true)
   const sidebarRef: any = useRef<HTMLElement>()
@@ -45,21 +48,31 @@ const App: React.FC<AppProps> = ({ themeMode }) => {
   const img2imgExtraNetworkSidebarRef: any = useRef<HTMLElement>()
   useEffect(() => {
     onUiLoaded(() => {
-      const sidebar = gradioApp().querySelector('#quicksettings')
+      // Header
       const header = gradioApp().querySelector('#tabs > .tab-nav:first-child')
-      const main = gradioApp().querySelector('.app')
-      const txt2imgExtraNetworks = gradioApp().querySelector('div#txt2img_extra_networks')
-      const img2imgExtraNetworks = gradioApp().querySelector('div#img2img_extra_networks')
-      if (sidebar) sidebarRef.current?.appendChild(sidebar)
       if (header) {
         headerRef.current?.appendChild(header)
         headerRef.current.id = 'tabs'
       }
+
+      // Content
+      const main = gradioApp().querySelector('.app')
       if (main) mainRef.current?.appendChild(main)
-      if (txt2imgExtraNetworks && img2imgExtraNetworks) {
-        txt2imgExtraNetworkSidebarRef.current?.appendChild(txt2imgExtraNetworks)
-        img2imgExtraNetworkSidebarRef.current?.appendChild(img2imgExtraNetworks)
+
+      // Sidebar
+      const sidebar = gradioApp().querySelector('#quicksettings')
+      if (sidebar) sidebarRef.current?.appendChild(sidebar)
+
+      // ExtraNetworkSidebar
+      if (setting.enableExtraNetworkSidebar) {
+        const txt2imgExtraNetworks = gradioApp().querySelector('div#txt2img_extra_networks')
+        const img2imgExtraNetworks = gradioApp().querySelector('div#img2img_extra_networks')
+        if (txt2imgExtraNetworks && img2imgExtraNetworks) {
+          txt2imgExtraNetworkSidebarRef.current?.appendChild(txt2imgExtraNetworks)
+          img2imgExtraNetworkSidebarRef.current?.appendChild(img2imgExtraNetworks)
+        }
       }
+
       setLoading(false)
     })
     onUiUpdate(() => {
@@ -94,23 +107,25 @@ const App: React.FC<AppProps> = ({ themeMode }) => {
           )}
           <div id="content" ref={mainRef} />
         </Content>
-        <ExtraNetworkSidebar style={['tab_txt2img', 'tab_img2img'].includes(currentTab) ? {} : { display: 'none' }}>
-          {loading && (
-            <LoadingBox>
-              <Spin size="small" />
-            </LoadingBox>
-          )}
-          <div
-            id="txt2img-extra-netwrok-sidebar"
-            style={currentTab === 'tab_txt2img' ? {} : { display: 'none' }}
-            ref={txt2imgExtraNetworkSidebarRef}
-          />
-          <div
-            id="img2img-extra-netwrok-sidebar"
-            style={currentTab === 'tab_img2img' ? {} : { display: 'none' }}
-            ref={img2imgExtraNetworkSidebarRef}
-          />
-        </ExtraNetworkSidebar>
+        {setting.enableExtraNetworkSidebar && (
+          <ExtraNetworkSidebar style={['tab_txt2img', 'tab_img2img'].includes(currentTab) ? {} : { display: 'none' }}>
+            {loading && (
+              <LoadingBox>
+                <Spin size="small" />
+              </LoadingBox>
+            )}
+            <div
+              id="txt2img-extra-netwrok-sidebar"
+              style={currentTab === 'tab_txt2img' ? {} : { display: 'none' }}
+              ref={txt2imgExtraNetworkSidebarRef}
+            />
+            <div
+              id="img2img-extra-netwrok-sidebar"
+              style={currentTab === 'tab_img2img' ? {} : { display: 'none' }}
+              ref={img2imgExtraNetworkSidebarRef}
+            />
+          </ExtraNetworkSidebar>
+        )}
       </View>
     </MainView>
   )

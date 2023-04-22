@@ -64,6 +64,14 @@ http://localhost:7860/?__theme=dark
 
 ## ⚒️ 推荐设置
 
+Kitchen WebUI Setting
+> 右上角 ⚙ 图标打开设置面板，当前可用设置如下
+
+- Sidebar default width (快捷设置侧边栏默认宽度): 280
+- Enable ExtraNetwork Sidebar (是否启用模型侧边栏): true
+- ExtraNetwork Sidebar default Width (模型侧边栏默认宽度): 340
+- ExtraNetwork default card size (模型侧边栏卡片默认尺寸): 86
+
 Extra-Networks 扩展模型视窗
 
 - 拇指视图

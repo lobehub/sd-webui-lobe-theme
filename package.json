@@ -52,6 +52,7 @@
     "@types/react-tag-input": "^6.6.1",
     "@types/styled-components": "^5.1.26",
     "@umijs/lint": "^4.0.66",
+    "ahooks": "^3.7.6",
     "antd": "^5.4.2",
     "antd-style": "^3.0.0",
     "concurrently": "^8.0.1",

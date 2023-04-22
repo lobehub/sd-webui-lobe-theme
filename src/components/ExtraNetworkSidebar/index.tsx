@@ -1,9 +1,18 @@
 import { DraggablePanel } from '@/components'
+import { WebuiSetting } from '@/components/Header/Setting'
 import { ZoomInOutlined } from '@ant-design/icons'
+import { useLocalStorageState } from 'ahooks'
 import { Slider } from 'antd'
 import { useResponsive } from 'antd-style'
 import React, { CSSProperties, useEffect, useState } from 'react'
-import styled from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
+
+const GlobalStyle = createGlobalStyle`
+  button#txt2img_extra_networks,
+  button#img2img_extra_networks {
+    display: none !important;
+  }
+`
 
 const View = styled.div`
   display: flex;
@@ -17,6 +26,11 @@ const SidebarView = styled.div<{ size: number }>`
   overflow-x: hidden;
   overflow-y: auto;
   flex: 1;
+
+  #txt2img_extra_networks,
+  #img2img_extra_networks {
+    display: block !important;
+  }
 
   .extra-network-thumbs {
     display: grid;
@@ -50,29 +64,35 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ children, style }) => {
   const { mobile } = useResponsive()
-  const [expand, setExpand] = useState<boolean>(!mobile)
+  const [setting] = useLocalStorageState<WebuiSetting>('SD-KITCHEN-SETTING')
+  const [expand, setExpand] = useLocalStorageState<boolean>('SD-KITCHEN-EXTRA-SIDEBAR', {
+    defaultValue: true,
+  })
   const [size, setSize] = useState<number>(96)
 
   useEffect(() => {
-    setExpand(!mobile)
-  }, [mobile])
+    if (mobile) setExpand(false)
+  }, [])
 
   return (
-    <DraggablePanel
-      style={style}
-      placement="right"
-      defaultSize={{ width: 340 }}
-      isExpand={expand}
-      onExpandChange={setExpand}
-    >
-      <View>
-        <SidebarView size={size}>{children}</SidebarView>
-        <Footer>
-          <ZoomInOutlined />
-          <ZoomSlider defaultValue={86} step={8} max={256} min={64} onChange={setSize} />
-        </Footer>
-      </View>
-    </DraggablePanel>
+    <>
+      <GlobalStyle />
+      <DraggablePanel
+        style={style}
+        placement="right"
+        defaultSize={{ width: setting.extraNetworkSidebarWidth }}
+        isExpand={expand}
+        onExpandChange={setExpand}
+      >
+        <View>
+          <SidebarView size={size}>{children}</SidebarView>
+          <Footer>
+            <ZoomInOutlined />
+            <ZoomSlider defaultValue={setting.extraNetworkCardSize} step={8} max={256} min={64} onChange={setSize} />
+          </Footer>
+        </View>
+      </DraggablePanel>
+    </>
   )
 }
 

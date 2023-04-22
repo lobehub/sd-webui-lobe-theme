@@ -117,6 +117,7 @@ export const useStyle = createStyles(({ token }, prefix: string) => {
         backdrop-filter: blur(40px);
         overflow: hidden;
         position: relative;
+        height: 100% !important;
       `
     ),
     float: cx(

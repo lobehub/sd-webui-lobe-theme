@@ -6,6 +6,7 @@ import qs from 'query-string'
 import React, { useCallback, useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Logo from './Logo'
+import Setting from './Setting'
 import { civitaiLogo, themeIcon } from './style'
 
 const HeaderView = styled.div`
@@ -85,6 +86,7 @@ const Header: React.FC<HeaderProps> = ({ children, themeMode }) => {
           <a href="https://github.com/canisminor1990/sd-web-ui-kitchen-theme" target="_blank" rel="noreferrer">
             <Button title="Github" icon={<GithubOutlined />} />
           </a>
+          <Setting />
           <Button title="Switch Theme" icon={themeIcon[themeMode]} onClick={handleSetTheme} />
         </Space.Compact>
       </HeaderView>

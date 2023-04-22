@@ -65,6 +65,14 @@ http://localhost:7860/?__theme=dark
 
 ## ⚒️ Recommended Settings
 
+Kitchen WebUI Setting
+> top right ⚙ icon in header
+
+- Sidebar default width: 280
+- Enable ExtraNetwork Sidebar: true
+- ExtraNetwork Sidebar default Width: 340
+- ExtraNetwork default card size: 86
+
 Extra-Networks
 
 - thumbs
