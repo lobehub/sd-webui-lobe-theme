@@ -28,6 +28,15 @@ English | [简体中文](./README-zh_CN.md)
 
 > ⚠️⚠️⚠️ Warning: minimum requirements gradio-3.23.0 & sd-webui [4c1ad74](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commit/4c1ad743e3baf1246db0711aa0107debf036a12b)
 
+
+<br/>
+
+## 🖥 Environment Support
+
+[<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Chrome |
+| --- |
+| last 2 versions |
+
 <br/>
 
 ## ✨ Features
