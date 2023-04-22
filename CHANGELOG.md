@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.5](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.4.4...v1.4.5) (2023-04-22)
+
+
+### 🐛 Bug Fixes
+
+* Bug Croped outpaint extention fiexed ([ee2765d](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/ee2765d)), closes [#41](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/issues/41)
+* Bug Croped outpaint extention fixed ([157bd50](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/157bd50)), closes [#41](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/issues/41)
+
 ## [1.4.4](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.4.3...v1.4.4) (2023-04-21)
 
 ## [1.4.3](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.4.2...v1.4.3) (2023-04-21)
