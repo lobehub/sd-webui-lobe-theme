@@ -63,8 +63,6 @@ const setupBracketChecking = (idPrompt: string, idCounter: string): void => {
   textarea.addEventListener('input', bracketChecker.check)
 }
 
-onUiUpdate(() => {})
-
 export default () => {
   const elements = ['txt2img', 'txt2img_neg', 'img2img', 'img2img_neg']
   elements.forEach((prompt) => {

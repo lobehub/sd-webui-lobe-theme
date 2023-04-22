@@ -1,11 +1,12 @@
 import React, { useCallback, useMemo } from 'react'
 import { WithContext, ReactTagsProps as WithContextProps } from 'react-tag-input'
 import styled from 'styled-components'
-import { suggestions } from './utils'
+import { genTagType, suggestions } from './utils'
 
 export interface TagItem {
   id: string
   text: string
+  className?: string
 }
 
 export type PromptType = 'positive' | 'negative'
@@ -114,7 +115,20 @@ const View = styled.div<{ type: PromptType }>`
     border: none;
     cursor: pointer;
     background: none;
-    color: white;
+    color: var(--color-text);
+  }
+
+  .ReactTags__lora {
+    background: var(--cyan-2) !important;
+    border-color: var(--cyan-3) !important;
+  }
+  .ReactTags__hypernet {
+    background: var(--purple-2) !important;
+    border-color: var(--purple-3) !important;
+  }
+  .ReactTags__embedding {
+    background: var(--orange-2) !important;
+    border-color: var(--orange-3) !important;
   }
 `
 
@@ -144,7 +158,7 @@ const TagList: React.FC<TagListProps> = ({ tags, setTags, type, setValue }) => {
 
   const handleAddition = useCallback(
     (tag: TagItem) => {
-      const newTags = [...tags, tag]
+      const newTags = [...tags, genTagType(tag)]
       setTags(newTags)
       setValue(newTags)
     },
@@ -155,7 +169,7 @@ const TagList: React.FC<TagListProps> = ({ tags, setTags, type, setValue }) => {
     (tag: TagItem, currPos: number, newPos: number) => {
       const newTags = tags.slice()
       newTags.splice(currPos, 1)
-      newTags.splice(newPos, 0, tag)
+      newTags.splice(newPos, 0, genTagType(tag))
       setTags(newTags)
       setValue(newTags)
     },
@@ -165,7 +179,7 @@ const TagList: React.FC<TagListProps> = ({ tags, setTags, type, setValue }) => {
   const handleTagUpdate = useCallback(
     (i: number, tag: TagItem) => {
       const newTags = [...tags]
-      newTags[i] = tag
+      newTags[i] = genTagType(tag)
       setTags(newTags)
       setValue(newTags)
     },

@@ -265,12 +265,6 @@ export class Converter {
   }
 }
 
-/**
- * 注册UI更新回调函数
- * 在UI更新时添加提示按钮
- */
-onUiUpdate(() => {})
-
 export default () => {
   Converter.addPromptButton('txt2img')
   Converter.addPromptButton('img2img')

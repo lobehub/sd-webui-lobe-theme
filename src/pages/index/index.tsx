@@ -40,15 +40,12 @@ const Root: React.FC = () => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  favicon()
   const root = document.createElement('div')
   root.setAttribute('id', 'root')
   gradioApp().append(root)
   const client = createRoot(root)
   client.render(<Root />)
-})
-
-onUiLoaded(() => {
-  favicon()
 })
 
 onUiUpdate(() => {

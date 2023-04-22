@@ -37,3 +37,4 @@ lambda/mock/index.js
 config.yml
 yarn.lock
 venv
+temp
