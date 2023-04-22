@@ -1,5 +1,12 @@
 # Changelog
 
+# [1.6.0](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.5.2...v1.6.0) (2023-04-22)
+
+
+### ✨ Features
+
+* add setting panel ([f2beaaa](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/f2beaaa)), closes [#44](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/issues/44)
+
 ## [1.5.2](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.5.1...v1.5.2) (2023-04-22)
 
 ## [1.5.1](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.5.0...v1.5.1) (2023-04-22)
