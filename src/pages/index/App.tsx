@@ -1,5 +1,5 @@
 import { Content, ExtraNetworkSidebar, Header, Sidebar } from '@/components'
-import { WebuiSetting } from '@/components/Header/Setting'
+import { WebuiSetting, defaultValue } from '@/components/Header/Setting'
 import { useAppStore } from '@/store'
 import { useLocalStorageState } from 'ahooks'
 import { Spin } from 'antd'
@@ -38,7 +38,9 @@ interface AppProps {
 }
 
 const App: React.FC<AppProps> = ({ themeMode }) => {
-  const [setting] = useLocalStorageState<WebuiSetting>('SD-KITCHEN-SETTING')
+  const [setting] = useLocalStorageState<WebuiSetting>('SD-KITCHEN-SETTING', {
+    defaultValue,
+  })
   const [currentTab, setCurrentTab] = useAppStore((st) => [st.currentTab, st.setCurrentTab], shallow)
   const [loading, setLoading] = useState(true)
   const sidebarRef: any = useRef<HTMLElement>()
@@ -64,7 +66,7 @@ const App: React.FC<AppProps> = ({ themeMode }) => {
       if (sidebar) sidebarRef.current?.appendChild(sidebar)
 
       // ExtraNetworkSidebar
-      if (setting.enableExtraNetworkSidebar) {
+      if (setting?.enableExtraNetworkSidebar) {
         const txt2imgExtraNetworks = gradioApp().querySelector('div#txt2img_extra_networks')
         const img2imgExtraNetworks = gradioApp().querySelector('div#img2img_extra_networks')
         if (txt2imgExtraNetworks && img2imgExtraNetworks) {
@@ -107,7 +109,7 @@ const App: React.FC<AppProps> = ({ themeMode }) => {
           )}
           <div id="content" ref={mainRef} />
         </Content>
-        {setting.enableExtraNetworkSidebar && (
+        {setting?.enableExtraNetworkSidebar && (
           <ExtraNetworkSidebar style={['tab_txt2img', 'tab_img2img'].includes(currentTab) ? {} : { display: 'none' }}>
             {loading && (
               <LoadingBox>

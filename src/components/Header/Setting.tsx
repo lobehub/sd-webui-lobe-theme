@@ -10,7 +10,7 @@ export interface WebuiSetting {
   extraNetworkCardSize: number
 }
 
-const defaultValue = {
+export const defaultValue = {
   sidebarWidth: 280,
   enableExtraNetworkSidebar: true,
   extraNetworkSidebarWidth: 340,

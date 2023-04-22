@@ -34,7 +34,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children, loading, style }) => {
       maxHeight
       style={style}
       placement="left"
-      defaultSize={{ width: setting.sidebarWidth }}
+      defaultSize={{ width: setting?.sidebarWidth || 280 }}
       isExpand={expand}
       onExpandChange={setExpand}
     >

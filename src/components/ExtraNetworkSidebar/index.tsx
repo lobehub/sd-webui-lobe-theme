@@ -81,7 +81,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children, style }) => {
         maxHeight
         style={style}
         placement="right"
-        defaultSize={{ width: setting.extraNetworkSidebarWidth }}
+        defaultSize={{ width: setting?.extraNetworkSidebarWidth || 340 }}
         isExpand={expand}
         onExpandChange={setExpand}
       >
@@ -89,7 +89,13 @@ const Sidebar: React.FC<SidebarProps> = ({ children, style }) => {
           <SidebarView size={size}>{children}</SidebarView>
           <Footer>
             <ZoomInOutlined />
-            <ZoomSlider defaultValue={setting.extraNetworkCardSize} step={8} max={256} min={64} onChange={setSize} />
+            <ZoomSlider
+              defaultValue={setting?.extraNetworkCardSize || 86}
+              step={8}
+              max={256}
+              min={64}
+              onChange={setSize}
+            />
           </Footer>
         </View>
       </DraggablePanel>
