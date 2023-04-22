@@ -1,4 +1,4 @@
-import { Content, Header, Sidebar } from '@/components'
+import { Content, ExtraNetworkSidebar, Header, Sidebar } from '@/components'
 import { useAppStore } from '@/store'
 import { Spin } from 'antd'
 import React, { useEffect, useRef, useState } from 'react'
@@ -36,22 +36,30 @@ interface AppProps {
 }
 
 const App: React.FC<AppProps> = ({ themeMode }) => {
-  const [setCurrentTab] = useAppStore((st) => [st.setCurrentTab], shallow)
+  const [currentTab, setCurrentTab] = useAppStore((st) => [st.currentTab, st.setCurrentTab], shallow)
   const [loading, setLoading] = useState(true)
   const sidebarRef: any = useRef<HTMLElement>()
   const mainRef: any = useRef<HTMLElement>()
   const headerRef: any = useRef<HTMLElement>()
+  const txt2imgExtraNetworkSidebarRef: any = useRef<HTMLElement>()
+  const img2imgExtraNetworkSidebarRef: any = useRef<HTMLElement>()
   useEffect(() => {
     onUiLoaded(() => {
       const sidebar = gradioApp().querySelector('#quicksettings')
       const header = gradioApp().querySelector('#tabs > .tab-nav:first-child')
       const main = gradioApp().querySelector('.app')
+      const txt2imgExtraNetworks = gradioApp().querySelector('div#txt2img_extra_networks')
+      const img2imgExtraNetworks = gradioApp().querySelector('div#img2img_extra_networks')
       if (sidebar) sidebarRef.current?.appendChild(sidebar)
       if (header) {
         headerRef.current?.appendChild(header)
         headerRef.current.id = 'tabs'
       }
       if (main) mainRef.current?.appendChild(main)
+      if (txt2imgExtraNetworks && img2imgExtraNetworks) {
+        txt2imgExtraNetworkSidebarRef.current?.appendChild(txt2imgExtraNetworks)
+        img2imgExtraNetworkSidebarRef.current?.appendChild(img2imgExtraNetworks)
+      }
       setLoading(false)
     })
     onUiUpdate(() => {
@@ -86,6 +94,23 @@ const App: React.FC<AppProps> = ({ themeMode }) => {
           )}
           <div id="content" ref={mainRef} />
         </Content>
+        <ExtraNetworkSidebar style={['tab_txt2img', 'tab_img2img'].includes(currentTab) ? {} : { display: 'none' }}>
+          {loading && (
+            <LoadingBox>
+              <Spin size="small" />
+            </LoadingBox>
+          )}
+          <div
+            id="txt2img-extra-netwrok-sidebar"
+            style={currentTab === 'tab_txt2img' ? {} : { display: 'none' }}
+            ref={txt2imgExtraNetworkSidebarRef}
+          />
+          <div
+            id="img2img-extra-netwrok-sidebar"
+            style={currentTab === 'tab_img2img' ? {} : { display: 'none' }}
+            ref={img2imgExtraNetworkSidebarRef}
+          />
+        </ExtraNetworkSidebar>
       </View>
     </MainView>
   )
