@@ -92,6 +92,7 @@ export interface DraggablePanelProps {
    * 类名前缀
    */
   prefixCls?: string
+  maxHeight?: boolean
 }
 
 export const Draggable: FC<DraggablePanelProps> = memo(
@@ -114,6 +115,7 @@ export const Draggable: FC<DraggablePanelProps> = memo(
     expandable = true,
     isExpand,
     onExpandChange,
+    maxHeight,
   }) => {
     const prefixCls = 'draggable-panel'
 
@@ -138,6 +140,7 @@ export const Draggable: FC<DraggablePanelProps> = memo(
             className={className}
             placement={placement}
             style={style}
+            maxHeight={maxHeight}
           >
             {children}
           </FixMode>

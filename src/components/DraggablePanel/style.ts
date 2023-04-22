@@ -1,7 +1,8 @@
 import { createStyles, css, cx } from 'antd-style'
 import { rgba } from 'polished'
 
-export const useStyle = createStyles(({ token }, prefix: string) => {
+export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHeight?: boolean }) => {
+  const { prefix, maxHeight } = props
   const commonHandle = css`
     position: relative;
     &::before {
@@ -117,7 +118,7 @@ export const useStyle = createStyles(({ token }, prefix: string) => {
         backdrop-filter: blur(40px);
         overflow: hidden;
         position: relative;
-        height: 100% !important;
+        ${maxHeight ? 'height: 100% !important;' : ''}
       `
     ),
     float: cx(

@@ -65,6 +65,7 @@ http://localhost:7860/?__theme=dark
 ## ⚒️ 推荐设置
 
 Kitchen WebUI Setting
+
 > 右上角 ⚙ 图标打开设置面板，当前可用设置如下
 
 - Sidebar default width (快捷设置侧边栏默认宽度): 280

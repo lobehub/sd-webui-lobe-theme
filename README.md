@@ -66,6 +66,7 @@ http://localhost:7860/?__theme=dark
 ## ⚒️ Recommended Settings
 
 Kitchen WebUI Setting
+
 > top right ⚙ icon in header
 
 - Sidebar default width: 280

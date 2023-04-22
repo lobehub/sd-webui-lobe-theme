@@ -94,6 +94,7 @@ export interface FixModePanelProps {
    * 类名前缀
    */
   prefixCls?: string
+  maxHeight?: boolean
 }
 
 const DEFAULT_HEIGHT = 150
@@ -128,12 +129,13 @@ export const FixMode: FC<FixModePanelProps> = memo<FixModePanelProps>(
     isExpand: expand,
     onExpandChange,
     className,
+    maxHeight,
   }) => {
     const prefixCls = 'draggable-panel'
 
     const isVertical = placement === 'top' || placement === 'bottom'
 
-    const { styles, cx } = useStyle(prefixCls)
+    const { styles, cx } = useStyle({ prefix: prefixCls, maxHeight })
 
     const [isExpand, setIsExpand] = useControlledState(true, {
       value: expand,

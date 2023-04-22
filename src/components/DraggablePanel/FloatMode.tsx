@@ -102,7 +102,7 @@ export const FloatMode: FC<FloatProps> = memo(
     prefixCls,
     canResizing,
   }) => {
-    const { styles } = useStyle(prefixCls)
+    const { styles } = useStyle({ prefix: prefixCls, maxHeight: false })
 
     const resizeHandleClassNames: HandleClassName = useMemo(() => {
       if (!canResizing) return {}

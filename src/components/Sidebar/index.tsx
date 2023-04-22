@@ -31,6 +31,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children, loading, style }) => {
 
   return (
     <DraggablePanel
+      maxHeight
       style={style}
       placement="left"
       defaultSize={{ width: setting.sidebarWidth }}

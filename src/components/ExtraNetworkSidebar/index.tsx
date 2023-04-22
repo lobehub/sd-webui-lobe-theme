@@ -78,6 +78,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children, style }) => {
     <>
       <GlobalStyle />
       <DraggablePanel
+        maxHeight
         style={style}
         placement="right"
         defaultSize={{ width: setting.extraNetworkSidebarWidth }}

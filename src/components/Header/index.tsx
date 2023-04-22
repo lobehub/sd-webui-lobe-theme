@@ -57,7 +57,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ children, themeMode }) => {
   const { mobile } = useResponsive()
-  const [expand, setExpand] = useState<boolean>(!mobile)
+  const [expand, setExpand] = useState<boolean>(true)
   const handleSetTheme = useCallback(() => {
     const theme = themeMode === 'light' ? 'dark' : 'light'
     const gradioURL = qs.parseUrl(window.location.href)
@@ -66,8 +66,8 @@ const Header: React.FC<HeaderProps> = ({ children, themeMode }) => {
   }, [themeMode])
 
   useEffect(() => {
-    setExpand(!mobile)
-  }, [mobile])
+    if (mobile) setExpand(false)
+  }, [])
 
   return (
     <DraggablePanel placement="top" defaultSize={{ height: 'auto' }} isExpand={expand} onExpandChange={setExpand}>
