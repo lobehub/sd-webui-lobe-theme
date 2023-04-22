@@ -1,5 +1,12 @@
 # Changelog
 
+# [1.5.0](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.4.7...v1.5.0) (2023-04-22)
+
+
+### ✨ Features
+
+* add extra network sidebar ([b6dc1f4](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/b6dc1f4))
+
 ## [1.4.7](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.4.6...v1.4.7) (2023-04-22)
 
 ## [1.4.6](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.4.5...v1.4.6) (2023-04-22)
