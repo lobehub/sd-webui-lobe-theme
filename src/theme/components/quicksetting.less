@@ -1,0 +1,46 @@
+#quicksettings {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+
+  > * {
+    flex: 1;
+    max-width: unset !important;
+    min-width: unset !important;
+    width: -webkit-fill-available !important;
+    margin: 0;
+    padding: 0;
+  }
+
+  .head > label {
+    min-width: 60%;
+    max-width: 60%;
+    margin-right: 12px;
+  }
+
+  input[type='color'] {
+    width: 100%;
+  }
+
+  input[type='number'],
+  textarea {
+    height: 28px !important;
+    padding: 4px !important;
+    width: -webkit-fill-available;
+    box-sizing: border-box;
+  }
+
+  span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
+
+  .dropdown-arrow {
+    min-width: 16px;
+    min-height: 16px;
+  }
+}

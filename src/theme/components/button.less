@@ -4,6 +4,30 @@
   min-height: 36px;
   overflow: hidden;
   text-overflow: ellipsis;
+  &.tool {
+    padding: 0 !important;
+    max-width: 36px !important;
+    width: 36px !important;
+    min-width: 36px !important;
+    height: 36px !important;
+    min-height: 36px !important;
+    max-height: 36px !important;
+    font-size: 14px !important;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: end;
+    line-height: 1;
+    border: var(--button-border-width) solid var(--button-secondary-border-color);
+    background: var(--button-secondary-background-fill);
+    color: var(--button-secondary-text-color);
+  }
+
+  &.secondary-down,
+  &.secondary-down:hover {
+    box-shadow: var(--box-shadow-secondary) !important;
+  }
 }
 
 #txt2img_interrupt,
@@ -33,11 +57,6 @@
     background: var(--color-error-active) !important;
     color: #fff !important;
   }
-}
-
-.gradio-button.secondary-down,
-.gradio-button.secondary-down:hover {
-  box-shadow: var(--box-shadow-secondary) !important;
 }
 
 #interrogate,
