@@ -41,10 +41,10 @@ const Setting: React.FC = () => {
           <Form.Item label="Sidebar default width" name="sidebarWidth">
             <InputNumber />
           </Form.Item>
-          <Form.Item label="Enable ExtraNetwork Sidebar" name="enableExtraNetworkSidebar" valuePropName="checked">
+          <Form.Item label="Enable ExtraNetwork sidebar" name="enableExtraNetworkSidebar" valuePropName="checked">
             <Switch />
           </Form.Item>
-          <Form.Item label="ExtraNetwork Sidebar default width" name="extraNetworkSidebarWidth">
+          <Form.Item label="ExtraNetwork sidebar default width" name="extraNetworkSidebarWidth">
             <InputNumber />
           </Form.Item>
           <Form.Item label="ExtraNetwork default card size" name="extraNetworkCardSize">
