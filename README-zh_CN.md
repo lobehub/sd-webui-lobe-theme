@@ -30,6 +30,16 @@
 
 <br/>
 
+## 🖥 兼容环境
+
+[<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Chrome |
+| --- |
+| last 2 versions |
+
+
+<br/>
+
+
 ## ✨ 特性
 
 - 🌈 支持亮暗色主题，并一键切换。
