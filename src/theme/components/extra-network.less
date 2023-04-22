@@ -35,7 +35,7 @@ button#img2img_extra_networks {
     }
   }
 
-  .extra-network-subdirs.extra-network-subdirs-thumbs {
+  .extra-network-subdirs {
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
@@ -60,14 +60,17 @@ button#img2img_extra_networks {
 
     .additional {
       display: none;
-    }
-
-    .additional > ul {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      > ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a {
+          font-size: 15px !important;
+          margin: 0 !important;
+        }
+      }
     }
   }
 
@@ -77,11 +80,19 @@ button#img2img_extra_networks {
     box-shadow: var(--box-shadow);
     outline: 1px solid rgb(0 0 0 / 50%);
     transition: all 0.2s ease-in-out;
+    overflow: hidden;
+
+    .name {
+      font-size: 12px !important;
+    }
 
     &:hover {
       outline: 2px solid var(--color-primary);
       .additional {
         display: block;
+      }
+      .name {
+        white-space: unset;
       }
     }
   }
@@ -95,5 +106,16 @@ button#img2img_extra_networks {
     &:hover {
       opacity: 1;
     }
+  }
+}
+
+.extra-network-thumbs {
+  .name {
+    font-size: 12px !important;
+    background: transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
   }
 }

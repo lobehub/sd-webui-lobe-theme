@@ -24,14 +24,14 @@
     "type-check": "tsc -p tsconfig-check.json"
   },
   "lint-staged": {
-    "*.{less}": [
+    "*.less": [
       "stylelint --fix",
       "prettier --write"
     ],
-    "*.{json}": [
+    "*.json": [
       "prettier --write --no-error-on-unmatched-pattern"
     ],
-    "*.{jsx}": [
+    "*.jsx": [
       "eslint --fix",
       "prettier --write"
     ],
@@ -54,8 +54,6 @@
     "@umijs/lint": "^4.0.66",
     "antd": "^5.4.2",
     "antd-style": "^3.0.0",
-    "commitlint": "^17",
-    "commitlint-config-gitmoji": "^2",
     "concurrently": "^8.0.1",
     "eslint": "^8",
     "eslint-import-resolver-alias": "^1.1.2",
