@@ -31,20 +31,20 @@ English | [简体中文](./README-zh_CN.md)
 
 <br/>
 
-## 🖥 Environment Support
-
-[<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Chrome |
-| --- |
-| last 2 versions |
-
-<br/>
-
 ## ✨ Features
 
 - 🌈 Supports light and dark themes with switch button.
 - 🪄 Supports Prompt formatting.
 - 🎛️ Quick Setting in draggable sidebar.
 - 🎨 Based on Antd CSS Token.
+
+<br/>
+
+## 🖥 Environment Support
+
+|[<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Safari 
+| --- | --- | --- |
+| last 2 versions | last 2 versions | last 2 versions |
 
 <br/>
 
