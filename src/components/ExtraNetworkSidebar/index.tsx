@@ -30,11 +30,11 @@ const SidebarView = styled.div<{ size: number }>`
 
 const Footer = styled.div`
   flex: 0;
-  padding: 12px 16px;
-  border-top: 1px soild ${({ theme }) => theme.colorSplit};
+  padding: 8px 16px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  border-top: 1px solid var(--color-border);
 `
 
 const ZoomSlider = styled(Slider)`

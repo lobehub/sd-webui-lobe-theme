@@ -1,6 +1,6 @@
 import { DraggablePanel } from '@/components'
 import { useResponsive } from 'antd-style'
-import React, { useEffect, useState } from 'react'
+import React, { CSSProperties, useEffect, useState } from 'react'
 import styled from 'styled-components'
 import PromptGroup from './PromptGroup'
 
@@ -14,9 +14,10 @@ const SidebarView = styled.div`
 interface SidebarProps {
   children: React.ReactNode
   loading?: boolean
+  style?: CSSProperties
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ children, loading }) => {
+const Sidebar: React.FC<SidebarProps> = ({ children, loading, style }) => {
   const { mobile } = useResponsive()
   const [expand, setExpand] = useState<boolean>(!mobile)
 
@@ -25,7 +26,13 @@ const Sidebar: React.FC<SidebarProps> = ({ children, loading }) => {
   }, [mobile])
 
   return (
-    <DraggablePanel placement="left" defaultSize={{ width: 280 }} isExpand={expand} onExpandChange={setExpand}>
+    <DraggablePanel
+      style={style}
+      placement="left"
+      defaultSize={{ width: 280 }}
+      isExpand={expand}
+      onExpandChange={setExpand}
+    >
       <SidebarView>
         {!loading && <PromptGroup />}
         {children}
