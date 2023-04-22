@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.1](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.6.0...v1.6.1) (2023-04-22)
+
+
+### 🐛 Bug Fixes
+
+* fix typo ([9faf33e](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/9faf33e))
+
 # [1.6.0](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.5.2...v1.6.0) (2023-04-22)
 
 
