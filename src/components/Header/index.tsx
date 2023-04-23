@@ -83,7 +83,7 @@ const Header: React.FC<HeaderProps> = ({ children, themeMode }) => {
           <a href="https://www.birme.net/?target_width=512&target_height=512" target="_blank" rel="noreferrer">
             <Button title="Birme" icon={<BoldOutlined />} />
           </a>
-          <a href="https://github.com/canisminor1990/sd-web-ui-kitchen-theme" target="_blank" rel="noreferrer">
+          <a href="https://github.com/canisminor1990/sd-webui-kitchen-theme" target="_blank" rel="noreferrer">
             <Button title="Github" icon={<GithubOutlined />} />
           </a>
           <Setting />
