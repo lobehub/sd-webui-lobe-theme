@@ -79,7 +79,8 @@ const Sidebar: React.FC<SidebarProps> = ({ children, style }) => {
         maxHeight
         style={style}
         placement="right"
-        defaultSize={{ width: setting?.extraNetworkSidebarWidth || 340 }}
+        defaultSize={{ width: setting.extraNetworkSidebarWidth }}
+        minWidth={setting.extraNetworkSidebarWidth}
         isExpand={expand}
         onExpandChange={setExpand}
       >
