@@ -1,7 +1,7 @@
 import { SettingOutlined } from '@ant-design/icons'
 import { useLocalStorageState } from 'ahooks'
 import { Button, Form, InputNumber, Popover, Space, Switch } from 'antd'
-import React from 'react'
+import React, { useCallback } from 'react'
 
 export interface WebuiSetting {
   sidebarWidth: number
@@ -18,19 +18,19 @@ export const defaultValue = {
 }
 
 const Setting: React.FC = () => {
-  const [form] = Form.useForm()
   const [setting, setSetting] = useLocalStorageState<WebuiSetting>('SD-KITCHEN-SETTING', {
     defaultValue,
   })
 
-  const onReset = () => {
-    form.setFieldsValue(defaultValue)
-  }
+  const onReset = useCallback(() => {
+    setSetting(defaultValue)
+    gradioApp().getElementById('settings_restart_gradio')?.click()
+  }, [])
 
-  const onFinish = (value: WebuiSetting) => {
+  const onFinish = useCallback((value: WebuiSetting) => {
     setSetting(value)
     gradioApp().getElementById('settings_restart_gradio')?.click()
-  }
+  }, [])
 
   return (
     <Popover
