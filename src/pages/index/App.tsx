@@ -93,7 +93,7 @@ const App: React.FC<AppProps> = ({ themeMode }) => {
         <div ref={headerRef} className="header" />
       </Header>
       <View>
-        <Sidebar style={['tab_txt2img', 'tab_img2img'].includes(currentTab) ? {} : { display: 'none' }}>
+        <Sidebar>
           {loading && (
             <LoadingBox>
               <Spin size="small" />
@@ -110,7 +110,7 @@ const App: React.FC<AppProps> = ({ themeMode }) => {
           <div id="content" ref={mainRef} />
         </Content>
         {setting?.enableExtraNetworkSidebar && (
-          <ExtraNetworkSidebar style={['tab_txt2img', 'tab_img2img'].includes(currentTab) ? {} : { display: 'none' }}>
+          <ExtraNetworkSidebar>
             {loading && (
               <LoadingBox>
                 <Spin size="small" />
