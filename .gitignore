@@ -38,3 +38,4 @@ config.yml
 yarn.lock
 venv
 temp
+.husky/prepare-commit-msg
