@@ -1,8 +1,6 @@
 import { DraggablePanel } from '@/components'
-import { WebuiSetting } from '@/components/Header/Setting'
 import { useAppStore } from '@/store'
 import { ZoomInOutlined } from '@ant-design/icons'
-import { useLocalStorageState } from 'ahooks'
 import { Slider } from 'antd'
 import { useResponsive } from 'antd-style'
 import React, { CSSProperties, useEffect, useState } from 'react'
@@ -66,18 +64,9 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ children, style }) => {
   const { mobile } = useResponsive()
-  const [currentTab] = useAppStore((st) => [st.currentTab], shallow)
-  const [setting] = useLocalStorageState<WebuiSetting>('SD-KITCHEN-SETTING')
-  const [expand, setExpand] = useLocalStorageState<boolean>('SD-KITCHEN-EXTRA-SIDEBAR', {
-    defaultValue: true,
-  })
+  const [setting] = useAppStore((st) => [st.setting], shallow)
+  const [expand, setExpand] = useState<boolean>(setting.extraNetworkSidebarExpand)
   const [size, setSize] = useState<number>(setting?.extraNetworkCardSize || 86)
-
-  useEffect(() => {
-    if (currentTab && !['tab_txt2img', 'tab_img2img'].includes(currentTab)) {
-      setExpand(false)
-    }
-  }, [currentTab])
 
   useEffect(() => {
     if (mobile) setExpand(false)

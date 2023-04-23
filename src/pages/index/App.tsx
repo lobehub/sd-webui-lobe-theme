@@ -1,7 +1,5 @@
 import { Content, ExtraNetworkSidebar, Header, Sidebar } from '@/components'
-import { WebuiSetting, defaultValue } from '@/components/Header/Setting'
 import { useAppStore } from '@/store'
-import { useLocalStorageState } from 'ahooks'
 import { Spin } from 'antd'
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
@@ -33,15 +31,11 @@ const LoadingBox = styled.div`
   justify-content: center;
 `
 
-interface AppProps {
-  themeMode: 'light' | 'dark'
-}
-
-const App: React.FC<AppProps> = ({ themeMode }) => {
-  const [setting] = useLocalStorageState<WebuiSetting>('SD-KITCHEN-SETTING', {
-    defaultValue,
-  })
-  const [currentTab, setCurrentTab] = useAppStore((st) => [st.currentTab, st.setCurrentTab], shallow)
+const App: React.FC = () => {
+  const [currentTab, setCurrentTab, setting] = useAppStore(
+    (st) => [st.currentTab, st.setCurrentTab, st.setting],
+    shallow
+  )
   const [loading, setLoading] = useState(true)
   const sidebarRef: any = useRef<HTMLElement>()
   const mainRef: any = useRef<HTMLElement>()
@@ -84,7 +78,7 @@ const App: React.FC<AppProps> = ({ themeMode }) => {
 
   return (
     <MainView>
-      <Header themeMode={themeMode}>
+      <Header>
         {loading && (
           <LoadingBox>
             <Spin size="small" />
@@ -118,7 +112,7 @@ const App: React.FC<AppProps> = ({ themeMode }) => {
             )}
             <div
               id="txt2img-extra-netwrok-sidebar"
-              style={currentTab === 'tab_txt2img' ? {} : { display: 'none' }}
+              style={currentTab !== 'tab_img2img' ? {} : { display: 'none' }}
               ref={txt2imgExtraNetworkSidebarRef}
             />
             <div

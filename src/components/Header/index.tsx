@@ -1,10 +1,12 @@
 import { DraggablePanel } from '@/components'
+import { useAppStore } from '@/store'
 import { BoldOutlined, GithubOutlined } from '@ant-design/icons'
 import { Button, Space } from 'antd'
 import { useResponsive } from 'antd-style'
 import qs from 'query-string'
 import React, { useCallback, useEffect, useState } from 'react'
 import styled from 'styled-components'
+import { shallow } from 'zustand/shallow'
 import Logo from './Logo'
 import Setting from './Setting'
 import { civitaiLogo, themeIcon } from './style'
@@ -52,10 +54,10 @@ const HeaderView = styled.div`
 
 interface HeaderProps {
   children: React.ReactNode
-  themeMode: 'dark' | 'light'
 }
 
-const Header: React.FC<HeaderProps> = ({ children, themeMode }) => {
+const Header: React.FC<HeaderProps> = ({ children }) => {
+  const [themeMode] = useAppStore((st) => [st.themeMode], shallow)
   const { mobile } = useResponsive()
   const [expand, setExpand] = useState<boolean>(true)
   const handleSetTheme = useCallback(() => {

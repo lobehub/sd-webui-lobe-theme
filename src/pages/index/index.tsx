@@ -1,29 +1,38 @@
 import { useIsDarkMode } from '@/components/theme/useIsDarkMode'
+import civitaiHelperFix from '@/script/civitai-helper-fix'
 import favicon from '@/script/favicon'
 import formatPrompt from '@/script/format-prompt'
 import promptBracketChecker from '@/script/prompt-bracket-checker'
+import { useAppStore } from '@/store'
 import '@/theme/style.less'
 import { ThemeProvider, setupStyled } from 'antd-style'
 import qs from 'query-string'
 import React, { useEffect, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import { ThemeContext } from 'styled-components'
+import { shallow } from 'zustand/shallow'
 import App from './App'
 
 const Root: React.FC = () => {
   setupStyled({ ThemeContext })
+  const [onSetThemeMode, onInit] = useAppStore((st) => [st.onSetThemeMode, st.onInit], shallow)
   const isDarkMode = useIsDarkMode()
   const [appearance, setAppearance] = useState<'light' | 'dark'>('light')
   const [first, setFirst] = useState(true)
   useEffect(() => {
-    const queryTheme = String(qs.parseUrl(window.location.href).query.__theme || '')
+    onInit()
+  }, [])
+  useEffect(() => {
+    const queryTheme: any = String(qs.parseUrl(window.location.href).query.__theme || '')
     if (queryTheme) {
       setAppearance(queryTheme as any)
       document.body.classList.add(queryTheme)
+      onSetThemeMode(queryTheme)
       return
     }
     setAppearance(isDarkMode ? 'dark' : 'light')
     document.body.classList.add(isDarkMode ? 'dark' : 'light')
+    onSetThemeMode(isDarkMode ? 'dark' : 'light')
   }, [isDarkMode])
   useEffect(() => {
     if (first) {
@@ -34,7 +43,7 @@ const Root: React.FC = () => {
   }, [isDarkMode])
   return (
     <ThemeProvider appearance={appearance}>
-      <App themeMode={appearance} />
+      <App />
     </ThemeProvider>
   )
 }
@@ -46,15 +55,16 @@ document.addEventListener('DOMContentLoaded', () => {
   try {
     gradioApp()?.append(root)
   } catch {
-    document.querySelector("gradio-app")?.append(root)
+    document.querySelector('gradio-app')?.append(root)
   }
   const client = createRoot(root)
   client.render(<Root />)
 })
 
-onUiUpdate(() => {
+onUiLoaded(() => {
   formatPrompt()
   promptBracketChecker()
+  civitaiHelperFix()
 })
 
 export default () => null

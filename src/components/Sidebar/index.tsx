@@ -1,9 +1,9 @@
 import { DraggablePanel } from '@/components'
-import { WebuiSetting } from '@/components/Header/Setting'
-import { useLocalStorageState } from 'ahooks'
+import { useAppStore } from '@/store'
 import { useResponsive } from 'antd-style'
-import React, { CSSProperties, useEffect } from 'react'
+import React, { CSSProperties, useEffect, useState } from 'react'
 import styled from 'styled-components'
+import { shallow } from 'zustand/shallow'
 import PromptGroup from './PromptGroup'
 
 const SidebarView = styled.div`
@@ -20,11 +20,9 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ children, loading, style }) => {
+  const [setting] = useAppStore((st) => [st.setting], shallow)
   const { mobile } = useResponsive()
-  const [setting] = useLocalStorageState<WebuiSetting>('SD-KITCHEN-SETTING')
-  const [expand, setExpand] = useLocalStorageState<boolean>('SD-KITCHEN-SIDEBAR', {
-    defaultValue: true,
-  })
+  const [expand, setExpand] = useState<boolean>(setting.sidebarExpand)
 
   useEffect(() => {
     if (mobile) setExpand(false)

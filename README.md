@@ -80,10 +80,14 @@ Kitchen WebUI Setting
 
 > top right ⚙ icon in header
 
-- Sidebar default width: 280
-- Enable ExtraNetwork Sidebar: true
-- ExtraNetwork Sidebar default Width: 340
-- ExtraNetwork default card size: 86
+- **Sidebar**
+  - Default expand: `true`
+  - Default width: `280`
+- **ExtraNetwork Sidebar**
+  - Enable: `true`
+  - Default expand: `true`
+  - Default Width: `340`
+  - Default card size: `86`
 
 Extra-Networks
 

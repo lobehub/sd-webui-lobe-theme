@@ -47,8 +47,12 @@
   .actions {
     .name {
       background: linear-gradient(0deg, rgb(0 0 0 / 80%), transparent);
-      font-weight: 500;
+      font-weight: bold;
       text-shadow: 0 1px 1px rgb(0 0 0 / 90%);
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: block;
     }
 
     .additional {
@@ -66,7 +70,7 @@
           color: #fff;
           white-space: nowrap;
           text-overflow: ellipsis;
-          padding: 4px 2px;
+          padding: 0 !important;
         }
       }
     }

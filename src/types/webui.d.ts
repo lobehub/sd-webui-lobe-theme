@@ -35,3 +35,4 @@ declare const update_img2img_tokens: (...args: any[]) => any
 declare const restart_reload: () => any[]
 declare const updateInput: (target: Element) => void
 declare const selectCheckpoint: (name: string) => void
+declare const getTranslation: (text: string) => string

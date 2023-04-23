@@ -78,10 +78,15 @@ Kitchen WebUI Setting
 
 > 右上角 ⚙ 图标打开设置面板，当前可用设置如下
 
-- Sidebar default width (快捷设置侧边栏默认宽度): 280
-- Enable ExtraNetwork Sidebar (是否启用模型侧边栏): true
-- ExtraNetwork Sidebar default Width (模型侧边栏默认宽度): 340
-- ExtraNetwork default card size (模型侧边栏卡片默认尺寸): 86
+
+- **Sidebar**
+  - Default expand 默认展开: `true`
+  - Default width 默认宽度: `280`
+- **ExtraNetwork Sidebar**
+  - Enable 启用: `true`
+  - Default expand 默认展开: `true`
+  - Default Width 默认宽度: `340`
+  - Default card size 模型卡片默认尺寸: `86`
 
 Extra-Networks 扩展模型视窗
 

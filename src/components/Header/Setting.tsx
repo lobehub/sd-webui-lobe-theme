@@ -1,29 +1,45 @@
+import { WebuiSetting, defaultSetting, useAppStore } from '@/store'
 import { SettingOutlined } from '@ant-design/icons'
-import { useLocalStorageState } from 'ahooks'
-import { Button, Form, InputNumber, Popover, Space, Switch } from 'antd'
+import { Button, Divider, Form, InputNumber, Popover, Space, Switch } from 'antd'
 import React, { useCallback } from 'react'
+import styled from 'styled-components'
+import { shallow } from 'zustand/shallow'
 
-export interface WebuiSetting {
-  sidebarWidth: number
-  enableExtraNetworkSidebar: boolean
-  extraNetworkSidebarWidth: number
-  extraNetworkCardSize: number
-}
+/******************************************************
+ *********************** Style *************************
+ ******************************************************/
 
-export const defaultValue = {
-  sidebarWidth: 280,
-  enableExtraNetworkSidebar: true,
-  extraNetworkSidebarWidth: 340,
-  extraNetworkCardSize: 86,
-}
+const FormItem = styled(Form.Item)`
+  margin-bottom: 8px;
+  .ant-row {
+    justify-content: space-between;
+    > div {
+      flex: unset !important;
+      flex-grow: unset !important;
+    }
+  }
+`
+
+const Title = styled.div`
+  font-size: 16px;
+  font-weight: 600;
+`
+
+const SubTitle = styled.div`
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+`
+
+/******************************************************
+ ************************* Dom *************************
+ ******************************************************/
 
 const Setting: React.FC = () => {
-  const [setting, setSetting] = useLocalStorageState<WebuiSetting>('SD-KITCHEN-SETTING', {
-    defaultValue,
-  })
+  const [setting, setSetting] = useAppStore((st) => [st.setting, st.onSetSetting], shallow)
 
   const onReset = useCallback(() => {
-    setSetting(defaultValue)
+    setSetting(defaultSetting)
     gradioApp().getElementById('settings_restart_gradio')?.click()
   }, [])
 
@@ -34,23 +50,34 @@ const Setting: React.FC = () => {
 
   return (
     <Popover
-      title="⚙ Setting"
+      title={<Title>⚙ Setting</Title>}
       trigger="click"
       content={
-        <Form size="small" initialValues={setting} layout="vertical" onFinish={onFinish} style={{ maxWidth: 240 }}>
-          <Form.Item label="Sidebar default width" name="sidebarWidth">
-            <InputNumber />
-          </Form.Item>
-          <Form.Item label="Enable ExtraNetwork sidebar" name="enableExtraNetworkSidebar" valuePropName="checked">
+        <Form size="small" initialValues={setting} layout="horizontal" onFinish={onFinish} style={{ maxWidth: 240 }}>
+          <Divider style={{ margin: '4px 0 8px' }} />
+          <SubTitle>Sidebar</SubTitle>
+          <FormItem label="Default expand" name="sidebarExpand" valuePropName="checked">
             <Switch />
-          </Form.Item>
-          <Form.Item label="ExtraNetwork sidebar default width" name="extraNetworkSidebarWidth">
+          </FormItem>
+          <FormItem label="Default width" name="sidebarWidth">
             <InputNumber />
-          </Form.Item>
-          <Form.Item label="ExtraNetwork default card size" name="extraNetworkCardSize">
+          </FormItem>
+          <Divider style={{ margin: '4px 0 8px' }} />
+          <SubTitle>ExtraNetwork Sidebar</SubTitle>
+          <FormItem label="Enable" name="enableExtraNetworkSidebar" valuePropName="checked">
+            <Switch />
+          </FormItem>
+          <FormItem label="Default expand" name="extraNetworkSidebarExpand" valuePropName="checked">
+            <Switch />
+          </FormItem>
+          <FormItem label="Default width" name="extraNetworkSidebarWidth">
             <InputNumber />
-          </Form.Item>
-          <Form.Item>
+          </FormItem>
+          <FormItem label="Default card size" name="extraNetworkCardSize">
+            <InputNumber />
+          </FormItem>
+          <Divider style={{ margin: '4px 0 16px' }} />
+          <FormItem>
             <Space>
               <Button htmlType="button" onClick={onReset} style={{ borderRadius: 4 }}>
                 Reset
@@ -59,7 +86,7 @@ const Setting: React.FC = () => {
                 Apply and restart UI
               </Button>
             </Space>
-          </Form.Item>
+          </FormItem>
         </Form>
       }
     >
