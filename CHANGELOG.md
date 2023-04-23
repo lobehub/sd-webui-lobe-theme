@@ -1,5 +1,12 @@
 # Changelog
 
+# [1.7.0](https://github.com/canisminor1990/sd-webui-kitchen-theme/compare/v1.6.4...v1.7.0) (2023-04-23)
+
+
+### ✨ Features
+
+* add giscus feedback ([42c7590](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/42c7590))
+
 ## [1.6.4](https://github.com/canisminor1990/sd-webui-kitchen-theme/compare/v1.6.3...v1.6.4) (2023-04-23)
 
 
