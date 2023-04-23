@@ -43,7 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
   favicon()
   const root = document.createElement('div')
   root.setAttribute('id', 'root')
-  gradioApp().append(root)
+  try {
+    gradioApp()?.append(root)
+  } catch {
+    document.querySelector("gradio-app")?.append(root)
+  }
   const client = createRoot(root)
   client.render(<Root />)
 })
