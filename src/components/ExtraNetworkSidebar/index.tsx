@@ -68,7 +68,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children, style }) => {
   const [expand, setExpand] = useLocalStorageState<boolean>('SD-KITCHEN-EXTRA-SIDEBAR', {
     defaultValue: true,
   })
-  const [size, setSize] = useState<number>(96)
+  const [size, setSize] = useState<number>(setting?.extraNetworkCardSize || 86)
 
   useEffect(() => {
     if (mobile) setExpand(false)
@@ -89,13 +89,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children, style }) => {
           <SidebarView size={size}>{children}</SidebarView>
           <Footer>
             <ZoomInOutlined />
-            <ZoomSlider
-              defaultValue={setting?.extraNetworkCardSize || 86}
-              step={8}
-              max={256}
-              min={64}
-              onChange={setSize}
-            />
+            <ZoomSlider defaultValue={size} step={8} max={256} min={64} onChange={setSize} />
           </Footer>
         </View>
       </DraggablePanel>
