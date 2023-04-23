@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.3](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.6.2...v1.6.3) (2023-04-23)
+
+
+### 🐛 Bug Fixes
+
+* gradioApp append ([4751e78](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/4751e78))
+
 ## [1.6.2](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.6.1...v1.6.2) (2023-04-22)
 
 
