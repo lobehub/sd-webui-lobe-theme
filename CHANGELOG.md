@@ -1,12 +1,5 @@
 # Changelog
 
-## [1.6.4](https://github.com/canisminor1990/sd-webui-kitchen-theme/compare/v1.6.3...v1.6.4) (2023-04-23)
-
-
-### 🐛 Bug Fixes
-
-* setting reset button ([2a0f468](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/2a0f468))
-
 ## [1.6.3](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.6.2...v1.6.3) (2023-04-23)
 
 
