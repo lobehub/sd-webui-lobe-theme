@@ -1,8 +1,8 @@
 import { useIsDarkMode } from '@/components/theme/useIsDarkMode'
 import civitaiHelperFix from '@/script/civitai-helper-fix'
-import favicon from '@/script/favicon'
 import formatPrompt from '@/script/format-prompt'
 import promptBracketChecker from '@/script/prompt-bracket-checker'
+import setupHead from '@/script/setup-head'
 import { useAppStore } from '@/store'
 import '@/theme/style.less'
 import { ThemeProvider, setupStyled } from 'antd-style'
@@ -49,7 +49,7 @@ const Root: React.FC = () => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  favicon()
+  setupHead()
   const root = document.createElement('div')
   root.setAttribute('id', 'root')
   try {
