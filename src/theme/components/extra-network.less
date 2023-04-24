@@ -6,10 +6,10 @@
   }
 
   .search {
-    max-width: -webkit-fill-available;
-    width: -webkit-fill-available;
-    max-height: 36px !important;
     box-sizing: border-box;
+    width: -webkit-fill-available;
+    max-width: -webkit-fill-available;
+    max-height: 36px !important;
     padding: 8px;
   }
 
@@ -33,56 +33,66 @@
     flex-wrap: wrap;
     gap: 4px;
     align-items: center;
+
     margin-bottom: 12px;
     padding: 0 !important;
     > button {
+      cursor: pointer;
+
+      zoom: 0.8;
+
       flex: 1;
+
       min-width: 100px;
       margin: 0;
-      cursor: pointer;
-      zoom: 0.8;
     }
   }
 
   .actions {
     .name {
-      background: linear-gradient(0deg, rgb(0 0 0 / 80%), transparent);
-      font-weight: bold;
-      text-shadow: 0 1px 1px rgb(0 0 0 / 90%);
-      white-space: nowrap;
-      text-overflow: ellipsis;
       overflow: hidden;
       display: block;
+
+      font-weight: bold;
+      text-overflow: ellipsis;
+      text-shadow: 0 1px 1px rgb(0 0 0 / 90%);
+      white-space: nowrap;
+
+      background: linear-gradient(0deg, rgb(0 0 0 / 80%), transparent);
     }
 
     .additional {
       display: none;
       > ul {
-        margin: 0;
-        padding: 0;
         display: flex;
         align-items: center;
         justify-content: center;
+
+        margin: 0;
+        padding: 0;
         a {
-          font-size: 15px !important;
           margin: 0 !important;
-          text-shadow: 1px 1px black;
-          color: #fff;
-          white-space: nowrap;
-          text-overflow: ellipsis;
           padding: 0 !important;
+
+          font-size: 15px !important;
+          color: #fff;
+          text-overflow: ellipsis;
+          text-shadow: 1px 1px black;
+          white-space: nowrap;
         }
       }
     }
   }
 
   .card {
-    border-radius: var(--border-radius-xs);
-    background-size: cover;
-    box-shadow: var(--box-shadow);
-    outline: 1px solid rgb(0 0 0 / 50%);
-    transition: all 0.2s ease-in-out;
     overflow: hidden;
+
+    background-size: cover;
+    border-radius: var(--border-radius-xs);
+    outline: 1px solid rgb(0 0 0 / 50%);
+    box-shadow: var(--box-shadow);
+
+    transition: all 0.2s ease-in-out;
 
     .name {
       font-size: 12px !important;
@@ -100,9 +110,9 @@
   }
 
   .metadata-button {
-    font-size: 10px !important;
-    right: 4px;
     top: 24px;
+    right: 4px;
+    font-size: 10px !important;
     opacity: 0;
 
     &:hover {
@@ -113,11 +123,13 @@
 
 .extra-network-thumbs {
   .name {
-    font-size: 12px !important;
-    background: transparent;
-    white-space: nowrap;
     overflow: hidden;
     display: block;
+
+    font-size: 12px !important;
     text-overflow: ellipsis;
+    white-space: nowrap;
+
+    background: transparent;
   }
 }

@@ -19,7 +19,7 @@
     "sd-debug": "cd ../../ && ./webui.sh",
     "setup": "umi setup",
     "start": "umi build",
-    "stylelint": "stylelint \"src/**/*.less\" --fix",
+    "stylelint": "stylelint \"src/**/*.{css,less,js,jsx,ts,tsx}\" --fix",
     "test": "npm run lint",
     "type-check": "tsc -p tsconfig-check.json"
   },
@@ -27,6 +27,9 @@
     "*.less": [
       "stylelint --fix",
       "prettier --write"
+    ],
+    "*.{md,json}": [
+      "prettier --write --no-error-on-unmatched-pattern"
     ],
     "*.json": [
       "prettier --write --no-error-on-unmatched-pattern"
@@ -55,6 +58,9 @@
     "ahooks": "^3.7.6",
     "antd": "^5.4.2",
     "antd-style": "^3.0.0",
+    "babel-plugin-styled-components": "^2.1.1",
+    "commitlint": "^17",
+    "commitlint-config-gitmoji": "^2",
     "concurrently": "^8.0.1",
     "eslint": "^8",
     "eslint-import-resolver-alias": "^1.1.2",
@@ -64,6 +70,7 @@
     "object-to-css-variables": "^0.2.1",
     "polished": "^4.2.2",
     "postcss-less": "^6.0.0",
+    "postcss-styled-syntax": "^0.4.0",
     "prettier": "^2",
     "prettier-plugin-organize-imports": "^3",
     "prettier-plugin-packagejson": "^2",
@@ -80,9 +87,8 @@
     "semantic-release-config-gitmoji": "^1",
     "styled-components": "^5.3.9",
     "stylelint": "^15.4.0",
-    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-clean-order": "^5.0.1",
     "stylelint-config-recommended": "^12.0.0",
-    "stylelint-less": "^1.0.6",
     "stylelint-order": "^6.0.3",
     "typescript": "^5.0.0",
     "umi": "^4.0.64",

@@ -24,22 +24,26 @@ const View = styled.div<{ type: PromptType }>`
   .ReactTags__editTagInput,
   .ReactTags__tagInput {
     display: inline-block;
-    margin: 0;
     width: -webkit-fill-available;
+    margin: 0;
     input,
     input:focus {
-      display: block;
       position: relative;
-      margin: 0;
+
+      display: block;
+
       width: -webkit-fill-available;
+      margin: 0;
+      padding: var(--input-padding);
+
+      font-size: var(--input-text-size);
+      font-weight: var(--input-text-weight);
+      line-height: var(--line-sm);
+      color: var(--body-text-color);
+
+      background: var(--input-background-fill);
       border: var(--input-border-width) solid var(--input-border-color);
       border-radius: var(--input-radius);
-      background: var(--input-background-fill);
-      padding: var(--input-padding);
-      color: var(--body-text-color);
-      font-weight: var(--input-text-weight);
-      font-size: var(--input-text-size);
-      line-height: var(--line-sm);
       outline: none;
     }
   }
@@ -56,25 +60,29 @@ const View = styled.div<{ type: PromptType }>`
     flex-wrap: wrap;
     gap: 4px;
     span.ReactTags__tag {
+      position: relative;
+
       display: flex;
       align-items: center;
+
+      padding: var(--input-padding);
+
+      font-size: var(--text-sm);
+      font-weight: var(--input-text-weight);
+      line-height: var(--line-sm);
+      color: ${({ type }) => (type === 'positive' ? 'var(--green-9)' : 'var(--magenta-9)')};
+
+      background: var(--button-secondary-background-fill);
       border: var(--button-border-width) solid var(--button-secondary-border-color);
       border-radius: var(--input-radius);
-      background: var(--button-secondary-background-fill);
-      color: ${({ type }) => (type === 'positive' ? 'var(--green-9)' : 'var(--magenta-9)')};
-      position: relative;
-      font-weight: var(--input-text-weight);
-      font-size: var(--text-sm);
-      line-height: var(--line-sm);
-      padding: var(--input-padding);
       &:hover {
         color: ${({ type }) => (type === 'positive' ? 'var(--green-10)' : 'var(--magenta-10)')};
       }
     }
     a.ReactTags__remove {
-      color: #aaa;
-      margin-left: 5px;
       cursor: pointer;
+      margin-left: 5px;
+      color: #aaa;
     }
   }
 
@@ -84,23 +92,26 @@ const View = styled.div<{ type: PromptType }>`
     z-index: 1000;
   }
   ul {
-    list-style-type: none;
-    box-shadow: var(--box-shadow);
-    background: var(--color-bg-container);
-    width: 248px;
-    max-height: 480px;
     overflow-x: hidden;
     overflow-y: auto;
+
+    width: 248px;
+    max-height: 480px;
     padding: 0;
+
+    list-style-type: none;
+
+    background: var(--color-bg-container);
     border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
     li {
-      font-size: 12px;
-      padding: 4px 8px;
       margin: 0;
+      padding: 4px 8px;
+      font-size: 12px;
       &.ReactTags__activeSuggestion {
-        background: var(--color-primary);
-        color: #fff;
         cursor: pointer;
+        color: #fff;
+        background: var(--color-primary);
       }
       mark {
         font-weight: 600;
@@ -112,10 +123,10 @@ const View = styled.div<{ type: PromptType }>`
   }
 
   .ReactTags__remove {
-    border: none;
     cursor: pointer;
-    background: none;
     color: var(--color-text);
+    background: none;
+    border: none;
   }
 
   .ReactTags__lora {

@@ -6,10 +6,10 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
   const commonHandle = css`
     position: relative;
     &::before {
+      content: '';
       position: absolute;
       z-index: 50;
       transition: all 0.3s ease-in-out;
-      content: '';
     }
     &:hover,
     &:active {
@@ -20,17 +20,21 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
   `
 
   const commonToggle = css`
-    position: absolute;
-    opacity: 0;
-    z-index: 1001;
-    transition: opacity 0.1s;
-    border-radius: 4px;
     cursor: pointer;
-    background: ${token.colorBgElevated};
-    border-width: 1px;
-    border-style: solid;
+
+    position: absolute;
+    z-index: 1001;
+
     color: ${token.colorTextTertiary};
+
+    opacity: 0;
+    background: ${token.colorBgElevated};
     border-color: ${token.colorBorder};
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+
+    transition: opacity 0.1s;
     &:hover {
       color: ${token.colorTextSecondary};
       background: ${token.colorFillQuaternary};
@@ -45,8 +49,8 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
     container: cx(
       prefix,
       css`
-        flex-shrink: 0;
         position: relative;
+        flex-shrink: 0;
         border: 0 solid ${token.colorSplit};
         &:hover {
           .${prefix}-toggle {
@@ -60,13 +64,15 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
       `${prefix}-toggle-left`,
       commonToggle,
       css`
+        top: 50%;
+        left: -${offset}px;
+
         width: ${toggleShort}px;
         height: ${toggleLength}px;
-        left: -${offset}px;
-        top: 50%;
         margin-top: -20px;
-        border-radius: 4px 0 0 4px;
+
         border-right-width: 0;
+        border-radius: 4px 0 0 4px;
       `
     ),
     toggleRight: cx(
@@ -74,13 +80,15 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
       `${prefix}-toggle-right`,
       commonToggle,
       css`
+        top: 50%;
+        right: -${offset}px;
+
         width: ${toggleShort}px;
         height: ${toggleLength}px;
-        right: -${offset}px;
-        top: 50%;
         margin-top: -20px;
-        border-radius: 0 4px 4px 0;
+
         border-left-width: 0;
+        border-radius: 0 4px 4px 0;
       `
     ),
     toggleTop: cx(
@@ -88,13 +96,15 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
       `${prefix}-toggle-top`,
       commonToggle,
       css`
-        height: ${toggleShort}px;
-        width: ${toggleLength}px;
         top: -${offset}px;
         left: 50%;
+
+        width: ${toggleLength}px;
+        height: ${toggleShort}px;
         margin-left: -20px;
-        border-radius: 4px 4px 0 0;
+
         border-bottom-width: 0;
+        border-radius: 4px 4px 0 0;
       `
     ),
     toggleBottom: cx(
@@ -102,35 +112,40 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
       `${prefix}-toggle-bottom`,
       commonToggle,
       css`
-        height: 16px;
-        width: ${toggleLength}px;
         bottom: -${offset}px;
         left: 50%;
+
+        width: ${toggleLength}px;
+        height: 16px;
         margin-left: -20px;
-        border-radius: 0 0 4px 4px;
+
         border-top-width: 0;
+        border-radius: 0 0 4px 4px;
       `
     ),
     fixed: cx(
       `${prefix}-fixed`,
       css`
+        position: relative;
+        overflow: hidden;
         background: ${rgba(token.colorBgContainer, 0.75)};
         backdrop-filter: blur(40px);
-        overflow: hidden;
-        position: relative;
+
         ${maxHeight ? 'height: 100% !important;' : ''}
       `
     ),
     float: cx(
       `${prefix}-float`,
       css`
+        position: relative;
+        z-index: 2000;
+
         overflow: hidden;
-        border-radius: 8px;
+
         background: ${rgba(token.colorBgElevated, 0.75)};
         backdrop-filter: blur(40px);
+        border-radius: 8px;
         box-shadow: ${token.boxShadowSecondary};
-        z-index: 2000;
-        position: relative;
       `
     ),
     leftHandle: cx(
@@ -161,8 +176,8 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
         ${commonHandle};
         &::before {
           top: 50%;
-          height: 2px;
           width: 100%;
+          height: 2px;
         }
       `
     ),
@@ -172,8 +187,8 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
         ${commonHandle};
         &::before {
           bottom: 50%;
-          height: 2px;
           width: 100%;
+          height: 2px;
         }
       `
     ),

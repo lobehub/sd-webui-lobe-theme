@@ -1,45 +1,51 @@
 .tabitem,
 .gradio-tabitem {
+  padding: var(--spacing-lg);
+  background: var(--panel-background-fill);
   border: none !important;
   border-radius: var(--container-radius);
-  background: var(--panel-background-fill);
-  padding: var(--spacing-lg);
 }
 
 #tabs {
   > .tabitem.gradio-tabitem {
-    background: transparent !important;
     padding: 24px;
+    background: transparent !important;
   }
 }
 
 .tab-nav {
-  border: none !important;
   gap: 8px;
   margin-bottom: 8px;
+  border: none !important;
 
   button {
     cursor: pointer;
-    border: none !important;
-    background: var(--color-fill-quaternary) !important;
-    transition: all 0.2s ease-in-out;
-    padding: 8px !important;
-    border-radius: 4px !important;
+
     flex: 1 !important;
 
+    padding: 8px !important;
+
+    background: var(--color-fill-quaternary) !important;
+    border: none !important;
+    border-radius: 4px !important;
+
+    transition: all 0.2s ease-in-out;
+
     &:hover {
-      border: none !important;
+      flex: none;
       color: var(--color-text) !important;
       background: var(--color-fill-tertiary) !important;
-      flex: none;
+      border: none !important;
     }
 
     &.selected {
-      border: none !important;
-      background: var(--color-fill-secondary) !important;
-      color: var(--color-text) !important;
       flex: none;
+
       font-weight: 600;
+      color: var(--color-text) !important;
+
+      background: var(--color-fill-secondary) !important;
+      border: none !important;
       border-bottom: 2px solid var(--color-primary) !important;
     }
   }

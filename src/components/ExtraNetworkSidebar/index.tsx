@@ -15,17 +15,17 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const View = styled.div`
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   height: -webkit-fill-available;
-  overflow: hidden;
 `
 
 const SidebarView = styled.div<{ size: number }>`
-  padding: 16px;
   overflow-x: hidden;
   overflow-y: auto;
   flex: 1;
+  padding: 16px;
 
   #txt2img_extra_networks,
   #img2img_extra_networks {
@@ -36,24 +36,26 @@ const SidebarView = styled.div<{ size: number }>`
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(${({ size }) => size}px, 1fr));
     > .card {
-      height: ${({ size }) => size * 1.5}px !important;
       width: -webkit-fill-available !important;
+      height: ${({ size }) => size * 1.5}px !important;
     }
   }
 `
 
 const Footer = styled.div`
-  flex: 0;
-  padding: 8px 16px;
   display: flex;
+  flex: 0;
   align-items: center;
   justify-content: flex-start;
+
+  padding: 8px 16px;
+
   border-top: 1px solid var(--color-border);
 `
 
 const ZoomSlider = styled(Slider)`
-  margin-left: 16px;
   flex: 1;
+  margin-left: 16px;
 `
 
 interface SidebarProps {

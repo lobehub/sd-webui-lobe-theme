@@ -1,27 +1,33 @@
 .gradio-button {
-  border-radius: var(--border-radius) !important;
+  overflow: hidden;
+
   min-width: 36px;
   min-height: 36px;
-  overflow: hidden;
+
   text-overflow: ellipsis;
+
+  border-radius: var(--border-radius) !important;
   &.tool {
-    padding: 0 !important;
-    max-width: 36px !important;
+    display: flex;
+    align-items: center;
+    align-self: end;
+    justify-content: center;
+
     width: 36px !important;
     min-width: 36px !important;
+    max-width: 36px !important;
     height: 36px !important;
     min-height: 36px !important;
     max-height: 36px !important;
+    padding: 0 !important;
+
     font-size: 14px !important;
     font-weight: 400;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-self: end;
     line-height: 1;
-    border: var(--button-border-width) solid var(--button-secondary-border-color);
-    background: var(--button-secondary-background-fill);
     color: var(--button-secondary-text-color);
+
+    background: var(--button-secondary-background-fill);
+    border: var(--button-border-width) solid var(--button-secondary-border-color);
   }
 
   &.secondary-down,
@@ -32,8 +38,8 @@
 
 #txt2img_interrupt,
 #img2img_interrupt {
-  border-radius: var(--border-radius) 0 0 var(--border-radius) !important;
   border-right: 1px solid var(--color-error-bg);
+  border-radius: var(--border-radius) 0 0 var(--border-radius) !important;
 }
 
 #txt2img_skip,
@@ -45,17 +51,17 @@
 #txt2img_skip,
 #img2img_interrupt,
 #img2img_skip {
-  background: var(--color-error) !important;
   color: #fff !important;
+  background: var(--color-error) !important;
 
   &:hover {
-    background: var(--color-error-hover) !important;
     color: #fff !important;
+    background: var(--color-error-hover) !important;
   }
 
   &:active {
-    background: var(--color-error-active) !important;
     color: #fff !important;
+    background: var(--color-error-active) !important;
   }
 }
 

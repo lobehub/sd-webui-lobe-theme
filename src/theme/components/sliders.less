@@ -2,42 +2,83 @@ input[type='range'] {
   appearance: none !important;
   background: transparent !important;
 
-  &:focus {
-    outline: none !important;
-  }
-
   &::-webkit-slider-runnable-track {
     cursor: pointer !important;
-    height: 6px !important;
-    border-radius: 3px !important;
-    background: var(--color-fill) !important;
-    opacity: 0.6 !important;
-  }
 
-  &:hover::-webkit-slider-runnable-track {
-    background: var(--color-primary) !important;
-    opacity: 1 !important;
-    transition: all 0.2s ease-in-out;
+    height: 6px !important;
+
+    opacity: 0.6 !important;
+    background: var(--color-fill) !important;
+    border-radius: 3px !important;
   }
 
   &::-moz-range-track {
     cursor: pointer !important;
     height: 6px !important;
+    background: var(--color-primary) !important;
     border-radius: 3px !important;
-    background: var(--color-primary) !important;
-  }
-
-  &:hover::-moz-range-track {
-    background: var(--color-primary) !important;
-    transition: all 0.2s ease-in-out;
   }
 
   &::-ms-fill-upper,
   &::-ms-fill-lower {
     cursor: pointer !important;
     height: 6px !important;
-    border-radius: 3px !important;
     background: var(--color-primary) !important;
+    border-radius: 3px !important;
+  }
+
+  &::-webkit-slider-thumb {
+    cursor: pointer !important;
+
+    width: 16px !important;
+    height: 16px !important;
+    margin-top: -5px !important;
+
+    appearance: none !important;
+    background: var(--color-bg-elevated) !important;
+    border: 2px solid var(--color-text) !important;
+    border-radius: 16px !important;
+  }
+
+  &::-moz-range-thumb {
+    cursor: pointer !important;
+
+    z-index: 999;
+
+    width: 16px !important;
+    height: 16px !important;
+    margin-top: -5px !important;
+
+    background: var(--color-bg-elevated) !important;
+    border: 2px solid var(--color-text) !important;
+    border-radius: 16px !important;
+  }
+
+  &::-ms-thumb {
+    cursor: pointer !important;
+
+    width: 16px !important;
+    height: 16px !important;
+    margin-top: -5px !important;
+
+    background: var(--color-bg-elevated) !important;
+    border: 2px solid var(--color-text) !important;
+    border-radius: 16px !important;
+  }
+
+  &:focus {
+    outline: none !important;
+  }
+
+  &:hover::-webkit-slider-runnable-track {
+    opacity: 1 !important;
+    background: var(--color-primary) !important;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover::-moz-range-track {
+    background: var(--color-primary) !important;
+    transition: all 0.2s ease-in-out;
   }
 
   &:hover::-ms-fill-upper,
@@ -46,54 +87,22 @@ input[type='range'] {
     transition: all 0.2s ease-in-out;
   }
 
-  &::-webkit-slider-thumb {
-    border: 2px solid var(--color-text) !important;
-    height: 16px !important;
-    width: 16px !important;
-    border-radius: 16px !important;
-    background: var(--color-bg-elevated) !important;
-    cursor: pointer !important;
-    appearance: none !important;
-    margin-top: -5px !important;
-  }
-
   &:active::-webkit-slider-thumb {
-    box-shadow: 0 0 3px var(--color-primary) !important;
+    background: var(--color-bg-elevated) !important;
     border: 2px solid var(--color-primary) !important;
-    background: var(--color-bg-elevated) !important;
-  }
-
-  &::-moz-range-thumb {
-    border: 2px solid var(--color-text) !important;
-    height: 16px !important;
-    width: 16px !important;
-    border-radius: 16px !important;
-    background: var(--color-bg-elevated) !important;
-    cursor: pointer !important;
-    margin-top: -5px !important;
-    z-index: 999;
+    box-shadow: 0 0 3px var(--color-primary) !important;
   }
 
   &:active::-moz-range-thumb {
-    box-shadow: 0 0 3px var(--color-primary) !important;
+    background: var(--color-bg-elevated) !important;
     border: 2px solid var(--color-primary) !important;
-    background: var(--color-bg-elevated) !important;
-  }
-
-  &::-ms-thumb {
-    border: 2px solid var(--color-text) !important;
-    height: 16px !important;
-    width: 16px !important;
-    border-radius: 16px !important;
-    background: var(--color-bg-elevated) !important;
-    cursor: pointer !important;
-    margin-top: -5px !important;
+    box-shadow: 0 0 3px var(--color-primary) !important;
   }
 
   &:active::-ms-thumb {
-    box-shadow: 0 0 3px var(--color-primary) !important;
-    border: 2px solid var(--color-primary) !important;
     background: var(--color-bg-elevated) !important;
+    border: 2px solid var(--color-primary) !important;
+    box-shadow: 0 0 3px var(--color-primary) !important;
   }
 }
 

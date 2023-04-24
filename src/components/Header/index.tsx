@@ -17,41 +17,48 @@ import { civitaiLogo, themeIcon } from './style'
  ******************************************************/
 
 const HeaderView = styled.div`
-  padding: 16px 24px;
   display: flex;
   flex-wrap: nowrap;
+  gap: 12px;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+
   height: -webkit-fill-available;
+  padding: 16px 24px;
 
   #tabs.header {
     .tab-nav {
-      border: none !important;
       margin: 0 !important;
+      border: none !important;
     }
     button {
       cursor: pointer;
-      border: none !important;
-      background: transparent !important;
+
       flex: none;
-      transition: all 0.2s ease-in-out;
-      padding: 8px !important;
-      border-radius: 4px !important;
-      margin: 0 !important;
       flex: 0 !important;
+
+      margin: 0 !important;
+      padding: 8px !important;
+
+      background: transparent !important;
+      border: none !important;
+      border-radius: 4px !important;
+
+      transition: all 0.2s ease-in-out;
       &:hover {
-        border: none !important;
+        flex: none;
         color: var(--color-text) !important;
         background: var(--color-fill-tertiary) !important;
-        flex: none;
+        border: none !important;
       }
       &.selected {
-        border: none !important;
-        background: transparent !important;
-        color: var(--color-text) !important;
         flex: none;
+
         font-weight: 600;
+        color: var(--color-text) !important;
+
+        background: transparent !important;
+        border: none !important;
       }
     }
   }

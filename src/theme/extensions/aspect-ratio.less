@@ -2,11 +2,12 @@
 [id$='_row_resolutions'],
 [id$='_container_aspect_ratio'] {
   display: flex !important;
-  margin: 0;
-  padding: 0;
   flex-wrap: nowrap !important;
   align-items: flex-start !important;
   justify-content: flex-start !important;
+
+  margin: 0;
+  padding: 0;
 }
 
 #arc_show_calculator_button {
@@ -14,23 +15,26 @@
 }
 
 [id$='_container_aspect_ratio'] {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  gap: 4px !important;
+
+  margin-top: 0 !important;
+  margin-bottom: var(--size-ms) !important;
+  padding: 12px !important;
+
   background-color: var(--color-fill-tertiary) !important;
   border-color: transparent !important;
-  transition: all 0.3s ease-in-out !important;
-  margin-bottom: var(--size-ms) !important;
-  margin-top: 0 !important;
-  padding: 12px !important;
   border-radius: var(--border-radius) !important;
-  gap: 4px !important;
-  display: flex !important;
-  flex-wrap: wrap !important;
-  flex-direction: row !important;
+
+  transition: all 0.3s ease-in-out !important;
   [id$='_row_aspect_ratio'],
   [id$='_row_resolutions'] {
-    max-width: unset;
-    width: unset;
-    flex: 1;
     display: flex !important;
+    flex: 1;
+    width: unset;
+    max-width: unset;
   }
   button {
     position: relative !important;

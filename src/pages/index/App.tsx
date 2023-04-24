@@ -6,29 +6,33 @@ import styled from 'styled-components'
 import { shallow } from 'zustand/shallow'
 
 const View = styled.div`
-  display: flex;
-  flex-direction: row !important;
-  flex: 1;
-  overflow: hidden;
   position: relative;
+
+  overflow: hidden;
+  display: flex;
+  flex: 1;
+  flex-direction: row !important;
 `
 
 const MainView = styled.div`
+  position: relative;
+
+  overflow: hidden;
+  display: flex;
   flex: 1;
+  flex-direction: column;
+
   width: 100vw;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  position: relative;
 `
 
 const LoadingBox = styled.div`
-  width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  width: 100%;
+  height: 100%;
 `
 
 const App: React.FC = () => {

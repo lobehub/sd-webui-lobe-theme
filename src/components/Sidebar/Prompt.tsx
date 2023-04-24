@@ -15,19 +15,24 @@ const BtnGroup = styled.div`
 `
 
 const Btn = styled.button`
+  cursor: pointer;
+
+  position: relative;
+
   display: flex;
+  flex: 1;
   align-items: center;
   justify-content: center;
+
+  padding: var(--input-padding);
+
+  font-size: var(--input-text-size);
+  font-weight: var(--input-text-weight);
+  line-height: var(--line-sm);
+
+  background: var(--button-secondary-background-fill);
   border: var(--button-border-width) solid var(--button-secondary-border-color);
   border-radius: var(--input-radius);
-  background: var(--button-secondary-background-fill);
-  position: relative;
-  font-weight: var(--input-text-weight);
-  font-size: var(--input-text-size);
-  line-height: var(--line-sm);
-  padding: var(--input-padding);
-  cursor: pointer;
-  flex: 1;
 `
 
 interface PromptProps {

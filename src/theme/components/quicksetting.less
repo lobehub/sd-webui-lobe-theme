@@ -1,15 +1,17 @@
 #quicksettings {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: stretch;
 
+  width: 100%;
+
   > * {
     flex: 1;
-    max-width: unset !important;
-    min-width: unset !important;
+
     width: -webkit-fill-available !important;
+    min-width: unset !important;
+    max-width: unset !important;
     margin: 0;
     padding: 0;
   }
@@ -26,17 +28,17 @@
 
   input[type='number'],
   textarea {
+    box-sizing: border-box;
+    width: -webkit-fill-available;
     height: 28px !important;
     padding: 4px !important;
-    width: -webkit-fill-available;
-    box-sizing: border-box;
   }
 
   span {
-    white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
     width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .dropdown-arrow {

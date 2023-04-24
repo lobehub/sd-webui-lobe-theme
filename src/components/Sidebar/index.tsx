@@ -7,10 +7,10 @@ import { shallow } from 'zustand/shallow'
 import PromptGroup from './PromptGroup'
 
 const SidebarView = styled.div`
-  padding: 16px;
   overflow-x: hidden;
   overflow-y: auto;
   height: -webkit-fill-available;
+  padding: 16px;
 `
 
 interface SidebarProps {
