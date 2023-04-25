@@ -33,7 +33,7 @@ body:
       required: true
   - type: textarea
     attributes:
-      label: "🐛 期望结果 | Expected Behavior"
+      label: "🚦 期望结果 | Expected Behavior"
       description: A clear and concise description of what you expected to happen.
   - type: textarea
     attributes:
