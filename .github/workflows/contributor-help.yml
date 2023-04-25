@@ -1,8 +1,6 @@
 name: Contributor Helper
 
-on:
-  schedule:
-    - cron: '0 0 * * *'
+on: [push, pull_request]
 
 jobs:
   contributor:
@@ -13,6 +11,7 @@ jobs:
       - uses: actions-cool/contributor-helper@v1
         with:
           token: ${{ secrets.GH_TOKEN }}
+          style: 'simple'
           update-files: 'README.md, README-zh_CN.md'
           update-places: '<!-- CONTRIBUTION GROUP -->/<!-- CONTRIBUTION END -->, <!-- CONTRIBUTION GROUP -->/<!-- CONTRIBUTION END -->'
 
