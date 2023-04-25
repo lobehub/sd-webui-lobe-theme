@@ -78,7 +78,6 @@ Kitchen WebUI Setting
 
 > 右上角 ⚙ 图标打开设置面板，当前可用设置如下
 
-
 - **Sidebar**
   - Default expand 默认展开: `true`
   - Default width 默认宽度: `280`
@@ -138,6 +137,14 @@ $ cd sd-web-ui-kitchen-theme
 $ npm install
 $ npm start
 ```
+
+<br/>
+
+## 🤝 参与贡献
+
+<!-- CONTRIBUTION GROUP -->
+
+<!-- CONTRIBUTION END -->
 
 <br/>
 
