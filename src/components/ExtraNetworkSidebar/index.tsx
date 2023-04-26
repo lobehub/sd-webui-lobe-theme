@@ -19,6 +19,7 @@ const View = styled.div`
   display: flex;
   flex-direction: column;
   height: -webkit-fill-available;
+  height: -moz-available;
 `
 
 const SidebarView = styled.div<{ size: number }>`
@@ -37,6 +38,7 @@ const SidebarView = styled.div<{ size: number }>`
     grid-template-columns: repeat(auto-fill, minmax(${({ size }) => size}px, 1fr));
     > .card {
       width: -webkit-fill-available !important;
+      width: -moz-available !important;
       height: ${({ size }) => size * 1.5}px !important;
     }
   }
@@ -79,7 +81,11 @@ const Sidebar: React.FC<SidebarProps> = ({ children, style }) => {
       <GlobalStyle />
       <DraggablePanel
         maxHeight
-        style={style}
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          ...style,
+        }}
         placement="right"
         defaultSize={{ width: setting.extraNetworkSidebarWidth }}
         minWidth={setting.extraNetworkSidebarWidth}

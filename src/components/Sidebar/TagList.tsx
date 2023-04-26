@@ -25,6 +25,7 @@ const View = styled.div<{ type: PromptType }>`
   .ReactTags__tagInput {
     display: inline-block;
     width: -webkit-fill-available;
+    width: -moz-available;
     margin: 0;
     input,
     input:focus {
@@ -33,6 +34,7 @@ const View = styled.div<{ type: PromptType }>`
       display: block;
 
       width: -webkit-fill-available;
+      width: -moz-available;
       margin: 0;
       padding: var(--input-padding);
 
