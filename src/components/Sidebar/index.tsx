@@ -10,6 +10,7 @@ const SidebarView = styled.div`
   overflow-x: hidden;
   overflow-y: auto;
   height: -webkit-fill-available;
+  height: -moz-available;
   padding: 16px;
 `
 
@@ -31,7 +32,11 @@ const Sidebar: React.FC<SidebarProps> = ({ children, loading, style }) => {
   return (
     <DraggablePanel
       maxHeight
-      style={style}
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        ...style,
+      }}
       placement="left"
       defaultSize={{ width: setting.sidebarWidth }}
       minWidth={setting.sidebarWidth}
