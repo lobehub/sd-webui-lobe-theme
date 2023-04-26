@@ -1,33 +1,35 @@
 # Changelog
 
-# [1.7.0](https://github.com/canisminor1990/sd-webui-kitchen-theme/compare/v1.6.4...v1.7.0) (2023-04-23)
+## [1.7.1](https://github.com/canisminor1990/sd-webui-kitchen-theme/compare/v1.7.0...v1.7.1) (2023-04-26)
 
+### 🐛 Bug Fixes
+
+- firefox scroll fixed [47] ([87e774d](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/87e774d))
+
+# [1.7.0](https://github.com/canisminor1990/sd-webui-kitchen-theme/compare/v1.6.4...v1.7.0) (2023-04-23)
 
 ### ✨ Features
 
-* add giscus feedback ([42c7590](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/42c7590))
+- add giscus feedback ([42c7590](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/42c7590))
 
 ## [1.6.4](https://github.com/canisminor1990/sd-webui-kitchen-theme/compare/v1.6.3...v1.6.4) (2023-04-23)
 
-
 ### 🐛 Bug Fixes
 
-* setting reset button ([2a0f468](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/2a0f468))
+- setting reset button ([2a0f468](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/2a0f468))
 
 ## [1.6.3](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.6.2...v1.6.3) (2023-04-23)
 
-
 ### 🐛 Bug Fixes
 
-* gradioApp append ([4751e78](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/4751e78))
+- gradioApp append ([4751e78](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/4751e78))
 
 ## [1.6.2](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.6.1...v1.6.2) (2023-04-22)
 
-
 ### 🐛 Bug Fixes
 
-* setting crash ([4f1a030](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/4f1a030)), closes [#46](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/issues/46)
-* try to fix header bug ([afdbe53](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/afdbe53)), closes [#46](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/issues/46)
+- setting crash ([4f1a030](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/4f1a030)), closes [#46](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/issues/46)
+- try to fix header bug ([afdbe53](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/commit/afdbe53)), closes [#46](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/issues/46)
 
 ## [1.6.1](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/compare/v1.6.0...v1.6.1) (2023-04-22)
 
