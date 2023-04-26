@@ -15,6 +15,7 @@
 [![releaseDate][release-date-shield]][release-date-url]
 [![ciTest][ci-test-shield]][ci-test-url]
 [![ciRelease][ci-release-shield]][ci-release-url]
+<br/>
 [![contributors][contributors-shield]][contributors-url]
 [![forks][forks-shield]][forks-url]
 [![stargazers][stargazers-shield]][stargazers-url]
