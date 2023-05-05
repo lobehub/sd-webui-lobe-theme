@@ -39,3 +39,4 @@ yarn.lock
 venv
 temp
 .husky/prepare-commit-msg
+.husky/commit-msg

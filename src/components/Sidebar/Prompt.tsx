@@ -55,6 +55,7 @@ const Prompt: React.FC<PromptProps> = ({ type }) => {
     try {
       const textarea: HTMLTextAreaElement | any = get_uiCurrentTabContent().querySelector(id)
       if (textarea) textarea.value = tags.map((t) => t.text).join(', ')
+      updateInput(textarea)
     } catch {}
   }, [tags])
 
@@ -62,6 +63,7 @@ const Prompt: React.FC<PromptProps> = ({ type }) => {
     try {
       const textarea: HTMLTextAreaElement | any = get_uiCurrentTabContent().querySelector(id)
       if (textarea) textarea.value = currentTags.map((t) => t.text).join(', ')
+      updateInput(textarea)
     } catch {}
   }, [])
 
