@@ -48,7 +48,7 @@
     "@ant-design/icons": "^5",
     "@commitlint/cli": "^17",
     "@types/lodash-es": "^4",
-    "@types/node": "^18",
+    "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dnd": "^3",
     "@types/react-dom": "^18",
