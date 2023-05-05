@@ -1,6 +1,6 @@
 import negativeData from '@/data/negative.json'
 import positiveData from '@/data/positive.json'
-import { Converter } from '@/script/format-prompt'
+import { Converter } from '@/script/formatPrompt'
 import { TagItem } from './TagList'
 
 export const genTagType = (tag: TagItem): TagItem => {

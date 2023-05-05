@@ -1,6 +1,9 @@
 import { Content, ExtraNetworkSidebar, Header, Sidebar } from '@/components'
+import dragablePanel from '@/script/draggablePanel'
+import replaceIcon from '@/script/replaceIcon'
 import { useAppStore } from '@/store'
 import { Spin } from 'antd'
+import { useResponsive } from 'antd-style'
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import { shallow } from 'zustand/shallow'
@@ -40,6 +43,7 @@ const App: React.FC = () => {
     (st) => [st.currentTab, st.setCurrentTab, st.setting],
     shallow
   )
+  const { mobile } = useResponsive()
   const [loading, setLoading] = useState(true)
   const sidebarRef: any = useRef<HTMLElement>()
   const mainRef: any = useRef<HTMLElement>()
@@ -58,6 +62,7 @@ const App: React.FC = () => {
       // Content
       const main = gradioApp().querySelector('.app')
       if (main) mainRef.current?.appendChild(main)
+      if (!mobile) dragablePanel()
 
       // Sidebar
       const sidebar = gradioApp().querySelector('#quicksettings')
@@ -72,6 +77,9 @@ const App: React.FC = () => {
           img2imgExtraNetworkSidebarRef.current?.appendChild(img2imgExtraNetworks)
         }
       }
+
+      // Other
+      if (setting?.svgIcon) replaceIcon()
 
       setLoading(false)
     })

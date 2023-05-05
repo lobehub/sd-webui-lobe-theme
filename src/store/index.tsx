@@ -10,6 +10,7 @@ export interface WebuiSetting {
   extraNetworkSidebarExpand: boolean
   extraNetworkSidebarWidth: number
   extraNetworkCardSize: number
+  svgIcon: boolean
 }
 export interface AppState {
   themeMode: 'light' | 'dark'
@@ -29,6 +30,7 @@ export const defaultSetting: WebuiSetting = {
   extraNetworkSidebarExpand: true,
   extraNetworkSidebarWidth: 340,
   extraNetworkCardSize: 86,
+  svgIcon: false,
 }
 export const useAppStore = create<AppState>()(
   devtools((set, get) => ({

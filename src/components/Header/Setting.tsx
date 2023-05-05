@@ -76,6 +76,11 @@ const Setting: React.FC = () => {
           <FormItem label="Default card size" name="extraNetworkCardSize">
             <InputNumber />
           </FormItem>
+          <Divider style={{ margin: '4px 0 8px' }} />
+          <SubTitle>Other</SubTitle>
+          <FormItem label="Use svg icons" name="svgIcon" valuePropName="checked">
+            <Switch />
+          </FormItem>
           <Divider style={{ margin: '4px 0 16px' }} />
           <FormItem>
             <Space>

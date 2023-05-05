@@ -9,6 +9,7 @@ import PromptGroup from './PromptGroup'
 const SidebarView = styled.div`
   overflow-x: hidden;
   overflow-y: auto;
+
   height: -webkit-fill-available;
   height: -moz-available;
   padding: 16px;

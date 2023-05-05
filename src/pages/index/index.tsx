@@ -1,8 +1,8 @@
 import { useIsDarkMode } from '@/components/theme/useIsDarkMode'
-import civitaiHelperFix from '@/script/civitai-helper-fix'
-import formatPrompt from '@/script/format-prompt'
-import promptBracketChecker from '@/script/prompt-bracket-checker'
-import setupHead from '@/script/setup-head'
+import civitaiHelperFix from '@/script/civitaiHelperFix'
+import formatPrompt from '@/script/formatPrompt'
+import promptBracketChecker from '@/script/promptBracketChecker'
+import setupHead from '@/script/setupHead'
 import { useAppStore } from '@/store'
 import '@/theme/style.less'
 import { ThemeProvider, setupStyled } from 'antd-style'
@@ -48,18 +48,22 @@ const Root: React.FC = () => {
   )
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  setupHead()
-  const root = document.createElement('div')
-  root.setAttribute('id', 'root')
-  try {
-    gradioApp()?.append(root)
-  } catch {
-    document.querySelector('gradio-app')?.append(root)
-  }
-  const client = createRoot(root)
-  client.render(<Root />)
-})
+document.addEventListener(
+  'DOMContentLoaded',
+  () => {
+    setupHead()
+    const root = document.createElement('div')
+    root.setAttribute('id', 'root')
+    try {
+      gradioApp()?.append(root)
+    } catch {
+      document.querySelector('gradio-app')?.append(root)
+    }
+    const client = createRoot(root)
+    client.render(<Root />)
+  },
+  { once: true }
+)
 
 onUiLoaded(() => {
   formatPrompt()
