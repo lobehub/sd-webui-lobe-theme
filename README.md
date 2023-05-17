@@ -80,12 +80,16 @@ Kitchen WebUI Setting
 
 > top right ⚙ icon in header
 
+- **Prompt Textarea**
+  - Display mode: `scroll` | `resizable`
 - **Sidebar**
   - Default expand: `true`
+  - Display mode: `fixed` | `float`
   - Default width: `280`
 - **ExtraNetwork Sidebar**
   - Enable: `true`
   - Default expand: `true`
+  - Display mode: `fixed` | `float`
   - Default Width: `340`
   - Default card size: `86`
 
