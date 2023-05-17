@@ -4,6 +4,7 @@ import { devtools } from 'zustand/middleware'
 const SETTING_KEY = 'SD-KITCHEN-SETTING'
 
 export interface WebuiSetting {
+  promotTextarea: 'scroll' | 'resizable'
   sidebarExpand: boolean
   sidebarFixedMode: 'fixed' | 'float'
   sidebarWidth: number
@@ -16,6 +17,7 @@ export interface WebuiSetting {
 }
 
 export const defaultSetting: WebuiSetting = {
+  promotTextarea: 'scroll',
   sidebarExpand: true,
   sidebarFixedMode: 'fixed',
   sidebarWidth: 280,

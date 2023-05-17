@@ -55,11 +55,16 @@ const Setting: React.FC = () => {
       content={
         <Form size="small" initialValues={setting} layout="horizontal" onFinish={onFinish} style={{ maxWidth: 240 }}>
           <Divider style={{ margin: '4px 0 8px' }} />
+          <SubTitle>Promot Textarea</SubTitle>
+          <FormItem label="Display mode" name="promotTextarea">
+            <Segmented options={['scroll', 'resizable']} />
+          </FormItem>
+          <Divider style={{ margin: '4px 0 8px' }} />
           <SubTitle>Sidebar</SubTitle>
           <FormItem label="Default expand" name="sidebarExpand" valuePropName="checked">
             <Switch />
           </FormItem>
-          <FormItem label="Fixed mode" name="sidebarFixedMode">
+          <FormItem label="Display mode" name="sidebarFixedMode">
             <Segmented options={['fixed', 'float']} />
           </FormItem>
           <FormItem label="Default width" name="sidebarWidth">
@@ -70,7 +75,7 @@ const Setting: React.FC = () => {
           <FormItem label="Enable" name="enableExtraNetworkSidebar" valuePropName="checked">
             <Switch />
           </FormItem>
-          <FormItem label="Fixed mode" name="extraNetworkFixedMode" valuePropName="checked">
+          <FormItem label="Display mode" name="extraNetworkFixedMode" valuePropName="checked">
             <Segmented options={['fixed', 'float']} />
           </FormItem>
           <FormItem label="Default expand" name="extraNetworkSidebarExpand" valuePropName="checked">
