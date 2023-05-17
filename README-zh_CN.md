@@ -79,12 +79,17 @@ Kitchen WebUI Setting
 
 > 右上角 ⚙ 图标打开设置面板，当前可用设置如下
 
+
+- **Prompt Textarea**
+  - Display mode: `scroll 固定高度滚动` | `resizable 按文本行数缩放`
 - **Sidebar**
   - Default expand 默认展开: `true`
+  - Display mode: `fixed 固定` | `float 悬浮`
   - Default width 默认宽度: `280`
 - **ExtraNetwork Sidebar**
   - Enable 启用: `true`
   - Default expand 默认展开: `true`
+  - Display mode: `fixed 固定` | `float 悬浮`
   - Default Width 默认宽度: `340`
   - Default card size 模型卡片默认尺寸: `86`
 
