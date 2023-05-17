@@ -43,7 +43,6 @@
       "prettier --parser=typescript --write"
     ]
   },
-  "dependencies": {},
   "devDependencies": {
     "@ant-design/icons": "^5",
     "@commitlint/cli": "^17",
@@ -60,13 +59,16 @@
     "antd": "^5",
     "antd-style": "^3",
     "babel-plugin-styled-components": "^2",
+    "browserslist": "^4",
     "commitlint": "^17",
     "commitlint-config-gitmoji": "^2",
     "concurrently": "^8",
+    "css-minimizer-webpack-plugin": "^5",
     "eslint": "^8",
     "eslint-import-resolver-alias": "^1",
     "eslint-import-resolver-typescript": "^3",
     "husky": "^8",
+    "lightningcss": "^1",
     "lint-staged": "^13",
     "lodash-es": "^4",
     "object-to-css-variables": "^0.2",

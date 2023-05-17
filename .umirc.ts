@@ -1,5 +1,11 @@
 import { defineConfig } from 'umi'
 import WebpackShellPlugin from 'webpack-shell-plugin-next'
+// @ts-ignore
+import CssMinimizerPlugin from 'css-minimizer-webpack-plugin'
+// @ts-ignore
+import lightningcss from 'lightningcss'
+// @ts-ignore
+import browserslist from 'browserslist'
 
 const mac = [
   'rm ./javascript/index.js',
@@ -17,7 +23,7 @@ const win = [
 
 export default defineConfig({
   routes: [{ path: '/', component: 'index' }],
-  npmClient: 'yarn',
+  npmClient: 'pnpm',
   mpa: {},
   codeSplitting: false,
   define: {
@@ -35,6 +41,14 @@ export default defineConfig({
     ],
   ],
   chainWebpack(memo) {
+    memo.plugin('minimizer').use(CssMinimizerPlugin, [
+      {
+        minify: CssMinimizerPlugin.lightningCssMinify,
+        minimizerOptions: {
+          targets: lightningcss.browserslistToTargets(browserslist('>= 0.25%')),
+        },
+      },
+    ])
     memo.plugin('shell').use(WebpackShellPlugin, [
       {
         onBuildExit: {
