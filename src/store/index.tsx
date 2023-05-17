@@ -5,12 +5,26 @@ const SETTING_KEY = 'SD-KITCHEN-SETTING'
 
 export interface WebuiSetting {
   sidebarExpand: boolean
+  sidebarFixedMode: 'fixed' | 'float'
   sidebarWidth: number
   enableExtraNetworkSidebar: boolean
   extraNetworkSidebarExpand: boolean
+  extraNetworkFixedMode: 'fixed' | 'float'
   extraNetworkSidebarWidth: number
   extraNetworkCardSize: number
   svgIcon: boolean
+}
+
+export const defaultSetting: WebuiSetting = {
+  sidebarExpand: true,
+  sidebarFixedMode: 'fixed',
+  sidebarWidth: 280,
+  enableExtraNetworkSidebar: true,
+  extraNetworkSidebarExpand: true,
+  extraNetworkFixedMode: 'fixed',
+  extraNetworkSidebarWidth: 340,
+  extraNetworkCardSize: 86,
+  svgIcon: false,
 }
 export interface AppState {
   themeMode: 'light' | 'dark'
@@ -21,16 +35,6 @@ export interface AppState {
   onLoadSetting: () => void
   onSetSetting: (setting: WebuiSetting) => void
   onInit: () => void
-}
-
-export const defaultSetting: WebuiSetting = {
-  sidebarExpand: true,
-  sidebarWidth: 280,
-  enableExtraNetworkSidebar: true,
-  extraNetworkSidebarExpand: true,
-  extraNetworkSidebarWidth: 340,
-  extraNetworkCardSize: 86,
-  svgIcon: false,
 }
 export const useAppStore = create<AppState>()(
   devtools((set, get) => ({

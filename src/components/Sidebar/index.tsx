@@ -23,6 +23,7 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ children, loading, style }) => {
   const [setting] = useAppStore((st) => [st.setting], shallow)
+  const [mode] = useState<'fixed' | 'float'>(setting.sidebarFixedMode)
   const { mobile } = useResponsive()
   const [expand, setExpand] = useState<boolean>(setting.sidebarExpand)
 
@@ -32,7 +33,8 @@ const Sidebar: React.FC<SidebarProps> = ({ children, loading, style }) => {
 
   return (
     <DraggablePanel
-      maxHeight
+      mode={mode}
+      pin={mode === 'fixed'}
       style={{
         display: 'flex',
         flexDirection: 'column',
@@ -41,7 +43,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children, loading, style }) => {
       placement="left"
       defaultSize={{ width: setting.sidebarWidth }}
       minWidth={setting.sidebarWidth}
-      isExpand={expand}
+      expand={expand}
       onExpandChange={setExpand}
     >
       <SidebarView>

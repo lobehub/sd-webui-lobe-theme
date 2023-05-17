@@ -1,6 +1,6 @@
 import { WebuiSetting, defaultSetting, useAppStore } from '@/store'
 import { SettingOutlined } from '@ant-design/icons'
-import { Button, Divider, Form, InputNumber, Popover, Space, Switch } from 'antd'
+import { Button, Divider, Form, InputNumber, Popover, Space, Switch, Segmented } from 'antd'
 import React, { useCallback } from 'react'
 import styled from 'styled-components'
 import { shallow } from 'zustand/shallow'
@@ -59,6 +59,9 @@ const Setting: React.FC = () => {
           <FormItem label="Default expand" name="sidebarExpand" valuePropName="checked">
             <Switch />
           </FormItem>
+          <FormItem label="Fixed mode" name="sidebarFixedMode">
+            <Segmented options={['fixed', 'float']} />
+          </FormItem>
           <FormItem label="Default width" name="sidebarWidth">
             <InputNumber />
           </FormItem>
@@ -66,6 +69,9 @@ const Setting: React.FC = () => {
           <SubTitle>ExtraNetwork Sidebar</SubTitle>
           <FormItem label="Enable" name="enableExtraNetworkSidebar" valuePropName="checked">
             <Switch />
+          </FormItem>
+          <FormItem label="Fixed mode" name="extraNetworkFixedMode" valuePropName="checked">
+            <Segmented options={['fixed', 'float']} />
           </FormItem>
           <FormItem label="Default expand" name="extraNetworkSidebarExpand" valuePropName="checked">
             <Switch />

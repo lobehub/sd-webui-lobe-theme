@@ -1,5 +1,4 @@
 import { useIsDarkMode } from '@/components/theme/useIsDarkMode'
-import civitaiHelperFix from '@/script/civitaiHelperFix'
 import formatPrompt from '@/script/formatPrompt'
 import promptBracketChecker from '@/script/promptBracketChecker'
 import setupHead from '@/script/setupHead'
@@ -68,7 +67,6 @@ document.addEventListener(
 onUiLoaded(() => {
   formatPrompt()
   promptBracketChecker()
-  civitaiHelperFix()
 })
 
 export default () => null

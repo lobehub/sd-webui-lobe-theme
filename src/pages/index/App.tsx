@@ -7,6 +7,7 @@ import { useResponsive } from 'antd-style'
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import { shallow } from 'zustand/shallow'
+import civitaiHelperFix from '@/script/civitaiHelperFix'
 
 const View = styled.div`
   position: relative;
@@ -45,6 +46,7 @@ const App: React.FC = () => {
   )
   const { mobile } = useResponsive()
   const [loading, setLoading] = useState(true)
+  const [extraLoading, setExtraLoading] = useState(true)
   const sidebarRef: any = useRef<HTMLElement>()
   const mainRef: any = useRef<HTMLElement>()
   const headerRef: any = useRef<HTMLElement>()
@@ -69,7 +71,7 @@ const App: React.FC = () => {
       if (sidebar) sidebarRef.current?.appendChild(sidebar)
 
       // ExtraNetworkSidebar
-      if (setting?.enableExtraNetworkSidebar) {
+      if (setting.enableExtraNetworkSidebar) {
         const txt2imgExtraNetworks = gradioApp().querySelector('div#txt2img_extra_networks')
         const img2imgExtraNetworks = gradioApp().querySelector('div#img2img_extra_networks')
         if (txt2imgExtraNetworks && img2imgExtraNetworks) {
@@ -79,7 +81,7 @@ const App: React.FC = () => {
       }
 
       // Other
-      if (setting?.svgIcon) replaceIcon()
+      if (setting.svgIcon) replaceIcon()
 
       setLoading(false)
     })
@@ -87,6 +89,35 @@ const App: React.FC = () => {
       setCurrentTab()
     })
   }, [])
+
+  useEffect(() => {
+    if (!loading && setting.enableExtraNetworkSidebar) {
+      if (document.querySelector('#txt2img_lora_cards')) {
+        setExtraLoading(false)
+        return
+      }
+      setTimeout(() => {
+        const t2iBtn: any = document.querySelector('#txt2img_extra_refresh')
+        const i2iBtn: any = document.querySelector('#img2img_extra_refresh')
+        t2iBtn.click()
+        i2iBtn.click()
+        setExtraLoading(false)
+        try {
+          const civitaiBtn = document.querySelectorAll('button[title="Refresh Civitai Helper\'s additional buttons"]')
+          if (civitaiBtn) {
+            civitaiBtn.forEach((btn: any) => (btn.onclick = civitaiHelperFix))
+          }
+          const fixInterval = setInterval(() => {
+            const checkDom = document.querySelector('#txt2img_lora_cards')
+            if (checkDom) {
+              civitaiHelperFix()
+              clearInterval(fixInterval)
+            }
+          }, 1000)
+        } catch {}
+      }, 2000)
+    }
+  }, [loading])
 
   return (
     <MainView>
@@ -96,7 +127,7 @@ const App: React.FC = () => {
             <Spin size="small" />
           </LoadingBox>
         )}
-        <div ref={headerRef} className="header" />
+        <div style={loading ? { display: 'none' } : {}} ref={headerRef} className="header" />
       </Header>
       <View>
         <Sidebar>
@@ -105,7 +136,7 @@ const App: React.FC = () => {
               <Spin size="small" />
             </LoadingBox>
           )}
-          <div id="sidebar" ref={sidebarRef} />
+          <div style={loading ? { display: 'none' } : {}} id="sidebar" ref={sidebarRef} />
         </Sidebar>
         <Content loading={loading}>
           {loading && (
@@ -113,25 +144,27 @@ const App: React.FC = () => {
               <Spin tip="Loading" size="large" />
             </LoadingBox>
           )}
-          <div id="content" ref={mainRef} />
+          <div style={loading ? { display: 'none' } : {}} id="content" ref={mainRef} />
         </Content>
         {setting?.enableExtraNetworkSidebar && (
           <ExtraNetworkSidebar>
-            {loading && (
+            {extraLoading && (
               <LoadingBox>
                 <Spin size="small" />
               </LoadingBox>
             )}
-            <div
-              id="txt2img-extra-netwrok-sidebar"
-              style={currentTab !== 'tab_img2img' ? {} : { display: 'none' }}
-              ref={txt2imgExtraNetworkSidebarRef}
-            />
-            <div
-              id="img2img-extra-netwrok-sidebar"
-              style={currentTab === 'tab_img2img' ? {} : { display: 'none' }}
-              ref={img2imgExtraNetworkSidebarRef}
-            />
+            <div style={extraLoading ? { display: 'none' } : {}}>
+              <div
+                id="txt2img-extra-netwrok-sidebar"
+                style={currentTab !== 'tab_img2img' ? {} : { display: 'none' }}
+                ref={txt2imgExtraNetworkSidebarRef}
+              />
+              <div
+                id="img2img-extra-netwrok-sidebar"
+                style={currentTab === 'tab_img2img' ? {} : { display: 'none' }}
+                ref={img2imgExtraNetworkSidebarRef}
+              />
+            </div>
           </ExtraNetworkSidebar>
         )}
       </View>

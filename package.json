@@ -99,5 +99,8 @@
     "use-merge-value": "^1",
     "webpack-shell-plugin-next": "^2",
     "zustand": "^4"
+  },
+  "dependencies": {
+    "lucide-react": "^0.217.0"
   }
 }

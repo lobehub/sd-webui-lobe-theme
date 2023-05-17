@@ -69,6 +69,7 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ children, style }) => {
   const { mobile } = useResponsive()
   const [setting] = useAppStore((st) => [st.setting], shallow)
+  const [mode] = useState<'fixed' | 'float'>(setting.extraNetworkFixedMode)
   const [expand, setExpand] = useState<boolean>(setting.extraNetworkSidebarExpand)
   const [size, setSize] = useState<number>(setting?.extraNetworkCardSize || 86)
 
@@ -80,7 +81,8 @@ const Sidebar: React.FC<SidebarProps> = ({ children, style }) => {
     <>
       <GlobalStyle />
       <DraggablePanel
-        maxHeight
+        mode={mode}
+        pin={mode === 'fixed'}
         style={{
           display: 'flex',
           flexDirection: 'column',
@@ -89,7 +91,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children, style }) => {
         placement="right"
         defaultSize={{ width: setting.extraNetworkSidebarWidth }}
         minWidth={setting.extraNetworkSidebarWidth}
-        isExpand={expand}
+        expand={expand}
         onExpandChange={setExpand}
       >
         <View>

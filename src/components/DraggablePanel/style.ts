@@ -1,16 +1,19 @@
 import { createStyles, css, cx } from 'antd-style'
-import { rgba } from 'polished'
 
-export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHeight?: boolean }) => {
-  const { prefix, maxHeight } = props
+const offset = 16
+const toggleLength = 40
+const toggleShort = 16
+
+export const useStyle = createStyles(({ token }, prefix: string) => {
   const commonHandle = css`
     position: relative;
     &::before {
       content: '';
       position: absolute;
       z-index: 50;
-      transition: all 0.3s ease-in-out;
+      transition: all 0.2s ${token.motionEaseOut};
     }
+
     &:hover,
     &:active {
       &::before {
@@ -20,38 +23,58 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
   `
 
   const commonToggle = css`
-    cursor: pointer;
-
     position: absolute;
     z-index: 1001;
-
-    color: ${token.colorTextTertiary};
-
     opacity: 0;
-    background: ${token.colorBgElevated};
-    border-color: ${token.colorBorder};
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 4px;
+    transition: all 0.2s ${token.motionEaseOut};
 
-    transition: opacity 0.1s;
     &:hover {
-      color: ${token.colorTextSecondary};
-      background: ${token.colorFillQuaternary};
+      opacity: 1 !important;
+    }
+
+    &:active {
+      opacity: 1 !important;
+    }
+
+    > div {
+      cursor: pointer;
+
+      position: absolute;
+
+      color: ${token.colorTextTertiary};
+
+      background: ${token.colorFillTertiary};
+      border-color: ${token.colorBorderSecondary};
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 4px;
+
+      transition: all 0.2s ${token.motionEaseOut};
+
+      &:hover {
+        color: ${token.colorTextSecondary};
+        background: ${token.colorFillSecondary};
+      }
+
+      &:active {
+        color: ${token.colorText};
+        background: ${token.colorFill};
+      }
     }
   `
 
-  const offset = 17
-  const toggleLength = 40
-  const toggleShort = 16
+  const float = css`
+    position: absolute;
+    z-index: 2000;
+  `
 
   return {
     container: cx(
       prefix,
       css`
-        position: relative;
         flex-shrink: 0;
-        border: 0 solid ${token.colorSplit};
+        border: 0 solid ${token.colorBorderSecondary};
+
         &:hover {
           .${prefix}-toggle {
             opacity: 1;
@@ -59,20 +82,62 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
         }
       `
     ),
+    fixed: css`
+      position: relative;
+    `,
+    leftFloat: cx(
+      float,
+      css`
+        top: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+      `
+    ),
+    rightFloat: cx(
+      float,
+      css`
+        top: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+      `
+    ),
+    topFloat: cx(
+      float,
+      css`
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+      `
+    ),
+    bottomFloat: cx(
+      float,
+      css`
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+      `
+    ),
     toggleLeft: cx(
       `${prefix}-toggle`,
       `${prefix}-toggle-left`,
       commonToggle,
       css`
-        top: 50%;
         left: -${offset}px;
-
         width: ${toggleShort}px;
-        height: ${toggleLength}px;
-        margin-top: -20px;
+        height: 100%;
+        > div {
+          top: 50%;
 
-        border-right-width: 0;
-        border-radius: 4px 0 0 4px;
+          width: ${toggleShort}px;
+          height: ${toggleLength}px;
+          margin-top: -20px;
+
+          border-radius: 4px 0 0 4px;
+        }
       `
     ),
     toggleRight: cx(
@@ -80,15 +145,18 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
       `${prefix}-toggle-right`,
       commonToggle,
       css`
-        top: 50%;
         right: -${offset}px;
-
         width: ${toggleShort}px;
-        height: ${toggleLength}px;
-        margin-top: -20px;
+        height: 100%;
+        > div {
+          top: 50%;
 
-        border-left-width: 0;
-        border-radius: 0 4px 4px 0;
+          width: ${toggleShort}px;
+          height: ${toggleLength}px;
+          margin-top: -20px;
+
+          border-radius: 0 4px 4px 0;
+        }
       `
     ),
     toggleTop: cx(
@@ -97,14 +165,18 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
       commonToggle,
       css`
         top: -${offset}px;
-        left: 50%;
-
-        width: ${toggleLength}px;
+        width: 100%;
         height: ${toggleShort}px;
-        margin-left: -20px;
 
-        border-bottom-width: 0;
-        border-radius: 4px 4px 0 0;
+        > div {
+          left: 50%;
+
+          width: ${toggleLength}px;
+          height: ${toggleShort}px;
+          margin-left: -20px;
+
+          border-radius: 4px 4px 0 0;
+        }
       `
     ),
     toggleBottom: cx(
@@ -113,44 +185,38 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
       commonToggle,
       css`
         bottom: -${offset}px;
-        left: 50%;
+        width: 100%;
+        height: ${toggleShort}px;
 
-        width: ${toggleLength}px;
-        height: 16px;
-        margin-left: -20px;
+        > div {
+          left: 50%;
 
-        border-top-width: 0;
-        border-radius: 0 0 4px 4px;
+          width: ${toggleLength}px;
+          height: 16px;
+          margin-left: -20px;
+
+          border-radius: 0 0 4px 4px;
+        }
       `
     ),
-    fixed: cx(
+    panel: cx(
       `${prefix}-fixed`,
       css`
-        position: relative;
         overflow: hidden;
-        background: ${rgba(token.colorBgContainer, 0.75)};
-        backdrop-filter: blur(40px);
-
-        ${maxHeight ? 'height: 100% !important;' : ''}
+        background: ${token.colorBgContainer};
+        transition: all 0.2s ${token.motionEaseOut};
       `
     ),
-    float: cx(
-      `${prefix}-float`,
-      css`
-        position: relative;
-        z-index: 2000;
-
-        overflow: hidden;
-
-        background: ${rgba(token.colorBgElevated, 0.75)};
-        backdrop-filter: blur(40px);
-        border-radius: 8px;
-        box-shadow: ${token.boxShadowSecondary};
-      `
-    ),
+    handlerIcon: css`
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ${token.motionEaseOut};
+    `,
     leftHandle: cx(
       css`
         ${commonHandle};
+
         &::before {
           left: 50%;
           width: 2px;
@@ -174,6 +240,7 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
       `${prefix}-top-handle`,
       css`
         ${commonHandle};
+
         &::before {
           top: 50%;
           width: 100%;
@@ -185,6 +252,7 @@ export const useStyle = createStyles(({ token }, props: { prefix?: string; maxHe
       `${prefix}-bottom-handle`,
       css`
         ${commonHandle};
+
         &::before {
           bottom: 50%;
           width: 100%;
