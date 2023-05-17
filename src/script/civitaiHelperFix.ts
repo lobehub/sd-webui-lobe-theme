@@ -181,4 +181,12 @@ const updateCardForCivitai = () => {
   })
 }
 
-export default updateCardForCivitai
+export default () => {
+  const fixInterval = setInterval(() => {
+    const checkDom = document.querySelector('#txt2img_lora_cards')
+    if (checkDom) {
+      updateCardForCivitai()
+      clearInterval(fixInterval)
+    }
+  }, 1000)
+}

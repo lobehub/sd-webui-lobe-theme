@@ -93,6 +93,7 @@ const App: React.FC = () => {
   useEffect(() => {
     if (!loading && setting.enableExtraNetworkSidebar) {
       if (document.querySelector('#txt2img_lora_cards')) {
+        civitaiHelperFix()
         setExtraLoading(false)
         return
       }
@@ -107,13 +108,7 @@ const App: React.FC = () => {
           if (civitaiBtn) {
             civitaiBtn.forEach((btn: any) => (btn.onclick = civitaiHelperFix))
           }
-          const fixInterval = setInterval(() => {
-            const checkDom = document.querySelector('#txt2img_lora_cards')
-            if (checkDom) {
-              civitaiHelperFix()
-              clearInterval(fixInterval)
-            }
-          }, 1000)
+          civitaiHelperFix()
         } catch {}
       }, 2000)
     }
