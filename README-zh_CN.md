@@ -1,13 +1,14 @@
-<p align="center">
-  <img width="160" src="https://gw.alipayobjects.com/mdn/rms_7d1485/afts/img/A*XDYxSJXBjjwAAAAAAAAAAAAAARQnAQ">
-</p>
-<h1 align="center">Kitchen Stable Diffusion WebUI</h1>
+<a name="readme-top"></a>
 
 <div align="center">
-  Kitchen WebUI 适配主题 <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui" target="_blank">AUTOMATIC1111/stable-diffusion-web-ui</a>
+  
+<img width="160" src="https://gw.alipayobjects.com/mdn/rms_7d1485/afts/img/A*XDYxSJXBjjwAAAAAAAAAAAAAARQnAQ">
 
-<br/>
-<br/>
+<h1 align="center">Kitchen Theme</h1>
+
+Kitchen Theme for Stable Diffusion WebUI
+  
+[English](./README.md) · 简体中文 · [Changelog](./CHANGELOG.md) · [Report Bug][issues-url] · [Request Feature][issues-url]
 
 <!-- SHIELD GROUP -->
 
@@ -25,8 +26,6 @@
 
 ![](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/blob/main/assets/screenshot.webp?raw=true)
 
-[English](./README.md) | 简体中文
-
 > ⚠️⚠️⚠️ 警告：最低要求 gradio-3.23.0 & sd-webui [4c1ad74](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commit/4c1ad743e3baf1246db0711aa0107debf036a12b)
 
 <br/>
@@ -38,7 +37,11 @@
 - 🎛️ 快捷设置伸缩侧边栏.
 - 🎨 基于 Antd CSS Token。
 
-<br/>
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
 
 ## 🖥 兼容环境
 
@@ -48,7 +51,11 @@
 
 > ⚠️ 目前已知道在 Firefox 火狐浏览器上存在样式兼容问题
 
-<br/>
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
 
 ## 📦 安装
 
@@ -71,14 +78,17 @@ http://localhost:7860/?__theme=light
 http://localhost:7860/?__theme=dark
 ```
 
-<br/>
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
 
 ## ⚒️ 推荐设置
 
-Kitchen WebUI Setting
+#### Kitchen WebUI Setting 主题设置
 
-> 右上角 ⚙ 图标打开设置面板，当前可用设置如下
-
+> 👉 Tip: 右上角 `⚙` 图标打开设置面板，当前可用设置如下
 
 - **Prompt Textarea**
   - Display mode: `scroll 固定高度滚动` | `resizable 按文本行数缩放`
@@ -93,7 +103,9 @@ Kitchen WebUI Setting
   - Default Width 默认宽度: `340`
   - Default card size 模型卡片默认尺寸: `86`
 
-Extra-Networks 扩展模型视窗
+<br/>
+
+#### Extra-Networks 扩展模型视窗
 
 - 拇指视图
 - 卡牌宽度: 86
@@ -101,19 +113,23 @@ Extra-Networks 扩展模型视窗
 
 ![](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/blob/main/assets/extra-networks.webp?raw=true)
 
-Quick-Setting 快捷设置
+#### Quick-Setting 快捷设置
 
 ```txt
 sd_model_checkpoint, sd_vae, CLIP_stop_at_last_layers, img2img_background_color, img2img_color_correction, samples_save, samples_format, grid_save, return_grid,  n_rows, live_previews_enable, show_progress_every_n_steps, live_preview_refresh_period
 ```
 
-<br/>
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
 
 ## 🪄 提示词格式化
 
 ![](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/blob/main/assets/prompt-formatting.webp?raw=true)
 
-> 全角标点转半角，去除多余空格，补充缺失逗号，把 Extra-Networks 模型移动到末尾
+> 👉 Tip: 全角标点转半角，去除多余空格，补充缺失逗号，把 Extra-Networks 模型移动到末尾
 
 格式化前
 
@@ -133,7 +149,7 @@ photorealistic photo of a handsome male, (wizard:1.2), short beard, white wizard
 
 你可以使用 Gitpod 进行在线开发：
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/canisminor1990/sd-web-ui-kitchen-theme)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)][gitpod-url]
 
 或者克隆到本地开发:
 
@@ -144,7 +160,11 @@ $ npm install
 $ npm start
 ```
 
-<br/>
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
 
 ## 🤝 参与贡献
 
@@ -170,7 +190,11 @@ $ npm start
 
 <!-- CONTRIBUTION END -->
 
-<br/>
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
 
 ## 🔗 链接
 
@@ -180,9 +204,29 @@ $ npm start
   - sd-web-ui-quickcs: https://github.com/Gerschel/sd-web-ui-quickcss/
   - Dark-Themes-SD-WebUI-Automatic1111: https://github.com/Nacurutu/Dark-Themes-SD-WebUI-Automatic1111
 
-<br/>
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
+
+---
+#### 📝 License
+
+Copyright © 2023 [CanisMinor][profile-url]. <br />
+This project is [MIT](./LICENSE) licensed. 
+
+
+<!-- LINK GROUP -->
+
+[profile-url]: https://github.com/canisminor1990
+[issues-url]: https://github.com/canisminor1990/sd-webui-kitchen-theme/issues/new/choose
+[gitpod-url]: https://gitpod.io/#https://github.com/canisminor1990/sd-webui-kitchen-theme
 
 <!-- SHIELD LINK GROUP -->
+
+[back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square
 
 <!-- release -->
 
