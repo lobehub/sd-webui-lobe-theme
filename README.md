@@ -1,13 +1,12 @@
-<p align="center">
-  <img width="160" src="https://gw.alipayobjects.com/mdn/rms_7d1485/afts/img/A*XDYxSJXBjjwAAAAAAAAAAAAAARQnAQ">
-</p>
-<h1 align="center">Kitchen Stable Diffusion WebUI</h1>
-
 <div align="center">
-  Kitchen Theme for <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui" target="_blank">AUTOMATIC1111/stable-diffusion-web-ui</a>
 
-<br/>
-<br/>
+<img width="160" src="https://gw.alipayobjects.com/mdn/rms_7d1485/afts/img/A*XDYxSJXBjjwAAAAAAAAAAAAAARQnAQ">
+
+<h1 align="center">Kitchen Theme</h1>
+
+Kitchen Theme for Stable Diffusion WebUI
+  
+English · [简体中文](./README-zh_CN.md) · [Changelog](./CHANGELOG.md) · [Report Bug][issues-url] · [Request Feature][issues-url]
 
 <!-- SHIELD GROUP -->
 
@@ -25,8 +24,6 @@
 
 ![](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/blob/main/assets/screenshot.webp?raw=true)
 
-English | [简体中文](./README-zh_CN.md)
-
 > ⚠️⚠️⚠️ Warning: minimum requirements gradio-3.23.0 & sd-webui [4c1ad74](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commit/4c1ad743e3baf1246db0711aa0107debf036a12b)
 
 <br/>
@@ -38,7 +35,11 @@ English | [简体中文](./README-zh_CN.md)
 - 🎛️ Quick Setting in draggable sidebar.
 - 🎨 Based on Antd CSS Token.
 
-<br/>
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
 
 ## 🖥 Environment Support
 
@@ -48,7 +49,11 @@ English | [简体中文](./README-zh_CN.md)
 
 > ⚠️ There is currently a known compatibility issue with styles on Firefox browser.
 
-<br/>
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
 
 ## 📦 Installation
 
@@ -72,7 +77,11 @@ http://localhost:7860/?__theme=light
 http://localhost:7860/?__theme=dark
 ```
 
-<br/>
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
 
 ## ⚒️ Recommended Settings
 
@@ -107,7 +116,11 @@ Quick-Setting
 sd_model_checkpoint, sd_vae, CLIP_stop_at_last_layers, img2img_background_color, img2img_color_correction, samples_save, samples_format, grid_save, return_grid,  n_rows, live_previews_enable, show_progress_every_n_steps, live_preview_refresh_period
 ```
 
-<br/>
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
 
 ## 🪄 Prompt formatting
 
@@ -127,13 +140,17 @@ After
 photorealistic photo of a handsome male, (wizard:1.2), short beard, white wizard shirt, (with golden trim:0.8), <lora:LuisapHotlineStyle:0.5>, <lora:ElegantHanfuRuqunStyle:0.2>
 ```
 
-<br/>
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
 
 ## ⌨️ Local Development
 
 You can use Gitpod for online development:
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/canisminor1990/sd-web-ui-kitchen-theme)
+[![Open in Gitpod][gitpod-url]
 
 Or clone it for local development:
 
@@ -144,7 +161,11 @@ $ npm install
 $ npm start
 ```
 
-<br/>
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
 
 ## 🤝 Contributing
 
@@ -170,7 +191,11 @@ $ npm start
 
 <!-- CONTRIBUTION END -->
 
-<br/>
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
 
 ## 🔗 Credits
 
@@ -180,9 +205,28 @@ $ npm start
   - sd-web-ui-quickcs: https://github.com/Gerschel/sd-web-ui-quickcss/
   - Dark-Themes-SD-WebUI-Automatic1111: https://github.com/Nacurutu/Dark-Themes-SD-WebUI-Automatic1111
 
-<br/>
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
+---
+#### 📝 License
+
+Copyright © 2023 [CanisMinor][profile-url]. <br />
+This project is [MIT](./LICENSE) licensed. 
+
+
+<!-- LINK GROUP -->
+
+[profile-url]: https://github.com/canisminor1990
+[issues-url]: https://github.com/canisminor1990/sd-webui-kitchen-theme/issues/new/choose
+[gitpod-url]: https://gitpod.io/#https://github.com/canisminor1990/sd-webui-kitchen-theme
 
 <!-- SHIELD LINK GROUP -->
+
+[back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square
 
 <!-- release -->
 
