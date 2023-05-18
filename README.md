@@ -1,3 +1,5 @@
+<a name="readme-top"></a>
+
 <div align="center">
 
 <img width="160" src="https://gw.alipayobjects.com/mdn/rms_7d1485/afts/img/A*XDYxSJXBjjwAAAAAAAAAAAAAARQnAQ">
@@ -85,9 +87,9 @@ http://localhost:7860/?__theme=dark
 
 ## ⚒️ Recommended Settings
 
-Kitchen WebUI Setting
+#### Kitchen WebUI Setting
 
-> top right ⚙ icon in header
+> 👉 Tip: top right `⚙` icon in header
 
 - **Prompt Textarea**
   - Display mode: `scroll` | `resizable`
@@ -102,7 +104,9 @@ Kitchen WebUI Setting
   - Default Width: `340`
   - Default card size: `86`
 
-Extra-Networks
+<br/>
+
+#### Extra-Networks
 
 - thumbs
 - width: 86
@@ -110,7 +114,9 @@ Extra-Networks
 
 ![](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/blob/main/assets/extra-networks.webp?raw=true)
 
-Quick-Setting
+<br/>
+
+#### Quick-Setting
 
 ```txt
 sd_model_checkpoint, sd_vae, CLIP_stop_at_last_layers, img2img_background_color, img2img_color_correction, samples_save, samples_format, grid_save, return_grid,  n_rows, live_previews_enable, show_progress_every_n_steps, live_preview_refresh_period
@@ -126,7 +132,7 @@ sd_model_checkpoint, sd_vae, CLIP_stop_at_last_layers, img2img_background_color,
 
 ![](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/blob/main/assets/prompt-formatting.webp?raw=true)
 
-> Convert full-width punctuation to half-width, remove extra spaces, add missing commas, and move the Extra-Networks model to the end.
+> 👉 Tip: Convert full-width punctuation to half-width, remove extra spaces, add missing commas, and move the Extra-Networks model to the end.
 
 Before
 
@@ -150,7 +156,7 @@ photorealistic photo of a handsome male, (wizard:1.2), short beard, white wizard
 
 You can use Gitpod for online development:
 
-[![Open in Gitpod][gitpod-url]
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)][gitpod-url]
 
 Or clone it for local development:
 
