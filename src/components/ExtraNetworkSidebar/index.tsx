@@ -33,6 +33,11 @@ const SidebarView = styled.div<{ size: number }>`
     display: block !important;
   }
 
+  .extra-network-cards .actions .name {
+    background: unset !important;
+  }
+
+  .extra-network-cards,
   .extra-network-thumbs {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(${({ size }) => size}px, 1fr));
