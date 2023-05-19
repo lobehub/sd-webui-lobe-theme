@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.7.1](https://github.com/canisminor1990/sd-webui-kitchen-theme/compare/v1.7.0...v1.7.1) (2023-05-19)
+
+### 🐛 Bug Fixes
+
+- **extranetworks**: card mode display ([1b3376e](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/1b3376e))
+
 # [1.7.0](https://github.com/canisminor1990/sd-webui-kitchen-theme/compare/v1.6.3...v1.7.0) (2023-04-26)
 
 ### ✨ Features
