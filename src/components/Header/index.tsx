@@ -10,59 +10,29 @@ import { shallow } from 'zustand/shallow'
 import Giscus from './Giscus'
 import Logo from './Logo'
 import Setting from './Setting'
+import Nav from './Nav'
 import { civitaiLogo, themeIcon } from './style'
 
 /******************************************************
  *********************** Style *************************
  ******************************************************/
 
+const Center = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
 const HeaderView = styled.div`
   display: flex;
   flex-wrap: nowrap;
   gap: 12px;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
 
   height: -webkit-fill-available;
   height: -moz-available;
   padding: 16px 24px;
-
-  #tabs.header {
-    .tab-nav {
-      margin: 0 !important;
-      border: none !important;
-    }
-    button {
-      cursor: pointer;
-
-      flex: none;
-      flex: 0 !important;
-
-      margin: 0 !important;
-      padding: 8px !important;
-
-      background: transparent !important;
-      border: none !important;
-      border-radius: 4px !important;
-
-      transition: all 0.2s ease-in-out;
-      &:hover {
-        flex: none;
-        color: var(--color-text) !important;
-        background: var(--color-fill-tertiary) !important;
-        border: none !important;
-      }
-      &.selected {
-        flex: none;
-
-        font-weight: 600;
-        color: var(--color-text) !important;
-
-        background: transparent !important;
-        border: none !important;
-      }
-    }
-  }
 `
 
 /******************************************************
@@ -98,21 +68,28 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
     <>
       <DraggablePanel placement="top" defaultSize={{ height: 'auto' }} expand={expand} onExpandChange={setExpand}>
         <HeaderView id="header" style={{ flexDirection: mobile ? 'column' : 'row' }}>
-          <a href="https://github.com/canisminor1990/sd-webui-kitchen-theme" target="_blank" rel="noreferrer">
-            <Logo themeMode={themeMode} />
-          </a>
-          {children}
-          <Space.Compact>
-            <a href="https://civitai.com/" target="_blank" rel="noreferrer">
-              <Button title="Civitai" icon={civitaiLogo} />
+          <Center>
+            <a href="https://github.com/canisminor1990/sd-webui-kitchen-theme" target="_blank" rel="noreferrer">
+              <Logo themeMode={themeMode} />
             </a>
-            <a href="https://www.birme.net/?target_width=512&target_height=512" target="_blank" rel="noreferrer">
-              <Button title="Birme" icon={<BoldOutlined />} />
-            </a>
-            <Button title="Feedback" icon={<GithubOutlined />} onClick={showModal} />
-            <Setting />
-            <Button title="Switch Theme" icon={themeIcon[themeMode]} onClick={handleSetTheme} />
-          </Space.Compact>
+          </Center>
+          <Center style={{ flex: 1, padding: '0 16px' }}>
+            <Nav />
+            {children}
+          </Center>
+          <Center>
+            <Space.Compact>
+              <a href="https://civitai.com/" target="_blank" rel="noreferrer">
+                <Button title="Civitai" icon={civitaiLogo} />
+              </a>
+              <a href="https://www.birme.net/?target_width=512&target_height=512" target="_blank" rel="noreferrer">
+                <Button title="Birme" icon={<BoldOutlined />} />
+              </a>
+              <Button title="Feedback" icon={<GithubOutlined />} onClick={showModal} />
+              <Setting />
+              <Button title="Switch Theme" icon={themeIcon[themeMode]} onClick={handleSetTheme} />
+            </Space.Compact>
+          </Center>
         </HeaderView>
       </DraggablePanel>
       <Modal

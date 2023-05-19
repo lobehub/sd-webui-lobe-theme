@@ -1,6 +1,6 @@
 import { createStyles, css, cx } from 'antd-style'
 
-const offset = 16
+const offset = 17
 const toggleLength = 40
 const toggleShort = 16
 

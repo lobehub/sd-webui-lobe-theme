@@ -49,18 +49,10 @@ const App: React.FC = () => {
   const [extraLoading, setExtraLoading] = useState(true)
   const sidebarRef: any = useRef<HTMLElement>()
   const mainRef: any = useRef<HTMLElement>()
-  const headerRef: any = useRef<HTMLElement>()
   const txt2imgExtraNetworkSidebarRef: any = useRef<HTMLElement>()
   const img2imgExtraNetworkSidebarRef: any = useRef<HTMLElement>()
   useEffect(() => {
     onUiLoaded(() => {
-      // Header
-      const header = gradioApp().querySelector('#tabs > .tab-nav:first-child')
-      if (header) {
-        headerRef.current?.appendChild(header)
-        headerRef.current.id = 'tabs'
-      }
-
       // Content
       const main = gradioApp().querySelector('.app')
       if (main) mainRef.current?.appendChild(main)
@@ -122,7 +114,6 @@ const App: React.FC = () => {
             <Spin size="small" />
           </LoadingBox>
         )}
-        <div style={loading ? { display: 'none' } : {}} ref={headerRef} className="header" />
       </Header>
       <View>
         <Sidebar>

@@ -36,15 +36,15 @@ const SubTitle = styled.div`
  ******************************************************/
 
 const Setting: React.FC = () => {
-  const [setting, setSetting] = useAppStore((st) => [st.setting, st.onSetSetting], shallow)
+  const [setting, onSetSetting] = useAppStore((st) => [st.setting, st.onSetSetting], shallow)
 
   const onReset = useCallback(() => {
-    setSetting(defaultSetting)
+    onSetSetting(defaultSetting)
     gradioApp().getElementById('settings_restart_gradio')?.click()
   }, [])
 
   const onFinish = useCallback((value: WebuiSetting) => {
-    setSetting(value)
+    onSetSetting(value)
     gradioApp().getElementById('settings_restart_gradio')?.click()
   }, [])
 
@@ -53,7 +53,7 @@ const Setting: React.FC = () => {
       title={<Title>⚙ Setting</Title>}
       trigger="click"
       content={
-        <Form size="small" initialValues={setting} layout="horizontal" onFinish={onFinish} style={{ maxWidth: 240 }}>
+        <Form size="small" initialValues={setting} layout="horizontal" onFinish={onFinish} style={{ maxWidth: 260 }}>
           <Divider style={{ margin: '4px 0 8px' }} />
           <SubTitle>Promot Textarea</SubTitle>
           <FormItem label="Display mode" name="promotTextarea">
