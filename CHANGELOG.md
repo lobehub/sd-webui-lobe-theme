@@ -1,5 +1,11 @@
 # Changelog
 
+# [1.8.0](https://github.com/canisminor1990/sd-webui-kitchen-theme/compare/v1.7.1...v1.8.0) (2023-05-19)
+
+### ✨ Features
+
+- **header**: better navbar ([37e2230](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/37e2230))
+
 ## [1.7.1](https://github.com/canisminor1990/sd-webui-kitchen-theme/compare/v1.7.0...v1.7.1) (2023-05-19)
 
 ### 🐛 Bug Fixes
