@@ -7,23 +7,24 @@ const NavBar = styled(Menu)`
   flex: 1;
   border: none;
   line-height: 1;
-  
-	.ant-menu-overflow-item {
-		padding: 8px 12px;
-		border-radius: 4px !important;
-		color: var(--color-text-secondary);
-		&:after {
-			display: none; !important;
-		}
-		&:hover {
-			color: var(--color-text);
-			background: var(--color-fill-tertiary);
-		}
-		&.ant-menu-item-selected {
-			font-weight: 600;
-			color: var(--color-text);
-		}
-	}
+  overflow: hidden;
+
+  .ant-menu-overflow-item {
+  	padding: 8px 12px;
+  	border-radius: 4px !important;
+  	color: var(--color-text-secondary);
+  	&:after {
+  		display: none; !important;
+  	}
+  	&:hover {
+  		color: var(--color-text);
+  		background: var(--color-fill-tertiary);
+  	}
+  	&.ant-menu-item-selected {
+  		font-weight: 600;
+  		color: var(--color-text);
+  	}
+  }
 `
 
 const Nav: React.FC = () => {

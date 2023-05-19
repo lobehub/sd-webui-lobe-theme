@@ -17,17 +17,11 @@ import { civitaiLogo, themeIcon } from './style'
  *********************** Style *************************
  ******************************************************/
 
-const Center = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
-
 const HeaderView = styled.div`
   display: flex;
   flex-wrap: nowrap;
   gap: 12px;
-  align-items: stretch;
+  align-items: center;
   justify-content: space-between;
 
   height: -webkit-fill-available;
@@ -74,28 +68,24 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
         onExpandChange={setExpand}
       >
         <HeaderView id="header" style={{ flexDirection: mobile ? 'column' : 'row' }}>
-          <Center>
-            <a href="https://github.com/canisminor1990/sd-webui-kitchen-theme" target="_blank" rel="noreferrer">
-              <Logo themeMode={themeMode} />
+          <a href="https://github.com/canisminor1990/sd-webui-kitchen-theme" target="_blank" rel="noreferrer">
+            <Logo themeMode={themeMode} />
+          </a>
+
+          <Nav />
+          {children}
+
+          <Space.Compact>
+            <a href="https://civitai.com/" target="_blank" rel="noreferrer">
+              <Button title="Civitai" icon={civitaiLogo} />
             </a>
-          </Center>
-          <Center style={{ flex: 1, padding: '0 16px' }}>
-            <Nav />
-            {children}
-          </Center>
-          <Center>
-            <Space.Compact>
-              <a href="https://civitai.com/" target="_blank" rel="noreferrer">
-                <Button title="Civitai" icon={civitaiLogo} />
-              </a>
-              <a href="https://www.birme.net/?target_width=512&target_height=512" target="_blank" rel="noreferrer">
-                <Button title="Birme" icon={<BoldOutlined />} />
-              </a>
-              <Button title="Feedback" icon={<GithubOutlined />} onClick={showModal} />
-              <Setting />
-              <Button title="Switch Theme" icon={themeIcon[themeMode]} onClick={handleSetTheme} />
-            </Space.Compact>
-          </Center>
+            <a href="https://www.birme.net/?target_width=512&target_height=512" target="_blank" rel="noreferrer">
+              <Button title="Birme" icon={<BoldOutlined />} />
+            </a>
+            <Button title="Feedback" icon={<GithubOutlined />} onClick={showModal} />
+            <Setting />
+            <Button title="Switch Theme" icon={themeIcon[themeMode]} onClick={handleSetTheme} />
+          </Space.Compact>
         </HeaderView>
       </DraggablePanel>
       <Modal
