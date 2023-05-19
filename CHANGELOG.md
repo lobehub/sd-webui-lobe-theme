@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.8.1](https://github.com/canisminor1990/sd-webui-kitchen-theme/compare/v1.8.0...v1.8.1) (2023-05-19)
+
+### 🐛 Bug Fixes
+
+- **style**: header render ([35125b4](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/35125b4))
+
 # [1.8.0](https://github.com/canisminor1990/sd-webui-kitchen-theme/compare/v1.7.1...v1.8.0) (2023-05-19)
 
 ### ✨ Features
