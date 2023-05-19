@@ -66,7 +66,13 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
 
   return (
     <>
-      <DraggablePanel placement="top" defaultSize={{ height: 'auto' }} expand={expand} onExpandChange={setExpand}>
+      <DraggablePanel
+        placement="top"
+        defaultSize={{ height: 'auto' }}
+        minHeight={64}
+        expand={expand}
+        onExpandChange={setExpand}
+      >
         <HeaderView id="header" style={{ flexDirection: mobile ? 'column' : 'row' }}>
           <Center>
             <a href="https://github.com/canisminor1990/sd-webui-kitchen-theme" target="_blank" rel="noreferrer">

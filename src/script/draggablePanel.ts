@@ -2,7 +2,8 @@ const MIN_WIDTH = 240
 
 const addDraggable = (tabId: string) => {
   const settings = document.getElementById(`${tabId}_settings`)
-  if (!settings) return
+  const checkDraggableLine = document.querySelector(`#tab_${tabId} .draggable-line`)
+  if (!settings || checkDraggableLine) return
 
   settings.style.minWidth = `min(${MIN_WIDTH}px, 100%)`
 
