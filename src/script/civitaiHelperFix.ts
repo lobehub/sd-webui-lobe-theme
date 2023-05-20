@@ -1,15 +1,17 @@
 const TAB_PREFIX_LIST = ['txt2img', 'img2img']
-const MODEL_TYPE_LIST: ['textual_inversion', 'hypernetworks', 'checkpoints', 'lora'] = [
+const MODEL_TYPE_LIST: ['textual_inversion', 'hypernetworks', 'checkpoints', 'lora', 'lycoris'] = [
   'textual_inversion',
   'hypernetworks',
   'checkpoints',
   'lora',
+  'lycoris',
 ]
 const MODEL_TYPE = {
   textual_inversion: 'ti',
   hypernetworks: 'hyper',
   checkpoints: 'ckp',
   lora: 'lora',
+  lycoris: 'lycoris',
 }
 const CARDID_SUFFIX = 'cards'
 
