@@ -101,6 +101,6 @@
     "zustand": "^4"
   },
   "dependencies": {
-    "lucide-react": "^0.217.0"
+    "lucide-react": "^0.220.0"
   }
 }
