@@ -70,6 +70,10 @@ const updateCardForCivitai = () => {
 
       extraNetworkId = `${activeTabType}_${jsModelType}_${CARDID_SUFFIX}`
       extraNetworkNode = gradioApp().getElementById(extraNetworkId)
+
+      // Check if extra network node exists
+      if (extraNetworkNode === null) return
+
       // Check if extr network is under thumbnail mode
       isThumbMode = false
       if (extraNetworkNode?.className === 'extra-network-thumbs') isThumbMode = true
