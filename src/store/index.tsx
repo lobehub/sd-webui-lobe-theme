@@ -1,19 +1,19 @@
-import { create } from 'zustand'
-import { devtools } from 'zustand/middleware'
+import { create } from 'zustand';
+import { devtools } from 'zustand/middleware';
 
-const SETTING_KEY = 'SD-KITCHEN-SETTING'
+const SETTING_KEY = 'SD-KITCHEN-SETTING';
 
 export interface WebuiSetting {
-  promotTextarea: 'scroll' | 'resizable'
-  sidebarExpand: boolean
-  sidebarFixedMode: 'fixed' | 'float'
-  sidebarWidth: number
-  enableExtraNetworkSidebar: boolean
-  extraNetworkSidebarExpand: boolean
-  extraNetworkFixedMode: 'fixed' | 'float'
-  extraNetworkSidebarWidth: number
-  extraNetworkCardSize: number
-  svgIcon: boolean
+  enableExtraNetworkSidebar: boolean;
+  extraNetworkCardSize: number;
+  extraNetworkFixedMode: 'fixed' | 'float';
+  extraNetworkSidebarExpand: boolean;
+  extraNetworkSidebarWidth: number;
+  promotTextarea: 'scroll' | 'resizable';
+  sidebarExpand: boolean;
+  sidebarFixedMode: 'fixed' | 'float';
+  sidebarWidth: number;
+  svgIcon: boolean;
 }
 
 export const defaultSetting: WebuiSetting = {
@@ -27,16 +27,16 @@ export const defaultSetting: WebuiSetting = {
   extraNetworkSidebarWidth: 340,
   extraNetworkCardSize: 86,
   svgIcon: false,
-}
+};
 export interface AppState {
-  themeMode: 'light' | 'dark'
-  setting: WebuiSetting
-  currentTab: string
-  setCurrentTab: () => void
-  onSetThemeMode: (themeMode: 'light' | 'dark') => void
-  onLoadSetting: () => void
-  onSetSetting: (setting: WebuiSetting) => void
-  onInit: () => void
+  currentTab: string;
+  onInit: () => void;
+  onLoadSetting: () => void;
+  onSetSetting: (setting: WebuiSetting) => void;
+  onSetThemeMode: (themeMode: 'light' | 'dark') => void;
+  setCurrentTab: () => void;
+  setting: WebuiSetting;
+  themeMode: 'light' | 'dark';
 }
 export const useAppStore = create<AppState>()(
   devtools((set, get) => ({
@@ -44,28 +44,28 @@ export const useAppStore = create<AppState>()(
     setting: defaultSetting,
     currentTab: 'tab_txt2img',
     setCurrentTab: () => {
-      const currentTab = get_uiCurrentTabContent().id
-      if (currentTab !== get().currentTab) set({ currentTab }, false, 'setCurrentTab')
+      const currentTab = get_uiCurrentTabContent().id;
+      if (currentTab !== get().currentTab) set({ currentTab }, false, 'setCurrentTab');
     },
     onSetThemeMode: (themeMode) => {
-      set(() => ({ themeMode }), false, 'onSetThemeMode')
+      set(() => ({ themeMode }), false, 'onSetThemeMode');
     },
     onLoadSetting: () => {
-      let setting: any = localStorage.getItem(SETTING_KEY)
+      let setting: any = localStorage.getItem(SETTING_KEY);
       if (setting) {
-        setting = JSON.parse(setting)
+        setting = JSON.parse(setting);
       } else {
-        setting = defaultSetting
-        localStorage.setItem(SETTING_KEY, JSON.stringify(defaultSetting))
+        setting = defaultSetting;
+        localStorage.setItem(SETTING_KEY, JSON.stringify(defaultSetting));
       }
-      set(() => ({ setting: { ...defaultSetting, ...setting } }), false, 'onLoadSetting')
+      set(() => ({ setting: { ...defaultSetting, ...setting } }), false, 'onLoadSetting');
     },
     onSetSetting: (setting) => {
-      localStorage.setItem(SETTING_KEY, JSON.stringify(setting))
-      set(() => ({ setting }), false, 'onSetSetting')
+      localStorage.setItem(SETTING_KEY, JSON.stringify(setting));
+      set(() => ({ setting }), false, 'onSetSetting');
     },
     onInit: () => {
-      get().onLoadSetting()
+      get().onLoadSetting();
     },
-  }))
-)
+  })),
+);

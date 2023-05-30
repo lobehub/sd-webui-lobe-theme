@@ -1,23 +1,24 @@
-import React, { useCallback, useMemo } from 'react'
-import { WithContext, ReactTagsProps as WithContextProps } from 'react-tag-input'
-import styled from 'styled-components'
-import { genTagType, suggestions } from './utils'
+import React, { useCallback, useMemo } from 'react';
+import { WithContext, ReactTagsProps as WithContextProps } from 'react-tag-input';
+import styled from 'styled-components';
+
+import { genTagType, suggestions } from './utils';
 
 export interface TagItem {
-  id: string
-  text: string
-  className?: string
+  className?: string;
+  id: string;
+  text: string;
 }
 
-export type PromptType = 'positive' | 'negative'
+export type PromptType = 'positive' | 'negative';
 
 interface ReactTagsProps extends WithContextProps {
-  editable?: boolean
-  onTagUpdate?: (editIndex: number, tag: TagItem) => void
+  editable?: boolean;
+  onTagUpdate?: (editIndex: number, tag: TagItem) => void;
 }
 
 // @ts-ignore
-const ReactTags: React.FC<ReactTagsProps> = WithContext
+const ReactTags: React.FC<ReactTagsProps> = WithContext;
 
 const View = styled.div<{ type: PromptType }>`
   /* Styles for the input */
@@ -143,81 +144,81 @@ const View = styled.div<{ type: PromptType }>`
     background: var(--orange-2) !important;
     border-color: var(--orange-3) !important;
   }
-`
+`;
 
 const KeyCodes = {
   comma: 188,
   enter: 13,
-}
+};
 
-const delimiters = [KeyCodes.comma, KeyCodes.enter]
+const delimiters = [KeyCodes.comma, KeyCodes.enter];
 
 interface TagListProps {
-  tags: TagItem[]
-  setTags: (tags: TagItem[]) => void
-  type: PromptType
-  setValue: (tags: TagItem[]) => void
+  setTags: (tags: TagItem[]) => void;
+  setValue: (tags: TagItem[]) => void;
+  tags: TagItem[];
+  type: PromptType;
 }
 
 const TagList: React.FC<TagListProps> = ({ tags, setTags, type, setValue }) => {
   const handleDelete = useCallback(
     (i: number) => {
-      const newTags = tags.filter((tag, index) => index !== i)
-      setTags(newTags)
-      setValue(newTags)
+      const newTags = tags.filter((tag, index) => index !== i);
+      setTags(newTags);
+      setValue(newTags);
     },
-    [tags]
-  )
+    [tags],
+  );
 
   const handleAddition = useCallback(
     (tag: TagItem) => {
-      const newTags = [...tags, genTagType(tag)]
-      setTags(newTags)
-      setValue(newTags)
+      const newTags = [...tags, genTagType(tag)];
+      setTags(newTags);
+      setValue(newTags);
     },
-    [tags]
-  )
+    [tags],
+  );
 
   const handleDrag = useCallback(
     (tag: TagItem, currPos: number, newPos: number) => {
-      const newTags = tags.slice()
-      newTags.splice(currPos, 1)
-      newTags.splice(newPos, 0, genTagType(tag))
-      setTags(newTags)
-      setValue(newTags)
+      const newTags = tags.slice();
+      newTags.splice(currPos, 1);
+      newTags.splice(newPos, 0, genTagType(tag));
+      setTags(newTags);
+      setValue(newTags);
     },
-    [tags]
-  )
+    [tags],
+  );
 
   const handleTagUpdate = useCallback(
     (i: number, tag: TagItem) => {
-      const newTags = [...tags]
-      newTags[i] = genTagType(tag)
-      setTags(newTags)
-      setValue(newTags)
+      const newTags = [...tags];
+      newTags[i] = genTagType(tag);
+      setTags(newTags);
+      setValue(newTags);
     },
-    [tags]
-  )
+    [tags],
+  );
 
-  const suggestionData = useMemo(() => suggestions[type], [type])
+  const suggestionData = useMemo(() => suggestions[type], [type]);
 
   return (
     <View type={type}>
       <ReactTags
-        tags={tags}
+        autocomplete
         delimiters={delimiters}
-        handleDelete={handleDelete}
+        editable
         handleAddition={handleAddition}
+        handleDelete={handleDelete}
         handleDrag={handleDrag}
+        inline
+        inputFieldPosition="bottom"
         onTagUpdate={handleTagUpdate}
         suggestions={suggestionData}
-        inputFieldPosition="bottom"
-        inline
-        autocomplete
-        editable
+        tags={tags}
       />
     </View>
-  )
-}
+  );
+};
 
-export default React.memo(TagList)
+export default React.memo(TagList);

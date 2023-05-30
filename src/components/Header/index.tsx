@@ -1,17 +1,19 @@
-import { DraggablePanel } from '@/components'
-import { useAppStore } from '@/store'
-import { BoldOutlined, GithubOutlined } from '@ant-design/icons'
-import { Button, Modal, Space } from 'antd'
-import { useResponsive } from 'antd-style'
-import qs from 'query-string'
-import React, { useCallback, useEffect, useState } from 'react'
-import styled from 'styled-components'
-import { shallow } from 'zustand/shallow'
-import Giscus from './Giscus'
-import Logo from './Logo'
-import Setting from './Setting'
-import Nav from './Nav'
-import { civitaiLogo, themeIcon } from './style'
+import { BoldOutlined, GithubOutlined } from '@ant-design/icons';
+import { Button, Modal, Space } from 'antd';
+import { useResponsive } from 'antd-style';
+import qs from 'query-string';
+import React, { useCallback, useEffect, useState } from 'react';
+import styled from 'styled-components';
+import { shallow } from 'zustand/shallow';
+
+import { DraggablePanel } from '@/components';
+import { useAppStore } from '@/store';
+
+import Giscus from './Giscus';
+import Logo from './Logo';
+import Nav from './Nav';
+import Setting from './Setting';
+import { civitaiLogo, themeIcon } from './style';
 
 /******************************************************
  *********************** Style *************************
@@ -27,48 +29,52 @@ const HeaderView = styled.div`
   height: -webkit-fill-available;
   height: -moz-available;
   padding: 16px 24px;
-`
+`;
 
 /******************************************************
  ************************* Dom *************************
  ******************************************************/
 
 interface HeaderProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 const Header: React.FC<HeaderProps> = ({ children }) => {
-  const [themeMode] = useAppStore((st) => [st.themeMode], shallow)
-  const { mobile } = useResponsive()
-  const [expand, setExpand] = useState<boolean>(true)
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [themeMode] = useAppStore((st) => [st.themeMode], shallow);
+  const { mobile } = useResponsive();
+  const [expand, setExpand] = useState<boolean>(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
-    if (mobile) setExpand(false)
-  }, [])
+    if (mobile) setExpand(false);
+  }, []);
 
   const handleSetTheme = useCallback(() => {
-    const theme = themeMode === 'light' ? 'dark' : 'light'
-    const gradioURL = qs.parseUrl(window.location.href)
-    gradioURL.query.__theme = theme
-    window.location.replace(qs.stringifyUrl(gradioURL))
-  }, [themeMode])
+    const theme = themeMode === 'light' ? 'dark' : 'light';
+    const gradioURL = qs.parseUrl(window.location.href);
+    gradioURL.query.__theme = theme;
+    window.location.replace(qs.stringifyUrl(gradioURL));
+  }, [themeMode]);
 
-  const showModal = () => setIsModalOpen(true)
+  const showModal = () => setIsModalOpen(true);
 
-  const handleCancel = () => setIsModalOpen(false)
+  const handleCancel = () => setIsModalOpen(false);
 
   return (
     <>
       <DraggablePanel
-        placement="top"
         defaultSize={{ height: 'auto' }}
-        minHeight={64}
         expand={expand}
+        minHeight={64}
         onExpandChange={setExpand}
+        placement="top"
       >
         <HeaderView id="header" style={{ flexDirection: mobile ? 'column' : 'row' }}>
-          <a href="https://github.com/canisminor1990/sd-webui-kitchen-theme" target="_blank" rel="noreferrer">
+          <a
+            href="https://github.com/canisminor1990/sd-webui-kitchen-theme"
+            rel="noreferrer"
+            target="_blank"
+          >
             <Logo themeMode={themeMode} />
           </a>
 
@@ -76,35 +82,43 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
           {children}
 
           <Space.Compact>
-            <a href="https://civitai.com/" target="_blank" rel="noreferrer">
-              <Button title="Civitai" icon={civitaiLogo} />
+            <a href="https://civitai.com/" rel="noreferrer" target="_blank">
+              <Button icon={civitaiLogo} title="Civitai" />
             </a>
-            <a href="https://www.birme.net/?target_width=512&target_height=512" target="_blank" rel="noreferrer">
-              <Button title="Birme" icon={<BoldOutlined />} />
+            <a
+              href="https://www.birme.net/?target_width=512&target_height=512"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <Button icon={<BoldOutlined />} title="Birme" />
             </a>
-            <Button title="Feedback" icon={<GithubOutlined />} onClick={showModal} />
+            <Button icon={<GithubOutlined />} onClick={showModal} title="Feedback" />
             <Setting />
-            <Button title="Switch Theme" icon={themeIcon[themeMode]} onClick={handleSetTheme} />
+            <Button icon={themeIcon[themeMode]} onClick={handleSetTheme} title="Switch Theme" />
           </Space.Compact>
         </HeaderView>
       </DraggablePanel>
       <Modal
+        footer={null}
+        onCancel={handleCancel}
+        open={isModalOpen}
         title={
-          <a href="https://github.com/canisminor1990/sd-webui-kitchen-theme" target="_blank" rel="noreferrer">
+          <a
+            href="https://github.com/canisminor1990/sd-webui-kitchen-theme"
+            rel="noreferrer"
+            target="_blank"
+          >
             <Space>
               <GithubOutlined />
               {'canisminor1990/sd-webui-kitchen-theme'}
             </Space>
           </a>
         }
-        open={isModalOpen}
-        onCancel={handleCancel}
-        footer={null}
       >
         <Giscus themeMode={themeMode} />
       </Modal>
     </>
-  )
-}
+  );
+};
 
-export default React.memo(Header)
+export default React.memo(Header);

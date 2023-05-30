@@ -1,13 +1,14 @@
-import { Content, ExtraNetworkSidebar, Header, Sidebar } from '@/components'
-import dragablePanel from '@/script/draggablePanel'
-import replaceIcon from '@/script/replaceIcon'
-import { useAppStore } from '@/store'
-import { Spin } from 'antd'
-import { useResponsive } from 'antd-style'
-import React, { useEffect, useRef, useState } from 'react'
-import styled from 'styled-components'
-import { shallow } from 'zustand/shallow'
-import civitaiHelperFix from '@/script/civitaiHelperFix'
+import { Spin } from 'antd';
+import { useResponsive } from 'antd-style';
+import React, { useEffect, useRef, useState } from 'react';
+import styled from 'styled-components';
+import { shallow } from 'zustand/shallow';
+
+import { Content, ExtraNetworkSidebar, Header, Sidebar } from '@/components';
+import civitaiHelperFix from '@/script/civitaiHelperFix';
+import dragablePanel from '@/script/draggablePanel';
+import replaceIcon from '@/script/replaceIcon';
+import { useAppStore } from '@/store';
 
 const View = styled.div`
   position: relative;
@@ -16,7 +17,7 @@ const View = styled.div`
   display: flex;
   flex: 1;
   flex-direction: row !important;
-`
+`;
 
 const MainView = styled.div`
   position: relative;
@@ -28,7 +29,7 @@ const MainView = styled.div`
 
   width: 100vw;
   height: 100vh;
-`
+`;
 
 const LoadingBox = styled.div`
   display: flex;
@@ -37,74 +38,76 @@ const LoadingBox = styled.div`
 
   width: 100%;
   height: 100%;
-`
+`;
 
 const App: React.FC = () => {
   const [currentTab, setCurrentTab, setting] = useAppStore(
     (st) => [st.currentTab, st.setCurrentTab, st.setting],
-    shallow
-  )
-  const { mobile } = useResponsive()
-  const [loading, setLoading] = useState(true)
-  const [extraLoading, setExtraLoading] = useState(true)
-  const sidebarRef: any = useRef<HTMLElement>()
-  const mainRef: any = useRef<HTMLElement>()
-  const txt2imgExtraNetworkSidebarRef: any = useRef<HTMLElement>()
-  const img2imgExtraNetworkSidebarRef: any = useRef<HTMLElement>()
+    shallow,
+  );
+  const { mobile } = useResponsive();
+  const [loading, setLoading] = useState(true);
+  const [extraLoading, setExtraLoading] = useState(true);
+  const sidebarRef: any = useRef<HTMLElement>();
+  const mainRef: any = useRef<HTMLElement>();
+  const txt2imgExtraNetworkSidebarRef: any = useRef<HTMLElement>();
+  const img2imgExtraNetworkSidebarRef: any = useRef<HTMLElement>();
   useEffect(() => {
     onUiLoaded(() => {
       // Content
-      const main = gradioApp().querySelector('.app')
-      if (main) mainRef.current?.appendChild(main)
-      if (!mobile) dragablePanel()
+      const main = gradioApp().querySelector('.app');
+      if (main) mainRef.current?.appendChild(main);
+      if (!mobile) dragablePanel();
 
       // Sidebar
-      const sidebar = gradioApp().querySelector('#quicksettings')
-      if (sidebar) sidebarRef.current?.appendChild(sidebar)
+      const sidebar = gradioApp().querySelector('#quicksettings');
+      if (sidebar) sidebarRef.current?.appendChild(sidebar);
 
       // ExtraNetworkSidebar
       if (setting.enableExtraNetworkSidebar) {
-        const txt2imgExtraNetworks = gradioApp().querySelector('div#txt2img_extra_networks')
-        const img2imgExtraNetworks = gradioApp().querySelector('div#img2img_extra_networks')
+        const txt2imgExtraNetworks = gradioApp().querySelector('div#txt2img_extra_networks');
+        const img2imgExtraNetworks = gradioApp().querySelector('div#img2img_extra_networks');
         if (txt2imgExtraNetworks && img2imgExtraNetworks) {
-          txt2imgExtraNetworkSidebarRef.current?.appendChild(txt2imgExtraNetworks)
-          img2imgExtraNetworkSidebarRef.current?.appendChild(img2imgExtraNetworks)
+          txt2imgExtraNetworkSidebarRef.current?.appendChild(txt2imgExtraNetworks);
+          img2imgExtraNetworkSidebarRef.current?.appendChild(img2imgExtraNetworks);
         }
       }
 
       // Other
-      if (setting.svgIcon) replaceIcon()
+      if (setting.svgIcon) replaceIcon();
 
-      setLoading(false)
-    })
+      setLoading(false);
+    });
     onUiUpdate(() => {
-      setCurrentTab()
-    })
-  }, [])
+      setCurrentTab();
+    });
+  }, []);
 
   useEffect(() => {
     if (!loading && setting.enableExtraNetworkSidebar) {
       if (document.querySelector('#txt2img_lora_cards')) {
-        civitaiHelperFix()
-        setExtraLoading(false)
-        return
+        civitaiHelperFix();
+        setExtraLoading(false);
+        return;
       }
       setTimeout(() => {
-        const t2iBtn: any = document.querySelector('#txt2img_extra_refresh')
-        const i2iBtn: any = document.querySelector('#img2img_extra_refresh')
-        t2iBtn.click()
-        i2iBtn.click()
-        setExtraLoading(false)
+        const t2iBtn: any = document.querySelector('#txt2img_extra_refresh');
+        const i2iBtn: any = document.querySelector('#img2img_extra_refresh');
+        t2iBtn.click();
+        i2iBtn.click();
+        setExtraLoading(false);
         try {
-          const civitaiBtn = document.querySelectorAll('button[title="Refresh Civitai Helper\'s additional buttons"]')
+          const civitaiBtn = document.querySelectorAll(
+            'button[title="Refresh Civitai Helper\'s additional buttons"]',
+          );
           if (civitaiBtn) {
-            civitaiBtn.forEach((btn: any) => (btn.onclick = civitaiHelperFix))
+            civitaiBtn.forEach((btn: any) => (btn.onclick = civitaiHelperFix));
           }
-          civitaiHelperFix()
+          civitaiHelperFix();
         } catch {}
-      }, 2000)
+      }, 2000);
     }
-  }, [loading])
+  }, [loading]);
 
   return (
     <MainView>
@@ -122,15 +125,15 @@ const App: React.FC = () => {
               <Spin size="small" />
             </LoadingBox>
           )}
-          <div style={loading ? { display: 'none' } : {}} id="sidebar" ref={sidebarRef} />
+          <div id="sidebar" ref={sidebarRef} style={loading ? { display: 'none' } : {}} />
         </Sidebar>
         <Content loading={loading}>
           {loading && (
             <LoadingBox>
-              <Spin tip="Loading" size="large" />
+              <Spin size="large" tip="Loading" />
             </LoadingBox>
           )}
-          <div style={loading ? { display: 'none' } : {}} id="content" ref={mainRef} />
+          <div id="content" ref={mainRef} style={loading ? { display: 'none' } : {}} />
         </Content>
         {setting?.enableExtraNetworkSidebar && (
           <ExtraNetworkSidebar>
@@ -142,20 +145,20 @@ const App: React.FC = () => {
             <div style={extraLoading ? { display: 'none' } : {}}>
               <div
                 id="txt2img-extra-netwrok-sidebar"
-                style={currentTab !== 'tab_img2img' ? {} : { display: 'none' }}
                 ref={txt2imgExtraNetworkSidebarRef}
+                style={currentTab !== 'tab_img2img' ? {} : { display: 'none' }}
               />
               <div
                 id="img2img-extra-netwrok-sidebar"
-                style={currentTab === 'tab_img2img' ? {} : { display: 'none' }}
                 ref={img2imgExtraNetworkSidebarRef}
+                style={currentTab === 'tab_img2img' ? {} : { display: 'none' }}
               />
             </div>
           </ExtraNetworkSidebar>
         )}
       </View>
     </MainView>
-  )
-}
+  );
+};
 
-export default React.memo(App)
+export default React.memo(App);

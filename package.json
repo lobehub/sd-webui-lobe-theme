@@ -12,7 +12,7 @@
   "scripts": {
     "build": "umi build",
     "dev": "umi build",
-    "lint": "eslint \"{src,javascript}/**/*.{js,jsx,ts,tsx}\" --fix",
+    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
     "prepare": "husky install",
     "prettier": "prettier -c --write \"**/**\" && npm run lint && npm run stylelint",
     "release": "semantic-release",
@@ -24,24 +24,26 @@
     "type-check": "tsc -p tsconfig-check.json"
   },
   "lint-staged": {
-    "*.less": [
+    "*.{css,less}": [
       "stylelint --fix",
       "prettier --write"
     ],
     "*.{md,json}": [
       "prettier --write --no-error-on-unmatched-pattern"
     ],
-    "*.json": [
-      "prettier --write --no-error-on-unmatched-pattern"
-    ],
-    "*.jsx": [
+    "*.{js,jsx}": [
+      "stylelint --fix",
       "eslint --fix",
       "prettier --write"
     ],
     "*.{ts,tsx}": [
+      "stylelint --fix",
       "eslint --fix",
       "prettier --parser=typescript --write"
     ]
+  },
+  "dependencies": {
+    "lucide-react": "^0.224.0"
   },
   "devDependencies": {
     "@ant-design/icons": "^5",
@@ -67,6 +69,9 @@
     "eslint": "^8",
     "eslint-import-resolver-alias": "^1",
     "eslint-import-resolver-typescript": "^3",
+    "eslint-plugin-import": "^2",
+    "eslint-plugin-simple-import-sort": "^10",
+    "eslint-plugin-typescript-sort-keys": "^2",
     "husky": "^8",
     "lightningcss": "^1",
     "lint-staged": "^13",
@@ -99,8 +104,5 @@
     "use-merge-value": "^1",
     "webpack-shell-plugin-next": "^2",
     "zustand": "^4"
-  },
-  "dependencies": {
-    "lucide-react": "^0.224.0"
   }
 }

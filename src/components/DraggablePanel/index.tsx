@@ -1,38 +1,40 @@
-import type { DivProps } from '@/types'
-import { useHover } from 'ahooks'
-import { ChevronDown, ChevronLeft, ChevronRight, ChevronUp } from 'lucide-react'
-import type { Enable, NumberSize, Size } from 're-resizable'
-import { HandleClassName, Resizable } from 're-resizable'
-import React, { useEffect, useMemo, useRef, useState } from 'react'
-import { Center } from 'react-layout-kit'
-import type { Props as RndProps } from 'react-rnd'
-import useControlledState from 'use-merge-value'
-import { useStyle } from './style'
-import { revesePlacement } from './utils'
+import { useHover } from 'ahooks';
+import { ChevronDown, ChevronLeft, ChevronRight, ChevronUp } from 'lucide-react';
+import type { Enable, NumberSize, Size } from 're-resizable';
+import { HandleClassName, Resizable } from 're-resizable';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { Center } from 'react-layout-kit';
+import type { Props as RndProps } from 'react-rnd';
+import useControlledState from 'use-merge-value';
 
-const DEFAULT_HEIGHT = 180
-const DEFAULT_WIDTH = 280
+import type { DivProps } from '@/types';
 
-export type placementType = 'right' | 'left' | 'top' | 'bottom'
+import { useStyle } from './style';
+import { revesePlacement } from './utils';
+
+const DEFAULT_HEIGHT = 180;
+const DEFAULT_WIDTH = 280;
+
+export type placementType = 'right' | 'left' | 'top' | 'bottom';
 
 export interface DraggablePanelProps extends DivProps {
-  pin?: boolean
-  mode?: 'fixed' | 'float'
-  placement: placementType
-  minWidth?: number
-  minHeight?: number
-  resize?: RndProps['enableResizing']
-  size?: Partial<Size>
-  onSizeChange?: (delta: NumberSize, size?: Size) => void
-  onSizeDragging?: (delta: NumberSize, size?: Size) => void
-  expandable?: boolean
-  expand?: boolean
-  defaultExpand?: boolean
-  onExpandChange?: (expand: boolean) => void
-  defaultSize?: Partial<Size>
-  destroyOnClose?: boolean
-  showHandlerWhenUnexpand?: boolean
-  hanlderStyle?: React.CSSProperties
+  defaultExpand?: boolean;
+  defaultSize?: Partial<Size>;
+  destroyOnClose?: boolean;
+  expand?: boolean;
+  expandable?: boolean;
+  hanlderStyle?: React.CSSProperties;
+  minHeight?: number;
+  minWidth?: number;
+  mode?: 'fixed' | 'float';
+  onExpandChange?: (expand: boolean) => void;
+  onSizeChange?: (delta: NumberSize, size?: Size) => void;
+  onSizeDragging?: (delta: NumberSize, size?: Size) => void;
+  pin?: boolean;
+  placement: placementType;
+  resize?: RndProps['enableResizing'];
+  showHandlerWhenUnexpand?: boolean;
+  size?: Partial<Size>;
 }
 
 const DraggablePanel: React.FC<DraggablePanelProps> = ({
@@ -57,37 +59,37 @@ const DraggablePanel: React.FC<DraggablePanelProps> = ({
   destroyOnClose,
   hanlderStyle,
 }) => {
-  const ref = useRef(null)
-  const isHovering = useHover(ref)
-  const isVertical = placement === 'top' || placement === 'bottom'
+  const ref = useRef(null);
+  const isHovering = useHover(ref);
+  const isVertical = placement === 'top' || placement === 'bottom';
 
-  const { styles, cx } = useStyle('draggable-panel')
+  const { styles, cx } = useStyle('draggable-panel');
 
   const [isExpand, setIsExpand] = useControlledState(defaultExpand, {
     value: expand,
     onChange: onExpandChange,
-  })
+  });
 
   useEffect(() => {
-    if (pin) return
+    if (pin) return;
     if (isHovering && !isExpand) {
-      setIsExpand(true)
+      setIsExpand(true);
     } else if (!isHovering && isExpand) {
-      setIsExpand(false)
+      setIsExpand(false);
     }
-  }, [pin, isHovering, isExpand])
+  }, [pin, isHovering, isExpand]);
 
-  const [showExpand, setShowExpand] = useState(true)
+  const [showExpand, setShowExpand] = useState(true);
 
-  const canResizing = resize !== false && isExpand
+  const canResizing = resize !== false && isExpand;
 
   const resizeHandleClassNames: HandleClassName = useMemo(() => {
-    if (!canResizing) return {}
+    if (!canResizing) return {};
 
     return {
       [revesePlacement(placement)]: styles[`${revesePlacement(placement)}Handle`],
-    }
-  }, [canResizing, placement])
+    };
+  }, [canResizing, placement]);
 
   const resizing = {
     top: false,
@@ -100,7 +102,7 @@ const DraggablePanel: React.FC<DraggablePanelProps> = ({
     topLeft: false,
     [revesePlacement(placement)]: true,
     ...(resize as Enable),
-  }
+  };
 
   const defaultSize: Size = useMemo(() => {
     if (isVertical)
@@ -108,14 +110,14 @@ const DraggablePanel: React.FC<DraggablePanelProps> = ({
         width: '100%',
         height: DEFAULT_HEIGHT,
         ...customizeDefaultSize,
-      }
+      };
 
     return {
       width: DEFAULT_WIDTH,
       height: '100%',
       ...customizeDefaultSize,
-    }
-  }, [isVertical])
+    };
+  }, [isVertical]);
 
   const sizeProps = isExpand
     ? {
@@ -132,20 +134,20 @@ const DraggablePanel: React.FC<DraggablePanelProps> = ({
     : {
         minWidth: 0,
         size: { width: 0 },
-      }
+      };
 
   const { Arrow, className: arrowPlacement } = useMemo(() => {
     switch (placement) {
       case 'top':
-        return { className: 'Bottom', Arrow: ChevronDown }
+        return { className: 'Bottom', Arrow: ChevronDown };
       case 'bottom':
-        return { className: 'Top', Arrow: ChevronUp }
+        return { className: 'Top', Arrow: ChevronUp };
       case 'right':
-        return { className: 'Left', Arrow: ChevronLeft }
+        return { className: 'Left', Arrow: ChevronLeft };
       case 'left':
-        return { className: 'Right', Arrow: ChevronRight }
+        return { className: 'Right', Arrow: ChevronRight };
     }
-  }, [styles, placement])
+  }, [styles, placement]);
 
   const handler = (
     // @ts-ignore
@@ -155,62 +157,65 @@ const DraggablePanel: React.FC<DraggablePanelProps> = ({
       style={{ opacity: isExpand ? (!pin ? 0 : undefined) : showHandlerWhenUnexpand ? 1 : 0 }}
     >
       <Center
-        style={hanlderStyle}
         onClick={() => {
-          setIsExpand(!isExpand)
+          setIsExpand(!isExpand);
         }}
+        style={hanlderStyle}
       >
-        <div className={styles.handlerIcon} style={{ transform: `rotate(${isExpand ? 180 : 0}deg)` }}>
+        <div
+          className={styles.handlerIcon}
+          style={{ transform: `rotate(${isExpand ? 180 : 0}deg)` }}
+        >
           <Arrow size={16} strokeWidth={1.5} />
         </div>
       </Center>
     </Center>
-  )
+  );
 
   const inner = (
     // @ts-ignore
     <Resizable
       {...sizeProps}
-      style={style}
       className={styles.panel}
       enable={canResizing ? (resizing as Enable) : undefined}
       handleClasses={resizeHandleClassNames}
-      onResizeStop={(e, direction, ref, delta) => {
-        setShowExpand(true)
-        onSizeChange?.(delta, {
-          width: ref.style.width,
-          height: ref.style.height,
-        })
-      }}
-      onResizeStart={() => {
-        setShowExpand(false)
-      }}
       onResize={(_, direction, ref, delta) => {
         onSizeDragging?.(delta, {
           width: ref.style.width,
           height: ref.style.height,
-        })
+        });
       }}
+      onResizeStart={() => {
+        setShowExpand(false);
+      }}
+      onResizeStop={(e, direction, ref, delta) => {
+        setShowExpand(true);
+        onSizeChange?.(delta, {
+          width: ref.style.width,
+          height: ref.style.height,
+        });
+      }}
+      style={style}
     >
       {children}
     </Resizable>
-  )
+  );
 
   return (
     <div
-      ref={ref}
       className={cx(
         styles.container,
         // @ts-ignore
         styles[mode === 'fixed' ? 'fixed' : `${placement}Float`],
-        className
+        className,
       )}
+      ref={ref}
       style={{ [`border${arrowPlacement}Width`]: 1 }}
     >
       {expandable && showExpand && handler}
       {destroyOnClose ? isExpand && inner : inner}
     </div>
-  )
-}
+  );
+};
 
-export default React.memo(DraggablePanel)
+export default React.memo(DraggablePanel);

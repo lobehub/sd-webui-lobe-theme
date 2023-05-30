@@ -1,9 +1,10 @@
-import { WebuiSetting, defaultSetting, useAppStore } from '@/store'
-import { SettingOutlined } from '@ant-design/icons'
-import { Button, Divider, Form, InputNumber, Popover, Space, Switch, Segmented } from 'antd'
-import React, { useCallback } from 'react'
-import styled from 'styled-components'
-import { shallow } from 'zustand/shallow'
+import { SettingOutlined } from '@ant-design/icons';
+import { Button, Divider, Form, InputNumber, Popover, Segmented, Space, Switch } from 'antd';
+import React, { useCallback } from 'react';
+import styled from 'styled-components';
+import { shallow } from 'zustand/shallow';
+
+import { defaultSetting, useAppStore, WebuiSetting } from '@/store';
 
 /******************************************************
  *********************** Style *************************
@@ -18,42 +19,46 @@ const FormItem = styled(Form.Item)`
       flex-grow: unset !important;
     }
   }
-`
+`;
 
 const Title = styled.div`
   font-size: 16px;
   font-weight: 600;
-`
+`;
 
 const SubTitle = styled.div`
   margin-bottom: 4px;
   font-size: 14px;
   font-weight: 500;
-`
+`;
 
 /******************************************************
  ************************* Dom *************************
  ******************************************************/
 
 const Setting: React.FC = () => {
-  const [setting, onSetSetting] = useAppStore((st) => [st.setting, st.onSetSetting], shallow)
+  const [setting, onSetSetting] = useAppStore((st) => [st.setting, st.onSetSetting], shallow);
 
   const onReset = useCallback(() => {
-    onSetSetting(defaultSetting)
-    gradioApp().getElementById('settings_restart_gradio')?.click()
-  }, [])
+    onSetSetting(defaultSetting);
+    gradioApp().getElementById('settings_restart_gradio')?.click();
+  }, []);
 
   const onFinish = useCallback((value: WebuiSetting) => {
-    onSetSetting(value)
-    gradioApp().getElementById('settings_restart_gradio')?.click()
-  }, [])
+    onSetSetting(value);
+    gradioApp().getElementById('settings_restart_gradio')?.click();
+  }, []);
 
   return (
     <Popover
-      title={<Title>⚙ Setting</Title>}
-      trigger="click"
       content={
-        <Form size="small" initialValues={setting} layout="horizontal" onFinish={onFinish} style={{ maxWidth: 260 }}>
+        <Form
+          initialValues={setting}
+          layout="horizontal"
+          onFinish={onFinish}
+          size="small"
+          style={{ maxWidth: 260 }}
+        >
           <Divider style={{ margin: '4px 0 8px' }} />
           <SubTitle>Promot Textarea</SubTitle>
           <FormItem label="Display mode" name="promotTextarea">
@@ -98,17 +103,19 @@ const Setting: React.FC = () => {
               <Button htmlType="button" onClick={onReset} style={{ borderRadius: 4 }}>
                 Reset
               </Button>
-              <Button type="primary" htmlType="submit" style={{ borderRadius: 4 }}>
+              <Button htmlType="submit" style={{ borderRadius: 4 }} type="primary">
                 Apply and restart UI
               </Button>
             </Space>
           </FormItem>
         </Form>
       }
+      title={<Title>⚙ Setting</Title>}
+      trigger="click"
     >
-      <Button title="Setting" icon={<SettingOutlined />} />
+      <Button icon={<SettingOutlined />} title="Setting" />
     </Popover>
-  )
-}
+  );
+};
 
-export default React.memo(Setting)
+export default React.memo(Setting);
