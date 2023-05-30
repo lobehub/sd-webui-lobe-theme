@@ -13,6 +13,7 @@
     "build": "umi build",
     "dev": "umi build",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
+    "lint:md": "remark . -f -q",
     "prepare": "husky install",
     "prettier": "prettier -c --write \"**/**\" && npm run lint && npm run stylelint",
     "release": "semantic-release",
@@ -24,12 +25,16 @@
     "type-check": "tsc -p tsconfig-check.json"
   },
   "lint-staged": {
+    "*.md": [
+      "remark -f -q",
+      "prettier --write --no-error-on-unmatched-pattern"
+    ],
+    "*.json": [
+      "prettier --write --no-error-on-unmatched-pattern"
+    ],
     "*.{css,less}": [
       "stylelint --fix",
       "prettier --write"
-    ],
-    "*.{md,json}": [
-      "prettier --write --no-error-on-unmatched-pattern"
     ],
     "*.{js,jsx}": [
       "stylelint --fix",
@@ -41,9 +46,6 @@
       "eslint --fix",
       "prettier --parser=typescript --write"
     ]
-  },
-  "dependencies": {
-    "lucide-react": "^0.224.0"
   },
   "devDependencies": {
     "@ant-design/icons": "^5",
@@ -76,6 +78,7 @@
     "lightningcss": "^1",
     "lint-staged": "^13",
     "lodash-es": "^4",
+    "lucide-react": "^0",
     "object-to-css-variables": "^0.2",
     "polished": "^4",
     "postcss-less": "^6",
@@ -92,6 +95,11 @@
     "react-layout-kit": "^1",
     "react-rnd": "^10",
     "react-tag-input": "^6",
+    "remark": "^14",
+    "remark-cli": "^11",
+    "remark-lint": "^9",
+    "remark-lint-list-item-indent": "^3",
+    "remark-preset-lint-recommended": "^6",
     "semantic-release": "^21",
     "semantic-release-config-gitmoji": "^1",
     "styled-components": "^5",

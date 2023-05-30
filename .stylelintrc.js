@@ -18,4 +18,4 @@ module.exports = {
       customSyntax: 'postcss-styled-syntax',
     },
   ],
-}
+};

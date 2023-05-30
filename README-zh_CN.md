@@ -7,7 +7,7 @@
 <h1 align="center">Kitchen Theme</h1>
 
 Kitchen Theme for Stable Diffusion WebUI
-  
+
 [English](./README.md) · 简体中文 · [Changelog](./CHANGELOG.md) · [Report Bug][issues-url] · [Request Feature][issues-url]
 
 <!-- SHIELD GROUP -->
@@ -216,18 +216,16 @@ $ npm start
 
 </div>
 
-
 ---
+
 #### 📝 License
 
 Copyright © 2023 [CanisMinor][profile-url]. <br />
-This project is [MIT](./LICENSE) licensed. 
-
+This project is [MIT](./LICENSE) licensed.
 
 <!-- LINK GROUP -->
 
 [profile-url]: https://github.com/canisminor1990
-[issues-url]: https://github.com/canisminor1990/sd-webui-kitchen-theme/issues/new/choose
 [gitpod-url]: https://gitpod.io/#https://github.com/canisminor1990/sd-webui-kitchen-theme
 
 <!-- SHIELD LINK GROUP -->
@@ -272,4 +270,4 @@ This project is [MIT](./LICENSE) licensed.
 <!-- issues -->
 
 [issues-shield]: https://img.shields.io/github/issues/canisminor1990/sd-web-ui-kitchen-theme.svg?style=flat
-[issues-url]: https://img.shields.io/github/issues/canisminor1990/sd-web-ui-kitchen-theme.svg?style=flat
+[issues-url]: https://github.com/canisminor1990/sd-webui-kitchen-theme/issues/new/choose
