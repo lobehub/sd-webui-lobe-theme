@@ -1,5 +1,7 @@
 # Changelog
 
+## [1.8.3](https://github.com/canisminor1990/sd-webui-kitchen-theme/compare/v1.8.2...v1.8.3) (2023-05-30)
+
 ## [1.8.2](https://github.com/canisminor1990/sd-webui-kitchen-theme/compare/v1.8.1...v1.8.2) (2023-05-30)
 
 ## [1.8.1](https://github.com/canisminor1990/sd-webui-kitchen-theme/compare/v1.8.0...v1.8.1) (2023-05-19)
