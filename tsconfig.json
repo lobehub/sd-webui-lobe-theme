@@ -1,5 +1,4 @@
 {
-  "extends": "./src/.umi/tsconfig.json",
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
@@ -21,6 +20,7 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src"],
-  "exclude": ["javascript"]
+  "exclude": ["javascript"],
+  "extends": "./src/.umi/tsconfig.json",
+  "include": ["src"]
 }

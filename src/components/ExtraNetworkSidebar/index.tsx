@@ -20,8 +20,8 @@ const View = styled.div`
   display: flex;
   flex-direction: column;
 
-  height: -webkit-fill-available;
-  height: -moz-available;
+  height: var(--chrome-fill-available);
+  height: var(--firefox-fill-available);
 `;
 
 const SidebarView = styled.div<{ size: number }>`
@@ -43,9 +43,10 @@ const SidebarView = styled.div<{ size: number }>`
   .extra-network-thumbs {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(${({ size }) => size}px, 1fr));
+
     > .card {
-      width: -webkit-fill-available !important;
-      width: -moz-available !important;
+      width: fill-available !important;
+      width: available !important;
       height: ${({ size }) => size * 1.5}px !important;
     }
   }

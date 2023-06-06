@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo } from 'react';
-import { ReactTagsProps as WithContextProps,WithContext } from 'react-tag-input';
+import { WithContext, ReactTagsProps as WithContextProps } from 'react-tag-input';
 import styled from 'styled-components';
 
 import { genTagType, suggestions } from './utils';
@@ -25,17 +25,18 @@ const View = styled.div<{ type: PromptType }>`
   .ReactTags__editTagInput,
   .ReactTags__tagInput {
     display: inline-block;
-    width: -webkit-fill-available;
-    width: -moz-available;
+    width: var(--chrome-fill-available);
+    width: var(--firefox-fill-available);
     margin: 0;
+
     input,
     input:focus {
       position: relative;
 
       display: block;
 
-      width: -webkit-fill-available;
-      width: -moz-available;
+      width: var(--chrome-fill-available);
+      width: var(--firefox-fill-available);
       margin: 0;
       padding: var(--input-padding);
 
@@ -62,6 +63,7 @@ const View = styled.div<{ type: PromptType }>`
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
+
     span.ReactTags__tag {
       position: relative;
 
@@ -78,10 +80,12 @@ const View = styled.div<{ type: PromptType }>`
       background: var(--button-secondary-background-fill);
       border: var(--button-border-width) solid var(--button-secondary-border-color);
       border-radius: var(--input-radius);
+
       &:hover {
         color: ${({ type }) => (type === 'positive' ? 'var(--green-10)' : 'var(--magenta-10)')};
       }
     }
+
     a.ReactTags__remove {
       cursor: pointer;
       margin-left: 5px;
@@ -94,6 +98,7 @@ const View = styled.div<{ type: PromptType }>`
     position: absolute;
     z-index: 1000;
   }
+
   ul {
     overflow-x: hidden;
     overflow-y: auto;
@@ -107,15 +112,18 @@ const View = styled.div<{ type: PromptType }>`
     background: var(--color-bg-container);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
+
     li {
       margin: 0;
       padding: 4px 8px;
       font-size: 12px;
+
       &.ReactTags__activeSuggestion {
         cursor: pointer;
         color: #fff;
         background: var(--color-primary);
       }
+
       mark {
         font-weight: 600;
         color: #fff;
@@ -136,10 +144,12 @@ const View = styled.div<{ type: PromptType }>`
     background: var(--cyan-2) !important;
     border-color: var(--cyan-3) !important;
   }
+
   .ReactTags__hypernet {
     background: var(--purple-2) !important;
     border-color: var(--purple-3) !important;
   }
+
   .ReactTags__embedding {
     background: var(--orange-2) !important;
     border-color: var(--orange-3) !important;

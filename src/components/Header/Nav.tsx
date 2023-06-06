@@ -14,7 +14,7 @@ const NavBar = styled(Menu)`
     color: var(--color-text-secondary);
     border-radius: 4px !important;
 
-    &:after {
+    &::after {
       display: none !important;
     }
 

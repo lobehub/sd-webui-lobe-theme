@@ -222,11 +222,11 @@ $ npm start
 
 ## 🔗 Credits
 
-- stable-diffusion-webui：https://github.com/AUTOMATIC1111/stable-diffusion-webui
-- gradio-theme-gallery: https://huggingface.co/spaces/gradio/theme-gallery
+- stable-diffusion-webui：<https://github.com/AUTOMATIC1111/stable-diffusion-webui>
+- gradio-theme-gallery: <https://huggingface.co/spaces/gradio/theme-gallery>
 - _before `1.0.0` version_
-  - sd-web-ui-quickcs: https://github.com/Gerschel/sd-web-ui-quickcss/
-  - Dark-Themes-SD-WebUI-Automatic1111: https://github.com/Nacurutu/Dark-Themes-SD-WebUI-Automatic1111
+  - sd-web-ui-quickcs: <https://github.com/Gerschel/sd-web-ui-quickcss/>
+  - Dark-Themes-SD-WebUI-Automatic1111: <https://github.com/Nacurutu/Dark-Themes-SD-WebUI-Automatic1111>
 
 <div align="right">
 

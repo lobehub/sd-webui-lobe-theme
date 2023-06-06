@@ -16,8 +16,7 @@
 
 [id$='_container_aspect_ratio'] {
   display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: wrap !important;
+  flex-flow: row wrap !important;
   gap: 4px !important;
 
   [id$='_row_aspect_ratio'],
@@ -27,6 +26,7 @@
     width: unset;
     max-width: unset;
   }
+
   button {
     position: relative !important;
     flex: 1 1 0% !important;

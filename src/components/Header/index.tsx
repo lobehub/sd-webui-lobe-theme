@@ -26,8 +26,8 @@ const HeaderView = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  height: -webkit-fill-available;
-  height: -moz-available;
+  height: var(--chrome-fill-available);
+  height: var(--firefox-fill-available);
   padding: 16px 24px;
 `;
 

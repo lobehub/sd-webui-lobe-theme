@@ -26,3 +26,4 @@ yarn-error.log
 .env.local
 style.css
 javascript/
+.stylelintignore

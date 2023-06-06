@@ -1,21 +1,7 @@
 module.exports = {
-  extends: ['stylelint-config-recommended', 'stylelint-config-clean-order'],
+  extends: require.resolve('@lobehub/lint/dist/stylelint'),
   rules: {
-    'declaration-block-no-duplicate-properties': null,
+    'selector-class-pattern': null,
+    'selector-id-pattern': null,
   },
-  overrides: [
-    {
-      files: ['*.less', '*.css'],
-      plugins: ['stylelint-order'],
-      customSyntax: 'postcss-less',
-      rules: {
-        'no-descending-specificity': null,
-      },
-    },
-    {
-      files: ['*.js', '*.jsx', '*.ts', '*.tsx'],
-      plugins: ['stylelint-order'],
-      customSyntax: 'postcss-styled-syntax',
-    },
-  ],
 };

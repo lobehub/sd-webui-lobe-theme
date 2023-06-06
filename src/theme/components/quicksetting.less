@@ -9,8 +9,8 @@
   > * {
     flex: 1;
 
-    width: -webkit-fill-available !important;
-    width: -moz-available !important;
+    width: fill-available !important;
+    width: available !important;
     min-width: unset !important;
     max-width: unset !important;
     margin: 0;
@@ -35,8 +35,8 @@
   }
 
   textarea {
-    width: -webkit-fill-available;
-    width: -moz-available;
+    width: var(--chrome-fill-available);
+    width: var(--firefox-fill-available);
   }
 
   span {

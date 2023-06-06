@@ -1,9 +1,9 @@
-import '@/theme/style.less';
-
-import { setupStyled, ThemeProvider } from 'antd-style';
+import { ThemeProvider, setupStyled } from 'antd-style';
 import qs from 'query-string';
 import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
+// @ts-ignore
+import ReactFontLoader from 'react-font-loader';
 import { ThemeContext } from 'styled-components';
 import { shallow } from 'zustand/shallow';
 
@@ -12,8 +12,11 @@ import formatPrompt from '@/script/formatPrompt';
 import promptBracketChecker from '@/script/promptBracketChecker';
 import setupHead from '@/script/setupHead';
 import { useAppStore } from '@/store';
+import '@/theme/style.less';
 
 import App from './App';
+import GlobalStyle from './GlobalStyle';
+import { baseToken } from './style';
 
 const Root: React.FC = () => {
   setupStyled({ ThemeContext });
@@ -44,7 +47,10 @@ const Root: React.FC = () => {
     window.location.reload();
   }, [isDarkMode]);
   return (
-    <ThemeProvider appearance={appearance}>
+    <ThemeProvider appearance={appearance} theme={{ token: baseToken }}>
+      <GlobalStyle />
+      <ReactFontLoader url="https://raw.githubusercontent.com/IKKI2000/harmonyos-fonts/main/css/harmonyos_sans.css" />
+      <ReactFontLoader url="https://raw.githubusercontent.com/IKKI2000/harmonyos-fonts/main/css/harmonyos_sans_sc.css" />
       <App />
     </ThemeProvider>
   );

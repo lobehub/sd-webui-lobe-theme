@@ -4,7 +4,7 @@ import React, { useCallback } from 'react';
 import styled from 'styled-components';
 import { shallow } from 'zustand/shallow';
 
-import { defaultSetting, useAppStore, WebuiSetting } from '@/store';
+import { WebuiSetting, defaultSetting, useAppStore } from '@/store';
 
 /******************************************************
  *********************** Style *************************
@@ -12,8 +12,10 @@ import { defaultSetting, useAppStore, WebuiSetting } from '@/store';
 
 const FormItem = styled(Form.Item)`
   margin-bottom: 8px;
+
   .ant-row {
     justify-content: space-between;
+
     > div {
       flex: unset !important;
       flex-grow: unset !important;

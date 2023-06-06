@@ -10,7 +10,6 @@
 /* Components */
 @import 'components/container';
 @import 'components/prose';
-@import 'components/scrollbar';
 @import 'components/options';
 @import 'components/modal';
 @import 'components/sliders';
@@ -42,6 +41,12 @@
 @import 'extensions/open-outpaint';
 
 /* Root */
+:root {
+  /* stylelint-disable */
+  --chrome-fill-available: -webkit-fill-available;
+  --firefox-fill-available: -moz-available;
+  /* stylelint-enable */
+}
 
 body {
   font-family: var(--font-family);

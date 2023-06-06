@@ -1,11 +1,11 @@
-import { defineConfig } from 'umi';
-import WebpackShellPlugin from 'webpack-shell-plugin-next';
+// @ts-ignore
+import browserslist from 'browserslist';
 // @ts-ignore
 import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
 // @ts-ignore
 import lightningcss from 'lightningcss';
-// @ts-ignore
-import browserslist from 'browserslist';
+import { defineConfig } from 'umi';
+import WebpackShellPlugin from 'webpack-shell-plugin-next';
 
 const mac = [
   'rm ./javascript/index.js',

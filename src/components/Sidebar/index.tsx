@@ -12,8 +12,8 @@ const SidebarView = styled.div`
   overflow-x: hidden;
   overflow-y: auto;
 
-  height: -webkit-fill-available;
-  height: -moz-available;
+  height: var(--chrome-fill-available);
+  height: var(--firefox-fill-available);
   padding: 16px;
 `;
 

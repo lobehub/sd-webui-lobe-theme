@@ -7,6 +7,7 @@ const toggleShort = 16;
 export const useStyle = createStyles(({ token }, prefix: string) => {
   const commonHandle = css`
     position: relative;
+
     &::before {
       content: '';
       position: absolute;
@@ -129,6 +130,7 @@ export const useStyle = createStyles(({ token }, prefix: string) => {
         left: -${offset}px;
         width: ${toggleShort}px;
         height: 100%;
+
         > div {
           top: 50%;
 
@@ -148,6 +150,7 @@ export const useStyle = createStyles(({ token }, prefix: string) => {
         right: -${offset}px;
         width: ${toggleShort}px;
         height: 100%;
+
         > div {
           top: 50%;
 
