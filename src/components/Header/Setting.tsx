@@ -1,6 +1,6 @@
 import { SettingOutlined } from '@ant-design/icons';
 import { Button, Divider, Form, InputNumber, Popover, Segmented, Space, Switch } from 'antd';
-import React, { useCallback } from 'react';
+import { memo, useCallback } from 'react';
 import styled from 'styled-components';
 import { shallow } from 'zustand/shallow';
 
@@ -38,7 +38,7 @@ const SubTitle = styled.div`
  ************************* Dom *************************
  ******************************************************/
 
-const Setting: React.FC = () => {
+const Setting = memo(() => {
   const [setting, onSetSetting] = useAppStore((st) => [st.setting, st.onSetSetting], shallow);
 
   const onReset = useCallback(() => {
@@ -118,6 +118,6 @@ const Setting: React.FC = () => {
       <Button icon={<SettingOutlined />} title="Setting" />
     </Popover>
   );
-};
+});
 
-export default React.memo(Setting);
+export default Setting;

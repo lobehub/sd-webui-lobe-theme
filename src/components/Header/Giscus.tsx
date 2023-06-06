@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import { memo, useEffect } from 'react';
 
 interface GiscusProps {
   themeMode: 'light' | 'dark';
 }
-const Giscus: React.FC<GiscusProps> = ({ themeMode }) => {
+const Giscus = memo<GiscusProps>(({ themeMode }) => {
   useEffect(() => {
     // giscus
     const giscus: HTMLScriptElement = document.createElement('script');
@@ -23,6 +23,6 @@ const Giscus: React.FC<GiscusProps> = ({ themeMode }) => {
   }, []);
 
   return <div className="giscus" id="giscus" />;
-};
+});
 
-export default React.memo(Giscus);
+export default Giscus;

@@ -43,8 +43,13 @@
 /* Root */
 :root {
   /* stylelint-disable */
-  --chrome-fill-available: -webkit-fill-available;
-  --firefox-fill-available: -moz-available;
+  --fill-available: 100%;
+  @supports (width: -webkit-fill-available) {
+    --fill-available: -webkit-fill-available;
+  }
+  @supports (width: -moz-available) {
+    --fill-available: -moz-available;
+  }
   /* stylelint-enable */
 }
 

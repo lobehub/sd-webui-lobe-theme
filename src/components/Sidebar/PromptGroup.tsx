@@ -1,7 +1,11 @@
-import React from 'react';
+import { memo } from 'react';
 import styled from 'styled-components';
 
 import Prompt from './Prompt';
+
+/******************************************************
+ *********************** Style *************************
+ ******************************************************/
 
 const View = styled.div`
   display: flex;
@@ -27,7 +31,11 @@ const Desc = styled.div`
   border-radius: var(--block-title-radius);
 `;
 
-const PromptGroup: React.FC = () => {
+/******************************************************
+ ************************* Dom *************************
+ ******************************************************/
+
+const PromptGroup = memo(() => {
   return (
     <View>
       <Desc>Positive</Desc>
@@ -36,6 +44,6 @@ const PromptGroup: React.FC = () => {
       <Prompt type="negative" />
     </View>
   );
-};
+});
 
-export default React.memo(PromptGroup);
+export default PromptGroup;

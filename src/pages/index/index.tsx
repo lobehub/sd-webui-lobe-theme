@@ -1,6 +1,6 @@
 import { ThemeProvider, setupStyled } from 'antd-style';
 import qs from 'query-string';
-import React, { useEffect, useState } from 'react';
+import { memo, useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 // @ts-ignore
 import ReactFontLoader from 'react-font-loader';
@@ -18,7 +18,7 @@ import App from './App';
 import GlobalStyle from './GlobalStyle';
 import { baseToken } from './style';
 
-const Root: React.FC = () => {
+const Root = memo(() => {
   setupStyled({ ThemeContext });
   const [onSetThemeMode, onInit] = useAppStore((st) => [st.onSetThemeMode, st.onInit], shallow);
   const isDarkMode = useIsDarkMode();
@@ -54,7 +54,7 @@ const Root: React.FC = () => {
       <App />
     </ThemeProvider>
   );
-};
+});
 
 document.addEventListener(
   'DOMContentLoaded',

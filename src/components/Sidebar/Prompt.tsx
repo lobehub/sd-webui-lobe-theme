@@ -1,8 +1,12 @@
-import React, { useCallback, useState } from 'react';
+import { memo, useCallback, useState } from 'react';
 import styled from 'styled-components';
 
 import TagList, { PromptType, TagItem } from './TagList';
 import { formatPrompt } from './utils';
+
+/******************************************************
+ *********************** Style *************************
+ ******************************************************/
 
 const View = styled.div`
   display: flex;
@@ -36,11 +40,15 @@ const Btn = styled.button`
   border-radius: var(--input-radius);
 `;
 
+/******************************************************
+ ************************* Dom *************************
+ ******************************************************/
+
 interface PromptProps {
   type: PromptType;
 }
 
-const Prompt: React.FC<PromptProps> = ({ type }) => {
+const Prompt = memo<PromptProps>(({ type }) => {
   const [tags, setTags] = useState<TagItem[]>([]);
 
   const id =
@@ -82,6 +90,6 @@ const Prompt: React.FC<PromptProps> = ({ type }) => {
       </BtnGroup>
     </View>
   );
-};
+});
 
-export default React.memo(Prompt);
+export default Prompt;

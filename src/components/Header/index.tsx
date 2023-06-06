@@ -2,7 +2,7 @@ import { BoldOutlined, GithubOutlined } from '@ant-design/icons';
 import { Button, Modal, Space } from 'antd';
 import { useResponsive } from 'antd-style';
 import qs from 'query-string';
-import React, { useCallback, useEffect, useState } from 'react';
+import { type ReactNode, memo, useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { shallow } from 'zustand/shallow';
 
@@ -26,8 +26,7 @@ const HeaderView = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  height: var(--chrome-fill-available);
-  height: var(--firefox-fill-available);
+  height: var(--fill-available);
   padding: 16px 24px;
 `;
 
@@ -36,10 +35,10 @@ const HeaderView = styled.div`
  ******************************************************/
 
 interface HeaderProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-const Header: React.FC<HeaderProps> = ({ children }) => {
+const Header = memo<HeaderProps>(({ children }) => {
   const [themeMode] = useAppStore((st) => [st.themeMode], shallow);
   const { mobile } = useResponsive();
   const [expand, setExpand] = useState<boolean>(true);
@@ -119,6 +118,6 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
       </Modal>
     </>
   );
-};
+});
 
-export default React.memo(Header);
+export default Header;

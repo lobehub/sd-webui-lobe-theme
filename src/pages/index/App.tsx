@@ -1,6 +1,6 @@
 import { Spin } from 'antd';
 import { useResponsive } from 'antd-style';
-import React, { useEffect, useRef, useState } from 'react';
+import { memo, useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { shallow } from 'zustand/shallow';
 
@@ -40,7 +40,7 @@ const LoadingBox = styled.div`
   height: 100%;
 `;
 
-const App: React.FC = () => {
+const App = memo(() => {
   const [currentTab, setCurrentTab, setting] = useAppStore(
     (st) => [st.currentTab, st.setCurrentTab, st.setting],
     shallow,
@@ -159,6 +159,6 @@ const App: React.FC = () => {
       </View>
     </MainView>
   );
-};
+});
 
-export default React.memo(App);
+export default App;

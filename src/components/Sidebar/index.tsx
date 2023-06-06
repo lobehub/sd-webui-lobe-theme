@@ -1,5 +1,5 @@
 import { useResponsive } from 'antd-style';
-import React, { CSSProperties, useEffect, useState } from 'react';
+import { type CSSProperties, type ReactNode, memo, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { shallow } from 'zustand/shallow';
 
@@ -8,22 +8,28 @@ import { useAppStore } from '@/store';
 
 import PromptGroup from './PromptGroup';
 
+/******************************************************
+ *********************** Style *************************
+ ******************************************************/
+
 const SidebarView = styled.div`
   overflow-x: hidden;
   overflow-y: auto;
-
-  height: var(--chrome-fill-available);
-  height: var(--firefox-fill-available);
+  height: var(--fill-available);
   padding: 16px;
 `;
 
+/******************************************************
+ ************************* Dom *************************
+ ******************************************************/
+
 interface SidebarProps {
-  children: React.ReactNode;
+  children: ReactNode;
   loading?: boolean;
   style?: CSSProperties;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ children, loading, style }) => {
+const Sidebar = memo<SidebarProps>(({ children, loading, style }) => {
   const [setting] = useAppStore((st) => [st.setting], shallow);
   const [mode] = useState<'fixed' | 'float'>(setting.sidebarFixedMode);
   const { mobile } = useResponsive();
@@ -54,6 +60,6 @@ const Sidebar: React.FC<SidebarProps> = ({ children, loading, style }) => {
       </SidebarView>
     </DraggablePanel>
   );
-};
+});
 
-export default React.memo(Sidebar);
+export default Sidebar;

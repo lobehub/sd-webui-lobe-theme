@@ -1,6 +1,5 @@
-// import { useAppStore } from '@/store'
 import { FloatButton } from 'antd';
-import React, { useRef } from 'react';
+import { type ReactNode, memo, useRef } from 'react';
 import styled from 'styled-components';
 import { shallow } from 'zustand/shallow';
 
@@ -21,11 +20,11 @@ const ContentView = styled.div<{ isPromptResizable: boolean }>`
 `;
 
 interface ContentProps {
-  children: React.ReactNode;
+  children: ReactNode;
   loading?: boolean;
 }
 
-const Content: React.FC<ContentProps> = ({ children }) => {
+const Content = memo<ContentProps>(({ children }) => {
   const ref: any = useRef(null);
   const [setting] = useAppStore((st) => [st.setting], shallow);
 
@@ -35,6 +34,6 @@ const Content: React.FC<ContentProps> = ({ children }) => {
       <FloatButton.BackTop target={() => ref.current} />
     </ContentView>
   );
-};
+});
 
-export default React.memo(Content);
+export default Content;

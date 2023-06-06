@@ -1,14 +1,14 @@
-import React from 'react';
+import { type CSSProperties, memo } from 'react';
 
 import { darkLogo, lightLogo } from './style';
 
 interface LogoProps {
   size?: number;
-  style?: React.CSSProperties;
+  style?: CSSProperties;
   themeMode: 'dark' | 'light';
 }
 
-const Logo: React.FC<LogoProps> = ({ size = 20, style, themeMode }) => {
+const Logo = memo<LogoProps>(({ size = 20, style, themeMode }) => {
   return (
     <img
       alt="logo"
@@ -16,6 +16,6 @@ const Logo: React.FC<LogoProps> = ({ size = 20, style, themeMode }) => {
       style={{ height: size, ...style }}
     />
   );
-};
+});
 
-export default React.memo(Logo);
+export default Logo;

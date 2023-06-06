@@ -1,7 +1,11 @@
 import type { MenuProps } from 'antd';
 import { Menu } from 'antd';
-import React, { useEffect, useState } from 'react';
+import { memo, useEffect, useState } from 'react';
 import styled from 'styled-components';
+
+/******************************************************
+ *********************** Style *************************
+ ******************************************************/
 
 const NavBar = styled(Menu)`
   overflow: hidden;
@@ -30,7 +34,11 @@ const NavBar = styled(Menu)`
   }
 `;
 
-const Nav: React.FC = () => {
+/******************************************************
+ ************************* Dom *************************
+ ******************************************************/
+
+const Nav = memo(() => {
   const [items, setItems] = useState<MenuProps['items']>([]);
 
   useEffect(() => {
@@ -64,6 +72,6 @@ const Nav: React.FC = () => {
       onClick={onClick}
     />
   );
-};
+});
 
 export default Nav;

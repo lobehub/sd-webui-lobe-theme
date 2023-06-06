@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo } from 'react';
+import { type FC, memo, useCallback, useMemo } from 'react';
 import { WithContext, ReactTagsProps as WithContextProps } from 'react-tag-input';
 import styled from 'styled-components';
 
@@ -18,15 +18,14 @@ interface ReactTagsProps extends WithContextProps {
 }
 
 // @ts-ignore
-const ReactTags: React.FC<ReactTagsProps> = WithContext;
+const ReactTags: FC<ReactTagsProps> = WithContext;
 
 const View = styled.div<{ type: PromptType }>`
   /* Styles for the input */
   .ReactTags__editTagInput,
   .ReactTags__tagInput {
     display: inline-block;
-    width: var(--chrome-fill-available);
-    width: var(--firefox-fill-available);
+    width: var(--fill-available);
     margin: 0;
 
     input,
@@ -34,9 +33,7 @@ const View = styled.div<{ type: PromptType }>`
       position: relative;
 
       display: block;
-
-      width: var(--chrome-fill-available);
-      width: var(--firefox-fill-available);
+      width: var(--fill-available);
       margin: 0;
       padding: var(--input-padding);
 
@@ -170,7 +167,7 @@ interface TagListProps {
   type: PromptType;
 }
 
-const TagList: React.FC<TagListProps> = ({ tags, setTags, type, setValue }) => {
+const TagList = memo<TagListProps>(({ tags, setTags, type, setValue }) => {
   const handleDelete = useCallback(
     (i: number) => {
       const newTags = tags.filter((tag, index) => index !== i);
@@ -229,6 +226,6 @@ const TagList: React.FC<TagListProps> = ({ tags, setTags, type, setValue }) => {
       />
     </View>
   );
-};
+});
 
-export default React.memo(TagList);
+export default TagList;

@@ -1,7 +1,7 @@
 import { ZoomInOutlined } from '@ant-design/icons';
 import { Slider } from 'antd';
 import { useResponsive } from 'antd-style';
-import React, { CSSProperties, useEffect, useState } from 'react';
+import { type CSSProperties, type ReactNode, memo, useEffect, useState } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import { shallow } from 'zustand/shallow';
 
@@ -19,9 +19,7 @@ const View = styled.div`
   overflow: hidden;
   display: flex;
   flex-direction: column;
-
-  height: var(--chrome-fill-available);
-  height: var(--firefox-fill-available);
+  height: var(--fill-available);
 `;
 
 const SidebarView = styled.div<{ size: number }>`
@@ -45,8 +43,7 @@ const SidebarView = styled.div<{ size: number }>`
     grid-template-columns: repeat(auto-fill, minmax(${({ size }) => size}px, 1fr));
 
     > .card {
-      width: fill-available !important;
-      width: available !important;
+      width: var(--fill-available) !important;
       height: ${({ size }) => size * 1.5}px !important;
     }
   }
@@ -69,12 +66,12 @@ const ZoomSlider = styled(Slider)`
 `;
 
 interface SidebarProps {
-  children: React.ReactNode;
+  children: ReactNode;
   loading?: boolean;
   style?: CSSProperties;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ children, style }) => {
+const Sidebar = memo<SidebarProps>(({ children, style }) => {
   const { mobile } = useResponsive();
   const [setting] = useAppStore((st) => [st.setting], shallow);
   const [mode] = useState<'fixed' | 'float'>(setting.extraNetworkFixedMode);
@@ -112,6 +109,6 @@ const Sidebar: React.FC<SidebarProps> = ({ children, style }) => {
       </DraggablePanel>
     </>
   );
-};
+});
 
-export default React.memo(Sidebar);
+export default Sidebar;
