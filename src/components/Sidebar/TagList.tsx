@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo } from 'react';
-import { WithContext, ReactTagsProps as WithContextProps } from 'react-tag-input';
+import { ReactTagsProps as WithContextProps,WithContext } from 'react-tag-input';
 import styled from 'styled-components';
 
 import { genTagType, suggestions } from './utils';

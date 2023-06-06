@@ -1,14 +1,14 @@
-import { placementType } from './index'
+import { placementType } from './index';
 
 export const revesePlacement = (placement: placementType) => {
   switch (placement) {
     case 'bottom':
-      return 'top'
+      return 'top';
     case 'top':
-      return 'bottom'
+      return 'bottom';
     case 'right':
-      return 'left'
+      return 'left';
     case 'left':
-      return 'right'
+      return 'right';
   }
-}
+};

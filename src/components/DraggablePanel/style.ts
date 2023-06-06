@@ -1,8 +1,8 @@
-import { createStyles, css, cx } from 'antd-style'
+import { createStyles, css, cx } from 'antd-style';
 
-const offset = 17
-const toggleLength = 40
-const toggleShort = 16
+const offset = 17;
+const toggleLength = 40;
+const toggleShort = 16;
 
 export const useStyle = createStyles(({ token }, prefix: string) => {
   const commonHandle = css`
@@ -20,7 +20,7 @@ export const useStyle = createStyles(({ token }, prefix: string) => {
         background: ${token.colorPrimary};
       }
     }
-  `
+  `;
 
   const commonToggle = css`
     position: absolute;
@@ -61,12 +61,12 @@ export const useStyle = createStyles(({ token }, prefix: string) => {
         background: ${token.colorFill};
       }
     }
-  `
+  `;
 
   const float = css`
     position: absolute;
     z-index: 2000;
-  `
+  `;
 
   return {
     container: cx(
@@ -80,7 +80,7 @@ export const useStyle = createStyles(({ token }, prefix: string) => {
             opacity: 1;
           }
         }
-      `
+      `,
     ),
     fixed: css`
       position: relative;
@@ -92,7 +92,7 @@ export const useStyle = createStyles(({ token }, prefix: string) => {
         bottom: 0;
         left: 0;
         height: 100%;
-      `
+      `,
     ),
     rightFloat: cx(
       float,
@@ -101,7 +101,7 @@ export const useStyle = createStyles(({ token }, prefix: string) => {
         right: 0;
         bottom: 0;
         height: 100%;
-      `
+      `,
     ),
     topFloat: cx(
       float,
@@ -110,7 +110,7 @@ export const useStyle = createStyles(({ token }, prefix: string) => {
         right: 0;
         left: 0;
         width: 100%;
-      `
+      `,
     ),
     bottomFloat: cx(
       float,
@@ -119,7 +119,7 @@ export const useStyle = createStyles(({ token }, prefix: string) => {
         bottom: 0;
         left: 0;
         width: 100%;
-      `
+      `,
     ),
     toggleLeft: cx(
       `${prefix}-toggle`,
@@ -138,7 +138,7 @@ export const useStyle = createStyles(({ token }, prefix: string) => {
 
           border-radius: 4px 0 0 4px;
         }
-      `
+      `,
     ),
     toggleRight: cx(
       `${prefix}-toggle`,
@@ -157,7 +157,7 @@ export const useStyle = createStyles(({ token }, prefix: string) => {
 
           border-radius: 0 4px 4px 0;
         }
-      `
+      `,
     ),
     toggleTop: cx(
       `${prefix}-toggle`,
@@ -177,7 +177,7 @@ export const useStyle = createStyles(({ token }, prefix: string) => {
 
           border-radius: 4px 4px 0 0;
         }
-      `
+      `,
     ),
     toggleBottom: cx(
       `${prefix}-toggle`,
@@ -197,7 +197,7 @@ export const useStyle = createStyles(({ token }, prefix: string) => {
 
           border-radius: 0 0 4px 4px;
         }
-      `
+      `,
     ),
     panel: cx(
       `${prefix}-fixed`,
@@ -205,7 +205,7 @@ export const useStyle = createStyles(({ token }, prefix: string) => {
         overflow: hidden;
         background: ${token.colorBgContainer};
         transition: all 0.2s ${token.motionEaseOut};
-      `
+      `,
     ),
     handlerIcon: css`
       display: flex;
@@ -223,7 +223,7 @@ export const useStyle = createStyles(({ token }, prefix: string) => {
           height: 100%;
         }
       `,
-      `${prefix}-left-handle`
+      `${prefix}-left-handle`,
     ),
     rightHandle: cx(
       css`
@@ -234,7 +234,7 @@ export const useStyle = createStyles(({ token }, prefix: string) => {
           height: 100%;
         }
       `,
-      `${prefix}-right-handle`
+      `${prefix}-right-handle`,
     ),
     topHandle: cx(
       `${prefix}-top-handle`,
@@ -246,7 +246,7 @@ export const useStyle = createStyles(({ token }, prefix: string) => {
           width: 100%;
           height: 2px;
         }
-      `
+      `,
     ),
     bottomHandle: cx(
       `${prefix}-bottom-handle`,
@@ -258,7 +258,7 @@ export const useStyle = createStyles(({ token }, prefix: string) => {
           width: 100%;
           height: 2px;
         }
-      `
+      `,
     ),
-  }
-})
+  };
+});

@@ -1,25 +1,25 @@
-import { defineConfig } from 'umi'
-import WebpackShellPlugin from 'webpack-shell-plugin-next'
+import { defineConfig } from 'umi';
+import WebpackShellPlugin from 'webpack-shell-plugin-next';
 // @ts-ignore
-import CssMinimizerPlugin from 'css-minimizer-webpack-plugin'
+import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
 // @ts-ignore
-import lightningcss from 'lightningcss'
+import lightningcss from 'lightningcss';
 // @ts-ignore
-import browserslist from 'browserslist'
+import browserslist from 'browserslist';
 
 const mac = [
   'rm ./javascript/index.js',
   'rm ./style.css',
   'cp ./dist/index.js ./javascript/index.js',
   'cp ./dist/index.css ./style.css',
-]
+];
 
 const win = [
   'del javascript\\index.js',
   'del style.css',
   'copy dist\\index.js javascript\\index.js',
   'copy dist\\index.css style.css',
-]
+];
 
 export default defineConfig({
   routes: [{ path: '/', component: 'index' }],
@@ -48,7 +48,7 @@ export default defineConfig({
           targets: lightningcss.browserslistToTargets(browserslist('>= 0.25%')),
         },
       },
-    ])
+    ]);
     memo.plugin('shell').use(WebpackShellPlugin, [
       {
         onBuildExit: {
@@ -57,6 +57,6 @@ export default defineConfig({
           parallel: false,
         },
       },
-    ])
+    ]);
   },
-})
+});

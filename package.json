@@ -13,38 +13,38 @@
     "build": "umi build",
     "dev": "umi build",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
-    "lint:md": "remark . -f -q",
+    "lint:md": "remark . --quiet --frail --output",
+    "lint:style": "stylelint \"src/**/*.{css,less,js,jsx,ts,tsx}\" --fix",
     "prepare": "husky install",
     "prettier": "prettier -c --write \"**/**\"",
     "release": "semantic-release",
     "sd-debug": "cd ../../ && ./webui.sh",
     "setup": "umi setup",
     "start": "umi build",
-    "stylelint": "stylelint \"src/**/*.{css,less,js,jsx,ts,tsx}\" --fix",
     "test": "npm run lint",
     "type-check": "tsc -p tsconfig-check.json"
   },
   "lint-staged": {
     "*.md": [
-      "remark -f -q",
+      "remark --quiet --frail --output --",
       "prettier --write --no-error-on-unmatched-pattern"
     ],
     "*.json": [
       "prettier --write --no-error-on-unmatched-pattern"
     ],
     "*.{css,less}": [
-      "stylelint --fix",
+      "stylelint --fix --allow-empty-input",
       "prettier --write"
     ],
     "*.{js,jsx}": [
-      "stylelint --fix",
-      "eslint --fix",
-      "prettier --write"
+      "prettier --write",
+      "stylelint --fix --allow-empty-input",
+      "eslint --fix"
     ],
     "*.{ts,tsx}": [
+      "prettier --parser=typescript --write",
       "stylelint --fix",
-      "eslint --fix",
-      "prettier --parser=typescript --write"
+      "eslint --fix"
     ]
   },
   "devDependencies": {
@@ -79,10 +79,10 @@
     "lint-staged": "^13",
     "lodash-es": "^4",
     "lucide-react": "^0",
-    "object-to-css-variables": "^0.2",
+    "object-to-css-variables": "^0",
     "polished": "^4",
     "postcss-less": "^6",
-    "postcss-styled-syntax": "^0.4",
+    "postcss-styled-syntax": "^0",
     "prettier": "^2",
     "prettier-plugin-organize-imports": "^3",
     "prettier-plugin-packagejson": "^2",
@@ -100,6 +100,7 @@
     "remark-lint": "^9",
     "remark-lint-list-item-indent": "^3",
     "remark-preset-lint-recommended": "^6",
+    "remark-toc": "^8",
     "semantic-release": "^21",
     "semantic-release-config-gitmoji": "^1",
     "styled-components": "^5",

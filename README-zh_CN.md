@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  
+
 <img width="160" src="https://gw.alipayobjects.com/mdn/rms_7d1485/afts/img/A*XDYxSJXBjjwAAAAAAAAAAAAAARQnAQ">
 
 <h1 align="center">Kitchen Theme</h1>
@@ -15,8 +15,7 @@ Kitchen Theme for Stable Diffusion WebUI
 [![release][release-shield]][release-url]
 [![releaseDate][release-date-shield]][release-date-url]
 [![ciTest][ci-test-shield]][ci-test-url]
-[![ciRelease][ci-release-shield]][ci-release-url]
-<br/>
+[![ciRelease][ci-release-shield]][ci-release-url] <br/>
 [![contributors][contributors-shield]][contributors-url]
 [![forks][forks-shield]][forks-url]
 [![stargazers][stargazers-shield]][stargazers-url]
@@ -26,7 +25,23 @@ Kitchen Theme for Stable Diffusion WebUI
 
 ![](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/blob/main/assets/screenshot.webp?raw=true)
 
-> ⚠️⚠️⚠️ 警告：最低要求 gradio-3.23.0 & sd-webui [4c1ad74](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commit/4c1ad743e3baf1246db0711aa0107debf036a12b)
+<details>
+<summary><kbd>文档目录</kbd></summary>
+
+#### TOC
+
+- [✨ 特性](#-特性)
+- [🖥 兼容环境](#-兼容环境)
+- [📦 安装](#-安装)
+- [⚒️ 推荐设置](#️-推荐设置)
+- [🪄 提示词格式化](#-提示词格式化)
+- [⌨️ 本地开发](#️-本地开发)
+- [🤝 参与贡献](#-参与贡献)
+- [🔗 链接](#-链接)
+
+####
+
+</details>
 
 <br/>
 
@@ -77,6 +92,8 @@ set COMMANDLINE_ARGS= --theme=dark
 http://localhost:7860/?__theme=light
 http://localhost:7860/?__theme=dark
 ```
+
+> ⚠️ 警告：最低要求 gradio-3.23.0 & sd-webui [4c1ad74](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commit/4c1ad743e3baf1246db0711aa0107debf036a12b)
 
 <div align="right">
 

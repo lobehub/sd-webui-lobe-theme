@@ -15,8 +15,7 @@ English · [简体中文](./README-zh_CN.md) · [Changelog](./CHANGELOG.md) · [
 [![release][release-shield]][release-url]
 [![releaseDate][release-date-shield]][release-date-url]
 [![ciTest][ci-test-shield]][ci-test-url]
-[![ciRelease][ci-release-shield]][ci-release-url]
-<br/>
+[![ciRelease][ci-release-shield]][ci-release-url] <br/>
 [![contributors][contributors-shield]][contributors-url]
 [![forks][forks-shield]][forks-url]
 [![stargazers][stargazers-shield]][stargazers-url]
@@ -26,7 +25,23 @@ English · [简体中文](./README-zh_CN.md) · [Changelog](./CHANGELOG.md) · [
 
 ![](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/blob/main/assets/screenshot.webp?raw=true)
 
-> ⚠️⚠️⚠️ Warning: minimum requirements gradio-3.23.0 & sd-webui [4c1ad74](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commit/4c1ad743e3baf1246db0711aa0107debf036a12b)
+<details>
+<summary><kbd>Table of contents</kbd></summary>
+
+#### TOC
+
+- [✨ Features](#-features)
+- [🖥 Environment Support](#-environment-support)
+- [📦 Installation](#-installation)
+- [⚒️ Recommended Settings](#️-recommended-settings)
+- [🪄 Prompt formatting](#-prompt-formatting)
+- [⌨️ Local Development](#️-local-development)
+- [🤝 Contributing](#-contributing)
+- [🔗 Credits](#-credits)
+
+####
+
+</details>
 
 <br/>
 
@@ -78,6 +93,8 @@ Alternatively, you can switch directly through URL Props:
 http://localhost:7860/?__theme=light
 http://localhost:7860/?__theme=dark
 ```
+
+> ⚠️ Warning: minimum requirements gradio-3.23.0 & sd-webui [4c1ad74](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commit/4c1ad743e3baf1246db0711aa0107debf036a12b)
 
 <div align="right">
 
