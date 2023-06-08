@@ -89,6 +89,7 @@
     "react-tag-input": "^6",
     "remark": "^14",
     "remark-cli": "^11",
+    "semantic-release": "^21",
     "styled-components": "^5",
     "stylelint": "^15",
     "typescript": "^5",
