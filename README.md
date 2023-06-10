@@ -194,7 +194,7 @@ $ npm start
 
 <!-- CONTRIBUTION GROUP -->
 
-> 📊 Total: <kbd>**5**</kbd>
+> 📊 Total: <kbd>**6**</kbd>
 
 <a href="https://github.com/canisminor1990" title="canisminor1990">
   <img src="https://avatars.githubusercontent.com/u/17870709?v=4" width="50" />
@@ -207,6 +207,9 @@ $ npm start
 </a>
 <a href="https://github.com/web-97" title="web-97">
   <img src="https://avatars.githubusercontent.com/u/46352788?v=4" width="50" />
+</a>
+<a href="https://github.com/StimeKe" title="StimeKe">
+  <img src="https://avatars.githubusercontent.com/u/25315788?v=4" width="50" />
 </a>
 <a href="https://github.com/alwayshopeless" title="alwayshopeless">
   <img src="https://avatars.githubusercontent.com/u/38844539?v=4" width="50" />
