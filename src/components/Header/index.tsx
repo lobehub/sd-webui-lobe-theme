@@ -1,4 +1,4 @@
-import { BoldOutlined, GithubOutlined } from '@ant-design/icons';
+import { BoldOutlined, GithubOutlined, SnippetsFilled } from '@ant-design/icons';
 import { Button, Modal, Space } from 'antd';
 import { useResponsive } from 'antd-style';
 import qs from 'query-string';
@@ -90,6 +90,13 @@ const Header = memo<HeaderProps>(({ children }) => {
               target="_blank"
             >
               <Button icon={<BoldOutlined />} title="Birme" />
+            </a>
+            <a
+              href="https://supagruen.github.io/StableDiffusion-CheatSheet"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <Button icon={<SnippetsFilled />} title="Cheat Sheet" />
             </a>
             <Button icon={<GithubOutlined />} onClick={showModal} title="Feedback" />
             <Setting />
