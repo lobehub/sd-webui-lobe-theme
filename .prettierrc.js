@@ -1,1 +1,1 @@
-module.exports = require('@lobehub/lint/dist/prettier');
+module.exports = require('@lobehub/lint').prettier;

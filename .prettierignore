@@ -1,29 +1,60 @@
-**/*.svg
-.umi
-.umi-production
-/dist
-.dockerignore
+# Prettierignore for LobeHub
+################################################################
+
+# general
 .DS_Store
-.eslintignore
-*.png
-*.jpg
-*.webp
-*.toml
-*.py
-docker
 .editorconfig
-Dockerfile*
-.gitignore
-.prettierignore
-LICENSE
-.eslintcache
-*.lock
-yarn-error.log
 .idea
+.vscode
+.history
+.temp
+.env.local
 .husky
 .npmrc
-.env
-.env.local
+venv
+temp
+tmp
+LICENSE
+
+# dependencies
+node_modules
+*.log
+*.lock
+package-lock.json
+
+# ci
+.coverage
+.eslintcache
+.stylelintcache
+test-output
+
+# production
+dist
+es
+lib
+logs
+
+# umi
+.umi
+.umi-production
+.umi-test
+.dumi/tmp*
+
+# ignore files
+.*ignore
+
+# docker
+docker
+Dockerfile*
+
+# image
+*.webp
+*.gif
+*.png
+*.jpg
+
+# misc
+# add other ignore file below
 style.css
 javascript/
 .stylelintignore

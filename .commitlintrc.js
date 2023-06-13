@@ -1,1 +1,1 @@
-module.exports = require('@lobehub/lint/dist/commitlint');
+module.exports = require('@lobehub/lint').commitlint;

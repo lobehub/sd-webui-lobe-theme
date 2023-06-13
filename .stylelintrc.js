@@ -1,5 +1,5 @@
 module.exports = {
-  extends: require.resolve('@lobehub/lint/dist/stylelint'),
+  ...require('@lobehub/lint').stylelint,
   rules: {
     'selector-class-pattern': null,
     'selector-id-pattern': null,

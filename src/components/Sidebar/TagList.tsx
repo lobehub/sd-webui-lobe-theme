@@ -33,6 +33,7 @@ const View = styled.div<{ type: PromptType }>`
       position: relative;
 
       display: block;
+
       width: var(--fill-available);
       margin: 0;
       padding: var(--input-padding);

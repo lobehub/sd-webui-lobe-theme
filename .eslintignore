@@ -1,14 +1,30 @@
-/scripts
-/config
-/example
+# Eslintignore for LobeHub
+################################################################
+
+# dependencies
+node_modules
+
+# ci
+.coverage
+
+# test
+jest*
 _test_
 __test__
 
-/node_modules
-jest*
-/es
-/lib
-/docs
-/dist
-/javascript
+# umi
+.umi
+.umi-production
+.umi-test
+.dumi/tmp*
+
+# production
+dist
+es
+lib
+logs
+
+# misc
+# add other ignore file below
+javascript
 style.css
