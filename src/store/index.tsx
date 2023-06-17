@@ -1,5 +1,5 @@
-import { create } from 'zustand';
-import { devtools } from 'zustand/middleware';
+import {create} from 'zustand';
+import {devtools} from 'zustand/middleware';
 
 const SETTING_KEY = 'SD-KITCHEN-SETTING';
 
@@ -17,16 +17,16 @@ export interface WebuiSetting {
 }
 
 export const defaultSetting: WebuiSetting = {
-  promotTextarea: 'scroll',
-  sidebarExpand: true,
-  sidebarFixedMode: 'fixed',
-  sidebarWidth: 280,
-  enableExtraNetworkSidebar: true,
-  extraNetworkSidebarExpand: true,
-  extraNetworkFixedMode: 'fixed',
-  extraNetworkSidebarWidth: 340,
-  extraNetworkCardSize: 86,
-  svgIcon: false,
+    enableExtraNetworkSidebar: true,
+    extraNetworkCardSize: 86,
+    extraNetworkFixedMode: 'fixed',
+    extraNetworkSidebarExpand: true,
+    extraNetworkSidebarWidth: 340,
+    promotTextarea: 'scroll',
+    sidebarExpand: true,
+    sidebarFixedMode: 'fixed',
+    sidebarWidth: 280,
+    svgIcon: false,
 };
 export interface AppState {
   currentTab: string;
@@ -39,33 +39,33 @@ export interface AppState {
   themeMode: 'light' | 'dark';
 }
 export const useAppStore = create<AppState>()(
-  devtools((set, get) => ({
-    themeMode: 'light',
-    setting: defaultSetting,
-    currentTab: 'tab_txt2img',
-    setCurrentTab: () => {
-      const currentTab = get_uiCurrentTabContent().id;
-      if (currentTab !== get().currentTab) set({ currentTab }, false, 'setCurrentTab');
-    },
-    onSetThemeMode: (themeMode) => {
-      set(() => ({ themeMode }), false, 'onSetThemeMode');
-    },
-    onLoadSetting: () => {
-      let setting: any = localStorage.getItem(SETTING_KEY);
-      if (setting) {
-        setting = JSON.parse(setting);
-      } else {
-        setting = defaultSetting;
-        localStorage.setItem(SETTING_KEY, JSON.stringify(defaultSetting));
-      }
-      set(() => ({ setting: { ...defaultSetting, ...setting } }), false, 'onLoadSetting');
-    },
-    onSetSetting: (setting) => {
-      localStorage.setItem(SETTING_KEY, JSON.stringify(setting));
-      set(() => ({ setting }), false, 'onSetSetting');
-    },
-    onInit: () => {
-      get().onLoadSetting();
-    },
-  })),
+    devtools((set, get) => ({
+        currentTab: 'tab_txt2img',
+        onInit: () => {
+            get().onLoadSetting();
+        },
+        onLoadSetting: () => {
+            let setting: any = localStorage.getItem(SETTING_KEY);
+            if (setting) {
+                setting = JSON.parse(setting);
+            } else {
+                setting = defaultSetting;
+                localStorage.setItem(SETTING_KEY, JSON.stringify(defaultSetting));
+            }
+            set(() => ({setting: {...defaultSetting, ...setting}}), false, 'onLoadSetting');
+        },
+        onSetSetting: (setting) => {
+            localStorage.setItem(SETTING_KEY, JSON.stringify(setting));
+            set(() => ({setting}), false, 'onSetSetting');
+        },
+        onSetThemeMode: (themeMode) => {
+            set(() => ({themeMode}), false, 'onSetThemeMode');
+        },
+        setCurrentTab: () => {
+            const currentTab = get_uiCurrentTabContent().id;
+            if (currentTab !== get().currentTab) set({currentTab}, false, 'setCurrentTab');
+        },
+        setting: defaultSetting,
+        themeMode: 'light',
+    })),
 );

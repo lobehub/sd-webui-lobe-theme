@@ -1,8 +1,8 @@
-import { memo, useCallback, useState } from 'react';
+import {memo, useCallback, useState} from 'react';
 import styled from 'styled-components';
 
-import TagList, { PromptType, TagItem } from './TagList';
-import { formatPrompt } from './utils';
+import TagList, {PromptType, TagItem} from './TagList';
+import {formatPrompt} from './utils';
 
 /******************************************************
  *********************** Style *************************
@@ -14,12 +14,12 @@ const View = styled.div`
   gap: 8px;
 `;
 
-const BtnGroup = styled.div`
+const ButtonGroup = styled.div`
   display: flex;
   gap: 8px;
 `;
 
-const Btn = styled.button`
+const Button = styled.button`
   cursor: pointer;
 
   position: relative;
@@ -48,48 +48,54 @@ interface PromptProps {
   type: PromptType;
 }
 
-const Prompt = memo<PromptProps>(({ type }) => {
-  const [tags, setTags] = useState<TagItem[]>([]);
+const Prompt = memo<PromptProps>(({type}) => {
+    const [tags, setTags] = useState<TagItem[]>([]);
 
-  const id =
+    const id =
     type === 'positive' ? "[id$='2img_prompt'] textarea" : "[id$='2img_neg_prompt'] textarea";
 
-  const getValue = useCallback(() => {
-    try {
-      const textarea: HTMLTextAreaElement | any = get_uiCurrentTabContent().querySelector(id);
-      if (textarea) setTags(formatPrompt(textarea.value));
-    } catch {}
-  }, []);
+    const getValue = useCallback(() => {
+        try {
+            const textarea: HTMLTextAreaElement | any = get_uiCurrentTabContent().querySelector(id);
+            if (textarea) setTags(formatPrompt(textarea.value));
+        } catch (error) {
+            console.log(error);
+        }
+    }, []);
 
-  const setValue = useCallback(() => {
-    try {
-      const textarea: HTMLTextAreaElement | any = get_uiCurrentTabContent().querySelector(id);
-      if (textarea) textarea.value = tags.map((t) => t.text).join(', ');
-      updateInput(textarea);
-    } catch {}
-  }, [tags]);
+    const setValue = useCallback(() => {
+        try {
+            const textarea: HTMLTextAreaElement | any = get_uiCurrentTabContent().querySelector(id);
+            if (textarea) textarea.value = tags.map((t) => t.text).join(', ');
+            updateInput(textarea);
+        } catch (error) {
+            console.log(error);
+        }
+    }, [tags]);
 
-  const setCurrentValue = useCallback((currentTags: TagItem[]) => {
-    try {
-      const textarea: HTMLTextAreaElement | any = get_uiCurrentTabContent().querySelector(id);
-      if (textarea) textarea.value = currentTags.map((t) => t.text).join(', ');
-      updateInput(textarea);
-    } catch {}
-  }, []);
+    const setCurrentValue = useCallback((currentTags: TagItem[]) => {
+        try {
+            const textarea: HTMLTextAreaElement | any = get_uiCurrentTabContent().querySelector(id);
+            if (textarea) textarea.value = currentTags.map((t) => t.text).join(', ');
+            updateInput(textarea);
+        } catch (error) {
+            console.log(error);
+        }
+    }, []);
 
-  return (
-    <View>
-      <TagList setTags={setTags} setValue={setCurrentValue} tags={tags} type={type} />
-      <BtnGroup>
-        <Btn onClick={getValue} title="Load Prompt">
+    return (
+        <View>
+            <TagList setTags={setTags} setValue={setCurrentValue} tags={tags} type={type} />
+            <ButtonGroup>
+                <Button onClick={getValue} title="Load Prompt">
           🔄
-        </Btn>
-        <Btn onClick={setValue} title="Set Prompt">
+                </Button>
+                <Button onClick={setValue} title="Set Prompt">
           ➡️
-        </Btn>
-      </BtnGroup>
-    </View>
-  );
+                </Button>
+            </ButtonGroup>
+        </View>
+    );
 });
 
 export default Prompt;

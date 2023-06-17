@@ -1,8 +1,8 @@
-import { type FC, memo, useCallback, useMemo } from 'react';
-import { WithContext, ReactTagsProps as WithContextProps } from 'react-tag-input';
+import {type FC, memo, useCallback, useMemo} from 'react';
+import {WithContext, ReactTagsProps as WithContextProps} from 'react-tag-input';
 import styled from 'styled-components';
 
-import { genTagType, suggestions } from './utils';
+import {genTagType, suggestions} from './utils';
 
 export interface TagItem {
   className?: string;
@@ -73,14 +73,14 @@ const View = styled.div<{ type: PromptType }>`
       font-size: var(--text-sm);
       font-weight: var(--input-text-weight);
       line-height: var(--line-sm);
-      color: ${({ type }) => (type === 'positive' ? 'var(--green-9)' : 'var(--magenta-9)')};
+      color: ${({type}) => (type === 'positive' ? 'var(--green-9)' : 'var(--magenta-9)')};
 
       background: var(--button-secondary-background-fill);
       border: var(--button-border-width) solid var(--button-secondary-border-color);
       border-radius: var(--input-radius);
 
       &:hover {
-        color: ${({ type }) => (type === 'positive' ? 'var(--green-10)' : 'var(--magenta-10)')};
+        color: ${({type}) => (type === 'positive' ? 'var(--green-10)' : 'var(--magenta-10)')};
       }
     }
 
@@ -155,8 +155,8 @@ const View = styled.div<{ type: PromptType }>`
 `;
 
 const KeyCodes = {
-  comma: 188,
-  enter: 13,
+    comma: 188,
+    enter: 13,
 };
 
 const delimiters = [KeyCodes.comma, KeyCodes.enter];
@@ -168,65 +168,65 @@ interface TagListProps {
   type: PromptType;
 }
 
-const TagList = memo<TagListProps>(({ tags, setTags, type, setValue }) => {
-  const handleDelete = useCallback(
-    (i: number) => {
-      const newTags = tags.filter((tag, index) => index !== i);
-      setTags(newTags);
-      setValue(newTags);
-    },
-    [tags],
-  );
+const TagList = memo<TagListProps>(({tags, setTags, type, setValue}) => {
+    const handleDelete = useCallback(
+        (index_: number) => {
+            const newTags = tags.filter((tag, index) => index !== index_);
+            setTags(newTags);
+            setValue(newTags);
+        },
+        [tags],
+    );
 
-  const handleAddition = useCallback(
-    (tag: TagItem) => {
-      const newTags = [...tags, genTagType(tag)];
-      setTags(newTags);
-      setValue(newTags);
-    },
-    [tags],
-  );
+    const handleAddition = useCallback(
+        (tag: TagItem) => {
+            const newTags = [...tags, genTagType(tag)];
+            setTags(newTags);
+            setValue(newTags);
+        },
+        [tags],
+    );
 
-  const handleDrag = useCallback(
-    (tag: TagItem, currPos: number, newPos: number) => {
-      const newTags = tags.slice();
-      newTags.splice(currPos, 1);
-      newTags.splice(newPos, 0, genTagType(tag));
-      setTags(newTags);
-      setValue(newTags);
-    },
-    [tags],
-  );
+    const handleDrag = useCallback(
+        (tag: TagItem, currentPos: number, newPos: number) => {
+            const newTags = [...tags];
+            newTags.splice(currentPos, 1);
+            newTags.splice(newPos, 0, genTagType(tag));
+            setTags(newTags);
+            setValue(newTags);
+        },
+        [tags],
+    );
 
-  const handleTagUpdate = useCallback(
-    (i: number, tag: TagItem) => {
-      const newTags = [...tags];
-      newTags[i] = genTagType(tag);
-      setTags(newTags);
-      setValue(newTags);
-    },
-    [tags],
-  );
+    const handleTagUpdate = useCallback(
+        (index: number, tag: TagItem) => {
+            const newTags = [...tags];
+            newTags[index] = genTagType(tag);
+            setTags(newTags);
+            setValue(newTags);
+        },
+        [tags],
+    );
 
-  const suggestionData = useMemo(() => suggestions[type], [type]);
+    const suggestionData = useMemo(() => suggestions[type], [type]);
 
-  return (
-    <View type={type}>
-      <ReactTags
-        autocomplete
-        delimiters={delimiters}
-        editable
-        handleAddition={handleAddition}
-        handleDelete={handleDelete}
-        handleDrag={handleDrag}
-        inline
-        inputFieldPosition="bottom"
-        onTagUpdate={handleTagUpdate}
-        suggestions={suggestionData}
-        tags={tags}
-      />
-    </View>
-  );
+    return (
+        <View type={type}>
+            <ReactTags
+                autocomplete
+                delimiters={delimiters}
+                editable
+                handleAddition={handleAddition}
+                handleDelete={handleDelete}
+                handleDrag={handleDrag}
+                inline
+                inputFieldPosition="bottom"
+                onTagUpdate={handleTagUpdate}
+                suggestions={suggestionData}
+                tags={tags}
+            />
+        </View>
+    );
 });
 
 export default TagList;

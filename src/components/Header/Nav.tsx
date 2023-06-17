@@ -1,6 +1,6 @@
-import type { MenuProps } from 'antd';
-import { Menu } from 'antd';
-import { memo, useEffect, useState } from 'react';
+import type {MenuProps} from 'antd';
+import {Menu} from 'antd';
+import {memo, useEffect, useState} from 'react';
 import styled from 'styled-components';
 
 /******************************************************
@@ -38,40 +38,40 @@ const NavBar = styled(Menu)`
  ************************* Dom *************************
  ******************************************************/
 
-const Nav = memo(() => {
-  const [items, setItems] = useState<MenuProps['items']>([]);
-
-  useEffect(() => {
-    onUiLoaded(() => {
-      const buttons = gradioApp().querySelectorAll('#tabs > .tab-nav:first-child button');
-      const list: MenuProps['items'] | any = [];
-      buttons.forEach((button: HTMLButtonElement | any, index) => {
-        button.id = `kitchen-nav-${index}`;
-        list.push({
-          label: button.textContent,
-          key: String(index),
-        });
-      });
-      setItems(list);
-    });
-  }, []);
-
-  const onClick: MenuProps['onClick'] = (e: any) => {
+const onClick: MenuProps['onClick'] = (e: any) => {
     const buttons: HTMLButtonElement[] | any = gradioApp().querySelectorAll(
-      '#tabs > .tab-nav:first-child button',
+        '#tabs > .tab-nav:first-child button',
     );
     buttons[Number(e.key)]?.click();
-  };
+};
 
-  return (
-    <NavBar
-      defaultActiveFirst
-      defaultSelectedKeys={['0']}
-      items={items}
-      mode="horizontal"
-      onClick={onClick}
-    />
-  );
+const Nav = memo(() => {
+    const [items, setItems] = useState<MenuProps['items']>([]);
+
+    useEffect(() => {
+        onUiLoaded(() => {
+            const buttons = gradioApp().querySelectorAll('#tabs > .tab-nav:first-child button');
+            const list: MenuProps['items'] | any = [];
+            buttons.forEach((button: HTMLButtonElement | any, index) => {
+                button.id = `kitchen-nav-${index}`;
+                list.push({
+                    key: String(index),
+                    label: button.textContent,
+                });
+            });
+            setItems(list);
+        });
+    }, []);
+
+    return (
+        <NavBar
+            defaultActiveFirst
+            defaultSelectedKeys={['0']}
+            items={items}
+            mode="horizontal"
+            onClick={onClick}
+        />
+    );
 });
 
 export default Nav;

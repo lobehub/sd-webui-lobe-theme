@@ -21,6 +21,12 @@
   padding: 6px;
 }
 
+.head {
+  > label {
+    overflow: hidden;
+  }
+}
+
 .wrap.svelte-1p9xokt.svelte-1p9xokt.svelte-1p9xokt {
   gap: 8px !important;
 
@@ -35,9 +41,9 @@
   background: transparent;
 }
 
+[id$='_results'],
 #tab_image_browser,
-#tab_dreambooth_interface,
-[id$='_results'] {
+#tab_dreambooth_interface {
   .block.gradio-accordion.svelte-mppz8v.padded {
     display: flex;
     flex-direction: column;
@@ -75,10 +81,4 @@
 
 div.svelte-1oo81b7 > *:not(.absolute) {
   border-radius: var(--border-radius) !important;
-}
-
-.head {
-  > label {
-    overflow: hidden;
-  }
 }

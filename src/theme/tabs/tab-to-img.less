@@ -1,5 +1,12 @@
 #tab_txt2img,
 #tab_img2img {
+  [id$='_settings'] {
+    div.svelte-15lo0d8 > *,
+    div.svelte-15lo0d8 > .form > * {
+      flex: 1;
+    }
+  }
+
   #txt2img_settings,
   #img2img_settings {
     .block.gradio-checkbox {
@@ -34,6 +41,10 @@
     border-radius: var(--border-radius) !important;
   }
 
+  .image-buttons button {
+    min-width: min(160px, 100%) !important;
+  }
+
   [id$='2img_tools'] > div {
     display: flex;
     justify-content: center;
@@ -41,10 +52,6 @@
     button {
       max-width: unset !important;
     }
-  }
-
-  .image-buttons button {
-    min-width: min(160px, 100%) !important;
   }
 
   #img2img_label_copy_to_img2img {
@@ -56,13 +63,6 @@
   .image-buttons,
   .image_buttons_extras {
     gap: 8px !important;
-  }
-
-  [id$='_settings'] {
-    div.svelte-15lo0d8 > *,
-    div.svelte-15lo0d8 > .form > * {
-      flex: 1;
-    }
   }
 
   #script_list {
