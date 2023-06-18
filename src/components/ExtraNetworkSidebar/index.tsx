@@ -1,12 +1,12 @@
-import { ZoomInOutlined } from '@ant-design/icons';
-import { Slider } from 'antd';
-import { useResponsive } from 'antd-style';
-import { type CSSProperties, type ReactNode, memo, useEffect, useState } from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
-import { shallow } from 'zustand/shallow';
+import {ZoomInOutlined} from '@ant-design/icons';
+import {DraggablePanel} from '@lobehub/ui';
+import {Slider} from 'antd';
+import {useResponsive} from 'antd-style';
+import {type CSSProperties, type ReactNode, memo, useEffect, useState} from 'react';
+import styled, {createGlobalStyle} from 'styled-components';
+import {shallow} from 'zustand/shallow';
 
-import { DraggablePanel } from '@/components';
-import { useAppStore } from '@/store';
+import {useAppStore} from '@/store';
 
 const GlobalStyle = createGlobalStyle`
   button#txt2img_extra_networks,
@@ -40,11 +40,11 @@ const SidebarView = styled.div<{ size: number }>`
   .extra-network-cards,
   .extra-network-thumbs {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(${({ size }) => size}px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(${({size}) => size}px, 1fr));
 
     > .card {
       width: var(--fill-available) !important;
-      height: ${({ size }) => size * 1.5}px !important;
+      height: ${({size}) => size * 1.5}px !important;
     }
   }
 `;
@@ -71,44 +71,44 @@ interface SidebarProps {
   style?: CSSProperties;
 }
 
-const Sidebar = memo<SidebarProps>(({ children, style }) => {
-  const { mobile } = useResponsive();
-  const [setting] = useAppStore((st) => [st.setting], shallow);
-  const [mode] = useState<'fixed' | 'float'>(setting.extraNetworkFixedMode);
-  const [expand, setExpand] = useState<boolean>(setting.extraNetworkSidebarExpand);
-  const [size, setSize] = useState<number>(setting?.extraNetworkCardSize || 86);
+const Sidebar = memo<SidebarProps>(({children, style}) => {
+    const {mobile} = useResponsive();
+    const [setting] = useAppStore((st) => [st.setting], shallow);
+    const [mode] = useState<'fixed' | 'float'>(setting.extraNetworkFixedMode);
+    const [expand, setExpand] = useState<boolean>(setting.extraNetworkSidebarExpand);
+    const [size, setSize] = useState<number>(setting?.extraNetworkCardSize || 86);
 
-  useEffect(() => {
-    if (mobile) setExpand(false);
-  }, []);
+    useEffect(() => {
+        if (mobile) setExpand(false);
+    }, []);
 
-  return (
-    <>
-      <GlobalStyle />
-      <DraggablePanel
-        defaultSize={{ width: setting.extraNetworkSidebarWidth }}
-        expand={expand}
-        minWidth={setting.extraNetworkSidebarWidth}
-        mode={mode}
-        onExpandChange={setExpand}
-        pin={mode === 'fixed'}
-        placement="right"
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          ...style,
-        }}
-      >
-        <View>
-          <SidebarView size={size}>{children}</SidebarView>
-          <Footer>
-            <ZoomInOutlined />
-            <ZoomSlider defaultValue={size} max={256} min={64} onChange={setSize} step={8} />
-          </Footer>
-        </View>
-      </DraggablePanel>
-    </>
-  );
+    return (
+        <>
+            <GlobalStyle />
+            <DraggablePanel
+                defaultSize={{width: setting.extraNetworkSidebarWidth}}
+                expand={expand}
+                minWidth={setting.extraNetworkSidebarWidth}
+                mode={mode}
+                onExpandChange={setExpand}
+                pin={mode === 'fixed'}
+                placement="right"
+                style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    ...style,
+                }}
+            >
+                <View>
+                    <SidebarView size={size}>{children}</SidebarView>
+                    <Footer>
+                        <ZoomInOutlined />
+                        <ZoomSlider defaultValue={size} max={256} min={64} onChange={setSize} step={8} />
+                    </Footer>
+                </View>
+            </DraggablePanel>
+        </>
+    );
 });
 
 export default Sidebar;

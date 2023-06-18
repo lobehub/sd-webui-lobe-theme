@@ -1,10 +1,7 @@
-import {ThemeProvider, setupStyled} from 'antd-style';
+import {ThemeProvider} from '@lobehub/ui';
 import qs from 'query-string';
 import {memo, useEffect, useState} from 'react';
 import {createRoot} from 'react-dom/client';
-// @ts-ignore
-import ReactFontLoader from 'react-font-loader';
-import {ThemeContext} from 'styled-components';
 import {shallow} from 'zustand/shallow';
 
 import {useIsDarkMode} from '@/components/theme/useIsDarkMode';
@@ -15,11 +12,8 @@ import {useAppStore} from '@/store';
 import '@/theme/style.less';
 
 import App from './App';
-import GlobalStyle from './GlobalStyle';
-import {baseToken} from './style';
 
 const Root = memo(() => {
-    setupStyled({ThemeContext});
     const [onSetThemeMode, onInit] = useAppStore((st) => [st.onSetThemeMode, st.onInit], shallow);
     const isDarkMode = useIsDarkMode();
     const [appearance, setAppearance] = useState<'light' | 'dark'>('light');
@@ -47,10 +41,7 @@ const Root = memo(() => {
         window.location.reload();
     }, [isDarkMode]);
     return (
-        <ThemeProvider appearance={appearance} theme={{token: baseToken}}>
-            <GlobalStyle />
-            <ReactFontLoader url="https://raw.githubusercontent.com/IKKI2000/harmonyos-fonts/main/css/harmonyos_sans.css" />
-            <ReactFontLoader url="https://raw.githubusercontent.com/IKKI2000/harmonyos-fonts/main/css/harmonyos_sans_sc.css" />
+        <ThemeProvider themeMode={appearance}>
             <App />
         </ThemeProvider>
     );

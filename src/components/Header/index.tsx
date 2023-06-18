@@ -1,12 +1,10 @@
 import {BoldOutlined, GithubOutlined} from '@ant-design/icons';
+import {Header as H} from '@lobehub/ui';
 import {Button, Modal, Space} from 'antd';
-import {useResponsive} from 'antd-style';
 import qs from 'query-string';
-import {type ReactNode, memo, useCallback, useEffect, useState} from 'react';
-import styled from 'styled-components';
+import {type ReactNode, memo, useCallback, useState} from 'react';
 import {shallow} from 'zustand/shallow';
 
-import {DraggablePanel} from '@/components';
 import {useAppStore} from '@/store';
 
 import Giscus from './Giscus';
@@ -15,38 +13,13 @@ import Nav from './Nav';
 import Setting from './Setting';
 import {civitaiLogo, themeIcon} from './style';
 
-/******************************************************
- *********************** Style *************************
- ******************************************************/
-
-const HeaderView = styled.div`
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 12px;
-  align-items: center;
-  justify-content: space-between;
-
-  height: var(--fill-available);
-  padding: 16px 24px;
-`;
-
-/******************************************************
- ************************* Dom *************************
- ******************************************************/
-
 interface HeaderProps {
   children: ReactNode;
 }
 
 const Header = memo<HeaderProps>(({children}) => {
     const [themeMode] = useAppStore((st) => [st.themeMode], shallow);
-    const {mobile} = useResponsive();
-    const [expand, setExpand] = useState<boolean>(true);
     const [isModalOpen, setIsModalOpen] = useState(false);
-
-    useEffect(() => {
-        if (mobile) setExpand(false);
-    }, []);
 
     const handleSetTheme = useCallback(() => {
         const theme = themeMode === 'light' ? 'dark' : 'light';
@@ -61,25 +34,8 @@ const Header = memo<HeaderProps>(({children}) => {
 
     return (
         <>
-            <DraggablePanel
-                defaultSize={{height: 'auto'}}
-                expand={expand}
-                minHeight={64}
-                onExpandChange={setExpand}
-                placement="top"
-            >
-                <HeaderView id="header" style={{flexDirection: mobile ? 'column' : 'row'}}>
-                    <a
-                        href="https://github.com/canisminor1990/sd-webui-kitchen-theme"
-                        rel="noreferrer"
-                        target="_blank"
-                    >
-                        <Logo themeMode={themeMode} />
-                    </a>
-
-                    <Nav />
-                    {children}
-
+            <H
+                actions={
                     <Space.Compact>
                         <a href="https://civitai.com/" rel="noreferrer" target="_blank">
                             <Button icon={civitaiLogo} title="Civitai" />
@@ -95,8 +51,23 @@ const Header = memo<HeaderProps>(({children}) => {
                         <Setting />
                         <Button icon={themeIcon[themeMode]} onClick={handleSetTheme} title="Switch Theme" />
                     </Space.Compact>
-                </HeaderView>
-            </DraggablePanel>
+                }
+                logo={
+                    <a
+                        href="https://github.com/canisminor1990/sd-webui-kitchen-theme"
+                        rel="noreferrer"
+                        target="_blank"
+                    >
+                        <Logo themeMode={themeMode} />
+                    </a>
+                }
+                nav={
+                    <>
+                        <Nav />
+                        {children}
+                    </>
+                }
+            />
             <Modal
                 footer={false}
                 onCancel={handleCancel}
