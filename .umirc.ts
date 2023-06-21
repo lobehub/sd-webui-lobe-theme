@@ -8,8 +8,8 @@ import { defineConfig } from 'umi';
 import WebpackShellPlugin from 'webpack-shell-plugin-next';
 
 const mac = [
-  'rm ./javascript/index.js',
-  'rm ./style.css',
+  'rm -f ./javascript/index.js',
+  'rm -f ./style.css',
   'cp ./dist/index.js ./javascript/index.js',
   'cp ./dist/index.css ./style.css',
 ];
