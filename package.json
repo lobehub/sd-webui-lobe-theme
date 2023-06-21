@@ -2,6 +2,13 @@
   "name": "sd-webui-kitchen-theme",
   "version": "1.8.3",
   "private": true,
+  "keywords": [
+    "stable-diffusion-webui"
+  ],
+  "homepage": "https://github.com/canisminor1990/sd-webui-kitchen-theme",
+  "bugs": {
+    "url": "https://github.com/canisminor1990/sd-webui-kitchen-theme/issues/new"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/canisminor1990/sd-webui-kitchen-theme.git"
@@ -10,8 +17,8 @@
   "author": "canisminor1990 <i@canisminor.cc>",
   "sideEffects": false,
   "scripts": {
-    "build": "umi build",
-    "dev": "umi build",
+    "build": "tsc && vite build",
+    "dev": "vite",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
     "lint:md": "remark . --quiet --output",
     "lint:style": "stylelint \"src/**/*.{css,less,js,jsx,ts,tsx}\" --fix",
@@ -19,8 +26,6 @@
     "prettier": "prettier -c --write \"**/**\"",
     "release": "semantic-release",
     "sd-debug": "cd ../../ && ./webui.sh",
-    "setup": "umi setup",
-    "start": "umi build",
     "test": "npm run lint",
     "type-check": "tsc -p tsconfig-check.json"
   },
@@ -49,18 +54,17 @@
   },
   "devDependencies": {
     "@ant-design/icons": "^5",
+    "@babel/plugin-syntax-import-assertions": "^7",
     "@commitlint/cli": "^17",
     "@lobehub/lint": "latest",
     "@lobehub/ui": "latest",
     "@types/lodash-es": "^4",
     "@types/node": "^20",
     "@types/react": "^18",
-    "@types/react-dnd": "^3",
     "@types/react-dom": "^18",
-    "@types/react-rnd": "^8",
     "@types/react-tag-input": "^6",
     "@types/styled-components": "^5",
-    "@umijs/lint": "^4",
+    "@vitejs/plugin-react": "^4",
     "ahooks": "^3",
     "antd": "^5",
     "antd-style": "latest",
@@ -70,6 +74,7 @@
     "concurrently": "^8",
     "css-minimizer-webpack-plugin": "^5",
     "eslint": "^8",
+    "fast-deep-equal": "^3",
     "husky": "^8",
     "lightningcss": "^1",
     "lint-staged": "^13",
@@ -79,10 +84,7 @@
     "polished": "^4",
     "prettier": "^2",
     "query-string": "^8",
-    "re-resizable": "^6",
     "react": "^18",
-    "react-dnd": "^16",
-    "react-dnd-html5-backend": "^16",
     "react-dom": "^18",
     "react-layout-kit": "^1",
     "react-rnd": "^10",
@@ -93,9 +95,18 @@
     "styled-components": "latest",
     "stylelint": "^15",
     "typescript": "^5",
-    "umi": "^4",
-    "use-merge-value": "^1",
+    "vite": "^4.3.9",
     "webpack-shell-plugin-next": "^2",
     "zustand": "^4"
+  },
+  "peerDependencies": {
+    "antd": ">=5",
+    "antd-style": ">=3",
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   }
 }

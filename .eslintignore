@@ -28,3 +28,4 @@ logs
 # add other ignore file below
 javascript
 style.css
+vite-env.d.ts

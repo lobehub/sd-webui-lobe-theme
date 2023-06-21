@@ -1,12 +1,17 @@
+const config = require('@lobehub/lint').eslint;
+
+config.rules['indent'] = ['off', 2];
+
 module.exports = {
-    ...require('@lobehub/lint').eslint,
-    overrides: [
-        {
-            files: ['*.ts', '*.tsx'],
-            rules: {
-                'no-undef': 0,
-                'unicorn/prefer-add-event-listener': 0,
-            },
-        },
-    ],
+  ...config,
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        'no-undef': 0,
+        'object-curly-spacing': 0,
+        'unicorn/prefer-add-event-listener': 0,
+      },
+    },
+  ],
 };

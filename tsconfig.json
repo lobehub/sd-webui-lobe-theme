@@ -1,19 +1,27 @@
 {
   "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
     "baseUrl": ".",
     "declaration": true,
     "downlevelIteration": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",
     "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "importHelpers": true,
+    "noEmit": true,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
     "paths": {
       "@/*": ["./src/*"]
     },
     "resolveJsonModule": true,
-    "skipLibCheck": true,
     "strict": true
   },
   "exclude": ["javascript"],
-  "extends": "./src/.umi/tsconfig.json",
-  "include": ["src", "typings.d.ts", "*.ts"]
+
+  "include": ["src", "typings", "*.ts", "*.d.ts", "*.tsx", "vite.config.ts"]
 }
