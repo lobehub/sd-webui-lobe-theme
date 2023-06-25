@@ -8,7 +8,6 @@ const GALLERY_DARK =
 export const useStyles = createStyles(
   ({ css, token, stylish, isDarkMode }, { isPromptResizable }: { isPromptResizable: boolean }) => {
     const galleryBackground = css`
-      flex: 1;
       background: url(${isDarkMode ? GALLERY_DARK : GALLERY_LIGHT}) 0% 0% / 20px !important;
       border: 2px solid ${token.colorBorderSecondary} !important;
       border-radius: ${token.borderRadius}px !important;
