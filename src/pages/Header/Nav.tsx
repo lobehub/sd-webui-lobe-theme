@@ -2,14 +2,14 @@ import { TabsNav, type TabsNavProps } from '@lobehub/ui';
 import { memo, useEffect, useState } from 'react';
 
 const hideOriganlNav = () => {
-  (gradioApp().querySelector('#tabs > .tab-nav:first-child') as HTMLDivElement).style.display =
+  (gradioApp().querySelector('#tabs > .tab-nav:first-of-type') as HTMLDivElement).style.display =
     'none';
 };
 
 const getNavButtons = (): HTMLButtonElement[] =>
   Array.prototype.slice.call(
     gradioApp().querySelectorAll(
-      '#tabs > .tab-nav:first-child button',
+      '#tabs > .tab-nav:first-of-type button',
     ) as NodeListOf<HTMLButtonElement>,
   );
 

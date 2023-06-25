@@ -21,7 +21,20 @@ const Content = memo<DivProps>(({ className, ...props }) => {
     if (!mobile) dragablePanel();
   }, []);
 
-  return <div className={cx(styles.container, className)} ref={mainReference} {...props} />;
+  return (
+    <div
+      className={cx(
+        styles.container,
+        styles.draggablePanel,
+        styles.textares,
+        styles.gallery,
+        styles.img2img,
+        className,
+      )}
+      ref={mainReference}
+      {...props}
+    />
+  );
 });
 
 export default Content;

@@ -1,24 +1,18 @@
 import { DivProps, ThemeProvider } from '@lobehub/ui';
 import qs from 'query-string';
-import { memo, useEffect, useState } from 'react';
+import { memo, useEffect } from 'react';
 import { shallow } from 'zustand/shallow';
 
 import { useIsDarkMode } from '@/hooks/useIsDarkMode';
 import { useAppStore } from '@/store';
-
-import GlobalStyle from './GlobalStyle';
-import { useStyles } from './style';
+import GlobalStyle from '@/styles/index';
 
 const Layout = memo<DivProps>(({ children }) => {
-  const { onSetThemeMode, onInit } = useAppStore(
-    (st) => ({ onInit: st.onInit, onSetThemeMode: st.onSetThemeMode }),
+  const { onSetThemeMode, onInit, themeMode } = useAppStore(
+    (st) => ({ onInit: st.onInit, onSetThemeMode: st.onSetThemeMode, themeMode: st.themeMode }),
     shallow,
   );
   const isDarkMode = useIsDarkMode();
-  const [appearance, setAppearance] = useState<'light' | 'dark'>('light');
-  const [first, setFirst] = useState(true);
-
-  const { styles } = useStyles();
 
   useEffect(() => {
     onInit();
@@ -26,26 +20,18 @@ const Layout = memo<DivProps>(({ children }) => {
   useEffect(() => {
     const queryTheme: any = String(qs.parseUrl(window.location.href).query.__theme || '');
     if (queryTheme) {
-      setAppearance(queryTheme as any);
       document.body.classList.add(queryTheme);
       onSetThemeMode(queryTheme);
-      return;
+    } else {
+      document.body.classList.add(isDarkMode ? 'dark' : 'light');
+      onSetThemeMode(isDarkMode ? 'dark' : 'light');
     }
-    setAppearance(isDarkMode ? 'dark' : 'light');
-    document.body.classList.add(isDarkMode ? 'dark' : 'light');
-    onSetThemeMode(isDarkMode ? 'dark' : 'light');
   }, [isDarkMode]);
-  useEffect(() => {
-    if (first) {
-      setFirst(false);
-      return;
-    }
-    window.location.reload();
-  }, [isDarkMode]);
+
   return (
-    <ThemeProvider themeMode={appearance}>
+    <ThemeProvider themeMode={themeMode}>
       <GlobalStyle />
-      <div className={styles}>{children}</div>
+      {children}
     </ThemeProvider>
   );
 });

@@ -6,6 +6,7 @@ import Index from '@/pages';
 import formatPrompt from '@/script/formatPrompt';
 import promptBracketChecker from '@/script/promptBracketChecker';
 import setupHead from '@/script/setupHead';
+import Loading from '@/slots/Loading';
 import { useAppStore } from '@/store';
 
 const App = memo(() => {
@@ -23,7 +24,7 @@ const App = memo(() => {
     });
   }, []);
 
-  return <Layout>{!loading && <Index />}</Layout>;
+  return <Layout>{loading ? <Loading /> : <Index />}</Layout>;
 });
 
 export default App;
