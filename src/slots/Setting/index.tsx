@@ -1,6 +1,7 @@
+import { Swatches } from '@lobehub/ui';
 import { Button, Divider, Form, InputNumber, Segmented, Space, Switch } from 'antd';
 import isEqual from 'fast-deep-equal';
-import { memo, useCallback } from 'react';
+import { memo, useCallback, useState } from 'react';
 import { shallow } from 'zustand/shallow';
 
 import { WebuiSetting, defaultSetting, useAppStore } from '@/store';
@@ -11,26 +12,31 @@ const { Item } = Form;
 
 const Setting = memo(() => {
   const setting = useAppStore((st) => st.setting, isEqual);
+  const [activeColor, setActiveColor] = useState<string | undefined>(setting.primaryColor || '');
   const onSetSetting = useAppStore((st) => st.onSetSetting, shallow);
-  const { styles } = useStyles();
+  const { styles, theme } = useStyles();
 
   const onReset = useCallback(() => {
     onSetSetting(defaultSetting);
     (gradioApp().querySelector('#settings_restart_gradio') as HTMLButtonElement)?.click();
   }, []);
 
-  const onFinish = useCallback((value: WebuiSetting) => {
-    onSetSetting(value);
-    (gradioApp().querySelector('#settings_restart_gradio') as HTMLButtonElement)?.click();
-  }, []);
+  const onFinish = useCallback(
+    (value: WebuiSetting) => {
+      onSetSetting({ ...value, primaryColor: activeColor });
+      (gradioApp().querySelector('#settings_restart_gradio') as HTMLButtonElement)?.click();
+    },
+    [activeColor],
+  );
 
   return (
     <Form
       initialValues={setting}
       layout="horizontal"
+      onChange={console.log}
       onFinish={onFinish}
       size="small"
-      style={{ maxWidth: 320 }}
+      style={{ maxWidth: 400 }}
     >
       <Divider style={{ margin: '4px 0 8px' }} />
       <title className={styles.title}>Promot Textarea</title>
@@ -81,9 +87,29 @@ const Setting = memo(() => {
         <InputNumber />
       </Item>
       <Divider style={{ margin: '4px 0 8px' }} />
-      <title className={styles.title}>Other</title>
+      <title className={styles.title}>Theme</title>
       <Item className={styles.item} label="Use svg icons" name="svgIcon" valuePropName="checked">
         <Switch />
+      </Item>
+      <Item className={styles.item} label="Primary color">
+        <Swatches
+          activeColor={activeColor}
+          colors={[
+            theme.red,
+            theme.orange,
+            theme.gold,
+            theme.yellow,
+            theme.lime,
+            theme.green,
+            theme.cyan,
+            theme.blue,
+            theme.geekblue,
+            theme.purple,
+            theme.magenta,
+            theme.volcano,
+          ]}
+          onSelect={setActiveColor}
+        />
       </Item>
       <Divider style={{ margin: '4px 0 16px' }} />
       <Item className={styles.item}>

@@ -9,6 +9,7 @@ export interface WebuiSetting {
   extraNetworkFixedMode: 'fixed' | 'float';
   extraNetworkSidebarExpand: boolean;
   extraNetworkSidebarWidth: number;
+  primaryColor: string | undefined;
   promotTextarea: 'scroll' | 'resizable';
   sidebarExpand: boolean;
   sidebarFixedMode: 'fixed' | 'float';
@@ -22,6 +23,7 @@ export const defaultSetting: WebuiSetting = {
   extraNetworkFixedMode: 'fixed',
   extraNetworkSidebarExpand: true,
   extraNetworkSidebarWidth: 340,
+  primaryColor: '',
   promotTextarea: 'scroll',
   sidebarExpand: true,
   sidebarFixedMode: 'fixed',
