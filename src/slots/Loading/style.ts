@@ -2,6 +2,24 @@ import { createStyles } from 'antd-style';
 import { rgba } from 'polished';
 
 export const useStyles = createStyles(({ css, stylish, cx, token }) => ({
+  canvas: cx(
+    stylish.gradientAnimation,
+    css`
+      pointer-events: none;
+
+      position: absolute;
+      z-index: 10;
+      top: -250px;
+      left: 50%;
+      transform: translateX(-50%) scale(1.5);
+
+      width: 100vw;
+      height: 400px;
+
+      opacity: 0.2;
+      filter: blur(100px);
+    `,
+  ),
   container: cx(
     stylish.blur,
     css`

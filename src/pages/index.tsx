@@ -24,7 +24,6 @@ const Index = memo(() => {
 
   return (
     <>
-      <div className={styles.background} id="background" />
       <LayoutHeader headerHeight={HEADER_HEIGHT}>
         <Header />
       </LayoutHeader>

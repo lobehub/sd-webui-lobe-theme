@@ -14,6 +14,7 @@ const Loading = memo(() => {
 
   return (
     <section className={styles.container}>
+      <div className={styles.canvas} />
       <div className={styles.inner}>
         <Logo size={36} themeMode={themeMode} />
         <Icon icon={Loader2} size={{ fontSize: 32 }} spin />

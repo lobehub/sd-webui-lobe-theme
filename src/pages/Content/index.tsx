@@ -33,7 +33,9 @@ const Content = memo<DivProps>(({ className, ...props }) => {
       )}
       ref={mainReference}
       {...props}
-    />
+    >
+      <div className={styles.background} />
+    </div>
   );
 });
 

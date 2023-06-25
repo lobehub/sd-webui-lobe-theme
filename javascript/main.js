@@ -1794,11 +1794,25 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       --checkbox-check: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='black' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
       --radio-circle: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='black' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
     }
-  `,zie=vT(({theme:e})=>[jie(e),hie(e),vie(e),wie(e),kie(e),fie(e),gie(e),xie(e),yie(e),pie(e),bie(e)]),Sie=u.memo(({children:e})=>{const{onSetThemeMode:a,onInit:i,themeMode:n}=xn(r=>({onInit:r.onInit,onSetThemeMode:r.onSetThemeMode,themeMode:r.themeMode}),mt),o=die();return u.useEffect(()=>{i()},[]),u.useEffect(()=>{const r=String(op.parseUrl(window.location.href).query.__theme||"");r?(document.body.classList.add(r),a(r)):(document.body.classList.add(o?"dark":"light"),a(o?"dark":"light"))},[o]),M.jsxs(aie,{themeMode:n,children:[M.jsx(zie,{}),e]})}),cn=(e,a,i)=>{var n;if(e!=null&&e.textContent)for(const o of a)(n=e==null?void 0:e.textContent)!=null&&n.includes(o)&&(e.innerHTML=`<span role="img" class="anticon anticon-replace" aria-label={button.textContent}><svg viewBox="64 64 896 896" focusable="false" width="1em" height="1em" fill="currentColor" aria-hidden="true">${i}</svg></span>`)},Cie=()=>{for(const e of document.querySelectorAll("button"))cn(e,["📂"],'<path d="M880 298.4H521L403.7 186.2a8.15 8.15 0 00-5.5-2.2H144c-17.7 0-32 14.3-32 32v592c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V330.4c0-17.7-14.3-32-32-32zM840 768H184V256h188.5l119.6 114.4H840V768z"></path>'),cn(e,["🔄","🔁"],'<path d="M909.1 209.3l-56.4 44.1C775.8 155.1 656.2 92 521.9 92 290 92 102.3 279.5 102 511.5 101.7 743.7 289.8 932 521.9 932c181.3 0 335.8-115 394.6-276.1 1.5-4.2-.7-8.9-4.9-10.3l-56.7-19.5a8 8 0 00-10.1 4.8c-1.8 5-3.8 10-5.9 14.9-17.3 41-42.1 77.8-73.7 109.4A344.77 344.77 0 01655.9 829c-42.3 17.9-87.4 27-133.8 27-46.5 0-91.5-9.1-133.8-27A341.5 341.5 0 01279 755.2a342.16 342.16 0 01-73.7-109.4c-17.9-42.4-27-87.4-27-133.9s9.1-91.5 27-133.9c17.3-41 42.1-77.8 73.7-109.4 31.6-31.6 68.4-56.4 109.3-73.8 42.3-17.9 87.4-27 133.8-27 46.5 0 91.5 9.1 133.8 27a341.5 341.5 0 01109.3 73.8c9.9 9.9 19.2 20.4 27.8 31.4l-60.2 47a8 8 0 003 14.1l175.6 43c5 1.2 9.9-2.6 9.9-7.7l.8-180.9c-.1-6.6-7.8-10.3-13-6.2z"></path>'),cn(e,["↙️"],'<path d="M603.3 327.5l-246 178a7.95 7.95 0 000 12.9l246 178c5.3 3.8 12.7 0 12.7-6.5V643c0-10.2-4.9-19.9-13.2-25.9L457.4 512l145.4-105.2c8.3-6 13.2-15.6 13.2-25.9V334c0-6.5-7.4-10.3-12.7-6.5z"></path><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path>'),cn(e,["🗑️"],'<path d="M360 184h-8c4.4 0 8-3.6 8-8v8h304v-8c0 4.4 3.6 8 8 8h-8v72h72v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80h72v-72zm504 72H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.2 0 62.3-26.8 63.9-61l24.7-523H888c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zM731.3 840H292.7l-24.2-512h487l-24.2 512z"></path>'),cn(e,["📋"],'<path d="M832 112H724V72c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v40H500V72c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v40H320c-17.7 0-32 14.3-32 32v120h-96c-17.7 0-32 14.3-32 32v632c0 17.7 14.3 32 32 32h512c17.7 0 32-14.3 32-32v-96h96c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM664 888H232V336h218v174c0 22.1 17.9 40 40 40h174v338zm0-402H514V336h.2L664 485.8v.2zm128 274h-56V456L544 264H360v-80h68v32c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-32h152v32c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-32h68v576z"></path>'),cn(e,["💾"],'<path d="M893.3 293.3L730.7 130.7c-7.5-7.5-16.7-13-26.7-16V112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V338.5c0-17-6.7-33.2-18.7-45.2zM384 184h256v104H384V184zm456 656H184V184h136v136c0 17.7 14.3 32 32 32h320c17.7 0 32-14.3 32-32V205.8l136 136V840zM512 442c-79.5 0-144 64.5-144 144s64.5 144 144 144 144-64.5 144-144-64.5-144-144-144zm0 224c-44.2 0-80-35.8-80-80s35.8-80 80-80 80 35.8 80 80-35.8 80-80 80z"></path>'),cn(e,["🎲️"],'<path d="M136 552h63.6c4.4 0 8-3.6 8-8V288.7h528.6v72.6c0 1.9.6 3.7 1.8 5.2a8.3 8.3 0 0011.7 1.4L893 255.4c4.3-5 3.6-10.3 0-13.2L749.7 129.8a8.22 8.22 0 00-5.2-1.8c-4.6 0-8.4 3.8-8.4 8.4V209H199.7c-39.5 0-71.7 32.2-71.7 71.8V544c0 4.4 3.6 8 8 8zm752-80h-63.6c-4.4 0-8 3.6-8 8v255.3H287.8v-72.6c0-1.9-.6-3.7-1.8-5.2a8.3 8.3 0 00-11.7-1.4L131 768.6c-4.3 5-3.6 10.3 0 13.2l143.3 112.4c1.5 1.2 3.3 1.8 5.2 1.8 4.6 0 8.4-3.8 8.4-8.4V815h536.6c39.5 0 71.7-32.2 71.7-71.8V480c-.2-4.4-3.8-8-8.2-8z"></path>'),cn(e,["♻️"],'<path d="M793 242H366v-74c0-6.7-7.7-10.4-12.9-6.3l-142 112a8 8 0 000 12.6l142 112c5.2 4.1 12.9.4 12.9-6.3v-74h415v470H175c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h618c35.3 0 64-28.7 64-64V306c0-35.3-28.7-64-64-64z"></path>'),cn(e,["🪄"],'<defs><style></style></defs><path d="M899.1 869.6l-53-305.6H864c14.4 0 26-11.6 26-26V346c0-14.4-11.6-26-26-26H618V138c0-14.4-11.6-26-26-26H432c-14.4 0-26 11.6-26 26v182H160c-14.4 0-26 11.6-26 26v192c0 14.4 11.6 26 26 26h17.9l-53 305.6a25.95 25.95 0 0025.6 30.4h723c1.5 0 3-.1 4.4-.4a25.88 25.88 0 0021.2-30zM204 390h272V182h72v208h272v104H204V390zm468 440V674c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v156H416V674c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v156H202.8l45.1-260H776l45.1 260H672z"></path>'),cn(e,["⚙️"],'<path d="M400 317.7h73.9V656c0 4.4 3.6 8 8 8h60c4.4 0 8-3.6 8-8V317.7H624c6.7 0 10.4-7.7 6.3-12.9L518.3 163a8 8 0 00-12.6 0l-112 141.7c-4.1 5.3-.4 13 6.3 13zM878 626h-60c-4.4 0-8 3.6-8 8v154H214V634c0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8v198c0 17.7 14.3 32 32 32h684c17.7 0 32-14.3 32-32V634c0-4.4-3.6-8-8-8z"></path>'),cn(e,["➡️"],'<path d="M666.7 505.5l-246-178A8 8 0 00408 334v46.9c0 10.2 4.9 19.9 13.2 25.9L566.6 512 421.2 617.2c-8.3 6-13.2 15.6-13.2 25.9V690c0 6.5 7.4 10.3 12.7 6.5l246-178c4.4-3.2 4.4-9.8 0-13z"></path><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path>'),cn(e,["⇅"],'<path d="M847.9 592H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h605.2L612.9 851c-4.1 5.2-.4 13 6.3 13h72.5c4.9 0 9.5-2.2 12.6-6.1l168.8-214.1c16.5-21 1.6-51.8-25.2-51.8zM872 356H266.8l144.3-183c4.1-5.2.4-13-6.3-13h-72.5c-4.9 0-9.5 2.2-12.6 6.1L150.9 380.2c-16.5 21-1.6 51.8 25.1 51.8h696c4.4 0 8-3.6 8-8v-60c0-4.4-3.6-8-8-8z"></path>')},oc=240,Zj=e=>{const a=document.querySelector(`#${e}_settings`),i=document.querySelector(`#tab_${e} .draggable-line`);if(!a||i)return;a.style.minWidth=`min(${oc}px, 100%)`;const n=document.createElement("div");n.classList.add("draggable-line"),a.after(n);const o=a.parentElement;o.classList.add("draggable-container");const r=document.querySelector(`#${e}_results`);if(!r)return;r.style.minWidth=`${oc}px`;let t=50;a.style.flexBasis=`${t}%`,r.style.flexBasis=`${100-t}%`;let _=!1;n.addEventListener("mousedown",s=>{_=!0,s.preventDefault()}),document.addEventListener("mousemove",s=>{if(!_)return;const l=document.querySelector(`#tab_${e}`);if(!l)return;let c=l.offsetLeft,m=l.offsetParent;for(;m;)c+=m.offsetLeft,m=m.offsetParent;const d=o.offsetWidth,k=(s.clientX-c)/d*100;k<=oc/d*100||k>=(1-oc/d)*100||(a.style.flexBasis=`${k}%`,r.style.flexBasis=`${100-k}%`)}),document.addEventListener("mouseup",()=>{_=!1})},$ie=()=>{Zj("txt2img"),Zj("img2img")},Jj=88,Eie="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAFpJREFUWAntljEKADAIA23p6v//qQ+wfUEcCu1yriEgp0FHRJSJcnehmmWm1Dv/lO4HIg1AAAKjTqm03ea88zMCCEDgO4HV5bS757f+7wRoAAIQ4B9gByAAgQ3pfiDmXmAeEwAAAABJRU5ErkJggg==",Oie="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACPTkDJAAAAZUlEQVRIDe2VMQoAMAgDa9/g/1/oIzrpZBCh2dLFkkoDF0Fz99OdiOjks+2/7S8fRRmMMIVoRGSoYzvvqF8ZIMKlC1GhQBc6IkPzq32QmdAzkEGihpWOSPsAss8HegYySNSw0hE9WQ4StafZFqkAAAAASUVORK5CYII=",Tie=di(({css:e,token:a,stylish:i,isDarkMode:n},{isPromptResizable:o})=>{const r=e`
-      background: url(${n?Oie:Eie}) 0% 0% / 20px !important;
-      border: 2px solid ${a.colorBorderSecondary} !important;
-      border-radius: ${a.borderRadius}px !important;
-    `;return{container:e`
+  `,zie=vT(({theme:e})=>[jie(e),hie(e),vie(e),wie(e),kie(e),fie(e),gie(e),xie(e),yie(e),pie(e),bie(e)]),Sie=u.memo(({children:e})=>{const{onSetThemeMode:a,onInit:i,themeMode:n}=xn(r=>({onInit:r.onInit,onSetThemeMode:r.onSetThemeMode,themeMode:r.themeMode}),mt),o=die();return u.useEffect(()=>{i()},[]),u.useEffect(()=>{const r=String(op.parseUrl(window.location.href).query.__theme||"");r?(document.body.classList.add(r),a(r)):(document.body.classList.add(o?"dark":"light"),a(o?"dark":"light"))},[o]),M.jsxs(aie,{themeMode:n,children:[M.jsx(zie,{}),e]})}),cn=(e,a,i)=>{var n;if(e!=null&&e.textContent)for(const o of a)(n=e==null?void 0:e.textContent)!=null&&n.includes(o)&&(e.innerHTML=`<span role="img" class="anticon anticon-replace" aria-label={button.textContent}><svg viewBox="64 64 896 896" focusable="false" width="1em" height="1em" fill="currentColor" aria-hidden="true">${i}</svg></span>`)},Cie=()=>{for(const e of document.querySelectorAll("button"))cn(e,["📂"],'<path d="M880 298.4H521L403.7 186.2a8.15 8.15 0 00-5.5-2.2H144c-17.7 0-32 14.3-32 32v592c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V330.4c0-17.7-14.3-32-32-32zM840 768H184V256h188.5l119.6 114.4H840V768z"></path>'),cn(e,["🔄","🔁"],'<path d="M909.1 209.3l-56.4 44.1C775.8 155.1 656.2 92 521.9 92 290 92 102.3 279.5 102 511.5 101.7 743.7 289.8 932 521.9 932c181.3 0 335.8-115 394.6-276.1 1.5-4.2-.7-8.9-4.9-10.3l-56.7-19.5a8 8 0 00-10.1 4.8c-1.8 5-3.8 10-5.9 14.9-17.3 41-42.1 77.8-73.7 109.4A344.77 344.77 0 01655.9 829c-42.3 17.9-87.4 27-133.8 27-46.5 0-91.5-9.1-133.8-27A341.5 341.5 0 01279 755.2a342.16 342.16 0 01-73.7-109.4c-17.9-42.4-27-87.4-27-133.9s9.1-91.5 27-133.9c17.3-41 42.1-77.8 73.7-109.4 31.6-31.6 68.4-56.4 109.3-73.8 42.3-17.9 87.4-27 133.8-27 46.5 0 91.5 9.1 133.8 27a341.5 341.5 0 01109.3 73.8c9.9 9.9 19.2 20.4 27.8 31.4l-60.2 47a8 8 0 003 14.1l175.6 43c5 1.2 9.9-2.6 9.9-7.7l.8-180.9c-.1-6.6-7.8-10.3-13-6.2z"></path>'),cn(e,["↙️"],'<path d="M603.3 327.5l-246 178a7.95 7.95 0 000 12.9l246 178c5.3 3.8 12.7 0 12.7-6.5V643c0-10.2-4.9-19.9-13.2-25.9L457.4 512l145.4-105.2c8.3-6 13.2-15.6 13.2-25.9V334c0-6.5-7.4-10.3-12.7-6.5z"></path><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path>'),cn(e,["🗑️"],'<path d="M360 184h-8c4.4 0 8-3.6 8-8v8h304v-8c0 4.4 3.6 8 8 8h-8v72h72v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80h72v-72zm504 72H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.2 0 62.3-26.8 63.9-61l24.7-523H888c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zM731.3 840H292.7l-24.2-512h487l-24.2 512z"></path>'),cn(e,["📋"],'<path d="M832 112H724V72c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v40H500V72c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v40H320c-17.7 0-32 14.3-32 32v120h-96c-17.7 0-32 14.3-32 32v632c0 17.7 14.3 32 32 32h512c17.7 0 32-14.3 32-32v-96h96c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM664 888H232V336h218v174c0 22.1 17.9 40 40 40h174v338zm0-402H514V336h.2L664 485.8v.2zm128 274h-56V456L544 264H360v-80h68v32c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-32h152v32c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-32h68v576z"></path>'),cn(e,["💾"],'<path d="M893.3 293.3L730.7 130.7c-7.5-7.5-16.7-13-26.7-16V112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V338.5c0-17-6.7-33.2-18.7-45.2zM384 184h256v104H384V184zm456 656H184V184h136v136c0 17.7 14.3 32 32 32h320c17.7 0 32-14.3 32-32V205.8l136 136V840zM512 442c-79.5 0-144 64.5-144 144s64.5 144 144 144 144-64.5 144-144-64.5-144-144-144zm0 224c-44.2 0-80-35.8-80-80s35.8-80 80-80 80 35.8 80 80-35.8 80-80 80z"></path>'),cn(e,["🎲️"],'<path d="M136 552h63.6c4.4 0 8-3.6 8-8V288.7h528.6v72.6c0 1.9.6 3.7 1.8 5.2a8.3 8.3 0 0011.7 1.4L893 255.4c4.3-5 3.6-10.3 0-13.2L749.7 129.8a8.22 8.22 0 00-5.2-1.8c-4.6 0-8.4 3.8-8.4 8.4V209H199.7c-39.5 0-71.7 32.2-71.7 71.8V544c0 4.4 3.6 8 8 8zm752-80h-63.6c-4.4 0-8 3.6-8 8v255.3H287.8v-72.6c0-1.9-.6-3.7-1.8-5.2a8.3 8.3 0 00-11.7-1.4L131 768.6c-4.3 5-3.6 10.3 0 13.2l143.3 112.4c1.5 1.2 3.3 1.8 5.2 1.8 4.6 0 8.4-3.8 8.4-8.4V815h536.6c39.5 0 71.7-32.2 71.7-71.8V480c-.2-4.4-3.8-8-8.2-8z"></path>'),cn(e,["♻️"],'<path d="M793 242H366v-74c0-6.7-7.7-10.4-12.9-6.3l-142 112a8 8 0 000 12.6l142 112c5.2 4.1 12.9.4 12.9-6.3v-74h415v470H175c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h618c35.3 0 64-28.7 64-64V306c0-35.3-28.7-64-64-64z"></path>'),cn(e,["🪄"],'<defs><style></style></defs><path d="M899.1 869.6l-53-305.6H864c14.4 0 26-11.6 26-26V346c0-14.4-11.6-26-26-26H618V138c0-14.4-11.6-26-26-26H432c-14.4 0-26 11.6-26 26v182H160c-14.4 0-26 11.6-26 26v192c0 14.4 11.6 26 26 26h17.9l-53 305.6a25.95 25.95 0 0025.6 30.4h723c1.5 0 3-.1 4.4-.4a25.88 25.88 0 0021.2-30zM204 390h272V182h72v208h272v104H204V390zm468 440V674c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v156H416V674c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v156H202.8l45.1-260H776l45.1 260H672z"></path>'),cn(e,["⚙️"],'<path d="M400 317.7h73.9V656c0 4.4 3.6 8 8 8h60c4.4 0 8-3.6 8-8V317.7H624c6.7 0 10.4-7.7 6.3-12.9L518.3 163a8 8 0 00-12.6 0l-112 141.7c-4.1 5.3-.4 13 6.3 13zM878 626h-60c-4.4 0-8 3.6-8 8v154H214V634c0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8v198c0 17.7 14.3 32 32 32h684c17.7 0 32-14.3 32-32V634c0-4.4-3.6-8-8-8z"></path>'),cn(e,["➡️"],'<path d="M666.7 505.5l-246-178A8 8 0 00408 334v46.9c0 10.2 4.9 19.9 13.2 25.9L566.6 512 421.2 617.2c-8.3 6-13.2 15.6-13.2 25.9V690c0 6.5 7.4 10.3 12.7 6.5l246-178c4.4-3.2 4.4-9.8 0-13z"></path><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path>'),cn(e,["⇅"],'<path d="M847.9 592H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h605.2L612.9 851c-4.1 5.2-.4 13 6.3 13h72.5c4.9 0 9.5-2.2 12.6-6.1l168.8-214.1c16.5-21 1.6-51.8-25.2-51.8zM872 356H266.8l144.3-183c4.1-5.2.4-13-6.3-13h-72.5c-4.9 0-9.5 2.2-12.6 6.1L150.9 380.2c-16.5 21-1.6 51.8 25.1 51.8h696c4.4 0 8-3.6 8-8v-60c0-4.4-3.6-8-8-8z"></path>')},oc=240,Zj=e=>{const a=document.querySelector(`#${e}_settings`),i=document.querySelector(`#tab_${e} .draggable-line`);if(!a||i)return;a.style.minWidth=`min(${oc}px, 100%)`;const n=document.createElement("div");n.classList.add("draggable-line"),a.after(n);const o=a.parentElement;o.classList.add("draggable-container");const r=document.querySelector(`#${e}_results`);if(!r)return;r.style.minWidth=`${oc}px`;let t=50;a.style.flexBasis=`${t}%`,r.style.flexBasis=`${100-t}%`;let _=!1;n.addEventListener("mousedown",s=>{_=!0,s.preventDefault()}),document.addEventListener("mousemove",s=>{if(!_)return;const l=document.querySelector(`#tab_${e}`);if(!l)return;let c=l.offsetLeft,m=l.offsetParent;for(;m;)c+=m.offsetLeft,m=m.offsetParent;const d=o.offsetWidth,k=(s.clientX-c)/d*100;k<=oc/d*100||k>=(1-oc/d)*100||(a.style.flexBasis=`${k}%`,r.style.flexBasis=`${100-k}%`)}),document.addEventListener("mouseup",()=>{_=!1})},$ie=()=>{Zj("txt2img"),Zj("img2img")},Jj=88,Eie="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAFpJREFUWAntljEKADAIA23p6v//qQ+wfUEcCu1yriEgp0FHRJSJcnehmmWm1Dv/lO4HIg1AAAKjTqm03ea88zMCCEDgO4HV5bS757f+7wRoAAIQ4B9gByAAgQ3pfiDmXmAeEwAAAABJRU5ErkJggg==",Oie="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACPTkDJAAAAZUlEQVRIDe2VMQoAMAgDa9/g/1/oIzrpZBCh2dLFkkoDF0Fz99OdiOjks+2/7S8fRRmMMIVoRGSoYzvvqF8ZIMKlC1GhQBc6IkPzq32QmdAzkEGihpWOSPsAss8HegYySNSw0hE9WQ4StafZFqkAAAAASUVORK5CYII=",Tie=di(({cx:e,css:a,token:i,stylish:n,isDarkMode:o},{isPromptResizable:r})=>{const t=a`
+      background: url(${o?Oie:Eie}) 0% 0% / 20px !important;
+      border: 2px solid ${i.colorBorderSecondary} !important;
+      border-radius: ${i.borderRadius}px !important;
+    `;return{background:e(n.gradientAnimation,a`
+          pointer-events: none;
+
+          position: absolute !important;
+          z-index: 0;
+          top: -100px;
+          right: -20vw;
+          transform: rotate(4deg);
+
+          width: 60vw;
+          height: 200px;
+
+          opacity: 0.2;
+          filter: blur(100px);
+        `),container:a`
         position: relative;
         flex: 1;
         max-width: 100%;
@@ -1809,12 +1823,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         }
 
         .float {
-          ${i.blur};
+          ${n.blur};
           border-top-left-radius: 0;
           border-top-right-radius: 0;
           border-bottom-left-radius: 0;
         }
-      `,draggablePanel:e`
+      `,draggablePanel:a`
         .draggable-line {
           flex: none !important;
 
@@ -1822,14 +1836,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           min-width: 2px !important;
           max-width: 2px !important;
 
-          border-left: 1px dashed ${a.colorBorderSecondary};
+          border-left: 1px dashed ${i.colorBorderSecondary};
 
           transition: all 0.3s ease-in-out;
 
           &:hover,
           &:active {
             cursor: col-resize;
-            border-left: 2px solid ${a.colorPrimary};
+            border-left: 2px solid ${i.colorPrimary};
           }
         }
 
@@ -1838,13 +1852,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           gap: 12px;
           align-items: stretch !important;
         }
-      `,gallery:e`
+      `,gallery:a`
         .livePreview,
         .gradio-gallery,
         .gradio-image,
         .gradio-video,
         .gradio-file {
-          ${r}
+          ${t}
         }
 
         div.block {
@@ -1853,7 +1867,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           &.gradio-image,
           &.gradio-video,
           &.gradio-file {
-            ${r}
+            ${t}
           }
         }
 
@@ -1863,10 +1877,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           .gradio-image,
           .gradio-video,
           .gradio-file {
-            ${r}
+            ${t}
           }
         }
-      `,img2img:e`
+      `,img2img:a`
         #img2img_column_batch {
           min-width: 100% !important;
         }
@@ -1914,42 +1928,42 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         #deepbooru {
           display: block !important;
         }
-      `,textares:e`
+      `,textares:a`
         [id$='2img_prompt'],
         [id$='2img_neg_prompt'] {
           textarea {
             overflow-y: auto;
 
-            min-height: ${o?"unset":`${Jj}px`};
-            max-height: ${o?"unset":`${Jj}px`};
+            min-height: ${r?"unset":`${Jj}px`};
+            max-height: ${r?"unset":`${Jj}px`};
             padding: 12px;
 
-            font-family: ${a.fontFamilyCode};
+            font-family: ${i.fontFamilyCode};
           }
         }
 
         [id$='2img_prompt'] textarea {
-          color: ${a.colorSuccessTextHover};
+          color: ${i.colorSuccessTextHover};
 
           &:focus {
-            color: ${a.colorSuccessText};
+            color: ${i.colorSuccessText};
           }
         }
 
         [id$='2img_neg_prompt'] textarea {
-          color: ${a.colorErrorTextHover};
+          color: ${i.colorErrorTextHover};
 
           &:focus {
-            color: ${a.colorError};
+            color: ${i.colorError};
           }
         }
 
         .block.token-counter span {
-          ${i.blur};
+          ${n.blur};
           display: inline-block;
-          font-family: ${a.fontFamilyCode};
+          font-family: ${i.fontFamilyCode};
         }
-      `}}),Pie=u.memo(({className:e,...a})=>{const i=u.useRef(),n=xn(_=>_.setting,J_),{cx:o,styles:r}=Tie({isPromptResizable:n.promotTextarea==="resizable"}),{mobile:t}=Jd();return u.useEffect(()=>{var s;const _=gradioApp().querySelector(".app");_&&((s=i.current)==null||s.append(_)),t||$ie()},[]),M.jsx("div",{className:o(r.container,r.draggablePanel,r.textares,r.gallery,r.img2img,e),ref:i,...a})}),Iie=Pie;var Rie={xmlns:"http://www.w3.org/2000/svg",width:24,height:24,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:2,strokeLinecap:"round",strokeLinejoin:"round"};const Nie=e=>e.replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase(),co=(e,a)=>{const i=u.forwardRef(({color:n="currentColor",size:o=24,strokeWidth:r=2,absoluteStrokeWidth:t,children:_,...s},l)=>u.createElement("svg",{ref:l,...Rie,width:o,height:o,stroke:n,strokeWidth:t?Number(r)*24/Number(o):r,className:`lucide lucide-${Nie(e)}`,...s},[...a.map(([c,m])=>u.createElement(c,m)),...(Array.isArray(_)?_:[_])||[]]));return i.displayName=`${e}`,i},Mie=co("Bold",[["path",{d:"M14 12a4 4 0 0 0 0-8H6v8",key:"v2sylx"}],["path",{d:"M15 20a4 4 0 0 0 0-8H6v8Z",key:"1ef5ya"}]]),Die=co("Bug",[["rect",{width:"8",height:"14",x:"8",y:"6",rx:"4",key:"hq8nra"}],["path",{d:"m19 7-3 2",key:"fmg8ec"}],["path",{d:"m5 7 3 2",key:"dkxqes"}],["path",{d:"m19 19-3-2",key:"1hbhi4"}],["path",{d:"m5 19 3-2",key:"dvt2ee"}],["path",{d:"M20 13h-4",key:"1agfp2"}],["path",{d:"M4 13h4",key:"1bwh8b"}],["path",{d:"m10 4 1 2",key:"1pot59"}],["path",{d:"m14 4-1 2",key:"m8sn0o"}]]),Aie=co("FileClock",[["path",{d:"M16 22h2c.5 0 1-.2 1.4-.6.4-.4.6-.9.6-1.4V7.5L14.5 2H6c-.5 0-1 .2-1.4.6C4.2 3 4 3.5 4 4v3",key:"9lo3o3"}],["polyline",{points:"14 2 14 8 20 8",key:"1ew0cm"}],["circle",{cx:"8",cy:"16",r:"6",key:"10v15b"}],["path",{d:"M9.5 17.5 8 16.25V14",key:"1o80t2"}]]),Lie=co("GitFork",[["circle",{cx:"12",cy:"18",r:"3",key:"1mpf1b"}],["circle",{cx:"6",cy:"6",r:"3",key:"1lh9wr"}],["circle",{cx:"18",cy:"6",r:"3",key:"1h7g24"}],["path",{d:"M18 9v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V9",key:"c89w8i"}],["path",{d:"M12 12v3",key:"158kv8"}]]),QP=co("Github",[["path",{d:"M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4",key:"tonef"}],["path",{d:"M9 18c-4.51 2-5-2-7-2",key:"9comsn"}]]),Fie=co("Loader2",[["path",{d:"M21 12a9 9 0 1 1-6.219-8.56",key:"13zald"}]]),qie=co("Moon",[["path",{d:"M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z",key:"a7tn18"}]]),Hie=co("Settings2",[["path",{d:"M20 7h-9",key:"3s1dr2"}],["path",{d:"M14 17H5",key:"gfn3mx"}],["circle",{cx:"17",cy:"17",r:"3",key:"18b49y"}],["circle",{cx:"7",cy:"7",r:"3",key:"dfmy0x"}]]),Bie=co("Sun",[["circle",{cx:"12",cy:"12",r:"4",key:"4exip2"}],["path",{d:"M12 2v2",key:"tus03m"}],["path",{d:"M12 20v2",key:"1lh1kg"}],["path",{d:"m4.93 4.93 1.41 1.41",key:"149t6j"}],["path",{d:"m17.66 17.66 1.41 1.41",key:"ptbguv"}],["path",{d:"M2 12h2",key:"1t8f8n"}],["path",{d:"M20 12h2",key:"1q8mjw"}],["path",{d:"m6.34 17.66-1.41 1.41",key:"1m8zz5"}],["path",{d:"m19.07 4.93-1.41 1.41",key:"1shlcs"}]]),Wie=co("ZoomIn",[["circle",{cx:"11",cy:"11",r:"8",key:"4ej97u"}],["line",{x1:"21",x2:"16.65",y1:"21",y2:"16.65",key:"13gj7c"}],["line",{x1:"11",x2:"11",y1:"8",y2:"14",key:"1vmskp"}],["line",{x1:"8",x2:"14",y1:"11",y2:"11",key:"durymu"}]]),ZP=di(({css:e,cx:a,stylish:i,token:n},{headerHeight:o=64,size:r=86})=>({container:a(i.blur,e`
+      `}}),Pie=u.memo(({className:e,...a})=>{const i=u.useRef(),n=xn(_=>_.setting,J_),{cx:o,styles:r}=Tie({isPromptResizable:n.promotTextarea==="resizable"}),{mobile:t}=Jd();return u.useEffect(()=>{var s;const _=gradioApp().querySelector(".app");_&&((s=i.current)==null||s.append(_)),t||$ie()},[]),M.jsx("div",{className:o(r.container,r.draggablePanel,r.textares,r.gallery,r.img2img,e),ref:i,...a,children:M.jsx("div",{className:r.background})})}),Iie=Pie;var Rie={xmlns:"http://www.w3.org/2000/svg",width:24,height:24,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:2,strokeLinecap:"round",strokeLinejoin:"round"};const Nie=e=>e.replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase(),co=(e,a)=>{const i=u.forwardRef(({color:n="currentColor",size:o=24,strokeWidth:r=2,absoluteStrokeWidth:t,children:_,...s},l)=>u.createElement("svg",{ref:l,...Rie,width:o,height:o,stroke:n,strokeWidth:t?Number(r)*24/Number(o):r,className:`lucide lucide-${Nie(e)}`,...s},[...a.map(([c,m])=>u.createElement(c,m)),...(Array.isArray(_)?_:[_])||[]]));return i.displayName=`${e}`,i},Mie=co("Bold",[["path",{d:"M14 12a4 4 0 0 0 0-8H6v8",key:"v2sylx"}],["path",{d:"M15 20a4 4 0 0 0 0-8H6v8Z",key:"1ef5ya"}]]),Die=co("Bug",[["rect",{width:"8",height:"14",x:"8",y:"6",rx:"4",key:"hq8nra"}],["path",{d:"m19 7-3 2",key:"fmg8ec"}],["path",{d:"m5 7 3 2",key:"dkxqes"}],["path",{d:"m19 19-3-2",key:"1hbhi4"}],["path",{d:"m5 19 3-2",key:"dvt2ee"}],["path",{d:"M20 13h-4",key:"1agfp2"}],["path",{d:"M4 13h4",key:"1bwh8b"}],["path",{d:"m10 4 1 2",key:"1pot59"}],["path",{d:"m14 4-1 2",key:"m8sn0o"}]]),Aie=co("FileClock",[["path",{d:"M16 22h2c.5 0 1-.2 1.4-.6.4-.4.6-.9.6-1.4V7.5L14.5 2H6c-.5 0-1 .2-1.4.6C4.2 3 4 3.5 4 4v3",key:"9lo3o3"}],["polyline",{points:"14 2 14 8 20 8",key:"1ew0cm"}],["circle",{cx:"8",cy:"16",r:"6",key:"10v15b"}],["path",{d:"M9.5 17.5 8 16.25V14",key:"1o80t2"}]]),Lie=co("GitFork",[["circle",{cx:"12",cy:"18",r:"3",key:"1mpf1b"}],["circle",{cx:"6",cy:"6",r:"3",key:"1lh9wr"}],["circle",{cx:"18",cy:"6",r:"3",key:"1h7g24"}],["path",{d:"M18 9v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V9",key:"c89w8i"}],["path",{d:"M12 12v3",key:"158kv8"}]]),QP=co("Github",[["path",{d:"M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4",key:"tonef"}],["path",{d:"M9 18c-4.51 2-5-2-7-2",key:"9comsn"}]]),Fie=co("Loader2",[["path",{d:"M21 12a9 9 0 1 1-6.219-8.56",key:"13zald"}]]),qie=co("Moon",[["path",{d:"M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z",key:"a7tn18"}]]),Hie=co("Settings2",[["path",{d:"M20 7h-9",key:"3s1dr2"}],["path",{d:"M14 17H5",key:"gfn3mx"}],["circle",{cx:"17",cy:"17",r:"3",key:"18b49y"}],["circle",{cx:"7",cy:"7",r:"3",key:"dfmy0x"}]]),Bie=co("Sun",[["circle",{cx:"12",cy:"12",r:"4",key:"4exip2"}],["path",{d:"M12 2v2",key:"tus03m"}],["path",{d:"M12 20v2",key:"1lh1kg"}],["path",{d:"m4.93 4.93 1.41 1.41",key:"149t6j"}],["path",{d:"m17.66 17.66 1.41 1.41",key:"ptbguv"}],["path",{d:"M2 12h2",key:"1t8f8n"}],["path",{d:"M20 12h2",key:"1q8mjw"}],["path",{d:"m6.34 17.66-1.41 1.41",key:"1m8zz5"}],["path",{d:"m19.07 4.93-1.41 1.41",key:"1shlcs"}]]),Wie=co("ZoomIn",[["circle",{cx:"11",cy:"11",r:"8",key:"4ej97u"}],["line",{x1:"21",x2:"16.65",y1:"21",y2:"16.65",key:"13gj7c"}],["line",{x1:"11",x2:"11",y1:"8",y2:"14",key:"1vmskp"}],["line",{x1:"8",x2:"14",y1:"11",y2:"11",key:"durymu"}]]),ZP=di(({css:e,cx:a,stylish:i,token:n},{headerHeight:o=64,size:r=86})=>({container:a(i.blur,e`
         position: relative;
 
         overflow: hidden;
@@ -2440,26 +2454,26 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             min-height: 16px;
           }
         }
-      `)})),Hue=u.memo(({headerHeight:e})=>{const a=xn(_=>_.setting,J_),[i]=u.useState(a.sidebarFixedMode),[n,o]=u.useState(a.sidebarExpand),{mobile:r}=Jd(),{styles:t}=que({headerHeight:e});return u.useEffect(()=>{r&&o(!1)},[]),M.jsx(jP,{defaultSize:{width:a.sidebarWidth},expand:n,minWidth:a.sidebarWidth,mode:i,onExpandChange:o,pin:i==="fixed",placement:"left",style:{display:"flex",flexDirection:"column"},children:M.jsx(zP,{children:M.jsx("div",{className:t.container,children:M.jsx(Fue,{})})})})}),Bue=Hue,Wue=di(({css:e,stylish:a,cx:i},n)=>({background:i(a.gradientAnimation,e`
+      `)})),Hue=u.memo(({headerHeight:e})=>{const a=xn(_=>_.setting,J_),[i]=u.useState(a.sidebarFixedMode),[n,o]=u.useState(a.sidebarExpand),{mobile:r}=Jd(),{styles:t}=que({headerHeight:e});return u.useEffect(()=>{r&&o(!1)},[]),M.jsx(jP,{defaultSize:{width:a.sidebarWidth},expand:n,minWidth:a.sidebarWidth,mode:i,onExpandChange:o,pin:i==="fixed",placement:"left",style:{display:"flex",flexDirection:"column"},children:M.jsx(zP,{children:M.jsx("div",{className:t.container,children:M.jsx(Fue,{})})})})}),Bue=Hue,Wue=di(({css:e},a)=>({sidebar:e`
+    height: calc(100vh - ${a}px);
+  `})),Lt=64,Vue=u.memo(()=>{const{styles:e}=Wue(Lt),a=xn(i=>i.setting,J_);return u.useEffect(()=>{a.svgIcon&&Cie()},[]),M.jsxs(M.Fragment,{children:[M.jsx(qee,{headerHeight:Lt,children:M.jsx(Cne,{})}),M.jsxs(Hee,{children:[M.jsx(hj,{className:e.sidebar,headerHeight:Lt,children:M.jsx(Bue,{headerHeight:Lt})}),M.jsx(Iie,{}),(a==null?void 0:a.enableExtraNetworkSidebar)&&M.jsx(hj,{className:e.sidebar,headerHeight:Lt,children:M.jsx(_ne,{headerHeight:Lt})})]}),M.jsx(cne,{})]})});class Uue{constructor(a,i){ss(this,"textArea");ss(this,"counterElt");ss(this,"errorStrings");ss(this,"check",()=>{let a="";for(const{regex:i,error:n}of this.errorStrings){const o=(this.textArea.value.match(new RegExp(i,"g"))||[]).length,r=(this.textArea.value.match(new RegExp(i.replaceAll("(",")").replaceAll("[","]").replaceAll("{","}"),"g"))||[]).length;o===r?a=this.counterElt.title.replace(n,""):this.counterElt.title.includes(n)||(a+=n)}this.counterElt.title=a,this.counterElt.classList.toggle("error",!!a)});this.textArea=a,this.counterElt=i,this.errorStrings=[{error:`(...) - Different number of opening and closing parentheses detected.
+`,regex:"\\("},{error:`[...] - Different number of opening and closing square brackets detected.
+`,regex:"\\["},{error:`{...} - Different number of opening and closing curly brackets detected.
+`,regex:"\\{"}]}}const kS=(e,a)=>{const i=gradioApp().querySelector(`#${e} > label > textarea`),n=gradioApp().querySelector(`#${a}`),o=new Uue(i,n);i.addEventListener("input",o.check)},Gue=()=>{const e=["txt2img","txt2img_neg","img2img","img2img_neg"];for(const a of e)kS(`${a}_prompt`,`${a}_token_counter`),kS(`${a}_prompt`,`${a}_negative_token_counter`)},Kue=()=>{const e=document.createElement("link");e.rel="icon",e.type="image/svg+xml",e.href="https://gw.alipayobjects.com/zos/bmw-prod/51a51720-8a30-4430-b6c9-be5712364f04.svg",document.querySelectorAll("head")[0].append(e)},Xue=di(({css:e,stylish:a,cx:i,token:n})=>({canvas:i(a.gradientAnimation,e`
       pointer-events: none;
 
       position: absolute;
-      z-index: 0;
-      top: -100px;
-      right: -20vw;
-      transform: rotate(4deg);
+      z-index: 10;
+      top: -250px;
+      left: 50%;
+      transform: translateX(-50%) scale(1.5);
 
-      width: 60vw;
-      height: 200px;
+      width: 100vw;
+      height: 400px;
 
       opacity: 0.2;
       filter: blur(100px);
-    `),sidebar:e`
-    height: calc(100vh - ${n}px);
-  `})),Lt=64,Vue=u.memo(()=>{const{styles:e}=Wue(Lt),a=xn(i=>i.setting,J_);return u.useEffect(()=>{a.svgIcon&&Cie()},[]),M.jsxs(M.Fragment,{children:[M.jsx("div",{className:e.background,id:"background"}),M.jsx(qee,{headerHeight:Lt,children:M.jsx(Cne,{})}),M.jsxs(Hee,{children:[M.jsx(hj,{className:e.sidebar,headerHeight:Lt,children:M.jsx(Bue,{headerHeight:Lt})}),M.jsx(Iie,{}),(a==null?void 0:a.enableExtraNetworkSidebar)&&M.jsx(hj,{className:e.sidebar,headerHeight:Lt,children:M.jsx(_ne,{headerHeight:Lt})})]}),M.jsx(cne,{})]})});class Uue{constructor(a,i){ss(this,"textArea");ss(this,"counterElt");ss(this,"errorStrings");ss(this,"check",()=>{let a="";for(const{regex:i,error:n}of this.errorStrings){const o=(this.textArea.value.match(new RegExp(i,"g"))||[]).length,r=(this.textArea.value.match(new RegExp(i.replaceAll("(",")").replaceAll("[","]").replaceAll("{","}"),"g"))||[]).length;o===r?a=this.counterElt.title.replace(n,""):this.counterElt.title.includes(n)||(a+=n)}this.counterElt.title=a,this.counterElt.classList.toggle("error",!!a)});this.textArea=a,this.counterElt=i,this.errorStrings=[{error:`(...) - Different number of opening and closing parentheses detected.
-`,regex:"\\("},{error:`[...] - Different number of opening and closing square brackets detected.
-`,regex:"\\["},{error:`{...} - Different number of opening and closing curly brackets detected.
-`,regex:"\\{"}]}}const kS=(e,a)=>{const i=gradioApp().querySelector(`#${e} > label > textarea`),n=gradioApp().querySelector(`#${a}`),o=new Uue(i,n);i.addEventListener("input",o.check)},Gue=()=>{const e=["txt2img","txt2img_neg","img2img","img2img_neg"];for(const a of e)kS(`${a}_prompt`,`${a}_token_counter`),kS(`${a}_prompt`,`${a}_negative_token_counter`)},Kue=()=>{const e=document.createElement("link");e.rel="icon",e.type="image/svg+xml",e.href="https://gw.alipayobjects.com/zos/bmw-prod/51a51720-8a30-4430-b6c9-be5712364f04.svg",document.querySelectorAll("head")[0].append(e)},Xue=di(({css:e,stylish:a,cx:i,token:n})=>({container:i(a.blur,e`
+    `),container:i(a.blur,e`
       position: fixed;
       z-index: 9999;
       inset: 0;
@@ -2480,4 +2494,4 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     justify-content: center;
 
     width: min(50%, 580px);
-  `})),Yue=u.memo(()=>{const e=xn(i=>i.themeMode,mt),{styles:a}=Xue();return M.jsx("section",{className:a.container,children:M.jsxs("div",{className:a.inner,children:[M.jsx(JP,{size:36,themeMode:e}),M.jsx(ir,{icon:Fie,size:{fontSize:32},spin:!0})]})})}),Que=u.memo(()=>{const[e,a]=u.useState(!0),i=xn(n=>n.setCurrentTab,mt);return u.useEffect(()=>{Kue(),onUiLoaded(()=>{Sue(),Gue(),a(!1)}),onUiUpdate(()=>{i()})},[]),M.jsx(Sie,{children:e?M.jsx(Yue,{}):M.jsx(Vue,{})})}),Zue=Que;window.global===void 0&&(window.global=window);window.location.href.includes("dev")?console.log("🚧 Theme Loader in Dev Mode"):document.addEventListener("DOMContentLoaded",()=>{var i,n;const e=document.createElement("div");e.setAttribute("id","root");try{(i=gradioApp())==null||i.append(e)}catch{(n=document.querySelector("gradio-app"))==null||n.append(e)}RC(e).render(M.jsx(Zue,{}))},{once:!0});
+  `})),Yue=u.memo(()=>{const e=xn(i=>i.themeMode,mt),{styles:a}=Xue();return M.jsxs("section",{className:a.container,children:[M.jsx("div",{className:a.canvas}),M.jsxs("div",{className:a.inner,children:[M.jsx(JP,{size:36,themeMode:e}),M.jsx(ir,{icon:Fie,size:{fontSize:32},spin:!0})]})]})}),Que=u.memo(()=>{const[e,a]=u.useState(!0),i=xn(n=>n.setCurrentTab,mt);return u.useEffect(()=>{Kue(),onUiLoaded(()=>{Sue(),Gue(),a(!1)}),onUiUpdate(()=>{i()})},[]),M.jsx(Sie,{children:e?M.jsx(Yue,{}):M.jsx(Vue,{})})}),Zue=Que;window.global===void 0&&(window.global=window);window.location.href.includes("dev")?console.log("🚧 Theme Loader in Dev Mode"):document.addEventListener("DOMContentLoaded",()=>{var i,n;const e=document.createElement("div");e.setAttribute("id","root");try{(i=gradioApp())==null||i.append(e)}catch{(n=document.querySelector("gradio-app"))==null||n.append(e)}RC(e).render(M.jsx(Zue,{}))},{once:!0});

@@ -6,13 +6,34 @@ const GALLERY_LIGHT =
 const GALLERY_DARK =
   'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACPTkDJAAAAZUlEQVRIDe2VMQoAMAgDa9/g/1/oIzrpZBCh2dLFkkoDF0Fz99OdiOjks+2/7S8fRRmMMIVoRGSoYzvvqF8ZIMKlC1GhQBc6IkPzq32QmdAzkEGihpWOSPsAss8HegYySNSw0hE9WQ4StafZFqkAAAAASUVORK5CYII=';
 export const useStyles = createStyles(
-  ({ css, token, stylish, isDarkMode }, { isPromptResizable }: { isPromptResizable: boolean }) => {
+  (
+    { cx, css, token, stylish, isDarkMode },
+    { isPromptResizable }: { isPromptResizable: boolean },
+  ) => {
     const galleryBackground = css`
       background: url(${isDarkMode ? GALLERY_DARK : GALLERY_LIGHT}) 0% 0% / 20px !important;
       border: 2px solid ${token.colorBorderSecondary} !important;
       border-radius: ${token.borderRadius}px !important;
     `;
     return {
+      background: cx(
+        stylish.gradientAnimation,
+        css`
+          pointer-events: none;
+
+          position: absolute !important;
+          z-index: 0;
+          top: -100px;
+          right: -20vw;
+          transform: rotate(4deg);
+
+          width: 60vw;
+          height: 200px;
+
+          opacity: 0.2;
+          filter: blur(100px);
+        `,
+      ),
       container: css`
         position: relative;
         flex: 1;
