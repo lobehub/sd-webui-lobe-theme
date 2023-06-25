@@ -111,6 +111,7 @@ export const useStyles = createStyles(
           }
 
           .additional {
+            position: absolute;
             display: none;
 
             > ul {

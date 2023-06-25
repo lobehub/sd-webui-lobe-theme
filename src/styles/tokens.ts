@@ -160,7 +160,7 @@ export default (token: Theme) => {
       --input-shadow-focus: none;
       --input-text-size: ${token.fontSize}px;
       --input-text-weight: 400;
-      --loader-color: ${token.colorInfoBg};
+      --loader-color: ${token.colorText};
       --prose-text-size: ${token.fontSize}px;
       --prose-text-weight: 400;
       --prose-header-text-weight: 600;

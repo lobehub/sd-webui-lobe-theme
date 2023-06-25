@@ -3,7 +3,7 @@ import { resolve } from 'node:path';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: 'dev',
+  base: '/dev',
   build: {
     outDir: './',
     rollupOptions: {
@@ -73,7 +73,7 @@ export default defineConfig({
   },
   server: {
     host: '127.0.0.1',
-    port: 5173,
+    port: 8000,
     proxy: {
       '/queue/join': {
         target: 'ws://127.0.0.1:7860',

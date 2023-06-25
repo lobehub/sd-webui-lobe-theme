@@ -1,4 +1,5 @@
 import { createStyles } from 'antd-style';
+import { rgba } from 'polished';
 
 const MIN_HEIGHT = 88;
 const GALLERY_LIGHT =
@@ -77,6 +78,12 @@ export const useStyles = createStyles(
         }
       `,
       gallery: css`
+        .livePreview {
+          position: absolute;
+          top: 4px;
+          left: 4px;
+        }
+
         .livePreview,
         .gradio-gallery,
         .gradio-image,
@@ -103,6 +110,14 @@ export const useStyles = createStyles(
           .gradio-file {
             ${galleryBackground}
           }
+        }
+
+        button.thumbnail-item {
+          background: ${token.colorBgContainer} !important;
+        }
+
+        div.preview.fixed-height {
+          background: ${rgba(token.colorBgLayout, 0.5)};
         }
       `,
       img2img: css`

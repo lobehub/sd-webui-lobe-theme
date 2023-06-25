@@ -28,12 +28,16 @@ const Index = memo(() => {
         <Header />
       </LayoutHeader>
       <LayoutMain>
-        <LayoutSidebar className={styles.sidebar} headerHeight={HEADER_HEIGHT}>
+        <LayoutSidebar className={styles.sidebar} headerHeight={HEADER_HEIGHT} style={{ flex: 0 }}>
           <QuickSettingSidebar headerHeight={HEADER_HEIGHT} />
         </LayoutSidebar>
         <Content />
         {setting?.enableExtraNetworkSidebar && (
-          <LayoutSidebar className={styles.sidebar} headerHeight={HEADER_HEIGHT}>
+          <LayoutSidebar
+            className={styles.sidebar}
+            headerHeight={HEADER_HEIGHT}
+            style={{ flex: 0 }}
+          >
             <ExtraNetworkSidebar headerHeight={HEADER_HEIGHT} />
           </LayoutSidebar>
         )}

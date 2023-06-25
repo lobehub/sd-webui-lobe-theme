@@ -32,6 +32,11 @@ const Content = memo<DivProps>(({ className, ...props }) => {
         className,
       )}
       ref={mainReference}
+      style={{
+        maxWidth: `min( calc(100vw - ${
+          setting.sidebarWidth + setting.extraNetworkSidebarWidth
+        }px), 100%)`,
+      }}
       {...props}
     >
       <div className={styles.background} />

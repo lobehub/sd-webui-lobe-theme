@@ -14,4 +14,10 @@ export default (token: Theme) => css`
     border: 1px solid ${token.colorBorder};
     border-radius: ${token.borderRadius}px;
   }
+
+  .wrap.svelte-j1gjts:has(div) {
+    overflow: hidden;
+    background: ${token.colorBgContainer} !important;
+    border-radius: ${token.borderRadius}px;
+  }
 `;

@@ -54,6 +54,7 @@ export const useStyles = createStyles(
 
           input[type='number'],
           textarea {
+            resize: none;
             box-sizing: border-box;
             height: 28px !important;
             padding: 4px !important;

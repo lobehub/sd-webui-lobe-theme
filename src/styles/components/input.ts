@@ -21,8 +21,7 @@ export default (token: Theme) => {
       white-space: nowrap;
     }
 
-    input:not([type='range'], [type='checkbox'], [type='number'], [type='radio'], .border-none),
-    textarea.scroll-hide {
+    input:not([type='range'], [type='checkbox'], [type='number'], [type='radio'], .border-none) {
       resize: none;
       height: 36px !important;
       border-radius: ${token.borderRadius}px;

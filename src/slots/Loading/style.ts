@@ -13,7 +13,7 @@ export const useStyles = createStyles(({ css, stylish, cx, token }) => ({
       left: 50%;
       transform: translateX(-50%) scale(1.5);
 
-      width: 100vw;
+      width: 75vw;
       height: 400px;
 
       opacity: 0.2;
