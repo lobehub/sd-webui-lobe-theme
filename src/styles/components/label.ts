@@ -2,6 +2,18 @@ import { Theme, css } from 'antd-style';
 
 export default (token: Theme) => {
   return css`
+    .block.gradio-html:has(div.prose) {
+      display: block;
+
+      p {
+        color: ${token.colorPrimaryText};
+
+        b {
+          color: ${token.colorPrimaryText};
+        }
+      }
+    }
+
     label {
       position: relative;
 
@@ -42,7 +54,7 @@ export default (token: Theme) => {
           width: 8px;
           height: 8px;
 
-          background: ${token.cyan8};
+          background: ${token.colorPrimary};
           border-radius: 4px;
         }
       }

@@ -21,4 +21,9 @@ export default (token: Theme) => css`
       background: ${token.colorText} !important;
     }
   }
+
+  .ant-tabs-ink-bar.ant-btn-primary,
+  .ant-switch-checked {
+    background: ${token.colorPrimary} !important;
+  }
 `;

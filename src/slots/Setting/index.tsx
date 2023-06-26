@@ -4,17 +4,46 @@ import isEqual from 'fast-deep-equal';
 import { memo, useCallback, useState } from 'react';
 import { shallow } from 'zustand/shallow';
 
-import { WebuiSetting, defaultSetting, useAppStore } from '@/store';
+import { PrimaryColor, WebuiSetting, defaultSetting, useAppStore } from '@/store';
 
 import { useStyles } from './style';
 
 const { Item } = Form;
 
+const findKey = (
+  object: { [key in PrimaryColor]: string },
+  value: string,
+): PrimaryColor | undefined => {
+  const res: { [key: string]: PrimaryColor } = {};
+  for (const key of Object.keys(object)) {
+    // @ts-ignore
+    res[object[key]] = key;
+  }
+  return res[value];
+};
+
 const Setting = memo(() => {
   const setting = useAppStore((st) => st.setting, isEqual);
-  const [activeColor, setActiveColor] = useState<string | undefined>(setting.primaryColor || '');
+  const [activeColor, setActiveColor] = useState<PrimaryColor | undefined>(
+    setting.primaryColor || undefined,
+  );
   const onSetSetting = useAppStore((st) => st.onSetSetting, shallow);
   const { styles, theme } = useStyles();
+
+  const colors = {
+    blue: theme.blue,
+    cyan: theme.cyan,
+    geekblue: theme.geekblue,
+    gold: theme.gold,
+    green: theme.green,
+    lime: theme.lime,
+    magenta: theme.magenta,
+    orange: theme.orange,
+    purple: theme.purple,
+    red: theme.red,
+    volcano: theme.volcano,
+    yellow: theme.yellow,
+  };
 
   const onReset = useCallback(() => {
     onSetSetting(defaultSetting);
@@ -29,6 +58,7 @@ const Setting = memo(() => {
     [activeColor],
   );
 
+  // @ts-ignore
   return (
     <Form
       initialValues={setting}
@@ -39,12 +69,12 @@ const Setting = memo(() => {
       style={{ maxWidth: 400 }}
     >
       <Divider style={{ margin: '4px 0 8px' }} />
-      <title className={styles.title}>Promot Textarea</title>
+      <div className={styles.title}>Promot Textarea</div>
       <Item className={styles.item} label="Display mode" name="promotTextarea">
         <Segmented options={['scroll', 'resizable']} />
       </Item>
       <Divider style={{ margin: '4px 0 8px' }} />
-      <title className={styles.title}>Sidebar</title>
+      <div className={styles.title}>Sidebar</div>
       <Item
         className={styles.item}
         label="Default expand"
@@ -60,7 +90,7 @@ const Setting = memo(() => {
         <InputNumber />
       </Item>
       <Divider style={{ margin: '4px 0 8px' }} />
-      <title className={styles.title}>ExtraNetwork Sidebar</title>
+      <div className={styles.title}>ExtraNetwork Sidebar</div>
       <Item
         className={styles.item}
         label="Enable"
@@ -87,13 +117,13 @@ const Setting = memo(() => {
         <InputNumber />
       </Item>
       <Divider style={{ margin: '4px 0 8px' }} />
-      <title className={styles.title}>Theme</title>
+      <div className={styles.title}>Theme</div>
       <Item className={styles.item} label="Use svg icons" name="svgIcon" valuePropName="checked">
         <Switch />
       </Item>
       <Item className={styles.item} label="Primary color">
         <Swatches
-          activeColor={activeColor}
+          activeColor={activeColor ? colors[activeColor] : undefined}
           colors={[
             theme.red,
             theme.orange,
@@ -108,7 +138,7 @@ const Setting = memo(() => {
             theme.magenta,
             theme.volcano,
           ]}
-          onSelect={setActiveColor}
+          onSelect={(c) => setActiveColor(c ? findKey(colors, c) : undefined)}
         />
       </Item>
       <Divider style={{ margin: '4px 0 16px' }} />

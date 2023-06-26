@@ -1,7 +1,7 @@
 import { Theme, css } from 'antd-style';
 
 export default (token: Theme) => css`
-  button,
+  button:not([role='switch'], .ant-btn),
   .gradio-button,
   .lg {
     cursor: pointer;

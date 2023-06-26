@@ -23,13 +23,13 @@ export default (token: Theme) => css`
 
       &:hover,
       &:active {
-        background: ${token.colorText};
-        border-color: ${token.colorText};
+        background: ${token.colorPrimary};
+        border-color: ${token.colorPrimary};
       }
     }
 
     &:hover {
-      background: ${token.colorTextSecondary};
+      background: ${token.colorPrimaryBorderHover};
     }
 
     &:active {

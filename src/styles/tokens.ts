@@ -121,11 +121,11 @@ export default (token: Theme) => {
       --checkbox-background-color: ${token.colorFillTertiary};
       --checkbox-background-color-focus: ${token.colorFillSecondary};
       --checkbox-background-color-hover: ${token.colorFillSecondary};
-      --checkbox-background-color-selected: ${token.colorText};
+      --checkbox-background-color-selected: ${token.colorPrimary};
       --checkbox-border-color: ${token.colorBorderSecondary};
       --checkbox-border-color-focus: ${token.colorBorder};
       --checkbox-border-color-hover: ${token.colorBorder};
-      --checkbox-border-color-selected: ${token.colorText};
+      --checkbox-border-color-selected: ${token.colorPrimary};
       --checkbox-border-radius: ${token.borderRadiusXS}px;
       --checkbox-border-width: 1px;
       --checkbox-label-background-fill:  ${token.colorFillTertiary};
@@ -160,7 +160,7 @@ export default (token: Theme) => {
       --input-shadow-focus: none;
       --input-text-size: ${token.fontSize}px;
       --input-text-weight: 400;
-      --loader-color: ${token.colorText};
+      --loader-color: ${token.colorPrimary};
       --prose-text-size: ${token.fontSize}px;
       --prose-text-weight: 400;
       --prose-header-text-weight: 600;

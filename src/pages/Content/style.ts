@@ -1,5 +1,5 @@
 import { createStyles } from 'antd-style';
-import { rgba } from 'polished';
+import { adjustHue, rgba } from 'polished';
 
 const MIN_HEIGHT = 88;
 const GALLERY_LIGHT =
@@ -9,7 +9,7 @@ const GALLERY_DARK =
 export const useStyles = createStyles(
   (
     { cx, css, token, stylish, isDarkMode },
-    { isPromptResizable }: { isPromptResizable: boolean },
+    { isPromptResizable, isPrimaryColor }: { isPrimaryColor: boolean; isPromptResizable: boolean },
   ) => {
     const galleryBackground = css`
       background: url(${isDarkMode ? GALLERY_DARK : GALLERY_LIGHT}) 0% 0% / 20px !important;
@@ -19,6 +19,16 @@ export const useStyles = createStyles(
     return {
       background: cx(
         stylish.gradientAnimation,
+        isPrimaryColor &&
+          css`
+            background-image: linear-gradient(
+              -45deg,
+              ${token.colorPrimary},
+              ${adjustHue(45, token.colorPrimary)},
+              ${token.colorPrimary},
+              ${adjustHue(-45, token.colorPrimary)}
+            );
+          `,
         css`
           pointer-events: none;
 
@@ -38,12 +48,7 @@ export const useStyles = createStyles(
       container: css`
         position: relative;
         flex: 1;
-        max-width: 100%;
-
-        div {
-          position: relative;
-          box-sizing: border-box;
-        }
+        min-width: 0;
 
         .float {
           ${stylish.blur};

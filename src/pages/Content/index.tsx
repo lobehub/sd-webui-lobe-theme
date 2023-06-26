@@ -11,7 +11,10 @@ import { useStyles } from './style';
 const Content = memo<DivProps>(({ className, ...props }) => {
   const mainReference: any = useRef<HTMLElement>();
   const setting = useAppStore((st) => st.setting, isEqual);
-  const { cx, styles } = useStyles({ isPromptResizable: setting.promotTextarea === 'resizable' });
+  const { cx, styles } = useStyles({
+    isPrimaryColor: Boolean(setting.primaryColor),
+    isPromptResizable: setting.promotTextarea === 'resizable',
+  });
   const { mobile } = useResponsive();
 
   useEffect(() => {
@@ -32,11 +35,6 @@ const Content = memo<DivProps>(({ className, ...props }) => {
         className,
       )}
       ref={mainReference}
-      style={{
-        maxWidth: `min( calc(100vw - ${
-          setting.sidebarWidth + setting.extraNetworkSidebarWidth
-        }px), 100%)`,
-      }}
       {...props}
     >
       <div className={styles.background} />

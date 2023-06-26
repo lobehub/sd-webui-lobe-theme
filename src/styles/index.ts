@@ -15,15 +15,15 @@ import tokens from './tokens';
 const GlobalStyle = createGlobalStyle(({ theme }) => [
   tokens(theme),
   antdOverride(theme),
+  button(theme),
+  container(theme),
+  input(theme),
+  label(theme),
+  options(theme),
+  progress(theme),
   slider(theme),
   table(theme),
-  input(theme),
-  container(theme),
-  button(theme),
   tabs(theme),
-  options(theme),
-  label(theme),
-  progress(theme),
 ]);
 
 export default GlobalStyle;

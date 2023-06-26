@@ -2,16 +2,13 @@ import { Theme, css } from 'antd-style';
 
 export default (token: Theme) => {
   return css`
-    .block.gradio-html:has(div.prose) {
-      display: block;
+    .gradio-tabitem {
+      overflow: auto;
+    }
 
-      p {
-        color: ${token.cyan8};
-
-        b {
-          color: ${token.cyan9};
-        }
-      }
+    .gradio-group,
+    .gradio-row {
+      gap: 12px !important;
     }
 
     div.gradio-box.block.padded:not(.gradio-accordion) {
@@ -43,8 +40,7 @@ export default (token: Theme) => {
       }
 
       > div:not([id$='_script_container'], .gradio-tabs):has(div),
-      > fieldset,
-      > .gradio-row {
+      > fieldset {
         flex-flow: row wrap;
         gap: 12px;
 
@@ -65,20 +61,20 @@ export default (token: Theme) => {
         gap: 12px;
 
         #script_list,
-        .gradio-group:not(.hidden):has(div) {
+        > .gradio-group:not(.hidden):has(div) {
           display: flex;
           flex-direction: column;
 
           margin: 0;
-          padding: 0;
+          padding: 16px;
 
           background-color: ${token.colorBgContainer};
           border: 1px solid ${token.colorBorderSecondary} !important;
           border-radius: ${token.borderRadius}px !important;
           box-shadow: none;
 
-          > div {
-            padding: 0;
+          > .gradio-accordion {
+            padding: 0 !important;
             border: none !important;
           }
         }
@@ -91,7 +87,7 @@ export default (token: Theme) => {
 
     div.compact,
     .wrap {
-      gap: 8px !important;
+      gap: 12px !important;
     }
 
     #tabs > div {

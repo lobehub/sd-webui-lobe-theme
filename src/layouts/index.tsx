@@ -1,6 +1,8 @@
-import { DivProps, ThemeProvider } from '@lobehub/ui';
+import { DivProps, ThemeProvider, colors } from '@lobehub/ui';
+import { generateColorPalette } from '@lobehub/ui/es/styles/algorithms/generateColorPalette';
+import isEqual from 'fast-deep-equal';
 import qs from 'query-string';
-import { memo, useEffect } from 'react';
+import { memo, useCallback, useEffect } from 'react';
 import { shallow } from 'zustand/shallow';
 
 import { useIsDarkMode } from '@/hooks/useIsDarkMode';
@@ -12,6 +14,7 @@ const Layout = memo<DivProps>(({ children }) => {
     (st) => ({ onInit: st.onInit, onSetThemeMode: st.onSetThemeMode, themeMode: st.themeMode }),
     shallow,
   );
+  const setting = useAppStore((st) => st.setting, isEqual);
   const isDarkMode = useIsDarkMode();
 
   useEffect(() => {
@@ -28,8 +31,15 @@ const Layout = memo<DivProps>(({ children }) => {
     }
   }, [isDarkMode]);
 
+  const genCustomToken = useCallback(() => {
+    if (!setting.primaryColor) return {};
+    const scale = colors[setting.primaryColor];
+
+    return generateColorPalette({ appearance: themeMode, scale, type: 'Primary' });
+  }, [setting.primaryColor, themeMode]);
+
   return (
-    <ThemeProvider themeMode={themeMode}>
+    <ThemeProvider customToken={genCustomToken} themeMode={themeMode}>
       <GlobalStyle />
       {children}
     </ThemeProvider>

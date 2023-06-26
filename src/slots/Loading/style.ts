@@ -1,9 +1,19 @@
 import { createStyles } from 'antd-style';
-import { rgba } from 'polished';
+import { adjustHue, rgba } from 'polished';
 
-export const useStyles = createStyles(({ css, stylish, cx, token }) => ({
+export const useStyles = createStyles(({ css, stylish, cx, token }, isPrimaryColor?: boolean) => ({
   canvas: cx(
     stylish.gradientAnimation,
+    isPrimaryColor &&
+      css`
+        background-image: linear-gradient(
+          -45deg,
+          ${token.colorPrimary},
+          ${adjustHue(45, token.colorPrimary)},
+          ${token.colorPrimary},
+          ${adjustHue(-45, token.colorPrimary)}
+        );
+      `,
     css`
       pointer-events: none;
 
@@ -37,6 +47,9 @@ export const useStyles = createStyles(({ css, stylish, cx, token }) => ({
       background: ${rgba(token.colorBgLayout, 0.5)};
     `,
   ),
+  icon: css`
+    color: ${token.colorPrimary};
+  `,
   inner: css`
     display: flex;
     flex-direction: column;
