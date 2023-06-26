@@ -30,7 +30,8 @@ export interface WebuiSetting {
   logoType: 'lobe' | 'kitchen' | 'custom';
   neutralColor: NeutralColor | undefined;
   primaryColor: PrimaryColor | undefined;
-  promotTextarea: 'scroll' | 'resizable';
+  promptEditor: boolean;
+  promptTextarea: 'scroll' | 'resizable';
   sidebarExpand: boolean;
   sidebarFixedMode: 'fixed' | 'float';
   sidebarWidth: number;
@@ -48,7 +49,8 @@ export const defaultSetting: WebuiSetting = {
   logoType: 'lobe',
   neutralColor: undefined,
   primaryColor: undefined,
-  promotTextarea: 'scroll',
+  promptEditor: true,
+  promptTextarea: 'scroll',
   sidebarExpand: true,
   sidebarFixedMode: 'fixed',
   sidebarWidth: 280,

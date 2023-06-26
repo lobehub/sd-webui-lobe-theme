@@ -13,7 +13,7 @@ const Content = memo<DivProps>(({ className, ...props }) => {
   const setting = useAppStore((st) => st.setting, isEqual);
   const { cx, styles } = useStyles({
     isPrimaryColor: Boolean(setting.primaryColor),
-    isPromptResizable: setting.promotTextarea === 'resizable',
+    isPromptResizable: setting.promptTextarea === 'resizable',
   });
   const { mobile } = useResponsive();
 

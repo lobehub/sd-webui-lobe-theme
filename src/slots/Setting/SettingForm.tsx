@@ -86,6 +86,15 @@ const SettingForm = memo(() => {
         <Item className={styles.item} label="Display mode" name="promotTextarea">
           <Segmented options={['scroll', 'resizable']} />
         </Item>
+        <Divider style={{ margin: 0 }} />
+        <Item
+          className={styles.item}
+          label="Prompt editor"
+          name="promptEditor"
+          valuePropName="checked"
+        >
+          <Switch />
+        </Item>
       </div>
       <div className={styles.group}>
         <div className={styles.title}>

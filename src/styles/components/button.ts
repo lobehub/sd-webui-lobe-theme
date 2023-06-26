@@ -9,8 +9,6 @@ export default (token: Theme) => css`
     overflow: hidden;
     flex: 1;
 
-    padding: 8px 16px;
-
     font-size: 14px;
     font-weight: 500;
     line-height: 1;
