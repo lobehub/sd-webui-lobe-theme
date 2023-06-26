@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'antd-style';
 
-import antdOverride from './antd-override';
+import antdOverride from './antdOverride';
 import button from './components/button';
 import container from './components/container';
 import input from './components/input';

@@ -17,12 +17,18 @@ export type PrimaryColor =
   | 'volcano'
   | 'yellow';
 
+export type NeutralColor = 'mauve' | 'slate' | 'sage' | 'olive' | 'sand';
+
 export interface WebuiSetting {
   enableExtraNetworkSidebar: boolean;
   extraNetworkCardSize: number;
   extraNetworkFixedMode: 'fixed' | 'float';
   extraNetworkSidebarExpand: boolean;
   extraNetworkSidebarWidth: number;
+  logoCustomTitle: string | undefined;
+  logoCustomUrl: string | undefined;
+  logoType: 'lobe' | 'kitchen' | 'custom';
+  neutralColor: NeutralColor | undefined;
   primaryColor: PrimaryColor | undefined;
   promotTextarea: 'scroll' | 'resizable';
   sidebarExpand: boolean;
@@ -37,6 +43,10 @@ export const defaultSetting: WebuiSetting = {
   extraNetworkFixedMode: 'fixed',
   extraNetworkSidebarExpand: true,
   extraNetworkSidebarWidth: 340,
+  logoCustomTitle: '',
+  logoCustomUrl: '',
+  logoType: 'lobe',
+  neutralColor: undefined,
   primaryColor: undefined,
   promotTextarea: 'scroll',
   sidebarExpand: true,

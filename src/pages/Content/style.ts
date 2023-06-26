@@ -56,6 +56,18 @@ export const useStyles = createStyles(
           border-top-right-radius: 0;
           border-bottom-left-radius: 0;
         }
+
+        .block.gradio-html:has(div.prose) {
+          display: block;
+
+          p {
+            color: ${isDarkMode ? token.colorPrimaryText : token.colorPrimaryTextHover};
+
+            b {
+              color: ${isDarkMode ? token.colorPrimaryText : token.colorPrimaryTextHover};
+            }
+          }
+        }
       `,
       draggablePanel: css`
         .draggable-line {

@@ -1,9 +1,11 @@
 import { createStyles } from 'antd-style';
 
 export const useStyles = createStyles(({ css }) => ({
-  container: css`
-    overflow-x: hidden;
-    overflow-y: auto;
-    max-height: 60vh !important;
+  modal: css`
+    height: 70%;
+
+    .ant-modal-header {
+      margin-bottom: 24px;
+    }
   `,
 }));

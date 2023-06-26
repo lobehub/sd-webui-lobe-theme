@@ -56,6 +56,7 @@
     "@ant-design/icons": "^5",
     "@babel/plugin-syntax-import-assertions": "^7",
     "@commitlint/cli": "^17",
+    "@giscus/react": "^2.2.8",
     "@lobehub/lint": "latest",
     "@lobehub/ui": "latest",
     "@types/lodash-es": "^4",

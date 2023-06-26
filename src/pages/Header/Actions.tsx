@@ -1,7 +1,6 @@
-import { GithubOutlined } from '@ant-design/icons';
 import { ActionIcon } from '@lobehub/ui';
-import { Modal, Popover, Space } from 'antd';
-import { Bold, Github, LucideIcon, Moon, Settings2, Sun } from 'lucide-react';
+import { Space } from 'antd';
+import { Github, LucideIcon, Moon, Settings, Sun } from 'lucide-react';
 import qs from 'query-string';
 import { memo, useCallback, useState } from 'react';
 import { shallow } from 'zustand/shallow';
@@ -21,6 +20,7 @@ interface ActionsProps {
 }
 
 const Actions = memo<ActionsProps>(() => {
+  const [isSettingOpen, setIsSettingOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const themeMode = useAppStore((st) => st.themeMode, shallow);
 
@@ -31,56 +31,22 @@ const Actions = memo<ActionsProps>(() => {
     window.location.replace(qs.stringifyUrl(gradioURL));
   }, [themeMode]);
 
-  const showModal = () => setIsModalOpen(true);
-
-  const handleCancel = () => setIsModalOpen(false);
-
   return (
     <>
       <Space.Compact>
         <a href="https://civitai.com/" rel="noreferrer" target="_blank">
           <ActionIcon icon={CivitaiLogo} title="Civitai" />
         </a>
-        <a
-          href="https://www.birme.net/?target_width=512&target_height=512"
-          rel="noreferrer"
-          target="_blank"
-        >
-          <ActionIcon icon={Bold} title="Birme" />
-        </a>
-        <ActionIcon icon={Github} onClick={showModal} title="Feedback" />
-        <Popover
-          content={<Setting />}
-          title={<h3 style={{ lineHeight: 2, margin: 0 }}>⚙ Setting</h3>}
-          trigger="click"
-        >
-          <ActionIcon icon={Settings2} title="Setting" />
-        </Popover>
+        <ActionIcon icon={Github} onClick={() => setIsModalOpen(true)} title="Feedback" />
         <ActionIcon
           icon={themeMode === 'light' ? Sun : Moon}
           onClick={handleSetTheme}
           title="Switch Theme"
         />
+        <ActionIcon icon={Settings} onClick={() => setIsSettingOpen(true)} title="Setting" />
       </Space.Compact>
-      <Modal
-        footer={false}
-        onCancel={handleCancel}
-        open={isModalOpen}
-        title={
-          <a
-            href="https://github.com/canisminor1990/sd-webui-kitchen-theme"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <Space>
-              <GithubOutlined />
-              {'canisminor1990/sd-webui-kitchen-theme'}
-            </Space>
-          </a>
-        }
-      >
-        <Giscus themeMode={themeMode} />
-      </Modal>
+      <Setting onCancel={() => setIsSettingOpen(false)} open={isSettingOpen} />
+      <Giscus onCancel={() => setIsModalOpen(false)} open={isModalOpen} themeMode={themeMode} />
     </>
   );
 });

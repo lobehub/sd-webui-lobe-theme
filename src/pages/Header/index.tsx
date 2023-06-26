@@ -1,8 +1,10 @@
-import { Header as H, Logo } from '@lobehub/ui';
+import { Header as H, Tooltip } from '@lobehub/ui';
 import { useTheme } from 'antd-style';
 import { memo } from 'react';
 import { shallow } from 'zustand/shallow';
 
+import { homepage, name, version } from '@/../package.json';
+import { Logo } from '@/components';
 import { useAppStore } from '@/store';
 import { DivProps } from '@/types/index';
 
@@ -19,12 +21,14 @@ const Header = memo<DivProps>(({ children }) => {
       actionsStyle={{ flex: 0 }}
       logo={
         <a
-          href="https://github.com/canisminor1990/sd-webui-kitchen-theme"
+          href={homepage}
           rel="noreferrer"
-          style={{ color: theme.colorText }}
+          style={{ alignItems: 'center', color: theme.colorText, display: 'flex' }}
           target="_blank"
         >
-          <Logo extra="SD" type="combine" />
+          <Tooltip title={`${name} v${version}`}>
+            <Logo />
+          </Tooltip>
         </a>
       }
       nav={
