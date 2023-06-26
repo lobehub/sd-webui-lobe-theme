@@ -4,7 +4,7 @@ import App from './App';
 
 if (window.global === undefined) window.global = window;
 
-if (window.location.href.includes('dev') && import.meta.env.VITE_CONTEXT !== 'DEV') {
+if (window.location.href.includes('dev') && process.env.NODE_ENV === 'production') {
   console.log('🚧 Theme Loader in Dev Mode');
 } else {
   document.addEventListener(

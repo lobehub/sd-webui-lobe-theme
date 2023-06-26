@@ -4,6 +4,7 @@ import { ZoomIn } from 'lucide-react';
 import { memo, useEffect, useRef, useState } from 'react';
 import { shallow } from 'zustand/shallow';
 
+import { SidebarBody, SidebarFooter } from '@/components';
 import { useStyles } from '@/pages/ExtraNetworkSidebar/style';
 import civitaiHelperFix from '@/script/civitaiHelperFix';
 import { useAppStore } from '@/store';
@@ -53,7 +54,7 @@ const Inner = memo(() => {
 
   return (
     <>
-      <div className={styles.list}>
+      <SidebarBody className={styles.body}>
         {extraLoading && <Skeleton active />}
         <div style={extraLoading ? { display: 'none' } : {}}>
           <div
@@ -67,8 +68,8 @@ const Inner = memo(() => {
             style={currentTab === 'tab_img2img' ? {} : { display: 'none' }}
           />
         </div>
-      </div>
-      <div className={styles.footer}>
+      </SidebarBody>
+      <SidebarFooter>
         <Icon icon={ZoomIn} />
         <Slider
           defaultValue={size}
@@ -78,7 +79,7 @@ const Inner = memo(() => {
           step={8}
           style={{ flex: 1 }}
         />
-      </div>
+      </SidebarFooter>
     </>
   );
 });

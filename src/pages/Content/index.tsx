@@ -31,7 +31,8 @@ const Content = memo<DivProps>(({ className, ...props }) => {
         styles.draggablePanel,
         styles.textares,
         styles.gallery,
-        styles.img2img,
+        styles.text2img,
+        styles.autocompleteResults,
         className,
       )}
       ref={mainReference}

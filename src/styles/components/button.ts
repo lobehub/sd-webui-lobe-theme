@@ -1,18 +1,13 @@
 import { Theme, css } from 'antd-style';
 
 export default (token: Theme) => css`
-  button:not([role='switch'], .ant-btn),
+  button:not([role='switch'], .ant-btn, .svelte-1p4r00v),
   .gradio-button,
   .lg {
     cursor: pointer;
 
-    position: relative;
-
     overflow: hidden;
-    display: flex;
     flex: 1;
-    align-items: center;
-    justify-content: center;
 
     padding: 8px 16px;
 
@@ -63,5 +58,44 @@ export default (token: Theme) => css`
 
   .gradio-button.tool.lg {
     max-width: max(36px, 100%) !important;
+  }
+
+  #txt2img_interrupt,
+  #img2img_interrupt {
+    border-right: 1px solid ${token.colorBgLayout};
+    border-radius: ${token.borderRadius}px 0 0 ${token.borderRadius}px !important;
+  }
+
+  #txt2img_skip,
+  #img2img_skip {
+    border-radius: 0 ${token.borderRadius}px ${token.borderRadius}px 0 !important;
+  }
+
+  #txt2img_interrupt,
+  #txt2img_skip,
+  #img2img_interrupt,
+  #img2img_skip {
+    color: #fff !important;
+    background: ${token.colorError} !important;
+
+    &:hover {
+      color: #fff !important;
+      background: ${token.colorErrorHover} !important;
+    }
+
+    &:active {
+      color: #fff !important;
+      background: ${token.colorErrorActive} !important;
+    }
+  }
+
+  #interrogate,
+  #deepbooru {
+    display: block !important;
+  }
+
+  #txt2img_dimensions_row,
+  #img2img_dimensions_row {
+    min-width: 36px !important;
   }
 `;

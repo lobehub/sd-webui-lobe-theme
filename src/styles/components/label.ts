@@ -2,7 +2,11 @@ import { Theme, css } from 'antd-style';
 
 export default (token: Theme) => {
   return css`
-    label {
+    label.svelte-1pie7s6 {
+      display: unset !important;
+    }
+
+    label.block {
       position: relative;
 
       overflow: hidden;
@@ -11,13 +15,17 @@ export default (token: Theme) => {
 
       text-overflow: ellipsis;
       white-space: nowrap;
-    }
 
-    label > span {
-      overflow: hidden;
-      width: 100%;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+      > span {
+        z-index: 1 !important;
+
+        overflow: hidden;
+
+        width: 100%;
+
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
     }
 
     .label-wrap {

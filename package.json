@@ -95,6 +95,7 @@
     "react-tag-input": "^6",
     "remark": "^14",
     "remark-cli": "^11",
+    "rollup-plugin-terser": "^7.0.2",
     "semantic-release": "^21",
     "styled-components": "latest",
     "stylelint": "^15",

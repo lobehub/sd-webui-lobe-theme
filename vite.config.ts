@@ -1,6 +1,11 @@
 import react from '@vitejs/plugin-react';
 import { resolve } from 'node:path';
+import * as process from 'node:process';
+// @ts-ignore
+import { terser } from 'rollup-plugin-terser';
 import { defineConfig } from 'vite';
+
+const isProduction = process.env.NODE_ENV === 'production';
 
 export default defineConfig({
   base: '/dev',
@@ -13,7 +18,46 @@ export default defineConfig({
         chunkFileNames: `[name].js`,
         entryFileNames: `[name].js`,
       },
+      plugins: [
+        isProduction &&
+          terser({
+            compress: {
+              arguments: true,
+              drop_console: true,
+              hoist_funs: true,
+              hoist_props: true,
+              hoist_vars: true,
+              inline: true,
+              keep_fargs: false,
+              keep_fnames: false,
+              keep_infinity: false,
+              loops: true,
+              passes: 3,
+              pure_funcs: [],
+              pure_getters: true,
+              reduce_vars: true,
+              sequences: true,
+              unsafe: true,
+              unsafe_Function: true,
+              unsafe_arrows: true,
+              unsafe_comps: true,
+              unsafe_math: true,
+              unsafe_methods: true,
+              unsafe_proto: true,
+              unsafe_regexp: true,
+              unsafe_symbols: true,
+              unsafe_undefined: true,
+              unused: true,
+            },
+            format: {
+              comments: false,
+            },
+          }),
+      ],
     },
+  },
+  define: {
+    'process.env': process.env,
   },
   plugins: [
     react({
@@ -21,7 +65,7 @@ export default defineConfig({
         plugins: ['@babel/plugin-syntax-import-assertions'],
       },
     }),
-    {
+    !isProduction && {
       configureServer: (server) => {
         server.middlewares.use((_request, res, next) => {
           res.setHeader('Cross-Origin-Embedder-Policy', 'unsafe-none');
@@ -31,7 +75,7 @@ export default defineConfig({
       },
       name: 'configure-response-headers',
     },
-    {
+    !isProduction && {
       configureServer: (server) => {
         server.middlewares.use(async(_request, res, next): Promise<void> => {
           if (

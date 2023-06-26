@@ -3,6 +3,7 @@ import { useResponsive } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { memo, useEffect, useState } from 'react';
 
+import { SidebarContainer, SidebarHeader } from '@/components';
 import { useAppStore } from '@/store';
 import { DivProps } from '@/types/index';
 
@@ -15,8 +16,8 @@ export interface ExtraNetworkSidebarProps extends DivProps {
 
 const ExtraNetworkSidebar = memo<ExtraNetworkSidebarProps>(({ headerHeight }) => {
   const setting = useAppStore((st) => st.setting, isEqual);
-  const [mode] = useState<'fixed' | 'float'>(setting.extraNetworkFixedMode);
   const [expand, setExpand] = useState<boolean>(setting.extraNetworkSidebarExpand);
+  const [pin, setPin] = useState<boolean>(setting.extraNetworkFixedMode === 'fixed');
   const { mobile } = useResponsive();
   const { styles } = useStyles({ headerHeight });
 
@@ -43,15 +44,16 @@ const ExtraNetworkSidebar = memo<ExtraNetworkSidebarProps>(({ headerHeight }) =>
       defaultSize={{ width: setting.extraNetworkSidebarWidth }}
       expand={expand}
       minWidth={setting.extraNetworkSidebarWidth}
-      mode={mode}
+      mode={pin ? 'fixed' : 'float'}
       onExpandChange={setExpand}
-      pin={mode === 'fixed'}
+      pin={pin}
       placement="right"
     >
       <LayoutSidebarInner>
-        <div className={styles.container}>
+        <SidebarContainer className={styles.container}>
+          <SidebarHeader pin={pin} position="right" setPin={setPin} title="ExraNetworks" />
           <Inner />
-        </div>
+        </SidebarContainer>
       </LayoutSidebarInner>
     </DraggablePanel>
   );

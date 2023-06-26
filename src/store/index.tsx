@@ -52,7 +52,7 @@ export const defaultSetting: WebuiSetting = {
   sidebarExpand: true,
   sidebarFixedMode: 'fixed',
   sidebarWidth: 280,
-  svgIcon: false,
+  svgIcon: true,
 };
 export interface AppState {
   currentTab: string;

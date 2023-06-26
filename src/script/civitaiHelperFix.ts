@@ -38,15 +38,15 @@ const styleButton = (node: HTMLElement, isThumbMode: boolean) => {
 };
 
 const updateCardForCivitai = () => {
-  if (!gradioApp().querySelector('#tab_civitai_helper')) return;
+  if (!document.querySelector('#tab_civitai_helper')) return;
 
   const replacePreviewText = getTranslation('replace preview') || 'replace preview';
 
   // Get component
-  const chAlwaysDisplayCkb = gradioApp().querySelector(
+  const chAlwaysDisplayCkb = document.querySelector(
     '#ch_always_display_ckb input',
   ) as HTMLInputElement;
-  const chShowButtonOnThumbCkb = gradioApp().querySelector(
+  const chShowButtonOnThumbCkb = document.querySelector(
     '#ch_show_btn_on_thumb_ckb input',
   ) as HTMLInputElement;
   const chAlwaysDisplay = chAlwaysDisplayCkb?.checked || false;
@@ -73,7 +73,7 @@ const updateCardForCivitai = () => {
       // Get model_type for python side
 
       extraNetworkId = `${activeTabType}_${jsModelType}_${CARDID_SUFFIX}`;
-      extraNetworkNode = gradioApp().querySelector(`#${extraNetworkId}`);
+      extraNetworkNode = document.querySelector(`#${extraNetworkId}`);
 
       // Check if extra network node exists
       if (extraNetworkNode === undefined) continue;
@@ -83,7 +83,8 @@ const updateCardForCivitai = () => {
       if (extraNetworkNode?.className === 'extra-network-thumbs') isThumbMode = true;
 
       // Get all card nodes
-      cards = extraNetworkNode.querySelectorAll('.card');
+      cards = extraNetworkNode?.querySelectorAll('.card');
+      if (!cards) continue;
       for (const card of cards) {
         if (card.querySelectorAll('.actions .additional a').length > 2) continue;
         // Metadata_buttoncard
@@ -107,8 +108,8 @@ const updateCardForCivitai = () => {
             // Remove existed buttons
             if (ulNode) {
               // Find all .a child nodes
-              const atags = ulNode.querySelectorAll('a');
-
+              const atags = ulNode?.querySelectorAll('a');
+              if (!atags) continue;
               for (const atag of atags) {
                 // Reset display
                 atag.style.display = undefined;
@@ -201,11 +202,13 @@ const updateCardForCivitai = () => {
 };
 
 export default () => {
+  let retryTimes = 0;
   const fixInterval = setInterval(() => {
     const checkDom = document.querySelector('#txt2img_lora_cards');
-    if (checkDom) {
+    if (checkDom || retryTimes > 10) {
       updateCardForCivitai();
       clearInterval(fixInterval);
     }
+    retryTimes++;
   }, 1000);
 };

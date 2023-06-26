@@ -22,11 +22,11 @@ export default (token: Theme) => css`
     background: ${token.colorFillSecondary};
   }
 
-  tr:nth-child(odd) td {
+  tr:nth-of-type(odd) td {
     background: ${token.colorFillQuaternary};
   }
 
-  tr:nth-child(odd):hover td {
+  tr:nth-of-type(odd):hover td {
     background: ${token.colorFillSecondary};
   }
 `;

@@ -3,6 +3,7 @@ import { useResponsive } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { memo, useEffect, useState } from 'react';
 
+import { SidebarContainer, SidebarHeader } from '@/components';
 import { useAppStore } from '@/store';
 
 import Inner from './Inner';
@@ -14,8 +15,8 @@ export interface QuickSettingSidebarProps extends DivProps {
 
 const QuickSettingSidebar = memo<QuickSettingSidebarProps>(({ headerHeight }) => {
   const setting = useAppStore((st) => st.setting, isEqual);
-  const [mode] = useState<'fixed' | 'float'>(setting.sidebarFixedMode);
   const [expand, setExpand] = useState<boolean>(setting.sidebarExpand);
+  const [pin, setPin] = useState<boolean>(setting.sidebarFixedMode === 'fixed');
   const { mobile } = useResponsive();
   const { styles } = useStyles({ headerHeight });
 
@@ -28,9 +29,9 @@ const QuickSettingSidebar = memo<QuickSettingSidebarProps>(({ headerHeight }) =>
       defaultSize={{ width: setting.sidebarWidth }}
       expand={expand}
       minWidth={setting.sidebarWidth}
-      mode={mode}
+      mode={pin ? 'fixed' : 'float'}
       onExpandChange={setExpand}
-      pin={mode === 'fixed'}
+      pin={pin}
       placement="left"
       style={{
         display: 'flex',
@@ -38,9 +39,10 @@ const QuickSettingSidebar = memo<QuickSettingSidebarProps>(({ headerHeight }) =>
       }}
     >
       <LayoutSidebarInner>
-        <div className={styles.container}>
+        <SidebarContainer className={styles.container}>
+          <SidebarHeader pin={pin} position="left" setPin={setPin} title="Quick Settings" />
           <Inner />
-        </div>
+        </SidebarContainer>
       </LayoutSidebarInner>
     </DraggablePanel>
   );

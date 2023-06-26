@@ -1,42 +1,8 @@
 import { createStyles } from 'antd-style';
-import { rgba } from 'polished';
 
 export const useStyles = createStyles(
-  (
-    { css, cx, stylish, token },
-    { headerHeight = 64, size = 86 }: { headerHeight?: number; size?: number },
-  ) => ({
-    container: cx(
-      stylish.blur,
-      css`
-        position: relative;
-
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-
-        height: calc(100vh - ${headerHeight}px);
-
-        background: ${rgba(token.colorBgLayout, 0.5)};
-      `,
-    ),
-    footer: css`
-      display: flex;
-      flex: 0;
-      gap: 8px;
-      align-items: center;
-      justify-content: flex-start;
-
-      padding: 8px 16px;
-
-      border-top: 1px solid ${token.colorBorderSecondary};
-    `,
-    list: css`
-      overflow-x: hidden;
-      overflow-y: auto;
-      flex: 1;
-      padding: 16px;
-
+  ({ css, token }, { headerHeight = 64, size = 86 }: { headerHeight?: number; size?: number }) => ({
+    body: css`
       .extra-network-cards .name {
         background: unset !important;
       }
@@ -224,6 +190,9 @@ export const useStyles = createStyles(
         overflow-y: hidden !important;
         font-family: ${token.fontFamily};
       }
+    `,
+    container: css`
+      height: calc(100vh - ${headerHeight}px);
     `,
   }),
 );

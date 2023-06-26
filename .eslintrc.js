@@ -8,6 +8,7 @@ module.exports = {
     {
       files: ['*.ts', '*.tsx'],
       rules: {
+        'linebreak-style': 0,
         'no-undef': 0,
         'object-curly-spacing': 0,
         'unicorn/prefer-add-event-listener': 0,
