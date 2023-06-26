@@ -8,22 +8,28 @@ export const columns: FProps['columns'] = [
   {
     items: [
       {
-        description: 'AIGC Components',
+        description: 'AUTOMATIC111',
         openExternal: true,
-        title: '🤯 Lobe UI',
-        url: 'https://github.com/lobehub/lobe-ui',
+        title: 'Stable Diffusion Webui',
+        url: 'https://github.com/AUTOMATIC1111/stable-diffusion-webui',
       },
       {
-        description: 'Chatbot Client',
+        description: 'WebUI extension',
         openExternal: true,
-        title: '🤯 Lobe Chat',
-        url: 'https://github.com/lobehub/lobe-chat',
+        title: 'Controlnet',
+        url: 'https://github.com/Mikubill/sd-webui-controlnet',
       },
       {
-        description: 'Node Flow Editor',
+        description: 'Art models',
         openExternal: true,
-        title: '🤯 Lobe Flow',
-        url: 'https://github.com/lobehub/lobe-flow',
+        title: 'Civitai',
+        url: 'https://civitai.com/',
+      },
+      {
+        description: 'Artist Inspired Styles',
+        openExternal: true,
+        title: 'Cheat Sheet',
+        url: 'https://supagruen.github.io/StableDiffusion-CheatSheet/',
       },
     ],
     title: 'Resources',
@@ -64,6 +70,24 @@ export const columns: FProps['columns'] = [
   },
   {
     items: [
+      {
+        description: 'AIGC Components',
+        openExternal: true,
+        title: '🤯 Lobe UI',
+        url: 'https://github.com/lobehub/lobe-ui',
+      },
+      {
+        description: 'Chatbot Client',
+        openExternal: true,
+        title: '🤯 Lobe Chat',
+        url: 'https://github.com/lobehub/lobe-chat',
+      },
+      {
+        description: 'Node Flow Editor',
+        openExternal: true,
+        title: '🤯 Lobe Flow',
+        url: 'https://github.com/lobehub/lobe-flow',
+      },
       {
         description: 'AI Commit CLI',
         openExternal: true,

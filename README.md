@@ -2,11 +2,11 @@
 
 <div align="center">
 
-<img width="160" src="https://gw.alipayobjects.com/mdn/rms_7d1485/afts/img/A*XDYxSJXBjjwAAAAAAAAAAAAAARQnAQ">
+<img width="160" src="https://npm.elemecdn.com/@lobehub/assets-logo/assets/logo-3d.webp">
 
-<h1 align="center">Kitchen Theme</h1>
+<h1 align="center">Lobe Theme</h1>
 
-Kitchen Theme for Stable Diffusion WebUI
+Lobe Theme for Stable Diffusion WebUI
 
 English · [简体中文](./README-zh_CN.md) · [Changelog](./CHANGELOG.md) · [Report Bug][issues-url] · [Request Feature][issues-url]
 
@@ -227,6 +227,7 @@ $ npm start
 
 - stable-diffusion-webui：<https://github.com/AUTOMATIC1111/stable-diffusion-webui>
 - gradio-theme-gallery: <https://huggingface.co/spaces/gradio/theme-gallery>
+- cozy-nest: <https://github.com/Nevysha/Cozy-Nest>
 - _before `1.0.0` version_
   - sd-web-ui-quickcs: <https://github.com/Gerschel/sd-web-ui-quickcss/>
   - Dark-Themes-SD-WebUI-Automatic1111: <https://github.com/Nacurutu/Dark-Themes-SD-WebUI-Automatic1111>

@@ -5,13 +5,13 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   base: '/dev',
   build: {
-    outDir: './',
+    outDir: './javascript',
     rollupOptions: {
       input: resolve(__dirname, 'src/main.tsx'),
       output: {
-        assetFileNames: `javascript/[name].[ext]`,
-        chunkFileNames: `javascript/[name].js`,
-        entryFileNames: `javascript/[name].js`,
+        assetFileNames: `[name].[ext]`,
+        chunkFileNames: `[name].js`,
+        entryFileNames: `[name].js`,
       },
     },
   },
@@ -47,19 +47,13 @@ export default defineConfig({
                         <script type="module" src="/dev/src/_react_refresh.js"></script>
                         <script type="module" src="/dev/src/main.tsx"></script>
                        `;
-
-            // replace </body> with </body><script type="module" src="/main.js"></script>
             updatedResponse = updatedResponse.replace('</body>', `</body>${toAdd}`);
-
-            // Set the modified response
             res.statusCode = 200;
             res.setHeader('Content-Type', 'text/html');
             res.setHeader('charset', 'utf8');
             res.end(updatedResponse);
             return;
           }
-
-          // Continue to the next middleware
           next();
         });
       },
