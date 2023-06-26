@@ -94,6 +94,7 @@ export const useStyles = createStyles(
       draggablePanel: css`
         .draggable-line {
           flex: none !important;
+          align-self: stretch;
 
           width: 2px;
           min-width: 2px !important;
@@ -113,7 +114,6 @@ export const useStyles = createStyles(
         .draggable-container {
           flex-wrap: nowrap !important;
           gap: 12px;
-          align-items: stretch !important;
         }
       `,
       gallery: css`
@@ -154,6 +154,37 @@ export const useStyles = createStyles(
         }
       `,
       text2img: css`
+        #txt2img_toprow,
+        #img2img_toprow {
+          flex-direction: column;
+          padding: 0 !important;
+          background: transparent !important;
+
+          .interrogate-col {
+            flex-direction: row;
+            max-width: 100%;
+          }
+
+          #txt2img_actions_column,
+          #img2img_actions_column {
+            gap: 12px;
+          }
+
+          #txt2img_styles_row,
+          #img2img_styles_row {
+            padding: 16px;
+            background: ${token.colorBgContainer};
+            border-radius: ${token.borderRadius}px;
+          }
+        }
+
+        #txt2img_generate,
+        #img2img_generate {
+          height: 44px;
+          min-height: 44px;
+          max-height: 44px;
+        }
+
         [id$='img_gallery_container'] {
           div:not(.livePreview) {
             position: relative;

@@ -22,6 +22,13 @@ const Content = memo<DivProps>(({ className, ...props }) => {
     const main = gradioApp().querySelector('.app');
     if (main) mainReference.current?.append(main);
     if (!mobile) dragablePanel();
+
+    const txt2imgToprow = gradioApp().querySelector('#txt2img_toprow') as HTMLDivElement;
+    const txt2imgSettings = gradioApp().querySelector('#txt2img_settings') as HTMLDivElement;
+    txt2imgSettings.prepend(txt2imgToprow);
+    const img2imgToprow = gradioApp().querySelector('#img2img_toprow') as HTMLDivElement;
+    const img2imgSettings = gradioApp().querySelector('#img2img_settings') as HTMLDivElement;
+    img2imgSettings.prepend(img2imgToprow);
   }, []);
 
   return (
