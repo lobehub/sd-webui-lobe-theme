@@ -1,4 +1,5 @@
-import { Logo as LobeLogo } from '@lobehub/ui';
+import { FluentEmoji, Logo as LobeLogo } from '@lobehub/ui';
+import { getEmoji } from '@lobehub/ui/es/utils/getEmojiByCharacter';
 import { Space } from 'antd';
 import isEqual from 'fast-deep-equal';
 import { type CSSProperties, memo } from 'react';
@@ -22,13 +23,24 @@ const Logo = memo<LogoProps>(({ size = 32, style }) => {
   }
 
   if (setting.logoType === 'custom') {
+    let customLogo = <LobeLogo size={size} style={style} />;
+
+    if (setting.logoCustomUrl) {
+      if (setting.logoCustomUrl.includes('http') || setting.logoCustomUrl.includes('data')) {
+        customLogo = (
+          <img alt="logo" src={setting.logoCustomUrl} style={{ height: size, ...style }} />
+        );
+      } else {
+        const pureEmoji = getEmoji(setting.logoCustomUrl);
+        if (pureEmoji) {
+          customLogo = <FluentEmoji emoji={pureEmoji} size={size} style={style} />;
+        }
+      }
+    }
+
     return (
       <Space align="center" size={size * 0.3}>
-        {setting.logoCustomUrl ? (
-          <img alt="logo" src={setting.logoCustomUrl} style={{ height: size, ...style }} />
-        ) : (
-          <LobeLogo size={size} style={style} />
-        )}
+        {customLogo}
         <b style={{ fontSize: size * 0.6 }}>{setting.logoCustomTitle}</b>
       </Space>
     );

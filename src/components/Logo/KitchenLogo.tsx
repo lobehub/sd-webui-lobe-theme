@@ -2,13 +2,13 @@ import { type CSSProperties, memo } from 'react';
 
 import { darkLogo, lightLogo } from './style';
 
-interface LogoProps {
+export interface KitchenLogoProps {
   size?: number;
   style?: CSSProperties;
   themeMode: 'dark' | 'light';
 }
 
-const KitchenLogo = memo<LogoProps>(({ size, style, themeMode }) => {
+const KitchenLogo = memo<KitchenLogoProps>(({ size = 32, style, themeMode }) => {
   return (
     <img
       alt="logo"

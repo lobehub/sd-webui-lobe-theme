@@ -6,7 +6,9 @@
 
 <h1 align="center">Lobe Theme</h1>
 
-Lobe Theme for Stable Diffusion WebUI
+The modern theme for stable diffusion webui
+
+Legacy verison a.k.a kitchen theme
 
 English · [简体中文](./README-zh_CN.md) · [Changelog](./CHANGELOG.md) · [Report Bug][issues-url] · [Request Feature][issues-url]
 
@@ -23,18 +25,19 @@ English · [简体中文](./README-zh_CN.md) · [Changelog](./CHANGELOG.md) · [
 
 </div>
 
-![](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/blob/main/assets/screenshot.webp?raw=true)
+![cover.webp](https://github.com/canisminor1990/sd-webui-lobe-theme/blob/main/docs/cover.webp)
 
 <details>
 <summary><kbd>Table of contents</kbd></summary>
 
+> 📦 After **Version 2.0.0** Kitchen theme was renamed to **Lobe Theme**. The legacy version can be accessed at [sd-webui-kitchen-theme-legacy](https://github.com/canisminor1990/sd-webui-kitchen-theme-legacy)
+
 #### TOC
 
 - [✨ Features](#-features)
-- [🖥 Environment Support](#-environment-support)
 - [📦 Installation](#-installation)
-- [⚒️ Recommended Settings](#️-recommended-settings)
-- [🪄 Prompt formatting](#-prompt-formatting)
+- [🤯 Usage](#-usage)
+- [🖥 Environment Support](#-environment-support)
 - [⌨️ Local Development](#️-local-development)
 - [🤝 Contributing](#-contributing)
 - [🔗 Credits](#-credits)
@@ -47,10 +50,164 @@ English · [简体中文](./README-zh_CN.md) · [Changelog](./CHANGELOG.md) · [
 
 ## ✨ Features
 
-- 🌈 Supports light and dark themes with switch button.
-- 🪄 Supports Prompt formatting.
-- 🎛️ Quick Setting in draggable sidebar.
-- 🎨 Based on Antd CSS Token.
+- [x] 🌗 Supports light and dark themes, with the ability to quickly switch in the navigation bar
+- [x] 🌈 Supports custom theme colors and neutral colors, with the option to customize the logo
+- [x] 🪄 Supports one-click formatting of the prompt, with a simple tag editor provided
+- [x] 🎛️ Highly customizable sidebar, with a quick settings sidebar on the left and a model sidebar on the right
+- [x] 🖼️ Adjustable canvas ratio, ensuring that generated images are always displayed at the top
+- [x] 📱 Mobile-friendly, with partial optimization for mobile screens
+- [ ] 📝 Syntax highlighting in the prompt input box
+- [ ] 🆗 Multilingual support with i18n
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
+## 📦 Installation
+
+#### Method 1
+
+Search for `Lobe Theme` or `Kitchen Theme` in the stable diffusion webui plugin market and install it.
+
+> 👉 Note: **Version 2.0.0** was renamed to **Lobe Theme**
+
+#### Method 2
+
+As an extension (recommended), clone the repository to your extension folder:
+
+```shell
+git clone "https://github.com/canisminor1990/sd-webui-lobe-theme" extensions/lobe-theme
+```
+
+> 👉 Note: minimum requirements gradio-3.23.0 & sd-webui [4c1ad74](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commit/4c1ad743e3baf1246db0711aa0107debf036a12b)
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
+## 🤯 Usage
+
+![feat_thememode.webp](https://github.com/canisminor1990/sd-webui-lobe-theme/blob/main/docs/feat_thememode.webp)
+
+#### Light and Dark Themes
+
+> 👉 Tip: You can quickly switch between light and dark themes in the upper-right corner of the navigation bar.
+
+The current theme supports both light and dark themes. If you want to force dark mode, use the `--theme=dark` argument to launch your WebUI. For example, on Windows, your `webui-user.bat` should include:
+
+```shell
+set COMMANDLINE_ARGS= --theme=dark
+```
+
+Alternatively, you can switch directly through URL Props:
+
+```shell
+http://localhost:7860/?__theme=light
+http://localhost:7860/?__theme=dark
+```
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
+![feat_theme_modify.webp](https://github.com/canisminor1990/sd-webui-lobe-theme/blob/main/docs/feat_theme_modify.webp)
+
+#### Theme Customization
+
+> 👉 Tip: Click the `⚙` icon in the upper-right corner to open the settings panel. The current available settings are as follows:
+
+- **Theme**
+  - Primary color: Currently offers `13` theme color combinations
+  - Neutral color: Currently offers `6` different grayscale color combinations
+  - Logo type: `Lobe`, `Kitchen`, `Custom`
+    - Custom logo: Supports `img url`, `base64`, and `emoji`. When a single emoji is entered, it will be automatically replaced with 3D Fluent Emoji.
+    - Custom title: Customize the site name.
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
+![feat_sidebar.webp](https://github.com/canisminor1990/sd-webui-lobe-theme/blob/main/docs/feat_sidebar.webp)
+
+#### 侧边栏定制
+
+> 👉 Tip: Click the `⚙` icon in the upper-right corner to open the settings panel. The current available settings are as follows:
+
+- **Prompt Textarea**
+  - Display mode: `scroll fixed height` | `resizable by text lines`
+- **Sidebar**
+  - Default expand: `true`
+  - Display mode: `fixed` | `float`
+  - Default width: `280`
+- **ExtraNetwork Sidebar**
+  - Enable: `true`
+  - Default expand: `true`
+  - Display mode: `fixed` | `float`
+  - Default width: `340`
+  - Default card size: `86`
+
+<details>
+<summary><kbd>Recommended System Settings</kbd></summary>
+
+#### Extra-Networks
+
+- thumbs
+- width: 86
+- height: 128
+
+<br/>
+
+#### Quick-Setting
+
+```txt
+sd_model_checkpoint, sd_vae, CLIP_stop_at_last_layers, img2img_background_color, img2img_color_correction, samples_save, samples_format, grid_save, return_grid,  n_rows, live_previews_enable, show_progress_every_n_steps, live_preview_refresh_period
+```
+
+</details>
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
+![feat_mobile_friendly.webp](https://github.com/canisminor1990/sd-webui-lobe-theme/blob/main/docs/feat_mobile_friendly.webp)
+
+#### Mobile Adaptation
+
+Partial convenience adaptation design has been completed for mobile devices, including breadcrumb foldable navigation bar, sidebar adaptation, etc. However, due to the high complexity and fixed values of the stable diffusion interface, it is difficult to ensure the same user experience as the desktop version. Feedback is welcome for more ideas.
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
+#### 🪄 Prompt formatting
+
+Click the <kbd>🪄</kbd> button below Prompt to format the prompt words with one click.
+
+> 👉 Tip: Convert full-width punctuation to half-width, remove extra spaces, add missing commas, and move the Extra-Networks model to the end.
+
+Before formatting:
+
+```text
+photorealistic   photo of a handsome male (wizard  :1.2）， <lora:LuisapHotlineStyle:0.5> <lora:ElegantHanfuRuqunStyle:0.2>    short beard, white wizard  shirt, (with golden    trim:0.8),
+```
+
+After formatting:
+
+```text
+photorealistic photo of a handsome male, (wizard:1.2), short beard, white wizard shirt, (with golden trim:0.8), <lora:LuisapHotlineStyle:0.5>, <lora:ElegantHanfuRuqunStyle:0.2>
+```
 
 <div align="right">
 
@@ -72,114 +229,17 @@ English · [简体中文](./README-zh_CN.md) · [Changelog](./CHANGELOG.md) · [
 
 </div>
 
-## 📦 Installation
-
-As an extension (recommended)
-Either clone the repo into your extensions folder:
-
-```shell
-git clone "https://github.com/canisminor1990/sd-web-ui-kitchen-theme" extensions/kitchen-theme
-```
-
-The current theme supports both light and dark themes. If you want to force dark mode, use the `--theme=dark` argument to launch your WebUI. For example, on Windows, your `webui-user.bat` should include:
-
-```shell
-set COMMANDLINE_ARGS= --theme=dark
-```
-
-Alternatively, you can switch directly through URL Props:
-
-```shell
-http://localhost:7860/?__theme=light
-http://localhost:7860/?__theme=dark
-```
-
-> ⚠️ Warning: minimum requirements gradio-3.23.0 & sd-webui [4c1ad74](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commit/4c1ad743e3baf1246db0711aa0107debf036a12b)
-
-<div align="right">
-
-[![][back-to-top]](#readme-top)
-
-</div>
-
-## ⚒️ Recommended Settings
-
-#### Kitchen WebUI Setting
-
-> 👉 Tip: top right `⚙` icon in header
-
-- **Prompt Textarea**
-  - Display mode: `scroll` | `resizable`
-- **Sidebar**
-  - Default expand: `true`
-  - Display mode: `fixed` | `float`
-  - Default width: `280`
-- **ExtraNetwork Sidebar**
-  - Enable: `true`
-  - Default expand: `true`
-  - Display mode: `fixed` | `float`
-  - Default Width: `340`
-  - Default card size: `86`
-
-<br/>
-
-#### Extra-Networks
-
-- thumbs
-- width: 86
-- height: 128
-
-![](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/blob/main/assets/extra-networks.webp?raw=true)
-
-<br/>
-
-#### Quick-Setting
-
-```txt
-sd_model_checkpoint, sd_vae, CLIP_stop_at_last_layers, img2img_background_color, img2img_color_correction, samples_save, samples_format, grid_save, return_grid,  n_rows, live_previews_enable, show_progress_every_n_steps, live_preview_refresh_period
-```
-
-<div align="right">
-
-[![][back-to-top]](#readme-top)
-
-</div>
-
-## 🪄 Prompt formatting
-
-![](https://github.com/canisminor1990/sd-web-ui-kitchen-theme/blob/main/assets/prompt-formatting.webp?raw=true)
-
-> 👉 Tip: Convert full-width punctuation to half-width, remove extra spaces, add missing commas, and move the Extra-Networks model to the end.
-
-Before
-
-```text
-photorealistic   photo of a handsome male (wizard  :1.2）， <lora:LuisapHotlineStyle:0.5> <lora:ElegantHanfuRuqunStyle:0.2>    short beard, white wizard  shirt, (with golden    trim:0.8),
-```
-
-After
-
-```text
-photorealistic photo of a handsome male, (wizard:1.2), short beard, white wizard shirt, (with golden trim:0.8), <lora:LuisapHotlineStyle:0.5>, <lora:ElegantHanfuRuqunStyle:0.2>
-```
-
-<div align="right">
-
-[![][back-to-top]](#readme-top)
-
-</div>
-
 ## ⌨️ Local Development
 
 You can use Gitpod for online development:
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)][gitpod-url]
 
-Or clone it for local development:
+Alternatively, you can clone it for local development. To enable hot-reloading mode, you need to start stable diffuison on port `7860` in advance.
 
 ```bash
-$ git clone https://github.com/canisminor1990/sd-web-ui-kitchen-theme.git
-$ cd sd-web-ui-kitchen-theme
+$ git clone https://github.com/canisminor1990/sd-webui-lobe-theme.git
+$ cd sd-webui-lobe-theme
 $ npm install
 $ npm start
 ```
@@ -194,7 +254,7 @@ $ npm start
 
 <!-- CONTRIBUTION GROUP -->
 
-> 📊 Total: <kbd>**6**</kbd>
+> 📊 Total: <kbd>**7**</kbd>
 
 <a href="https://github.com/canisminor1990" title="canisminor1990">
   <img src="https://avatars.githubusercontent.com/u/17870709?v=4" width="50" />
@@ -207,6 +267,9 @@ $ npm start
 </a>
 <a href="https://github.com/web-97" title="web-97">
   <img src="https://avatars.githubusercontent.com/u/46352788?v=4" width="50" />
+</a>
+<a href="https://github.com/antfu" title="antfu">
+  <img src="https://avatars.githubusercontent.com/u/11247099?v=4" width="50" />
 </a>
 <a href="https://github.com/StimeKe" title="StimeKe">
   <img src="https://avatars.githubusercontent.com/u/25315788?v=4" width="50" />
@@ -248,7 +311,7 @@ This project is [MIT](./LICENSE) licensed.
 <!-- LINK GROUP -->
 
 [profile-url]: https://github.com/canisminor1990
-[gitpod-url]: https://gitpod.io/#https://github.com/canisminor1990/sd-webui-kitchen-theme
+[gitpod-url]: https://gitpod.io/#https://github.com/canisminor1990/sd-webui-lobe-theme
 
 <!-- SHIELD LINK GROUP -->
 
@@ -256,40 +319,40 @@ This project is [MIT](./LICENSE) licensed.
 
 <!-- release -->
 
-[release-shield]: https://img.shields.io/github/v/release/canisminor1990/sd-web-ui-kitchen-theme?style=flat&sort=semver&logo=github
-[release-url]: https://github.com/canisminor1990/sd-web-ui-kitchen-theme/releases
+[release-shield]: https://img.shields.io/github/v/release/canisminor1990/sd-webui-lobe-theme?style=flat&sort=semver&logo=github
+[release-url]: https://github.com/canisminor1990/sd-webui-lobe-theme/releases
 
 <!-- releaseDate -->
 
-[release-date-shield]: https://img.shields.io/github/release-date/canisminor1990/sd-web-ui-kitchen-theme?style=flat
-[release-date-url]: https://github.com/canisminor1990/sd-web-ui-kitchen-theme/releases
+[release-date-shield]: https://img.shields.io/github/release-date/canisminor1990/sd-webui-lobe-theme?style=flat
+[release-date-url]: https://github.com/canisminor1990/sd-webui-lobe-theme/releases
 
 <!-- ciTest -->
 
-[ci-test-shield]: https://github.com/canisminor1990/sd-web-ui-kitchen-theme/workflows/Test%20CI/badge.svg
-[ci-test-url]: https://github.com/canisminor1990/sd-web-ui-kitchen-theme/actions/workflows/test.yml
+[ci-test-shield]: https://github.com/canisminor1990/sd-webui-lobe-theme/workflows/Test%20CI/badge.svg
+[ci-test-url]: https://github.com/canisminor1990/sd-webui-lobe-theme/actions/workflows/test.yml
 
 <!-- ciRelease -->
 
-[ci-release-shield]: https://github.com/canisminor1990/sd-web-ui-kitchen-theme/workflows/Build%20and%20Release/badge.svg
-[ci-release-url]: https://github.com/canisminor1990/sd-web-ui-kitchen-theme/actions/workflows/release.yml
+[ci-release-shield]: https://github.com/canisminor1990/sd-webui-lobe-theme/workflows/Build%20and%20Release/badge.svg
+[ci-release-url]: https://github.com/canisminor1990/sd-webui-lobe-theme/actions/workflows/release.yml
 
 <!-- contributors -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/canisminor1990/sd-web-ui-kitchen-theme.svg?style=flat
-[contributors-url]: https://github.com/canisminor1990/sd-web-ui-kitchen-theme/graphs/contributors
+[contributors-shield]: https://img.shields.io/github/contributors/canisminor1990/sd-webui-lobe-theme.svg?style=flat
+[contributors-url]: https://github.com/canisminor1990/sd-webui-lobe-theme/graphs/contributors
 
 <!-- forks -->
 
-[forks-shield]: https://img.shields.io/github/forks/canisminor1990/sd-web-ui-kitchen-theme.svg?style=flat
-[forks-url]: https://github.com/canisminor1990/sd-web-ui-kitchen-theme/network/members
+[forks-shield]: https://img.shields.io/github/forks/canisminor1990/sd-webui-lobe-theme.svg?style=flat
+[forks-url]: https://github.com/canisminor1990/sd-webui-lobe-theme/network/members
 
 <!-- stargazers -->
 
-[stargazers-shield]: https://img.shields.io/github/stars/canisminor1990/sd-web-ui-kitchen-theme.svg?style=flat
-[stargazers-url]: https://github.com/canisminor1990/sd-web-ui-kitchen-theme/stargazers
+[stargazers-shield]: https://img.shields.io/github/stars/canisminor1990/sd-webui-lobe-theme.svg?style=flat
+[stargazers-url]: https://github.com/canisminor1990/sd-webui-lobe-theme/stargazers
 
 <!-- issues -->
 
-[issues-shield]: https://img.shields.io/github/issues/canisminor1990/sd-web-ui-kitchen-theme.svg?style=flat
-[issues-url]: https://github.com/canisminor1990/sd-webui-kitchen-theme/issues/new/choose
+[issues-shield]: https://img.shields.io/github/issues/canisminor1990/sd-webui-lobe-theme.svg?style=flat
+[issues-url]: https://github.com/canisminor1990/sd-webui-lobe-theme/issues/new/choose

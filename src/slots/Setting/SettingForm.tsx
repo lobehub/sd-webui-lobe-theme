@@ -5,6 +5,7 @@ import { Palette, PanelLeftClose, PanelRightClose, TextCursorInput } from 'lucid
 import { memo, useCallback, useMemo, useState } from 'react';
 import { shallow } from 'zustand/shallow';
 
+import { CustomLogo } from '@/components';
 import { NeutralColor, PrimaryColor, WebuiSetting, defaultSetting, useAppStore } from '@/store';
 import { neutralColorScales } from '@/styles/neutralColors';
 
@@ -24,7 +25,7 @@ const findKey = (object: { [key in string]: string }, value: string): any => {
 const SettingForm = memo(() => {
   const setting = useAppStore((st) => st.setting, isEqual);
   const onSetSetting = useAppStore((st) => st.onSetSetting, shallow);
-  const [showCustom, setShowCustom] = useState<boolean>(setting.logoType === 'custom');
+  const [rawSetting, setRawSetting] = useState<WebuiSetting>(setting);
   const [primaryColor, setPrimaryColor] = useState<PrimaryColor | undefined>(
     setting.primaryColor || undefined,
   );
@@ -77,7 +78,13 @@ const SettingForm = memo(() => {
   );
 
   return (
-    <Form className={styles.form} initialValues={setting} layout="horizontal" onFinish={onFinish}>
+    <Form
+      className={styles.form}
+      initialValues={setting}
+      layout="horizontal"
+      onFinish={onFinish}
+      onValuesChange={(_, v) => setRawSetting(v)}
+    >
       <div className={styles.group}>
         <div className={styles.title}>
           <Icon icon={TextCursorInput} />
@@ -188,18 +195,25 @@ const SettingForm = memo(() => {
         </Item>
         <Divider style={{ margin: 0 }} />
         <Item className={styles.item} label="Logo type" name="logoType">
-          <Segmented
-            onChange={(v) => setShowCustom(v === 'custom')}
-            options={['lobe', 'kitchen', 'custom']}
-          />
+          <Segmented options={['lobe', 'kitchen', 'custom']} />
         </Item>
-        {showCustom && (
+        {rawSetting.logoType === 'custom' && (
           <>
-            <Item className={styles.item} label="Logo url" name="logoCustomUrl">
+            <Item
+              className={styles.item}
+              label="Logo ( Url / Base64 / Emoji )"
+              name="logoCustomUrl"
+            >
               <Input />
             </Item>
-            <Item className={styles.item} label="Logo title" name="logoCustomTitle">
+            <Item className={styles.item} label="Title" name="logoCustomTitle">
               <Input />
+            </Item>
+            <Item className={styles.item} label="Preview">
+              <CustomLogo
+                logoCustomTitle={rawSetting.logoCustomTitle}
+                logoCustomUrl={rawSetting.logoCustomUrl}
+              />
             </Item>
           </>
         )}

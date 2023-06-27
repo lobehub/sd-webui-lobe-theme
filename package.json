@@ -1,17 +1,21 @@
 {
-  "name": "sd-webui-kitchen-theme",
+  "name": "sd-webui-lobe-theme",
   "version": "1.8.3",
   "private": true,
+  "description": "The modern theme for stable diffusion webui, legacy verison a.k.a kitchen theme",
   "keywords": [
-    "stable-diffusion-webui"
+    "stable-diffusion-webui",
+    "sd-webui-kitchen-theme",
+    "kitchen-theme",
+    "extensions"
   ],
-  "homepage": "https://github.com/canisminor1990/sd-webui-kitchen-theme",
+  "homepage": "https://github.com/canisminor1990/sd-webui-lobe-theme",
   "bugs": {
-    "url": "https://github.com/canisminor1990/sd-webui-kitchen-theme/issues/new"
+    "url": "https://github.com/canisminor1990/sd-webui-lobe-theme/issues/new"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/canisminor1990/sd-webui-kitchen-theme.git"
+    "url": "https://github.com/canisminor1990/sd-webui-lobe-theme.git"
   },
   "license": "MIT",
   "author": "canisminor1990 <i@canisminor.cc>",

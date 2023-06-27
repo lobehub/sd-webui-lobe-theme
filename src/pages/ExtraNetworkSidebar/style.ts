@@ -3,6 +3,20 @@ import { createStyles } from 'antd-style';
 export const useStyles = createStyles(
   ({ css, token }, { headerHeight = 64, size = 86 }: { headerHeight?: number; size?: number }) => ({
     body: css`
+      .hide {
+        display: none;
+      }
+
+      #txt2img-extra-netwrok-sidebar,
+      #img2img-extra-netwrok-sidebar {
+        button.lg.secondary.gradio-button,
+        #txt2img_extra_sort,
+        #img2img_extra_sort {
+          height: 34px !important;
+          min-height: 34px !important;
+        }
+      }
+
       .extra-network-cards .name {
         background: unset !important;
       }
