@@ -38,7 +38,6 @@ const Content = memo<DivProps>(({ className, ...props }) => {
     <div
       className={cx(
         styles.container,
-        styles.draggablePanel,
         styles.textares,
         styles.text2img,
         styles.autocompleteResults,
