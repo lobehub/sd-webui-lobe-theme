@@ -1,4 +1,5 @@
 import { DraggablePanel, LayoutSidebarInner } from '@lobehub/ui';
+import isEqual from 'fast-deep-equal';
 import { memo, useEffect, useRef } from 'react';
 import { shallow } from 'zustand/shallow';
 
@@ -13,7 +14,8 @@ export interface PreviewProps extends DivProps {
 
 const Preview = memo<PreviewProps>(({ headerHeight }) => {
   const currentTab = useAppStore((st) => st.currentTab, shallow);
-  const { styles } = useStyles({ headerHeight });
+  const setting = useAppStore((st) => st.setting, isEqual);
+  const { styles } = useStyles({ headerHeight, isPrimaryColor: Boolean(setting.primaryColor) });
   const txt2imgReference = useRef<HTMLDivElement>(null);
   const img2imgReference = useRef<HTMLDivElement>(null);
   const extras2imgReference = useRef<HTMLDivElement>(null);
@@ -43,7 +45,7 @@ const Preview = memo<PreviewProps>(({ headerHeight }) => {
     <DraggablePanel
       defaultSize={{ width: '30vw' }}
       expandable={false}
-      minWidth={320}
+      minWidth={200}
       mode="fixed"
       pin
       placement="right"

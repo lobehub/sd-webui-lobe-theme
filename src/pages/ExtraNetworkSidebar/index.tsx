@@ -45,7 +45,7 @@ const ExtraNetworkSidebar = memo<ExtraNetworkSidebarProps>(({ headerHeight }) =>
     <DraggablePanel
       defaultSize={{ width: setting.extraNetworkSidebarWidth }}
       expand={expand}
-      minWidth={setting.extraNetworkSidebarWidth}
+      minWidth={260}
       mode={mobile ? 'fixed' : pin ? 'fixed' : 'float'}
       onExpandChange={setExpand}
       pin={pin}

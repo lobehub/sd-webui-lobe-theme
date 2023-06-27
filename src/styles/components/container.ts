@@ -19,16 +19,20 @@ export default (token: Theme) => {
       gap: 12px !important;
     }
 
-    .gradio-box.block.padded:not(.gradio-accordion) {
-      padding: 16px !important;
-    }
+    .block.padded {
+      &.gradio-box:not(.gradio-accordion) {
+        padding: 16px !important;
+      }
 
-    .block.padded.gradio-box:not(.hidden):has(div),
-    .block.padded.gradio-accordion:not(.hidden):has(div) {
-      ${cardStylish};
-      margin: 0 !important;
-      padding: 16px !important;
-      border: 1px solid ${token.colorBorderSecondary} !important;
+      &.gradio-box,
+      &.gradio-accordion {
+        &:not(.hidden):has(div) {
+          ${cardStylish};
+          margin: 0 !important;
+          padding: 16px !important;
+          border: 1px solid ${token.colorBorderSecondary} !important;
+        }
+      }
     }
 
     .panel {
@@ -50,6 +54,11 @@ export default (token: Theme) => {
     #system_info {
       align-items: flex-start;
       justify-content: flex-start;
+    }
+
+    #txt2img_dimensions_row,
+    #img2img_dimensions_row {
+      min-width: 36px !important;
     }
   `;
 };

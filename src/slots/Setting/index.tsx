@@ -1,9 +1,9 @@
-import { Icon } from '@lobehub/ui';
+import { ActionIcon } from '@lobehub/ui';
 import { Space, Tag } from 'antd';
-import { Settings } from 'lucide-react';
+import { Book } from 'lucide-react';
 import { memo } from 'react';
 
-import { version } from '@/../package.json';
+import { homepage, version } from '@/../package.json';
 import { Modal, type ModalProps } from '@/components';
 
 import SettingForm from './SettingForm';
@@ -20,11 +20,15 @@ const Setting = memo<SettingProps>(({ open, onCancel }) => {
       onCancel={onCancel}
       open={open}
       title={
-        <Space>
-          <Icon icon={Settings} />
-          Theme Setting
-          <Tag color="success">v{version}</Tag>
-        </Space>
+        <>
+          <a href={homepage} rel="noreferrer" target="_blank">
+            <ActionIcon icon={Book} title="Setting Documents" />
+          </a>
+          <Space>
+            Theme Setting
+            <Tag color="success">v{version}</Tag>
+          </Space>
+        </>
       }
     >
       <SettingForm />

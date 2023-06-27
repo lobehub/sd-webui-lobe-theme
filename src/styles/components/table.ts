@@ -18,15 +18,14 @@ export default (token: Theme) => css`
     border-bottom: 4px solid var(--color-border) !important;
   }
 
-  tr:hover td {
-    background: ${token.colorFillSecondary};
-  }
+  tr {
+    &:hover td,
+    &:nth-of-type(odd):hover td {
+      background: ${token.colorFillSecondary};
+    }
 
-  tr:nth-of-type(odd) td {
-    background: ${token.colorFillQuaternary};
-  }
-
-  tr:nth-of-type(odd):hover td {
-    background: ${token.colorFillSecondary};
+    &:nth-of-type(odd) td {
+      background: ${token.colorFillQuaternary};
+    }
   }
 `;

@@ -1,13 +1,9 @@
 import { createStyles } from 'antd-style';
-import { adjustHue } from 'polished';
 
 const MIN_HEIGHT = 88;
 
 export const useStyles = createStyles(
-  (
-    { cx, css, token, stylish, isDarkMode },
-    { isPromptResizable, isPrimaryColor }: { isPrimaryColor: boolean; isPromptResizable: boolean },
-  ) => {
+  ({ css, token, stylish, isDarkMode }, { isPromptResizable }: { isPromptResizable: boolean }) => {
     return {
       autocompleteResults: css`
         .autocompleteResults {
@@ -31,38 +27,10 @@ export const useStyles = createStyles(
           }
         }
       `,
-      background: cx(
-        stylish.gradientAnimation,
-        isPrimaryColor &&
-          css`
-            background-image: linear-gradient(
-              -45deg,
-              ${token.colorPrimary},
-              ${adjustHue(45, token.colorPrimary)},
-              ${token.colorPrimary},
-              ${adjustHue(-45, token.colorPrimary)}
-            );
-          `,
-        css`
-          pointer-events: none;
-
-          position: absolute !important;
-          z-index: 0;
-          top: -100px;
-          right: -20vw;
-          transform: rotate(4deg);
-
-          width: 60vw;
-          height: 200px;
-
-          opacity: 0.2;
-          filter: blur(100px);
-        `,
-      ),
       container: css`
         position: relative;
         flex: 1;
-        min-width: 0;
+        min-width: 200px;
 
         .app {
           padding: 0 !important;
@@ -220,11 +188,6 @@ export const useStyles = createStyles(
           .image_buttons_extras {
             gap: 8px !important;
           }
-        }
-
-        #interrogate,
-        #deepbooru {
-          display: block !important;
         }
 
         #tab_extras > div > div {

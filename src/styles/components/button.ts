@@ -1,99 +1,126 @@
 import { Theme, css } from 'antd-style';
 
 export default (token: Theme) => css`
-  button:not([role='switch'], .ant-btn, .svelte-1p4r00v),
-  .gradio-button,
-  .lg {
+  button {
     cursor: pointer;
 
-    overflow: hidden;
-    flex: 1;
+    &.gradio-button {
+      &.tool {
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1;
-    text-overflow: ellipsis;
+        width: 36px;
+        min-width: 36px !important;
+        max-width: 36px !important;
+        height: 36px;
+        min-height: 36px !important;
+        max-height: 36px;
+        padding: 0;
 
-    background: ${token.colorFillTertiary};
-    border: 1px solid ${token.colorBorderSecondary};
-    border-radius: ${token.borderRadius}px !important;
+        font-size: 14px;
+        line-height: 1;
 
-    &:hover {
-      color: ${token.colorText};
-      background: ${token.colorFill};
-      border-color: ${token.colorBorder};
+        background: ${token.colorFillSecondary};
+        border: 1px solid ${token.colorBorderSecondary};
+        border-radius: ${token.borderRadius}px;
+
+        &:hover {
+          background: ${token.colorFill};
+        }
+
+        &.lg {
+          max-width: max(36px, 100%) !important;
+        }
+      }
+
+      &.secondary,
+      &.primary {
+        overflow: hidden;
+        flex: 1;
+
+        font-size: 14px;
+        line-height: 1;
+        text-overflow: ellipsis;
+
+        &:active {
+          box-shadow: ${token.boxShadowSecondary};
+        }
+      }
+
+      &.secondary {
+        font-weight: 500;
+        background: ${token.colorFillTertiary};
+        border: 1px solid ${token.colorBorderSecondary};
+        border-radius: ${token.borderRadius}px !important;
+
+        &:hover {
+          color: ${token.colorText};
+          background: ${token.colorFill};
+          border-color: ${token.colorBorder};
+        }
+      }
+
+      &:not(.tool, .svelte-1p4r00v) {
+        &.primary,
+        &.secondary {
+          &.lg {
+            height: 44px !important;
+            min-height: 44px !important;
+            max-height: 44px !important;
+          }
+        }
+      }
+
+      &[id$='_generate'] {
+        position: relative;
+        height: 44px !important;
+        min-height: 44px !important;
+        max-height: 44px !important;
+      }
+
+      &[id$='_interrupt'] {
+        min-width: 0;
+        border-right: none !important;
+        border-radius: ${token.borderRadius}px 0 0 ${token.borderRadius}px !important;
+      }
+
+      &[id$='_skip'] {
+        min-width: 0;
+        border-radius: 0 ${token.borderRadius}px ${token.borderRadius}px 0 !important;
+      }
+
+      &[id$='_interrupt'],
+      &[id$='_skip'] {
+        color: #fff !important;
+        background: ${token.colorError} !important;
+
+        &:hover {
+          color: #fff !important;
+          background: ${token.colorErrorHover} !important;
+        }
+
+        &:active {
+          color: #fff !important;
+          background: ${token.colorErrorActive} !important;
+        }
+      }
+
+      &#interrogate,
+      &#deepbooru {
+        display: block !important;
+      }
     }
+  }
 
-    &:active {
-      box-shadow: ${token.boxShadowSecondary};
+  div[id^='image_buttons_'] {
+    flex-wrap: wrap;
+    gap: 4px !important;
+
+    > button {
+      flex: 1;
+      min-width: min(30%, 56px);
+      font-size: 12px !important;
     }
-  }
-
-  .gradio-button.tool {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 36px;
-    min-width: 36px !important;
-    max-width: 36px !important;
-    height: 36px;
-    min-height: 36px !important;
-    max-height: 36px;
-    padding: 0;
-
-    font-size: 14px;
-    line-height: 1;
-
-    background: ${token.colorFillSecondary};
-    border: 1px solid ${token.colorBorderSecondary};
-    border-radius: ${token.borderRadius}px;
-
-    &:hover {
-      background: ${token.colorFill};
-    }
-  }
-
-  .gradio-button.tool.lg {
-    max-width: max(36px, 100%) !important;
-  }
-
-  #txt2img_interrupt,
-  #img2img_interrupt {
-    border-right: 1px solid ${token.colorBgLayout};
-    border-radius: ${token.borderRadius}px 0 0 ${token.borderRadius}px !important;
-  }
-
-  #txt2img_skip,
-  #img2img_skip {
-    border-radius: 0 ${token.borderRadius}px ${token.borderRadius}px 0 !important;
-  }
-
-  #txt2img_interrupt,
-  #txt2img_skip,
-  #img2img_interrupt,
-  #img2img_skip {
-    color: #fff !important;
-    background: ${token.colorError} !important;
-
-    &:hover {
-      color: #fff !important;
-      background: ${token.colorErrorHover} !important;
-    }
-
-    &:active {
-      color: #fff !important;
-      background: ${token.colorErrorActive} !important;
-    }
-  }
-
-  #interrogate,
-  #deepbooru {
-    display: block !important;
-  }
-
-  #txt2img_dimensions_row,
-  #img2img_dimensions_row {
-    min-width: 36px !important;
   }
 `;

@@ -10,7 +10,6 @@ const Content = memo<DivProps>(({ className, ...props }) => {
   const mainReference = useRef<HTMLDivElement>(null);
   const setting = useAppStore((st) => st.setting, isEqual);
   const { cx, styles } = useStyles({
-    isPrimaryColor: Boolean(setting.primaryColor),
     isPromptResizable: setting.promptTextarea === 'resizable',
   });
 
@@ -45,9 +44,7 @@ const Content = memo<DivProps>(({ className, ...props }) => {
       )}
       ref={mainReference}
       {...props}
-    >
-      <div className={styles.background} />
-    </div>
+    />
   );
 });
 

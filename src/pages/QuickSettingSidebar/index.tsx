@@ -28,7 +28,7 @@ const QuickSettingSidebar = memo<QuickSettingSidebarProps>(({ headerHeight }) =>
     <DraggablePanel
       defaultSize={{ width: setting.sidebarWidth }}
       expand={expand}
-      minWidth={setting.sidebarWidth}
+      minWidth={200}
       mode={mobile ? 'fixed' : pin ? 'fixed' : 'float'}
       onExpandChange={setExpand}
       pin={pin}

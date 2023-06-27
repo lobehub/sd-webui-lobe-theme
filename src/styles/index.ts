@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'antd-style';
 
 import antdOverride from './antdOverride';
 import button from './components/button';
+import collapse from './components/collapse';
 import container from './components/container';
 import gallery from './components/gallery';
 import input from './components/input';
@@ -20,7 +21,8 @@ const GlobalStyle = createGlobalStyle(({ theme }) => [
   container(theme),
   gallery(theme),
   input(theme),
-  label(theme),
+  label(),
+  collapse(theme),
   options(theme),
   progress(theme),
   slider(theme),

@@ -21,7 +21,10 @@ const Index = memo(() => {
   const currentTab = useAppStore((st) => st.currentTab, shallow);
   const setting = useAppStore((st) => st.setting, isEqual);
   const { mobile } = useResponsive();
-  const { styles } = useStyles(HEADER_HEIGHT);
+  const { cx, styles } = useStyles({
+    headerHeight: HEADER_HEIGHT,
+    isPrimaryColor: Boolean(setting.primaryColor),
+  });
 
   useEffect(() => {
     if (setting.svgIcon) replaceIcon();
@@ -33,13 +36,14 @@ const Index = memo(() => {
         <Header />
       </LayoutHeader>
       <LayoutMain>
+        <div className={styles.background} />
         <LayoutSidebar className={styles.sidebar} headerHeight={HEADER_HEIGHT} style={{ flex: 0 }}>
           <QuickSettingSidebar headerHeight={HEADER_HEIGHT} />
         </LayoutSidebar>
         <Content />
         {mobile === false && (
           <LayoutSidebar
-            className={styles.sidebar}
+            className={cx(styles.sidebar, styles.panel)}
             headerHeight={HEADER_HEIGHT}
             style={{
               display: ['tab_txt2img', 'tab_img2img', 'tab_extras'].includes(currentTab) ?
