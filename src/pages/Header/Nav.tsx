@@ -1,4 +1,6 @@
-import { TabsNav, type TabsNavProps } from '@lobehub/ui';
+import { Burger, TabsNav, type TabsNavProps } from '@lobehub/ui';
+import { useResponsive } from 'antd-style';
+import { startCase } from 'lodash-es';
 import { memo, useEffect, useState } from 'react';
 
 const hideOriganlNav = () => {
@@ -13,30 +15,36 @@ const getNavButtons = (): HTMLButtonElement[] =>
     ) as NodeListOf<HTMLButtonElement>,
   );
 
-const onChange: TabsNavProps['onChange'] = (activeKey) => {
-  const buttons = getNavButtons();
-  buttons[Number(activeKey)]?.click();
-};
-
 const Nav = memo(() => {
+  const { mobile } = useResponsive();
+  const [opened, setOpened] = useState(false);
   const [items, setItems] = useState<TabsNavProps['items']>([]);
 
   useEffect(() => {
     hideOriganlNav();
     const buttons = getNavButtons();
-    const list: TabsNavProps['items'] = buttons.map(
-      (button: HTMLButtonElement | any, index: number) => {
-        button.id = `kitchen-nav-${index}`;
-        return {
-          key: String(index),
-          label: button.textContent,
-        };
-      },
-    );
+    const list: TabsNavProps['items'] = buttons.map((button: HTMLButtonElement, index: number) => {
+      button.id = `kitchen-nav-${index}`;
+      return {
+        key: String(index),
+        label: (
+          <div
+            onClick={() => {
+              const buttons = getNavButtons();
+              buttons[index]?.click();
+            }}
+          >
+            {startCase(String(button.textContent))}
+          </div>
+        ),
+      };
+    });
     setItems(list.filter(Boolean));
   }, []);
 
-  return <TabsNav items={items} onChange={onChange} />;
+  if (mobile) return <Burger items={items} opened={opened} setOpened={setOpened} />;
+
+  return <TabsNav items={items} />;
 });
 
 export default Nav;

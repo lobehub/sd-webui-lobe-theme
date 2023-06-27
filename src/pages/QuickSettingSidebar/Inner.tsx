@@ -8,7 +8,7 @@ import { useAppStore } from '@/store';
 
 const Inner = memo<DivProps>(() => {
   const setting = useAppStore((st) => st.setting, isEqual);
-  const sidebarReference: any = useRef<HTMLElement>();
+  const sidebarReference = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const sidebar = gradioApp().querySelector('#quicksettings');

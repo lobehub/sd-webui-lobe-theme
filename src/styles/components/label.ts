@@ -6,7 +6,7 @@ export default (token: Theme) => {
       display: unset !important;
     }
 
-    label.block {
+    label {
       position: relative;
 
       overflow: hidden;

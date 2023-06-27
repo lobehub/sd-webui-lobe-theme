@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'antd-style';
 import antdOverride from './antdOverride';
 import button from './components/button';
 import container from './components/container';
+import gallery from './components/gallery';
 import input from './components/input';
 import label from './components/label';
 import options from './components/options';
@@ -17,6 +18,7 @@ const GlobalStyle = createGlobalStyle(({ theme }) => [
   antdOverride(theme),
   button(theme),
   container(theme),
+  gallery(theme),
   input(theme),
   label(theme),
   options(theme),

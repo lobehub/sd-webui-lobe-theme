@@ -1,4 +1,4 @@
-import { ActionIcon, Icon } from '@lobehub/ui';
+import { ActionIcon } from '@lobehub/ui';
 import { PanelLeft, Pin, PinOff } from 'lucide-react';
 import { memo } from 'react';
 
@@ -9,14 +9,21 @@ import { useStyles } from './style';
 export interface SidebarHeaderProps extends DivProps {
   pin: boolean;
   position?: 'left' | 'right';
+  setExpand: (expand: boolean) => void;
   setPin: (pin: boolean) => void;
   title: string;
 }
 
 const SidebarHeader = memo<SidebarHeaderProps>(
-  ({ pin, setPin, className, title, position = 'left', ...props }) => {
+  ({ pin, setPin, className, setExpand, title, position = 'left', ...props }) => {
     const { cx, styles } = useStyles();
-    const panelIcon = <Icon icon={PanelLeft} />;
+    const panelIcon = (
+      <ActionIcon
+        icon={PanelLeft}
+        onClick={() => setExpand(false)}
+        size={{ blockSize: 24, fontSize: 14 }}
+      />
+    );
     const pinIcon = (
       <ActionIcon
         active={pin}

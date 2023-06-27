@@ -15,10 +15,10 @@ export interface ExtraNetworkSidebarProps extends DivProps {
 }
 
 const ExtraNetworkSidebar = memo<ExtraNetworkSidebarProps>(({ headerHeight }) => {
-  const setting = useAppStore((st) => st.setting, isEqual);
-  const [expand, setExpand] = useState<boolean>(setting.extraNetworkSidebarExpand);
-  const [pin, setPin] = useState<boolean>(setting.extraNetworkFixedMode === 'fixed');
   const { mobile } = useResponsive();
+  const setting = useAppStore((st) => st.setting, isEqual);
+  const [expand, setExpand] = useState<boolean>(mobile ? false : setting.extraNetworkSidebarExpand);
+  const [pin, setPin] = useState<boolean>(setting.extraNetworkFixedMode === 'fixed');
   const { styles } = useStyles({ headerHeight });
 
   useEffect(() => {
@@ -35,23 +35,31 @@ const ExtraNetworkSidebar = memo<ExtraNetworkSidebarProps>(({ headerHeight }) =>
     if (t2indexExtraNetworkButton) {
       t2indexExtraNetworkButton.onclick = () => setExpand(!expand);
     }
-
-    if (mobile) setExpand(false);
   }, [expand]);
+
+  useEffect(() => {
+    if (mobile) setExpand(false);
+  }, [mobile]);
 
   return (
     <DraggablePanel
       defaultSize={{ width: setting.extraNetworkSidebarWidth }}
       expand={expand}
       minWidth={setting.extraNetworkSidebarWidth}
-      mode={pin ? 'fixed' : 'float'}
+      mode={mobile ? 'fixed' : pin ? 'fixed' : 'float'}
       onExpandChange={setExpand}
       pin={pin}
       placement="right"
     >
       <LayoutSidebarInner>
         <SidebarContainer className={styles.container}>
-          <SidebarHeader pin={pin} position="right" setPin={setPin} title="ExraNetworks" />
+          <SidebarHeader
+            pin={pin}
+            position="right"
+            setExpand={setExpand}
+            setPin={setPin}
+            title="ExraNetworks"
+          />
           <Inner />
         </SidebarContainer>
       </LayoutSidebarInner>

@@ -56,7 +56,7 @@ const Prompt = memo<PromptProps>(({ type }) => {
 
   const getValue = useCallback(() => {
     try {
-      const textarea: HTMLTextAreaElement | any = get_uiCurrentTabContent().querySelector(id);
+      const textarea = get_uiCurrentTabContent().querySelector(id) as HTMLTextAreaElement;
       if (textarea) setTags(formatPrompt(textarea.value));
     } catch (error) {
       console.log(error);
@@ -65,7 +65,7 @@ const Prompt = memo<PromptProps>(({ type }) => {
 
   const setValue = useCallback(() => {
     try {
-      const textarea: HTMLTextAreaElement | any = get_uiCurrentTabContent().querySelector(id);
+      const textarea = get_uiCurrentTabContent().querySelector(id) as HTMLTextAreaElement;
       if (textarea) textarea.value = tags.map((t) => t.text).join(', ');
       updateInput(textarea);
     } catch (error) {
@@ -75,7 +75,7 @@ const Prompt = memo<PromptProps>(({ type }) => {
 
   const setCurrentValue = useCallback((currentTags: TagItem[]) => {
     try {
-      const textarea: HTMLTextAreaElement | any = get_uiCurrentTabContent().querySelector(id);
+      const textarea = get_uiCurrentTabContent().querySelector(id) as HTMLTextAreaElement;
       if (textarea) textarea.value = currentTags.map((t) => t.text).join(', ');
       updateInput(textarea);
     } catch (error) {

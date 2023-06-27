@@ -1,5 +1,6 @@
 import { ActionIcon } from '@lobehub/ui';
 import { Space } from 'antd';
+import { useResponsive } from 'antd-style';
 import { Github, LucideIcon, Moon, Settings, Sun } from 'lucide-react';
 import qs from 'query-string';
 import { memo, useCallback, useState } from 'react';
@@ -23,6 +24,7 @@ const Actions = memo<ActionsProps>(() => {
   const [isSettingOpen, setIsSettingOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const themeMode = useAppStore((st) => st.themeMode, shallow);
+  const { mobile } = useResponsive();
 
   const handleSetTheme = useCallback(() => {
     const theme = themeMode === 'light' ? 'dark' : 'light';
@@ -31,6 +33,16 @@ const Actions = memo<ActionsProps>(() => {
     window.location.replace(qs.stringifyUrl(gradioURL));
   }, [themeMode]);
 
+  const themeSwitch = (
+    <ActionIcon
+      icon={themeMode === 'light' ? Sun : Moon}
+      onClick={handleSetTheme}
+      title="Switch Theme"
+    />
+  );
+
+  if (mobile) return themeSwitch;
+
   return (
     <>
       <Space.Compact>
@@ -38,11 +50,7 @@ const Actions = memo<ActionsProps>(() => {
           <ActionIcon icon={CivitaiLogo} title="Civitai" />
         </a>
         <ActionIcon icon={Github} onClick={() => setIsModalOpen(true)} title="Feedback" />
-        <ActionIcon
-          icon={themeMode === 'light' ? Sun : Moon}
-          onClick={handleSetTheme}
-          title="Switch Theme"
-        />
+        {themeSwitch}
         <ActionIcon icon={Settings} onClick={() => setIsSettingOpen(true)} title="Setting" />
       </Space.Compact>
       <Setting onCancel={() => setIsSettingOpen(false)} open={isSettingOpen} />

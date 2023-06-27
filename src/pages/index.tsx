@@ -1,6 +1,8 @@
 import { LayoutHeader, LayoutMain, LayoutSidebar } from '@lobehub/ui';
+import { useResponsive } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { memo, useEffect } from 'react';
+import { shallow } from 'zustand/shallow';
 
 import replaceIcon from '@/script/replaceIcon';
 import { useAppStore } from '@/store';
@@ -9,14 +11,17 @@ import Content from './Content';
 import ExtraNetworkSidebar from './ExtraNetworkSidebar';
 import Footer from './Footer';
 import Header from './Header';
+import Preview from './Preview';
 import QuickSettingSidebar from './QuickSettingSidebar';
 import { useStyles } from './style';
 
 const HEADER_HEIGHT = 64;
 
 const Index = memo(() => {
-  const { styles } = useStyles(HEADER_HEIGHT);
+  const currentTab = useAppStore((st) => st.currentTab, shallow);
   const setting = useAppStore((st) => st.setting, isEqual);
+  const { mobile } = useResponsive();
+  const { styles } = useStyles(HEADER_HEIGHT);
 
   useEffect(() => {
     if (setting.svgIcon) replaceIcon();
@@ -32,6 +37,20 @@ const Index = memo(() => {
           <QuickSettingSidebar headerHeight={HEADER_HEIGHT} />
         </LayoutSidebar>
         <Content />
+        {mobile === false && (
+          <LayoutSidebar
+            className={styles.sidebar}
+            headerHeight={HEADER_HEIGHT}
+            style={{
+              display: ['tab_txt2img', 'tab_img2img', 'tab_extras'].includes(currentTab) ?
+                'block' :
+                'none',
+              flex: 0,
+            }}
+          >
+            <Preview headerHeight={HEADER_HEIGHT} />
+          </LayoutSidebar>
+        )}
         {setting?.enableExtraNetworkSidebar && (
           <LayoutSidebar
             className={styles.sidebar}

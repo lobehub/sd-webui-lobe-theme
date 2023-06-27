@@ -1,21 +1,13 @@
 import { createStyles } from 'antd-style';
-import { adjustHue, rgba } from 'polished';
+import { adjustHue } from 'polished';
 
 const MIN_HEIGHT = 88;
-const GALLERY_LIGHT =
-  'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAFpJREFUWAntljEKADAIA23p6v//qQ+wfUEcCu1yriEgp0FHRJSJcnehmmWm1Dv/lO4HIg1AAAKjTqm03ea88zMCCEDgO4HV5bS757f+7wRoAAIQ4B9gByAAgQ3pfiDmXmAeEwAAAABJRU5ErkJggg==';
-const GALLERY_DARK =
-  'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACPTkDJAAAAZUlEQVRIDe2VMQoAMAgDa9/g/1/oIzrpZBCh2dLFkkoDF0Fz99OdiOjks+2/7S8fRRmMMIVoRGSoYzvvqF8ZIMKlC1GhQBc6IkPzq32QmdAzkEGihpWOSPsAss8HegYySNSw0hE9WQ4StafZFqkAAAAASUVORK5CYII=';
+
 export const useStyles = createStyles(
   (
     { cx, css, token, stylish, isDarkMode },
     { isPromptResizable, isPrimaryColor }: { isPrimaryColor: boolean; isPromptResizable: boolean },
   ) => {
-    const galleryBackground = css`
-      background: url(${isDarkMode ? GALLERY_DARK : GALLERY_LIGHT}) 0% 0% / 20px !important;
-      border: 2px solid ${token.colorBorderSecondary} !important;
-      border-radius: ${token.borderRadius}px !important;
-    `;
     return {
       autocompleteResults: css`
         .autocompleteResults {
@@ -72,6 +64,10 @@ export const useStyles = createStyles(
         flex: 1;
         min-width: 0;
 
+        .app {
+          padding: 0 !important;
+        }
+
         .float {
           ${stylish.blur};
           border-top-left-radius: 0;
@@ -116,43 +112,7 @@ export const useStyles = createStyles(
           gap: 12px;
         }
       `,
-      gallery: css`
-        .livePreview,
-        .gradio-gallery,
-        .gradio-image,
-        .gradio-video,
-        .gradio-file {
-          ${galleryBackground}
-        }
 
-        div.block {
-          &.livePreview,
-          &.gradio-gallery,
-          &.gradio-image,
-          &.gradio-video,
-          &.gradio-file {
-            ${galleryBackground}
-          }
-        }
-
-        div.svelte-awbtu4 {
-          .livePreview,
-          .gradio-gallery,
-          .gradio-image,
-          .gradio-video,
-          .gradio-file {
-            ${galleryBackground}
-          }
-        }
-
-        button.thumbnail-item {
-          background: ${token.colorBgContainer} !important;
-        }
-
-        div.preview.fixed-height {
-          background: ${rgba(token.colorBgLayout, 0.5)};
-        }
-      `,
       text2img: css`
         #txt2img_toprow,
         #img2img_toprow {
@@ -175,25 +135,6 @@ export const useStyles = createStyles(
             padding: 16px;
             background: ${token.colorBgContainer};
             border-radius: ${token.borderRadius}px;
-          }
-        }
-
-        #txt2img_generate,
-        #img2img_generate {
-          height: 44px;
-          min-height: 44px;
-          max-height: 44px;
-        }
-
-        [id$='img_gallery_container'] {
-          div:not(.livePreview) {
-            position: relative;
-            box-sizing: border-box;
-          }
-
-          .livePreview {
-            top: 46px;
-            left: 20px;
           }
         }
 
@@ -303,6 +244,10 @@ export const useStyles = createStyles(
 
         #interrogate,
         #deepbooru {
+          display: block !important;
+        }
+
+        #tab_extras > div > div {
           display: block !important;
         }
       `,

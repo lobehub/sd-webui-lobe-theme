@@ -10,16 +10,20 @@ import civitaiHelperFix from '@/script/civitaiHelperFix';
 import { useAppStore } from '@/store';
 
 const Inner = memo(() => {
-  const txt2imgExtraNetworkSidebarReference: any = useRef<HTMLElement>();
-  const img2imgExtraNetworkSidebarReference: any = useRef<HTMLElement>();
+  const txt2imgExtraNetworkSidebarReference = useRef<HTMLDivElement>(null);
+  const img2imgExtraNetworkSidebarReference = useRef<HTMLDivElement>(null);
   const [extraLoading, setExtraLoading] = useState(true);
   const [setting, currentTab] = useAppStore((st) => [st.setting, st.currentTab], shallow);
   const [size, setSize] = useState<number>(setting?.extraNetworkCardSize || 86);
   const { styles } = useStyles({ size });
   useEffect(() => {
     if (setting.enableExtraNetworkSidebar) {
-      const txt2imgExtraNetworks = gradioApp().querySelector('div#txt2img_extra_networks');
-      const img2imgExtraNetworks = gradioApp().querySelector('div#img2img_extra_networks');
+      const txt2imgExtraNetworks = gradioApp().querySelector(
+        'div#txt2img_extra_networks',
+      ) as HTMLDivElement;
+      const img2imgExtraNetworks = gradioApp().querySelector(
+        'div#img2img_extra_networks',
+      ) as HTMLDivElement;
       if (txt2imgExtraNetworks && img2imgExtraNetworks) {
         txt2imgExtraNetworkSidebarReference.current?.append(txt2imgExtraNetworks);
         img2imgExtraNetworkSidebarReference.current?.append(img2imgExtraNetworks);
@@ -30,8 +34,10 @@ const Inner = memo(() => {
         return;
       }
       setTimeout(() => {
-        const t2indexButton: any = document.querySelector('#txt2img_extra_refresh');
-        const index2indexButton: any = document.querySelector('#img2img_extra_refresh');
+        const t2indexButton = document.querySelector('#txt2img_extra_refresh') as HTMLButtonElement;
+        const index2indexButton = document.querySelector(
+          '#img2img_extra_refresh',
+        ) as HTMLButtonElement;
         t2indexButton.click();
         index2indexButton.click();
         setExtraLoading(false);

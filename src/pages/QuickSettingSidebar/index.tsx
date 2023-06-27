@@ -14,22 +14,22 @@ export interface QuickSettingSidebarProps extends DivProps {
 }
 
 const QuickSettingSidebar = memo<QuickSettingSidebarProps>(({ headerHeight }) => {
-  const setting = useAppStore((st) => st.setting, isEqual);
-  const [expand, setExpand] = useState<boolean>(setting.sidebarExpand);
-  const [pin, setPin] = useState<boolean>(setting.sidebarFixedMode === 'fixed');
   const { mobile } = useResponsive();
+  const setting = useAppStore((st) => st.setting, isEqual);
+  const [expand, setExpand] = useState<boolean>(mobile ? false : setting.sidebarExpand);
+  const [pin, setPin] = useState<boolean>(setting.sidebarFixedMode === 'fixed');
   const { styles } = useStyles({ headerHeight });
 
   useEffect(() => {
     if (mobile) setExpand(false);
-  }, []);
+  }, [mobile]);
 
   return (
     <DraggablePanel
       defaultSize={{ width: setting.sidebarWidth }}
       expand={expand}
       minWidth={setting.sidebarWidth}
-      mode={pin ? 'fixed' : 'float'}
+      mode={mobile ? 'fixed' : pin ? 'fixed' : 'float'}
       onExpandChange={setExpand}
       pin={pin}
       placement="left"
@@ -40,7 +40,13 @@ const QuickSettingSidebar = memo<QuickSettingSidebarProps>(({ headerHeight }) =>
     >
       <LayoutSidebarInner>
         <SidebarContainer className={styles.container}>
-          <SidebarHeader pin={pin} position="left" setPin={setPin} title="Quick Settings" />
+          <SidebarHeader
+            pin={pin}
+            position="left"
+            setExpand={setExpand}
+            setPin={setPin}
+            title="Quick Settings"
+          />
           <Inner />
         </SidebarContainer>
       </LayoutSidebarInner>

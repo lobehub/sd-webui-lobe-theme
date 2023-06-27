@@ -8,7 +8,7 @@ import { useStyles } from './style';
 
 const Footer = memo<DivProps>(({ className, ...props }) => {
   const { cx, styles } = useStyles();
-  const footerReference: any = useRef<HTMLElement>();
+  const footerReference = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const footer = gradioApp().querySelector('#footer');
