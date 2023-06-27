@@ -1,1 +1,1 @@
-module.exports = require('@lobehub/lint/dist/semantic-release');
+module.exports = require('@lobehub/lint').semanticRelease;
