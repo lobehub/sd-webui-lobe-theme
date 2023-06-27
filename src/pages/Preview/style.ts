@@ -35,26 +35,19 @@ export const useStyles = createStyles(
           }
 
           &[id$='_generate'] {
+            overflow: unset !important;
+
             &::before {
               ${stylish.gradientAnimation};
               ${primaryGradient};
               position: absolute;
-              z-index: 50;
-
-              padding: 2px;
-
-              overflow: hidden;
-
-              border-radius: inherit;
+              z-index: -1;
+              inset: 0;
 
               content: '';
 
-              inset: 0;
-
-              mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-
-              mask-composite: xor;
-              mask-composite: exclude;
+              filter: blur(8px);
+              opacity: 0.5;
             }
           }
         }
