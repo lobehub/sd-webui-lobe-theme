@@ -27,13 +27,14 @@ export interface WebuiSetting {
   extraNetworkSidebarWidth: number;
   layoutHideFooter: boolean;
   layoutSplitPreview: boolean;
+  liteAnimation: boolean;
   logoCustomTitle: string | undefined;
   logoCustomUrl: string | undefined;
   logoType: 'lobe' | 'kitchen' | 'custom';
   neutralColor: NeutralColor | undefined;
   primaryColor: PrimaryColor | undefined;
   promptEditor: boolean;
-  promptTextarea: 'scroll' | 'resizable';
+  promptTextareaType: 'scroll' | 'resizable';
   sidebarExpand: boolean;
   sidebarFixedMode: 'fixed' | 'float';
   sidebarWidth: number;
@@ -48,13 +49,14 @@ export const defaultSetting: WebuiSetting = {
   extraNetworkSidebarWidth: 340,
   layoutHideFooter: false,
   layoutSplitPreview: false,
+  liteAnimation: false,
   logoCustomTitle: '',
   logoCustomUrl: '',
   logoType: 'lobe',
   neutralColor: undefined,
   primaryColor: undefined,
   promptEditor: true,
-  promptTextarea: 'scroll',
+  promptTextareaType: 'resizable',
   sidebarExpand: true,
   sidebarFixedMode: 'fixed',
   sidebarWidth: 280,

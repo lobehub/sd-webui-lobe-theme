@@ -36,7 +36,7 @@ const Index = memo(() => {
         <Header />
       </LayoutHeader>
       <LayoutMain>
-        <div className={styles.background} />
+        {!setting.liteAnimation && <div className={styles.background} />}
         <LayoutSidebar className={styles.sidebar} headerHeight={HEADER_HEIGHT} style={{ flex: 0 }}>
           <QuickSettingSidebar headerHeight={HEADER_HEIGHT} />
         </LayoutSidebar>

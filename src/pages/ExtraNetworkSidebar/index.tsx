@@ -19,7 +19,7 @@ const ExtraNetworkSidebar = memo<ExtraNetworkSidebarProps>(({ headerHeight }) =>
   const setting = useAppStore((st) => st.setting, isEqual);
   const [expand, setExpand] = useState<boolean>(mobile ? false : setting.extraNetworkSidebarExpand);
   const [pin, setPin] = useState<boolean>(setting.extraNetworkFixedMode === 'fixed');
-  const { styles } = useStyles({ headerHeight });
+  const { styles, theme } = useStyles({ headerHeight });
 
   useEffect(() => {
     const index2indexExtraNetworkButton = gradioApp().querySelector(
@@ -41,18 +41,23 @@ const ExtraNetworkSidebar = memo<ExtraNetworkSidebarProps>(({ headerHeight }) =>
     if (mobile) setExpand(false);
   }, [mobile]);
 
+  const mode = mobile ? 'fixed' : pin ? 'fixed' : 'float';
+
   return (
     <DraggablePanel
       defaultSize={{ width: setting.extraNetworkSidebarWidth }}
       expand={expand}
       minWidth={260}
-      mode={mobile ? 'fixed' : pin ? 'fixed' : 'float'}
+      mode={mode}
       onExpandChange={setExpand}
       pin={pin}
       placement="right"
     >
       <LayoutSidebarInner>
-        <SidebarContainer className={styles.container}>
+        <SidebarContainer
+          className={styles.container}
+          style={mode === 'float' ? { background: theme.colorBgContainer } : {}}
+        >
           <SidebarHeader
             pin={pin}
             position="right"

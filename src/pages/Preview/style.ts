@@ -4,7 +4,11 @@ import { adjustHue, rgba } from 'polished';
 export const useStyles = createStyles(
   (
     { css, token, stylish },
-    { headerHeight = 64, isPrimaryColor }: { headerHeight?: number; isPrimaryColor?: boolean },
+    {
+      headerHeight = 64,
+      isPrimaryColor,
+      liteAnimation,
+    }: { headerHeight?: number; isPrimaryColor?: boolean; liteAnimation?: boolean },
   ) => {
     const primaryGradient =
       isPrimaryColor &&
@@ -50,28 +54,11 @@ export const useStyles = createStyles(
           &.svelte-1p4r00v {
             padding: 0;
           }
-
-          &[id$='_generate'] {
-            overflow: unset !important;
-
-            &::before {
-              ${stylish.gradientAnimation};
-              ${primaryGradient};
-              position: absolute;
-              z-index: -1;
-              inset: 0;
-
-              content: '';
-
-              filter: blur(8px);
-              opacity: 0.5;
-            }
-          }
         }
 
         .progressDiv > .progress {
-          ${stylish.gradientAnimation};
-          ${primaryGradient};
+          ${!liteAnimation && stylish.gradientAnimation};
+          ${!liteAnimation && primaryGradient};
         }
 
         [id$='_results'] {

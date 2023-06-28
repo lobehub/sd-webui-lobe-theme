@@ -1,3 +1,4 @@
+import { useResponsive } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { memo, useEffect, useRef } from 'react';
 
@@ -11,10 +12,17 @@ import { useStyles } from './style';
 const Content = memo<DivProps>(({ className, ...props }) => {
   const mainReference = useRef<HTMLDivElement>(null);
   const setting = useAppStore((st) => st.setting, isEqual);
+  const { mobile } = useResponsive();
   const { cx, styles } = useStyles({
-    isPromptResizable: setting.promptTextarea === 'resizable',
+    isPromptResizable: setting.promptTextareaType === 'resizable',
+    layoutSplitPreview: setting.layoutSplitPreview,
   });
-  const previewStyle = usePreviewStyles({ isPrimaryColor: Boolean(setting.primaryColor) });
+  const previewStyle = usePreviewStyles({
+    isPrimaryColor: Boolean(setting.primaryColor),
+    liteAnimation: setting.liteAnimation,
+  });
+
+  const useDragablePanel = !setting.layoutSplitPreview && mobile === false;
 
   useEffect(() => {
     // Content
@@ -23,14 +31,29 @@ const Content = memo<DivProps>(({ className, ...props }) => {
       mainReference.current?.append(main);
     }
     // remove prompt scroll-hide
-    for (const textarea of gradioApp().querySelectorAll(`[id$="_prompt_container"] textarea`)) {
-      textarea.classList.remove('scroll-hide');
+    const textares = gradioApp().querySelectorAll(
+      `[id$="_prompt_container"] textarea`,
+    ) as NodeListOf<HTMLTextAreaElement>;
+    if (textares) {
+      for (const textarea of textares) {
+        textarea.classList.remove('scroll-hide');
+        textarea.style.height = 'auto';
+      }
+    }
+
+    // textarea
+    const interrogate = gradioApp().querySelector(
+      '#img2img_toprow .interrogate-col',
+    ) as HTMLDivElement;
+    const actions = gradioApp().querySelector('#img2img_actions_column') as HTMLDivElement;
+    if (interrogate && actions) {
+      actions.append(interrogate);
     }
   }, []);
 
   useEffect(() => {
-    if (!setting.layoutSplitPreview) draggablePanel();
-  }, [setting.layoutSplitPreview]);
+    if (useDragablePanel) draggablePanel();
+  }, [useDragablePanel]);
 
   return (
     <div
@@ -40,7 +63,7 @@ const Content = memo<DivProps>(({ className, ...props }) => {
         styles.text2img,
         styles.autocompleteResults,
         setting.layoutSplitPreview ? styles.splitView : styles.draggableContainer,
-        !setting.layoutSplitPreview && previewStyle.styles.preview,
+        useDragablePanel && previewStyle.styles.preview,
         className,
       )}
       ref={mainReference}

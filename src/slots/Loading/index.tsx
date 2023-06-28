@@ -10,11 +10,14 @@ import { useStyles } from './style';
 
 const Loading = memo(() => {
   const setting = useAppStore((st) => st.setting, isEqual);
-  const { styles } = useStyles(Boolean(setting.primaryColor));
+  const { styles } = useStyles({
+    isPrimaryColor: Boolean(setting.primaryColor),
+    liteAnimation: setting.liteAnimation,
+  });
 
   return (
     <section className={styles.container}>
-      <div className={styles.canvas} />
+      {!setting.liteAnimation && <div className={styles.canvas} />}
       <div className={styles.inner}>
         <Logo size={48} />
         <Icon className={styles.icon} icon={Loader2} size={{ fontSize: 32 }} spin />

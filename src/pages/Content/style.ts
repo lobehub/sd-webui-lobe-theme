@@ -1,9 +1,15 @@
 import { createStyles } from 'antd-style';
 
-const MIN_HEIGHT = 88;
-
+const TEXT2IMG_PROMPT_HEIGHT = 74;
+const IMG2IMG_PROMPT_HEIGHT = 98;
 export const useStyles = createStyles(
-  ({ css, token, stylish, isDarkMode }, { isPromptResizable }: { isPromptResizable: boolean }) => {
+  (
+    { css, token, stylish, isDarkMode },
+    {
+      isPromptResizable,
+      layoutSplitPreview,
+    }: { isPromptResizable: boolean; layoutSplitPreview: boolean },
+  ) => {
     return {
       autocompleteResults: css`
         .autocompleteResults {
@@ -30,7 +36,7 @@ export const useStyles = createStyles(
       container: css`
         position: relative;
         flex: 1;
-        min-width: 200px;
+        min-width: ${layoutSplitPreview ? '200px' : '0'};
 
         .app {
           padding: 0 !important;
@@ -111,6 +117,11 @@ export const useStyles = createStyles(
           max-height: 44px !important;
         }
 
+        #img2img_toprow .interrogate-col {
+          flex-flow: row wrap;
+          min-width: 100% !important;
+        }
+
         [id$='img_settings'],
         .gradio-column.compact {
           display: flex !important;
@@ -179,6 +190,8 @@ export const useStyles = createStyles(
         #tab_txt2img,
         #tab_img2img {
           [id$='_settings'] {
+            min-width: 0 !important;
+
             div.svelte-15lo0d8 > *,
             div.svelte-15lo0d8 > .form > * {
               flex: 1;
@@ -216,17 +229,33 @@ export const useStyles = createStyles(
         }
       `,
       textares: css`
+        #text2img_prompt,
+        #text2img_neg_prompt {
+          textarea {
+            min-height: ${TEXT2IMG_PROMPT_HEIGHT}px;
+            max-height: ${isPromptResizable ? 'unset' : `${TEXT2IMG_PROMPT_HEIGHT}px`};
+          }
+        }
+
+        #img2img_prompt,
+        #img2img_neg_prompt {
+          textarea {
+            min-height: ${IMG2IMG_PROMPT_HEIGHT}px;
+            max-height: ${isPromptResizable ? 'unset' : `${IMG2IMG_PROMPT_HEIGHT}px`};
+          }
+        }
+
         [id$='2img_prompt'],
         [id$='2img_neg_prompt'] {
           textarea {
-            resize: vertical;
+            resize: ${isPromptResizable ? 'vertical' : 'none'};
 
             overflow-y: auto;
 
-            min-height: ${isPromptResizable ? 'unset' : `${MIN_HEIGHT}px`};
             padding: 8px;
 
             font-family: ${token.fontFamilyCode};
+            font-size: 13px;
             text-overflow: ellipsis;
             vertical-align: bottom;
 
@@ -251,12 +280,15 @@ export const useStyles = createStyles(
         }
 
         .block.token-counter {
+          right: 4px;
+          scale: 0.8;
+          background: ${token.colorBgContainer} !important;
+
           > .translucent {
             display: none;
           }
 
           span {
-            ${stylish.blur};
             display: inline-block;
             font-family: ${token.fontFamilyCode};
           }

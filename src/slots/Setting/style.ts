@@ -15,6 +15,18 @@ export const useStyles = createStyles(({ css, token }) => ({
       margin: 0 !important;
     }
   `,
+  formTitle: css`
+    text-align: left;
+
+    > div {
+      line-height: 1;
+    }
+
+    > small {
+      line-height: 1;
+      color: ${token.colorTextDescription};
+    }
+  `,
   group: css`
     overflow: hidden;
     background: ${token.colorFillQuaternary};

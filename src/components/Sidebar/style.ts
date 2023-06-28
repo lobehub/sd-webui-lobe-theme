@@ -1,25 +1,18 @@
 import { createStyles } from 'antd-style';
-import { rgba } from 'polished';
 
-export const useStyles = createStyles(({ css, token, stylish, cx }) => ({
+export const useStyles = createStyles(({ css, token }) => ({
   body: css`
     overflow-x: hidden;
     overflow-y: auto;
     flex: 1;
     padding: 16px;
   `,
-  container: cx(
-    stylish.blur,
-    css`
-      position: relative;
-
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-
-      background: ${rgba(token.colorBgLayout, 0.8)};
-    `,
-  ),
+  container: css`
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  `,
   footer: css`
     display: flex;
     flex: 0;

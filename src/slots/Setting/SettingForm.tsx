@@ -9,6 +9,7 @@ import { CustomLogo } from '@/components';
 import { NeutralColor, PrimaryColor, WebuiSetting, defaultSetting, useAppStore } from '@/store';
 import { neutralColorScales } from '@/styles/neutralColors';
 
+import FormTitle from './FormTitle';
 import { useStyles } from './style';
 
 const { Item } = Form;
@@ -80,6 +81,7 @@ const SettingForm = memo(() => {
   return (
     <Form
       className={styles.form}
+      colon={false}
       initialValues={setting}
       layout="horizontal"
       onFinish={onFinish}
@@ -90,13 +92,17 @@ const SettingForm = memo(() => {
           <Icon icon={TextCursorInput} />
           Promot Textarea
         </div>
-        <Item className={styles.item} label="Display mode" name="promotTextarea">
+        <Item
+          className={styles.item}
+          label={<FormTitle desc="Fixed height / Auto height" title="Display mode" />}
+          name="promotTextarea"
+        >
           <Segmented options={['scroll', 'resizable']} />
         </Item>
         <Divider style={{ margin: 0 }} />
         <Item
           className={styles.item}
-          label="Prompt editor"
+          label={<FormTitle desc="Top in left sidebar" title="Prompt editor" />}
           name="promptEditor"
           valuePropName="checked"
         >
@@ -188,6 +194,15 @@ const SettingForm = memo(() => {
           <Icon icon={Palette} />
           Theme
         </div>
+        <Item
+          className={styles.item}
+          label={<FormTitle desc="Save cpu usage" title="Remove animation" />}
+          name="liteAnimation"
+          valuePropName="checked"
+        >
+          <Switch />
+        </Item>
+        <Divider style={{ margin: 0 }} />
         <Item className={styles.item} label="Primary color">
           <Swatches
             activeColor={primaryColor ? colors[primaryColor] : undefined}

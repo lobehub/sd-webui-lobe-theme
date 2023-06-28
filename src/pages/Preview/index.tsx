@@ -15,7 +15,11 @@ export interface PreviewProps extends DivProps {
 const Preview = memo<PreviewProps>(({ headerHeight }) => {
   const currentTab = useAppStore((st) => st.currentTab, shallow);
   const setting = useAppStore((st) => st.setting, isEqual);
-  const { cx, styles } = useStyles({ headerHeight, isPrimaryColor: Boolean(setting.primaryColor) });
+  const { cx, styles } = useStyles({
+    headerHeight,
+    isPrimaryColor: Boolean(setting.primaryColor),
+    liteAnimation: setting.liteAnimation,
+  });
   const txt2imgReference = useRef<HTMLDivElement>(null);
   const img2imgReference = useRef<HTMLDivElement>(null);
   const extras2imgReference = useRef<HTMLDivElement>(null);
