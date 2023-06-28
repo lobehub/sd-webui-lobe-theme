@@ -15,6 +15,11 @@ const getNavButtons = (): HTMLButtonElement[] =>
     ) as NodeListOf<HTMLButtonElement>,
   );
 
+const onChange: TabsNavProps['onChange'] = (e) => {
+  const buttons = getNavButtons();
+  buttons[Number(e)]?.click();
+};
+
 const Nav = memo(() => {
   const { mobile } = useResponsive();
   const [opened, setOpened] = useState(false);
@@ -44,7 +49,7 @@ const Nav = memo(() => {
 
   if (mobile) return <Burger items={items} opened={opened} setOpened={setOpened} />;
 
-  return <TabsNav items={items} />;
+  return <TabsNav items={items} onChange={onChange} />;
 });
 
 export default Nav;
