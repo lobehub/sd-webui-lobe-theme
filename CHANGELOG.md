@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 2.1.0](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.0.4...v2.1.0)
+
+<sup>Released on **2023-06-28**</sup>
+
+#### ✨ Features
+
+- **misc**: Allow prompt textarea resize.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Allow prompt textarea resize ([8fa7dcf](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/8fa7dcf))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 2.0.4](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.0.3...v2.0.4)
 
 <sup>Released on **2023-06-28**</sup>
