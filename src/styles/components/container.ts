@@ -1,14 +1,6 @@
 import { Theme, css } from 'antd-style';
 
 export default (token: Theme) => {
-  const cardStylish = css`
-    display: flex;
-    flex-direction: column;
-
-    background-color: ${token.colorBgContainer} !important;
-    border-radius: ${token.borderRadius}px !important;
-    box-shadow: none;
-  `;
   return css`
     .gradio-tabitem {
       overflow: auto;
@@ -27,7 +19,6 @@ export default (token: Theme) => {
       &.gradio-box,
       &.gradio-accordion {
         &:not(.hidden):has(div) {
-          ${cardStylish};
           margin: 0 !important;
           padding: 16px !important;
           border: 1px solid ${token.colorBorderSecondary} !important;
@@ -38,7 +29,6 @@ export default (token: Theme) => {
     .panel {
       margin: 0 !important;
       padding: 16px !important;
-      ${cardStylish};
     }
 
     .compact,
@@ -54,11 +44,6 @@ export default (token: Theme) => {
     #system_info {
       align-items: flex-start;
       justify-content: flex-start;
-    }
-
-    #txt2img_dimensions_row,
-    #img2img_dimensions_row {
-      min-width: 36px !important;
     }
   `;
 };

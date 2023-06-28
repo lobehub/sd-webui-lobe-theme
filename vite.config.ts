@@ -7,6 +7,9 @@ import { defineConfig } from 'vite';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
+const SD_HOST = '127.0.0.1';
+// const SD_HOST = '30.183.80.45';
+const SD_PORT = 7860;
 export default defineConfig({
   base: '/dev',
   build: {
@@ -73,7 +76,7 @@ export default defineConfig({
             _request.originalUrl === '/dev?__theme=dark' ||
             _request.originalUrl === '/dev?__theme=light'
           ) {
-            const response = await fetch('http://127.0.0.1:7860/');
+            const response = await fetch(`http://${SD_HOST}:${SD_PORT}/`);
 
             let updatedResponse = await response.text();
 
@@ -104,10 +107,10 @@ export default defineConfig({
     port: 8000,
     proxy: {
       '/queue/join': {
-        target: 'ws://127.0.0.1:7860',
+        target: `ws://${SD_HOST}:${SD_PORT}`,
         ws: true,
       },
-      '^(?!.*dev).*$': 'http://127.0.0.1:7860',
+      '^(?!.*dev).*$': `http://${SD_HOST}:${SD_PORT}`,
     },
   },
 });

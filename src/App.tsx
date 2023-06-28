@@ -5,7 +5,6 @@ import { shallow } from 'zustand/shallow';
 import Layout from '@/layouts';
 import Index from '@/pages';
 import formatPrompt from '@/script/formatPrompt';
-import promptBracketChecker from '@/script/promptBracketChecker';
 import Loading from '@/slots/Loading';
 import { useAppStore } from '@/store';
 
@@ -15,7 +14,6 @@ const App = memo(() => {
   useEffect(() => {
     onUiLoaded(() => {
       formatPrompt();
-      promptBracketChecker();
       setLoading(false);
     });
     onUiUpdate(() => {

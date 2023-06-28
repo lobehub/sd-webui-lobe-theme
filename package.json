@@ -21,7 +21,7 @@
   "author": "canisminor1990 <i@canisminor.cc>",
   "sideEffects": false,
   "scripts": {
-    "build": "npm run type-check && vite build",
+    "build": "vite build",
     "dev": "vite",
     "dev:sd": "cd ../../ && ./webui.sh",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
@@ -31,7 +31,7 @@
     "prettier": "prettier -c --write \"**/**\"",
     "release": "semantic-release",
     "start": "npm run dev",
-    "test": "npm run type-check && npm run lint",
+    "test": "npm run type-check",
     "type-check": "tsc -p tsconfig-check.json"
   },
   "lint-staged": {
