@@ -42,14 +42,17 @@ const Inner = memo(() => {
         index2indexButton.click();
         setExtraLoading(false);
         try {
-          const civitaiButton = document.querySelectorAll(
-            'button[title="Refresh Civitai Helper\'s additional buttons"]',
-          ) as NodeListOf<HTMLButtonElement>;
-          if (civitaiButton) {
-            for (const button of civitaiButton) {
-              button.onclick = civitaiHelperFix;
-            }
+          const civitaiText2ImgButton = document.querySelector('#txt2img_extra_refresh')
+            ?.nextSibling as HTMLButtonElement;
+          if (civitaiText2ImgButton) {
+            civitaiText2ImgButton.onclick = civitaiHelperFix;
           }
+          const civitaiImg2ImgButton = document.querySelector('#img2img_extra_refresh')
+            ?.nextSibling as HTMLButtonElement;
+          if (civitaiImg2ImgButton) {
+            civitaiImg2ImgButton.onclick = civitaiHelperFix;
+          }
+
           civitaiHelperFix();
         } catch (error) {
           console.log(error);
