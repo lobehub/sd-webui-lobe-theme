@@ -4,6 +4,7 @@ import antdOverride from './antdOverride';
 import button from './components/button';
 import collapse from './components/collapse';
 import container from './components/container';
+import extensions from './components/extensions';
 import gallery from './components/gallery';
 import input from './components/input';
 import label from './components/label';
@@ -28,6 +29,7 @@ const GlobalStyle = createGlobalStyle(({ theme }) => [
   slider(theme),
   table(theme),
   tabs(theme),
+  extensions(),
 ]);
 
 export default GlobalStyle;
