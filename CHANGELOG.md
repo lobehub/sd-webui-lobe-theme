@@ -83,6 +83,70 @@
 #### 🐛 Bug Fixes
 
 - **build**: Fix rollup-plugin-terser config.
+- **misc**: Fix extra button, fix gallery style, fix setting typo.
+
+#### 💄 Styles
+
+- **misc**: Update, update, update grenerate button style, update layout style, update svg icon.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Code refactoring
+
+- **wip**: Refactor with @lobehub/ui ([e116458](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/e116458))
+- **misc**: Refactor layout and styles ([438cd1f](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/438cd1f))
+- **misc**: Refactor project ([b9046f1](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/b9046f1))
+
+#### What's improved
+
+- **wip**: Theme modify ([7cdb48d](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/7cdb48d))
+- **misc**: Add custom logo ([34ea7aa](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/34ea7aa))
+- **misc**: Add primary color setting ([406aba7](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/406aba7))
+- **misc**: Add split t2i i2t layout ([149d1d8](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/149d1d8))
+
+#### What's fixed
+
+- **build**: Fix rollup-plugin-terser config ([b46c7d4](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/b46c7d4))
+- **misc**: Fix extra button ([079083b](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/079083b))
+- **misc**: Fix gallery style ([dd17dad](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/dd17dad))
+- **misc**: Fix setting typo ([9419345](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/9419345))
+
+#### Styles
+
+- **misc**: Update ([6e6dad8](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/6e6dad8))
+- **misc**: Update ([ba811e6](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/ba811e6))
+- **misc**: Update grenerate button style ([48321e5](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/48321e5))
+- **misc**: Update layout style ([ac76d7a](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/ac76d7a))
+- **misc**: Update svg icon ([d7e13b6](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/d7e13b6))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+## [Version 2.0.0](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v1.8.3...v2.0.0)
+
+<sup>Released on **2023-06-28**</sup>
+
+#### ♻ Code Refactoring
+
+- **wip**: Refactor with @lobehub/ui.
+- **misc**: Refactor layout and styles, refactor project.
+
+#### ✨ Features
+
+- **wip**: Theme modify.
+- **misc**: Add custom logo, add primary color setting, add split t2i i2t layout.
+
+#### 🐛 Bug Fixes
+
+- **build**: Fix rollup-plugin-terser config.
 - **misc**: Fix gallery style, fix setting typo.
 
 #### 💄 Styles
