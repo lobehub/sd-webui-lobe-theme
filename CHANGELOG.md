@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 2.2.2](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.2.1...v2.2.2)
+
+<sup>Released on **2023-06-28**</sup>
+
+#### 🐛 Bug Fixes
+
+- **nav**: Fix nav click func.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **nav**: Fix nav click func ([8dbb992](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/8dbb992))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 2.2.1](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.2.0...v2.2.1)
 
 <sup>Released on **2023-06-28**</sup>
