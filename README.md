@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img width="160" src="https://npm.elemecdn.com/@lobehub/assets-logo/assets/logo-3d.webp">
+<img width="160" src="https://npm.elemecdn.com/@lobehub/assets-logo@1.0.0/assets/logo-3d.webp">
 
 <h1 align="center">Lobe Theme</h1>
 
@@ -27,10 +27,10 @@ English · [简体中文](./README-zh_CN.md) · [Changelog](./CHANGELOG.md) · [
 
 ![cover.webp](https://github.com/canisminor1990/sd-webui-lobe-theme/blob/main/docs/cover.webp)
 
+> 📦 After **Version 2.0.0** Kitchen theme was renamed to **Lobe Theme**. The legacy version can be accessed at [sd-webui-kitchen-theme-legacy](https://github.com/canisminor1990/sd-webui-kitchen-theme-legacy)
+
 <details>
 <summary><kbd>Table of contents</kbd></summary>
-
-> 📦 After **Version 2.0.0** Kitchen theme was renamed to **Lobe Theme**. The legacy version can be accessed at [sd-webui-kitchen-theme-legacy](https://github.com/canisminor1990/sd-webui-kitchen-theme-legacy)
 
 #### TOC
 
@@ -137,7 +137,7 @@ http://localhost:7860/?__theme=dark
 
 ![feat_sidebar.webp](https://github.com/canisminor1990/sd-webui-lobe-theme/blob/main/docs/feat_sidebar.webp)
 
-#### 侧边栏定制
+#### Sidebar Customization
 
 > 👉 Tip: Click the `⚙` icon in the upper-right corner to open the settings panel. The current available settings are as follows:
 
@@ -191,7 +191,7 @@ Partial convenience adaptation design has been completed for mobile devices, inc
 
 </div>
 
-#### 🪄 Prompt formatting
+#### Prompt formatting
 
 Click the <kbd>🪄</kbd> button below Prompt to format the prompt words with one click.
 
