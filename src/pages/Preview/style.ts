@@ -30,6 +30,10 @@ export const useStyles = createStyles(
         padding: 16px;
 
         button {
+          &#extras_generate {
+            position: relative;
+          }
+
           &.svelte-1p4r00v {
             padding: 0;
           }
