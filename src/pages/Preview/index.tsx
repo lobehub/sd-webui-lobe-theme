@@ -22,6 +22,18 @@ const Preview = memo<PreviewProps>(({ headerHeight }) => {
 
   useEffect(() => {
     // tab_txt2img
+    const txt2imgToprow = gradioApp().querySelector('#txt2img_toprow') as HTMLDivElement;
+    const txt2imgSettings = gradioApp().querySelector('#txt2img_settings') as HTMLDivElement;
+    if (txt2imgToprow && txt2imgSettings) {
+      txt2imgSettings.prepend(txt2imgToprow);
+    }
+    // tab_img2img
+    const img2imgToprow = gradioApp().querySelector('#img2img_toprow') as HTMLDivElement;
+    const img2imgSettings = gradioApp().querySelector('#img2img_settings') as HTMLDivElement;
+    if (img2imgSettings && img2imgToprow) {
+      img2imgSettings.prepend(img2imgToprow);
+    }
+    // tab_txt2img
     const txt2imgPreview = gradioApp().querySelector('#txt2img_results') as HTMLDivElement;
     const txt2imgButton = gradioApp().querySelector('#txt2img_generate_box') as HTMLDivElement;
     if (txt2imgPreview && txt2imgButton) {

@@ -55,13 +55,31 @@ export const useStyles = createStyles(
           }
         }
       `,
-      text2img: css`
-        button[id$='_generate'] {
-          height: 44px !important;
-          min-height: 44px !important;
-          max-height: 44px !important;
+      draggableContainer: css`
+        .draggable-line {
+          flex: none !important;
+
+          width: 2px;
+          min-width: 2px !important;
+          max-width: 2px !important;
+
+          border-left: 1px dashed ${token.colorBorderSecondary};
+
+          transition: all 0.3s ease-in-out;
+
+          &:hover,
+          &:active {
+            cursor: col-resize;
+            border-left: 2px solid ${token.colorPrimary};
+          }
         }
 
+        .draggable-container {
+          flex-wrap: nowrap !important;
+          align-items: stretch !important;
+        }
+      `,
+      splitView: css`
         #txt2img_toprow,
         #img2img_toprow {
           flex-direction: column;
@@ -84,6 +102,13 @@ export const useStyles = createStyles(
             background: ${token.colorBgContainer};
             border-radius: ${token.borderRadius}px;
           }
+        }
+      `,
+      text2img: css`
+        button[id$='_generate'] {
+          height: 44px !important;
+          min-height: 44px !important;
+          max-height: 44px !important;
         }
 
         [id$='img_settings'],
@@ -188,10 +213,6 @@ export const useStyles = createStyles(
           .image_buttons_extras {
             gap: 8px !important;
           }
-        }
-
-        #tab_extras > div > div {
-          display: block !important;
         }
       `,
       textares: css`
