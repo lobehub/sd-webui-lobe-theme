@@ -207,7 +207,7 @@
 
 #### Styles
 
-- **misc**: Add remarkrc.js ([32c7be2](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/32c7be2))
+- **misc**: Add remarkrc.js ([32c7be2](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/32c7be2))
 
 </details>
 
@@ -232,7 +232,7 @@
 
 #### Styles
 
-- **misc**: Update ESLint configuration and add Prettier configuration ([fefad8c](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/fefad8c))
+- **misc**: Update ESLint configuration and add Prettier configuration ([fefad8c](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/fefad8c))
 
 </details>
 
@@ -257,7 +257,7 @@
 
 #### What's fixed
 
-- **style**: Header render ([35125b4](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/35125b4))
+- **style**: Header render ([35125b4](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/35125b4))
 
 </details>
 
@@ -282,7 +282,7 @@
 
 #### What's improved
 
-- **header**: Better navbar ([37e2230](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/37e2230))
+- **header**: Better navbar ([37e2230](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/37e2230))
 
 </details>
 
@@ -307,7 +307,7 @@
 
 #### What's fixed
 
-- **extranetworks**: Card mode display ([1b3376e](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/1b3376e))
+- **extranetworks**: Card mode display ([1b3376e](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/1b3376e))
 
 </details>
 
@@ -336,13 +336,13 @@
 
 #### What's improved
 
-- **misc**: Add giscus feedback ([42c7590](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/42c7590))
+- **misc**: Add giscus feedback ([42c7590](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/42c7590))
 
 #### What's fixed
 
-- **misc**: Ci ([ed2401d](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/ed2401d))
-- **misc**: Firefox scroll fixed \[47] ([87e774d](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/87e774d))
-- **misc**: Setting reset button ([2a0f468](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/2a0f468))
+- **misc**: Ci ([ed2401d](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/ed2401d))
+- **misc**: Firefox scroll fixed \[47] ([87e774d](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/87e774d))
+- **misc**: Setting reset button ([2a0f468](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/2a0f468))
 
 </details>
 
@@ -367,7 +367,7 @@
 
 #### What's fixed
 
-- **misc**: GradioApp append ([4751e78](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/4751e78))
+- **misc**: GradioApp append ([4751e78](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/4751e78))
 
 </details>
 
@@ -396,12 +396,12 @@
 
 #### What's fixed
 
-- **misc**: Setting crash, closes [#46](https://github.com/canisminor1990/sd-webui-kitchen-theme/issues/46) ([4f1a030](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/4f1a030))
-- **misc**: Try to fix header bug, closes [#46](https://github.com/canisminor1990/sd-webui-kitchen-theme/issues/46) ([afdbe53](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/afdbe53))
+- **misc**: Setting crash, closes [#46](https://github.com/canisminor1990/sd-webui-lobe-theme/issues/46) ([4f1a030](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/4f1a030))
+- **misc**: Try to fix header bug, closes [#46](https://github.com/canisminor1990/sd-webui-lobe-theme/issues/46) ([afdbe53](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/afdbe53))
 
 #### Styles
 
-- **misc**: Format of the code ([f6b11ae](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/f6b11ae))
+- **misc**: Format of the code ([f6b11ae](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/f6b11ae))
 
 </details>
 
@@ -426,7 +426,7 @@
 
 #### What's fixed
 
-- **misc**: Fix typo ([9faf33e](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/9faf33e))
+- **misc**: Fix typo ([9faf33e](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/9faf33e))
 
 </details>
 
@@ -451,7 +451,7 @@
 
 #### What's improved
 
-- **misc**: Add setting panel, closes [#44](https://github.com/canisminor1990/sd-webui-kitchen-theme/issues/44) ([f2beaaa](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/f2beaaa))
+- **misc**: Add setting panel, closes [#44](https://github.com/canisminor1990/sd-webui-lobe-theme/issues/44) ([f2beaaa](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/f2beaaa))
 
 </details>
 
@@ -476,7 +476,7 @@
 
 #### Styles
 
-- **misc**: Update tags style ([5f6185c](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/5f6185c))
+- **misc**: Update tags style ([5f6185c](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/5f6185c))
 
 </details>
 
@@ -501,7 +501,7 @@
 
 #### Styles
 
-- **misc**: Fix sidebar style ([8738409](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/8738409))
+- **misc**: Fix sidebar style ([8738409](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/8738409))
 
 </details>
 
@@ -526,7 +526,7 @@
 
 #### What's improved
 
-- **misc**: Add extra network sidebar ([b6dc1f4](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/b6dc1f4))
+- **misc**: Add extra network sidebar ([b6dc1f4](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/b6dc1f4))
 
 </details>
 
@@ -551,7 +551,7 @@
 
 #### Styles
 
-- **misc**: Better tool button ([096acaf](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/096acaf))
+- **misc**: Better tool button ([096acaf](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/096acaf))
 
 </details>
 
@@ -576,7 +576,7 @@
 
 #### Styles
 
-- **misc**: Fix tabs padding ([598ba55](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/598ba55))
+- **misc**: Fix tabs padding ([598ba55](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/598ba55))
 
 </details>
 
@@ -601,8 +601,8 @@
 
 #### What's fixed
 
-- **misc**: Bug Croped outpaint extention fiexed, closes [#41](https://github.com/canisminor1990/sd-webui-kitchen-theme/issues/41) ([ee2765d](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/ee2765d))
-- **misc**: Bug Croped outpaint extention fixed, closes [#41](https://github.com/canisminor1990/sd-webui-kitchen-theme/issues/41) ([157bd50](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/157bd50))
+- **misc**: Bug Croped outpaint extention fiexed, closes [#41](https://github.com/canisminor1990/sd-webui-lobe-theme/issues/41) ([ee2765d](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/ee2765d))
+- **misc**: Bug Croped outpaint extention fixed, closes [#41](https://github.com/canisminor1990/sd-webui-lobe-theme/issues/41) ([157bd50](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/157bd50))
 
 </details>
 
@@ -627,7 +627,7 @@
 
 #### Styles
 
-- **misc**: Better block style ([c428e6e](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/c428e6e))
+- **misc**: Better block style ([c428e6e](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/c428e6e))
 
 </details>
 
@@ -652,7 +652,7 @@
 
 #### Styles
 
-- **misc**: Fix code format ([560a768](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/560a768))
+- **misc**: Fix code format ([560a768](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/560a768))
 
 </details>
 
@@ -677,7 +677,7 @@
 
 #### What's fixed
 
-- **misc**: Init theme error ([edaa043](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/edaa043))
+- **misc**: Init theme error ([edaa043](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/edaa043))
 
 </details>
 
@@ -702,7 +702,7 @@
 
 #### What's fixed
 
-- **misc**: Dragpanel auto hide in mobile view, fixed, closes [#35](https://github.com/canisminor1990/sd-webui-kitchen-theme/issues/35) ([a7e5d47](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/a7e5d47))
+- **misc**: Dragpanel auto hide in mobile view, fixed, closes [#35](https://github.com/canisminor1990/sd-webui-lobe-theme/issues/35) ([a7e5d47](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/a7e5d47))
 
 </details>
 
@@ -727,7 +727,7 @@
 
 #### What's improved
 
-- **misc**: Add suggestions to prompt editor ([bebebe4](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/bebebe4))
+- **misc**: Add suggestions to prompt editor ([bebebe4](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/bebebe4))
 
 </details>
 
@@ -752,7 +752,7 @@
 
 #### What's fixed
 
-- **misc**: Sidebar height ([74a4d2c](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/74a4d2c))
+- **misc**: Sidebar height ([74a4d2c](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/74a4d2c))
 
 </details>
 
@@ -777,7 +777,7 @@
 
 #### What's fixed
 
-- **misc**: Send func, tags lost ([0be6f28](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/0be6f28))
+- **misc**: Send func, tags lost ([0be6f28](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/0be6f28))
 
 </details>
 
@@ -802,7 +802,7 @@
 
 #### What's improved
 
-- **misc**: Add prompt editor ([1428cc1](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/1428cc1))
+- **misc**: Add prompt editor ([1428cc1](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/1428cc1))
 
 </details>
 
@@ -827,7 +827,7 @@
 
 #### Styles
 
-- **misc**: Update sidebar ([25665df](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/25665df))
+- **misc**: Update sidebar ([25665df](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/25665df))
 
 </details>
 
@@ -852,7 +852,7 @@
 
 #### Styles
 
-- **misc**: Update layout style ([09f69da](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/09f69da))
+- **misc**: Update layout style ([09f69da](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/09f69da))
 
 </details>
 
@@ -881,11 +881,11 @@
 
 #### What's improved
 
-- **misc**: Add react layout ([b1b6263](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/b1b6263))
+- **misc**: Add react layout ([b1b6263](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/b1b6263))
 
 #### What's fixed
 
-- **misc**: Build ([c84f2cb](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/c84f2cb))
+- **misc**: Build ([c84f2cb](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/c84f2cb))
 
 </details>
 
@@ -910,7 +910,7 @@
 
 #### Styles
 
-- **misc**: Update types ([1830004](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/1830004))
+- **misc**: Update types ([1830004](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/1830004))
 
 </details>
 
@@ -935,7 +935,7 @@
 
 #### What's fixed
 
-- **misc**: Scrollbar ([2dce630](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/2dce630))
+- **misc**: Scrollbar ([2dce630](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/2dce630))
 
 </details>
 
@@ -960,7 +960,7 @@
 
 #### What's improved
 
-- **misc**: Support light/dark mode ([135f4fc](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/135f4fc))
+- **misc**: Support light/dark mode ([135f4fc](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/135f4fc))
 
 </details>
 
@@ -985,7 +985,7 @@
 
 #### Styles
 
-- **misc**: Support mobile view ([38cb555](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/38cb555))
+- **misc**: Support mobile view ([38cb555](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/38cb555))
 
 </details>
 
@@ -1019,25 +1019,25 @@
 
 #### What's improved
 
-- **break-change**: Full support gradio-3.23.0 ([0fb84da](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/0fb84da))
-- **break-change**: Full support gradio-3.23.0 ([e47578c](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/e47578c))
-- **misc**: Add antd token support ([6c71223](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/6c71223))
-- **misc**: Update style ([9509e3d](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/9509e3d))
+- **break-change**: Full support gradio-3.23.0 ([0fb84da](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/0fb84da))
+- **break-change**: Full support gradio-3.23.0 ([e47578c](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/e47578c))
+- **misc**: Add antd token support ([6c71223](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/6c71223))
+- **misc**: Update style ([9509e3d](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/9509e3d))
 
 #### What's fixed
 
-- **misc**: Ci ([c850bf1](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/c850bf1))
-- **misc**: Ci ([87b56f2](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/87b56f2))
-- **misc**: Ci ([bb22f1b](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/bb22f1b))
-- **misc**: Style ([1e4f99a](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/1e4f99a))
-- **misc**: Style ([f237f16](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/f237f16))
-- **misc**: Style ([56df1ae](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/56df1ae))
-- **misc**: Style ([30e2b7b](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/30e2b7b))
+- **misc**: Ci ([c850bf1](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/c850bf1))
+- **misc**: Ci ([87b56f2](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/87b56f2))
+- **misc**: Ci ([bb22f1b](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/bb22f1b))
+- **misc**: Style ([1e4f99a](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/1e4f99a))
+- **misc**: Style ([f237f16](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/f237f16))
+- **misc**: Style ([56df1ae](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/56df1ae))
+- **misc**: Style ([30e2b7b](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/30e2b7b))
 
 #### Styles
 
-- **misc**: Add stylelint ([d7b0b0a](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/d7b0b0a))
-- **misc**: Update button/scroll/draopdown style and fix some bug ([71a8728](https://github.com/canisminor1990/sd-webui-kitchen-theme/commit/71a8728))
+- **misc**: Add stylelint ([d7b0b0a](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/d7b0b0a))
+- **misc**: Update button/scroll/draopdown style and fix some bug ([71a8728](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/71a8728))
 
 </details>
 
