@@ -224,10 +224,16 @@ export const useStyles = createStyles(
           }
         }
 
-        .block.token-counter span {
-          ${stylish.blur};
-          display: inline-block;
-          font-family: ${token.fontFamilyCode};
+        .block.token-counter {
+          > .translucent {
+            display: none;
+          }
+
+          span {
+            ${stylish.blur};
+            display: inline-block;
+            font-family: ${token.fontFamilyCode};
+          }
         }
       `,
     };

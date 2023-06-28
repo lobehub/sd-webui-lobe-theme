@@ -17,8 +17,14 @@ export const useStyles = createStyles(
         }
       }
 
-      .extra-network-cards .name {
-        background: unset !important;
+      .extra-network-cards {
+        .name {
+          background: unset !important;
+        }
+
+        .additional {
+          position: relative !important;
+        }
       }
 
       .extra-network-thumbs .name {
@@ -160,15 +166,20 @@ export const useStyles = createStyles(
           align-items: center;
           justify-content: center;
 
-          padding: 0 !important;
+          padding: 4px !important;
 
           font-size: 20px !important;
+          line-height: 1;
           text-shadow: none !important;
 
           opacity: 0;
           background: rgba(0, 0, 0, 70%);
           border-top-left-radius: 4px;
           border-bottom-left-radius: 4px;
+
+          &::before {
+            content: 'ℹ️' !important;
+          }
 
           &:hover {
             color: #fff !important;
