@@ -31,6 +31,10 @@ const Content = memo<DivProps>(({ className, ...props }) => {
     if (img2imgSettings && img2imgToprow) {
       img2imgSettings.prepend(img2imgToprow);
     }
+    // remove prompt scroll-hide
+    for (const textarea of gradioApp().querySelectorAll(`[id$="_prompt_container"] textarea`)) {
+      textarea.classList.remove('scroll-hide');
+    }
   }, []);
 
   return (

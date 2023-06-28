@@ -198,13 +198,18 @@ export const useStyles = createStyles(
         [id$='2img_prompt'],
         [id$='2img_neg_prompt'] {
           textarea {
+            resize: vertical;
+
             overflow-y: auto;
 
             min-height: ${isPromptResizable ? 'unset' : `${MIN_HEIGHT}px`};
-            max-height: ${isPromptResizable ? 'unset' : `${MIN_HEIGHT}px`};
-            padding: 12px;
+            padding: 8px;
 
             font-family: ${token.fontFamilyCode};
+            text-overflow: ellipsis;
+            vertical-align: bottom;
+
+            transition: all 0.3s, height 0s;
           }
         }
 

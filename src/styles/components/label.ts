@@ -2,6 +2,13 @@ import { css } from 'antd-style';
 
 export default () => {
   return css`
+    [id$='_settings'] {
+      label.svelte-1ojmf70 {
+        overflow: hidden;
+        display: block !important;
+      }
+    }
+
     label {
       position: relative;
       min-width: 64px;

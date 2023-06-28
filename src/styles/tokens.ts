@@ -100,7 +100,7 @@ export default (token: Theme) => {
       --block-label-text-weight: 400;
       --block-padding: var(--spacing-xl) calc(var(--spacing-xl) + 2px);
       --block-radius: ${token.borderRadius}px;
-      --block-shadow: ${token.boxShadowSecondary};
+      --block-shadow: none;
       --block-title-background-fill: none;
       --block-title-border-color: none;
       --block-title-border-width: 0;
