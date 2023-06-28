@@ -41,7 +41,7 @@ const Index = memo(() => {
           <QuickSettingSidebar headerHeight={HEADER_HEIGHT} />
         </LayoutSidebar>
         <Content />
-        {mobile === false && (
+        {setting.layoutSplitPreviewer && mobile === false && (
           <LayoutSidebar
             className={cx(styles.sidebar, styles.panel)}
             headerHeight={HEADER_HEIGHT}

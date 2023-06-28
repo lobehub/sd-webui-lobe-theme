@@ -1,7 +1,7 @@
 import { Icon, Swatches } from '@lobehub/ui';
 import { Button, Divider, Form, Input, InputNumber, Segmented, Switch } from 'antd';
 import isEqual from 'fast-deep-equal';
-import { Palette, PanelLeftClose, PanelRightClose, TextCursorInput } from 'lucide-react';
+import { Layout, Palette, PanelLeftClose, PanelRightClose, TextCursorInput } from 'lucide-react';
 import { memo, useCallback, useMemo, useState } from 'react';
 import { shallow } from 'zustand/shallow';
 
@@ -98,6 +98,29 @@ const SettingForm = memo(() => {
           className={styles.item}
           label="Prompt editor"
           name="promptEditor"
+          valuePropName="checked"
+        >
+          <Switch />
+        </Item>
+      </div>
+      <div className={styles.group}>
+        <div className={styles.title}>
+          <Icon icon={Layout} />
+          Layout
+        </div>
+        <Item
+          className={styles.item}
+          label="Split Previewer"
+          name="layoutSplitPreviewer"
+          valuePropName="checked"
+        >
+          <Switch />
+        </Item>
+        <Divider style={{ margin: 0 }} />
+        <Item
+          className={styles.item}
+          label="Hide Footer"
+          name="layoutHideFooter"
           valuePropName="checked"
         >
           <Switch />

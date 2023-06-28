@@ -25,6 +25,8 @@ export interface WebuiSetting {
   extraNetworkFixedMode: 'fixed' | 'float';
   extraNetworkSidebarExpand: boolean;
   extraNetworkSidebarWidth: number;
+  layoutHideFooter: boolean;
+  layoutSplitPreviewer: boolean;
   logoCustomTitle: string | undefined;
   logoCustomUrl: string | undefined;
   logoType: 'lobe' | 'kitchen' | 'custom';
@@ -44,6 +46,8 @@ export const defaultSetting: WebuiSetting = {
   extraNetworkFixedMode: 'fixed',
   extraNetworkSidebarExpand: true,
   extraNetworkSidebarWidth: 340,
+  layoutHideFooter: false,
+  layoutSplitPreviewer: true,
   logoCustomTitle: '',
   logoCustomUrl: '',
   logoType: 'lobe',
