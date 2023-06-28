@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 2.0.3](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.0.2...v2.0.3)
+
+<sup>Released on **2023-06-28**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix gradio button min width.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix gradio button min width ([0256795](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/0256795))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 2.0.2](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.0.1...v2.0.2)
 
 <sup>Released on **2023-06-28**</sup>
