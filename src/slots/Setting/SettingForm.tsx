@@ -66,13 +66,13 @@ const SettingForm = memo(() => {
 
   const onReset = useCallback(() => {
     onSetSetting(defaultSetting);
-    (gradioApp().querySelector('#settings_restart_gradio') as HTMLButtonElement)?.click();
+    location.reload();
   }, []);
 
   const onFinish = useCallback(
     (value: WebuiSetting) => {
       onSetSetting({ ...value, neutralColor, primaryColor });
-      (gradioApp().querySelector('#settings_restart_gradio') as HTMLButtonElement)?.click();
+      location.reload();
     },
     [primaryColor, neutralColor],
   );
