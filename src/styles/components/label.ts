@@ -4,11 +4,7 @@ export default () => {
   return css`
     label {
       position: relative;
-
-      overflow: hidden;
-
       min-width: 64px;
-
       text-overflow: ellipsis;
       white-space: nowrap;
 

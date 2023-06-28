@@ -73,7 +73,6 @@ export default (token: Theme) => css`
       }
 
       &[id$='_generate'] {
-        position: relative;
         height: 44px !important;
         min-height: 44px !important;
         max-height: 44px !important;
