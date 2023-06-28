@@ -5,6 +5,7 @@ import draggablePanel from '@/script/draggablePanel';
 import { useAppStore } from '@/store';
 import { DivProps } from '@/types';
 
+import { useStyles as usePreviewStyles } from '../Preview/style';
 import { useStyles } from './style';
 
 const Content = memo<DivProps>(({ className, ...props }) => {
@@ -13,6 +14,7 @@ const Content = memo<DivProps>(({ className, ...props }) => {
   const { cx, styles } = useStyles({
     isPromptResizable: setting.promptTextarea === 'resizable',
   });
+  const previewStyle = usePreviewStyles({ isPrimaryColor: Boolean(setting.primaryColor) });
 
   useEffect(() => {
     // Content
@@ -27,8 +29,8 @@ const Content = memo<DivProps>(({ className, ...props }) => {
   }, []);
 
   useEffect(() => {
-    if (!setting.layoutSplitPreviewer) draggablePanel();
-  }, [setting.layoutSplitPreviewer]);
+    if (!setting.layoutSplitPreview) draggablePanel();
+  }, [setting.layoutSplitPreview]);
 
   return (
     <div
@@ -37,7 +39,8 @@ const Content = memo<DivProps>(({ className, ...props }) => {
         styles.textares,
         styles.text2img,
         styles.autocompleteResults,
-        setting.layoutSplitPreviewer ? styles.splitView : styles.draggableContainer,
+        setting.layoutSplitPreview ? styles.splitView : styles.draggableContainer,
+        !setting.layoutSplitPreview && previewStyle.styles.preview,
         className,
       )}
       ref={mainReference}

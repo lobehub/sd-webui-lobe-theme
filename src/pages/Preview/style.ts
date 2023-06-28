@@ -29,6 +29,19 @@ export const useStyles = createStyles(
         height: 100%;
         padding: 16px;
 
+        [id$='_results'] {
+          flex: 1;
+
+          > div:not([id$='_gallery_container']) {
+            flex-grow: 0 !important;
+          }
+
+          [id$='_gallery_container'] {
+            flex-grow: 1 !important;
+          }
+        }
+      `,
+      preview: css`
         button {
           &#extras_generate {
             position: relative;
@@ -62,17 +75,8 @@ export const useStyles = createStyles(
         }
 
         [id$='_results'] {
-          flex: 1;
           padding: 0 !important;
           background: none !important;
-
-          > div:not([id$='_gallery_container']) {
-            flex-grow: 0 !important;
-          }
-
-          [id$='_gallery_container'] {
-            flex-grow: 1 !important;
-          }
 
           [id$='img_gallery_container'] {
             div:not(.livePreview) {

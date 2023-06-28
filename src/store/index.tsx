@@ -26,7 +26,7 @@ export interface WebuiSetting {
   extraNetworkSidebarExpand: boolean;
   extraNetworkSidebarWidth: number;
   layoutHideFooter: boolean;
-  layoutSplitPreviewer: boolean;
+  layoutSplitPreview: boolean;
   logoCustomTitle: string | undefined;
   logoCustomUrl: string | undefined;
   logoType: 'lobe' | 'kitchen' | 'custom';
@@ -47,7 +47,7 @@ export const defaultSetting: WebuiSetting = {
   extraNetworkSidebarExpand: true,
   extraNetworkSidebarWidth: 340,
   layoutHideFooter: false,
-  layoutSplitPreviewer: true,
+  layoutSplitPreview: false,
   logoCustomTitle: '',
   logoCustomUrl: '',
   logoType: 'lobe',

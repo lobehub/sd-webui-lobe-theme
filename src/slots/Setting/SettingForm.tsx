@@ -111,7 +111,7 @@ const SettingForm = memo(() => {
         <Item
           className={styles.item}
           label="Split Previewer"
-          name="layoutSplitPreviewer"
+          name="layoutSplitPreview"
           valuePropName="checked"
         >
           <Switch />

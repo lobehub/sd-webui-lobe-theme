@@ -15,7 +15,7 @@ export interface PreviewProps extends DivProps {
 const Preview = memo<PreviewProps>(({ headerHeight }) => {
   const currentTab = useAppStore((st) => st.currentTab, shallow);
   const setting = useAppStore((st) => st.setting, isEqual);
-  const { styles } = useStyles({ headerHeight, isPrimaryColor: Boolean(setting.primaryColor) });
+  const { cx, styles } = useStyles({ headerHeight, isPrimaryColor: Boolean(setting.primaryColor) });
   const txt2imgReference = useRef<HTMLDivElement>(null);
   const img2imgReference = useRef<HTMLDivElement>(null);
   const extras2imgReference = useRef<HTMLDivElement>(null);
@@ -65,17 +65,17 @@ const Preview = memo<PreviewProps>(({ headerHeight }) => {
       <LayoutSidebarInner>
         <div className={styles.container}>
           <div
-            className={styles.inner}
+            className={cx(styles.inner, styles.preview)}
             ref={txt2imgReference}
             style={{ display: currentTab === 'tab_txt2img' ? 'flex' : 'none' }}
           />
           <div
-            className={styles.inner}
+            className={cx(styles.inner, styles.preview)}
             ref={img2imgReference}
             style={{ display: currentTab === 'tab_img2img' ? 'flex' : 'none' }}
           />
           <div
-            className={styles.inner}
+            className={cx(styles.inner, styles.preview)}
             ref={extras2imgReference}
             style={{ display: currentTab === 'tab_extras' ? 'flex' : 'none' }}
           />
