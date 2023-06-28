@@ -47,9 +47,6 @@ jobs:
       - name: Install deps
         run: pnpm install
 
-      - name: Build
-        run: pnpm run build
-
       - name: Release
         id: release
         run: pnpm run release

@@ -16,7 +16,7 @@ const App = memo(() => {
       formatPrompt();
       setLoading(false);
     });
-    onUiUpdate(() => {
+    onUiTabChange(() => {
       setCurrentTab();
     });
   }, []);
