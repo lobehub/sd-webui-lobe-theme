@@ -2,6 +2,7 @@ import { ActionIcon } from '@lobehub/ui';
 import { Space, Tag } from 'antd';
 import { Book } from 'lucide-react';
 import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { homepage, version } from '@/../package.json';
 import { Modal, type ModalProps } from '@/components';
@@ -14,9 +15,9 @@ interface SettingProps {
 }
 
 const Setting = memo<SettingProps>(({ open, onCancel }) => {
+  const { t } = useTranslation();
   return (
     <Modal
-      okText={'Save and Refresh'}
       onCancel={onCancel}
       open={open}
       title={
@@ -25,7 +26,7 @@ const Setting = memo<SettingProps>(({ open, onCancel }) => {
             <ActionIcon icon={Book} title="Setting Documents" />
           </a>
           <Space>
-            Theme Setting
+            {t('themeSetting')}
             <Tag color="success">v{version}</Tag>
           </Space>
         </>

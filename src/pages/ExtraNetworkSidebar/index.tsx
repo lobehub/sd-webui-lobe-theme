@@ -2,10 +2,11 @@ import { DraggablePanel, LayoutSidebarInner } from '@lobehub/ui';
 import { useResponsive } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { memo, useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { SidebarContainer, SidebarHeader } from '@/components';
 import { useAppStore } from '@/store';
-import { DivProps } from '@/types/index';
+import { type DivProps } from '@/types';
 
 import Inner from './Inner';
 import { useStyles } from './style';
@@ -20,6 +21,7 @@ const ExtraNetworkSidebar = memo<ExtraNetworkSidebarProps>(({ headerHeight }) =>
   const [expand, setExpand] = useState<boolean>(mobile ? false : setting.extraNetworkSidebarExpand);
   const [pin, setPin] = useState<boolean>(setting.extraNetworkFixedMode === 'fixed');
   const { styles, theme } = useStyles({ headerHeight });
+  const { t } = useTranslation();
 
   useEffect(() => {
     const index2indexExtraNetworkButton = gradioApp().querySelector(
@@ -63,7 +65,7 @@ const ExtraNetworkSidebar = memo<ExtraNetworkSidebarProps>(({ headerHeight }) =>
             position="right"
             setExpand={setExpand}
             setPin={setPin}
-            title="ExraNetworks"
+            title={t('extraNetwork')}
           />
           <Inner />
         </SidebarContainer>

@@ -37,14 +37,16 @@ const Index = memo(() => {
       </LayoutHeader>
       <LayoutMain>
         {!setting.liteAnimation && <div className={styles.background} />}
-        <LayoutSidebar
-          className={styles.sidebar}
-          headerHeight={HEADER_HEIGHT}
-          style={{ flex: 0, zIndex: 50 }}
-        >
-          <QuickSettingSidebar headerHeight={HEADER_HEIGHT} />
-        </LayoutSidebar>
-        <Content />
+        {setting.enableSidebar && (
+          <LayoutSidebar
+            className={styles.sidebar}
+            headerHeight={HEADER_HEIGHT}
+            style={{ flex: 0, zIndex: 50 }}
+          >
+            <QuickSettingSidebar headerHeight={HEADER_HEIGHT} />
+          </LayoutSidebar>
+        )}
+        <Content className={cx(!setting.enableSidebar && styles.quicksettings)} />
         {setting.layoutSplitPreview && mobile === false && (
           <LayoutSidebar
             className={cx(styles.sidebar, styles.panel)}

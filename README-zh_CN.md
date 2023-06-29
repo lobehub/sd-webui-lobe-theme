@@ -56,6 +56,7 @@
 - [x] 🎛️ 高定制侧边栏，左侧为快捷设置侧边栏，右侧为模型侧边栏
 - [x] 🖼️ 可调节画板比例，使生成图像始终置顶
 - [x] 📱 移动端友好，针对手机屏幕完成部分优化
+- [x] 🇨🇳 支持 i18n 并欢迎提交 [PR](https://github.com/canisminor1990/sd-webui-lobe-theme/tree/main/src/i18n/lang) 贡献
 - [ ] 📝 语法高亮的 Prompt 输入框
 - [ ] 🆗 i18n 多语言支持
 

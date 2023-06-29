@@ -29,12 +29,23 @@ export const useStyles = createStyles(({ css, token }) => ({
   `,
   group: css`
     overflow: hidden;
-    background: ${token.colorFillQuaternary};
-    border: 1px solid ${token.colorBorder};
-    border-radius: ${token.borderRadius}px;
+
+    .ant-collapse-header {
+      background: ${token.colorFillTertiary};
+      border-radius: unset;
+    }
+
+    .ant-collapse-content {
+      background: transparent;
+    }
+
+    .ant-collapse-content-box {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
   `,
   item: css`
-    padding: 8px 16px;
+    padding: 8px 0;
 
     .ant-row {
       justify-content: space-between;
@@ -50,15 +61,8 @@ export const useStyles = createStyles(({ css, token }) => ({
     gap: 8px;
     align-items: center;
 
-    margin: 0;
-    margin-bottom: 4px;
-    padding: 16px;
-
     font-size: 16px;
     font-weight: 600;
-    line-height: 1;
-
-    background: ${token.colorFillTertiary};
 
     .anticon {
       color: ${token.colorPrimary};

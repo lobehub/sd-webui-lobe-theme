@@ -4,7 +4,7 @@ import { memo, useEffect, useRef } from 'react';
 import { shallow } from 'zustand/shallow';
 
 import { useAppStore } from '@/store';
-import { DivProps } from '@/types/index';
+import { type DivProps } from '@/types';
 
 import { useStyles } from './style';
 

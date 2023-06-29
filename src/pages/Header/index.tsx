@@ -6,7 +6,7 @@ import { shallow } from 'zustand/shallow';
 import { homepage, name, version } from '@/../package.json';
 import { Logo } from '@/components';
 import { useAppStore } from '@/store';
-import { DivProps } from '@/types/index';
+import { type DivProps } from '@/types';
 
 import Actions from './Actions';
 import Nav from './Nav';

@@ -56,6 +56,7 @@ English · [简体中文](./README-zh_CN.md) · [Changelog](./CHANGELOG.md) · [
 - [x] 🎛️ Highly customizable sidebar, with a quick settings sidebar on the left and a model sidebar on the right
 - [x] 🖼️ Adjustable canvas ratio, ensuring that generated images are always displayed at the top
 - [x] 📱 Mobile-friendly, with partial optimization for mobile screens
+- [x] 🇨🇳 Support i18n and welcome [PR](https://github.com/canisminor1990/sd-webui-lobe-theme/tree/main/src/i18n/lang) contributions
 - [ ] 📝 Syntax highlighting in the prompt input box
 - [ ] 🆗 Multilingual support with i18n
 

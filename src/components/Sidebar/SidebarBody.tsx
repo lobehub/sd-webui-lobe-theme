@@ -1,6 +1,6 @@
 import { memo } from 'react';
 
-import { DivProps } from '@/types/index';
+import { type DivProps } from '@/types';
 
 import { useStyles } from './style';
 

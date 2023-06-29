@@ -4,6 +4,7 @@ import { useResponsive } from 'antd-style';
 import { Github, LucideIcon, Moon, Settings, Sun } from 'lucide-react';
 import qs from 'query-string';
 import { memo, useCallback, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { shallow } from 'zustand/shallow';
 
 import Giscus from '@/slots/Giscus';
@@ -25,6 +26,7 @@ const Actions = memo<ActionsProps>(() => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const themeMode = useAppStore((st) => st.themeMode, shallow);
   const { mobile } = useResponsive();
+  const { t } = useTranslation();
 
   const handleSetTheme = useCallback(() => {
     const theme = themeMode === 'light' ? 'dark' : 'light';
@@ -37,7 +39,7 @@ const Actions = memo<ActionsProps>(() => {
     <ActionIcon
       icon={themeMode === 'light' ? Sun : Moon}
       onClick={handleSetTheme}
-      title="Switch Theme"
+      title={t('switchTheme')}
     />
   );
 
@@ -49,9 +51,9 @@ const Actions = memo<ActionsProps>(() => {
         <a href="https://civitai.com/" rel="noreferrer" target="_blank">
           <ActionIcon icon={CivitaiLogo} title="Civitai" />
         </a>
-        <ActionIcon icon={Github} onClick={() => setIsModalOpen(true)} title="Feedback" />
+        <ActionIcon icon={Github} onClick={() => setIsModalOpen(true)} title={t('feedback')} />
         {themeSwitch}
-        <ActionIcon icon={Settings} onClick={() => setIsSettingOpen(true)} title="Setting" />
+        <ActionIcon icon={Settings} onClick={() => setIsSettingOpen(true)} title={t('setting')} />
       </Space.Compact>
       <Setting onCancel={() => setIsSettingOpen(false)} open={isSettingOpen} />
       <Giscus onCancel={() => setIsModalOpen(false)} open={isModalOpen} themeMode={themeMode} />

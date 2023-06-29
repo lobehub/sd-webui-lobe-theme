@@ -1,16 +1,18 @@
 import { Footer as F } from '@lobehub/ui';
 import isEqual from 'fast-deep-equal';
 import { memo, useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { useAppStore } from '@/store';
-import { DivProps } from '@/types/index';
+import { type DivProps } from '@/types';
 
-import { columns } from './data';
+import { Community, Help, MoreProducts, Resources } from './data';
 import { useStyles } from './style';
 
 const Footer = memo<DivProps>(({ className, ...props }) => {
   const setting = useAppStore((st) => st.setting, isEqual);
   const { cx, styles } = useStyles();
+  const { t } = useTranslation();
   const footerReference = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -24,7 +26,27 @@ const Footer = memo<DivProps>(({ className, ...props }) => {
       {setting.layoutHideFooter ? (
         <div ref={footerReference} />
       ) : (
-        <F bottom={<div ref={footerReference} />} columns={columns} />
+        <F
+          bottom={<div ref={footerReference} />}
+          columns={[
+            {
+              items: Resources,
+              title: t('resources'),
+            },
+            {
+              items: Community,
+              title: t('community'),
+            },
+            {
+              items: Help,
+              title: t('help'),
+            },
+            {
+              items: MoreProducts,
+              title: t('moreProducts'),
+            },
+          ]}
+        />
       )}
     </div>
   );

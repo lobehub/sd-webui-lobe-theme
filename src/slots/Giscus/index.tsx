@@ -2,6 +2,7 @@ import GiscusComponent from '@giscus/react';
 import { ActionIcon } from '@lobehub/ui';
 import { Github } from 'lucide-react';
 import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { homepage, name } from '@/../package.json';
 import { Modal, type ModalProps } from '@/components';
@@ -12,6 +13,7 @@ interface GiscusProps {
   themeMode: 'light' | 'dark';
 }
 const Giscus = memo<GiscusProps>(({ themeMode, open, onCancel }) => {
+  const { t } = useTranslation();
   return (
     <Modal
       onCancel={onCancel}
@@ -21,7 +23,7 @@ const Giscus = memo<GiscusProps>(({ themeMode, open, onCancel }) => {
           <a href={homepage} rel="noreferrer" target="_blank">
             <ActionIcon icon={Github} title={`canisminor1990/${name}`} />
           </a>
-          Theme Feedback
+          {t('themeFeedback')}
         </>
       }
     >

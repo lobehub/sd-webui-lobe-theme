@@ -5,7 +5,7 @@ import { memo, useEffect, useRef } from 'react';
 import draggablePanel from '@/script/draggablePanel';
 import formatPrompt from '@/script/formatPrompt';
 import { useAppStore } from '@/store';
-import { DivProps } from '@/types';
+import { type DivProps } from '@/types';
 
 import { useStyles as usePreviewStyles } from '../Preview/style';
 import { useStyles } from './style';

@@ -17,6 +17,7 @@ const Inner = memo(() => {
   const [setting, currentTab] = useAppStore((st) => [st.setting, st.currentTab], shallow);
   const [size, setSize] = useState<number>(setting?.extraNetworkCardSize || 86);
   const { styles } = useStyles({ size });
+
   useEffect(() => {
     console.time('🤯 [layout] inject - ExtraNetworkSidebar');
     if (setting.enableExtraNetworkSidebar) {

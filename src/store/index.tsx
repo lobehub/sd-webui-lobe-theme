@@ -3,6 +3,8 @@ import { devtools } from 'zustand/middleware';
 
 const SETTING_KEY = 'SD-KITCHEN-SETTING';
 
+export type I18n = 'en' | 'zh-CN';
+
 export type PrimaryColor =
   | 'blue'
   | 'cyan'
@@ -22,10 +24,12 @@ export type NeutralColor = 'mauve' | 'slate' | 'sage' | 'olive' | 'sand' | 'kitc
 
 export interface WebuiSetting {
   enableExtraNetworkSidebar: boolean;
+  enableSidebar: boolean;
   extraNetworkCardSize: number;
   extraNetworkFixedMode: 'fixed' | 'float';
   extraNetworkSidebarExpand: boolean;
   extraNetworkSidebarWidth: number;
+  i18n: I18n;
   layoutHideFooter: boolean;
   layoutSplitPreview: boolean;
   liteAnimation: boolean;
@@ -44,10 +48,12 @@ export interface WebuiSetting {
 
 export const defaultSetting: WebuiSetting = {
   enableExtraNetworkSidebar: true,
+  enableSidebar: true,
   extraNetworkCardSize: 86,
   extraNetworkFixedMode: 'fixed',
   extraNetworkSidebarExpand: true,
   extraNetworkSidebarWidth: 340,
+  i18n: 'en',
   layoutHideFooter: false,
   layoutSplitPreview: false,
   liteAnimation: false,

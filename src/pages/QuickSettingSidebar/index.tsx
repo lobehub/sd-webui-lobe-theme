@@ -1,7 +1,8 @@
-import { DivProps, DraggablePanel, LayoutSidebarInner } from '@lobehub/ui';
+import { type DivProps, DraggablePanel, LayoutSidebarInner } from '@lobehub/ui';
 import { useResponsive } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { memo, useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { SidebarContainer, SidebarHeader } from '@/components';
 import { useAppStore } from '@/store';
@@ -19,6 +20,7 @@ const QuickSettingSidebar = memo<QuickSettingSidebarProps>(({ headerHeight }) =>
   const [expand, setExpand] = useState<boolean>(mobile ? false : setting.sidebarExpand);
   const [pin, setPin] = useState<boolean>(setting.sidebarFixedMode === 'fixed');
   const { styles, theme } = useStyles({ headerHeight });
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (mobile) setExpand(false);
@@ -50,7 +52,7 @@ const QuickSettingSidebar = memo<QuickSettingSidebarProps>(({ headerHeight }) =>
             position="left"
             setExpand={setExpand}
             setPin={setPin}
-            title="Quick Settings"
+            title={t('quickSetting')}
           />
           <Inner />
         </SidebarContainer>

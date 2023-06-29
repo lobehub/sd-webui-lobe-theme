@@ -39,6 +39,11 @@ export const useStyles = createStyles(
         border-style: dashed;
       }
     `,
+    quicksettings: css`
+      #quicksettings {
+        padding: 16px !important;
+      }
+    `,
     sidebar: css`
       height: calc(100vh - ${headerHeight}px);
     `,

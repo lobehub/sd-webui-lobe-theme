@@ -1,4 +1,5 @@
 import { memo, useCallback, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import TagList, { PromptType, TagItem } from './TagList';
 import { useStyles } from './style';
@@ -11,6 +12,7 @@ interface PromptProps {
 const Prompt = memo<PromptProps>(({ type }) => {
   const [tags, setTags] = useState<TagItem[]>([]);
   const { styles } = useStyles();
+  const { t } = useTranslation();
 
   const id =
     type === 'positive' ? "[id$='2img_prompt'] textarea" : "[id$='2img_neg_prompt'] textarea";
@@ -51,7 +53,7 @@ const Prompt = memo<PromptProps>(({ type }) => {
         <button
           className="lg secondary gradio-button tool svelte-1ipelgc"
           onClick={getValue}
-          title="Load Prompt"
+          title={t('loadPrompt')}
           type="button"
         >
           🔄
@@ -59,7 +61,7 @@ const Prompt = memo<PromptProps>(({ type }) => {
         <button
           className="lg secondary gradio-button tool svelte-1ipelgc"
           onClick={setValue}
-          title="Set Prompt"
+          title={t('setPrompt')}
           type="button"
         >
           ➡️

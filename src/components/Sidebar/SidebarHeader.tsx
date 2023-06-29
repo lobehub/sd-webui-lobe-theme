@@ -2,7 +2,7 @@ import { ActionIcon } from '@lobehub/ui';
 import { PanelLeft, Pin, PinOff } from 'lucide-react';
 import { memo } from 'react';
 
-import { DivProps } from '@/types/index';
+import { type DivProps } from '@/types';
 
 import { useStyles } from './style';
 
