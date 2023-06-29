@@ -7,6 +7,7 @@ import { shallow } from 'zustand/shallow';
 
 import { CustomLogo } from '@/components';
 import { NeutralColor, PrimaryColor, WebuiSetting, defaultSetting, useAppStore } from '@/store';
+import { kitchenNeutral, kitchenPrimary } from '@/styles/kitchenColors';
 import { neutralColorScales } from '@/styles/neutralColors';
 
 import FormTitle from './FormTitle';
@@ -25,7 +26,10 @@ const findKey = (object: { [key in string]: string }, value: string): any => {
 
 const SettingForm = memo(() => {
   const setting = useAppStore((st) => st.setting, isEqual);
-  const onSetSetting = useAppStore((st) => st.onSetSetting, shallow);
+  const { onSetSetting, themeMode } = useAppStore(
+    (st) => ({ onSetSetting: st.onSetSetting, themeMode: st.themeMode }),
+    shallow,
+  );
   const [rawSetting, setRawSetting] = useState<WebuiSetting>(setting);
   const [primaryColor, setPrimaryColor] = useState<PrimaryColor | undefined>(
     setting.primaryColor || undefined,
@@ -43,6 +47,7 @@ const SettingForm = memo(() => {
       geekblue: theme.geekblue,
       gold: theme.gold,
       green: theme.green,
+      kitchen: kitchenPrimary.light.colorPrimary,
       lime: theme.lime,
       magenta: theme.magenta,
       orange: theme.orange,
@@ -56,13 +61,14 @@ const SettingForm = memo(() => {
 
   const neutralColors = useMemo(
     () => ({
-      mauve: neutralColorScales.mauve.light[9],
-      olive: neutralColorScales.olive.light[9],
-      sage: neutralColorScales.sage.light[9],
-      sand: neutralColorScales.sand.light[9],
-      slate: neutralColorScales.slate.light[9],
+      kitchen: kitchenNeutral[themeMode].colorNeutral,
+      mauve: neutralColorScales.mauve[themeMode][9],
+      olive: neutralColorScales.olive[themeMode][9],
+      sage: neutralColorScales.sage[themeMode][9],
+      sand: neutralColorScales.sand[themeMode][9],
+      slate: neutralColorScales.slate[themeMode][9],
     }),
-    [],
+    [themeMode],
   );
 
   const onReset = useCallback(() => {
@@ -207,6 +213,7 @@ const SettingForm = memo(() => {
           <Swatches
             activeColor={primaryColor ? colors[primaryColor] : undefined}
             colors={[
+              kitchenPrimary.light.colorPrimary,
               theme.red,
               theme.orange,
               theme.gold,

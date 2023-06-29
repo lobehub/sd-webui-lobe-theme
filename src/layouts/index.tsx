@@ -11,6 +11,7 @@ import { shallow } from 'zustand/shallow';
 import { useIsDarkMode } from '@/hooks/useIsDarkMode';
 import { useAppStore } from '@/store';
 import GlobalStyle from '@/styles/index';
+import { kitchenNeutral, kitchenPrimary } from '@/styles/kitchenColors';
 import { neutralColorScales } from '@/styles/neutralColors';
 
 const Layout = memo<DivProps>(({ children }) => {
@@ -39,12 +40,20 @@ const Layout = memo<DivProps>(({ children }) => {
     let primaryTokens = {};
     let neutralTokens = {};
     if (setting.primaryColor) {
-      const scale = colors[setting.primaryColor];
-      primaryTokens = generateColorPalette({ appearance: themeMode, scale, type: 'Primary' });
+      if (setting.primaryColor === 'kitchen') {
+        primaryTokens = kitchenPrimary[themeMode];
+      } else {
+        const scale = colors[setting.primaryColor];
+        primaryTokens = generateColorPalette({ appearance: themeMode, scale, type: 'Primary' });
+      }
     }
     if (setting.neutralColor) {
-      const scale = neutralColorScales[setting.neutralColor];
-      neutralTokens = generateColorNeutralPalette({ appearance: themeMode, scale });
+      if (setting.neutralColor === 'kitchen') {
+        neutralTokens = kitchenNeutral[themeMode];
+      } else {
+        const scale = neutralColorScales[setting.neutralColor];
+        neutralTokens = generateColorNeutralPalette({ appearance: themeMode, scale });
+      }
     }
 
     return { ...primaryTokens, ...neutralTokens };

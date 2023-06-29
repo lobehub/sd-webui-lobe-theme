@@ -15,9 +15,10 @@ export type PrimaryColor =
   | 'purple'
   | 'red'
   | 'volcano'
-  | 'yellow';
+  | 'yellow'
+  | 'kitchen';
 
-export type NeutralColor = 'mauve' | 'slate' | 'sage' | 'olive' | 'sand';
+export type NeutralColor = 'mauve' | 'slate' | 'sage' | 'olive' | 'sand' | 'kitchen';
 
 export interface WebuiSetting {
   enableExtraNetworkSidebar: boolean;
