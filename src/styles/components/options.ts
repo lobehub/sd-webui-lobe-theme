@@ -33,6 +33,11 @@ export default (token: Theme) => css`
         background: ${token.colorFill} !important;
       }
 
+      &.active:not(.selected) {
+        color: black !important;
+        background: ${token.yellow} !important;
+      }
+
       &:hover {
         color: ${token.colorText} !important;
         background: ${token.colorFillSecondary} !important;

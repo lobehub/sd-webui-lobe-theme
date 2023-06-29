@@ -32,6 +32,12 @@ export default (token: Theme) => css`
     background: ${token.colorBgContainer} !important;
     border-radius: ${token.borderRadius}px;
     box-shadow: 0 0 0 2px ${token.colorBgContainer};
+
+    .meta-text,
+    .meta-text-center {
+      font-size: 12px;
+      color: ${token.colorTextDescription};
+    }
   }
 
   .progressDiv {
