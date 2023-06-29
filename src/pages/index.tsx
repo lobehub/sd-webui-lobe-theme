@@ -37,7 +37,11 @@ const Index = memo(() => {
       </LayoutHeader>
       <LayoutMain>
         {!setting.liteAnimation && <div className={styles.background} />}
-        <LayoutSidebar className={styles.sidebar} headerHeight={HEADER_HEIGHT} style={{ flex: 0 }}>
+        <LayoutSidebar
+          className={styles.sidebar}
+          headerHeight={HEADER_HEIGHT}
+          style={{ flex: 0, zIndex: 50 }}
+        >
           <QuickSettingSidebar headerHeight={HEADER_HEIGHT} />
         </LayoutSidebar>
         <Content />
@@ -59,7 +63,7 @@ const Index = memo(() => {
           <LayoutSidebar
             className={styles.sidebar}
             headerHeight={HEADER_HEIGHT}
-            style={{ flex: 0 }}
+            style={{ flex: 0, zIndex: 50 }}
           >
             <ExtraNetworkSidebar headerHeight={HEADER_HEIGHT} />
           </LayoutSidebar>

@@ -2,10 +2,6 @@ import { Theme, css } from 'antd-style';
 
 export default (token: Theme) => {
   return css`
-    .gradio-tabitem {
-      overflow: auto;
-    }
-
     .gradio-group,
     .gradio-row {
       gap: 12px !important;

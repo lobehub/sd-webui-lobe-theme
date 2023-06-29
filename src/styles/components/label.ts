@@ -20,12 +20,8 @@ export default () => {
       }
 
       > span.svelte-1gfkn6j {
-        z-index: 1 !important;
-
         overflow: hidden;
-
         width: 100%;
-
         text-overflow: ellipsis;
         white-space: nowrap;
       }
