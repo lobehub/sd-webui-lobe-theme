@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 2.4.1](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.4.0...v2.4.1)
+
+<sup>Released on **2023-06-29**</sup>
+
+#### 🐛 Bug Fixes
+
+- **i18n**: Fix i18n load fail.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **i18n**: Fix i18n load fail ([2434caa](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/2434caa))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 2.4.0](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.3.0...v2.4.0)
 
 <sup>Released on **2023-06-29**</sup>
