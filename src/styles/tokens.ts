@@ -69,7 +69,7 @@ export default (token: Theme) => {
       --color-accent: ${token.colorPrimary};
       --color-accent-soft: ${token.colorPrimaryHover};
       --background-fill-primary: ${token.colorBgLayout};
-      --background-fill-secondary: var(--neutral-50);
+      --background-fill-secondary: ${token.colorBgContainer};
       --border-color-accent: ${token.colorBorder};
       --border-color-primary: ${token.colorBorderSecondary};
       --link-text-color: ${token.colorInfoText};
