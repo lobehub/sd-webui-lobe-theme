@@ -4,6 +4,7 @@ import isEqual from 'fast-deep-equal';
 import { memo, useEffect } from 'react';
 import { shallow } from 'zustand/shallow';
 
+import '@/i18n/config';
 import replaceIcon from '@/script/replaceIcon';
 import { useAppStore } from '@/store';
 

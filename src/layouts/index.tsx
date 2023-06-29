@@ -6,7 +6,6 @@ import {
 import isEqual from 'fast-deep-equal';
 import qs from 'query-string';
 import { memo, useCallback, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
 import { shallow } from 'zustand/shallow';
 
 import { useIsDarkMode } from '@/hooks/useIsDarkMode';
@@ -22,14 +21,11 @@ const Layout = memo<DivProps>(({ children }) => {
   );
   const setting = useAppStore((st) => st.setting, isEqual);
   const isDarkMode = useIsDarkMode();
-  const { i18n } = useTranslation();
 
   useEffect(() => {
     onInit();
   }, []);
-  useEffect(() => {
-    i18n.changeLanguage(setting.i18n);
-  }, [setting.i18n]);
+
   useEffect(() => {
     const queryTheme: any = String(qs.parseUrl(window.location.href).query.__theme || '');
     if (queryTheme) {

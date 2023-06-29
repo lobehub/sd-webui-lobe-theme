@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 
-const SETTING_KEY = 'SD-KITCHEN-SETTING';
+export const SETTING_KEY = 'SD-KITCHEN-SETTING';
 
 export type I18n = 'en' | 'zh-CN';
 
