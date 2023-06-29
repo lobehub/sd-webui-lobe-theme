@@ -17,4 +17,8 @@ export const i18nOptions: SelectProps['options'] = [
     label: '日本語',
     value: 'ja_JP',
   },
+  {
+    label: '한국어',
+    value: 'ko_KR',
+  },
 ];
