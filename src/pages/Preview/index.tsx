@@ -25,6 +25,7 @@ const Preview = memo<PreviewProps>(({ headerHeight }) => {
   const extras2imgReference = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    console.time('🤯 [layout] inject - Split Previewer');
     // tab_txt2img
     const txt2imgToprow = gradioApp().querySelector('#txt2img_toprow') as HTMLDivElement;
     const txt2imgSettings = gradioApp().querySelector('#txt2img_settings') as HTMLDivElement;
@@ -55,7 +56,9 @@ const Preview = memo<PreviewProps>(({ headerHeight }) => {
     if (extrasPreview && extrasButton) {
       extras2imgReference.current?.append(extrasButton, extrasPreview);
     }
-  });
+
+    console.timeEnd('🤯 [layout] inject - Split Previewer');
+  }, []);
 
   return (
     <DraggablePanel

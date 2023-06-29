@@ -20,7 +20,7 @@ const Prompt = memo<PromptProps>(({ type }) => {
       const textarea = get_uiCurrentTabContent().querySelector(id) as HTMLTextAreaElement;
       if (textarea) setTags(formatPrompt(textarea.value));
     } catch (error) {
-      console.log(error);
+      console.debug(error);
     }
   }, []);
 
@@ -30,7 +30,7 @@ const Prompt = memo<PromptProps>(({ type }) => {
       if (textarea) textarea.value = tags.map((t) => t.text).join(', ');
       updateInput(textarea);
     } catch (error) {
-      console.log(error);
+      console.debug(error);
     }
   }, [tags]);
 
@@ -40,7 +40,7 @@ const Prompt = memo<PromptProps>(({ type }) => {
       if (textarea) textarea.value = currentTags.map((t) => t.text).join(', ');
       updateInput(textarea);
     } catch (error) {
-      console.log(error);
+      console.debug(error);
     }
   }, []);
 

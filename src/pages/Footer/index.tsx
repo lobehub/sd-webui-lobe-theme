@@ -14,8 +14,10 @@ const Footer = memo<DivProps>(({ className, ...props }) => {
   const footerReference = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    console.time('🤯 [layout] inject - Footer');
     const footer = gradioApp().querySelector('#footer');
     if (footer) footerReference.current?.append(footer);
+    console.timeEnd('🤯 [layout] inject - Footer');
   }, []);
   return (
     <div className={cx(styles.footer, className)} {...props}>

@@ -4,7 +4,6 @@ import { shallow } from 'zustand/shallow';
 
 import Layout from '@/layouts';
 import Index from '@/pages';
-import formatPrompt from '@/script/formatPrompt';
 import Loading from '@/slots/Loading';
 import { useAppStore } from '@/store';
 
@@ -12,9 +11,10 @@ const App = memo(() => {
   const [loading, setLoading] = useState(true);
   const setCurrentTab = useAppStore((st) => st.setCurrentTab, shallow);
   useEffect(() => {
+    console.time('🤯 Lobe Theme loading');
     onUiLoaded(() => {
-      formatPrompt();
       setLoading(false);
+      console.timeEnd('🤯 Lobe Theme loading');
     });
     onUiTabChange(() => {
       setCurrentTab();

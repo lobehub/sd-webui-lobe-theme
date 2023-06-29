@@ -1,4 +1,5 @@
 import { Icon } from '@lobehub/ui';
+import { useTimeout } from 'ahooks';
 import { Skeleton, Slider } from 'antd';
 import { ZoomIn } from 'lucide-react';
 import { memo, useEffect, useRef, useState } from 'react';
@@ -17,6 +18,7 @@ const Inner = memo(() => {
   const [size, setSize] = useState<number>(setting?.extraNetworkCardSize || 86);
   const { styles } = useStyles({ size });
   useEffect(() => {
+    console.time('🤯 [layout] inject - ExtraNetworkSidebar');
     if (setting.enableExtraNetworkSidebar) {
       const txt2imgExtraNetworks = gradioApp().querySelector(
         'div#txt2img_extra_networks',
@@ -33,33 +35,35 @@ const Inner = memo(() => {
         setExtraLoading(false);
         return;
       }
-      setTimeout(() => {
-        const t2indexButton = document.querySelector('#txt2img_extra_refresh') as HTMLButtonElement;
-        const index2indexButton = document.querySelector(
-          '#img2img_extra_refresh',
-        ) as HTMLButtonElement;
-        t2indexButton.click();
-        index2indexButton.click();
-        setExtraLoading(false);
-        try {
-          const civitaiText2ImgButton = document.querySelector('#txt2img_extra_refresh')
-            ?.nextSibling as HTMLButtonElement;
-          if (civitaiText2ImgButton) {
-            civitaiText2ImgButton.onclick = civitaiHelperFix;
-          }
-          const civitaiImg2ImgButton = document.querySelector('#img2img_extra_refresh')
-            ?.nextSibling as HTMLButtonElement;
-          if (civitaiImg2ImgButton) {
-            civitaiImg2ImgButton.onclick = civitaiHelperFix;
-          }
-
-          civitaiHelperFix();
-        } catch (error) {
-          console.log(error);
-        }
-      }, 2000);
     }
+    console.timeEnd('🤯 [layout] inject - ExtraNetworkSidebar');
   }, []);
+
+  useTimeout(() => {
+    console.time('🤯 [extranetwork] force reload');
+    const t2indexButton = document.querySelector('#txt2img_extra_refresh') as HTMLButtonElement;
+    const index2indexButton = document.querySelector('#img2img_extra_refresh') as HTMLButtonElement;
+    t2indexButton.click();
+    index2indexButton.click();
+    setExtraLoading(false);
+    try {
+      const civitaiText2ImgButton = document.querySelector('#txt2img_extra_refresh')
+        ?.nextSibling as HTMLButtonElement;
+      if (civitaiText2ImgButton) {
+        civitaiText2ImgButton.onclick = civitaiHelperFix;
+      }
+      const civitaiImg2ImgButton = document.querySelector('#img2img_extra_refresh')
+        ?.nextSibling as HTMLButtonElement;
+      if (civitaiImg2ImgButton) {
+        civitaiImg2ImgButton.onclick = civitaiHelperFix;
+      }
+
+      civitaiHelperFix();
+    } catch (error) {
+      console.debug(error);
+    }
+    console.timeEnd('🤯 [extranetwork] force reload');
+  }, 2000);
 
   return (
     <>

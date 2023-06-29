@@ -4,12 +4,13 @@ import App from './App';
 
 if (window.global === undefined) window.global = window;
 
-if (window.location.href.includes('dev') && process.env.NODE_ENV === 'production') {
-  console.log('🚧 Theme Loader in Dev Mode');
-} else {
+const skipLoad = window.location.href.includes('dev') && process.env.NODE_ENV === 'production';
+
+if (!skipLoad) {
   document.addEventListener(
     'DOMContentLoaded',
     () => {
+      console.time('🤯 Lobe Theme load in DevMode');
       const root = document.createElement('div');
       root.setAttribute('id', 'root');
       try {
@@ -19,6 +20,7 @@ if (window.location.href.includes('dev') && process.env.NODE_ENV === 'production
       }
       const client = createRoot(root);
       client.render(<App />);
+      console.timeEnd('🤯 Lobe Theme load in DevMode');
     },
     { once: true },
   );

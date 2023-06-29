@@ -3,6 +3,7 @@ import isEqual from 'fast-deep-equal';
 import { memo, useEffect, useRef } from 'react';
 
 import draggablePanel from '@/script/draggablePanel';
+import formatPrompt from '@/script/formatPrompt';
 import { useAppStore } from '@/store';
 import { DivProps } from '@/types';
 
@@ -25,11 +26,13 @@ const Content = memo<DivProps>(({ className, ...props }) => {
   const useDragablePanel = !setting.layoutSplitPreview && mobile === false;
 
   useEffect(() => {
+    console.time('🤯 [layout] inject - Content');
     // Content
     const main = gradioApp().querySelector('.app');
     if (main) {
       mainReference.current?.append(main);
     }
+
     // remove prompt scroll-hide
     const textares = gradioApp().querySelectorAll(
       `[id$="_prompt_container"] textarea`,
@@ -49,6 +52,9 @@ const Content = memo<DivProps>(({ className, ...props }) => {
     if (interrogate && actions) {
       actions.append(interrogate);
     }
+
+    formatPrompt();
+    console.timeEnd('🤯 [layout] inject - Content');
   }, []);
 
   useEffect(() => {

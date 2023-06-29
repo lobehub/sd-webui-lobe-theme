@@ -79,14 +79,19 @@ export const useAppStore = create<AppState>()(
       get().onLoadSetting();
     },
     onLoadSetting: () => {
-      let setting: any = localStorage.getItem(SETTING_KEY);
-      if (setting) {
-        setting = JSON.parse(setting);
+      console.time('🤯 [setting] loaded');
+      let localSetting: any = localStorage.getItem(SETTING_KEY);
+      if (localSetting) {
+        localSetting = JSON.parse(localSetting);
       } else {
-        setting = defaultSetting;
+        localSetting = defaultSetting;
         localStorage.setItem(SETTING_KEY, JSON.stringify(defaultSetting));
       }
-      set(() => ({ setting: { ...defaultSetting, ...setting } }), false, 'onLoadSetting');
+      const setting = { ...defaultSetting, ...localSetting };
+
+      set(() => ({ setting }), false, 'onLoadSetting');
+      console.table(setting);
+      console.timeEnd('🤯 [setting] loaded');
     },
     onSetSetting: (setting) => {
       localStorage.setItem(SETTING_KEY, JSON.stringify(setting));
@@ -97,6 +102,7 @@ export const useAppStore = create<AppState>()(
     },
     setCurrentTab: () => {
       const currentTab = get_uiCurrentTabContent()?.id;
+      console.debug('🤯 [tab] onChange', currentTab);
       if (currentTab && currentTab !== get().currentTab) {
         set({ currentTab }, false, 'setCurrentTab');
       }

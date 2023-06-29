@@ -7,6 +7,7 @@ export const Converter = {
    * @param type - 组件类型
    */
   addPromptButton(type: string): void {
+    console.debug('🤯 [formatPrompt] inject', type);
     const generateButton: HTMLElement | null = gradioApp().querySelector(`#${type}_generate`);
     const actionsColumn: HTMLElement | null = gradioApp().querySelector(`#${type}_style_create`);
     const nai2local: HTMLElement | null = gradioApp().querySelector(`#${type}_formatconvert`);
@@ -274,6 +275,8 @@ export const Converter = {
 };
 
 export default () => {
+  console.time('🤯 [formatPrompt] inject');
   Converter.addPromptButton('txt2img');
   Converter.addPromptButton('img2img');
+  console.timeEnd('🤯 [formatPrompt] inject');
 };

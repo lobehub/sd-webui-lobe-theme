@@ -67,6 +67,7 @@ const addDraggable = (tabId: string) => {
 };
 
 export default () => {
+  console.time('🤯 [layout] inject - DraggablePanel');
   addDraggable('txt2img');
   addDraggable('img2img');
   const extrasSetting = document.querySelector('#extras_results')?.parentElement
@@ -75,4 +76,5 @@ export default () => {
     extrasSetting.id = 'extras_settings';
     addDraggable('extras');
   }
+  console.timeEnd('🤯 [layout] inject - DraggablePanel');
 };

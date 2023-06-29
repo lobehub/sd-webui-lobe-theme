@@ -202,9 +202,9 @@ const updateCardForCivitai = () => {
 };
 
 export default () => {
-  console.log('🚧Update card for civitai');
   let retryTimes = 0;
   const fixInterval = setInterval(() => {
+    console.debug('🤯 [civitai helper] update card for civitai');
     const checkDom = document.querySelector('#txt2img_lora_cards');
     if (checkDom || retryTimes > 10) {
       updateCardForCivitai();

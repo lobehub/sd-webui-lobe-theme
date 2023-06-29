@@ -26,6 +26,7 @@ const replaceIcon = (button: HTMLButtonElement, emoji: string[], svg: string) =>
 };
 
 export default () => {
+  console.time('🤯 [svgIcon] replace');
   for (const button of document.querySelectorAll('button')) {
     replaceIcon(button, ['📂'], folderClosed);
     replaceIcon(button, ['🔄', '🔁', '♻️'], refreshCcw);
@@ -41,4 +42,5 @@ export default () => {
     replaceIcon(button, ['🎴'], panelRight);
     replaceIcon(button, ['🌀'], archiveRestore);
   }
+  console.timeEnd('🤯 [svgIcon] replace');
 };
