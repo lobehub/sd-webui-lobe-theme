@@ -25,7 +25,7 @@ English · [简体中文](./README-zh_CN.md) · [Changelog](./CHANGELOG.md) · [
 
 </div>
 
-![cover](https://raw.githubusercontent.com/canisminor1990/sd-webui-lobe-theme/main/docs/cover.webp)
+![][cover]
 
 > 📦 After **Version 2.0.0** Kitchen theme was renamed to **Lobe Theme**. The legacy version can be accessed at [sd-webui-kitchen-theme-legacy](https://github.com/canisminor1990/sd-webui-kitchen-theme-legacy)
 
@@ -91,7 +91,7 @@ git clone "https://github.com/canisminor1990/sd-webui-lobe-theme" extensions/lob
 
 ## 🤯 Usage
 
-![feat_thememode](https://raw.githubusercontent.com/canisminor1990/sd-webui-lobe-theme/main/docs/feat_thememode.webp)
+![][feat-thememode]
 
 #### Light and Dark Themes
 
@@ -116,7 +116,7 @@ http://localhost:7860/?__theme=dark
 
 </div>
 
-![feat_theme_modify](https://raw.githubusercontent.com/canisminor1990/sd-webui-lobe-theme/main/docs/feat_theme_modify.webp)
+![][feat-theme-modify]
 
 #### Theme Customization
 
@@ -135,7 +135,7 @@ http://localhost:7860/?__theme=dark
 
 </div>
 
-![feat_highlight](https://raw.githubusercontent.com/canisminor1990/sd-webui-lobe-theme/main/docs/feat_highlight.webp)
+![][feat-highlight]
 
 #### Prompt Syntax Highlighting
 
@@ -147,7 +147,7 @@ Automatically colorize prompt display according to the Stable Diffusion syntax r
 
 </div>
 
-![feat_sidebar](https://raw.githubusercontent.com/canisminor1990/sd-webui-lobe-theme/main/docs/feat_sidebar.webp)
+![][feat-sidebar]
 
 #### Sidebar Customization
 
@@ -191,7 +191,7 @@ sd_model_checkpoint, sd_vae, CLIP_stop_at_last_layers, img2img_background_color,
 
 </div>
 
-![feat_mobile_friendly](https://raw.githubusercontent.com/canisminor1990/sd-webui-lobe-theme/main/docs/feat_mobile_friendly.webp)
+![][feat-mobile-friendly]
 
 #### Mobile Adaptation
 
@@ -322,6 +322,12 @@ This project is [MIT](./LICENSE) licensed.
 
 <!-- LINK GROUP -->
 
+[cover]: https://gw.alipayobjects.com/zos/kitchen/8Ab%24hLJ5ur/cover.webp
+[feat-highlight]: https://gw.alipayobjects.com/zos/kitchen/iD%24W4U2y3Y/feat_highlight.webp
+[feat-mobile-friendly]: https://gw.alipayobjects.com/zos/kitchen/WpWe6Hw8UT/feat_mobile_friendly.webp
+[feat-sidebar]: https://gw.alipayobjects.com/zos/kitchen/Olum2IjxCW/feat_sidebar.webp
+[feat-theme-modify]: https://gw.alipayobjects.com/zos/kitchen/CbhlynwJYg/feat_theme_modify.webp
+[feat-thememode]: https://gw.alipayobjects.com/zos/kitchen/nSFtJidWUR/feat_thememode.webp
 [profile-url]: https://github.com/canisminor1990
 [gitpod-url]: https://gitpod.io/#https://github.com/canisminor1990/sd-webui-lobe-theme
 

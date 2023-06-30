@@ -20,6 +20,10 @@
   "license": "MIT",
   "author": "canisminor1990 <i@canisminor.cc>",
   "sideEffects": false,
+  "main": "javascript/main.js",
+  "files": [
+    "javascript"
+  ],
   "scripts": {
     "build": "vite build",
     "dev": "vite",
