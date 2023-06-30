@@ -166,6 +166,15 @@ const SettingForm = memo(() => {
           />
         </FormItem>
         <FormItem
+          desc={t('settingPromptHighlightDesc')}
+          divider
+          label={t('settingPromptHighlight')}
+          name="enableHighlight"
+          valuePropName="checked"
+        >
+          <Switch />
+        </FormItem>
+        <FormItem
           desc={t('settingPromptEditorDesc')}
           divider
           label={t('settingPromptEditor')}

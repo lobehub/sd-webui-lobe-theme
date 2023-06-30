@@ -25,7 +25,7 @@ English · [简体中文](./README-zh_CN.md) · [Changelog](./CHANGELOG.md) · [
 
 </div>
 
-![cover.webp](https://github.com/canisminor1990/sd-webui-lobe-theme/blob/main/docs/cover.webp)
+![cover](https://raw.githubusercontent.com/canisminor1990/sd-webui-lobe-theme/main/docs/cover.webp)
 
 > 📦 After **Version 2.0.0** Kitchen theme was renamed to **Lobe Theme**. The legacy version can be accessed at [sd-webui-kitchen-theme-legacy](https://github.com/canisminor1990/sd-webui-kitchen-theme-legacy)
 
@@ -57,8 +57,7 @@ English · [简体中文](./README-zh_CN.md) · [Changelog](./CHANGELOG.md) · [
 - [x] 🖼️ Adjustable canvas ratio, ensuring that generated images are always displayed at the top
 - [x] 📱 Mobile-friendly, with partial optimization for mobile screens
 - [x] 🇨🇳 Support i18n and welcome [PR](https://github.com/canisminor1990/sd-webui-lobe-theme/tree/main/src/i18n/lang) contributions
-- [ ] 📝 Syntax highlighting in the prompt input box
-- [ ] 🆗 Multilingual support with i18n
+- [x] 📝 Syntax highlighting in the prompt input box
 
 <div align="right">
 
@@ -92,7 +91,7 @@ git clone "https://github.com/canisminor1990/sd-webui-lobe-theme" extensions/lob
 
 ## 🤯 Usage
 
-![feat_thememode.webp](https://github.com/canisminor1990/sd-webui-lobe-theme/blob/main/docs/feat_thememode.webp)
+![feat_thememode](https://raw.githubusercontent.com/canisminor1990/sd-webui-lobe-theme/main/docs/feat_thememode.webp)
 
 #### Light and Dark Themes
 
@@ -117,7 +116,7 @@ http://localhost:7860/?__theme=dark
 
 </div>
 
-![feat_theme_modify.webp](https://github.com/canisminor1990/sd-webui-lobe-theme/blob/main/docs/feat_theme_modify.webp)
+![feat_theme_modify](https://raw.githubusercontent.com/canisminor1990/sd-webui-lobe-theme/main/docs/feat_theme_modify.webp)
 
 #### Theme Customization
 
@@ -136,7 +135,19 @@ http://localhost:7860/?__theme=dark
 
 </div>
 
-![feat_sidebar.webp](https://github.com/canisminor1990/sd-webui-lobe-theme/blob/main/docs/feat_sidebar.webp)
+![feat_highlight](https://raw.githubusercontent.com/canisminor1990/sd-webui-lobe-theme/main/docs/feat_highlight.webp)
+
+#### Prompt Syntax Highlighting
+
+Automatically colorize prompt display according to the Stable Diffusion syntax rules
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
+![feat_sidebar](https://raw.githubusercontent.com/canisminor1990/sd-webui-lobe-theme/main/docs/feat_sidebar.webp)
 
 #### Sidebar Customization
 
@@ -180,7 +191,7 @@ sd_model_checkpoint, sd_vae, CLIP_stop_at_last_layers, img2img_background_color,
 
 </div>
 
-![feat_mobile_friendly.webp](https://github.com/canisminor1990/sd-webui-lobe-theme/blob/main/docs/feat_mobile_friendly.webp)
+![feat_mobile_friendly](https://raw.githubusercontent.com/canisminor1990/sd-webui-lobe-theme/main/docs/feat_mobile_friendly.webp)
 
 #### Mobile Adaptation
 

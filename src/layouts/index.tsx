@@ -10,7 +10,6 @@ import { shallow } from 'zustand/shallow';
 
 import { useIsDarkMode } from '@/hooks/useIsDarkMode';
 import { useAppStore } from '@/store';
-import GlobalStyle from '@/styles/index';
 import { kitchenNeutral, kitchenPrimary } from '@/styles/kitchenColors';
 import { neutralColorScales } from '@/styles/neutralColors';
 
@@ -67,7 +66,6 @@ const Layout = memo<DivProps>(({ children }) => {
             ['https://npm.elemecdn.com/normalize.css/normalize.css']
         }
       >
-        <GlobalStyle />
         {children}
       </ThemeProvider>
     )

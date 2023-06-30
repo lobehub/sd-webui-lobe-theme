@@ -59,6 +59,8 @@ const translation: Translation = {
   settingPromptDisplayModeDesc: '固定高度或自動高度並支持拖拽拉伸',
   settingPromptEditor: '提示詞編輯器',
   settingPromptEditorDesc: '提供簡易的提示詞編輯器位於快捷設置側邊欄頂部',
+  settingPromptHighlight: 'Prompt 語法高亮',
+  settingPromptHighlightDesc: '按照 Stable Diffusion 語法規則，自動著色 prompt 顯示',
   settingQuickSettingSidebarDefaultExpand: '默認展開',
   settingQuickSettingSidebarDefaultExpandDesc: '是否在啟動時將側邊欄默認展開',
   settingQuickSettingSidebarDefaultWidth: '默認寬度',

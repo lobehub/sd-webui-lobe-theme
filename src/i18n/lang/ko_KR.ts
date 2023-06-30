@@ -61,6 +61,9 @@ const translation: Translation = {
   settingPromptDisplayModeDesc: '고정 높이 또는 자동 높이 및 드래그 조절 지원',
   settingPromptEditor: '프롬프트 편집기',
   settingPromptEditorDesc: '빠른 설정 사이드바 상단에 간단한 프롬프트 편집기 제공',
+  settingPromptHighlight: 'Prompt 구문 강조',
+  settingPromptHighlightDesc:
+    'Stable Diffusion 구문 규칙에 따라 자동으로 prompt를 강조하여 표시합니다',
   settingQuickSettingSidebarDefaultExpand: '기본 확장',
   settingQuickSettingSidebarDefaultExpandDesc: '시작시 사이드바 기본 확장 여부',
   settingQuickSettingSidebarDefaultWidth: '기본 너비',

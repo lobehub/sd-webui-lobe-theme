@@ -25,7 +25,7 @@
 
 </div>
 
-![cover.webp](https://github.com/canisminor1990/sd-webui-lobe-theme/blob/main/docs/cover.webp)
+![cover](https://raw.githubusercontent.com/canisminor1990/sd-webui-lobe-theme/main/docs/cover.webp)
 
 <details>
 <summary><kbd>文档目录</kbd></summary>
@@ -57,8 +57,7 @@
 - [x] 🖼️ 可调节画板比例，使生成图像始终置顶
 - [x] 📱 移动端友好，针对手机屏幕完成部分优化
 - [x] 🇨🇳 支持 i18n 并欢迎提交 [PR](https://github.com/canisminor1990/sd-webui-lobe-theme/tree/main/src/i18n/lang) 贡献
-- [ ] 📝 语法高亮的 Prompt 输入框
-- [ ] 🆗 i18n 多语言支持
+- [x] 📝 语法高亮的 Prompt 输入框
 
 <div align="right">
 
@@ -92,7 +91,7 @@ git clone "https://github.com/canisminor1990/sd-webui-lobe-theme" extensions/lob
 
 ## 🤯 使用说明
 
-![feat_thememode.webp](https://github.com/canisminor1990/sd-webui-lobe-theme/blob/main/docs/feat_thememode.webp)
+![feat_thememode](https://raw.githubusercontent.com/canisminor1990/sd-webui-lobe-theme/main/docs/feat_thememode.webp)
 
 #### 亮暗色主题
 
@@ -117,7 +116,7 @@ http://localhost:7860/?__theme=dark
 
 </div>
 
-![feat_theme_modify.webp](https://github.com/canisminor1990/sd-webui-lobe-theme/blob/main/docs/feat_theme_modify.webp)
+![feat_theme_modify](https://raw.githubusercontent.com/canisminor1990/sd-webui-lobe-theme/main/docs/feat_theme_modify.webp)
 
 #### 主体定制
 
@@ -136,7 +135,21 @@ http://localhost:7860/?__theme=dark
 
 </div>
 
-![feat_sidebar.webp](https://github.com/canisminor1990/sd-webui-lobe-theme/blob/main/docs/feat_sidebar.webp)
+![feat_highlight](https://raw.githubusercontent.com/canisminor1990/sd-webui-lobe-theme/main/docs/feat_highlight.webp)
+
+![feat_highlight](https://raw.githubusercontent.com/canisminor1990/sd-webui-lobe-theme/main/docs/feat_highlight.webp)
+
+#### Prompt 语法高亮
+
+按 Stable Diffusion 语法规则，自动染色 prompt 显示
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
+![feat_sidebar](https://raw.githubusercontent.com/canisminor1990/sd-webui-lobe-theme/main/docs/feat_sidebar.webp)
 
 #### 侧边栏定制
 
@@ -180,7 +193,7 @@ sd_model_checkpoint, sd_vae, CLIP_stop_at_last_layers, img2img_background_color,
 
 </div>
 
-![feat_mobile_friendly.webp](https://github.com/canisminor1990/sd-webui-lobe-theme/blob/main/docs/feat_mobile_friendly.webp)
+![feat_mobile_friendly](https://raw.githubusercontent.com/canisminor1990/sd-webui-lobe-theme/main/docs/feat_mobile_friendly.webp)
 
 #### 移动端适配
 

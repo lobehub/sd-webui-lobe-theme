@@ -5,3 +5,4 @@ export { default as SidebarBody } from './Sidebar/SidebarBody';
 export { default as SidebarContainer } from './Sidebar/SidebarContainer';
 export { default as SidebarFooter } from './Sidebar/SidebarFooter';
 export { default as SidebarHeader, type SidebarHeaderProps } from './Sidebar/SidebarHeader';
+export { default as SyntaxHighlighter } from './SyntaxHighlighter';

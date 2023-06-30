@@ -62,6 +62,9 @@ const translation = {
   settingPromptDisplayModeDesc: 'Fixed height or auto height with draggable resize support',
   settingPromptEditor: 'Prompt Editor',
   settingPromptEditorDesc: 'Provide a simple prompt editor at the top of the quick setting sidebar',
+  settingPromptHighlight: 'Prompt Syntax Highlighting',
+  settingPromptHighlightDesc:
+    'Automatically colorize prompt display according to the Stable Diffusion syntax rules',
   settingQuickSettingSidebarDefaultExpand: 'Default Expand',
   settingQuickSettingSidebarDefaultExpandDesc:
     'Whether to expand the sidebar by default when starting',

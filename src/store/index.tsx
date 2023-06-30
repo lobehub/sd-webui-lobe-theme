@@ -24,6 +24,7 @@ export type NeutralColor = 'mauve' | 'slate' | 'sage' | 'olive' | 'sand' | 'kitc
 
 export interface WebuiSetting {
   enableExtraNetworkSidebar: boolean;
+  enableHighlight: boolean;
   enableSidebar: boolean;
   enableWebFont: boolean;
   extraNetworkCardSize: number;
@@ -49,6 +50,7 @@ export interface WebuiSetting {
 
 export const defaultSetting: WebuiSetting = {
   enableExtraNetworkSidebar: true,
+  enableHighlight: true,
   enableSidebar: true,
   enableWebFont: true,
   extraNetworkCardSize: 86,

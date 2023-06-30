@@ -62,6 +62,9 @@ const translation: Translation = {
   settingPromptDisplayModeDesc: '固定の高さまたはドラッグリサイズをサポートする自動の高さ',
   settingPromptEditor: 'プロンプトエディタ',
   settingPromptEditorDesc: 'クイック設定サイドバーの上部に簡単なプロンプトエディタを提供します',
+  settingPromptHighlight: 'Promptのシンタックスハイライト',
+  settingPromptHighlightDesc:
+    'Stable Diffusionのシンタックスルールに基づいて、promptの表示を自動的にハイライトします',
   settingQuickSettingSidebarDefaultExpand: 'デフォルトで展開',
   settingQuickSettingSidebarDefaultExpandDesc: '起動時にサイドバーをデフォルトで展開しますか？',
   settingQuickSettingSidebarDefaultWidth: 'デフォルト幅',

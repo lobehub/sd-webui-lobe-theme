@@ -5,8 +5,10 @@ import { memo, useEffect } from 'react';
 import { shallow } from 'zustand/shallow';
 
 import '@/i18n/config';
+import { PromptHighlight } from '@/modules/PromptHighlight';
 import replaceIcon from '@/script/replaceIcon';
 import { useAppStore } from '@/store';
+import GlobalStyle from '@/styles';
 
 import Content from './Content';
 import ExtraNetworkSidebar from './ExtraNetworkSidebar';
@@ -28,11 +30,16 @@ const Index = memo(() => {
   });
 
   useEffect(() => {
+    if (setting.enableHighlight) {
+      PromptHighlight('#txt2img_prompt', '#lobe_txt2img_prompt');
+      PromptHighlight('#img2img_prompt', '#lobe_img2img_prompt');
+    }
     if (setting.svgIcon) replaceIcon();
   }, []);
 
   return (
     <>
+      <GlobalStyle />
       <LayoutHeader headerHeight={HEADER_HEIGHT}>
         <Header />
       </LayoutHeader>

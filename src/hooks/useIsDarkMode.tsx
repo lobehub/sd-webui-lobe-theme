@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 
-function checkIsDarkMode() {
+const checkIsDarkMode = () => {
   try {
     return window.matchMedia('(prefers-color-scheme: dark)').matches;
   } catch {
     return false;
   }
-}
+};
 
-export function useIsDarkMode() {
+export const useIsDarkMode = () => {
   const [isDarkMode, setIsDarkMode] = useState(checkIsDarkMode());
 
   useEffect(() => {
@@ -26,4 +26,4 @@ export function useIsDarkMode() {
   }, []);
 
   return isDarkMode;
-}
+};

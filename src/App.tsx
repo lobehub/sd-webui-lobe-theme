@@ -19,8 +19,8 @@ const App = memo(() => {
   );
 
   useEffect(() => {
-    onInit();
     console.time('🤯 Lobe Theme loading');
+    onInit();
     onUiLoaded(() => {
       setLoading(false);
       console.timeEnd('🤯 Lobe Theme loading');
@@ -64,6 +64,7 @@ const App = memo(() => {
         <meta content="#000000" name="msapplication-TileColor" />
         <meta content="#000000" name="theme-color" />
       </Helmet>
+
       {!storeLoading && <Layout>{loading ? <Loading /> : <Index />}</Layout>}
     </Suspense>
   );

@@ -272,6 +272,7 @@ export const useStyles = createStyles(
         }
 
         .block.token-counter {
+          top: -12px;
           right: 4px;
           scale: 0.8;
           background: ${token.colorBgContainer} !important;
@@ -284,6 +285,16 @@ export const useStyles = createStyles(
             display: inline-block;
             font-family: ${token.fontFamilyCode};
           }
+        }
+
+        #lobe_txt2img_prompt .prompt_editor {
+          min-height: ${TEXT2IMG_PROMPT_HEIGHT}px;
+          max-height: ${isPromptResizable ? 'unset' : `${TEXT2IMG_PROMPT_HEIGHT}px`};
+        }
+
+        #lobe_img2img_prompt .prompt_editor {
+          min-height: ${IMG2IMG_PROMPT_HEIGHT}px;
+          max-height: ${isPromptResizable ? 'unset' : `${IMG2IMG_PROMPT_HEIGHT}px`};
         }
 
         #text2img_prompt,

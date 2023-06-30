@@ -1,0 +1,50 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "fileTypes": ["prompt"],
+  "name": "prompt",
+  "patterns": [
+    {
+      "match": "[,]",
+      "name": "comma"
+    },
+    {
+      "match": "[:|]",
+      "name": "func"
+    },
+    {
+      "match": "AND",
+      "name": "and"
+    },
+    {
+      "match": "<([^:]+):([^:]+):([^>]+)>",
+      "captures": {
+        "0": {
+          "name": "model-bracket"
+        },
+        "1": {
+          "name": "model-type"
+        },
+        "2": {
+          "name": "model-name"
+        },
+        "3": {
+          "name": "number"
+        }
+      }
+    },
+    {
+      "match": "[<|>]",
+      "name": "model-bracket"
+    },
+    {
+      "match": "[(|)|\\[|\\]|{|}]",
+      "name": "bracket"
+    },
+    {
+      "match": "\\d+(\\.\\d+)?",
+      "name": "number"
+    }
+  ],
+
+  "scopeName": "source.prompt"
+}
