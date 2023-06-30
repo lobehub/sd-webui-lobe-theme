@@ -1,7 +1,7 @@
-import { Icon } from '@lobehub/ui';
+import { ActionIcon } from '@lobehub/ui';
 import { useTimeout } from 'ahooks';
 import { Skeleton, Slider } from 'antd';
-import { ZoomIn } from 'lucide-react';
+import { ZoomIn, ZoomOut } from 'lucide-react';
 import { memo, useEffect, useRef, useState } from 'react';
 import { shallow } from 'zustand/shallow';
 
@@ -15,7 +15,7 @@ const Inner = memo(() => {
   const img2imgExtraNetworkSidebarReference = useRef<HTMLDivElement>(null);
   const [extraLoading, setExtraLoading] = useState(true);
   const [setting, currentTab] = useAppStore((st) => [st.setting, st.currentTab], shallow);
-  const [size, setSize] = useState<number>(setting?.extraNetworkCardSize || 86);
+  const [size, setSize] = useState<number>(setting.extraNetworkCardSize || 86);
   const { styles } = useStyles({ size });
 
   useEffect(() => {
@@ -84,7 +84,11 @@ const Inner = memo(() => {
         </div>
       </SidebarBody>
       <SidebarFooter>
-        <Icon icon={ZoomIn} />
+        <ActionIcon
+          icon={setting.extraNetworkCardSize < size ? ZoomOut : ZoomIn}
+          onClick={() => setSize(setting.extraNetworkCardSize)}
+          size={{ blockSize: 24, fontSize: 16 }}
+        />
         <Slider
           defaultValue={size}
           max={256}
@@ -92,6 +96,7 @@ const Inner = memo(() => {
           onChange={setSize}
           step={8}
           style={{ flex: 1 }}
+          value={size}
         />
       </SidebarFooter>
     </>

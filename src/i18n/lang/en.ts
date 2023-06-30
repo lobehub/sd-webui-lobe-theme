@@ -20,6 +20,9 @@ const translation = {
   setting: 'Setting',
   settingButtomReset: 'Reset',
   settingButtomSubmit: 'Apply and Restart Interface',
+  settingCustomFont: 'Load Custom Font',
+  settingCustomFontDesc:
+    'When enabled, it will automatically load a webfont to enhance the display of text in Chinese, English, and code',
   settingCustomLogo: 'Custom Logo',
   settingCustomLogoDesc: 'Support URL / Base64 / Emoji symbols',
   settingCustomTitle: 'Custom Title',

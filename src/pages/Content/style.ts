@@ -20,15 +20,15 @@ export const useStyles = createStyles(
           border-radius: ${token.borderRadius}px !important;
           box-shadow: ${token.boxShadow};
 
-          li:nth-child(odd) {
-            background: transparent !important;
-          }
-
           li {
             border-bottom: 1px solid ${token.colorBorder};
 
             &:hover {
               background: ${token.colorFillSecondary} !important;
+            }
+
+            &:nth-child(odd) {
+              background: transparent !important;
             }
           }
         }

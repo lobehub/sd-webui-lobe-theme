@@ -22,6 +22,9 @@ const translation: Translation = {
   setting: '設定',
   settingButtomReset: 'リセット',
   settingButtomSubmit: '適用して再起動',
+  settingCustomFont: 'カスタムフォントの読み込み',
+  settingCustomFontDesc:
+    '有効にすると、Webフォントを自動的に読み込んで、英語、中国語、およびコードの表示効果を最適化します',
   settingCustomLogo: 'カスタムロゴ',
   settingCustomLogoDesc: 'URL / Base64 / 絵文字をサポート',
   settingCustomTitle: 'カスタムタイトル',

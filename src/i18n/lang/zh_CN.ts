@@ -22,6 +22,8 @@ const translation: Translation = {
   setting: '设置',
   settingButtomReset: '重置',
   settingButtomSubmit: '应用并重启界面',
+  settingCustomFont: '加载字体美化',
+  settingCustomFontDesc: '开启后会自动加载 Webfont 美化字体，优化中英文和代码显示效果',
   settingCustomLogo: '自定义 Logo',
   settingCustomLogoDesc: '支持 URL / Base64 / Emoji 表情符号',
   settingCustomTitle: '自定义标题',

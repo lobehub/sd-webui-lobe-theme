@@ -22,6 +22,9 @@ const translation: Translation = {
   setting: '설정',
   settingButtomReset: '재설정',
   settingButtomSubmit: '적용 및 인터페이스 재시작',
+  settingCustomFont: '폰트 로드',
+  settingCustomFontDesc:
+    '이 기능을 사용하면 웹 폰트를 자동으로 로드하여 영문, 한글 및 코드 표시 효과를 최적화합니다',
   settingCustomLogo: '사용자 정의 로고',
   settingCustomLogoDesc: 'URL / Base64 / 이모지 표정을 지원합니다.',
   settingCustomTitle: '사용자 정의 제목',

@@ -15,16 +15,12 @@ import { kitchenNeutral, kitchenPrimary } from '@/styles/kitchenColors';
 import { neutralColorScales } from '@/styles/neutralColors';
 
 const Layout = memo<DivProps>(({ children }) => {
-  const { onSetThemeMode, onInit, themeMode } = useAppStore(
+  const { onSetThemeMode, themeMode } = useAppStore(
     (st) => ({ onInit: st.onInit, onSetThemeMode: st.onSetThemeMode, themeMode: st.themeMode }),
     shallow,
   );
   const setting = useAppStore((st) => st.setting, isEqual);
   const isDarkMode = useIsDarkMode();
-
-  useEffect(() => {
-    onInit();
-  }, []);
 
   useEffect(() => {
     const queryTheme: any = String(qs.parseUrl(window.location.href).query.__theme || '');
@@ -61,10 +57,20 @@ const Layout = memo<DivProps>(({ children }) => {
   }, [setting.primaryColor, themeMode]);
 
   return (
-    <ThemeProvider customToken={genCustomToken} themeMode={themeMode}>
-      <GlobalStyle />
-      {children}
-    </ThemeProvider>
+    setting && (
+      <ThemeProvider
+        customToken={genCustomToken}
+        themeMode={themeMode}
+        webfonts={
+          setting.enableWebFont ?
+            undefined :
+            ['https://npm.elemecdn.com/normalize.css/normalize.css']
+        }
+      >
+        <GlobalStyle />
+        {children}
+      </ThemeProvider>
+    )
   );
 });
 

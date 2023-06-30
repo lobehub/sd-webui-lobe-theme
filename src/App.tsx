@@ -9,8 +9,17 @@ import { useAppStore } from '@/store';
 
 const App = memo(() => {
   const [loading, setLoading] = useState(true);
-  const setCurrentTab = useAppStore((st) => st.setCurrentTab, shallow);
+  const { setCurrentTab, onInit, storeLoading } = useAppStore(
+    (st) => ({
+      onInit: st.onInit,
+      setCurrentTab: st.setCurrentTab,
+      storeLoading: st.loading,
+    }),
+    shallow,
+  );
+
   useEffect(() => {
+    onInit();
     console.time('🤯 Lobe Theme loading');
     onUiLoaded(() => {
       setLoading(false);
@@ -22,7 +31,7 @@ const App = memo(() => {
   }, []);
 
   return (
-    <Suspense fallback={<Loading />}>
+    <Suspense fallback="loading...">
       <Helmet>
         <link
           href="https://npm.elemecdn.com/@lobehub/assets-favicons/assets/apple-touch-icon.png"
@@ -55,7 +64,7 @@ const App = memo(() => {
         <meta content="#000000" name="msapplication-TileColor" />
         <meta content="#000000" name="theme-color" />
       </Helmet>
-      <Layout>{loading ? <Loading /> : <Index />}</Layout>
+      {!storeLoading && <Layout>{loading ? <Loading /> : <Index />}</Layout>}
     </Suspense>
   );
 });

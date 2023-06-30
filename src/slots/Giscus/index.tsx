@@ -1,11 +1,13 @@
 import GiscusComponent from '@giscus/react';
 import { ActionIcon } from '@lobehub/ui';
+import isEqual from 'fast-deep-equal';
 import { Github } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { homepage, name } from '@/../package.json';
 import { Modal, type ModalProps } from '@/components';
+import { useAppStore } from '@/store';
 
 interface GiscusProps {
   onCancel?: ModalProps['onCancel'];
@@ -13,6 +15,7 @@ interface GiscusProps {
   themeMode: 'light' | 'dark';
 }
 const Giscus = memo<GiscusProps>(({ themeMode, open, onCancel }) => {
+  const setting = useAppStore((st) => st.setting, isEqual);
   const { t } = useTranslation();
   return (
     <Modal
@@ -31,7 +34,7 @@ const Giscus = memo<GiscusProps>(({ themeMode, open, onCancel }) => {
         emitMetadata="0"
         id="giscus"
         inputPosition="top"
-        lang="en"
+        lang={setting.i18n.replace('_', '-')}
         loading="lazy"
         mapping="number"
         reactionsEnabled="1"

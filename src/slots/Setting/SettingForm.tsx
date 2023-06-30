@@ -136,6 +136,15 @@ const SettingForm = memo(() => {
         >
           <Switch />
         </FormItem>
+        <FormItem
+          desc={t('settingCustomFontDesc')}
+          divider
+          label={t('settingCustomFont')}
+          name="enableWebFont"
+          valuePropName="checked"
+        >
+          <Switch />
+        </FormItem>
       </FormGroup>
       <FormGroup icon={TextCursorInput} title={t('settingGroupPromotTextarea')}>
         <FormItem

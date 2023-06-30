@@ -25,6 +25,7 @@ export type NeutralColor = 'mauve' | 'slate' | 'sage' | 'olive' | 'sand' | 'kitc
 export interface WebuiSetting {
   enableExtraNetworkSidebar: boolean;
   enableSidebar: boolean;
+  enableWebFont: boolean;
   extraNetworkCardSize: number;
   extraNetworkFixedMode: 'fixed' | 'float';
   extraNetworkSidebarExpand: boolean;
@@ -49,6 +50,7 @@ export interface WebuiSetting {
 export const defaultSetting: WebuiSetting = {
   enableExtraNetworkSidebar: true,
   enableSidebar: true,
+  enableWebFont: true,
   extraNetworkCardSize: 86,
   extraNetworkFixedMode: 'fixed',
   extraNetworkSidebarExpand: true,
@@ -71,6 +73,7 @@ export const defaultSetting: WebuiSetting = {
 };
 export interface AppState {
   currentTab: string;
+  loading: boolean;
   onInit: () => void;
   onLoadSetting: () => void;
   onSetSetting: (setting: WebuiSetting) => void;
@@ -82,6 +85,7 @@ export interface AppState {
 export const useAppStore = create<AppState>()(
   devtools((set, get) => ({
     currentTab: 'tab_txt2img',
+    loading: true,
     onInit: () => {
       get().onLoadSetting();
     },
@@ -96,7 +100,7 @@ export const useAppStore = create<AppState>()(
       }
       const setting = { ...defaultSetting, ...localSetting };
 
-      set(() => ({ setting }), false, 'onLoadSetting');
+      set(() => ({ loading: false, setting }), false, 'onLoadSetting');
       console.table(setting);
       console.timeEnd('🤯 [setting] loaded');
     },
