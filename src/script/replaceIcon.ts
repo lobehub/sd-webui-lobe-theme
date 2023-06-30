@@ -13,6 +13,7 @@ import {
   panelRight,
   play,
   refreshCcw,
+  ruler,
   save,
   settings,
   trash,
@@ -53,6 +54,7 @@ export default () => {
     replaceIcon(button, ['💥'], play);
     replaceIcon(button, ['📷'], webcam);
     replaceIcon(button, ['📝'], laptop2);
+    replaceIcon(button, ['📐'], ruler);
   }
   console.timeEnd('🤯 [svgIcon] replace');
 };

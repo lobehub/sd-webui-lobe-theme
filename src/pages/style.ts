@@ -3,7 +3,7 @@ import { adjustHue } from 'polished';
 
 export const useStyles = createStyles(
   (
-    { cx, css, stylish, token },
+    { cx, css, stylish, token, isDarkMode },
     { headerHeight, isPrimaryColor }: { headerHeight: number; isPrimaryColor: boolean },
   ) => ({
     background: cx(
@@ -23,7 +23,6 @@ export const useStyles = createStyles(
 
         position: absolute !important;
         z-index: 0;
-        top: -100px;
         right: -20vw;
         transform: rotate(4deg);
 
@@ -34,6 +33,23 @@ export const useStyles = createStyles(
         filter: blur(100px);
       `,
     ),
+    backgroundLite: css`
+      pointer-events: none;
+
+      position: absolute !important;
+      top: -400px;
+      left: 0;
+
+      width: 100vw;
+      height: 600px;
+
+      opacity: ${isPrimaryColor ? (isDarkMode ? 0.2 : 0.05) : isDarkMode ? 0.15 : 0};
+      background: radial-gradient(
+        circle 600px at calc(100% - 300px) 300px,
+        ${token.colorPrimary},
+        transparent
+      );
+    `,
     panel: css`
       .draggable-panel {
         border-style: dashed;

@@ -44,7 +44,7 @@ const Index = memo(() => {
         <Header />
       </LayoutHeader>
       <LayoutMain>
-        {!setting.liteAnimation && <div className={styles.background} />}
+        {<div className={setting.liteAnimation ? styles.backgroundLite : styles.background} />}
         {setting.enableSidebar && (
           <LayoutSidebar
             className={styles.sidebar}

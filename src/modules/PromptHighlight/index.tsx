@@ -6,6 +6,7 @@ import Layout from '@/layouts';
 import App from './App';
 
 export const PromptHighlight = (parentId: string, containerId: string) => {
+  if (document.querySelector(containerId)) return;
   const settingsDiv = document.createElement('div') as HTMLDivElement;
   settingsDiv.id = containerId.replace('#', '');
 

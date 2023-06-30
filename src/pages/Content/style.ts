@@ -136,7 +136,7 @@ export const useStyles = createStyles(
           flex-direction: column !important;
           gap: 12px !important;
 
-          .gradio-column:has(button) {
+          .gradio-column:has(#img2img_res_switch_btn, #txt2img_res_switch_btn) {
             min-width: min(36px, 100%) !important;
           }
 
