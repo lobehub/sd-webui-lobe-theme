@@ -60,6 +60,14 @@ export const useStyles = createStyles(
             }
           }
         }
+
+        [id$='_override_settings_row']:has(div.hidden) {
+          display: none;
+        }
+
+        .gradio-group:has(.gradio-group:has(div:empty)) {
+          display: none;
+        }
       `,
       draggableContainer: css`
         .draggable-line {
@@ -229,22 +237,6 @@ export const useStyles = createStyles(
         }
       `,
       textares: css`
-        #text2img_prompt,
-        #text2img_neg_prompt {
-          textarea {
-            min-height: ${TEXT2IMG_PROMPT_HEIGHT}px;
-            max-height: ${isPromptResizable ? 'unset' : `${TEXT2IMG_PROMPT_HEIGHT}px`};
-          }
-        }
-
-        #img2img_prompt,
-        #img2img_neg_prompt {
-          textarea {
-            min-height: ${IMG2IMG_PROMPT_HEIGHT}px;
-            max-height: ${isPromptResizable ? 'unset' : `${IMG2IMG_PROMPT_HEIGHT}px`};
-          }
-        }
-
         [id$='2img_prompt'],
         [id$='2img_neg_prompt'] {
           textarea {
@@ -291,6 +283,22 @@ export const useStyles = createStyles(
           span {
             display: inline-block;
             font-family: ${token.fontFamilyCode};
+          }
+        }
+
+        #text2img_prompt,
+        #text2img_neg_prompt {
+          textarea {
+            min-height: ${TEXT2IMG_PROMPT_HEIGHT}px;
+            max-height: ${isPromptResizable ? 'unset' : `${TEXT2IMG_PROMPT_HEIGHT}px`};
+          }
+        }
+
+        #img2img_prompt,
+        #img2img_neg_prompt {
+          textarea {
+            min-height: ${IMG2IMG_PROMPT_HEIGHT}px;
+            max-height: ${isPromptResizable ? 'unset' : `${IMG2IMG_PROMPT_HEIGHT}px`};
           }
         }
       `,

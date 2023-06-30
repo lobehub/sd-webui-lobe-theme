@@ -19,13 +19,13 @@ export default (token: Theme) => css`
   }
 
   tr {
+    &:nth-of-type(odd) td {
+      background: ${token.colorFillQuaternary};
+    }
+
     &:hover td,
     &:nth-of-type(odd):hover td {
       background: ${token.colorFillSecondary};
-    }
-
-    &:nth-of-type(odd) td {
-      background: ${token.colorFillQuaternary};
     }
   }
 `;

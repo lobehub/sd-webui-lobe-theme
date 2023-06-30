@@ -14,22 +14,52 @@ export const useStyles = createStyles(({ css, token }) => ({
     .ant-form-item {
       margin: 0 !important;
     }
+
+    .ant-form-item .ant-form-item-label > label {
+      height: unset;
+    }
+
+    .ant-row {
+      position: relative;
+      flex-wrap: nowrap;
+    }
+
+    .ant-form-item-label {
+      position: relative;
+      flex: 1;
+      max-width: 100%;
+    }
+
+    .ant-form-item-control {
+      position: relative;
+      flex: 0;
+      min-width: unset !important;
+    }
   `,
   formTitle: css`
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
     text-align: left;
 
     > div {
+      font-weight: 500;
       line-height: 1;
     }
 
     > small {
-      line-height: 1;
+      display: block;
+
+      line-height: 1.1;
       color: ${token.colorTextDescription};
+      word-wrap: break-word;
+      white-space: pre-wrap;
     }
   `,
   group: css`
-    overflow: hidden;
-
     .ant-collapse-header {
       background: ${token.colorFillTertiary};
       border-radius: unset;
