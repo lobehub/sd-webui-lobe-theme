@@ -4,7 +4,7 @@ const TEXT2IMG_PROMPT_HEIGHT = 74;
 const IMG2IMG_PROMPT_HEIGHT = 98;
 export const useStyles = createStyles(
   (
-    { css, token, stylish, isDarkMode },
+    { css, token, stylish, isDarkMode, responsive },
     {
       isPromptResizable,
       layoutSplitPreview,
@@ -45,6 +45,12 @@ export const useStyles = createStyles(
 
         .gradio-group:has(.gradio-group:has(div:empty)) {
           display: none;
+        }
+
+        ${responsive.mobile} {
+          .gradio-row:has([id$='2img_results'], [id$='2img_results']) {
+            flex-direction: column-reverse;
+          }
         }
       `,
       draggableContainer: css`

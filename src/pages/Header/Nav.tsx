@@ -70,7 +70,7 @@ const Nav = memo(() => {
     });
     setItems(list.filter(Boolean));
     console.timeEnd('🤯 [layout] inject - Header');
-  }, []);
+  }, [mobile]);
 
   if (mobile) return <Burger items={items} opened={opened} setOpened={setOpened} />;
 
