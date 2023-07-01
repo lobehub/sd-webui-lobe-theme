@@ -78,21 +78,25 @@ const TagList = memo<TagListProps>(({ tags, setTags, type, setValue }) => {
   );
 
   useEffect(() => {
-    if (!addAutocompleteToArea || bind) return;
-    let retryTimes = 0;
-    const bindInterval = setInterval(() => {
-      console.time('🤯 [promptTagEditor] inject');
-      if (bind || retryTimes > 10) {
-        const inputDom = document.querySelector(`#${id}`) as HTMLInputElement;
-        if (inputDom) {
-          setBind(true);
-          addAutocompleteToArea(inputDom);
-          clearInterval(bindInterval);
-          console.timeEnd('🤯 [promptTagEditor] inject');
+    try {
+      if (!addAutocompleteToArea || bind) return;
+      let retryTimes = 0;
+      const bindInterval = setInterval(() => {
+        console.time('🤯 [promptTagEditor] inject');
+        if (bind || retryTimes > 10) {
+          const inputDom = document.querySelector(`#${id}`) as HTMLInputElement;
+          if (inputDom) {
+            setBind(true);
+            addAutocompleteToArea(inputDom);
+            clearInterval(bindInterval);
+            console.timeEnd('🤯 [promptTagEditor] inject');
+          }
         }
-      }
-      retryTimes++;
-    }, 1000);
+        retryTimes++;
+      }, 1000);
+    } catch (error) {
+      console.error(error);
+    }
   }, [bind]);
 
   return (
