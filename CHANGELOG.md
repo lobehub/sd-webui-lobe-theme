@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 2.6.2](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.6.1...v2.6.2)
+
+<sup>Released on **2023-07-01**</sup>
+
+#### 🐛 Bug Fixes
+
+- **autocomplete**: Fix some style bug on autocomplete.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **autocomplete**: Fix some style bug on autocomplete ([6e290e2](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/6e290e2))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 2.6.1](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.6.0...v2.6.1)
 
 <sup>Released on **2023-06-30**</sup>
