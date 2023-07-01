@@ -1,14 +1,7 @@
 import { createStyles } from 'antd-style';
 
 export const useStyles = createStyles(({ css, token }) => ({
-  container: css`
-    display: flex;
-    flex-direction: column;
-
-    width: 100%;
-    min-height: 100px;
-    max-height: 800px;
-  `,
+  container: css``,
   editor: css`
     resize: vertical;
 

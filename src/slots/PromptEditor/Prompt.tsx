@@ -28,13 +28,14 @@ const Prompt = memo<PromptProps>(({ type }) => {
 
   const setValue = useCallback(() => {
     try {
+      const newValue = tags.map((t) => t.text).join(', ');
       const textarea = get_uiCurrentTabContent().querySelector(id) as HTMLTextAreaElement;
-      if (textarea) textarea.value = tags.map((t) => t.text).join(', ');
+      if (textarea) textarea.value = newValue;
       updateInput(textarea);
     } catch (error) {
       console.debug(error);
     }
-  }, [tags]);
+  }, [tags, type]);
 
   const setCurrentValue = useCallback((currentTags: TagItem[]) => {
     try {

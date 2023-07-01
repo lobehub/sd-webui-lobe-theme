@@ -12,3 +12,5 @@ declare const onUiUpdate: (callback: (m: unknown) => void) => void;
 declare const onUiLoaded: (callback: (m: unknown) => void) => void;
 declare const onUiTabChange: (callback: (m: unknown) => void) => void;
 declare const onOptionsChanged: (callback: (m: unknown) => void) => void;
+declare const addAutocompleteToArea: (reference: any) => void;
+declare const lobeSetPrompt: (prompt: string) => void;

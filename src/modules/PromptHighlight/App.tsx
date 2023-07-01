@@ -29,7 +29,10 @@ const App = memo<AppProps>(({ parentId }) => {
   }, []);
 
   useEffect(() => {
-    nativeTextarea.style.display = 'none';
+    nativeTextarea.style.minHeight = '0';
+    nativeTextarea.style.maxHeight = '0';
+    nativeTextarea.style.padding = '0';
+    nativeTextarea.style.opacity = '0';
     nativeTextarea.addEventListener('change', handlePromptChange);
 
     return () => {
@@ -53,6 +56,7 @@ const App = memo<AppProps>(({ parentId }) => {
       className={cx(styles.editor, 'prompt_editor')}
       highlight={(code) => <SyntaxHighlighter theme={themeMode}>{code}</SyntaxHighlighter>}
       onBlur={onBlur}
+      onKeyUp={onBlur}
       onValueChange={setPrompt}
       padding={8}
       placeholder={nativeTextarea.placeholder}

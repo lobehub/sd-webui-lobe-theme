@@ -1,5 +1,3 @@
-import negativeData from '@/data/negative.json';
-import positiveData from '@/data/positive.json';
 import { Converter } from '@/script/formatPrompt';
 
 import { TagItem } from './TagList';
@@ -32,17 +30,4 @@ export const formatPrompt = (value: string) => {
     return Converter.convertStr2Array(newItem).join(', ');
   });
   return textArray.map((tag) => genTagType({ id: tag, text: tag }));
-};
-
-const genSuggestions = (array: string[]) =>
-  array.map((text) => {
-    return {
-      id: text,
-      text,
-    };
-  });
-
-export const suggestions = {
-  negative: genSuggestions(negativeData),
-  positive: genSuggestions(positiveData),
 };

@@ -11,28 +11,6 @@ export const useStyles = createStyles(
     }: { isPromptResizable: boolean; layoutSplitPreview: boolean },
   ) => {
     return {
-      autocompleteResults: css`
-        .autocompleteResults {
-          font-family: ${token.fontFamilyCode};
-
-          background: ${token.colorBgElevated} !important;
-          border-color: ${token.colorBorder} !important;
-          border-radius: ${token.borderRadius}px !important;
-          box-shadow: ${token.boxShadow};
-
-          li {
-            border-bottom: 1px solid ${token.colorBorder};
-
-            &:hover {
-              background: ${token.colorFillSecondary} !important;
-            }
-
-            &:nth-child(odd) {
-              background: transparent !important;
-            }
-          }
-        }
-      `,
       container: css`
         position: relative;
         flex: 1;

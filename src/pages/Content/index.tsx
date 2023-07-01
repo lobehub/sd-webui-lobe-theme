@@ -67,7 +67,6 @@ const Content = memo<DivProps>(({ className, ...props }) => {
         styles.container,
         styles.textares,
         styles.text2img,
-        styles.autocompleteResults,
         setting.layoutSplitPreview ? styles.splitView : styles.draggableContainer,
         useDragablePanel && previewStyle.styles.preview,
         className,

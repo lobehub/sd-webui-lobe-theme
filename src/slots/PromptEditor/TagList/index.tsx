@@ -1,7 +1,7 @@
-import { type FC, memo, useCallback, useMemo } from 'react';
+import { type FC, memo, useCallback, useEffect, useState } from 'react';
 import { WithContext, ReactTagsProps as WithContextProps } from 'react-tag-input';
 
-import { genTagType, suggestions } from '../utils';
+import { genTagType } from '../utils';
 import { useStyles } from './style';
 
 export interface TagItem {
@@ -35,6 +35,8 @@ interface TagListProps {
 }
 
 const TagList = memo<TagListProps>(({ tags, setTags, type, setValue }) => {
+  const id = `${type}_tag_editor`;
+  const [bind, setBind] = useState(false);
   const { styles } = useStyles(type);
   const handleDelete = useCallback(
     (index_: number) => {
@@ -75,21 +77,36 @@ const TagList = memo<TagListProps>(({ tags, setTags, type, setValue }) => {
     [tags],
   );
 
-  const suggestionData = useMemo(() => suggestions[type], [type]);
+  useEffect(() => {
+    if (!addAutocompleteToArea || bind) return;
+    let retryTimes = 0;
+    const bindInterval = setInterval(() => {
+      console.time('🤯 [promptTagEditor] inject');
+      if (bind || retryTimes > 10) {
+        const inputDom = document.querySelector(`#${id}`) as HTMLInputElement;
+        if (inputDom) {
+          setBind(true);
+          addAutocompleteToArea(inputDom);
+          clearInterval(bindInterval);
+          console.timeEnd('🤯 [promptTagEditor] inject');
+        }
+      }
+      retryTimes++;
+    }, 1000);
+  }, [bind]);
 
   return (
     <div className={styles}>
       <ReactTags
-        autocomplete
         delimiters={delimiters}
         editable
         handleAddition={handleAddition}
         handleDelete={handleDelete}
         handleDrag={handleDrag}
+        id={id}
         inline
         inputFieldPosition="bottom"
         onTagUpdate={handleTagUpdate}
-        suggestions={suggestionData}
         tags={tags}
       />
     </div>

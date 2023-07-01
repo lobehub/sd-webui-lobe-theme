@@ -50,7 +50,7 @@ export interface WebuiSetting {
 
 export const defaultSetting: WebuiSetting = {
   enableExtraNetworkSidebar: true,
-  enableHighlight: true,
+  enableHighlight: false,
   enableSidebar: true,
   enableWebFont: true,
   extraNetworkCardSize: 86,
@@ -66,7 +66,7 @@ export const defaultSetting: WebuiSetting = {
   logoType: 'lobe',
   neutralColor: undefined,
   primaryColor: undefined,
-  promptEditor: true,
+  promptEditor: false,
   promptTextareaType: 'resizable',
   sidebarExpand: true,
   sidebarFixedMode: 'fixed',

@@ -29,7 +29,7 @@ const GlobalStyle = createGlobalStyle(({ theme }) => [
   slider(theme),
   table(theme),
   tabs(theme),
-  extensions(),
+  extensions(theme),
 ]);
 
 export default GlobalStyle;

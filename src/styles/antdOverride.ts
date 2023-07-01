@@ -1,6 +1,13 @@
 import { Theme, css } from 'antd-style';
 
 export default (token: Theme) => css`
+  body {
+    ::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+
   .ant-tooltip-inner {
     display: flex;
     align-items: center;
