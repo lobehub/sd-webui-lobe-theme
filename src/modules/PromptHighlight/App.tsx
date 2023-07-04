@@ -63,7 +63,7 @@ const App = memo<AppProps>(({ parentId }) => {
             langs: [
               {
                 aliases: ['prompt'],
-                grammar: grammar,
+                grammar: grammar as any,
                 id: 'prompt',
                 scopeName: 'source.prompt',
               },
