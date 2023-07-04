@@ -1,7 +1,14 @@
-import { Form, type FormItemProps, FormProps, Swatches } from '@lobehub/ui';
+import { Form, type FormItemProps, FormProps, Icon, Swatches } from '@lobehub/ui';
 import { Button, Input, InputNumber, Segmented, Select, Switch } from 'antd';
 import isEqual from 'fast-deep-equal';
-import { Layout, Palette, PanelLeftClose, PanelRightClose, TextCursorInput } from 'lucide-react';
+import {
+  Layout,
+  Palette,
+  PanelLeftClose,
+  PanelRightClose,
+  RefreshCcwDot,
+  TextCursorInput,
+} from 'lucide-react';
 import { memo, useCallback, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { shallow } from 'zustand/shallow';
@@ -11,6 +18,7 @@ import { i18nOptions } from '@/i18n';
 import { NeutralColor, PrimaryColor, WebuiSetting, defaultSetting, useAppStore } from '@/store';
 
 import { colors, findKey, neutralColors, primaryColors } from './data';
+import { useStyles } from './style';
 
 const SettingForm = memo(() => {
   const setting = useAppStore((st) => st.setting, isEqual);
@@ -25,6 +33,7 @@ const SettingForm = memo(() => {
   const [neutralColor, setNeutralColor] = useState<NeutralColor | undefined>(
     setting.neutralColor || undefined,
   );
+  const { styles } = useStyles();
   const { t } = useTranslation();
 
   const onReset = useCallback(() => {
@@ -39,6 +48,21 @@ const SettingForm = memo(() => {
     },
     [primaryColor, neutralColor],
   );
+
+  const onSync = useCallback(() => {
+    const settingDom = gradioApp().querySelector(
+      '#setting_lobe_theme_config textarea',
+    ) as HTMLTextAreaElement;
+    const settingSubmitButton = gradioApp().querySelector('#settings_submit') as HTMLButtonElement;
+    if (settingDom && settingSubmitButton) {
+      settingDom.focus();
+      settingDom.value = JSON.stringify(rawSetting);
+      settingDom.blur();
+      setTimeout(() => {
+        settingSubmitButton.click();
+      }, 1000);
+    }
+  }, [rawSetting]);
 
   const items: FormProps['items'] = useMemo(
     () => [
@@ -131,6 +155,7 @@ const SettingForm = memo(() => {
             desc: t('settingSvgIconsDesc'),
             label: t('settingSvgIcons'),
             name: 'svgIcon',
+            valuePropName: 'checked',
           },
           {
             children: <Switch />,
@@ -310,11 +335,18 @@ const SettingForm = memo(() => {
 
   return (
     <Form
+      className={styles}
       footer={
         <>
           <Button htmlType="button" onClick={onReset} style={{ borderRadius: 4 }}>
             {t('settingButtomReset')}
           </Button>
+          <Button
+            icon={<Icon icon={RefreshCcwDot} />}
+            onClick={onSync}
+            title={`[WIP]${t('sync')}`}
+            type="primary"
+          />
           <Button htmlType="submit" style={{ borderRadius: 4 }} type="primary">
             {t('settingButtomSubmit')}
           </Button>

@@ -3,7 +3,7 @@ import { type SelectProps } from 'antd';
 export const i18nOptions: SelectProps['options'] = [
   {
     label: 'English',
-    value: 'en',
+    value: 'en_US',
   },
   {
     label: '简体中文',

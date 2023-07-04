@@ -84,6 +84,7 @@ const translation = {
   settingSvgIcons: 'Use SVG Icons',
   settingSvgIconsDesc: 'Replace all Emoji icons in stable diffusion webui with SVG icons globally',
   switchTheme: 'Switch Light/Dark Theme',
+  sync: 'Sync with webui setting',
   themeFeedback: 'Theme Feedback',
   themeSetting: 'Theme Settings',
 };

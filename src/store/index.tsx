@@ -3,7 +3,7 @@ import { devtools } from 'zustand/middleware';
 
 export const SETTING_KEY = 'SD-KITCHEN-SETTING';
 
-export type I18n = 'en' | 'zh-CN';
+export type I18n = 'en_US' | 'zh-CN';
 
 export type PrimaryColor =
   | 'blue'
@@ -57,7 +57,7 @@ export const defaultSetting: WebuiSetting = {
   extraNetworkFixedMode: 'fixed',
   extraNetworkSidebarExpand: true,
   extraNetworkSidebarWidth: 340,
-  i18n: 'en',
+  i18n: 'en_US',
   layoutHideFooter: false,
   layoutSplitPreview: false,
   liteAnimation: false,
@@ -94,11 +94,16 @@ export const useAppStore = create<AppState>()(
     onLoadSetting: () => {
       console.time('🤯 [setting] loaded');
       let localSetting: any = localStorage.getItem(SETTING_KEY);
+      let webuiSetting: any = (window as any)?.opts?.['opts.lobe_theme_config'];
       if (localSetting) {
+        console.info('🤯 [setting] loaded local setting');
         localSetting = JSON.parse(localSetting);
+      } else if (webuiSetting) {
+        console.info('🤯 [setting] loaded webui setting');
+        localSetting = JSON.parse(webuiSetting);
       } else {
+        console.info('🤯 [setting] loaded default setting');
         localSetting = defaultSetting;
-        localStorage.setItem(SETTING_KEY, JSON.stringify(defaultSetting));
       }
       const setting = { ...defaultSetting, ...localSetting };
 

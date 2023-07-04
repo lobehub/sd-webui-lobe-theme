@@ -35,24 +35,22 @@ const Actions = memo<ActionsProps>(() => {
     window.location.replace(qs.stringifyUrl(gradioURL));
   }, [themeMode]);
 
-  const themeSwitch = (
-    <ActionIcon
-      icon={themeMode === 'light' ? Sun : Moon}
-      onClick={handleSetTheme}
-      title={t('switchTheme')}
-    />
-  );
-
-  if (mobile) return themeSwitch;
-
   return (
     <>
       <Space.Compact>
-        <a href="https://civitai.com/" rel="noreferrer" target="_blank">
-          <ActionIcon icon={CivitaiLogo} title="Civitai" />
-        </a>
-        <ActionIcon icon={Github} onClick={() => setIsModalOpen(true)} title={t('feedback')} />
-        {themeSwitch}
+        {!mobile && (
+          <>
+            <a href="https://civitai.com/" rel="noreferrer" target="_blank">
+              <ActionIcon icon={CivitaiLogo} title="Civitai" />
+            </a>
+            <ActionIcon icon={Github} onClick={() => setIsModalOpen(true)} title={t('feedback')} />
+          </>
+        )}
+        <ActionIcon
+          icon={themeMode === 'light' ? Sun : Moon}
+          onClick={handleSetTheme}
+          title={t('switchTheme')}
+        />
         <ActionIcon icon={Settings} onClick={() => setIsSettingOpen(true)} title={t('setting')} />
       </Space.Compact>
       <Setting onCancel={() => setIsSettingOpen(false)} open={isSettingOpen} />

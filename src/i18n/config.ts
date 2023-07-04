@@ -3,7 +3,7 @@ import { initReactI18next } from 'react-i18next';
 
 import { SETTING_KEY, WebuiSetting } from '@/store';
 
-import en from './lang/en';
+import en_US from './lang/en_US';
 import ja_JP from './lang/ja_JP';
 import ko_KR from './lang/ko_KR';
 import zh_CN from './lang/zh_CN';
@@ -13,11 +13,11 @@ const localSetting = JSON.parse(localStorage.getItem(SETTING_KEY) as any) as Web
 
 i18next.use(initReactI18next).init({
   debug: process.env.NODE_ENV === 'development',
-  fallbackLng: 'en',
-  lng: localSetting?.i18n || 'en',
+  fallbackLng: 'en_US',
+  lng: localSetting?.i18n || 'en_US',
   resources: {
-    en: {
-      translation: en,
+    en_US: {
+      translation: en_US,
     },
     ja_JP: {
       translation: ja_JP,

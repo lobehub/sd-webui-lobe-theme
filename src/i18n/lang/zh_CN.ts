@@ -78,6 +78,7 @@ const translation: Translation = {
   settingSvgIcons: '使用 SVG 图标',
   settingSvgIconsDesc: '将 stable diffusion webui 中的 Emoji 图标全局替换为 SVG 图标',
   switchTheme: '切换亮暗色主题',
+  sync: '与 WebUI 设置同步',
   themeFeedback: '主题反馈',
   themeSetting: '主题设置',
 };

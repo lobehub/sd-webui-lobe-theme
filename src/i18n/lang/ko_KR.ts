@@ -83,6 +83,7 @@ const translation: Translation = {
   settingSvgIconsDesc:
     'stable diffusion webui의 이모지 아이콘을 전역적으로 SVG 아이콘으로 교체합니다.',
   switchTheme: '밝기 테마 전환',
+  sync: '웹 UI 설정과 동기화',
   themeFeedback: '테마 피드백',
   themeSetting: '테마 설정',
 };

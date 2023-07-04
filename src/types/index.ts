@@ -1,6 +1,6 @@
 import { type HTMLAttributes } from 'react';
 
-import translation from '@/i18n/lang/en';
+import translation from '@/i18n/lang/en_US';
 
 export const resources = {
   translation,

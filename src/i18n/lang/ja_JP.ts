@@ -83,6 +83,7 @@ const translation: Translation = {
   settingSvgIcons: 'SVGアイコンを使用',
   settingSvgIconsDesc: 'stable diffusion webuiの絵文字アイコンをすべてSVGアイコンに置き換えます',
   switchTheme: '明暗テーマを切り替える',
+  sync: 'WebUIの設定と同期する',
   themeFeedback: 'テーマのフィードバック',
   themeSetting: 'テーマ設定',
 };

@@ -7,7 +7,7 @@ import { defineConfig } from 'vite';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
-const SD_HOST = 'localhost';
+const SD_HOST = '127.0.0.1';
 const SD_PORT = 7860;
 export default defineConfig({
   base: '/dev',
@@ -102,7 +102,7 @@ export default defineConfig({
     },
   },
   server: {
-    host: 'localhost',
+    host: '127.0.0.1',
     port: 8000,
     proxy: {
       '/queue/join': {
