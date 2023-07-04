@@ -7,8 +7,8 @@ export const useStyles = createStyles(
         display: none;
       }
 
-      #txt2img-extra-netwrok-sidebar,
-      #img2img-extra-netwrok-sidebar {
+      #txt2img-extra-network-sidebar,
+      #img2img-extra-network-sidebar {
         button.lg.secondary.gradio-button,
         #txt2img_extra_sort,
         #img2img_extra_sort {

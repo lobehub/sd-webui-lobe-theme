@@ -71,12 +71,12 @@ const Inner = memo(() => {
         {extraLoading && <Skeleton active />}
         <div style={extraLoading ? { display: 'none' } : {}}>
           <div
-            id="txt2img-extra-netwrok-sidebar"
+            id="txt2img-extra-network-sidebar"
             ref={txt2imgExtraNetworkSidebarReference}
             style={currentTab === 'tab_img2img' ? { display: 'none' } : {}}
           />
           <div
-            id="img2img-extra-netwrok-sidebar"
+            id="img2img-extra-network-sidebar"
             ref={img2imgExtraNetworkSidebarReference}
             style={currentTab === 'tab_img2img' ? {} : { display: 'none' }}
           />
