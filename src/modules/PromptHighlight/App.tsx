@@ -1,11 +1,13 @@
+import { SyntaxHighlighter } from '@lobehub/ui';
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import Editor from 'react-simple-code-editor';
 import { shallow } from 'zustand/shallow';
 
-import { SyntaxHighlighter } from '@/components';
 import { useExternalTextareaObserver } from '@/hooks/useExternalTextareaObserver';
 import { useAppStore } from '@/store';
 
+import grammar from './prompt.tmLanguage.json';
+import { themeConfig } from './promptTheme';
 import { useStyles } from './style';
 
 interface AppProps {
@@ -54,7 +56,25 @@ const App = memo<AppProps>(({ parentId }) => {
   return (
     <Editor
       className={cx(styles.editor, 'prompt_editor')}
-      highlight={(code) => <SyntaxHighlighter theme={themeMode}>{code}</SyntaxHighlighter>}
+      highlight={(code) => (
+        <SyntaxHighlighter
+          language="prompt"
+          options={{
+            langs: [
+              {
+                aliases: ['prompt'],
+                grammar: grammar,
+                id: 'prompt',
+                scopeName: 'source.prompt',
+              },
+            ],
+            themes: [themeConfig(true), themeConfig(false)],
+          }}
+          theme={themeMode}
+        >
+          {code}
+        </SyntaxHighlighter>
+      )}
       onBlur={onBlur}
       onKeyUp={onBlur}
       onValueChange={setPrompt}

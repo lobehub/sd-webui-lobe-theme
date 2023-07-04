@@ -1,10 +1,15 @@
-import { type DivProps, DraggablePanel, LayoutSidebarInner } from '@lobehub/ui';
+import {
+  type DivProps,
+  DraggablePanel,
+  DraggablePanelContainer,
+  DraggablePanelHeader,
+  LayoutSidebarInner,
+} from '@lobehub/ui';
 import { useResponsive } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { memo, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { SidebarContainer, SidebarHeader } from '@/components';
 import { useAppStore } from '@/store';
 
 import Inner from './Inner';
@@ -43,11 +48,11 @@ const QuickSettingSidebar = memo<QuickSettingSidebarProps>(({ headerHeight }) =>
       }}
     >
       <LayoutSidebarInner>
-        <SidebarContainer
+        <DraggablePanelContainer
           className={styles.container}
           style={mode === 'float' ? { background: theme.colorBgContainer } : {}}
         >
-          <SidebarHeader
+          <DraggablePanelHeader
             pin={pin}
             position="left"
             setExpand={setExpand}
@@ -55,7 +60,7 @@ const QuickSettingSidebar = memo<QuickSettingSidebarProps>(({ headerHeight }) =>
             title={t('quickSetting')}
           />
           <Inner />
-        </SidebarContainer>
+        </DraggablePanelContainer>
       </LayoutSidebarInner>
     </DraggablePanel>
   );

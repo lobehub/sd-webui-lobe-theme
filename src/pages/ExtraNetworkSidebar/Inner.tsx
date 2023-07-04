@@ -1,11 +1,10 @@
-import { ActionIcon } from '@lobehub/ui';
+import { ActionIcon, DraggablePanelBody, DraggablePanelFooter } from '@lobehub/ui';
 import { useTimeout } from 'ahooks';
 import { Skeleton, Slider } from 'antd';
 import { ZoomIn, ZoomOut } from 'lucide-react';
 import { memo, useEffect, useRef, useState } from 'react';
 import { shallow } from 'zustand/shallow';
 
-import { SidebarBody, SidebarFooter } from '@/components';
 import { useStyles } from '@/pages/ExtraNetworkSidebar/style';
 import civitaiHelperFix from '@/script/civitaiHelperFix';
 import { useAppStore } from '@/store';
@@ -68,7 +67,7 @@ const Inner = memo(() => {
 
   return (
     <>
-      <SidebarBody className={styles.body}>
+      <DraggablePanelBody className={styles.body}>
         {extraLoading && <Skeleton active />}
         <div style={extraLoading ? { display: 'none' } : {}}>
           <div
@@ -82,8 +81,8 @@ const Inner = memo(() => {
             style={currentTab === 'tab_img2img' ? {} : { display: 'none' }}
           />
         </div>
-      </SidebarBody>
-      <SidebarFooter>
+      </DraggablePanelBody>
+      <DraggablePanelFooter>
         <ActionIcon
           icon={setting.extraNetworkCardSize < size ? ZoomOut : ZoomIn}
           onClick={() => setSize(setting.extraNetworkCardSize)}
@@ -98,7 +97,7 @@ const Inner = memo(() => {
           style={{ flex: 1 }}
           value={size}
         />
-      </SidebarFooter>
+      </DraggablePanelFooter>
     </>
   );
 });

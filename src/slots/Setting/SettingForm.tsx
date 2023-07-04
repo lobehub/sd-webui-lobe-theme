@@ -1,8 +1,8 @@
-import { Swatches } from '@lobehub/ui';
-import { Button, Form, Input, InputNumber, Segmented, Select, Switch } from 'antd';
+import { Form, type FormItemProps, FormProps, Swatches } from '@lobehub/ui';
+import { Button, Input, InputNumber, Segmented, Select, Switch } from 'antd';
 import isEqual from 'fast-deep-equal';
 import { Layout, Palette, PanelLeftClose, PanelRightClose, TextCursorInput } from 'lucide-react';
-import { memo, useCallback, useState } from 'react';
+import { memo, useCallback, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { shallow } from 'zustand/shallow';
 
@@ -10,10 +10,7 @@ import { CustomLogo } from '@/components';
 import { i18nOptions } from '@/i18n';
 import { NeutralColor, PrimaryColor, WebuiSetting, defaultSetting, useAppStore } from '@/store';
 
-import FormGroup from './FormGroup';
-import FormItem from './FormItem';
 import { colors, findKey, neutralColors, primaryColors } from './data';
-import { useStyles } from './style';
 
 const SettingForm = memo(() => {
   const setting = useAppStore((st) => st.setting, isEqual);
@@ -28,7 +25,6 @@ const SettingForm = memo(() => {
   const [neutralColor, setNeutralColor] = useState<NeutralColor | undefined>(
     setting.neutralColor || undefined,
   );
-  const { styles } = useStyles();
   const { t } = useTranslation();
 
   const onReset = useCallback(() => {
@@ -44,191 +40,186 @@ const SettingForm = memo(() => {
     [primaryColor, neutralColor],
   );
 
-  return (
-    <Form
-      className={styles.form}
-      colon={false}
-      initialValues={setting}
-      layout="horizontal"
-      onFinish={onFinish}
-      onValuesChange={(_, v) => setRawSetting(v)}
-    >
-      <FormGroup icon={Palette} title={t('settingGroupTheme')}>
-        <FormItem desc={t('settingLanguageDesc')} label={t('settingLanguage')} name="i18n">
-          <Select options={i18nOptions} />
-        </FormItem>
-        <FormItem
-          desc={t('settingReduceAnimationDesc')}
-          divider
-          label={t('settingReduceAnimation')}
-          name="liteAnimation"
-          valuePropName="checked"
-        >
-          <Switch />
-        </FormItem>
-        <FormItem desc={t('settingPrimaryColorDesc')} divider label={t('settingPrimaryColor')}>
-          <Swatches
-            activeColor={primaryColor ? colors[primaryColor] : undefined}
-            colors={primaryColors}
-            onSelect={(c) => setPrimaryColor(c ? findKey(colors, c) : undefined)}
-          />
-        </FormItem>
-        <FormItem desc={t('settingNeutralColorDesc')} divider label={t('settingNeutralColor')}>
-          <Swatches
-            activeColor={neutralColor ? neutralColors[neutralColor] : undefined}
-            colors={Object.values(neutralColors)}
-            onSelect={(c) => setNeutralColor(c ? findKey(neutralColors, c) : undefined)}
-          />
-        </FormItem>
-        <FormItem
-          desc={t('settingLogoTypeDesc')}
-          divider
-          label={t('settingLogoType')}
-          name="logoType"
-        >
-          <Segmented
-            options={[
-              {
-                label: t('lobe'),
-                value: 'lobe',
-              },
-              {
-                label: t('kitchen'),
-                value: 'kitchen',
-              },
-              {
-                label: t('custom'),
-                value: 'custom',
-              },
-            ]}
-          />
-        </FormItem>
-        {rawSetting.logoType === 'custom' && (
-          <>
-            <FormItem
-              desc={t('settingCustomLogoDesc')}
-              label={t('settingCustomLogo')}
-              name="logoCustomUrl"
-            >
-              <Input />
-            </FormItem>
-            <FormItem
-              desc={t('settingCustomTitleDesc')}
-              label={t('settingCustomTitle')}
-              name="logoCustomTitle"
-            >
-              <Input />
-            </FormItem>
-            <FormItem label={t('settingLogoPreview')}>
+  const items: FormProps['items'] = useMemo(
+    () => [
+      {
+        children: [
+          {
+            children: <Select options={i18nOptions} />,
+            desc: t('settingLanguageDesc'),
+            label: t('settingLanguage'),
+            name: 'i18n',
+          },
+          {
+            children: <Switch />,
+            desc: t('settingReduceAnimationDesc'),
+            label: t('settingReduceAnimation'),
+            name: 'liteAnimation',
+            valuePropName: 'checked',
+          },
+          {
+            children: (
+              <Swatches
+                activeColor={primaryColor ? colors[primaryColor] : undefined}
+                colors={primaryColors}
+                onSelect={(c) => setPrimaryColor(c ? findKey(colors, c) : undefined)}
+              />
+            ),
+            desc: t('settingPrimaryColorDesc'),
+            label: t('settingPrimaryColor'),
+          },
+          {
+            children: (
+              <Swatches
+                activeColor={neutralColor ? neutralColors[neutralColor] : undefined}
+                colors={Object.values(neutralColors)}
+                onSelect={(c) => setNeutralColor(c ? findKey(neutralColors, c) : undefined)}
+              />
+            ),
+            desc: t('settingNeutralColorDesc'),
+            label: t('settingNeutralColor'),
+          },
+          {
+            children: (
+              <Segmented
+                options={[
+                  {
+                    label: t('lobe'),
+                    value: 'lobe',
+                  },
+                  {
+                    label: t('kitchen'),
+                    value: 'kitchen',
+                  },
+                  {
+                    label: t('custom'),
+                    value: 'custom',
+                  },
+                ]}
+              />
+            ),
+            desc: t('settingLogoTypeDesc'),
+            label: t('settingLogoType'),
+            name: 'logoType',
+          },
+          rawSetting.logoType === 'custom' && {
+            children: <Input />,
+            desc: t('settingCustomLogoDesc'),
+            divider: false,
+            label: t('settingCustomLogo'),
+            name: 'logoCustomUrl',
+          },
+          rawSetting.logoType === 'custom' && {
+            children: <Input />,
+            desc: t('settingCustomTitleDesc'),
+            divider: false,
+            label: t('settingCustomTitle'),
+            name: 'logoCustomTitle',
+          },
+          rawSetting.logoType === 'custom' && {
+            children: (
               <CustomLogo
                 logoCustomTitle={rawSetting.logoCustomTitle}
                 logoCustomUrl={rawSetting.logoCustomUrl}
               />
-            </FormItem>
-          </>
-        )}
-        <FormItem
-          desc={t('settingSvgIconsDesc')}
-          divider
-          label={t('settingSvgIcons')}
-          name="svgIcon"
-          valuePropName="checked"
-        >
-          <Switch />
-        </FormItem>
-        <FormItem
-          desc={t('settingCustomFontDesc')}
-          divider
-          label={t('settingCustomFont')}
-          name="enableWebFont"
-          valuePropName="checked"
-        >
-          <Switch />
-        </FormItem>
-      </FormGroup>
-      <FormGroup icon={TextCursorInput} title={t('settingGroupPromotTextarea')}>
-        <FormItem
-          desc={t('settingPromptDisplayModeDesc')}
-          label={t('settingPromptDisplayMode')}
-          name="promotTextarea"
-        >
-          <Segmented
-            options={[
-              {
-                label: t('scroll'),
-                value: 'scroll',
-              },
-              {
-                label: t('resizable'),
-                value: 'resizable',
-              },
-            ]}
-          />
-        </FormItem>
-        <FormItem
-          desc={t('settingPromptHighlightDesc')}
-          divider
-          label={t('settingPromptHighlight')}
-          name="enableHighlight"
-          valuePropName="checked"
-        >
-          <Switch />
-        </FormItem>
-        <FormItem
-          desc={t('settingPromptEditorDesc')}
-          divider
-          label={t('settingPromptEditor')}
-          name="promptEditor"
-          valuePropName="checked"
-        >
-          <Switch />
-        </FormItem>
-      </FormGroup>
-      <FormGroup icon={Layout} title={t('settingGroupLayout')}>
-        <FormItem
-          desc={t('settingSplitPreviewerDesc')}
-          label={t('settingSplitPreviewer')}
-          name="layoutSplitPreview"
-          valuePropName="checked"
-        >
-          <Switch />
-        </FormItem>
-        <FormItem
-          desc={t('settingHideFooterDesc')}
-          divider
-          label={t('settingHideFooter')}
-          name="layoutHideFooter"
-          valuePropName="checked"
-        >
-          <Switch />
-        </FormItem>
-      </FormGroup>
-      <FormGroup icon={PanelLeftClose} title={t('settingGroupQuickSettingSidebar')}>
-        <FormItem
-          desc={t('settingQuickSettingSidebarEnableDesc')}
-          label={t('settingQuickSettingSidebarEnable')}
-          name="enableSidebar"
-          valuePropName="checked"
-        >
-          <Switch />
-        </FormItem>
-        {rawSetting.enableSidebar && (
-          <>
-            <FormItem
-              desc={t('settingQuickSettingSidebarDefaultExpandDesc')}
-              divider
-              label={t('settingQuickSettingSidebarDefaultExpand')}
-              name="sidebarExpand"
-              valuePropName="checked"
-            >
-              <Switch />
-            </FormItem>
-            <FormItem
-              desc={t('settingQuickSettingSidebarDisplayModeDesc')}
-              divider
-              label={t('settingQuickSettingSidebarDisplayMode')}
-              name="sidebarFixedMode"
-            >
+            ),
+            divider: false,
+            label: t('settingLogoPreview'),
+          },
+          {
+            children: <Switch />,
+            desc: t('settingSvgIconsDesc'),
+            label: t('settingSvgIcons'),
+            name: 'svgIcon',
+          },
+          {
+            children: <Switch />,
+            desc: t('settingCustomFontDesc'),
+            label: t('settingCustomFont'),
+            name: 'enableWebFont',
+            valuePropName: 'checked',
+          },
+        ].filter(Boolean) as FormItemProps[],
+        icon: Palette,
+        title: t('settingGroupTheme'),
+      },
+      {
+        children: [
+          {
+            children: (
+              <Segmented
+                options={[
+                  {
+                    label: t('scroll'),
+                    value: 'scroll',
+                  },
+                  {
+                    label: t('resizable'),
+                    value: 'resizable',
+                  },
+                ]}
+              />
+            ),
+            desc: t('settingPromptDisplayModeDesc'),
+            label: t('settingPromptDisplayMode'),
+            name: 'promotTextarea',
+          },
+          {
+            children: <Switch />,
+            desc: t('settingPromptHighlightDesc'),
+            label: t('settingPromptHighlight'),
+            name: 'enableHighlight',
+            valuePropName: 'checked',
+          },
+          {
+            children: <Switch />,
+            desc: t('settingPromptEditorDesc'),
+            label: t('settingPromptEditor'),
+            name: 'promptEditor',
+            valuePropName: 'checked',
+          },
+        ],
+        icon: TextCursorInput,
+        title: t('settingGroupPromotTextarea'),
+      },
+      {
+        children: [
+          {
+            children: <Switch />,
+            desc: t('settingSplitPreviewerDesc'),
+            label: t('settingSplitPreviewer'),
+            name: 'layoutSplitPreview',
+            valuePropName: 'checked',
+          },
+          {
+            children: <Switch />,
+            desc: t('settingHideFooterDesc'),
+            label: t('settingHideFooter'),
+            name: 'layoutHideFooter',
+            valuePropName: 'checked',
+          },
+        ],
+        icon: Layout,
+        title: t('settingGroupLayout'),
+      },
+      {
+        children: [
+          {
+            children: <Switch />,
+            desc: t('settingQuickSettingSidebarEnableDesc'),
+            label: t('settingQuickSettingSidebarEnable'),
+            name: 'enableSidebar',
+            valuePropName: 'checked',
+          },
+          rawSetting.enableSidebar && {
+            children: <Switch />,
+            desc: t('settingQuickSettingSidebarDefaultExpandDesc'),
+            label: t('settingQuickSettingSidebarDefaultExpand'),
+            name: 'sidebarExpand',
+            valuePropName: 'checked',
+          },
+          rawSetting.enableSidebar && {
+            children: (
               <Segmented
                 options={[
                   {
@@ -241,35 +232,32 @@ const SettingForm = memo(() => {
                   },
                 ]}
               />
-            </FormItem>
-            <FormItem
-              desc={t('settingQuickSettingSidebarDefaultWidthDesc')}
-              divider
-              label={t('settingQuickSettingSidebarDefaultWidth')}
-              name="sidebarWidth"
-            >
-              <InputNumber />
-            </FormItem>
-          </>
-        )}
-      </FormGroup>
-      <FormGroup icon={PanelRightClose} title={t('settingGroupExtraNetworkSidebar')}>
-        <FormItem
-          desc={t('settingExtraNetworkSidebarEnableDesc')}
-          label={t('settingExtraNetworkSidebarEnable')}
-          name="enableExtraNetworkSidebar"
-          valuePropName="checked"
-        >
-          <Switch />
-        </FormItem>
-        {rawSetting.enableExtraNetworkSidebar && (
-          <>
-            <FormItem
-              desc={t('settingExtraNetworkSidebarDisplayModeDesc')}
-              divider
-              label={t('settingExtraNetworkSidebarDisplayMode')}
-              name="extraNetworkFixedMode"
-            >
+            ),
+            desc: t('settingQuickSettingSidebarDisplayModeDesc'),
+            label: t('settingQuickSettingSidebarDisplayMode'),
+            name: 'sidebarFixedMode',
+          },
+          rawSetting.enableSidebar && {
+            children: <InputNumber />,
+            desc: t('settingQuickSettingSidebarDefaultWidthDesc'),
+            label: t('settingQuickSettingSidebarDefaultWidth'),
+            name: 'sidebarWidth',
+          },
+        ].filter(Boolean) as FormItemProps[],
+        icon: PanelLeftClose,
+        title: t('settingGroupQuickSettingSidebar'),
+      },
+      {
+        children: [
+          {
+            children: <Switch />,
+            desc: t('settingExtraNetworkSidebarEnableDesc'),
+            label: t('settingExtraNetworkSidebarEnable'),
+            name: 'enableExtraNetworkSidebar',
+            valuePropName: 'checked',
+          },
+          rawSetting.enableExtraNetworkSidebar && {
+            children: (
               <Segmented
                 options={[
                   {
@@ -282,44 +270,61 @@ const SettingForm = memo(() => {
                   },
                 ]}
               />
-            </FormItem>
-            <FormItem
-              desc={t('settingExtraNetworkSidebarDefaultExpandDesc')}
-              divider
-              label={t('settingExtraNetworkSidebarDefaultExpand')}
-              name="extraNetworkSidebarExpand"
-              valuePropName="checked"
-            >
-              <Switch />
-            </FormItem>
-            <FormItem
-              desc={t('settingExtraNetworkSidebarDefaultWidthDesc')}
-              divider
-              label={t('settingExtraNetworkSidebarDefaultWidth')}
-              name="extraNetworkSidebarWidth"
-            >
-              <InputNumber />
-            </FormItem>
-            <FormItem
-              desc={t('settingExtraNetworkSidebarDefaultCardSizeDesc')}
-              divider
-              label={t('settingExtraNetworkSidebarDefaultCardSize')}
-              name="extraNetworkCardSize"
-            >
-              <InputNumber />
-            </FormItem>
-          </>
-        )}
-      </FormGroup>
-      <div className={styles.footer}>
-        <Button htmlType="button" onClick={onReset} style={{ borderRadius: 4 }}>
-          {t('settingButtomReset')}
-        </Button>
-        <Button htmlType="submit" style={{ borderRadius: 4 }} type="primary">
-          {t('settingButtomSubmit')}
-        </Button>
-      </div>
-    </Form>
+            ),
+            desc: t('settingExtraNetworkSidebarDisplayModeDesc'),
+            label: t('settingExtraNetworkSidebarDisplayMode'),
+            name: 'extraNetworkFixedMode',
+          },
+          rawSetting.enableExtraNetworkSidebar && {
+            children: <Switch />,
+            desc: t('settingExtraNetworkSidebarDefaultExpandDesc'),
+            label: t('settingExtraNetworkSidebarDefaultExpand'),
+            name: 'extraNetworkSidebarExpand',
+            valuePropName: 'checked',
+          },
+          rawSetting.enableExtraNetworkSidebar && {
+            children: <InputNumber />,
+            desc: t('settingExtraNetworkSidebarDefaultWidthDesc'),
+            label: t('settingExtraNetworkSidebarDefaultWidth'),
+            name: 'extraNetworkSidebarWidth',
+          },
+          rawSetting.enableExtraNetworkSidebar && {
+            children: <InputNumber />,
+            desc: t('settingExtraNetworkSidebarDefaultCardSizeDesc'),
+            label: t('settingExtraNetworkSidebarDefaultCardSize'),
+            name: 'extraNetworkCardSize',
+          },
+        ].filter(Boolean) as FormItemProps[],
+        icon: PanelRightClose,
+        title: t('settingGroupExtraNetworkSidebar'),
+      },
+    ],
+    [
+      rawSetting.logoType,
+      rawSetting.enableExtraNetworkSidebar,
+      rawSetting.enableSidebar,
+      rawSetting.logoCustomTitle,
+      rawSetting.logoCustomTitle,
+    ],
+  );
+
+  return (
+    <Form
+      footer={
+        <>
+          <Button htmlType="button" onClick={onReset} style={{ borderRadius: 4 }}>
+            {t('settingButtomReset')}
+          </Button>
+          <Button htmlType="submit" style={{ borderRadius: 4 }} type="primary">
+            {t('settingButtomSubmit')}
+          </Button>
+        </>
+      }
+      initialValues={setting}
+      items={items}
+      onFinish={onFinish}
+      onValuesChange={(_, v) => setRawSetting(v)}
+    />
   );
 });
 

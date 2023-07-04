@@ -59,12 +59,8 @@ const Layout = memo<DivProps>(({ children }) => {
     setting && (
       <ThemeProvider
         customToken={genCustomToken}
+        enableWebfonts={setting.enableWebFont}
         themeMode={themeMode}
-        webfonts={
-          setting.enableWebFont ?
-            undefined :
-            ['https://npm.elemecdn.com/normalize.css/normalize.css']
-        }
       >
         {children}
       </ThemeProvider>

@@ -1,10 +1,14 @@
-import { DraggablePanel, LayoutSidebarInner } from '@lobehub/ui';
+import {
+  DraggablePanel,
+  DraggablePanelContainer,
+  DraggablePanelHeader,
+  LayoutSidebarInner,
+} from '@lobehub/ui';
 import { useResponsive } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { memo, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { SidebarContainer, SidebarHeader } from '@/components';
 import { useAppStore } from '@/store';
 import { type DivProps } from '@/types';
 
@@ -56,11 +60,11 @@ const ExtraNetworkSidebar = memo<ExtraNetworkSidebarProps>(({ headerHeight }) =>
       placement="right"
     >
       <LayoutSidebarInner>
-        <SidebarContainer
+        <DraggablePanelContainer
           className={styles.container}
           style={mode === 'float' ? { background: theme.colorBgContainer } : {}}
         >
-          <SidebarHeader
+          <DraggablePanelHeader
             pin={pin}
             position="right"
             setExpand={setExpand}
@@ -68,7 +72,7 @@ const ExtraNetworkSidebar = memo<ExtraNetworkSidebarProps>(({ headerHeight }) =>
             title={t('extraNetwork')}
           />
           <Inner />
-        </SidebarContainer>
+        </DraggablePanelContainer>
       </LayoutSidebarInner>
     </DraggablePanel>
   );
