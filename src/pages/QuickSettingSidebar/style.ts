@@ -1,13 +1,13 @@
 import { createStyles } from 'antd-style';
 
 export const useStyles = createStyles(
-  ({ css }, { headerHeight = 64 }: { headerHeight?: number }) => ({
+  ({ css }, { headerHeight = 64, width }: { headerHeight?: number; width: number }) => ({
     container: css`
       height: calc(100vh - ${headerHeight}px);
 
       ul.options {
-        li {
-          max-width: 240px !important;
+        > li {
+          max-width: ${width - 48}px;
         }
       }
 

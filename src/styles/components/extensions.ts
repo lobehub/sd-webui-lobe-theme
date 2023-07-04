@@ -37,7 +37,7 @@ export default (token: Theme) => {
             background: ${token.colorFillSecondary} !important;
           }
 
-          &:nth-child(odd) {
+          &:nth-of-type(odd) {
             background: transparent !important;
           }
         }

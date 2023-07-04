@@ -24,7 +24,8 @@ const QuickSettingSidebar = memo<QuickSettingSidebarProps>(({ headerHeight }) =>
   const setting = useAppStore((st) => st.setting, isEqual);
   const [expand, setExpand] = useState<boolean>(mobile ? false : setting.sidebarExpand);
   const [pin, setPin] = useState<boolean>(setting.sidebarFixedMode === 'fixed');
-  const { styles, theme } = useStyles({ headerHeight });
+  const [width, setWidth] = useState<number>(setting.sidebarWidth);
+  const { styles, theme } = useStyles({ headerHeight, width });
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -40,6 +41,7 @@ const QuickSettingSidebar = memo<QuickSettingSidebarProps>(({ headerHeight }) =>
       minWidth={200}
       mode={mode}
       onExpandChange={setExpand}
+      onSizeChange={(_, size) => size?.width && setWidth(Number.parseInt(String(size.width)))}
       pin={pin}
       placement="left"
       style={{
