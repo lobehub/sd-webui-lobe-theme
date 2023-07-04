@@ -41,7 +41,7 @@ export const useStyles = createStyles(
       left: 0;
 
       width: 100vw;
-      height: 600px;
+      height: 100%;
 
       opacity: ${isPrimaryColor ? (isDarkMode ? 0.2 : 0.05) : isDarkMode ? 0.15 : 0};
       background: radial-gradient(
