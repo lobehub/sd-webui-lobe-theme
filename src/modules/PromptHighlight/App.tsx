@@ -10,6 +10,18 @@ import grammar from './prompt.tmLanguage.json';
 import { themeConfig } from './promptTheme';
 import { useStyles } from './style';
 
+const options: any = {
+  langs: [
+    {
+      aliases: ['prompt'],
+      grammar,
+      id: 'prompt',
+      scopeName: 'source.prompt',
+    },
+  ],
+  themes: [themeConfig(true), themeConfig(false)],
+};
+
 interface AppProps {
   parentId: string;
 }
@@ -57,21 +69,7 @@ const App = memo<AppProps>(({ parentId }) => {
     <Editor
       className={cx(styles.editor, 'prompt_editor')}
       highlight={(code) => (
-        <SyntaxHighlighter
-          language="prompt"
-          options={{
-            langs: [
-              {
-                aliases: ['prompt'],
-                grammar: grammar as any,
-                id: 'prompt',
-                scopeName: 'source.prompt',
-              },
-            ],
-            themes: [themeConfig(true), themeConfig(false)],
-          }}
-          theme={themeMode}
-        >
+        <SyntaxHighlighter language="prompt" options={options} theme={themeMode}>
           {code}
         </SyntaxHighlighter>
       )}
