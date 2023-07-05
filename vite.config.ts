@@ -1,8 +1,6 @@
 import react from '@vitejs/plugin-react';
 import { resolve } from 'node:path';
 import * as process from 'node:process';
-// @ts-ignore
-import { terser } from 'rollup-plugin-terser';
 import { defineConfig } from 'vite';
 
 const isProduction = process.env.NODE_ENV === 'production';
@@ -12,6 +10,8 @@ const SD_PORT = 7860;
 export default defineConfig({
   base: '/dev',
   build: {
+    cssMinify: true,
+    minify: 'terser',
     outDir: './javascript',
     rollupOptions: {
       input: resolve(__dirname, 'src/main.tsx'),
@@ -20,32 +20,29 @@ export default defineConfig({
         chunkFileNames: `[name].js`,
         entryFileNames: `[name].js`,
       },
-      plugins: [
-        isProduction &&
-          terser({
-            compress: {
-              arguments: true,
-              drop_console: true,
-              hoist_funs: true,
-              hoist_props: true,
-              hoist_vars: true,
-              inline: true,
-              keep_fargs: false,
-              keep_fnames: false,
-              keep_infinity: false,
-              loops: true,
-              passes: 3,
-              pure_funcs: [],
-              pure_getters: true,
-              reduce_vars: true,
-              sequences: true,
-              unused: true,
-            },
-            format: {
-              comments: false,
-            },
-          }),
-      ],
+    },
+    terserOptions: {
+      compress: {
+        arguments: true,
+        drop_console: true,
+        hoist_funs: true,
+        hoist_props: true,
+        hoist_vars: true,
+        inline: true,
+        keep_fargs: false,
+        keep_fnames: false,
+        keep_infinity: false,
+        loops: true,
+        passes: 3,
+        pure_funcs: [],
+        pure_getters: true,
+        reduce_vars: true,
+        sequences: true,
+        unused: true,
+      },
+      format: {
+        comments: false,
+      },
     },
   },
   define: {
@@ -54,7 +51,19 @@ export default defineConfig({
   plugins: [
     react({
       babel: {
-        plugins: ['@babel/plugin-syntax-import-assertions'],
+        plugins: [
+          '@babel/plugin-syntax-import-assertions',
+          'babel-plugin-antd-style',
+          [
+            'babel-plugin-styled-components',
+            {
+              displayName: !isProduction,
+              minify: isProduction,
+              pure: true,
+              transpileTemplateLiterals: true,
+            },
+          ],
+        ],
       },
     }),
     !isProduction && {
