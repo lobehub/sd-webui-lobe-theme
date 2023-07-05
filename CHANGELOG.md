@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 2.7.0](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.6.5...v2.7.0)
+
+<sup>Released on **2023-07-05**</sup>
+
+#### ✨ Features
+
+- **misc**: Support `PWA` progressive web app.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Support `PWA` progressive web app ([05728b8](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/05728b8))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 2.6.5](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.6.4...v2.6.5)
 
 <sup>Released on **2023-07-05**</sup>
