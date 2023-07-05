@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 2.6.5](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.6.4...v2.6.5)
+
+<sup>Released on **2023-07-05**</sup>
+
+#### 💄 Styles
+
+- **highlight**: Fix highlight select color and support wildcards.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **highlight**: Fix highlight select color and support wildcards ([34547c4](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/34547c4))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 2.6.4](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.6.3...v2.6.4)
 
 <sup>Released on **2023-07-05**</sup>
