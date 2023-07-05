@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 2.6.4](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.6.3...v2.6.4)
+
+<sup>Released on **2023-07-05**</sup>
+
+#### 🐛 Bug Fixes
+
+- **giscus**: Fix giscus lang.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **giscus**: Fix giscus lang ([a198ffb](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/a198ffb))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 2.6.3](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.6.2...v2.6.3)
 
 <sup>Released on **2023-07-05**</sup>
