@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 2.6.3](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.6.2...v2.6.3)
+
+<sup>Released on **2023-07-05**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix setting render \[force patch].
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix setting render \[force patch] ([f147b11](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/f147b11))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 2.6.2](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.6.1...v2.6.2)
 
 <sup>Released on **2023-07-01**</sup>
