@@ -204,6 +204,23 @@ Partial convenience adaptation design has been completed for mobile devices, inc
 
 </div>
 
+![][feat-pwa]
+
+#### Progress Web App
+
+You can use Progressive Web Apps [PWA](https://support.google.com/chrome/answer/9658361) for a fast stable diffusion experience on your computer or mobile device.
+
+- On your computer, open Chrome.
+- Go to stable diffusion website you want to install
+- At the top right of the address bar, click `Install`
+- Follow the onscreen instructions to install the PWA
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
 #### Prompt formatting
 
 Click the <kbd>🪄</kbd> button below Prompt to format the prompt words with one click.
@@ -329,6 +346,7 @@ This project is [MIT](./LICENSE) licensed.
 [feat-sidebar]: https://gw.alipayobjects.com/zos/kitchen/Olum2IjxCW/feat_sidebar.webp
 [feat-theme-modify]: https://gw.alipayobjects.com/zos/kitchen/CbhlynwJYg/feat_theme_modify.webp
 [feat-thememode]: https://gw.alipayobjects.com/zos/kitchen/nSFtJidWUR/feat_thememode.webp
+[feat-pwa]: https://gw.alipayobjects.com/zos/kitchen/az49akOKJT/feat_pwa.webp
 [profile-url]: https://github.com/canisminor1990
 [gitpod-url]: https://gitpod.io/#https://github.com/canisminor1990/sd-webui-lobe-theme
 

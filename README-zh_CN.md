@@ -58,7 +58,7 @@
 - [x] 📱 移动端友好，针对手机屏幕完成部分优化
 - [x] 🌍 支持 i18n 并欢迎提交 [PR](https://github.com/canisminor1990/sd-webui-lobe-theme/tree/main/src/i18n/lang) 贡献
 - [x] 📝 语法高亮的 Prompt 输入框
-- [x] 📦 支持 [PWA](https://support.google.com/chrome/answer/9658361?hl=zh-Hans) 网页应用
+- [x] 📦 支持 [PWA](https://support.google.com/chrome/answer/9658361?hl=zh-Hans) 渐进式 Web 应用
 
 <div align="right">
 
@@ -204,6 +204,23 @@ sd_model_checkpoint, sd_vae, CLIP_stop_at_last_layers, img2img_background_color,
 
 </div>
 
+![][feat-pwa]
+
+#### PWA 渐进式 Web 应用
+
+可以使用渐进式 Web 应用 [PWA](https://support.google.com/chrome/answer/9658361?hl=zh-Hans) 在计算机或移动设备上享受快速 Stable Diffusion 体验
+
+- 在计算机上打开 Chrome
+- 打开 Stable Diffusion 网页
+- 在地址栏的右上角，点击 `安装` 图标
+- 按照屏幕上的说明安装该 PWA
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
 #### 提示词格式化
 
 点击 Prompt 下方 <kbd>🪄</kbd> 按钮即可将提示词一键格式化
@@ -329,6 +346,7 @@ This project is [MIT](./LICENSE) licensed.
 [feat-sidebar]: https://gw.alipayobjects.com/zos/kitchen/Olum2IjxCW/feat_sidebar.webp
 [feat-theme-modify]: https://gw.alipayobjects.com/zos/kitchen/CbhlynwJYg/feat_theme_modify.webp
 [feat-thememode]: https://gw.alipayobjects.com/zos/kitchen/nSFtJidWUR/feat_thememode.webp
+[feat-pwa]: https://gw.alipayobjects.com/zos/kitchen/az49akOKJT/feat_pwa.webp
 [profile-url]: https://github.com/canisminor1990
 [gitpod-url]: https://gitpod.io/#https://github.com/canisminor1990/sd-webui-lobe-theme
 
