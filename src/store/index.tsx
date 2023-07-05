@@ -1,9 +1,10 @@
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 
-export const SETTING_KEY = 'SD-KITCHEN-SETTING';
+import { I18n } from '@/i18n';
 
-export type I18n = 'en_US' | 'zh-CN';
+export const SETTING_KEY = 'SD-LOBE-SETTING';
+export const FALLBACK_SETTING_KEY = 'SD-KITCHEN-SETTING';
 
 export type PrimaryColor =
   | 'blue'
@@ -94,10 +95,15 @@ export const useAppStore = create<AppState>()(
     onLoadSetting: () => {
       console.time('🤯 [setting] loaded');
       let localSetting: any = localStorage.getItem(SETTING_KEY);
-      let webuiSetting: any = (window as any)?.opts?.['opts.lobe_theme_config'];
+      const fallbackLocalSetting: any = localStorage.getItem(FALLBACK_SETTING_KEY);
+      const webuiSetting: any = (window as any)?.opts?.['opts.lobe_theme_config'];
+
       if (localSetting) {
         console.info('🤯 [setting] loaded local setting');
         localSetting = JSON.parse(localSetting);
+      } else if (fallbackLocalSetting) {
+        console.info('🤯 [setting] loaded fallback local setting');
+        localSetting = JSON.parse(fallbackLocalSetting);
       } else if (webuiSetting) {
         console.info('🤯 [setting] loaded webui setting');
         localSetting = JSON.parse(webuiSetting);

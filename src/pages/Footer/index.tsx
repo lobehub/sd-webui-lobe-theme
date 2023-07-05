@@ -23,31 +23,31 @@ const Footer = memo<DivProps>(({ className, ...props }) => {
   }, []);
   return (
     <div className={cx(styles.footer, className)} {...props}>
-      {setting.layoutHideFooter ? (
-        <div ref={footerReference} />
-      ) : (
-        <F
-          bottom={<div ref={footerReference} />}
-          columns={[
-            {
-              items: Resources,
-              title: t('resources'),
-            },
-            {
-              items: Community,
-              title: t('community'),
-            },
-            {
-              items: Help,
-              title: t('help'),
-            },
-            {
-              items: MoreProducts,
-              title: t('moreProducts'),
-            },
-          ]}
-        />
-      )}
+      <F
+        bottom={<div ref={footerReference} />}
+        columns={
+          setting.layoutHideFooter ?
+            [] :
+            [
+                {
+                  items: Resources,
+                  title: t('resources'),
+                },
+                {
+                  items: Community,
+                  title: t('community'),
+                },
+                {
+                  items: Help,
+                  title: t('help'),
+                },
+                {
+                  items: MoreProducts,
+                  title: t('moreProducts'),
+                },
+              ]
+        }
+      />
     </div>
   );
 });

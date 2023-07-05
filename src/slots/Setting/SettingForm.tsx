@@ -14,7 +14,7 @@ import { useTranslation } from 'react-i18next';
 import { shallow } from 'zustand/shallow';
 
 import { CustomLogo } from '@/components';
-import { i18nOptions } from '@/i18n';
+import { I18nOptions } from '@/i18n';
 import { NeutralColor, PrimaryColor, WebuiSetting, defaultSetting, useAppStore } from '@/store';
 
 import { colors, findKey, neutralColors, primaryColors } from './data';
@@ -56,20 +56,24 @@ const SettingForm = memo(() => {
     const settingSubmitButton = gradioApp().querySelector('#settings_submit') as HTMLButtonElement;
     if (settingDom && settingSubmitButton) {
       settingDom.focus();
-      settingDom.value = JSON.stringify(rawSetting);
+      settingDom.value = JSON.stringify({
+        ...rawSetting,
+        neutralColor,
+        primaryColor,
+      });
       settingDom.blur();
       setTimeout(() => {
         settingSubmitButton.click();
       }, 1000);
     }
-  }, [rawSetting]);
+  }, [rawSetting, primaryColor, neutralColor]);
 
   const items: FormProps['items'] = useMemo(
     () => [
       {
         children: [
           {
-            children: <Select options={i18nOptions} />,
+            children: <Select options={I18nOptions} />,
             desc: t('settingLanguageDesc'),
             label: t('settingLanguage'),
             name: 'i18n',
@@ -330,6 +334,8 @@ const SettingForm = memo(() => {
       rawSetting.enableSidebar,
       rawSetting.logoCustomTitle,
       rawSetting.logoCustomTitle,
+      primaryColor,
+      neutralColor,
     ],
   );
 

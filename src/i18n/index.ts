@@ -1,6 +1,8 @@
 import { type SelectProps } from 'antd';
 
-export const i18nOptions: SelectProps['options'] = [
+export type I18n = 'en_US' | 'zh-CN' | 'zh_HK' | 'ja_JP' | 'ko_KR';
+
+export const I18nOptions: SelectProps['options'] = [
   {
     label: 'English',
     value: 'en_US',
