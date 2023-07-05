@@ -256,9 +256,11 @@ export const useStyles = createStyles(
         }
 
         .block.token-counter {
+          z-index: 10 !important;
           top: -12px;
           right: 4px;
           scale: 0.8;
+
           background: ${token.colorBgContainer} !important;
 
           > .translucent {
