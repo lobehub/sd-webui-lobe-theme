@@ -252,8 +252,8 @@ Alternatively, you can clone it for local development. To enable hot-reloading m
 ```bash
 $ git clone https://github.com/canisminor1990/sd-webui-lobe-theme.git
 $ cd sd-webui-lobe-theme
-$ npm install
-$ npm start
+$ pnpm install
+$ pnpm start
 ```
 
 <div align="right">
