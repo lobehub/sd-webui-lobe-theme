@@ -7,6 +7,8 @@ import Index from '@/pages';
 import Loading from '@/slots/Loading';
 import { useAppStore } from '@/store';
 
+import manifest from './manifest';
+
 const App = memo(() => {
   const [loading, setLoading] = useState(true);
   const { setCurrentTab, onInit, storeLoading } = useAppStore(
@@ -50,10 +52,7 @@ const App = memo(() => {
           sizes="16x16"
           type="image/png"
         />
-        <link
-          href="https://npm.elemecdn.com/@lobehub/assets-favicons/assets/site.webmanifest"
-          rel="manifest"
-        />
+        <link href={manifest} rel="manifest" />
         <link
           color="#000000"
           href="https://npm.elemecdn.com/@lobehub/assets-favicons/assets/safari-pinned-tab.svg"
