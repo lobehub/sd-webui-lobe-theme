@@ -43,6 +43,10 @@
     {
       "match": "\\d+(\\.\\d+)?",
       "name": "number"
+    },
+    {
+      "match": "__.*__",
+      "name": "wildcards"
     }
   ],
 

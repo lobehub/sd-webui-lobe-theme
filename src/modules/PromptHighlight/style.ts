@@ -1,6 +1,6 @@
 import { createStyles } from 'antd-style';
 
-export const useStyles = createStyles(({ css, token }) => ({
+export const useStyles = createStyles(({ css, token, isDarkMode }) => ({
   container: css``,
   editor: css`
     resize: vertical;
@@ -43,7 +43,7 @@ export const useStyles = createStyles(({ css, token }) => ({
 
     &::selection {
       color: #000;
-      background: ${token.yellow3A};
+      background: ${isDarkMode ? token.yellow3A : token.yellow6A};
     }
 
     &:focus {

@@ -5,6 +5,7 @@ export const themeConfig: any = (isDarkMode: ThemeAppearance) => {
   const type = isDarkMode ? 'dark' : 'light';
 
   const colorTextTertiary = isDarkMode ? colorScales.gray[type][6] : colorScales.gray[type][7];
+  const colorYellow = isDarkMode ? colorScales.yellow[type][9] : colorScales.yellow[type][10];
   const colorOrange = isDarkMode ? colorScales.gold[type][9] : colorScales.orange[type][9];
   const colorGreen = isDarkMode ? colorScales.lime[type][9] : colorScales.green[type][10];
   const colorBlue = isDarkMode ? colorScales.blue[type][9] : colorScales.geekblue[type][8];
@@ -64,6 +65,13 @@ export const themeConfig: any = (isDarkMode: ThemeAppearance) => {
         scope: 'number',
         settings: {
           foreground: colorPurple,
+        },
+      },
+      {
+        scope: 'wildcards',
+        settings: {
+          fontStyle: 'italic',
+          foreground: colorYellow,
         },
       },
     ],
