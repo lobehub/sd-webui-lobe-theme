@@ -41,3 +41,4 @@ test-output
 
 # misc
 # add other ignore file below
+__pycache__
