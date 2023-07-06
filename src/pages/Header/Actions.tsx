@@ -54,7 +54,7 @@ const Actions = memo<ActionsProps>(() => {
         <ActionIcon icon={Settings} onClick={() => setIsSettingOpen(true)} title={t('setting')} />
       </Space.Compact>
       <Setting onCancel={() => setIsSettingOpen(false)} open={isSettingOpen} />
-      <Giscus onCancel={() => setIsModalOpen(false)} open={isModalOpen} themeMode={themeMode} />
+      <Giscus onCancel={() => setIsModalOpen(false)} open={isModalOpen} />
     </>
   );
 });
