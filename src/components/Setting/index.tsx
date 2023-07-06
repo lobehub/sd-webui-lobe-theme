@@ -4,12 +4,12 @@ import { Book } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { homepage, version } from '@/../package.json';
 import { Modal, type ModalProps } from '@/components';
 
+import { homepage, version } from '../../../package.json';
 import SettingForm from './SettingForm';
 
-interface SettingProps {
+export interface SettingProps {
   onCancel?: ModalProps['onCancel'];
   open?: ModalProps['open'];
 }

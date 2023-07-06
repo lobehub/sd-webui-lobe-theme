@@ -2,7 +2,7 @@ import { DraggablePanelBody } from '@lobehub/ui';
 import isEqual from 'fast-deep-equal';
 import { memo, useEffect, useRef } from 'react';
 
-import PromptGroup from '@/slots/PromptEditor';
+import { PromptEditor } from '@/components';
 import { useAppStore } from '@/store';
 import { type DivProps } from '@/types';
 
@@ -19,7 +19,7 @@ const Inner = memo<DivProps>(() => {
 
   return (
     <DraggablePanelBody>
-      {setting.promptEditor && <PromptGroup />}
+      {setting.promptEditor && <PromptEditor />}
       <div ref={sidebarReference} />
     </DraggablePanelBody>
   );

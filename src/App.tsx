@@ -2,9 +2,9 @@ import { Suspense, memo, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { shallow } from 'zustand/shallow';
 
+import { Loading } from '@/components';
 import Layout from '@/layouts';
 import Index from '@/pages';
-import Loading from '@/slots/Loading';
 import { useAppStore } from '@/store';
 
 import manifest from './manifest';

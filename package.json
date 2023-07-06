@@ -36,7 +36,7 @@
     "release": "semantic-release",
     "start": "npm run dev",
     "test": "npm run type-check",
-    "type-check": "tsc -p tsconfig-check.json"
+    "type-check": "tsc --noEmit"
   },
   "lint-staged": {
     "*.md": [
@@ -64,7 +64,6 @@
   "devDependencies": {
     "@babel/plugin-syntax-import-assertions": "^7",
     "@commitlint/cli": "^17",
-    "@giscus/react": "^2",
     "@lobehub/lint": "latest",
     "@lobehub/ui": "latest",
     "@types/lodash-es": "^4",
@@ -104,7 +103,6 @@
     "remark": "^14",
     "remark-cli": "^11",
     "semantic-release": "^21",
-    "shiki-es": "^0",
     "styled-components": "^6",
     "stylelint": "^15",
     "terser": "^5",

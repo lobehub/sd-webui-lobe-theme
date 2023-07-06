@@ -1,6 +1,0 @@
-{
-  "compilerOptions": {
-    "noEmit": true
-  },
-  "extends": "./tsconfig.json"
-}

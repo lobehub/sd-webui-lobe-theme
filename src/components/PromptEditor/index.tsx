@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { useStyles } from '@/slots/PromptEditor/style';
+import { useStyles } from '@/components/PromptEditor/style';
 
 import Prompt from './Prompt';
 
