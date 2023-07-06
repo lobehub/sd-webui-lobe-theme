@@ -38,7 +38,7 @@ const QuickSettingSidebar = memo<QuickSettingSidebarProps>(({ headerHeight }) =>
     <DraggablePanel
       defaultSize={{ width: setting.sidebarWidth }}
       expand={expand}
-      minWidth={setting.extraNetworkSidebarWidth}
+      minWidth={setting.sidebarWidth}
       mode={mode}
       onExpandChange={setExpand}
       onSizeChange={(_, size) => size?.width && setWidth(Number.parseInt(String(size.width)))}
