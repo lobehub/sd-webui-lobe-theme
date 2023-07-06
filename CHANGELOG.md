@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 2.7.2](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.7.1...v2.7.2)
+
+<sup>Released on **2023-07-06**</sup>
+
+#### 💄 Styles
+
+- **giscus**: Update giscus style.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **giscus**: Update giscus style ([de6f8eb](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/de6f8eb))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 2.7.1](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.7.0...v2.7.1)
 
 <sup>Released on **2023-07-06**</sup>
