@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 2.8.1](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.8.0...v2.8.1)
+
+<sup>Released on **2023-07-08**</sup>
+
+#### 🐛 Bug Fixes
+
+- **setting**: Fix setting.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **setting**: Fix setting ([0305fc0](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/0305fc0))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 2.8.0](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.7.2...v2.8.0)
 
 <sup>Released on **2023-07-08**</sup>
