@@ -1,12 +1,13 @@
 import { ActionIcon } from '@lobehub/ui';
-import { Space, Tag } from 'antd';
+import { Space } from 'antd';
 import { Book } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { homepage } from '@/../package.json';
 import { Modal, type ModalProps } from '@/components';
+import VersionTag from '@/components/VersionTag';
 
-import { homepage, version } from '../../../package.json';
 import SettingForm from './SettingForm';
 
 export interface SettingProps {
@@ -27,7 +28,7 @@ const Setting = memo<SettingProps>(({ open, onCancel }) => {
           </a>
           <Space>
             {t('themeSetting')}
-            <Tag color="success">v{version}</Tag>
+            <VersionTag />
           </Space>
         </>
       }

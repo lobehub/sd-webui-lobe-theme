@@ -1,53 +1,12 @@
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 
-import { I18n } from '@/i18n';
+import { version } from '@/../package.json';
 
-export const SETTING_KEY = 'SD-LOBE-SETTING';
-export const FALLBACK_SETTING_KEY = 'SD-KITCHEN-SETTING';
+import { AppState, FALLBACK_SETTING_KEY, SETTING_KEY, WebuiSetting } from './AppState';
+import { getLatestVersion, getSetting, getVersion, postSetting } from './api';
 
-export type PrimaryColor =
-  | 'blue'
-  | 'cyan'
-  | 'geekblue'
-  | 'gold'
-  | 'green'
-  | 'lime'
-  | 'magenta'
-  | 'orange'
-  | 'purple'
-  | 'red'
-  | 'volcano'
-  | 'yellow'
-  | 'kitchen';
-
-export type NeutralColor = 'mauve' | 'slate' | 'sage' | 'olive' | 'sand' | 'kitchen';
-
-export interface WebuiSetting {
-  enableExtraNetworkSidebar: boolean;
-  enableHighlight: boolean;
-  enableSidebar: boolean;
-  enableWebFont: boolean;
-  extraNetworkCardSize: number;
-  extraNetworkFixedMode: 'fixed' | 'float';
-  extraNetworkSidebarExpand: boolean;
-  extraNetworkSidebarWidth: number;
-  i18n: I18n;
-  layoutHideFooter: boolean;
-  layoutSplitPreview: boolean;
-  liteAnimation: boolean;
-  logoCustomTitle: string | undefined;
-  logoCustomUrl: string | undefined;
-  logoType: 'lobe' | 'kitchen' | 'custom';
-  neutralColor: NeutralColor | undefined;
-  primaryColor: PrimaryColor | undefined;
-  promptEditor: boolean;
-  promptTextareaType: 'scroll' | 'resizable';
-  sidebarExpand: boolean;
-  sidebarFixedMode: 'fixed' | 'float';
-  sidebarWidth: number;
-  svgIcon: boolean;
-}
+export * from './AppState';
 
 export const defaultSetting: WebuiSetting = {
   enableExtraNetworkSidebar: true,
@@ -74,63 +33,67 @@ export const defaultSetting: WebuiSetting = {
   sidebarWidth: 280,
   svgIcon: true,
 };
-export interface AppState {
-  currentTab: string;
-  loading: boolean;
-  onInit: () => void;
-  onLoadSetting: () => void;
-  onSetSetting: (setting: WebuiSetting) => void;
-  onSetThemeMode: (themeMode: 'light' | 'dark') => void;
-  setCurrentTab: () => void;
-  setting: WebuiSetting;
-  themeMode: 'light' | 'dark';
-}
+
 export const useAppStore = create<AppState>()(
   devtools((set, get) => ({
     currentTab: 'tab_txt2img',
+    latestVersion: version,
     loading: true,
-    onInit: () => {
-      get().onLoadSetting();
+    onInit: async() => {
+      const { onLoadSetting, onLoadVersion, onLoadLatestVersion } = get();
+      await onLoadVersion();
+      await onLoadLatestVersion();
+      await onLoadSetting();
     },
-    onLoadSetting: () => {
+    onLoadLatestVersion: async() => {
+      const latestVersion = await getLatestVersion();
+      set(() => ({ latestVersion }), false, 'onLoadLatestVersion');
+    },
+    onLoadSetting: async() => {
       console.time('🤯 [setting] loaded');
-      let localSetting: any = localStorage.getItem(SETTING_KEY);
-      const fallbackLocalSetting: any = localStorage.getItem(FALLBACK_SETTING_KEY);
-      const webuiSetting: any = (window as any)?.opts?.['opts.lobe_theme_config'];
+      let themeSetting;
+      const webuiSetting: any = await getSetting();
 
-      if (localSetting) {
-        console.info('🤯 [setting] loaded local setting');
-        localSetting = JSON.parse(localSetting);
-      } else if (fallbackLocalSetting) {
-        console.info('🤯 [setting] loaded fallback local setting');
-        localSetting = JSON.parse(fallbackLocalSetting);
-      } else if (webuiSetting) {
+      if (webuiSetting) {
         console.info('🤯 [setting] loaded webui setting');
-        localSetting = JSON.parse(webuiSetting);
-      } else {
-        console.info('🤯 [setting] loaded default setting');
-        localSetting = defaultSetting;
+        themeSetting = webuiSetting;
       }
-      const setting = { ...defaultSetting, ...localSetting };
 
+      if (!themeSetting) {
+        const localSetting: any = localStorage.getItem(SETTING_KEY);
+        if (localSetting) {
+          console.info('🤯 [setting] loaded local setting');
+          themeSetting = JSON.parse(localSetting);
+        }
+      }
+
+      if (!themeSetting) {
+        const fallbackLocalSetting: any = localStorage.getItem(FALLBACK_SETTING_KEY);
+        if (fallbackLocalSetting) {
+          console.info('🤯 [setting] loaded fallback local setting');
+          themeSetting = JSON.parse(fallbackLocalSetting);
+        }
+      }
+
+      if (!themeSetting) {
+        console.info('🤯 [setting] loaded default setting');
+        themeSetting = defaultSetting;
+      }
+
+      const setting = { ...defaultSetting, ...themeSetting };
+
+      await postSetting(setting);
       set(() => ({ loading: false, setting }), false, 'onLoadSetting');
       console.table(setting);
       console.timeEnd('🤯 [setting] loaded');
     },
-    onSetSetting: (setting) => {
+    onLoadVersion: async() => {
+      const version = await getVersion();
+      set(() => ({ version }), false, 'onLoadVersion');
+    },
+    onSetSetting: async(setting) => {
       localStorage.setItem(SETTING_KEY, JSON.stringify(setting));
-      //TODO FIX ME (nevysha: I needed this for testing purpose)
-      // sending settings to server.
-      (async() => {
-        await fetch('/lobe/config', {
-          body: JSON.stringify(setting),
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          method: 'POST',
-        });
-      })();
-
+      await postSetting(setting);
       set(() => ({ setting }), false, 'onSetSetting');
     },
     onSetThemeMode: (themeMode) => {
@@ -145,5 +108,6 @@ export const useAppStore = create<AppState>()(
     },
     setting: defaultSetting,
     themeMode: 'dark',
+    version: version,
   })),
 );

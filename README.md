@@ -336,7 +336,7 @@ $ pnpm start
 #### 📝 License
 
 Copyright © 2023 [CanisMinor][profile-url]. <br />
-This project is [MIT](./LICENSE) licensed.
+This project is [AGPL3](./LICENSE) licensed.
 
 <!-- LINK GROUP -->
 

@@ -1,13 +1,14 @@
 import { ActionIcon, Giscus as G } from '@lobehub/ui';
+import { Space } from 'antd';
 import isEqual from 'fast-deep-equal';
 import { Github } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { Modal, type ModalProps } from '@/components';
+import { homepage } from '@/../package.json';
+import Modal, { type ModalProps } from '@/components/Modal';
+import VersionTag from '@/components/VersionTag';
 import { useAppStore } from '@/store';
-
-import { homepage } from '../../../package.json';
 
 export interface GiscusProps {
   onCancel?: ModalProps['onCancel'];
@@ -28,7 +29,10 @@ const Giscus = memo<GiscusProps>(({ open, onCancel }) => {
           <a href={homepage} rel="noreferrer" target="_blank">
             <ActionIcon icon={Github} title={repoName} />
           </a>
-          {t('themeFeedback')}
+          <Space>
+            {t('themeFeedback')}
+            <VersionTag />
+          </Space>
         </>
       }
     >
