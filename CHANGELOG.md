@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 2.8.0](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.7.2...v2.8.0)
+
+<sup>Released on **2023-07-08**</sup>
+
+#### ✨ Features
+
+- **local-setting**: Add local setting support.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **local-setting**: Add local setting support ([cb7f77e](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/cb7f77e))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 2.7.2](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.7.1...v2.7.2)
 
 <sup>Released on **2023-07-06**</sup>
