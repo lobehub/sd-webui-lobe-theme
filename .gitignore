@@ -42,3 +42,4 @@ test-output
 # misc
 # add other ignore file below
 __pycache__
+/lobe_theme_config.json

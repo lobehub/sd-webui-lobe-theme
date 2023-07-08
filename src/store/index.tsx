@@ -119,6 +119,18 @@ export const useAppStore = create<AppState>()(
     },
     onSetSetting: (setting) => {
       localStorage.setItem(SETTING_KEY, JSON.stringify(setting));
+      //TODO FIX ME (nevysha: I needed this for testing purpose)
+      // sending settings to server.
+      (async() => {
+        await fetch('/lobe/config', {
+          body: JSON.stringify(setting),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          method: 'POST',
+        });
+      })();
+
       set(() => ({ setting }), false, 'onSetSetting');
     },
     onSetThemeMode: (themeMode) => {
