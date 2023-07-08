@@ -27,7 +27,7 @@ const CustomLogo = memo<CustomLogoProps>(({ size = 32, style, logoCustomUrl, log
   return (
     <Space align="center" size={size * 0.3}>
       {customLogo}
-      <b style={{ fontSize: size * 0.6 }}>{logoCustomTitle}</b>
+      <b style={{ fontSize: size * 0.6, whiteSpace: 'nowrap' }}>{logoCustomTitle}</b>
     </Space>
   );
 });

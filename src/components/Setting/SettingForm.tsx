@@ -307,7 +307,7 @@ const SettingForm = memo(() => {
       rawSetting.enableExtraNetworkSidebar,
       rawSetting.enableSidebar,
       rawSetting.logoCustomTitle,
-      rawSetting.logoCustomTitle,
+      rawSetting.logoCustomUrl,
       primaryColor,
       neutralColor,
     ],
