@@ -284,7 +284,7 @@ $ pnpm start
 
 <!-- CONTRIBUTION GROUP -->
 
-> 📊 Total: <kbd>**7**</kbd>
+> 📊 Total: <kbd>**8**</kbd>
 
 <a href="https://github.com/canisminor1990" title="canisminor1990">
   <img src="https://avatars.githubusercontent.com/u/17870709?v=4" width="50" />
@@ -294,6 +294,9 @@ $ pnpm start
 </a>
 <a href="https://github.com/actions-user" title="actions-user">
   <img src="https://avatars.githubusercontent.com/u/65916846?v=4" width="50" />
+</a>
+<a href="https://github.com/Nevysha" title="Nevysha">
+  <img src="https://avatars.githubusercontent.com/u/122687716?v=4" width="50" />
 </a>
 <a href="https://github.com/web-97" title="web-97">
   <img src="https://avatars.githubusercontent.com/u/46352788?v=4" width="50" />
