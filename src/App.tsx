@@ -63,8 +63,7 @@ const App = memo(() => {
         <meta content="#000000" name="msapplication-TileColor" />
         <meta content="#000000" name="theme-color" />
       </Helmet>
-
-      {!storeLoading && <Layout>{loading ? <Loading /> : <Index />}</Layout>}
+      <Layout>{storeLoading === false && loading === false ? <Index /> : <Loading />}</Layout>
     </Suspense>
   );
 });

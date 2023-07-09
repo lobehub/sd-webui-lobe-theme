@@ -40,10 +40,12 @@ export const useAppStore = create<AppState>()(
     latestVersion: version,
     loading: true,
     onInit: async() => {
+      set(() => ({ loading: true }), false, 'onInit');
       const { onLoadSetting, onLoadVersion, onLoadLatestVersion } = get();
       await onLoadVersion();
       await onLoadLatestVersion();
       await onLoadSetting();
+      set(() => ({ loading: false }), false, 'onInit');
     },
     onLoadLatestVersion: async() => {
       const latestVersion = await getLatestVersion();
@@ -83,7 +85,7 @@ export const useAppStore = create<AppState>()(
       const setting = { ...defaultSetting, ...themeSetting };
 
       await postSetting(setting);
-      set(() => ({ loading: false, setting }), false, 'onLoadSetting');
+      set(() => ({ setting }), false, 'onLoadSetting');
       console.table(setting);
       console.timeEnd('🤯 [setting] loaded');
     },
