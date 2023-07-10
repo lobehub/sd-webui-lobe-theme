@@ -10,7 +10,7 @@ export * from './AppState';
 
 export const defaultSetting: WebuiSetting = {
   enableExtraNetworkSidebar: true,
-  enableHighlight: false,
+  enableHighlight: true,
   enableSidebar: true,
   enableWebFont: true,
   extraNetworkCardSize: 86,

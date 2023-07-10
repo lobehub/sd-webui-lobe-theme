@@ -1,55 +1,23 @@
 import { createStyles } from 'antd-style';
 
-export const useStyles = createStyles(({ css, token, isDarkMode }) => ({
-  container: css``,
-  editor: css`
-    resize: vertical;
+export const useStyles = createStyles(({ css, token }) => ({
+  container: css`
+    pointer-events: none;
 
-    font-family: ${token.fontFamilyCode} !important;
-    font-size: 13px;
-    line-height: 18.2px;
+    position: absolute;
 
-    background: ${token.colorFillTertiary};
-    border: 1px solid ${token.colorBorderSecondary};
-    border-radius: ${token.borderRadius}px;
+    overflow-x: hidden;
+    overflow-y: auto;
 
-    &:focus,
-    &:active,
-    &:hover {
-      border: 1px solid ${token.colorBorder};
-    }
+    padding: 8px;
 
     pre {
+      font-family: ${token.fontFamilyCode} !important;
+      font-size: 13px;
+      line-height: 18.2px;
+      color: ${token.colorSuccess};
       word-wrap: break-word;
       white-space: pre-wrap;
-    }
-  `,
-  handle: css`
-    cursor: row-resize;
-    width: 100%;
-    height: 2px;
-    background-color: transparent;
-
-    &:hover {
-      background: ${token.colorPrimary};
-    }
-  `,
-  textarea: css`
-    height: 100% !important;
-
-    &::placeholder {
-      color: ${token.colorTextQuaternary};
-    }
-
-    &::selection {
-      color: #000;
-      background: ${isDarkMode ? token.yellow3A : token.yellow6A};
-    }
-
-    &:focus {
-      border: none !important;
-      outline: none !important;
-      box-shadow: none !important;
     }
   `,
 }));

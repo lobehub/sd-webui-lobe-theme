@@ -1,6 +1,6 @@
 import { SyntaxHighlighter } from '@lobehub/ui';
+import { useScroll, useSize } from 'ahooks';
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import Editor from 'react-simple-code-editor';
 import { shallow } from 'zustand/shallow';
 
 import { useExternalTextareaObserver } from '@/hooks/useExternalTextareaObserver';
@@ -27,61 +27,55 @@ interface AppProps {
 }
 
 const App = memo<AppProps>(({ parentId }) => {
-  const reference = useRef(null);
+  const ref: any = useRef(null);
   const [prompt, setPrompt] = useState<string>('');
-  const themeMode = useAppStore((s) => s.themeMode, shallow);
-  const { styles, cx } = useStyles();
+  const { themeMode } = useAppStore((st) => ({ themeMode: st.themeMode }), shallow);
+  const { styles, theme } = useStyles();
   const nativeTextareaValue = useExternalTextareaObserver(`${parentId} label textarea`);
-
   const nativeTextarea = useMemo(
     () => gradioApp().querySelector(`${parentId} label textarea`) as HTMLTextAreaElement,
     [parentId],
   );
+  const size = useSize(nativeTextarea);
+  const scroll = useScroll(nativeTextarea);
 
   const handlePromptChange = useCallback((event: any) => {
     setPrompt(event.target.value);
   }, []);
 
   useEffect(() => {
-    nativeTextarea.style.minHeight = '0';
-    nativeTextarea.style.maxHeight = '0';
-    nativeTextarea.style.padding = '0';
-    nativeTextarea.style.opacity = '0';
-    nativeTextarea.addEventListener('change', handlePromptChange);
+    ref.current.scroll(0, scroll?.top || 0);
+  }, [scroll?.top]);
 
+  useEffect(() => {
+    nativeTextarea.addEventListener('change', handlePromptChange);
     return () => {
       nativeTextarea.removeEventListener('change', handlePromptChange);
     };
   }, []);
 
   useEffect(() => {
+    if (theme) {
+      nativeTextarea.style.color = 'transparent';
+      nativeTextarea.style.caretColor = theme.colorSuccess;
+    }
+  }, [theme]);
+
+  useEffect(() => {
     setPrompt(nativeTextareaValue);
   }, [nativeTextareaValue]);
 
-  const onBlur = useCallback(() => {
-    nativeTextarea.value = prompt;
-
-    const event = new Event('input');
-    nativeTextarea.dispatchEvent(event);
-  }, [prompt]);
-
   return (
-    <Editor
-      className={cx(styles.editor, 'prompt_editor')}
-      highlight={(code) => (
-        <SyntaxHighlighter language="prompt" options={options} theme={themeMode}>
-          {code}
-        </SyntaxHighlighter>
-      )}
-      onBlur={onBlur}
-      onKeyUp={onBlur}
-      onValueChange={setPrompt}
-      padding={8}
-      placeholder={nativeTextarea.placeholder}
-      ref={reference}
-      textareaClassName={cx(styles.textarea)}
-      value={prompt}
-    />
+    <div
+      className={styles.container}
+      data-code-type="highlighter"
+      ref={ref}
+      style={{ height: size?.height, width: size?.width }}
+    >
+      <SyntaxHighlighter language="prompt" options={options} theme={themeMode}>
+        {prompt.trim()}
+      </SyntaxHighlighter>
+    </div>
   );
 });
 
