@@ -11,7 +11,7 @@ i18next
   .use(HttpBackend)
   .init<HttpBackendOptions>({
     backend: {
-      loadPath: '/lobe/locales/{{lng}}.json',
+      loadPath: '/lobe/locales/{{lng}}',
     },
     debug: process.env.NODE_ENV === 'development',
     fallbackLng: 'en_US',

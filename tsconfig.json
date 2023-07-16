@@ -16,12 +16,12 @@
     "sourceMap": true,
     "allowSyntheticDefaultImports": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["src/*"]
     },
     "resolveJsonModule": true,
     "strict": true
   },
   "exclude": ["javascript"],
 
-  "include": ["src", "typings", "*.ts", "*.d.ts", "*.tsx", "vite.config.ts"]
+  "include": ["src", "typings", "**/*.ts", "**/*.d.ts", "**/*.tsx", "vite.config.ts"]
 }
