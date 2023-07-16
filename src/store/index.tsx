@@ -1,10 +1,16 @@
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 
-import { version } from '@/../package.json';
-
 import { AppState, FALLBACK_SETTING_KEY, SETTING_KEY, WebuiSetting } from './AppState';
-import { getLatestVersion, getSetting, getVersion, postSetting } from './api';
+import {
+  DEFAULT_LOCALE_OPTIONS,
+  DEFAULT_VERSION,
+  getLatestVersion,
+  getLocaleOptions,
+  getSetting,
+  getVersion,
+  postSetting,
+} from './api';
 
 export * from './AppState';
 
@@ -37,11 +43,13 @@ export const defaultSetting: WebuiSetting = {
 export const useAppStore = create<AppState>()(
   devtools((set, get) => ({
     currentTab: 'tab_txt2img',
-    latestVersion: version,
+    latestVersion: DEFAULT_VERSION,
     loading: true,
+    localeOptions: DEFAULT_LOCALE_OPTIONS,
     onInit: async() => {
       set(() => ({ loading: true }), false, 'onInit');
-      const { onLoadSetting, onLoadVersion, onLoadLatestVersion } = get();
+      const { onLoadSetting, onLoadVersion, onLoadLatestVersion, onLoadLocalOptions } = get();
+      await onLoadLocalOptions();
       await onLoadVersion();
       await onLoadLatestVersion();
       await onLoadSetting();
@@ -50,6 +58,10 @@ export const useAppStore = create<AppState>()(
     onLoadLatestVersion: async() => {
       const latestVersion = await getLatestVersion();
       set(() => ({ latestVersion }), false, 'onLoadLatestVersion');
+    },
+    onLoadLocalOptions: async() => {
+      const localeOptions = await getLocaleOptions();
+      set(() => ({ localeOptions }), false, 'onLoadLocalOptions');
     },
     onLoadSetting: async() => {
       console.time('🤯 [setting] loaded');
@@ -110,6 +122,6 @@ export const useAppStore = create<AppState>()(
     },
     setting: defaultSetting,
     themeMode: 'dark',
-    version: version,
+    version: DEFAULT_VERSION,
   })),
 );

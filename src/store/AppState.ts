@@ -1,4 +1,6 @@
-import { I18n } from '@/i18n';
+import { SelectProps } from 'antd';
+
+import { I18n } from '@/types';
 
 export const SETTING_KEY = 'SD-LOBE-SETTING';
 export const FALLBACK_SETTING_KEY = 'SD-KITCHEN-SETTING';
@@ -50,8 +52,10 @@ export interface AppState {
   currentTab: string;
   latestVersion: string;
   loading: boolean;
+  localeOptions: SelectProps['options'];
   onInit: () => void;
   onLoadLatestVersion: () => void;
+  onLoadLocalOptions: () => void;
   onLoadSetting: () => void;
   onLoadVersion: () => void;
   onSetSetting: (setting: WebuiSetting) => void;

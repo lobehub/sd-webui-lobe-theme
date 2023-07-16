@@ -11,13 +11,15 @@ from scripts.lib.lobe_log import LobeLog
 from scripts.lib.api import LobeApi
 from scripts.lib.config import LobeConfig
 from scripts.lib.package import LobePackage
+from scripts.lib.locale import LobeLocale
 
 def init_lobe(_: Any, app: FastAPI, **kwargs):
     LobeLog.info("Initializing Lobe")
 
     package = LobePackage()
+    locale = LobeLocale()
     config = LobeConfig()
-    api = LobeApi(config, package)
+    api = LobeApi(config, package, locale)
     api.create_api_route(app)
 
 

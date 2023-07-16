@@ -28,6 +28,7 @@
     "build": "vite build",
     "dev": "vite",
     "dev:sd": "cd ../../ && ./webui.sh",
+    "i18n": "lobe-i18n",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
     "lint:md": "remark . --quiet --output",
     "lint:style": "stylelint \"src/**/*.{css,less,js,jsx,ts,tsx}\" --fix",
@@ -64,6 +65,7 @@
   "devDependencies": {
     "@babel/plugin-syntax-import-assertions": "^7",
     "@commitlint/cli": "^17",
+    "@lobehub/i18n-cli": "latest",
     "@lobehub/lint": "latest",
     "@lobehub/ui": "latest",
     "@types/lodash-es": "^4",
@@ -86,6 +88,7 @@
     "fast-deep-equal": "^3",
     "husky": "^8",
     "i18next": "^23",
+    "i18next-http-backend": "^2.2.1",
     "lint-staged": "^13",
     "lodash-es": "^4",
     "lucide-react": "latest",

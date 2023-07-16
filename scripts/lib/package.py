@@ -26,7 +26,7 @@ class LobePackage:
                 self.package = json.load(f)
         else:
             LobeLog.debug(f"Package file not found")
-            self.package = LobeConfig.default()
+            self.package = {"error": "Package file not found"}
 
     def is_empty(self):
         return "empty" in self.package and self.package['empty']

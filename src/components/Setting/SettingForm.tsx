@@ -7,7 +7,6 @@ import { useTranslation } from 'react-i18next';
 import { shallow } from 'zustand/shallow';
 
 import { CustomLogo } from '@/components';
-import { I18nOptions } from '@/i18n';
 import { NeutralColor, PrimaryColor, WebuiSetting, defaultSetting, useAppStore } from '@/store';
 
 import { colors, findKey, neutralColors, primaryColors } from './data';
@@ -15,8 +14,8 @@ import { useStyles } from './style';
 
 const SettingForm = memo(() => {
   const setting = useAppStore((st) => st.setting, isEqual);
-  const { onSetSetting } = useAppStore(
-    (st) => ({ onSetSetting: st.onSetSetting, themeMode: st.themeMode }),
+  const { onSetSetting, localeOptions } = useAppStore(
+    (st) => ({ localeOptions: st.localeOptions, onSetSetting: st.onSetSetting }),
     shallow,
   );
   const [rawSetting, setRawSetting] = useState<WebuiSetting>(setting);
@@ -47,7 +46,7 @@ const SettingForm = memo(() => {
       {
         children: [
           {
-            children: <Select options={I18nOptions} />,
+            children: <Select options={localeOptions} />,
             desc: t('settingLanguageDesc'),
             label: t('settingLanguage'),
             name: 'i18n',
