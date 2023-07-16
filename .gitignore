@@ -26,7 +26,6 @@ package-lock.json
 # production
 dist
 es
-lib
 logs
 test-output
 
