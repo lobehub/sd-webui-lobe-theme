@@ -14,7 +14,7 @@ class LobeLocale:
         file_path = Path(EXTENSION_FOLDER, f"locales/{lng}.json")
 
         try:
-            with open(file_path, 'r') as f:
+            with open(file_path, 'r', encoding='utf-8') as f:
                 language_data = json.load(f)
                 return language_data
         except FileNotFoundError:
