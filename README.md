@@ -221,7 +221,7 @@ You can use Progressive Web Apps [PWA](https://support.google.com/chrome/answer/
 
 #### Prompt formatting
 
-Click the `<kbd>`🪄`</kbd>` button below Prompt to format the prompt words with one click.
+Click the <kbd>🪄</kbd> button below Prompt to format the prompt words with one click.
 
 > 👉 Tip: Convert full-width punctuation to half-width, remove extra spaces, add missing commas, and move the Extra-Networks model to the end.
 
