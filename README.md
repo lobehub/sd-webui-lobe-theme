@@ -1,4 +1,4 @@
-`<a name="readme-top"></a>`
+<a name="readme-top"></a>
 
 <div align="center">
 
@@ -14,14 +14,14 @@ English · [Russian ](./README-ru_RU.md)· [简体中文](./README-zh_CN.md) · 
 
 <!-- SHIELD GROUP -->
 
-[release][release-url]
-[releaseDate][release-date-url]
-[ciTest][ci-test-url]
-[ciRelease][ci-release-url] `<br/>`
-[contributors][contributors-url]
-[forks][forks-url]
-[stargazers][stargazers-url]
-[issues][issues-url]
+[![release][release-shield]][release-url]
+[![releaseDate][release-date-shield]][release-date-url]
+[![ciTest][ci-test-shield]][ci-test-url]
+[![ciRelease][ci-release-shield]][ci-release-url] <br/>
+[![contributors][contributors-shield]][contributors-url]
+[![forks][forks-shield]][forks-url]
+[![stargazers][stargazers-shield]][stargazers-url]
+[![issues][issues-shield]][issues-url]
 
 </div>
 
@@ -245,9 +245,12 @@ photorealistic photo of a handsome male, (wizard:1.2), short beard, white wizard
 
 ## 🖥 Environment Support
 
-| [`<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />`](http://godban.github.io/browsers-support-badges/)`<br>`Chrome | [`<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="Edge" width="24px" height="24px" />`](http://godban.github.io/browsers-support-badges/)`<br>`Edge | [`<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />`](http://godban.github.io/browsers-support-badges/)`<br>`Safari |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| last 2 versions                                                                                                                                                                                                   | last 2 versions                                                                                                                                                                                           | last 2 versions                                                                                                                                                                                                   |
+## 🖥 Environment Support
+
+| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Safari |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| last 2 versions                                                                                                                                                                                              | last 2 versions                                                                                                                                                                                      | last 2 versions                                                                                                                                                                                              |
+
 
 > ⚠️ There is currently a known compatibility issue with styles on Firefox browser.
 
@@ -282,7 +285,7 @@ $ pnpm start
 
 <!-- CONTRIBUTION GROUP -->
 
-> 📊 Total: `<kbd>`**8**`</kbd>`
+> 📊 Total: <kbd>**8**</kbd>
 
 <a href="https://github.com/canisminor1990" title="canisminor1990">
   <img src="https://avatars.githubusercontent.com/u/17870709?v=4" width="50" />
@@ -336,7 +339,7 @@ $ pnpm start
 
 #### 📝 License
 
-Copyright © 2023 [CanisMinor][profile-url]. `<br />`
+Copyright © 2023 [CanisMinor][profile-url]. <br />
 This project is [AGPL3](./LICENSE) licensed.
 
 <!-- LINK GROUP -->
