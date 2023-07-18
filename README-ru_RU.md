@@ -1,4 +1,4 @@
-`<a name="readme-top"></a>`
+<a name="readme-top"></a>
 
 <div align="center">
 
@@ -10,18 +10,18 @@
 
 Ранее известная как Kitchen theme
 
-[English ](./README.md)· [简体中文](./README-zh_CN.md) ·Russian· [Changelog](./CHANGELOG.md) · [Report Bug][issues-url] · [Request Feature][issues-url]
+[English ](./README.md)· [简体中文](./README-zh_CN.md) · Russian · [Changelog](./CHANGELOG.md) · [Report Bug][issues-url] · [Request Feature][issues-url]
 
 <!-- SHIELD GROUP -->
 
-[release][release-url]
-[releaseDate][release-date-url]
-[ciTest][ci-test-url]
-[ciRelease][ci-release-url] `<br/>`
-[contributors][contributors-url]
-[forks][forks-url]
-[stargazers][stargazers-url]
-[issues][issues-url]
+[![release][release-shield]][release-url]
+[![releaseDate][release-date-shield]][release-date-url]
+[![ciTest][ci-test-shield]][ci-test-url]
+[![ciRelease][ci-release-shield]][ci-release-url] <br/>
+[![contributors][contributors-shield]][contributors-url]
+[![forks][forks-shield]][forks-url]
+[![stargazers][stargazers-shield]][stargazers-url]
+[![issues][issues-shield]][issues-url]
 
 </div>
 
@@ -34,19 +34,19 @@
 
 #### TOC
 
-- [✨ Дополнения](#-features)
-- [📦 Установка](#-installation)
-- [🤯 Использование](#-usage)
-- [🖥 Поддерживаемые браузеры](#-environment-support)
-- [⌨️ Локальная разработка](#️-local-development)
-- [🤝 Содействие](#-contributing)
-- [🔗 Ссылки](#-credits)
+- [✨ Дополнения](#-дополнения)
+- [📦 Установка](#-установка)
+- [🤯 Использование](#-использование)
+- [🖥 Поддерживаемые браузеры](#-поддерживаемые-браузеры)
+- [⌨️ Локальная разработка](#️-локальная-разработка)
+- [🤝 Содействие](#-содействие)
+- [🔗 Ссылки](#-ссылки)
 
 </details>
 
 <br/>
 
-## ✨ Features
+## ✨ Дополнения
 
 - [X] 🌗 Поддержка светлой и темной темы, с возможностью быстрого переключения на панели навигации
 - [X] 🌈 Поддержка кастомных пользовательских и нейтральных цветов с возможностью настройки логотипа
@@ -64,7 +64,7 @@
 
 </div>
 
-## 📦 Installation
+## 📦 Установка
 
 #### Метод 1
 
@@ -88,7 +88,7 @@ git clone "https://github.com/canisminor1990/sd-webui-lobe-theme" extensions/lob
 
 </div>
 
-## 🤯 Usage
+## 🤯 Использование
 
 ![][feat-thememode]
 
@@ -125,8 +125,8 @@ http://localhost:7860/?__theme=dark
   - Основной цвет: в настоящее время предлагается 13 цветовых комбинаций тем.
   - Нейтральный цвет: в настоящее время предлагается 6 различных комбинаций оттенков серого.
   - Тип логотипа: `Lobe`, `Kitchen`, `Custom`
-    - Пользовательский логотип: Поддерживаются ссылки, `base64`, и `emoji`. При вводе одного смайлика он будет автоматически заменен на 3D Fluent Emoji.
-    - Пользовательский заголовок: Настройте название сайта/темы.
+    - Пользовательский логотип: `Поддерживаются ссылки`, `base64`, и `emoji`. При вводе одного смайлика он будет автоматически заменен на 3D Fluent Emoji.
+    - Пользовательский заголовок: Настраиваемое название сайта/темы.
 
 <div align="right">
 
@@ -221,7 +221,7 @@ sd_model_checkpoint, sd_vae, CLIP_stop_at_last_layers, img2img_background_color,
 
 #### Форматирование подсказок
 
-Нажмите кнопку `<kbd>`🪄`</kbd>` под строкой Prompt, чтобы отформатировать слова подсказки одним щелчком мыши.
+Нажмите кнопку <kbd>🪄</kbd> под строкой Prompt, чтобы отформатировать слова подсказки одним щелчком мыши.
 
 > 👉 Совет: Преобразует полноразмерные знаки препинания в полуразмерные, уберет лишние пробелы, добавит недостающие запятые и перенесёт в конец Extra-Networks (Дополнительные) модели.
 
@@ -243,11 +243,12 @@ photorealistic photo of a handsome male, (wizard:1.2), short beard, white wizard
 
 </div>
 
-## 🖥 Environment Support
+## 🖥 Поддерживаемые браузеры
 
-| [`<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />`](http://godban.github.io/browsers-support-badges/)`<br>`Chrome | [`<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="Edge" width="24px" height="24px" />`](http://godban.github.io/browsers-support-badges/)`<br>`Edge | [`<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />`](http://godban.github.io/browsers-support-badges/)`<br>`Safari |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2 последние версии                                                                                                                                                                                 | 2 последние версии2 последние версии                                                                                                                                        |                                                                                                                                                                                                                   |
+| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Safari |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| last 2 versions                                                                                                                                                                                              | last 2 versions                                                                                                                                                                                      | last 2 versions                                                                                                                                                                                              |
+
 
 > ⚠️ В настоящее время известна проблема совместимости со стилями в браузере Firefox.
 
@@ -257,7 +258,7 @@ photorealistic photo of a handsome male, (wizard:1.2), short beard, white wizard
 
 </div>
 
-## ⌨️ Local Development
+## ⌨️ Локальная разработка
 
 Вы можете использовать Gitpod для разработки в режиме онлайн:
 
@@ -278,11 +279,11 @@ $ pnpm start
 
 </div>
 
-## 🤝 Contributing
+## 🤝 Содействие
 
 <!-- CONTRIBUTION GROUP -->
 
-> 📊 Всего: `<kbd>`**8** `</kbd>`
+> 📊 Всего: <kbd>**8** </kbd>
 
 <a href="https://github.com/canisminor1990" title="canisminor1990">
   <img src="https://avatars.githubusercontent.com/u/17870709?v=4" width="50" />
@@ -317,7 +318,7 @@ $ pnpm start
 
 </div>
 
-## 🔗 Credits
+## 🔗 Ссылки
 
 - stable-diffusion-webui：[https://github.com/AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
 - gradio-theme-gallery: [https://huggingface.co/spaces/gradio/theme-gallery](https://huggingface.co/spaces/gradio/theme-gallery)
@@ -336,7 +337,7 @@ $ pnpm start
 
 #### 📝 License
 
-Copyright © 2023 [CanisMinor][profile-url]. `<br />`
+Copyright © 2023 [CanisMinor][profile-url]. <br />
 This project is [AGPL3](./LICENSE) licensed.
 
 <!-- LINK GROUP -->
