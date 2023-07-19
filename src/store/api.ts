@@ -3,7 +3,8 @@ import semver from 'semver';
 
 import defualtLocaleOptions from '@/../locales/options.json';
 import { homepage, version } from '@/../package.json';
-import { WebuiSetting } from '@/store/AppState';
+
+import { WebuiSetting } from './initialState';
 
 export const DEFAULT_VERSION: string = version;
 export const DEFAULT_LOCALE_OPTIONS: SelectProps['options'] = defualtLocaleOptions;

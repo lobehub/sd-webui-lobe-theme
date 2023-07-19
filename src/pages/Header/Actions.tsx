@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 import { shallow } from 'zustand/shallow';
 
 import { Giscus, Setting } from '@/components';
-import { useAppStore } from '@/store';
+import { selectors, useAppStore } from '@/store';
 
 const CivitaiLogo: LucideIcon | any = ({ size }: any) => (
   <svg fill="currentColor" height={size} viewBox="0 0 16 16" width={size}>
@@ -23,7 +23,7 @@ interface ActionsProps {
 const Actions = memo<ActionsProps>(() => {
   const [isSettingOpen, setIsSettingOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const themeMode = useAppStore((st) => st.themeMode, shallow);
+  const themeMode = useAppStore(selectors.themeMode, shallow);
   const { mobile } = useResponsive();
   const { t } = useTranslation();
 

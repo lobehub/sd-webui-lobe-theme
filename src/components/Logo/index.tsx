@@ -3,7 +3,7 @@ import isEqual from 'fast-deep-equal';
 import { type CSSProperties, memo } from 'react';
 import { shallow } from 'zustand/shallow';
 
-import { useAppStore } from '@/store';
+import { selectors, useAppStore } from '@/store';
 
 import CustomLogo from './CustomLogo';
 import KitchenLogo from './KitchenLogo';
@@ -14,8 +14,8 @@ export interface LogoProps {
 }
 
 const Logo = memo<LogoProps>(({ size = 32, style }) => {
-  const setting = useAppStore((st) => st.setting, isEqual);
-  const themeMode = useAppStore((st) => st.themeMode, shallow);
+  const setting = useAppStore(selectors.currentSetting, isEqual);
+  const themeMode = useAppStore(selectors.themeMode, shallow);
 
   if (setting.logoType === 'kitchen') {
     return <KitchenLogo size={size * 0.75} style={style} themeMode={themeMode} />;

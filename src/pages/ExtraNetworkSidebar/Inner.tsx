@@ -1,19 +1,21 @@
 import { ActionIcon, DraggablePanelBody, DraggablePanelFooter } from '@lobehub/ui';
 import { useTimeout } from 'ahooks';
 import { Skeleton, Slider } from 'antd';
+import isEqual from 'fast-deep-equal';
 import { ZoomIn, ZoomOut } from 'lucide-react';
 import { memo, useEffect, useRef, useState } from 'react';
 import { shallow } from 'zustand/shallow';
 
 import { useStyles } from '@/pages/ExtraNetworkSidebar/style';
 import civitaiHelperFix from '@/script/civitaiHelperFix';
-import { useAppStore } from '@/store';
+import { selectors, useAppStore } from '@/store';
 
 const Inner = memo(() => {
   const txt2imgExtraNetworkSidebarReference = useRef<HTMLDivElement>(null);
   const img2imgExtraNetworkSidebarReference = useRef<HTMLDivElement>(null);
   const [extraLoading, setExtraLoading] = useState(true);
-  const [setting, currentTab] = useAppStore((st) => [st.setting, st.currentTab], shallow);
+  const setting = useAppStore(selectors.currentSetting, isEqual);
+  const currentTab = useAppStore(selectors.currentTab, shallow);
   const [size, setSize] = useState<number>(setting.extraNetworkCardSize || 86);
   const { styles } = useStyles({ size });
 

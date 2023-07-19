@@ -7,7 +7,7 @@ import { shallow } from 'zustand/shallow';
 import '@/i18n/config';
 import { PromptHighlight } from '@/modules/PromptHighlight';
 import replaceIcon from '@/script/replaceIcon';
-import { useAppStore } from '@/store';
+import { selectors, useAppStore } from '@/store';
 import GlobalStyle from '@/styles';
 
 import Content from './Content';
@@ -21,8 +21,8 @@ import { useStyles } from './style';
 const HEADER_HEIGHT = 64;
 
 const Index = memo(() => {
-  const currentTab = useAppStore((st) => st.currentTab, shallow);
-  const setting = useAppStore((st) => st.setting, isEqual);
+  const currentTab = useAppStore(selectors.currentTab, shallow);
+  const setting = useAppStore(selectors.currentSetting, isEqual);
   const { mobile } = useResponsive();
   const { cx, styles } = useStyles({
     headerHeight: HEADER_HEIGHT,

@@ -1,24 +1,25 @@
-import { type DivProps, ThemeProvider, colors } from '@lobehub/ui';
+import { type DivProps, ThemeProvider } from '@lobehub/ui';
 import {
   generateColorNeutralPalette,
   generateColorPalette,
 } from '@lobehub/ui/es/styles/algorithms/generateColorPalette';
+import { colorScales } from '@lobehub/ui/es/styles/colors';
+import { neutralColorScales } from '@lobehub/ui/es/styles/neutralColors';
 import isEqual from 'fast-deep-equal';
 import qs from 'query-string';
 import { memo, useCallback, useEffect } from 'react';
 import { shallow } from 'zustand/shallow';
 
 import { useIsDarkMode } from '@/hooks/useIsDarkMode';
-import { useAppStore } from '@/store';
+import { selectors, useAppStore } from '@/store';
 import { kitchenNeutral, kitchenPrimary } from '@/styles/kitchenColors';
-import { neutralColorScales } from '@/styles/neutralColors';
 
 const Layout = memo<DivProps>(({ children }) => {
   const { onSetThemeMode, themeMode } = useAppStore(
     (st) => ({ onInit: st.onInit, onSetThemeMode: st.onSetThemeMode, themeMode: st.themeMode }),
     shallow,
   );
-  const setting = useAppStore((st) => st.setting, isEqual);
+  const setting = useAppStore(selectors.currentSetting, isEqual);
   const isDarkMode = useIsDarkMode();
 
   useEffect(() => {
@@ -39,7 +40,7 @@ const Layout = memo<DivProps>(({ children }) => {
       if (setting.primaryColor === 'kitchen') {
         primaryTokens = kitchenPrimary[themeMode];
       } else {
-        const scale = colors[setting.primaryColor];
+        const scale = colorScales[setting.primaryColor];
         primaryTokens = generateColorPalette({ appearance: themeMode, scale, type: 'Primary' });
       }
     }
@@ -53,7 +54,7 @@ const Layout = memo<DivProps>(({ children }) => {
     }
 
     return { ...primaryTokens, ...neutralTokens };
-  }, [setting.primaryColor, themeMode]);
+  }, [setting.primaryColor, setting.neutralColor, themeMode]);
 
   return (
     setting && (
