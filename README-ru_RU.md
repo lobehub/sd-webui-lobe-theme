@@ -6,11 +6,11 @@
 
 <h1 align="center">Lobe Theme</h1>
 
-The modern theme for stable diffusion webui
+Современная тема для стабильной диффузии webui
 
-Legacy verison a.k.a kitchen theme
+Ранее известная как Kitchen theme
 
-English · [Russian ](./README-ru_RU.md)· [简体中文](./README-zh_CN.md) · [Changelog](./CHANGELOG.md) · [Report Bug][issues-url] · [Request Feature][issues-url]
+[English ](./README.md)· [简体中文](./README-zh_CN.md) · Russian · [Changelog](./CHANGELOG.md) · [Report Bug][issues-url] · [Request Feature][issues-url]
 
 <!-- SHIELD GROUP -->
 
@@ -34,29 +34,29 @@ English · [Russian ](./README-ru_RU.md)· [简体中文](./README-zh_CN.md) · 
 
 #### TOC
 
-- [✨ Features](#-features)
-- [📦 Installation](#-installation)
-- [🤯 Usage](#-usage)
-- [🖥 Environment Support](#-environment-support)
-- [⌨️ Local Development](#️-local-development)
-- [🤝 Contributing](#-contributing)
-- [🔗 Credits](#-credits)
+- [✨ Дополнения](#-дополнения)
+- [📦 Установка](#-установка)
+- [🤯 Использование](#-использование)
+- [🖥 Поддерживаемые браузеры](#-поддерживаемые-браузеры)
+- [⌨️ Локальная разработка](#️-локальная-разработка)
+- [🤝 Содействие](#-содействие)
+- [🔗 Ссылки](#-ссылки)
 
 </details>
 
 <br/>
 
-## ✨ Features
+## ✨ Дополнения
 
-- [X] 🌗 Supports light and dark themes, with the ability to quickly switch in the navigation bar
-- [X] 🌈 Supports custom theme colors and neutral colors, with the option to customize the logo
-- [X] 🪄 Supports one-click formatting of the prompt, with a simple tag editor provided
-- [X] 🎛️ Highly customizable sidebar, with a quick settings sidebar on the left and a model sidebar on the right
-- [X] 🖼️ Adjustable canvas ratio, ensuring that generated images are always displayed at the top
-- [X] 📱 Mobile-friendly, with partial optimization for mobile screens
-- [X] 🌍Support i18n and welcome [PR](https://github.com/canisminor1990/sd-webui-lobe-theme/tree/main/locales) contributions
-- [X] 📝 Syntax highlighting in the prompt input box
-- [X] 📦 Support [PWA](https://support.google.com/chrome/answer/9658361) progressive web app
+- [X] 🌗 Поддержка светлой и темной темы, с возможностью быстрого переключения на панели навигации
+- [X] 🌈 Поддержка кастомных пользовательских и нейтральных цветов с возможностью настройки логотипа
+- [X] 🪄 Поддержка форматирования подсказки одним щелчком мыши с помощью простого редактора тегов
+- [X] 🎛️ Высоконастраиваемая боковая панель, с боковой панелью быстрых настроек слева и боковой панелью моделей справа
+- [X] 🖼️ Регулируемое соотношение холста, благодаря чему генерируемые изображения всегда отображаются сверху
+- [X] 📱 Mobile-friendly, с частичной оптимизацией под мобильные экраны
+- [X] 🌍 Поддержка i18n(Поддержка разных языков) и приветствуются [PR](https://github.com/canisminor1990/sd-webui-lobe-theme/tree/main/locales)
+- [X] 📝 Подсветка синтаксиса в поле ввода промта
+- [X] 📦 Поддержка [PWA](https://support.google.com/chrome/answer/9658361)
 
 <div align="right">
 
@@ -64,23 +64,23 @@ English · [Russian ](./README-ru_RU.md)· [简体中文](./README-zh_CN.md) · 
 
 </div>
 
-## 📦 Installation
+## 📦 Установка
 
-#### Method 1
+#### Метод 1
 
-Search for `Lobe Theme` or `Kitchen Theme` in the stable diffusion webui plugin market and install it.
+Найдите `Lobe Theme` или `Kitchen Theme` в поисковике плагинов SD WebUI и установите их.
 
-> 👉 Note: **Version 2.0.0** was renamed to **Lobe Theme**
+> 👉 Примечание: **Версия 2.0.0** была переименована в **Lobe Theme**.
 
-#### Method 2
+#### Метод 2
 
-As an extension (recommended), clone the repository to your extension folder:
+В качестве расширения (рекомендуется) клонировать репозиторий в папку расширений:
 
 ```shell
 git clone "https://github.com/canisminor1990/sd-webui-lobe-theme" extensions/lobe-theme
 ```
 
-> 👉 Note: minimum requirements gradio-3.23.0 & sd-webui [4c1ad74](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commit/4c1ad743e3baf1246db0711aa0107debf036a12b)
+> 👉 Примечание: Минимальные требования gradio-3.23.0 & sd-webui [4c1ad74](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commit/4c1ad743e3baf1246db0711aa0107debf036a12b)
 
 <div align="right">
 
@@ -88,21 +88,21 @@ git clone "https://github.com/canisminor1990/sd-webui-lobe-theme" extensions/lob
 
 </div>
 
-## 🤯 Usage
+## 🤯 Использование
 
 ![][feat-thememode]
 
-#### Light and Dark Themes
+#### Светлая и темная темы
 
-> 👉 Tip: You can quickly switch between light and dark themes in the upper-right corner of the navigation bar.
+> 👉 Совет: В правом верхнем углу панели навигации можно быстро переключаться между светлой и темной темами.
 
-The current theme supports both light and dark themes. If you want to force dark mode, use the `--theme=dark` argument to launch your WebUI. For example, on Windows, your `webui-user.bat` should include:
+Текущая тема поддерживает как светлые, так и темные темы. Если вы хотите принудительно включить темный режим, используйте аргумент `--theme=dark` для запуска WebUI. Например, под Windows ваш `webui-user.bat` должен содержать:
 
 ```shell
 set COMMANDLINE_ARGS= --theme=dark
 ```
 
-Alternatively, you can switch directly through URL Props:
+Кроме того, переключение можно осуществлять непосредственно через URL:
 
 ```shell
 http://localhost:7860/?__theme=light
@@ -117,16 +117,16 @@ http://localhost:7860/?__theme=dark
 
 ![][feat-theme-modify]
 
-#### Theme Customization
+#### Кастомизация темы
 
-> 👉 Tip: Click the `⚙` icon in the upper-right corner to open the settings panel. The current available settings are as follows:
+> 👉 Совет: Щелкните на значке `⚙` в правом верхнем углу, чтобы открыть панель настроек. В настоящее время доступны следующие настройки:
 
-- **Theme**
-  - Primary color: Currently offers `13` theme color combinations
-  - Neutral color: Currently offers `6` different grayscale color combinations
-  - Logo type: `Lobe`, `Kitchen`, `Custom`
-    - Custom logo: Supports `img url`, `base64`, and `emoji`. When a single emoji is entered, it will be automatically replaced with 3D Fluent Emoji.
-    - Custom title: Customize the site name.
+- Тема
+  - Основной цвет: в настоящее время предлагается 13 цветовых комбинаций тем.
+  - Нейтральный цвет: в настоящее время предлагается 6 различных комбинаций оттенков серого.
+  - Тип логотипа: `Lobe`, `Kitchen`, `Custom`
+    - Пользовательский логотип: `Поддерживаются ссылки`, `base64`, и `emoji`. При вводе одного смайлика он будет автоматически заменен на 3D Fluent Emoji.
+    - Пользовательский заголовок: Настраиваемое название сайта/темы.
 
 <div align="right">
 
@@ -136,9 +136,9 @@ http://localhost:7860/?__theme=dark
 
 ![][feat-highlight]
 
-#### Prompt Syntax Highlighting
+#### Подсветка синтаксиса подсказок
 
-Automatically colorize prompt display according to the Stable Diffusion syntax rules
+Автоматически подсвечивать промт в соответствии с правилами синтаксиса Stable Diffusion.
 
 <div align="right">
 
@@ -148,35 +148,35 @@ Automatically colorize prompt display according to the Stable Diffusion syntax r
 
 ![][feat-sidebar]
 
-#### Sidebar Customization
+#### Настройка боковой панели
 
-> 👉 Tip: Click the `⚙` icon in the upper-right corner to open the settings panel. The current available settings are as follows:
+> 👉 Совет: нажмите значок `⚙` в правом верхнем углу, чтобы открыть панель настроек. Текущие доступные настройки следующие:
 
-- **Prompt Textarea**
-  - Display mode: `scroll fixed height` | `resizable by text lines`
-- **Sidebar**
-  - Default expand: `true`
-  - Display mode: `fixed` | `float`
-  - Default width: `280`
-- **ExtraNetwork Sidebar**
-  - Enable: `true`
-  - Default expand: `true`
-  - Display mode: `fixed` | `float`
-  - Default width: `340`
-  - Default card size: `86`
+- **Текстовое поле промта**
+  - Режим отображения: `Фиксированная высота и скрол в поле ввода` | `Увеличение от вводимого текста`
+- **Боковая панель**
+  - По умолчанию развернуть: `true`
+  - Режим отображения: `Фиксированный` | `Плавающий`
+  - Ширина по умолчанию: `280`
+- **Панель с дом. сетями**
+  - Включено: `true`
+  - По умолчанию развернуть: `true`
+  - Режим отображения: `Фиксированный` | `Плавающий`
+  - Ширина по умолчанию: `340`
+  - Размер превью по умолчанию: `86`
 
 <details>
 <summary><kbd>Recommended System Settings</kbd></summary>
 
-#### Extra-Networks
+#### Доп. Сети
 
-- thumbs
-- width: 86
-- height: 128
+- Превью
+- Ширина: 86
+- высота: 128
 
 <br/>
 
-#### Quick-Setting
+#### Быстрые настройки (изменяются в настройках SD)
 
 ```txt
 sd_model_checkpoint, sd_vae, CLIP_stop_at_last_layers, img2img_background_color, img2img_color_correction, samples_save, samples_format, grid_save, return_grid,  n_rows, live_previews_enable, show_progress_every_n_steps, live_preview_refresh_period
@@ -192,9 +192,9 @@ sd_model_checkpoint, sd_vae, CLIP_stop_at_last_layers, img2img_background_color,
 
 ![][feat-mobile-friendly]
 
-#### Mobile Adaptation
+#### Адаптированно под мобильные устройства
 
-Partial convenience adaptation design has been completed for mobile devices, including breadcrumb foldable navigation bar, sidebar adaptation, etc. However, due to the high complexity and fixed values of the stable diffusion interface, it is difficult to ensure the same user experience as the desktop version. Feedback is welcome for more ideas.
+Выполнена частичная адаптация удобства работы с мобильными устройствами, включая откидную панель навигации, адаптацию боковой панели и т.д. Однако из-за высокой сложности и фиксированных значений стабильного диффузного интерфейса трудно обеспечить такое же удобство работы, как и в настольной версии. Приветствуется обратная связь для поиска новых идей.
 
 <div align="right">
 
@@ -206,11 +206,11 @@ Partial convenience adaptation design has been completed for mobile devices, inc
 
 #### Progress Web App
 
-You can use Progressive Web Apps [PWA](https://support.google.com/chrome/answer/9658361) for a fast stable diffusion experience on your computer or mobile device.
+Вы можете использовать Progressive Web Apps [PWA](https://support.google.com/chrome/answer/9658361) для быстрого стабильного запуска на компьютере или мобильном устройстве.
 
-- On your computer, open Chrome.
-- Go to stable diffusion website you want to install
-- At the top right of the address bar, click `Install`
+- На компьютере откройте браузер Chrome.
+- Перейдите на стабильный сайт диффузии, который вы хотите установить
+- В правом верхнем углу адресной строки нажмите кнопку `Установить`
 - Follow the onscreen instructions to install the PWA
 
 <div align="right">
@@ -219,19 +219,19 @@ You can use Progressive Web Apps [PWA](https://support.google.com/chrome/answer/
 
 </div>
 
-#### Prompt formatting
+#### Форматирование подсказок
 
-Click the <kbd>🪄</kbd> button below Prompt to format the prompt words with one click.
+Нажмите кнопку <kbd>🪄</kbd> под строкой Prompt, чтобы отформатировать слова подсказки одним щелчком мыши.
 
-> 👉 Tip: Convert full-width punctuation to half-width, remove extra spaces, add missing commas, and move the Extra-Networks model to the end.
+> 👉 Совет: Преобразует полноразмерные знаки препинания в полуразмерные, уберет лишние пробелы, добавит недостающие запятые и перенесёт в конец Extra-Networks (Дополнительные) модели.
 
-Before formatting:
+Перед форматированием:
 
 ```text
 photorealistic   photo of a handsome male (wizard  :1.2）， <lora:LuisapHotlineStyle:0.5> <lora:ElegantHanfuRuqunStyle:0.2>    short beard, white wizard  shirt, (with golden    trim:0.8),
 ```
 
-After formatting:
+После форматирования:
 
 ```text
 photorealistic photo of a handsome male, (wizard:1.2), short beard, white wizard shirt, (with golden trim:0.8), <lora:LuisapHotlineStyle:0.5>, <lora:ElegantHanfuRuqunStyle:0.2>
@@ -243,15 +243,14 @@ photorealistic photo of a handsome male, (wizard:1.2), short beard, white wizard
 
 </div>
 
-## 🖥 Environment Support
-
+## 🖥 Поддерживаемые браузеры
 
 | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Safari |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | last 2 versions                                                                                                                                                                                              | last 2 versions                                                                                                                                                                                      | last 2 versions                                                                                                                                                                                              |
 
 
-> ⚠️ There is currently a known compatibility issue with styles on Firefox browser.
+> ⚠️ В настоящее время известна проблема совместимости со стилями в браузере Firefox.
 
 <div align="right">
 
@@ -259,13 +258,13 @@ photorealistic photo of a handsome male, (wizard:1.2), short beard, white wizard
 
 </div>
 
-## ⌨️ Local Development
+## ⌨️ Локальная разработка
 
-You can use Gitpod for online development:
+Вы можете использовать Gitpod для разработки в режиме онлайн:
 
 [Open in Gitpod][gitpod-url]
 
-Alternatively, you can clone it for local development. To enable hot-reloading mode, you need to start stable diffuison on port `7860` in advance.
+В качестве альтернативы можно клонировать его для локальной разработки. Для включения режима горячей загрузки необходимо предварительно запустить Stable-Diffusion на порту `7860`.
 
 ```bash
 $ git clone https://github.com/canisminor1990/sd-webui-lobe-theme.git
@@ -280,11 +279,11 @@ $ pnpm start
 
 </div>
 
-## 🤝 Contributing
+## 🤝 Содействие
 
 <!-- CONTRIBUTION GROUP -->
 
-> 📊 Total: <kbd>**8**</kbd>
+> 📊 Всего: <kbd>**8** </kbd>
 
 <a href="https://github.com/canisminor1990" title="canisminor1990">
   <img src="https://avatars.githubusercontent.com/u/17870709?v=4" width="50" />
@@ -319,7 +318,7 @@ $ pnpm start
 
 </div>
 
-## 🔗 Credits
+## 🔗 Ссылки
 
 - stable-diffusion-webui：[https://github.com/AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
 - gradio-theme-gallery: [https://huggingface.co/spaces/gradio/theme-gallery](https://huggingface.co/spaces/gradio/theme-gallery)
