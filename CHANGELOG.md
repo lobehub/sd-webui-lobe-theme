@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 2.8.5](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.8.4...v2.8.5)
+
+<sup>Released on **2023-07-20**</sup>
+
+#### 💄 Styles
+
+- **sidebar**: Add `minWidth` to DraggablePanelContainer.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **sidebar**: Add `minWidth` to DraggablePanelContainer ([8c6f9da](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/8c6f9da))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 2.8.4](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.8.3...v2.8.4)
 
 <sup>Released on **2023-07-20**</sup>
