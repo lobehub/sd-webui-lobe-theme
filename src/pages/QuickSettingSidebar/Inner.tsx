@@ -3,11 +3,11 @@ import isEqual from 'fast-deep-equal';
 import { memo, useEffect, useRef } from 'react';
 
 import { PromptEditor } from '@/components';
-import { useAppStore } from '@/store';
+import { selectors, useAppStore } from '@/store';
 import { type DivProps } from '@/types';
 
 const Inner = memo<DivProps>(() => {
-  const setting = useAppStore((st) => st.setting, isEqual);
+  const setting = useAppStore(selectors.currentSetting, isEqual);
   const sidebarReference = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

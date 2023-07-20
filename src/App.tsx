@@ -9,7 +9,7 @@ import { useAppStore } from '@/store';
 
 import manifest from './manifest';
 
-const App = memo(() => {
+export const App = memo(() => {
   const [loading, setLoading] = useState(true);
   const { setCurrentTab, onInit, storeLoading } = useAppStore(
     (st) => ({

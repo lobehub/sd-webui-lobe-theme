@@ -4,7 +4,7 @@ import { startCase } from 'lodash-es';
 import { memo, useCallback, useEffect, useMemo, useState } from 'react';
 import { shallow } from 'zustand/shallow';
 
-import { useAppStore } from '@/store';
+import { selectors, useAppStore } from '@/store';
 
 const hideOriganlNav = () => {
   (gradioApp().querySelector('#tabs > .tab-nav:first-of-type') as HTMLDivElement).style.display =
@@ -42,7 +42,7 @@ const genNavList = (): NavItem[] => {
 };
 
 const Nav = memo(() => {
-  const currentTab = useAppStore((st) => st.currentTab, shallow);
+  const currentTab = useAppStore(selectors.currentTab, shallow);
   const { mobile } = useResponsive();
   const [opened, setOpened] = useState(false);
   const [items, setItems] = useState<TabsNavProps['items']>([]);

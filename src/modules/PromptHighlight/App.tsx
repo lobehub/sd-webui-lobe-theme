@@ -1,10 +1,8 @@
 import { SyntaxHighlighter } from '@lobehub/ui';
 import { useScroll, useSize } from 'ahooks';
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { shallow } from 'zustand/shallow';
 
 import { useExternalTextareaObserver } from '@/hooks/useExternalTextareaObserver';
-import { useAppStore } from '@/store';
 
 import grammar from './prompt.tmLanguage.json';
 import { themeConfig } from './promptTheme';
@@ -29,7 +27,6 @@ interface AppProps {
 const App = memo<AppProps>(({ parentId }) => {
   const ref: any = useRef(null);
   const [prompt, setPrompt] = useState<string>('');
-  const { themeMode } = useAppStore((st) => ({ themeMode: st.themeMode }), shallow);
   const { styles, theme } = useStyles();
   const nativeTextareaValue = useExternalTextareaObserver(`${parentId} label textarea`);
   const nativeTextarea = useMemo(
@@ -72,7 +69,7 @@ const App = memo<AppProps>(({ parentId }) => {
       ref={ref}
       style={{ height: size?.height, width: size?.width }}
     >
-      <SyntaxHighlighter language="prompt" options={options} theme={themeMode}>
+      <SyntaxHighlighter language="prompt" options={options}>
         {prompt.trim()}
       </SyntaxHighlighter>
     </div>

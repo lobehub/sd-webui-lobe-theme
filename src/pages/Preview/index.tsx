@@ -3,7 +3,7 @@ import isEqual from 'fast-deep-equal';
 import { memo, useEffect, useRef } from 'react';
 import { shallow } from 'zustand/shallow';
 
-import { useAppStore } from '@/store';
+import { selectors, useAppStore } from '@/store';
 import { type DivProps } from '@/types';
 
 import { useStyles } from './style';
@@ -13,8 +13,8 @@ export interface PreviewProps extends DivProps {
 }
 
 const Preview = memo<PreviewProps>(({ headerHeight }) => {
-  const currentTab = useAppStore((st) => st.currentTab, shallow);
-  const setting = useAppStore((st) => st.setting, isEqual);
+  const currentTab = useAppStore(selectors.currentTab, shallow);
+  const setting = useAppStore(selectors.currentSetting, isEqual);
   const { cx, styles } = useStyles({
     headerHeight,
     isPrimaryColor: Boolean(setting.primaryColor),

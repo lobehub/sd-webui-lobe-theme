@@ -4,7 +4,7 @@ import { memo, useEffect, useRef } from 'react';
 
 import draggablePanel from '@/script/draggablePanel';
 import formatPrompt from '@/script/formatPrompt';
-import { useAppStore } from '@/store';
+import { selectors, useAppStore } from '@/store';
 import { type DivProps } from '@/types';
 
 import { useStyles as usePreviewStyles } from '../Preview/style';
@@ -12,7 +12,7 @@ import { useStyles } from './style';
 
 const Content = memo<DivProps>(({ className, ...props }) => {
   const mainReference = useRef<HTMLDivElement>(null);
-  const setting = useAppStore((st) => st.setting, isEqual);
+  const setting = useAppStore(selectors.currentSetting, isEqual);
   const { mobile } = useResponsive();
   const { cx, styles } = useStyles({
     isPromptResizable: setting.promptTextareaType === 'resizable',
