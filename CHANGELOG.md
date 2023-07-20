@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 2.8.4](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.8.3...v2.8.4)
+
+<sup>Released on **2023-07-20**</sup>
+
+#### ♻ Code Refactoring
+
+- **misc**: Refactor store.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Code refactoring
+
+- **misc**: Refactor store ([c220794](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/c220794))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 2.8.3](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.8.2...v2.8.3)
 
 <sup>Released on **2023-07-17**</sup>

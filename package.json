@@ -1,6 +1,6 @@
 {
   "name": "sd-webui-lobe-theme",
-  "version": "2.8.3",
+  "version": "2.8.4",
   "private": true,
   "description": "The modern theme for stable diffusion webui, legacy verison a.k.a kitchen theme",
   "keywords": [
