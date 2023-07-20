@@ -62,7 +62,11 @@ const ExtraNetworkSidebar = memo<ExtraNetworkSidebarProps>(({ headerHeight }) =>
       <LayoutSidebarInner>
         <DraggablePanelContainer
           className={styles.container}
-          style={mode === 'float' ? { background: theme.colorBgContainer } : {}}
+          style={
+            mode === 'float' ?
+              { background: theme.colorBgContainer, minWidth: setting.extraNetworkSidebarWidth } :
+              { minWidth: setting.extraNetworkSidebarWidth }
+          }
         >
           <DraggablePanelHeader
             pin={pin}
