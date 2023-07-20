@@ -1,10 +1,11 @@
-import { type DivProps, ThemeProvider } from '@lobehub/ui';
 import {
+  type DivProps,
+  ThemeProvider,
+  colorScales,
   generateColorNeutralPalette,
   generateColorPalette,
-} from '@lobehub/ui/es/styles/algorithms/generateColorPalette';
-import { colorScales } from '@lobehub/ui/es/styles/colors';
-import { neutralColorScales } from '@lobehub/ui/es/styles/neutralColors';
+  neutralColorScales,
+} from '@lobehub/ui';
 import isEqual from 'fast-deep-equal';
 import qs from 'query-string';
 import { memo, useCallback, useEffect } from 'react';

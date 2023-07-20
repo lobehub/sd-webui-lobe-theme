@@ -1,9 +1,7 @@
-import { defaults } from 'lodash-es';
-
 import { DEFAULT_SETTING } from './initialState';
-import { Store } from './store';
+import type { Store } from './store';
 
-const currentSetting = (s: Store) => defaults(s.setting, DEFAULT_SETTING);
+const currentSetting = (s: Store) => ({ ...DEFAULT_SETTING, ...s.setting });
 const currentTab = (s: Store) => s.currentTab;
 const themeMode = (s: Store) => s.themeMode;
 export const selectors = {

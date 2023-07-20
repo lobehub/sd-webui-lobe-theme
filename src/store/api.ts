@@ -1,10 +1,10 @@
-import { SelectProps } from 'antd';
+import type { SelectProps } from 'antd';
 import semver from 'semver';
 
 import defualtLocaleOptions from '@/../locales/options.json';
 import { homepage, version } from '@/../package.json';
 
-import { WebuiSetting } from './initialState';
+import type { WebuiSetting } from './initialState';
 
 export const DEFAULT_VERSION: string = version;
 export const DEFAULT_LOCALE_OPTIONS: SelectProps['options'] = defualtLocaleOptions;

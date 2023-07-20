@@ -7,8 +7,13 @@ import { useTranslation } from 'react-i18next';
 import { shallow } from 'zustand/shallow';
 
 import { CustomLogo } from '@/components';
-import { selectors, useAppStore } from '@/store';
-import { DEFAULT_SETTING, type WebuiSetting, type WebuiSettingKeys } from '@/store/initialState';
+import {
+  DEFAULT_SETTING,
+  type WebuiSetting,
+  type WebuiSettingKeys,
+  selectors,
+  useAppStore,
+} from '@/store';
 
 import {
   type NeutralColor,

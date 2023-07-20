@@ -2,8 +2,7 @@ import i18next from 'i18next';
 import HttpBackend, { HttpBackendOptions } from 'i18next-http-backend';
 import { initReactI18next } from 'react-i18next';
 
-import { SETTING_KEY } from '@/store/action';
-import type { WebuiSetting } from '@/store/initialState';
+import { SETTING_KEY, type WebuiSetting } from '@/store';
 
 const localSetting = JSON.parse(localStorage.getItem(SETTING_KEY) as any) as WebuiSetting;
 

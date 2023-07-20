@@ -1,8 +1,8 @@
-import { SelectProps } from 'antd';
+import type { SelectProps } from 'antd';
 
 import type { NeutralColor, PrimaryColor } from '@/components/Setting/data';
 import { DEFAULT_LOCALE_OPTIONS, DEFAULT_VERSION } from '@/store/api';
-import { I18n } from '@/types';
+import type { I18n } from '@/types';
 
 export interface WebuiSetting {
   enableExtraNetworkSidebar: boolean;
