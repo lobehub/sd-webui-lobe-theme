@@ -42,21 +42,21 @@
 - [🤝 Содействие](#-содействие)
 - [🔗 Ссылки](#-ссылки)
 
-</details>
+####
 
-<br/>
+</details>
 
 ## ✨ Дополнения
 
-- [X] 🌗 Поддержка светлой и темной темы, с возможностью быстрого переключения на панели навигации
-- [X] 🌈 Поддержка кастомных пользовательских и нейтральных цветов с возможностью настройки логотипа
-- [X] 🪄 Поддержка форматирования подсказки одним щелчком мыши с помощью простого редактора тегов
-- [X] 🎛️ Высоконастраиваемая боковая панель, с боковой панелью быстрых настроек слева и боковой панелью моделей справа
-- [X] 🖼️ Регулируемое соотношение холста, благодаря чему генерируемые изображения всегда отображаются сверху
-- [X] 📱 Mobile-friendly, с частичной оптимизацией под мобильные экраны
-- [X] 🌍 Поддержка i18n(Поддержка разных языков) и приветствуются [PR](https://github.com/canisminor1990/sd-webui-lobe-theme/tree/main/locales)
-- [X] 📝 Подсветка синтаксиса в поле ввода промта
-- [X] 📦 Поддержка [PWA](https://support.google.com/chrome/answer/9658361)
+- [x] 🌗 Поддержка светлой и темной темы, с возможностью быстрого переключения на панели навигации
+- [x] 🌈 Поддержка кастомных пользовательских и нейтральных цветов с возможностью настройки логотипа
+- [x] 🪄 Поддержка форматирования подсказки одним щелчком мыши с помощью простого редактора тегов
+- [x] 🎛️ Высоконастраиваемая боковая панель, с боковой панелью быстрых настроек слева и боковой панелью моделей справа
+- [x] 🖼️ Регулируемое соотношение холста, благодаря чему генерируемые изображения всегда отображаются сверху
+- [x] 📱 Mobile-friendly, с частичной оптимизацией под мобильные экраны
+- [x] 🌍 Поддержка i18n(Поддержка разных языков) и приветствуются [PR](https://github.com/canisminor1990/sd-webui-lobe-theme/tree/main/locales)
+- [x] 📝 Подсветка синтаксиса в поле ввода промта
+- [x] 📦 Поддержка [PWA](https://support.google.com/chrome/answer/9658361)
 
 <div align="right">
 
@@ -249,7 +249,6 @@ photorealistic photo of a handsome male, (wizard:1.2), short beard, white wizard
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | last 2 versions                                                                                                                                                                                              | last 2 versions                                                                                                                                                                                      | last 2 versions                                                                                                                                                                                              |
 
-
 > ⚠️ В настоящее время известна проблема совместимости со стилями в браузере Firefox.
 
 <div align="right">
@@ -320,12 +319,12 @@ $ pnpm start
 
 ## 🔗 Ссылки
 
-- stable-diffusion-webui：[https://github.com/AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
-- gradio-theme-gallery: [https://huggingface.co/spaces/gradio/theme-gallery](https://huggingface.co/spaces/gradio/theme-gallery)
-- cozy-nest: [https://github.com/Nevysha/Cozy-Nest](https://github.com/Nevysha/Cozy-Nest)
+- stable-diffusion-webui：<https://github.com/AUTOMATIC1111/stable-diffusion-webui>
+- gradio-theme-gallery: <https://huggingface.co/spaces/gradio/theme-gallery>
+- cozy-nest: <https://github.com/Nevysha/Cozy-Nest>
 - _before `1.0.0` version_
-  - sd-web-ui-quickcs: [https://github.com/Gerschel/sd-web-ui-quickcss/](https://github.com/Gerschel/sd-web-ui-quickcss/)
-  - Dark-Themes-SD-WebUI-Automatic1111: [https://github.com/Nacurutu/Dark-Themes-SD-WebUI-Automatic1111](https://github.com/Nacurutu/Dark-Themes-SD-WebUI-Automatic1111)
+  - sd-web-ui-quickcs: <https://github.com/Gerschel/sd-web-ui-quickcss/>
+  - Dark-Themes-SD-WebUI-Automatic1111: <https://github.com/Nacurutu/Dark-Themes-SD-WebUI-Automatic1111>
 
 <div align="right">
 
@@ -342,24 +341,6 @@ This project is [AGPL3](./LICENSE) licensed.
 
 <!-- LINK GROUP -->
 
-<!-- SHIELD LINK GROUP -->
-
-<!-- release -->
-
-<!-- releaseDate -->
-
-<!-- ciTest -->
-
-<!-- ciRelease -->
-
-<!-- contributors -->
-
-<!-- forks -->
-
-<!-- stargazers -->
-
-<!-- issues -->
-
 [cover]: https://gw.alipayobjects.com/zos/kitchen/8Ab%24hLJ5ur/cover.webp
 [feat-highlight]: https://gw.alipayobjects.com/zos/kitchen/iD%24W4U2y3Y/feat_highlight.webp
 [feat-mobile-friendly]: https://gw.alipayobjects.com/zos/kitchen/WpWe6Hw8UT/feat_mobile_friendly.webp
@@ -369,20 +350,47 @@ This project is [AGPL3](./LICENSE) licensed.
 [feat-pwa]: https://gw.alipayobjects.com/zos/kitchen/az49akOKJT/feat_pwa.webp
 [profile-url]: https://github.com/canisminor1990
 [gitpod-url]: https://gitpod.io/#https://github.com/canisminor1990/sd-webui-lobe-theme
+
+<!-- SHIELD LINK GROUP -->
+
 [back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square
+
+<!-- release -->
+
 [release-shield]: https://img.shields.io/github/v/release/canisminor1990/sd-webui-lobe-theme?style=flat&sort=semver&logo=github
 [release-url]: https://github.com/canisminor1990/sd-webui-lobe-theme/releases
+
+<!-- releaseDate -->
+
 [release-date-shield]: https://img.shields.io/github/release-date/canisminor1990/sd-webui-lobe-theme?style=flat
 [release-date-url]: https://github.com/canisminor1990/sd-webui-lobe-theme/releases
+
+<!-- ciTest -->
+
 [ci-test-shield]: https://github.com/canisminor1990/sd-webui-lobe-theme/workflows/Test%20CI/badge.svg
 [ci-test-url]: https://github.com/canisminor1990/sd-webui-lobe-theme/actions/workflows/test.yml
+
+<!-- ciRelease -->
+
 [ci-release-shield]: https://github.com/canisminor1990/sd-webui-lobe-theme/workflows/Build%20and%20Release/badge.svg
 [ci-release-url]: https://github.com/canisminor1990/sd-webui-lobe-theme/actions/workflows/release.yml
+
+<!-- contributors -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/canisminor1990/sd-webui-lobe-theme.svg?style=flat
 [contributors-url]: https://github.com/canisminor1990/sd-webui-lobe-theme/graphs/contributors
+
+<!-- forks -->
+
 [forks-shield]: https://img.shields.io/github/forks/canisminor1990/sd-webui-lobe-theme.svg?style=flat
 [forks-url]: https://github.com/canisminor1990/sd-webui-lobe-theme/network/members
+
+<!-- stargazers -->
+
 [stargazers-shield]: https://img.shields.io/github/stars/canisminor1990/sd-webui-lobe-theme.svg?style=flat
 [stargazers-url]: https://github.com/canisminor1990/sd-webui-lobe-theme/stargazers
+
+<!-- issues -->
+
 [issues-shield]: https://img.shields.io/github/issues/canisminor1990/sd-webui-lobe-theme.svg?style=flat
 [issues-url]: https://github.com/canisminor1990/sd-webui-lobe-theme/issues/new/choose
