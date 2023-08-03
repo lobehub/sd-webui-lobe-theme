@@ -136,7 +136,9 @@ export const useStyles = createStyles(
           border-radius: ${token.borderRadiusSM}px;
           outline: none;
 
-          transition: box-shadow 200ms ${token.motionEaseOut}, scale 400ms ${token.motionEaseOut};
+          transition:
+            box-shadow 200ms ${token.motionEaseOut},
+            scale 400ms ${token.motionEaseOut};
 
           .name {
             font-size: 12px !important;
@@ -147,7 +149,7 @@ export const useStyles = createStyles(
             box-shadow: 0 0 0 1px ${token.colorPrimary};
 
             .additional {
-              display: block;
+              display: flex !important;
             }
 
             .name {
@@ -160,32 +162,20 @@ export const useStyles = createStyles(
           }
         }
 
+        .button-row {
+          padding: 0 4px;
+          background: rgba(0, 0, 0, 50%);
+          border-bottom-left-radius: ${token.borderRadius}px;
+
+          > div {
+            font-size: 15px !important;
+            text-shadow: none !important;
+          }
+        }
+
         .metadata-button {
-          top: 50% !important;
-          transform: translateY(-50%);
-
-          display: flex !important;
-          align-items: center;
-          justify-content: center;
-
-          padding: 4px !important;
-
-          font-size: 20px !important;
-          line-height: 1;
-          text-shadow: none !important;
-
-          opacity: 0;
-          background: rgba(0, 0, 0, 70%);
-          border-top-left-radius: 4px;
-          border-bottom-left-radius: 4px;
-
           &::before {
             content: 'ℹ️' !important;
-          }
-
-          &:hover {
-            color: #fff !important;
-            opacity: 1;
           }
         }
       }

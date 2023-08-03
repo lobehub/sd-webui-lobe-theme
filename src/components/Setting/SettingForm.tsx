@@ -28,7 +28,7 @@ import { useStyles } from './style';
 
 type SettingItemGroup = ItemGroup & {
   children: {
-    name?: WebuiSettingKeys;
+    name?: WebuiSettingKeys | string;
   }[];
 };
 
