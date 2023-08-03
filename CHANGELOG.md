@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 2.8.6](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.8.5...v2.8.6)
+
+<sup>Released on **2023-08-03**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix types and extranetworks button style.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix types and extranetworks button style ([fa4d296](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/fa4d296))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 2.8.5](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.8.4...v2.8.5)
 
 <sup>Released on **2023-07-20**</sup>
