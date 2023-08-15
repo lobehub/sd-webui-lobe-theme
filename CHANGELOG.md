@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 2.8.7](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.8.6...v2.8.7)
+
+<sup>Released on **2023-08-15**</sup>
+
+#### ♻ Code Refactoring
+
+- **misc**: Replace CDN.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Code refactoring
+
+- **misc**: Replace CDN ([bb1627f](https://github.com/canisminor1990/sd-webui-lobe-theme/commit/bb1627f))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 2.8.6](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.8.5...v2.8.6)
 
 <sup>Released on **2023-08-03**</sup>
