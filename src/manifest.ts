@@ -4,12 +4,12 @@ const manifest = {
   icons: [
     {
       sizes: '192x192',
-      src: 'https://npm.elemecdn.com/@lobehub/assets-favicons/assets/android-chrome-192x192.png',
+      src: 'https://registry.npmmirror.com/@lobehub/assets-favicons/1.1.0/files/assets/android-chrome-192x192.png',
       type: 'image/png',
     },
     {
       sizes: '512x512',
-      src: 'https://npm.elemecdn.com/@lobehub/assets-favicons/assets/android-chrome-512x512.png',
+      src: 'https://registry.npmmirror.com/@lobehub/assets-favicons/1.1.0/files/assets/android-chrome-512x512.png',
       type: 'image/png',
     },
   ],

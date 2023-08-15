@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img width="160" src="https://npm.elemecdn.com/@lobehub/assets-logo/assets@1.0.0/logo-3d.webp">
+<img height="160" src="https://registry.npmmirror.com/@lobehub/assets-logo/1.0.0/files/assets/logo-3d.webp">
 
 <h1 align="center">Lobe Theme</h1>
 
