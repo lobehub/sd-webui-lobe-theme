@@ -89,7 +89,7 @@
     "husky": "^8",
     "i18next": "^23",
     "i18next-http-backend": "^2.2.1",
-    "lint-staged": "^13",
+    "lint-staged": "^14",
     "lodash-es": "^4",
     "lucide-react": "latest",
     "lucide-static": "latest",
