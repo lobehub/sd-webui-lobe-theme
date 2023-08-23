@@ -165,7 +165,7 @@ export default (token: Theme) => {
       --prose-text-weight: 400;
       --prose-header-text-weight: 600;
       --slider-color: ${token.colorPrimary};
-      --stat-background-fill: l${token.colorInfoBg};
+      --stat-background-fill: ${token.geekblue4};
       --table-border-color: ${token.colorBorderSecondary};
       --table-even-background-fill: transparent;
       --table-odd-background-fill: ${token.colorFillTertiary};
