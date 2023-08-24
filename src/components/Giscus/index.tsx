@@ -1,4 +1,4 @@
-import { ActionIcon, Giscus as G } from '@lobehub/ui';
+import { ActionIcon, DiscordIcon, Giscus as G } from '@lobehub/ui';
 import { Space } from 'antd';
 import isEqual from 'fast-deep-equal';
 import { Github } from 'lucide-react';
@@ -26,6 +26,9 @@ const Giscus = memo<GiscusProps>(({ open, onCancel }) => {
       open={open}
       title={
         <>
+          <a href={'https://discord.gg/AYFPHvv2jT'} rel="noreferrer" target="_blank">
+            <ActionIcon icon={DiscordIcon} title={'Discord'} />
+          </a>
           <a href={homepage} rel="noreferrer" target="_blank">
             <ActionIcon icon={Github} title={repoName} />
           </a>

@@ -34,7 +34,7 @@ export type WebuiSettingKeys = keyof WebuiSetting;
 
 export const DEFAULT_SETTING: WebuiSetting = {
   enableExtraNetworkSidebar: true,
-  enableHighlight: true,
+  enableHighlight: false,
   enableSidebar: true,
   enableWebFont: true,
   extraNetworkCardSize: 86,

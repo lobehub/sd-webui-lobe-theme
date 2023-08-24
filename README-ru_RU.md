@@ -54,7 +54,7 @@
 - [x] 🎛️ Высоконастраиваемая боковая панель, с боковой панелью быстрых настроек слева и боковой панелью моделей справа
 - [x] 🖼️ Регулируемое соотношение холста, благодаря чему генерируемые изображения всегда отображаются сверху
 - [x] 📱 Mobile-friendly, с частичной оптимизацией под мобильные экраны
-- [x] 🌍 Поддержка i18n(Поддержка разных языков) и приветствуются [PR](https://github.com/canisminor1990/sd-webui-lobe-theme/tree/main/locales)
+- [x] 🌍 Поддержка i18n(Поддержка разных языков) и приветствуются [PR](https://github.com/lobehub/sd-webui-lobe-theme/tree/main/locales)
 - [x] 📝 Подсветка синтаксиса в поле ввода промта
 - [x] 📦 Поддержка [PWA](https://support.google.com/chrome/answer/9658361)
 
@@ -77,7 +77,7 @@
 В качестве расширения (рекомендуется) клонировать репозиторий в папку расширений:
 
 ```shell
-git clone "https://github.com/canisminor1990/sd-webui-lobe-theme" extensions/lobe-theme
+git clone "https://github.com/lobehub/sd-webui-lobe-theme" extensions/lobe-theme
 ```
 
 > 👉 Примечание: Минимальные требования gradio-3.23.0 & sd-webui [4c1ad74](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commit/4c1ad743e3baf1246db0711aa0107debf036a12b)
@@ -266,7 +266,7 @@ photorealistic photo of a handsome male, (wizard:1.2), short beard, white wizard
 В качестве альтернативы можно клонировать его для локальной разработки. Для включения режима горячей загрузки необходимо предварительно запустить Stable-Diffusion на порту `7860`.
 
 ```bash
-$ git clone https://github.com/canisminor1990/sd-webui-lobe-theme.git
+$ git clone https://github.com/lobehub/sd-webui-lobe-theme.git
 $ cd sd-webui-lobe-theme
 $ pnpm install
 $ pnpm start
@@ -358,7 +358,7 @@ This project is [AGPL3](./LICENSE) licensed.
 [feat-thememode]: https://gw.alipayobjects.com/zos/kitchen/nSFtJidWUR/feat_thememode.webp
 [feat-pwa]: https://gw.alipayobjects.com/zos/kitchen/az49akOKJT/feat_pwa.webp
 [profile-url]: https://github.com/canisminor1990
-[gitpod-url]: https://gitpod.io/#https://github.com/canisminor1990/sd-webui-lobe-theme
+[gitpod-url]: https://gitpod.io/#https://github.com/lobehub/sd-webui-lobe-theme
 
 <!-- SHIELD LINK GROUP -->
 
@@ -366,40 +366,40 @@ This project is [AGPL3](./LICENSE) licensed.
 
 <!-- release -->
 
-[release-shield]: https://img.shields.io/github/v/release/canisminor1990/sd-webui-lobe-theme?style=flat&sort=semver&logo=github
-[release-url]: https://github.com/canisminor1990/sd-webui-lobe-theme/releases
+[release-shield]: https://img.shields.io/github/v/release/lobehub/sd-webui-lobe-theme?style=flat&sort=semver&logo=github
+[release-url]: https://github.com/lobehub/sd-webui-lobe-theme/releases
 
 <!-- releaseDate -->
 
-[release-date-shield]: https://img.shields.io/github/release-date/canisminor1990/sd-webui-lobe-theme?style=flat
-[release-date-url]: https://github.com/canisminor1990/sd-webui-lobe-theme/releases
+[release-date-shield]: https://img.shields.io/github/release-date/lobehub/sd-webui-lobe-theme?style=flat
+[release-date-url]: https://github.com/lobehub/sd-webui-lobe-theme/releases
 
 <!-- ciTest -->
 
-[ci-test-shield]: https://github.com/canisminor1990/sd-webui-lobe-theme/workflows/Test%20CI/badge.svg
-[ci-test-url]: https://github.com/canisminor1990/sd-webui-lobe-theme/actions/workflows/test.yml
+[ci-test-shield]: https://github.com/lobehub/sd-webui-lobe-theme/workflows/Test%20CI/badge.svg
+[ci-test-url]: https://github.com/lobehub/sd-webui-lobe-theme/actions/workflows/test.yml
 
 <!-- ciRelease -->
 
-[ci-release-shield]: https://github.com/canisminor1990/sd-webui-lobe-theme/workflows/Build%20and%20Release/badge.svg
-[ci-release-url]: https://github.com/canisminor1990/sd-webui-lobe-theme/actions/workflows/release.yml
+[ci-release-shield]: https://github.com/lobehub/sd-webui-lobe-theme/workflows/Build%20and%20Release/badge.svg
+[ci-release-url]: https://github.com/lobehub/sd-webui-lobe-theme/actions/workflows/release.yml
 
 <!-- contributors -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/canisminor1990/sd-webui-lobe-theme.svg?style=flat
-[contributors-url]: https://github.com/canisminor1990/sd-webui-lobe-theme/graphs/contributors
+[contributors-shield]: https://img.shields.io/github/contributors/lobehub/sd-webui-lobe-theme.svg?style=flat
+[contributors-url]: https://github.com/lobehub/sd-webui-lobe-theme/graphs/contributors
 
 <!-- forks -->
 
-[forks-shield]: https://img.shields.io/github/forks/canisminor1990/sd-webui-lobe-theme.svg?style=flat
-[forks-url]: https://github.com/canisminor1990/sd-webui-lobe-theme/network/members
+[forks-shield]: https://img.shields.io/github/forks/lobehub/sd-webui-lobe-theme.svg?style=flat
+[forks-url]: https://github.com/lobehub/sd-webui-lobe-theme/network/members
 
 <!-- stargazers -->
 
-[stargazers-shield]: https://img.shields.io/github/stars/canisminor1990/sd-webui-lobe-theme.svg?style=flat
-[stargazers-url]: https://github.com/canisminor1990/sd-webui-lobe-theme/stargazers
+[stargazers-shield]: https://img.shields.io/github/stars/lobehub/sd-webui-lobe-theme.svg?style=flat
+[stargazers-url]: https://github.com/lobehub/sd-webui-lobe-theme/stargazers
 
 <!-- issues -->
 
-[issues-shield]: https://img.shields.io/github/issues/canisminor1990/sd-webui-lobe-theme.svg?style=flat
-[issues-url]: https://github.com/canisminor1990/sd-webui-lobe-theme/issues/new/choose
+[issues-shield]: https://img.shields.io/github/issues/lobehub/sd-webui-lobe-theme.svg?style=flat
+[issues-url]: https://github.com/lobehub/sd-webui-lobe-theme/issues/new/choose

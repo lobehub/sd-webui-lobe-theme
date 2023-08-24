@@ -74,10 +74,16 @@ export const MoreProducts = [
     url: 'https://github.com/canisminor1990/sd-webui-cover-minifier',
   },
   {
+    description: 'OpenAI Chat Bot',
+    openExternal: true,
+    title: '🤖 Lobe Chat',
+    url: 'https://chat.lobehub.com',
+  },
+  {
     description: 'AIGC Components',
     openExternal: true,
-    title: '🤯 Lobe UI',
-    url: 'https://github.com/lobehub/lobe-ui',
+    title: '🍭 Lobe UI',
+    url: 'https://ui.lobehub.com',
   },
   {
     description: 'AI Commit CLI',
