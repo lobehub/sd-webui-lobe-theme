@@ -22,15 +22,44 @@ const Inner = memo(() => {
   useEffect(() => {
     console.time('🤯 [layout] inject - ExtraNetworkSidebar');
     if (setting.enableExtraNetworkSidebar) {
+      const image2imageExtraNetworkButton = gradioApp().querySelectorAll(
+        '#txt2img_extra_tabs > .tab-nav > button',
+      )[1] as HTMLButtonElement;
+      const text2imageExtraNetworkButton = gradioApp().querySelectorAll(
+        '#img2img_extra_tabs > .tab-nav > button',
+      )[1] as HTMLButtonElement;
+
+      if (image2imageExtraNetworkButton) {
+        image2imageExtraNetworkButton.click();
+      }
+      if (text2imageExtraNetworkButton) {
+        text2imageExtraNetworkButton.click();
+      }
+
+      const txt2imgTab = gradioApp().querySelector('div#tab_txt2img') as HTMLDivElement;
       const txt2imgExtraNetworks = gradioApp().querySelector(
-        'div#txt2img_extra_networks',
+        'div#txt2img_extra_tabs',
       ) as HTMLDivElement;
+      const txt2imgRender = txt2imgExtraNetworks.querySelectorAll(
+        'div.tabitem.gradio-tabitem',
+      )[0] as HTMLDivElement;
+
+      const img2imgTab = gradioApp().querySelector('div#tab_img2img');
       const img2imgExtraNetworks = gradioApp().querySelector(
-        'div#img2img_extra_networks',
+        'div#img2img_extra_tabs',
       ) as HTMLDivElement;
+      const img2imgRender = img2imgExtraNetworks.querySelectorAll(
+        'div.tabitem.gradio-tabitem',
+      )[0] as HTMLDivElement;
+
       if (txt2imgExtraNetworks && img2imgExtraNetworks) {
         txt2imgExtraNetworkSidebarReference.current?.append(txt2imgExtraNetworks);
+        txt2imgRender.id = 'txt2img_render';
+        txt2imgTab?.append(txt2imgRender);
+
         img2imgExtraNetworkSidebarReference.current?.append(img2imgExtraNetworks);
+        img2imgRender.id = 'img2img_render';
+        img2imgTab?.append(img2imgRender);
       }
       if (document.querySelector('#txt2img_lora_cards')) {
         civitaiHelperFix();

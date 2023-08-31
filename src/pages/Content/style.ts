@@ -27,6 +27,14 @@ export const useStyles = createStyles(
           border-bottom-left-radius: 0;
         }
 
+        #txt2img_render,
+        #img2img_render {
+          display: block !important;
+          margin-top: 16px;
+          padding: 0 !important;
+          background: transparent;
+        }
+
         .block.gradio-html:has(div.prose) {
           display: block;
 
@@ -51,30 +59,6 @@ export const useStyles = createStyles(
           .gradio-row:has([id$='2img_results'], [id$='2img_results']) {
             flex-direction: column-reverse;
           }
-        }
-      `,
-      draggableContainer: css`
-        .draggable-line {
-          flex: none !important;
-
-          width: 2px;
-          min-width: 2px !important;
-          max-width: 2px !important;
-
-          border-left: 1px dashed ${token.colorBorderSecondary};
-
-          transition: all 0.3s ease-in-out;
-
-          &:hover,
-          &:active {
-            cursor: col-resize;
-            border-left: 2px solid ${token.colorPrimary};
-          }
-        }
-
-        .draggable-container {
-          flex-wrap: nowrap !important;
-          align-items: stretch !important;
         }
       `,
       splitView: css`
@@ -107,6 +91,16 @@ export const useStyles = createStyles(
           height: 44px !important;
           min-height: 44px !important;
           max-height: 44px !important;
+        }
+
+        #txt2img_accordions,
+        #img2img_accordions {
+          padding: 0 !important;
+          background: transparent !important;
+
+          > div {
+            background-color: ${token.colorBgContainer}!important;
+          }
         }
 
         #img2img_toprow .interrogate-col {
@@ -144,6 +138,26 @@ export const useStyles = createStyles(
             display: flex;
             flex-direction: column;
             gap: 12px;
+
+            * {
+              --layout-gap: 12px !important;
+            }
+
+            > div {
+              display: flex;
+              flex-direction: column;
+              gap: 12px;
+
+              > div.gr-group.gradio-group {
+                gap: 12px;
+
+                margin: 0 !important;
+                padding: 16px !important;
+
+                background-color: ${token.colorBgContainer}!important;
+                border-radius: ${token.borderRadius}px !important;
+              }
+            }
 
             .gradio-accordion:not(.hidden):has(div) {
               padding: 0 !important;
@@ -235,7 +249,9 @@ export const useStyles = createStyles(
             text-overflow: ellipsis;
             vertical-align: bottom;
 
-            transition: all 0.3s, height 0s;
+            transition:
+              all 0.3s,
+              height 0s;
           }
         }
 

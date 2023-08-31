@@ -80,7 +80,7 @@
 git clone "https://github.com/lobehub/sd-webui-lobe-theme" extensions/lobe-theme
 ```
 
-> 👉 Примечание: Минимальные требования gradio-3.23.0 & sd-webui [4c1ad74](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commit/4c1ad743e3baf1246db0711aa0107debf036a12b)
+> 👉 Примечание: Минимальные требования gradio-3.41.2 & sd-webui 1.6
 
 <div align="right">
 

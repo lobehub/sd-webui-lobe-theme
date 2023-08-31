@@ -7,6 +7,18 @@ export const useStyles = createStyles(
         display: none;
       }
 
+      .extra-networks .tab-nav > button {
+        &:first-child {
+          display: none;
+        }
+      }
+
+      #txt2img_extra_search,
+      #img2img_extra_search {
+        width: 100% !important;
+        max-width: unset !important;
+      }
+
       #txt2img-extra-network-sidebar,
       #img2img-extra-network-sidebar {
         button.lg.secondary.gradio-button,
@@ -14,6 +26,11 @@ export const useStyles = createStyles(
         #img2img_extra_sort {
           height: 34px !important;
           min-height: 34px !important;
+        }
+
+        .tabitem {
+          padding: 0 !important;
+          background: transparent;
         }
       }
 

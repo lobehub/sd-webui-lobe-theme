@@ -41,7 +41,8 @@ export default (token: Theme) => css`
   }
 
   .progressDiv {
-    position: relative;
+    position: relative !important;
+    top: 0 !important;
     overflow: hidden;
     background: ${token.colorBgElevated} !important;
 

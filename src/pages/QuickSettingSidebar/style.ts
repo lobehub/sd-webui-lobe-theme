@@ -62,6 +62,10 @@ export const useStyles = createStyles(
           min-width: 16px;
           min-height: 16px;
         }
+
+        div.gradio-dropdown {
+          min-width: unset !important;
+        }
       }
     `,
   }),

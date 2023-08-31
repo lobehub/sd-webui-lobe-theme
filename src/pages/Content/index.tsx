@@ -1,29 +1,20 @@
-import { useResponsive } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { memo, useEffect, useRef } from 'react';
 
-import draggablePanel from '@/script/draggablePanel';
 import formatPrompt from '@/script/formatPrompt';
 import { selectors, useAppStore } from '@/store';
 import { type DivProps } from '@/types';
 
-import { useStyles as usePreviewStyles } from '../Preview/style';
 import { useStyles } from './style';
 
 const Content = memo<DivProps>(({ className, ...props }) => {
   const mainReference = useRef<HTMLDivElement>(null);
   const setting = useAppStore(selectors.currentSetting, isEqual);
-  const { mobile } = useResponsive();
+
   const { cx, styles } = useStyles({
     isPromptResizable: setting.promptTextareaType === 'resizable',
     layoutSplitPreview: setting.layoutSplitPreview,
   });
-  const previewStyle = usePreviewStyles({
-    isPrimaryColor: Boolean(setting.primaryColor),
-    liteAnimation: setting.liteAnimation,
-  });
-
-  const useDragablePanel = !setting.layoutSplitPreview && mobile === false;
 
   useEffect(() => {
     console.time('🤯 [layout] inject - Content');
@@ -57,18 +48,13 @@ const Content = memo<DivProps>(({ className, ...props }) => {
     console.timeEnd('🤯 [layout] inject - Content');
   }, []);
 
-  useEffect(() => {
-    if (useDragablePanel) draggablePanel();
-  }, [useDragablePanel]);
-
   return (
     <div
       className={cx(
         styles.container,
         styles.textares,
         styles.text2img,
-        setting.layoutSplitPreview ? styles.splitView : styles.draggableContainer,
-        useDragablePanel && previewStyle.styles.preview,
+        setting.layoutSplitPreview && styles.splitView,
         className,
       )}
       ref={mainReference}

@@ -27,7 +27,7 @@ English · [Russian ](./README-ru_RU.md)· [简体中文](./README-zh_CN.md) · 
 
 ![][cover]
 
-> 📦 After **Version 2.0.0** Kitchen theme was renamed to **Lobe Theme**. The legacy version can be accessed at [sd-webui-kitchen-theme-legacy](https://github.com/canisminor1990/sd-webui-kitchen-theme-legacy)
+> ⚠️⚠️⚠️ `Lobe Theme v3` is compatible with `SD WebUI v1.6` and is not backwards compatible. Versions below `< 1.6` should be moved to the branch [legacy-sd-webui-1.5](https://github.com/lobehub/sd-webui-lobe-theme/tree/legacy-sd-webui-1.5)
 
 <details>
 <summary><kbd>Table of contents</kbd></summary>
@@ -80,7 +80,7 @@ As an extension (recommended), clone the repository to your extension folder:
 git clone "https://github.com/lobehub/sd-webui-lobe-theme" extensions/lobe-theme
 ```
 
-> 👉 Note: minimum requirements gradio-3.23.0 & sd-webui [4c1ad74](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commit/4c1ad743e3baf1246db0711aa0107debf036a12b)
+> 👉 Note: minimum requirements gradio-3.41.2 & sd-webui 1.6
 
 <div align="right">
 

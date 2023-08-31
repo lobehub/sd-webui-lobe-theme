@@ -28,22 +28,6 @@ const ExtraNetworkSidebar = memo<ExtraNetworkSidebarProps>(({ headerHeight }) =>
   const { t } = useTranslation();
 
   useEffect(() => {
-    const index2indexExtraNetworkButton = gradioApp().querySelector(
-      'button#img2img_extra_networks',
-    ) as HTMLButtonElement;
-    const t2indexExtraNetworkButton = gradioApp().querySelector(
-      'button#txt2img_extra_networks',
-    ) as HTMLButtonElement;
-
-    if (index2indexExtraNetworkButton) {
-      index2indexExtraNetworkButton.onclick = () => setExpand(!expand);
-    }
-    if (t2indexExtraNetworkButton) {
-      t2indexExtraNetworkButton.onclick = () => setExpand(!expand);
-    }
-  }, [expand]);
-
-  useEffect(() => {
     if (mobile) setExpand(false);
   }, [mobile]);
 
@@ -63,9 +47,9 @@ const ExtraNetworkSidebar = memo<ExtraNetworkSidebarProps>(({ headerHeight }) =>
         <DraggablePanelContainer
           className={styles.container}
           style={
-            mode === 'float' ?
-              { background: theme.colorBgContainer, minWidth: setting.extraNetworkSidebarWidth } :
-              { minWidth: setting.extraNetworkSidebarWidth }
+            mode === 'float'
+              ? { background: theme.colorBgContainer, minWidth: setting.extraNetworkSidebarWidth }
+              : { minWidth: setting.extraNetworkSidebarWidth }
           }
         >
           <DraggablePanelHeader

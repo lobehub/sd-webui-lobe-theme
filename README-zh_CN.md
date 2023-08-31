@@ -46,7 +46,7 @@
 
 <br/>
 
-> 📦 **Version 2.0.0** 后更名为 **Lobe Theme**, 遗产版本可以可访问 [sd-webui-kitchen-theme-legacy](https://github.com/canisminor1990/sd-webui-kitchen-theme-legacy)
+> ⚠️⚠️⚠️ `Lobe Theme v3` 适配 `SD WebUI v1.6`, 并不向下兼容，`< 1.6` 以下版本移动到分支 [legacy-sd-webui-1.5](https://github.com/lobehub/sd-webui-lobe-theme/tree/legacy-sd-webui-1.5)
 
 ## ✨ 主题特性
 
@@ -82,7 +82,7 @@
 git clone "https://github.com/lobehub/sd-webui-lobe-theme" extensions/lobe-theme
 ```
 
-> 👉 提示：最低要求 gradio-3.23.0 & sd-webui [4c1ad74](https://github.com/AUTOMATIC1111/stable-diffusion-webui/commit/4c1ad743e3baf1246db0711aa0107debf036a12b)
+> 👉 提示：最低要求 gradio-3.41.2 & sd-webui 1.6
 
 <div align="right">
 
