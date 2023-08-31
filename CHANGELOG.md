@@ -2,6 +2,35 @@
 
 # Changelog
 
+## [Version 3.0.0](https://github.com/lobehub/sd-webui-lobe-theme/compare/v2.8.8...v3.0.0)
+
+<sup>Released on **2023-08-31**</sup>
+
+#### ✨ Features
+
+- **breaking-changes**: Compatible with sd webui v1.6 \[force major].
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **breaking-changes**: Compatible with sd webui v1.6 \[force major] ([76c3b08](https://github.com/lobehub/sd-webui-lobe-theme/commit/76c3b08))
+
+</details>
+
+#### 💥 BREAKING CHANGES
+
+- **breaking-changes**: `Lobe Theme v3` is compatible with `SD WebUI v1.6` and is not backwards compatible. Versions below `< 1.6` should be moved to the branch [legacy-sd-webui-1.5](https://github.com/lobehub/sd-webui-lobe-theme/tree/legacy-sd-webui-1.5)
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 2.8.8](https://github.com/lobehub/sd-webui-lobe-theme/compare/v2.8.7...v2.8.8)
 
 <sup>Released on **2023-08-24**</sup>
