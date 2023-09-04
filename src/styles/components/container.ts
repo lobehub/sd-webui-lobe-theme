@@ -41,5 +41,11 @@ export default (token: Theme) => {
       align-items: flex-start;
       justify-content: flex-start;
     }
+
+    #img2img_results,
+    #txt2img_results,
+    #extras_results {
+      top: 80px !important;
+    }
   `;
 };

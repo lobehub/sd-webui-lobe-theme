@@ -8,12 +8,16 @@ import {
   clipboardList,
   cornerRightUp,
   dices,
+  fileArchive,
   folderClosed,
+  image,
   laptop2,
   panelRight,
+  penSquare,
+  pencilRuler,
+  pipette,
   play,
   refreshCcw,
-  ruler,
   save,
   settings,
   trash,
@@ -35,6 +39,10 @@ const replaceIcon = (button: HTMLButtonElement, emoji: string[], svg: string) =>
 export default () => {
   console.time('🤯 [svgIcon] replace');
   for (const button of document.querySelectorAll('button')) {
+    replaceIcon(button, ['🖌️'], penSquare);
+    replaceIcon(button, ['🗃️'], fileArchive);
+    replaceIcon(button, ['🖼️'], pipette);
+    replaceIcon(button, ['🎨️'], image);
     replaceIcon(button, ['📂'], folderClosed);
     replaceIcon(button, ['🔄', '🔁', '♻️'], refreshCcw);
     replaceIcon(button, ['↙️'], arrowDownLeft);
@@ -54,7 +62,7 @@ export default () => {
     replaceIcon(button, ['💥'], play);
     replaceIcon(button, ['📷'], webcam);
     replaceIcon(button, ['📝'], laptop2);
-    replaceIcon(button, ['📐'], ruler);
+    replaceIcon(button, ['📐'], pencilRuler);
   }
   console.timeEnd('🤯 [svgIcon] replace');
 };

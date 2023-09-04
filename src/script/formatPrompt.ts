@@ -8,13 +8,14 @@ export const Converter = {
    */
   addPromptButton(type: string): void {
     console.debug('🤯 [formatPrompt] inject', type);
-    const generateButton: HTMLElement | null = gradioApp().querySelector(`#${type}_generate`);
-    const actionsColumn: HTMLElement | null = gradioApp().querySelector(`#${type}_style_create`);
-    const nai2local: HTMLElement | null = gradioApp().querySelector(`#${type}_formatconvert`);
-    if (!generateButton || !actionsColumn || nai2local) return;
+    const actionsColumn: HTMLElement | null = gradioApp().querySelector(
+      `#${type}_tools > div.form`,
+    );
+    const formatBtn: HTMLElement | null = gradioApp().querySelector(`#${type}_formatconvert`);
+    if (!actionsColumn || formatBtn) return;
     const convertButton: HTMLElement = Converter.createButton(`${type}_formatconvert`, '🪄', () =>
       Converter.onClickConvert(type));
-    actionsColumn.parentNode?.append(convertButton);
+    actionsColumn.append(convertButton);
   },
 
   /**
@@ -221,7 +222,7 @@ export const Converter = {
     button.type = 'button';
     button.innerHTML = innerHTML;
     button.title = 'Format prompt~🪄';
-    button.className = 'lg secondary gradio-button tool svelte-1ipelgc';
+    button.className = 'lg secondary gradio-button tool svelte-cmf5ev';
     button.addEventListener('click', onClick);
     return button;
   },
