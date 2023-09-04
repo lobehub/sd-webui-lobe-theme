@@ -43,3 +43,4 @@ test-output
 __pycache__
 /lobe_theme_config.json
 /javascript/*.js
+!/javascript/main.js
