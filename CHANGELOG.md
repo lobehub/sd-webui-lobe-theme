@@ -2,6 +2,35 @@
 
 # Changelog
 
+### [Version 3.0.1](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.0.0...v3.0.1)
+
+<sup>Released on **2023-09-04**</sup>
+
+#### 🐛 Bug Fixes
+
+- **format**: Fix format button and preview sticky position.
+- **hightlight**: Fix prompt highlight.
+- **split-view**: Fix split view.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **format**: Fix format button and preview sticky position ([c320ec2](https://github.com/lobehub/sd-webui-lobe-theme/commit/c320ec2))
+- **hightlight**: Fix prompt highlight ([a2698af](https://github.com/lobehub/sd-webui-lobe-theme/commit/a2698af))
+- **split-view**: Fix split view ([f1d5ab2](https://github.com/lobehub/sd-webui-lobe-theme/commit/f1d5ab2))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 3.0.0](https://github.com/lobehub/sd-webui-lobe-theme/compare/v2.8.8...v3.0.0)
 
 <sup>Released on **2023-08-31**</sup>
