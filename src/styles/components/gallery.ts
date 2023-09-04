@@ -7,7 +7,11 @@ export default (token: Theme) => {
       linear-gradient(-45deg, ${token.colorFillTertiary} 25%, transparent 25%),
       linear-gradient(45deg, transparent 75%, ${token.colorFillTertiary} 75%),
       linear-gradient(-45deg, transparent 75%, ${token.colorFillTertiary} 75%);
-    background-position: 0 0, 0 10px, 10px -10px, -10px 0;
+    background-position:
+      0 0,
+      0 10px,
+      10px -10px,
+      -10px 0;
     background-size: 20px 20px;
     border: 2px solid ${token.colorBorderSecondary} !important;
     border-radius: ${token.borderRadius}px !important;

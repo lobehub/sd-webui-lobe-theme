@@ -55,6 +55,7 @@ Dockerfile*
 
 # misc
 # add other ignore file below
+*.py
 style.css
 javascript/
 .stylelintignore

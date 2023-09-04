@@ -27,6 +27,12 @@ export const useStyles = createStyles(
           border-bottom-left-radius: 0;
         }
 
+        #txt2img_results,
+        #img2img_results {
+          padding: 0 !important;
+          background: transparent !important;
+        }
+
         #txt2img_render,
         #img2img_render {
           display: block !important;
@@ -62,28 +68,15 @@ export const useStyles = createStyles(
         }
       `,
       splitView: css`
+        #txt2img_generate,
+        #img2img_generate {
+          border-radius: ${token.borderRadius}px !important;
+        }
+
         #txt2img_toprow,
         #img2img_toprow {
-          flex-direction: column;
           padding: 0 !important;
           background: transparent !important;
-
-          .interrogate-col {
-            flex-direction: row;
-            max-width: 100%;
-          }
-
-          #txt2img_actions_column,
-          #img2img_actions_column {
-            gap: 12px;
-          }
-
-          #txt2img_styles_row,
-          #img2img_styles_row {
-            padding: 16px;
-            background: ${token.colorBgContainer};
-            border-radius: ${token.borderRadius}px;
-          }
         }
       `,
       text2img: css`
@@ -155,6 +148,7 @@ export const useStyles = createStyles(
                 padding: 16px !important;
 
                 background-color: ${token.colorBgContainer}!important;
+                border: 1px solid ${token.colorBorderSecondary} !important;
                 border-radius: ${token.borderRadius}px !important;
               }
             }

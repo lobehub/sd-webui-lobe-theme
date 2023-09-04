@@ -47,6 +47,12 @@ jobs:
       - name: Install deps
         run: pnpm install
 
+      - name: Build
+        run: pnpm run build
+
+      - name: Git add
+        run: git add -f javascript/main.js
+
       - name: Release
         id: release
         run: pnpm run release

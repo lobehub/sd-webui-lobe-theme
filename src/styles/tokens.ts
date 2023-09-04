@@ -91,8 +91,7 @@ export default (token: Theme) => {
       --block-label-border-color: ${token.colorBorderSecondary};
       --block-label-border-width: 1px;
       --block-label-shadow: ${token.boxShadowTertiary};
-      --block-label-text-color: ${token.colorText}
-      --block-label-margin: 0;
+      --block-label-text-color: ${token.colorText} --block-label-margin: 0;
       --block-label-padding: var(--spacing-sm) var(--spacing-lg);
       --block-label-radius: ${token.borderRadius}px;
       --block-label-right-radius: ${token.borderRadius}px;
@@ -128,7 +127,7 @@ export default (token: Theme) => {
       --checkbox-border-color-selected: ${token.colorPrimary};
       --checkbox-border-radius: ${token.borderRadiusXS}px;
       --checkbox-border-width: 1px;
-      --checkbox-label-background-fill:  ${token.colorFillTertiary};
+      --checkbox-label-background-fill: ${token.colorFillTertiary};
       --checkbox-label-background-fill-hover: ${token.colorFillSecondary};
       --checkbox-label-background-fill-selected: ${token.colorFillSecondary};
       --checkbox-label-border-color: ${token.colorBorderSecondary};
@@ -189,7 +188,7 @@ export default (token: Theme) => {
       --button-primary-text-color: ${readableColor(token.colorPrimary)};
       --button-primary-text-color-hover: ${readableColor(token.colorPrimary)};
       --button-secondary-background-fill: ${token.colorFillSecondary};
-      --button-secondary-background-fill-hover:  ${token.colorFill};;
+      --button-secondary-background-fill-hover: ${token.colorFill};
       --button-secondary-border-color: ${token.colorBorderSecondary};
       --button-secondary-border-color-hover: ${token.colorBorder};
       --button-secondary-text-color: ${token.colorTextSecondary};

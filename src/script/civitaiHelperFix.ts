@@ -91,19 +91,19 @@ const updateCardForCivitai = () => {
         metadataButton = card.querySelector('.metadata-button');
         // Additional node
         additionalNode = card.querySelector('.actions .additional');
-        
+
         // Get ul node, which is the parent of all buttons
         ulNode = card.querySelector('.actions .additional ul');
-        if (ulNode == null) { 
-          ulNode = document.createElement("ul"); 
-          additionalNode.appendChild(ulNode); 
+        if (ulNode === undefined) {
+          ulNode = document.createElement('ul');
+          additionalNode.append(ulNode);
         }
 
         // Replace preview text button
         replacePreviewButton = card.querySelector('.actions .additional a');
-        if (replacePreviewButton == null) { 
-          replacePreviewButton = document.createElement("a"); 
-          additionalNode.appendChild(replacePreviewButton); 
+        if (replacePreviewButton === undefined) {
+          replacePreviewButton = document.createElement('a');
+          additionalNode.append(replacePreviewButton);
         }
 
         // Check thumb mode

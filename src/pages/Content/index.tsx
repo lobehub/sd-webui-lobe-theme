@@ -1,3 +1,4 @@
+import { useResponsive } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { memo, useEffect, useRef } from 'react';
 
@@ -5,10 +6,12 @@ import formatPrompt from '@/script/formatPrompt';
 import { selectors, useAppStore } from '@/store';
 import { type DivProps } from '@/types';
 
+import SplitView from './SplitView';
 import { useStyles } from './style';
 
 const Content = memo<DivProps>(({ className, ...props }) => {
   const mainReference = useRef<HTMLDivElement>(null);
+  const { mobile } = useResponsive();
   const setting = useAppStore(selectors.currentSetting, isEqual);
 
   const { cx, styles } = useStyles({
@@ -49,17 +52,20 @@ const Content = memo<DivProps>(({ className, ...props }) => {
   }, []);
 
   return (
-    <div
-      className={cx(
-        styles.container,
-        styles.textares,
-        styles.text2img,
-        setting.layoutSplitPreview && styles.splitView,
-        className,
-      )}
-      ref={mainReference}
-      {...props}
-    />
+    <>
+      <div
+        className={cx(
+          styles.container,
+          styles.textares,
+          styles.text2img,
+          setting.layoutSplitPreview && styles.splitView,
+          className,
+        )}
+        ref={mainReference}
+        {...props}
+      />
+      {setting.layoutSplitPreview && mobile === false && <SplitView />}
+    </>
   );
 });
 
