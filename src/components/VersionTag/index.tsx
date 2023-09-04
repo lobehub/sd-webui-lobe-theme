@@ -22,7 +22,7 @@ const VersionTag = memo<TagProps>((props) => {
         </Tag>
       ) : (
         <Tag color="warning" {...props}>
-          v{version} / latest v${latestVersion}
+          v{version} / latest v{latestVersion}
         </Tag>
       )}
     </a>

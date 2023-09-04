@@ -44,7 +44,8 @@ export default (token: Theme) => {
 
     #img2img_results,
     #txt2img_results,
-    #extras_results {
+    #extras_gallery_container {
+      position: sticky;
       top: 80px !important;
     }
   `;

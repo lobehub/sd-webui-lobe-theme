@@ -1,7 +1,7 @@
 import { ActionIcon } from '@lobehub/ui';
 import { Space } from 'antd';
 import { useResponsive } from 'antd-style';
-import { Github, LucideIcon, Moon, Settings, Sun } from 'lucide-react';
+import { Github, LayoutGrid, LucideIcon, Moon, Settings, Sun } from 'lucide-react';
 import qs from 'query-string';
 import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -41,6 +41,13 @@ const Actions = memo<ActionsProps>(() => {
           <>
             <a href="https://civitai.com/" rel="noreferrer" target="_blank">
               <ActionIcon icon={CivitaiLogo} title="Civitai" />
+            </a>
+            <a
+              href="https://supagruen.github.io/StableDiffusion-CheatSheet/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <ActionIcon icon={LayoutGrid} title="Cheat Sheet" />
             </a>
             <ActionIcon icon={Github} onClick={() => setIsModalOpen(true)} title={t('feedback')} />
           </>

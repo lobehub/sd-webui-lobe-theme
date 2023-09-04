@@ -27,8 +27,33 @@ export const useStyles = createStyles(
           border-bottom-left-radius: 0;
         }
 
+        [id^='html_info_']:has(div.prose) {
+          p {
+            padding: 8px;
+
+            font-family: ${token.fontFamilyCode};
+            font-size: 13px !important;
+            color: ${token.colorInfo} !important;
+
+            background: ${token.colorInfoBg};
+            border: 1px solid ${token.colorInfoBorder};
+            border-radius: ${token.borderRadius}px;
+          }
+        }
+
+        #txt2img_styles_edit_button， #img2img_styles_edit_button {
+          max-width: 36px !important;
+        }
+
+        #txt2img_generate,
+        #img2img_generate,
+        #extras_generate {
+          border-radius: ${token.borderRadius}px !important;
+        }
+
         #txt2img_results,
-        #img2img_results {
+        #img2img_results,
+        #extras_results {
           padding: 0 !important;
           background: transparent !important;
         }
@@ -68,15 +93,15 @@ export const useStyles = createStyles(
         }
       `,
       splitView: css`
-        #txt2img_generate,
-        #img2img_generate {
-          border-radius: ${token.borderRadius}px !important;
-        }
-
         #txt2img_toprow,
         #img2img_toprow {
           padding: 0 !important;
           background: transparent !important;
+        }
+
+        #txt2img_toprow,
+        #ing2img_toprow {
+          flex-direction: column !important;
         }
       `,
       text2img: css`
@@ -201,10 +226,6 @@ export const useStyles = createStyles(
           #txt2img_gallery {
             overflow: hidden !important;
             border-radius: var(--border-radius) !important;
-          }
-
-          .image-buttons button {
-            min-width: min(160px, 100%) !important;
           }
 
           [id$='2img_tools'] > div {
