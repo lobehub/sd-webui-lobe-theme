@@ -242,12 +242,13 @@ export const useStyles = createStyles(
 
             overflow-y: auto;
 
-            padding: 8px;
+            padding: 8px !important;
 
             font-family: ${token.fontFamilyCode};
-            font-size: 13px;
-            text-overflow: ellipsis;
-            vertical-align: bottom;
+            font-size: 13px !important;
+            line-height: 1.5 !important;
+            word-wrap: break-word !important;
+            white-space: pre-wrap !important;
 
             transition:
               all 0.3s,

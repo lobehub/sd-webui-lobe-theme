@@ -1,9 +1,9 @@
-import { SyntaxHighlighter } from '@lobehub/ui';
 import { useScroll, useSize } from 'ahooks';
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { useExternalTextareaObserver } from '@/hooks/useExternalTextareaObserver';
 
+import SyntaxHighlighter from './SyntaxHighlighter';
 import grammar from './prompt.tmLanguage.json';
 import { themeConfig } from './promptTheme';
 import { useStyles } from './style';
