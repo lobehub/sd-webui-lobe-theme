@@ -76,7 +76,7 @@ const updateCardForCivitai = () => {
       extraNetworkNode = document.querySelector(`#${extraNetworkId}`);
 
       // Check if extra network node exists
-      if (extraNetworkNode === undefined) continue;
+      if (extraNetworkNode == null) continue;
 
       // Check if extr network is under thumbnail mode
       isThumbMode = false;
@@ -94,14 +94,14 @@ const updateCardForCivitai = () => {
 
         // Get ul node, which is the parent of all buttons
         ulNode = card.querySelector('.actions .additional ul');
-        if (ulNode === undefined) {
+        if (ulNode == null) {
           ulNode = document.createElement('ul');
           additionalNode.append(ulNode);
         }
 
         // Replace preview text button
         replacePreviewButton = card.querySelector('.actions .additional a');
-        if (replacePreviewButton === undefined) {
+        if (replacePreviewButton == null) {
           replacePreviewButton = document.createElement('a');
           additionalNode.append(replacePreviewButton);
         }
