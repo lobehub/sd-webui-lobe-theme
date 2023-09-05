@@ -37,6 +37,13 @@ const styleButton = (node: HTMLElement, isThumbMode: boolean) => {
   }
 };
 
+type IStrictNullable<T> = T | null;
+type INullable<T> = T | null | undefined;
+
+function is_nullable<T>(v: INullable<T>): v is null | undefined {
+  return v === undefined || v === null
+}
+
 const updateCardForCivitai = () => {
   if (!document.querySelector('#tab_civitai_helper')) return;
 
@@ -54,15 +61,15 @@ const updateCardForCivitai = () => {
 
   // Change all "replace preview" into an icon
   let extraNetworkId = '';
-  let extraNetworkNode: any;
-  let metadataButton: any;
-  let additionalNode: any;
-  let replacePreviewButton: any;
-  let ulNode: any;
-  let searchTermNode: any;
+  let extraNetworkNode: IStrictNullable<HTMLElement>;
+  let metadataButton: IStrictNullable<HTMLElement>;
+  let additionalNode: HTMLElement;
+  let replacePreviewButton: IStrictNullable<HTMLElement>;
+  let ulNode: IStrictNullable<HTMLElement>;
+  let searchTermNode: IStrictNullable<HTMLElement>;
   let searchTerm = '';
   let modelType = '';
-  let cards;
+  let cards: INullable<NodeListOf<HTMLElement>>;
   let needToAddButtons = false;
   let isThumbMode = false;
 
@@ -76,85 +83,79 @@ const updateCardForCivitai = () => {
       extraNetworkNode = document.querySelector(`#${extraNetworkId}`);
 
       // Check if extra network node exists
-      if (extraNetworkNode == null) continue;
+      if (is_nullable(extraNetworkNode)) continue;
 
       // Check if extr network is under thumbnail mode
-      isThumbMode = false;
-      if (extraNetworkNode?.className === 'extra-network-thumbs') isThumbMode = true;
+      isThumbMode = extraNetworkNode.className === 'extra-network-thumbs';
 
       // Get all card nodes
-      cards = extraNetworkNode?.querySelectorAll('.card');
-      if (!cards) continue;
+      cards = extraNetworkNode.querySelectorAll('.card');
+      if (!cards?.length) continue;
       for (const card of cards) {
         if (card.querySelectorAll('.actions .additional a').length > 2) continue;
         // Metadata_buttoncard
         metadataButton = card.querySelector('.metadata-button');
         // Additional node
-        additionalNode = card.querySelector('.actions .additional');
+        additionalNode = card.querySelector('.actions .additional')!;
 
         // Get ul node, which is the parent of all buttons
         ulNode = card.querySelector('.actions .additional ul');
-        if (ulNode == null) {
+        if (is_nullable(ulNode)) {
           ulNode = document.createElement('ul');
           additionalNode.append(ulNode);
         }
 
         // Replace preview text button
         replacePreviewButton = card.querySelector('.actions .additional a');
-        if (replacePreviewButton == null) {
+        if (is_nullable(replacePreviewButton)) {
           replacePreviewButton = document.createElement('a');
           additionalNode.append(replacePreviewButton);
         }
 
+        // Remove br tag
+        ulNode.querySelector('br')?.remove();
+
         // Check thumb mode
         if (isThumbMode && additionalNode) {
-          additionalNode.style.display = undefined;
+          additionalNode.style.display = undefined as any as string;
 
           if (chShowButtonOnThumb) {
             ulNode.style.background = BTN_THUMB_BACKGROUND;
           } else {
             // Reset
-            ulNode.style.background = undefined;
+            ulNode.style.background = undefined as any as string;
             // Remove existed buttons
-            if (ulNode) {
-              // Find all .a child nodes
-              const atags = ulNode?.querySelectorAll('a');
-              if (!atags) continue;
-              for (const atag of atags) {
-                // Reset display
-                atag.style.display = undefined;
-                // Remove extension's button
-                if (CH_BTN_TXTS.has(atag.innerHTML)) {
-                  // Need to remove
-                  atag.remove();
-                } else {
-                  // Do not remove, just reset
-                  atag.innerHTML = replacePreviewText;
-                  atag.style.display = undefined;
-                  atag.style.fontSize = undefined;
-                  atag.style.position = undefined;
-                  atag.style.backgroundImage = undefined;
-                }
-              }
 
-              // Also remove br tag in ul
-              const brtag = ulNode.querySelector('br');
-              if (brtag) brtag.remove();
+            // Find all .a child nodes
+            const atags = ulNode.querySelectorAll('a');
+            if (!atags?.length) continue;
+            for (const atag of atags) {
+              // Reset display
+              atag.style.display = undefined as any;
+              // Remove extension's button
+              if (CH_BTN_TXTS.has(atag.innerHTML)) {
+                // Need to remove
+                atag.remove();
+              } else {
+                // Do not remove, just reset
+                atag.innerHTML = replacePreviewText;
+                atag.style.display = undefined as any;
+                atag.style.fontSize = undefined as any;
+                atag.style.position = undefined as any;
+                atag.style.backgroundImage = undefined as any;
+              }
             }
+
             // Just reset and remove nodes, do nothing else
             continue;
           }
         } else {
           // Full preview mode
-          additionalNode.style.display = chAlwaysDisplay ? 'block' : undefined;
-
-          // Remove br tag
-          const brtag = ulNode.querySelector('br');
-          if (brtag) brtag.remove();
+          additionalNode.style.display = chAlwaysDisplay ? 'block' : undefined as any as string;
         }
 
         // Change replace preview text button into icon
-        if (replacePreviewButton?.innerHTML !== '🖼️') {
+        if (replacePreviewButton.innerHTML !== '🖼️') {
           needToAddButtons = true;
           replacePreviewButton.innerHTML = '🖼️';
           styleButton(replacePreviewButton, isThumbMode);
