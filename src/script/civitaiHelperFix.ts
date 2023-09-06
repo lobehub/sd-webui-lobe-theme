@@ -12,7 +12,7 @@ const MODEL_TYPE = {
   lora: 'lora',
   lycoris: 'lycoris',
   textual_inversion: 'ti',
-} as const satisfies Record<typeof MODEL_TYPE_LIST[number], string>;
+} as const satisfies Record<(typeof MODEL_TYPE_LIST)[number], string>;
 const CARDID_SUFFIX = 'cards' as const;
 
 // CSS
@@ -45,7 +45,7 @@ type IStrictNullable<T> = T | null;
 type INullable<T> = T | null | undefined;
 
 function is_nullable<T>(v: INullable<T>): v is null | undefined {
-  return v === undefined || v === null
+  return v === undefined || v === null;
 }
 
 const updateCardForCivitai = () => {
@@ -64,7 +64,7 @@ const updateCardForCivitai = () => {
   const chShowButtonOnThumb = chShowButtonOnThumbCkb?.checked || false;
 
   // Change all "replace preview" into an icon
-  let extraNetworkId: `${typeof TAB_PREFIX_LIST[number]}_${typeof MODEL_TYPE_LIST[number]}_${typeof CARDID_SUFFIX}`;
+  let extraNetworkId: `${(typeof TAB_PREFIX_LIST)[number]}_${(typeof MODEL_TYPE_LIST)[number]}_${typeof CARDID_SUFFIX}`;
   let extraNetworkNode: IStrictNullable<HTMLElement>;
   let metadataButton: IStrictNullable<HTMLElement>;
   let additionalNode: HTMLElement;
@@ -72,16 +72,20 @@ const updateCardForCivitai = () => {
   let ulNode: IStrictNullable<HTMLElement>;
   let searchTermNode: IStrictNullable<HTMLElement>;
   let searchTerm = '';
-  let modelType: typeof MODEL_TYPE[keyof typeof MODEL_TYPE];
-  let cards: INullable<NodeListOf<HTMLElement & {
-    dataset: {
-      [DOM_CACHE_KEY]?: typeof DOM_CACHE_VALUE
-    }
-  }>>;
+  let modelType: (typeof MODEL_TYPE)[keyof typeof MODEL_TYPE];
+  let cards: INullable<
+    NodeListOf<
+      HTMLElement & {
+        dataset: {
+          [DOM_CACHE_KEY]?: typeof DOM_CACHE_VALUE;
+        };
+      }
+    >
+  >;
   let needToAddButtons = false;
   let isThumbMode = false;
 
-  const modelTypeHasCards: typeof MODEL_TYPE_LIST[number][] = [];
+  const modelTypeHasCards: (typeof MODEL_TYPE_LIST)[number][] = [];
 
   // Get current tab
   for (const activeTabType of TAB_PREFIX_LIST) {
@@ -173,7 +177,7 @@ const updateCardForCivitai = () => {
           }
         } else {
           // Full preview mode
-          additionalNode.style.display = chAlwaysDisplay ? 'block' : undefined as any as string;
+          additionalNode.style.display = chAlwaysDisplay ? 'block' : (undefined as any as string);
         }
 
         // Change replace preview text button into icon
@@ -233,7 +237,7 @@ const updateCardForCivitai = () => {
     }
   }
 
-  return modelTypeHasCards
+  return modelTypeHasCards;
 };
 
 export default () => {
@@ -245,7 +249,7 @@ export default () => {
   const fnClick = () => {
     // eslint-disable-next-line @typescript-eslint/no-use-before-define
     setTimeout(fn, 2000);
-  }
+  };
   fn = () => {
     let retryTimes = 0;
     const fixInterval = setInterval(() => {
@@ -257,9 +261,11 @@ export default () => {
           checkDomCurrent = checkDom;
           for (const activeTabType of TAB_PREFIX_LIST) {
             const elems = document.querySelectorAll(`#${activeTabType}_extra_tabs .tab-nav button`);
-            if (elems) for (const elem of elems) {
-              elem.removeEventListener('click', fnClick);
-              elem.addEventListener('click', fnClick);
+            if (elems) {
+              for (const elem of elems) {
+                elem.removeEventListener('click', fnClick);
+                elem.addEventListener('click', fnClick);
+              }
             }
           }
         }
@@ -274,5 +280,5 @@ export default () => {
     }, 2000);
   };
 
-  return fn()
+  return fn();
 };
