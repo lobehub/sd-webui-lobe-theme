@@ -1,19 +1,19 @@
-const TAB_PREFIX_LIST = ['txt2img', 'img2img'];
-const MODEL_TYPE_LIST: ['textual_inversion', 'hypernetworks', 'checkpoints', 'lora', 'lycoris'] = [
+const TAB_PREFIX_LIST = ['txt2img', 'img2img'] as const;
+const MODEL_TYPE_LIST = [
   'textual_inversion',
   'hypernetworks',
   'checkpoints',
   'lora',
   'lycoris',
-];
+] as const;
 const MODEL_TYPE = {
   checkpoints: 'ckp',
   hypernetworks: 'hyper',
   lora: 'lora',
   lycoris: 'lycoris',
   textual_inversion: 'ti',
-};
-const CARDID_SUFFIX = 'cards';
+} as const satisfies Record<typeof MODEL_TYPE_LIST[number], string>;
+const CARDID_SUFFIX = 'cards' as const;
 
 // CSS
 const BTN_MARGIN = '0';
@@ -24,6 +24,10 @@ const BTN_THUMB_POS = 'static';
 const BTN_THUMB_BACKGROUND_IMAGE = 'none';
 const BTN_THUMB_BACKGROUND = 'rgba(0, 0, 0, 0.8)';
 const CH_BTN_TXTS = new Set(['🌐', '💡', '🏷️']);
+
+const DOM_CACHE_PREFIX = 'lobe' as const;
+const DOM_CACHE_KEY = `${DOM_CACHE_PREFIX}Done` as const;
+const DOM_CACHE_VALUE = '1' as const;
 
 const styleButton = (node: HTMLElement, isThumbMode: boolean) => {
   if (isThumbMode) {
@@ -60,7 +64,7 @@ const updateCardForCivitai = () => {
   const chShowButtonOnThumb = chShowButtonOnThumbCkb?.checked || false;
 
   // Change all "replace preview" into an icon
-  let extraNetworkId = '';
+  let extraNetworkId: `${typeof TAB_PREFIX_LIST[number]}_${typeof MODEL_TYPE_LIST[number]}_${typeof CARDID_SUFFIX}`;
   let extraNetworkNode: IStrictNullable<HTMLElement>;
   let metadataButton: IStrictNullable<HTMLElement>;
   let additionalNode: HTMLElement;
@@ -68,10 +72,16 @@ const updateCardForCivitai = () => {
   let ulNode: IStrictNullable<HTMLElement>;
   let searchTermNode: IStrictNullable<HTMLElement>;
   let searchTerm = '';
-  let modelType = '';
-  let cards: INullable<NodeListOf<HTMLElement>>;
+  let modelType: typeof MODEL_TYPE[keyof typeof MODEL_TYPE];
+  let cards: INullable<NodeListOf<HTMLElement & {
+    dataset: {
+      [DOM_CACHE_KEY]?: typeof DOM_CACHE_VALUE
+    }
+  }>>;
   let needToAddButtons = false;
   let isThumbMode = false;
+
+  const modelTypeHasCards: typeof MODEL_TYPE_LIST[number][] = [];
 
   // Get current tab
   for (const activeTabType of TAB_PREFIX_LIST) {
@@ -80,18 +90,29 @@ const updateCardForCivitai = () => {
       // Get model_type for python side
 
       extraNetworkId = `${activeTabType}_${jsModelType}_${CARDID_SUFFIX}`;
-      extraNetworkNode = document.querySelector(`#${extraNetworkId}`);
+      extraNetworkNode = document.querySelector(`#${extraNetworkId}` as const);
 
       // Check if extra network node exists
       if (is_nullable(extraNetworkNode)) continue;
 
       // Check if extr network is under thumbnail mode
-      isThumbMode = extraNetworkNode.className === 'extra-network-thumbs';
+      isThumbMode = extraNetworkNode.classList.contains('extra-network-thumbs');
 
       // Get all card nodes
       cards = extraNetworkNode.querySelectorAll('.card');
-      if (!cards?.length) continue;
+      if (!cards?.length) {
+        if (extraNetworkNode.querySelector('.nocards')) {
+          modelTypeHasCards.push(jsModelType);
+        }
+
+        continue;
+      }
+
+      modelTypeHasCards.push(jsModelType);
+
       for (const card of cards) {
+        if (card.dataset[DOM_CACHE_KEY] === DOM_CACHE_VALUE) break;
+        card.dataset[DOM_CACHE_KEY] = DOM_CACHE_VALUE;
         if (card.querySelectorAll('.actions .additional a').length > 2) continue;
         // Metadata_buttoncard
         metadataButton = card.querySelector('.metadata-button');
@@ -188,7 +209,7 @@ const updateCardForCivitai = () => {
         addTriggerWordsNode.title = 'Add trigger words to prompt';
         addTriggerWordsNode.setAttribute(
           'onclick',
-          `add_trigger_words(event, '${modelType}', '${searchTerm}')`,
+          `add_trigger_words(event, '${modelType}', ', ${searchTerm}')`,
         );
 
         const usePreviewPromptNode = document.createElement('a');
@@ -210,17 +231,46 @@ const updateCardForCivitai = () => {
       }
     }
   }
+
+  return modelTypeHasCards
 };
 
 export default () => {
-  let retryTimes = 0;
-  const fixInterval = setInterval(() => {
-    console.debug('🤯 [civitai helper] update card for civitai');
-    const checkDom = document.querySelector('#txt2img_lora_cards');
-    if (checkDom || retryTimes > 10) {
-      updateCardForCivitai();
-      clearInterval(fixInterval);
-    }
-    retryTimes++;
-  }, 1000);
+  let checkDomCurrent: INullable<HTMLElement>;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  let x: number = 0;
+  let fn: () => any;
+  // eslint-disable-next-line unicorn/consistent-function-scoping
+  const fnClick = () => {
+    // eslint-disable-next-line @typescript-eslint/no-use-before-define
+    setTimeout(fn, 2000);
+  }
+  fn = () => {
+    let retryTimes = 0;
+    const fixInterval = setInterval(() => {
+      console.debug('🤯 [civitai helper] update card for civitai');
+      const checkDom = document.querySelector('#txt2img_lora_cards') as any;
+      if (checkDom || retryTimes > 10) {
+        if (checkDomCurrent !== checkDom) {
+          x = 0;
+          checkDomCurrent = checkDom;
+          for (const activeTabType of TAB_PREFIX_LIST) {
+            const elems = document.querySelectorAll(`#${activeTabType}_extra_tabs .tab-nav button`);
+            if (elems) for (const elem of elems) {
+              elem.removeEventListener('click', fnClick);
+              elem.addEventListener('click', fnClick);
+            }
+          }
+        }
+        const y = updateCardForCivitai()?.length as number;
+        if (retryTimes > 10 || !checkDom || y >= MODEL_TYPE_LIST.length || y > x) {
+          clearInterval(fixInterval);
+          x = y ?? x;
+        }
+      }
+      retryTimes++;
+    }, 2000);
+  };
+
+  return fn()
 };
