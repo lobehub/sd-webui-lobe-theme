@@ -100,8 +100,9 @@ const updateCardForCivitai = () => {
 
       // Get all card nodes
       cards = extraNetworkNode.querySelectorAll('.card');
-      if (!cards?.length) {
-        if (extraNetworkNode.querySelector('.nocards')) {
+      const pending = !!document.querySelector(`#${extraNetworkId}_html .pending`);
+      if (!cards?.length || pending) {
+        if (!pending && extraNetworkNode.querySelector('.nocards')) {
           modelTypeHasCards.push(jsModelType);
         }
 
@@ -263,6 +264,7 @@ export default () => {
           }
         }
         const y = updateCardForCivitai()?.length as number;
+        if (typeof y === 'number' && y < x) x = y;
         if (retryTimes > 10 || !checkDom || y >= MODEL_TYPE_LIST.length || y > x) {
           clearInterval(fixInterval);
           x = y ?? x;
