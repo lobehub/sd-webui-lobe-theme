@@ -36,6 +36,7 @@ export const useStyles = createStyles(
 
       .extra-network-cards {
         height: unset;
+        min-height: unset;
 
         .name {
           background: unset !important;
