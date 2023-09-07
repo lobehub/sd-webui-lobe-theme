@@ -308,6 +308,9 @@ $ pnpm start
 <a href="https://github.com/web-97" title="web-97">
   <img src="https://avatars.githubusercontent.com/u/46352788?v=4" width="50" />
 </a>
+<a href="https://github.com/lobehubbot" title="lobehubbot">
+  <img src="https://avatars.githubusercontent.com/u/134299653?v=4" width="50" />
+</a>
 <a href="https://github.com/antfu" title="antfu">
   <img src="https://avatars.githubusercontent.com/u/11247099?v=4" width="50" />
 </a>
@@ -319,9 +322,6 @@ $ pnpm start
 </a>
 <a href="https://github.com/alwayshopeless" title="alwayshopeless">
   <img src="https://avatars.githubusercontent.com/u/38844539?v=4" width="50" />
-</a>
-<a href="https://github.com/lobehubbot" title="lobehubbot">
-  <img src="https://avatars.githubusercontent.com/u/134299653?v=4" width="50" />
 </a>
 <a href="https://github.com/sidmorizon" title="sidmorizon">
   <img src="https://avatars.githubusercontent.com/u/5180361?v=4" width="50" />
