@@ -95,13 +95,9 @@ export const useStyles = createStyles(
       splitView: css`
         #txt2img_toprow,
         #img2img_toprow {
+          flex-direction: column !important;
           padding: 0 !important;
           background: transparent !important;
-        }
-
-        #txt2img_toprow,
-        #ing2img_toprow {
-          flex-direction: column !important;
         }
       `,
       text2img: css`
@@ -166,8 +162,8 @@ export const useStyles = createStyles(
               flex-direction: column;
               gap: 12px;
 
-              > div.gr-group.gradio-group {
-                gap: 12px;
+              > div.gr-group.gradio-group:has(.label-wrap) {
+                gap: 12px !important;
 
                 margin: 0 !important;
                 padding: 16px !important;
