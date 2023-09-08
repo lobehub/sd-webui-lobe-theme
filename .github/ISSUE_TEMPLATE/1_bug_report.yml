@@ -25,6 +25,16 @@ body:
         - Other
     validations:
       required: true
+  - type: input
+    attributes:
+      label: '📦 SD Wbui 版本或提交 | Version or Commit'
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: '📦 Lobe Theme 版本或提交 | Version or Commit'
+    validations:
+      required: true
   - type: textarea
     attributes:
       label: '🐛 问题描述 | Bug Description'
