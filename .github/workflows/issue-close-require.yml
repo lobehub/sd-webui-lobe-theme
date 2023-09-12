@@ -44,3 +44,13 @@ jobs:
             Since the issue was labeled with `🙅🏻‍♀️ WON'T DO`, and no response in 3 days. This issue will be closed. If you have any questions, you can comment and reply.
 
             由于该 issue 被标记为暂不处理，同时 3 天未收到回应。现关闭 issue，若有任何问题，可评论回复。
+      - name: need reproduce
+        uses: actions-cool/issues-helper@v3
+        with:
+          actions: 'close-issues'
+          labels: "Inactive"
+          inactive-day: 3
+          body: |
+            Since the issue was labeled with `Inactive`, and no response in 3 days. This issue will be closed. If you have any questions, you can comment and reply.
+
+            由于该 issue 被标记为 Inactive，同时 30 天未收到回应。现关闭 issue，若有任何问题，可评论回复。
