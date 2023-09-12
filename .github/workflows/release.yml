@@ -23,10 +23,7 @@ jobs:
       - name: Test
         run: bun run test
 
-      - name: build
-        run: bun run build
-
-      - name: release
+      - name: Release
         run: bun run release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}

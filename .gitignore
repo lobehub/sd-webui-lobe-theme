@@ -44,3 +44,4 @@ __pycache__
 /lobe_theme_config.json
 /javascript/**/*
 !/javascript/main.js
+bun.lockb
