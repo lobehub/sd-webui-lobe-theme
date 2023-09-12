@@ -24,7 +24,7 @@ jobs:
         run: bun run test
 
       - name: build
-        run: bun run build
+        run: bunx --bun vite build
 
       - name: release
         run: bun run release
