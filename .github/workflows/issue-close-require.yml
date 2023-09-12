@@ -1,6 +1,7 @@
 name: Issue Close Require
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 0 * * *'
 
