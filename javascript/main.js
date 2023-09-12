@@ -1382,7 +1382,7 @@ function e(e,t){for(var n=0;n<t.length;n++){const r=t[n];if("string"!=typeof r&&
           }
         }
 
-        [id$='2img_prompt'] textarea {
+        [id$='2img_prompt'] > label > textarea {
           color: ${t.colorSuccessTextHover};
 
           &:focus {
@@ -1390,7 +1390,7 @@ function e(e,t){for(var n=0;n<t.length;n++){const r=t[n];if("string"!=typeof r&&
           }
         }
 
-        [id$='2img_neg_prompt'] textarea {
+        [id$='2img_neg_prompt'] > label > textarea {
           color: ${t.colorErrorTextHover};
 
           &:focus {

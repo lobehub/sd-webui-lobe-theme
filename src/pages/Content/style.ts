@@ -267,7 +267,7 @@ export const useStyles = createStyles(
           }
         }
 
-        [id$='2img_prompt'] textarea {
+        [id$='2img_prompt'] > label > textarea {
           color: ${token.colorSuccessTextHover};
 
           &:focus {
@@ -275,7 +275,7 @@ export const useStyles = createStyles(
           }
         }
 
-        [id$='2img_neg_prompt'] textarea {
+        [id$='2img_neg_prompt'] > label > textarea {
           color: ${token.colorErrorTextHover};
 
           &:focus {
