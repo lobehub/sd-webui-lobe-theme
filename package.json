@@ -26,6 +26,7 @@
   ],
   "scripts": {
     "build": "vite build",
+    "ci": "npm run lint && npm run type-check",
     "dev": "vite",
     "dev:sd": "cd ../../ && ./webui.sh",
     "i18n": "lobe-i18n",
@@ -36,7 +37,9 @@
     "prettier": "prettier -c --write \"**/**\"",
     "release": "semantic-release",
     "start": "npm run dev",
-    "test": "npm run type-check",
+    "test": "vitest --passWithNoTests",
+    "test:coverage": "vitest run --coverage  --passWithNoTests",
+    "test:update": "vitest -u",
     "type-check": "tsc --noEmit"
   },
   "lint-staged": {
@@ -77,6 +80,7 @@
     "@types/semver": "^7.5.1",
     "@types/styled-components": "^5",
     "@vitejs/plugin-react": "^4",
+    "@vitest/coverage-v8": "latest",
     "ahooks": "^3",
     "antd": "^5",
     "antd-style": "latest",
@@ -89,6 +93,7 @@
     "husky": "^8",
     "i18next": "^23",
     "i18next-http-backend": "^2.2.2",
+    "jsdom": "^22",
     "lint-staged": "^14",
     "lodash-es": "^4",
     "lucide-react": "latest",
@@ -114,6 +119,7 @@
     "terser": "^5",
     "typescript": "^5",
     "vite": "^4",
+    "vitest": "latest",
     "zustand": "^4.4.1",
     "zustand-utils": "^1.3.1"
   },
