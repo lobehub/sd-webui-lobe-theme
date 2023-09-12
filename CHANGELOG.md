@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 3.0.7](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.0.6...v3.0.7)
+
+<sup>Released on **2023-09-12**</sup>
+
+#### 💄 Styles
+
+- **misc**: Fix prompt higlight.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Fix prompt higlight ([f190c1a](https://github.com/lobehub/sd-webui-lobe-theme/commit/f190c1a))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.0.6](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.0.5...v3.0.6)
 
 <sup>Released on **2023-09-12**</sup>
