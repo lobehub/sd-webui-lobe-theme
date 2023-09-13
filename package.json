@@ -102,6 +102,8 @@
     "prettier": "^3",
     "query-string": "^8",
     "react": "^18",
+    "react-dnd": "^16",
+    "react-dnd-html5-backend": "^16",
     "react-dom": "^18",
     "react-helmet": "^6",
     "react-i18next": "^13",
