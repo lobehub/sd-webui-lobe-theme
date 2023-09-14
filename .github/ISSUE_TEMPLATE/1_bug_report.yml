@@ -28,17 +28,15 @@ body:
   - type: input
     attributes:
       label: '📦 SD Wbui 版本或提交 | Version or Commit'
-    validations:
-      required: true
   - type: input
     attributes:
       label: '📦 Lobe Theme 版本或提交 | Version or Commit'
-    validations:
-      required: true
   - type: textarea
     attributes:
       label: '🐛 问题描述 | Bug Description'
-      description: A clear and concise description of the bug.
+      description: |
+        清晰且简洁地描述你期待发生的事情。请按照以下的故障排除步骤操作，更新 webui 和 lobe 主题到最新版本。如果问题仍然存在，尝试检查是否有其他插件与之冲突，并提供冲突插件的名称。
+        A clear and concise description of your problem. Please follow the troubleshooting steps below, update the webui and lobe theme to the latest version. If the problem persists, try to check if there is a conflict with other plugins and provide the name of the conflicting plugin.
     validations:
       required: true
   - type: textarea
