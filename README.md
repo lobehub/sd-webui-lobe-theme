@@ -28,7 +28,8 @@ English · [Russian ](./README-ru_RU.md)· [简体中文](./README-zh_CN.md) · 
 
 ![][cover]
 
-> ⚠️⚠️⚠️ `Lobe Theme v3` is compatible with `SD WebUI v1.6` and is not backwards compatible. Versions below `< 1.6` should be moved to the branch [legacy-sd-webui-1.5](https://github.com/lobehub/sd-webui-lobe-theme/tree/legacy-sd-webui-1.5)
+> **Warning**\
+> `Lobe Theme v3` is compatible with `SD WebUI v1.6` and is not backwards compatible. Versions below `< 1.6` should be moved to the branch [legacy-sd-webui-1.5](https://github.com/lobehub/sd-webui-lobe-theme/tree/legacy-sd-webui-1.5)
 
 <details>
 <summary><kbd>Table of contents</kbd></summary>
@@ -49,7 +50,7 @@ English · [Russian ](./README-ru_RU.md)· [简体中文](./README-zh_CN.md) · 
 
 - [🤝 Contributing](#-contributing)
 
-- [🔗 Credits](#-credits)
+- [🔗 Links](#-links)
 
   - [More Products](#more-products)
   - [Credits](#credits)
@@ -82,7 +83,8 @@ English · [Russian ](./README-ru_RU.md)· [简体中文](./README-zh_CN.md) · 
 
 Search for `Lobe Theme` or `Kitchen Theme` in the stable diffusion webui plugin market and install it.
 
-> 👉 Note: **Version 2.0.0** was renamed to **Lobe Theme**
+> **Note**\
+> **Version 2.0.0** was renamed to **Lobe Theme**
 
 #### Method 2
 
@@ -92,7 +94,8 @@ As an extension (recommended), clone the repository to your extension folder:
 git clone "https://github.com/lobehub/sd-webui-lobe-theme" extensions/lobe-theme
 ```
 
-> 👉 Note: minimum requirements gradio-3.41.2 & sd-webui 1.6
+> **Important**\
+> minimum requirements gradio-3.41.2 & sd-webui 1.6
 
 <div align="right">
 
@@ -106,7 +109,8 @@ git clone "https://github.com/lobehub/sd-webui-lobe-theme" extensions/lobe-theme
 
 #### Light and Dark Themes
 
-> 👉 Tip: You can quickly switch between light and dark themes in the upper-right corner of the navigation bar.
+> **Note**\
+> You can quickly switch between light and dark themes in the upper-right corner of the navigation bar.
 
 The current theme supports both light and dark themes. If you want to force dark mode, use the `--theme=dark` argument to launch your WebUI. For example, on Windows, your `webui-user.bat` should include:
 
@@ -131,7 +135,8 @@ http://localhost:7860/?__theme=dark
 
 #### Theme Customization
 
-> 👉 Tip: Click the `⚙` icon in the upper-right corner to open the settings panel. The current available settings are as follows:
+> **Note**\
+> Click the `⚙` icon in the upper-right corner to open the settings panel. The current available settings are as follows:
 
 - **Theme**
   - Primary color: Currently offers `13` theme color combinations
@@ -162,7 +167,8 @@ Automatically colorize prompt display according to the Stable Diffusion syntax r
 
 #### Sidebar Customization
 
-> 👉 Tip: Click the `⚙` icon in the upper-right corner to open the settings panel. The current available settings are as follows:
+> **Note**\
+> Click the `⚙` icon in the upper-right corner to open the settings panel. The current available settings are as follows:
 
 - **Prompt Textarea**
   - Display mode: `scroll fixed height` | `resizable by text lines`
@@ -235,7 +241,8 @@ You can use Progressive Web Apps [PWA](https://support.google.com/chrome/answer/
 
 Click the <kbd>🪄</kbd> button below Prompt to format the prompt words with one click.
 
-> 👉 Tip: Convert full-width punctuation to half-width, remove extra spaces, add missing commas, and move the Extra-Networks model to the end.
+> **Note**\
+> Convert full-width punctuation to half-width, remove extra spaces, add missing commas, and move the Extra-Networks model to the end.
 
 Before formatting:
 
@@ -261,7 +268,8 @@ photorealistic photo of a handsome male, (wizard:1.2), short beard, white wizard
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | last 2 versions                                                                                                                                                                                              | last 2 versions                                                                                                                                                                                      | last 2 versions                                                                                                                                                                                              |
 
-> ⚠️ There is currently a known compatibility issue with styles on Firefox browser.
+> **Warning**\
+> There is currently a known compatibility issue with styles on Firefox browser.
 
 <div align="right">
 
@@ -287,7 +295,7 @@ photorealistic photo of a handsome male, (wizard:1.2), short beard, white wizard
 
 You can use Gitpod for online development:
 
-[Open in Gitpod][gitpod-url]
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)][gitpod-url]
 
 Alternatively, you can clone it for local development. To enable hot-reloading mode, you need to start stable diffuison on port `7860` in advance.
 
@@ -318,7 +326,7 @@ Contributions of all types are more than welcome, if you are interested in contr
 
 </div>
 
-## 🔗 Credits
+## 🔗 Links
 
 ### More Products
 
