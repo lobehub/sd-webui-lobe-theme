@@ -51,10 +51,10 @@ English · [Russian ](./README-ru_RU.md)· [简体中文](./README-zh_CN.md) · 
 
 - [🤝 Contributing](#-contributing)
 
-- [🔗 Ссылки](#-ссылки)
+- [🔗 Links](#-links)
 
-  - [Больше продуктов](#больше-продуктов)
-  - [Благодарности](#благодарности)
+  - [More Products](#more-products)
+  - [Credits](#credits)
 
 ####
 
@@ -340,15 +340,15 @@ $ bun dev
 
 </div>
 
-## 🔗 Ссылки
+## 🔗 Links
 
-### Больше продуктов
+### More Products
 
-- **[🤖 Lobe Chat][lobe-chat] :** Это открытая, расширяемая (с вызовом функций) высокопроизводительная рамка для чат-ботов. Она поддерживает однокликовую бесплатную развертывание вашего частного веб-приложения ChatGPT/LLM.
-- **[🌏 Lobe i18n][lobe-i18n] :** Lobe i18n - это автоматизированный инструмент для процесса перевода i18n (интернационализация), работающий на основе ChatGPT. Он поддерживает такие функции, как автоматическое разделение больших файлов, инкрементные обновления и настраиваемые параметры для модели OpenAI, API прокси и температуры.
-- **[💌 Lobe Commit][lobe-commit] :** Lobe Commit - это инструмент CLI, который использует Langchain/ChatGPT для создания сообщений о коммитах на основе Gitmoji.
+- **[🤖 Lobe Chat][lobe-chat] :** An open-source, extensible (Function Calling), high-performance chatbot framework. It supports one-click free deployment of your private ChatGPT/LLM web application.
+- **[🌏 Lobe i18n][lobe-i18n] :** Lobe i18n is an automation tool for the i18n (internationalization) translation process, powered by ChatGPT. It supports features such as automatic splitting of large files, incremental updates, and customization options for the OpenAI model, API proxy, and temperature.
+- **[💌 Lobe Commit][lobe-commit] :** Lobe Commit is a CLI tool that leverages Langchain/ChatGPT to generate Gitmoji-based commit messages.
 
-### Благодарности
+### Credits
 
 - stable-diffusion-webui：<https://github.com/AUTOMATIC1111/stable-diffusion-webui>
 - gradio-theme-gallery: <https://huggingface.co/spaces/gradio/theme-gallery>
