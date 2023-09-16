@@ -10,19 +10,20 @@ The modern theme for stable diffusion webui
 
 Legacy verison a.k.a kitchen theme
 
-English · [Russian ](./README-ru_RU.md)· [简体中文](./README-zh_CN.md) · [Changelog](./CHANGELOG.md) · [Report Bug][issues-url] · [Request Feature][issues-url]
+English · [Russian ](./README-ru_RU.md)· [简体中文](./README-zh_CN.md) · [Changelog](./CHANGELOG.md) · [Report Bug][github-issues-link] · [Request Feature][github-issues-link]
 
 <!-- SHIELD GROUP -->
 
-[![release][release-shield]][release-url]
-[![releaseDate][release-date-shield]][release-date-url]
-[![][license-shield]][fossa-license-url]
-[![ciTest][ci-test-shield]][ci-test-url]
-[![ciRelease][ci-release-shield]][ci-release-url] <br/>
-[![contributors][contributors-shield]][contributors-url]
-[![forks][forks-shield]][forks-url]
-[![stargazers][stargazers-shield]][stargazers-url]
-[![issues][issues-shield]][issues-url]
+[![][github-release-shield]][github-release-link]
+[![][discord-shield]][discord-link]
+[![][github-releasedate-shield]][github-releasedate-link]
+[![][github-action-test-shield]][github-action-test-link]
+[![][github-action-release-shield]][github-action-release-link]<br/>
+[![][github-contributors-shield]][github-contributors-link]
+[![][github-forks-shield]][github-forks-link]
+[![][github-stars-shield]][github-stars-link]
+[![][github-issues-shield]][github-issues-link]
+[![][github-license-shield]][github-license-link]
 
 </div>
 
@@ -50,10 +51,10 @@ English · [Russian ](./README-ru_RU.md)· [简体中文](./README-zh_CN.md) · 
 
 - [🤝 Contributing](#-contributing)
 
-- [🔗 Links](#-links)
+- [🔗 Ссылки](#-ссылки)
 
-  - [More Products](#more-products)
-  - [Credits](#credits)
+  - [Больше продуктов](#больше-продуктов)
+  - [Благодарности](#благодарности)
 
 ####
 
@@ -95,7 +96,18 @@ git clone "https://github.com/lobehub/sd-webui-lobe-theme" extensions/lobe-theme
 ```
 
 > **Important**\
-> minimum requirements gradio-3.41.2 & sd-webui 1.6
+> minimum requirements `gradio-3.41.2` & `sd-webui 1.6`
+
+#### Upstream Sync
+
+Star Us，You will receive all releases notifications from GitHub without any delay \~ ⭐️
+
+<details><summary><kbd>Star History</kbd></summary>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=lobehub%2Fsd-webui-lobe-theme&theme=dark&type=Date">
+    <img src="https://api.star-history.com/svg?repos=lobehub%2Fsd-webui-lobe-theme&type=Date">
+  </picture>
+</details>
 
 <div align="right">
 
@@ -279,11 +291,11 @@ photorealistic photo of a handsome male, (wizard:1.2), short beard, white wizard
 
 ## 📦 Ecosystem
 
-| NPM                            | Repository                            | Description                                                                                                             | Version                                |
-| ------------------------------ | ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
-| [@lobehub/ui][lobe-ui-url]     | [lobehub/lobe-ui][lobe-ui-github]     | Lobe UI is an open-source UI component library dedicated to building AIGC web applications.                             | [![][lobe-ui-shield]][lobe-ui-url]     |
-| [@lobehub/lint][lobe-lint-url] | [lobehub/lobe-lint][lobe-lint-github] | LobeLint provides configurations for ESlint, Stylelint, Commitlint, Prettier, Remark, and Semantic Release for LobeHub. | [![][lobe-lint-shield]][lobe-lint-url] |
-| @lobehub/assets                | [lobehub/assets][lobe-assets-github]  | Logo assets, favicons, webfonts for LobeHub.                                                                            |                                        |
+| NPM                             | Repository                            | Description                                                                                                             | Version                                 |
+| ------------------------------- | ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
+| [@lobehub/ui][lobe-ui-link]     | [lobehub/lobe-ui][lobe-ui-github]     | Lobe UI is an open-source UI component library dedicated to building AIGC web applications.                             | [![][lobe-ui-shield]][lobe-ui-link]     |
+| [@lobehub/lint][lobe-lint-link] | [lobehub/lobe-lint][lobe-lint-github] | LobeLint provides configurations for ESlint, Stylelint, Commitlint, Prettier, Remark, and Semantic Release for LobeHub. | [![][lobe-lint-shield]][lobe-lint-link] |
+| @lobehub/assets                 | [lobehub/assets][lobe-assets-github]  | Logo assets, favicons, webfonts for LobeHub.                                                                            |                                         |
 
 <div align="right">
 
@@ -293,17 +305,19 @@ photorealistic photo of a handsome male, (wizard:1.2), short beard, white wizard
 
 ## ⌨️ Local Development
 
-You can use Gitpod for online development:
+You can use Github Codespaces for online development:
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)][gitpod-url]
+[![][codespaces-shield]][codespaces-link]
 
 Alternatively, you can clone it for local development. To enable hot-reloading mode, you need to start stable diffuison on port `7860` in advance.
+
+[![][bun-shield]][bun-link]
 
 ```bash
 $ git clone https://github.com/lobehub/sd-webui-lobe-theme.git
 $ cd sd-webui-lobe-theme
-$ pnpm install
-$ pnpm start
+$ bun install
+$ bun dev
 ```
 
 <div align="right">
@@ -314,11 +328,11 @@ $ pnpm start
 
 ## 🤝 Contributing
 
-Contributions of all types are more than welcome, if you are interested in contributing code, feel free to check out our GitHub [Issues][issues-url] to get stuck in to show us what you’re made of.
+Любые виды вкладов приветствуются, если вас интересует внесение кода, не стесняйтесь просмотреть наши проблемы на GitHub [Issues][github-issues-link], чтобы показать нам, из чего вы сделаны.
 
-[![][pr-welcome-shield]][pr-welcome-url]
+[![][pr-welcome-shield]][pr-welcome-link]
 
-[![][contributors-contrib]][contributors-url]
+[![][contributors-contrib]][contributors-link]
 
 <div align="right">
 
@@ -326,15 +340,15 @@ Contributions of all types are more than welcome, if you are interested in contr
 
 </div>
 
-## 🔗 Links
+## 🔗 Ссылки
 
-### More Products
+### Больше продуктов
 
-- **[🤖 Lobe Chat][lobe-chat] :** An open-source, extensible (Function Calling), high-performance chatbot framework. It supports one-click free deployment of your private ChatGPT/LLM web application.
-- **[🌏 Lobe i18n][lobe-i18n] :** Lobe i18n is an automation tool for the i18n (internationalization) translation process, powered by ChatGPT. It supports features such as automatic splitting of large files, incremental updates, and customization options for the OpenAI model, API proxy, and temperature.
-- **[💌 Lobe Commit][lobe-commit] :** Lobe Commit is a CLI tool that leverages Langchain/ChatGPT to generate Gitmoji-based commit messages.
+- **[🤖 Lobe Chat][lobe-chat] :** Это открытая, расширяемая (с вызовом функций) высокопроизводительная рамка для чат-ботов. Она поддерживает однокликовую бесплатную развертывание вашего частного веб-приложения ChatGPT/LLM.
+- **[🌏 Lobe i18n][lobe-i18n] :** Lobe i18n - это автоматизированный инструмент для процесса перевода i18n (интернационализация), работающий на основе ChatGPT. Он поддерживает такие функции, как автоматическое разделение больших файлов, инкрементные обновления и настраиваемые параметры для модели OpenAI, API прокси и температуры.
+- **[💌 Lobe Commit][lobe-commit] :** Lobe Commit - это инструмент CLI, который использует Langchain/ChatGPT для создания сообщений о коммитах на основе Gitmoji.
 
-### Credits
+### Благодарности
 
 - stable-diffusion-webui：<https://github.com/AUTOMATIC1111/stable-diffusion-webui>
 - gradio-theme-gallery: <https://huggingface.co/spaces/gradio/theme-gallery>
@@ -353,54 +367,61 @@ Contributions of all types are more than welcome, if you are interested in contr
 
 <details><summary><h4>📝 License</h4></summary>
 
-[![][fossa-license-shield]][fossa-license-url]
+[![][fossa-license-shield]][fossa-license-link]
 
 </details>
 
-Copyright © 2023 [CanisMinor][profile-url]. <br />
+Copyright © 2023 [CanisMinor][profile-link]. <br />
 This project is [AGPL3](./LICENSE) licensed.
 
 <!-- LINK GROUP -->
 
 [back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square
-[ci-release-shield]: https://github.com/lobehub/sd-webui-lobe-theme/workflows/Build%20and%20Release/badge.svg
-[ci-release-url]: https://github.com/lobehub/sd-webui-lobe-theme/actions/workflows/release.yml
-[ci-test-shield]: https://github.com/lobehub/sd-webui-lobe-theme/workflows/Test%20CI/badge.svg
-[ci-test-url]: https://github.com/lobehub/sd-webui-lobe-theme/actions/workflows/test.yml
+[bun-link]: https://bun.sh
+[bun-shield]: https://img.shields.io/badge/-speedup%20with%20bun-black?logo=bun&style=for-the-badge
+[codespaces-link]: https://codespaces.new/lobehub/sd-webui-lobe-theme
+[codespaces-shield]: https://github.com/codespaces/badge.svg
 [contributors-contrib]: https://contrib.rocks/image?repo=lobehub/sd-webui-lobe-theme
-[contributors-shield]: https://img.shields.io/github/contributors/lobehub/sd-webui-lobe-theme.svg?style=flat
-[contributors-url]: https://github.com/lobehub/sd-webui-lobe-theme/graphs/contributors
+[contributors-link]: https://github.com/lobehub/sd-webui-lobe-theme/graphs/contributors
 [cover]: https://gw.alipayobjects.com/zos/kitchen/8Ab%24hLJ5ur/cover.webp
+[discord-link]: https://discord.gg/AYFPHvv2jT
+[discord-shield]: https://img.shields.io/discord/1127171173982154893?color=5865F2&label=discord&labelColor=black&logo=discord&logoColor=white&style=flat-square
 [feat-highlight]: https://gw.alipayobjects.com/zos/kitchen/iD%24W4U2y3Y/feat_highlight.webp
 [feat-mobile-friendly]: https://gw.alipayobjects.com/zos/kitchen/WpWe6Hw8UT/feat_mobile_friendly.webp
 [feat-pwa]: https://gw.alipayobjects.com/zos/kitchen/az49akOKJT/feat_pwa.webp
 [feat-sidebar]: https://gw.alipayobjects.com/zos/kitchen/Olum2IjxCW/feat_sidebar.webp
 [feat-theme-modify]: https://gw.alipayobjects.com/zos/kitchen/CbhlynwJYg/feat_theme_modify.webp
 [feat-thememode]: https://gw.alipayobjects.com/zos/kitchen/nSFtJidWUR/feat_thememode.webp
-[forks-shield]: https://img.shields.io/github/forks/lobehub/sd-webui-lobe-theme.svg?style=flat
-[forks-url]: https://github.com/lobehub/sd-webui-lobe-theme/network/members
+[fossa-license-link]: https://app.fossa.com/projects/git%2Bgithub.com%2Flobehub%2Fsd-webui-lobe-theme
 [fossa-license-shield]: https://app.fossa.com/api/projects/git%2Bgithub.com%2Flobehub%2Fsd-webui-lobe-theme.svg?type=large
-[fossa-license-url]: https://app.fossa.com/projects/git%2Bgithub.com%2Flobehub%2Fsd-webui-lobe-theme
-[gitpod-url]: https://gitpod.io/#https://github.com/lobehub/sd-webui-lobe-theme
-[issues-shield]: https://img.shields.io/github/issues/lobehub/sd-webui-lobe-theme.svg?style=flat
-[issues-url]: https://github.com/lobehub/sd-webui-lobe-theme/issues/new/choose
-[license-shield]: https://app.fossa.com/api/projects/git%2Bgithub.com%2Flobehub%2Fsd-webui-lobe-theme.svg?type=shield&issueType=license
+[github-action-release-link]: https://github.com/actions/workflows/lobehub/sd-webui-lobe-theme/release.yml
+[github-action-release-shield]: https://img.shields.io/github/actions/workflow/status/lobehub/sd-webui-lobe-theme/release.yml?label=release&labelColor=black&logo=githubactions&logoColor=white&style=flat-square
+[github-action-test-link]: https://github.com/actions/workflows/lobehub/sd-webui-lobe-theme/test.yml
+[github-action-test-shield]: https://img.shields.io/github/actions/workflow/status/lobehub/sd-webui-lobe-theme/test.yml?label=test&labelColor=black&logo=githubactions&logoColor=white&style=flat-square
+[github-contributors-link]: https://github.com/lobehub/sd-webui-lobe-theme/graphs/contributors
+[github-contributors-shield]: https://img.shields.io/github/contributors/lobehub/sd-webui-lobe-theme?color=c4f042&labelColor=black&style=flat-square
+[github-forks-link]: https://github.com/lobehub/sd-webui-lobe-theme/network/members
+[github-forks-shield]: https://img.shields.io/github/forks/lobehub/sd-webui-lobe-theme?color=8ae8ff&labelColor=black&style=flat-square
+[github-issues-link]: https://github.com/lobehub/sd-webui-lobe-theme/issues
+[github-issues-shield]: https://img.shields.io/github/issues/lobehub/sd-webui-lobe-theme?color=ff80eb&labelColor=black&style=flat-square
+[github-license-link]: https://github.com/lobehub/sd-webui-lobe-theme/blob/main/LICENSE
+[github-license-shield]: https://img.shields.io/github/license/lobehub/sd-webui-lobe-theme?color=white&labelColor=black&style=flat-square
+[github-release-link]: https://github.com/lobehub/sd-webui-lobe-theme/releases
+[github-release-shield]: https://img.shields.io/github/v/release/lobehub/sd-webui-lobe-theme?color=369eff&labelColor=black&logo=github&style=flat-square
+[github-releasedate-link]: https://github.com/lobehub/sd-webui-lobe-theme/releases
+[github-releasedate-shield]: https://img.shields.io/github/release-date/lobehub/sd-webui-lobe-theme?labelColor=black&style=flat-square
+[github-stars-link]: https://github.com/lobehub/sd-webui-lobe-theme/network/stargazers
+[github-stars-shield]: https://img.shields.io/github/stars/lobehub/sd-webui-lobe-theme?color=ffcb47&labelColor=black&style=flat-square
 [lobe-assets-github]: https://github.com/lobehub/lobe-assets
 [lobe-chat]: https://github.com/lobehub/lobe-chat
 [lobe-commit]: https://github.com/lobehub/lobe-commit/tree/master/packages/lobe-commit
 [lobe-i18n]: https://github.com/lobehub/lobe-commit/tree/master/packages/lobe-i18n
 [lobe-lint-github]: https://github.com/lobehub/lobe-lint
-[lobe-lint-shield]: https://img.shields.io/npm/v/@lobehub/lint?label=%F0%9F%A4%AF%20NPM
-[lobe-lint-url]: https://www.npmjs.com/package/@lobehub/lint
+[lobe-lint-link]: https://www.npmjs.com/package/@lobehub/lint
+[lobe-lint-shield]: https://img.shields.io/npm/v/@lobehub/lint?color=369eff&labelColor=black&logo=npm&logoColor=white&style=flat-square
 [lobe-ui-github]: https://github.com/lobehub/lobe-ui
-[lobe-ui-shield]: https://img.shields.io/npm/v/@lobehub/ui?label=%F0%9F%A4%AF%20NPM
-[lobe-ui-url]: https://www.npmjs.com/package/@lobehub/ui
-[pr-welcome-shield]: https://img.shields.io/badge/🤯_pr_welcome-%E2%86%92-FEE064?style=for-the-badge
-[pr-welcome-url]: https://github.com/lobehub/lobe-chat/pulls
-[profile-url]: https://github.com/canisminor1990
-[release-date-shield]: https://img.shields.io/github/release-date/lobehub/sd-webui-lobe-theme?style=flat
-[release-date-url]: https://github.com/lobehub/sd-webui-lobe-theme/releases
-[release-shield]: https://img.shields.io/github/v/release/lobehub/sd-webui-lobe-theme?style=flat&sort=semver&logo=github
-[release-url]: https://github.com/lobehub/sd-webui-lobe-theme/releases
-[stargazers-shield]: https://img.shields.io/github/stars/lobehub/sd-webui-lobe-theme.svg?style=flat
-[stargazers-url]: https://github.com/lobehub/sd-webui-lobe-theme/stargazers
+[lobe-ui-link]: https://www.npmjs.com/package/@lobehub/ui
+[lobe-ui-shield]: https://img.shields.io/npm/v/@lobehub/ui?color=369eff&labelColor=black&logo=npm&logoColor=white&style=flat-square
+[pr-welcome-link]: https://github.com/lobehub/lobe-chat/pulls
+[pr-welcome-shield]: https://img.shields.io/badge/🤯_pr_welcome-%E2%86%92-ffcb47?labelColor=black&style=for-the-badge
+[profile-link]: https://github.com/canisminor1990
