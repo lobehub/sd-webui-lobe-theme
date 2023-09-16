@@ -388,7 +388,7 @@ This project is [AGPL3](./LICENSE) licensed.
 [issues-url]: https://github.com/lobehub/sd-webui-lobe-theme/issues/new/choose
 [license-shield]: https://app.fossa.com/api/projects/git%2Bgithub.com%2Flobehub%2Fsd-webui-lobe-theme.svg?type=shield&issueType=license
 [lobe-assets-github]: https://github.com/lobehub/lobe-assets
-[lobe-chat]: https://github.com/lobehub/lobe-commit/tree/master/packages/lobe-chat
+[lobe-chat]: https://github.com/lobehub/lobe-chat
 [lobe-commit]: https://github.com/lobehub/lobe-commit/tree/master/packages/lobe-commit
 [lobe-i18n]: https://github.com/lobehub/lobe-commit/tree/master/packages/lobe-i18n
 [lobe-lint-github]: https://github.com/lobehub/lobe-lint

@@ -37,12 +37,21 @@
 #### TOC
 
 - [✨ Дополнения](#-дополнения)
+
 - [📦 Установка](#-установка)
+
 - [🤯 Использование](#-использование)
+
 - [🖥 Поддерживаемые браузеры](#-поддерживаемые-браузеры)
+
 - [⌨️ Локальная разработка](#️-локальная-разработка)
+
 - [🤝 Содействие](#-содействие)
-- [🔗 Ссылки](#-ссылки)
+
+- [🔗 Links](#-links)
+
+  - [More Products](#more-products)
+  - [Credits](#credits)
 
 ####
 
@@ -299,7 +308,15 @@ $ pnpm start
 
 </div>
 
-## 🔗 Ссылки
+## 🔗 Links
+
+### More Products
+
+- **[🤖 Lobe Chat][lobe-chat] :** An open-source, extensible (Function Calling), high-performance chatbot framework. It supports one-click free deployment of your private ChatGPT/LLM web application.
+- **[🌏 Lobe i18n][lobe-i18n] :** Lobe i18n is an automation tool for the i18n (internationalization) translation process, powered by ChatGPT. It supports features such as automatic splitting of large files, incremental updates, and customization options for the OpenAI model, API proxy, and temperature.
+- **[💌 Lobe Commit][lobe-commit] :** Lobe Commit is a CLI tool that leverages Langchain/ChatGPT to generate Gitmoji-based commit messages.
+
+### Credits
 
 - stable-diffusion-webui：<https://github.com/AUTOMATIC1111/stable-diffusion-webui>
 - gradio-theme-gallery: <https://huggingface.co/spaces/gradio/theme-gallery>
@@ -327,24 +344,6 @@ This project is [AGPL3](./LICENSE) licensed.
 
 <!-- LINK GROUP -->
 
-<!-- SHIELD LINK GROUP -->
-
-<!-- release -->
-
-<!-- releaseDate -->
-
-<!-- ciTest -->
-
-<!-- ciRelease -->
-
-<!-- contributors -->
-
-<!-- forks -->
-
-<!-- stargazers -->
-
-<!-- issues -->
-
 [back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square
 [ci-release-shield]: https://github.com/lobehub/sd-webui-lobe-theme/workflows/Build%20and%20Release/badge.svg
 [ci-release-url]: https://github.com/lobehub/sd-webui-lobe-theme/actions/workflows/release.yml
@@ -368,6 +367,9 @@ This project is [AGPL3](./LICENSE) licensed.
 [issues-shield]: https://img.shields.io/github/issues/lobehub/sd-webui-lobe-theme.svg?style=flat
 [issues-url]: https://github.com/lobehub/sd-webui-lobe-theme/issues/new/choose
 [license-shield]: https://app.fossa.com/api/projects/git%2Bgithub.com%2Flobehub%2Fsd-webui-lobe-theme.svg?type=shield&issueType=license
+[lobe-chat]: https://github.com/lobehub/lobe-chat
+[lobe-commit]: https://github.com/lobehub/lobe-commit/tree/master/packages/lobe-commit
+[lobe-i18n]: https://github.com/lobehub/lobe-commit/tree/master/packages/lobe-i18n
 [pr-welcome-shield]: https://img.shields.io/badge/🤯_pr_welcome-%E2%86%92-FEE064?style=for-the-badge
 [pr-welcome-url]: https://github.com/lobehub/lobe-chat/pulls
 [profile-url]: https://github.com/canisminor1990
