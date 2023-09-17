@@ -10,6 +10,10 @@ const progressAnimation = keyframes`
     `;
 
 export default (token: Theme) => css`
+  .progress-container {
+    flex-direction: column;
+  }
+
   .eta-bar {
     overflow: hidden;
 

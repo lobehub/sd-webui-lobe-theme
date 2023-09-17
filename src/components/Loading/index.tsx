@@ -1,28 +1,22 @@
-import { Icon } from '@lobehub/ui';
-import isEqual from 'fast-deep-equal';
+import { Icon, Logo } from '@lobehub/ui';
 import { Loader2 } from 'lucide-react';
 import { memo } from 'react';
-
-import { Logo } from '@/components';
-import { selectors, useAppStore } from '@/store';
-
-import { useStyles } from './style';
+import { useTranslation } from 'react-i18next';
+import { Center, Flexbox } from 'react-layout-kit';
 
 const Loading = memo(() => {
-  const setting = useAppStore(selectors.currentSetting, isEqual);
-  const { styles } = useStyles({
-    isPrimaryColor: Boolean(setting.primaryColor),
-    liteAnimation: setting.liteAnimation,
-  });
+  const { t } = useTranslation();
 
   return (
-    <section className={styles.container}>
-      {!setting.liteAnimation && <div className={styles.canvas} />}
-      <div className={styles.inner}>
-        <Logo size={48} />
-        <Icon className={styles.icon} icon={Loader2} size={{ fontSize: 32 }} spin />
-      </div>
-    </section>
+    <Flexbox height={'100vh'} width={'100%'}>
+      <Center flex={1} gap={12} width={'100%'}>
+        <Logo extra={'SD'} size={48} type={'combine'} />
+        <Center gap={16} horizontal>
+          <Icon icon={Loader2} spin />
+          {t('appInitializing')}
+        </Center>
+      </Center>
+    </Flexbox>
   );
 });
 

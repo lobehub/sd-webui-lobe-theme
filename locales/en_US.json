@@ -1,4 +1,5 @@
 {
+  "appInitializing": "StableDiffusion / LobeTheme is initializing, please wait...",
   "community": "Community",
   "custom": "Custom",
   "extraNetwork": "Extra Network",

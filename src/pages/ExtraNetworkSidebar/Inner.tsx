@@ -61,7 +61,7 @@ const Inner = memo(() => {
         img2imgRender.id = 'img2img_render';
         img2imgTab?.append(img2imgRender);
       }
-      if (document.querySelector('#txt2img_lora_cards')) {
+      if (document.querySelector('.extra-network-cards')) {
         civitaiHelperFix();
         setExtraLoading(false);
         return;
