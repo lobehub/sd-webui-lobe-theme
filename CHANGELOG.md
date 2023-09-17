@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 3.0.8](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.0.7...v3.0.8)
+
+<sup>Released on **2023-09-17**</sup>
+
+#### 💄 Styles
+
+- **misc**: Fix some style problem.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Fix some style problem ([75c1e99](https://github.com/lobehub/sd-webui-lobe-theme/commit/75c1e99))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.0.7](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.0.6...v3.0.7)
 
 <sup>Released on **2023-09-12**</sup>
