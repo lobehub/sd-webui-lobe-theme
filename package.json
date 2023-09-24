@@ -110,7 +110,7 @@
     "react-layout-kit": "^1",
     "react-rnd": "^10",
     "react-tag-input": "^6",
-    "remark": "^14",
+    "remark": "^15.0.0",
     "remark-cli": "^11",
     "semantic-release": "^21",
     "semver": "^7.5.4",
