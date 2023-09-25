@@ -112,7 +112,7 @@
     "react-tag-input": "^6",
     "remark": "^14",
     "remark-cli": "^11",
-    "semantic-release": "^21",
+    "semantic-release": "^22",
     "semver": "^7.5.4",
     "shiki-es": "^0.14",
     "styled-components": "^6",
