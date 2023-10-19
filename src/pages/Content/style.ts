@@ -109,6 +109,7 @@ export const useStyles = createStyles(
 
         #txt2img_accordions,
         #img2img_accordions {
+          flex-direction: column;
           padding: 0 !important;
           background: transparent !important;
 
@@ -243,6 +244,15 @@ export const useStyles = createStyles(
           .image_buttons_extras {
             gap: 8px !important;
           }
+        }
+
+        #npw {
+          padding: 16px !important;
+
+          background-color: ${token.colorBgContainer} !important;
+          border: 1px solid ${token.colorBorderSecondary} !important;
+          border-radius: ${token.borderRadius}px !important;
+          box-shadow: none;
         }
       `,
       textares: css`

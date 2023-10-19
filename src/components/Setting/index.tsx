@@ -1,11 +1,11 @@
-import { ActionIcon } from '@lobehub/ui';
+import { ActionIcon, Modal, type ModalProps } from '@lobehub/ui';
 import { Space } from 'antd';
 import { Book } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Flexbox } from 'react-layout-kit';
 
 import { homepage } from '@/../package.json';
-import { Modal, type ModalProps } from '@/components';
 import VersionTag from '@/components/VersionTag';
 
 import SettingForm from './SettingForm';
@@ -19,10 +19,11 @@ const Setting = memo<SettingProps>(({ open, onCancel }) => {
   const { t } = useTranslation();
   return (
     <Modal
+      footer={false}
       onCancel={onCancel}
       open={open}
       title={
-        <>
+        <Flexbox align={'center'} gap={4} horizontal>
           <a href={homepage} rel="noreferrer" target="_blank">
             <ActionIcon icon={Book} title="Setting Documents" />
           </a>
@@ -30,7 +31,7 @@ const Setting = memo<SettingProps>(({ open, onCancel }) => {
             {t('themeSetting')}
             <VersionTag />
           </Space>
-        </>
+        </Flexbox>
       }
     >
       <SettingForm />

@@ -1,6 +1,8 @@
 const manifest = {
   background_color: '#000000',
-  display: 'fullscreen',
+  description:
+    'The modern theme for stable diffusion webui, exquisite interface design, highly customizable UI, and efficiency boosting features.',
+  display: 'standalone',
   icons: [
     {
       sizes: '192x192',
@@ -13,9 +15,12 @@ const manifest = {
       type: 'image/png',
     },
   ],
+  id: '/',
   name: 'Stable Diffusion',
   orientation: 'portrait',
+  scope: '/',
   short_name: 'Stable Diffusion',
+  splash_pages: null,
   start_url: location.origin,
   theme_color: '#000000',
 };

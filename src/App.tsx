@@ -56,16 +56,10 @@ export const App = memo(() => {
           href="https://registry.npmmirror.com/@lobehub/assets-favicons/1.1.0/files/assets/site.webmanifest"
           rel="manifest"
         />
-        <link
-          color="#000000"
-          href="https://registry.npmmirror.com/@lobehub/assets-favicons/1.1.0/files/assets/safari-pinned-tab.svg"
-          rel="mask-icon"
-        />
         <meta content="Stable Diffusion · LobeHub" name="apple-mobile-web-app-title" />
         <meta content="Stable Diffusion · LobeHub" name="application-name" />
         <meta content="#000000" name="msapplication-TileColor" />
         <meta content="#000000" name="theme-color" />
-
         <link href={manifest} rel="manifest" />
       </Helmet>
       <Layout>{storeLoading === false && loading === false ? <Index /> : <Loading />}</Layout>
