@@ -2,7 +2,32 @@
 
 # Changelog
 
-### [Version 3.0.8](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.0.7...v3.0.8)
+### [Version 3.0.9](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.0.8...v3.0.9)
+
+<sup>Released on **2023-10-19**</sup>
+
+#### 💄 Styles
+
+- **misc**: Update theme style.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Update theme style ([98b3d86](https://github.com/lobehub/sd-webui-lobe-theme/commit/98b3d86))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 3.0.8](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.0.7...v3.0.8)
 
 <sup>Released on **2023-09-17**</sup>
 
@@ -27,7 +52,7 @@
 
 </div>
 
-### [Version 3.0.7](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.0.6...v3.0.7)
+### [Version 3.0.7](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.0.6...v3.0.7)
 
 <sup>Released on **2023-09-12**</sup>
 
@@ -52,7 +77,7 @@
 
 </div>
 
-### [Version 3.0.6](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.0.5...v3.0.6)
+### [Version 3.0.6](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.0.5...v3.0.6)
 
 <sup>Released on **2023-09-12**</sup>
 
@@ -77,7 +102,7 @@
 
 </div>
 
-### [Version 3.0.5](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.0.4...v3.0.5)
+### [Version 3.0.5](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.0.4...v3.0.5)
 
 <sup>Released on **2023-09-12**</sup>
 
@@ -102,7 +127,7 @@
 
 </div>
 
-### [Version 3.0.4](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.0.3...v3.0.4)
+### [Version 3.0.4](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.0.3...v3.0.4)
 
 <sup>Released on **2023-09-08**</sup>
 
@@ -119,7 +144,7 @@
 
 </div>
 
-### [Version 3.0.3](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.0.2...v3.0.3)
+### [Version 3.0.3](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.0.2...v3.0.3)
 
 <sup>Released on **2023-09-04**</sup>
 
@@ -145,7 +170,7 @@
 
 </div>
 
-### [Version 3.0.2](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.0.1...v3.0.2)
+### [Version 3.0.2](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.0.1...v3.0.2)
 
 <sup>Released on **2023-09-04**</sup>
 
@@ -170,7 +195,7 @@
 
 </div>
 
-### [Version 3.0.1](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.0.0...v3.0.1)
+### [Version 3.0.1](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.0.0...v3.0.1)
 
 <sup>Released on **2023-09-04**</sup>
 
@@ -199,7 +224,7 @@
 
 </div>
 
-## [Version 3.0.0](https://github.com/lobehub/sd-webui-lobe-theme/compare/v2.8.8...v3.0.0)
+## [Version 3.0.0](https://github.com/lobehub/sd-webui-lobe-theme/compare/v2.8.8...v3.0.0)
 
 <sup>Released on **2023-08-31**</sup>
 
@@ -228,7 +253,7 @@
 
 </div>
 
-### [Version 2.8.8](https://github.com/lobehub/sd-webui-lobe-theme/compare/v2.8.7...v2.8.8)
+### [Version 2.8.8](https://github.com/lobehub/sd-webui-lobe-theme/compare/v2.8.7...v2.8.8)
 
 <sup>Released on **2023-08-24**</sup>
 
@@ -245,7 +270,7 @@
 
 </div>
 
-### [Version 2.8.7](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.8.6...v2.8.7)
+### [Version 2.8.7](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.8.6...v2.8.7)
 
 <sup>Released on **2023-08-15**</sup>
 
@@ -270,7 +295,7 @@
 
 </div>
 
-### [Version 2.8.6](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.8.5...v2.8.6)
+### [Version 2.8.6](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.8.5...v2.8.6)
 
 <sup>Released on **2023-08-03**</sup>
 
@@ -295,7 +320,7 @@
 
 </div>
 
-### [Version 2.8.5](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.8.4...v2.8.5)
+### [Version 2.8.5](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.8.4...v2.8.5)
 
 <sup>Released on **2023-07-20**</sup>
 
@@ -320,7 +345,7 @@
 
 </div>
 
-### [Version 2.8.4](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.8.3...v2.8.4)
+### [Version 2.8.4](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.8.3...v2.8.4)
 
 <sup>Released on **2023-07-20**</sup>
 
@@ -345,7 +370,7 @@
 
 </div>
 
-### [Version 2.8.3](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.8.2...v2.8.3)
+### [Version 2.8.3](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.8.2...v2.8.3)
 
 <sup>Released on **2023-07-17**</sup>
 
@@ -370,7 +395,7 @@
 
 </div>
 
-### [Version 2.8.2](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.8.1...v2.8.2)
+### [Version 2.8.2](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.8.1...v2.8.2)
 
 <sup>Released on **2023-07-16**</sup>
 
@@ -395,7 +420,7 @@
 
 </div>
 
-### [Version 2.8.1](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.8.0...v2.8.1)
+### [Version 2.8.1](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.8.0...v2.8.1)
 
 <sup>Released on **2023-07-08**</sup>
 
@@ -420,7 +445,7 @@
 
 </div>
 
-## [Version 2.8.0](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.7.2...v2.8.0)
+## [Version 2.8.0](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.7.2...v2.8.0)
 
 <sup>Released on **2023-07-08**</sup>
 
@@ -445,7 +470,7 @@
 
 </div>
 
-### [Version 2.7.2](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.7.1...v2.7.2)
+### [Version 2.7.2](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.7.1...v2.7.2)
 
 <sup>Released on **2023-07-06**</sup>
 
@@ -470,7 +495,7 @@
 
 </div>
 
-### [Version 2.7.1](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.7.0...v2.7.1)
+### [Version 2.7.1](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.7.0...v2.7.1)
 
 <sup>Released on **2023-07-06**</sup>
 
@@ -495,7 +520,7 @@
 
 </div>
 
-## [Version 2.7.0](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.6.5...v2.7.0)
+## [Version 2.7.0](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.6.5...v2.7.0)
 
 <sup>Released on **2023-07-05**</sup>
 
@@ -520,7 +545,7 @@
 
 </div>
 
-### [Version 2.6.5](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.6.4...v2.6.5)
+### [Version 2.6.5](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.6.4...v2.6.5)
 
 <sup>Released on **2023-07-05**</sup>
 
@@ -545,7 +570,7 @@
 
 </div>
 
-### [Version 2.6.4](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.6.3...v2.6.4)
+### [Version 2.6.4](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.6.3...v2.6.4)
 
 <sup>Released on **2023-07-05**</sup>
 
@@ -570,7 +595,7 @@
 
 </div>
 
-### [Version 2.6.3](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.6.2...v2.6.3)
+### [Version 2.6.3](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.6.2...v2.6.3)
 
 <sup>Released on **2023-07-05**</sup>
 
@@ -595,7 +620,7 @@
 
 </div>
 
-### [Version 2.6.2](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.6.1...v2.6.2)
+### [Version 2.6.2](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.6.1...v2.6.2)
 
 <sup>Released on **2023-07-01**</sup>
 
@@ -620,7 +645,7 @@
 
 </div>
 
-### [Version 2.6.1](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.6.0...v2.6.1)
+### [Version 2.6.1](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.6.0...v2.6.1)
 
 <sup>Released on **2023-06-30**</sup>
 
@@ -645,7 +670,7 @@
 
 </div>
 
-## [Version 2.6.0](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.5.0...v2.6.0)
+## [Version 2.6.0](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.5.0...v2.6.0)
 
 <sup>Released on **2023-06-30**</sup>
 
@@ -670,7 +695,7 @@
 
 </div>
 
-## [Version 2.5.0](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.4.1...v2.5.0)
+## [Version 2.5.0](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.4.1...v2.5.0)
 
 <sup>Released on **2023-06-30**</sup>
 
@@ -695,7 +720,7 @@
 
 </div>
 
-### [Version 2.4.1](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.4.0...v2.4.1)
+### [Version 2.4.1](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.4.0...v2.4.1)
 
 <sup>Released on **2023-06-29**</sup>
 
@@ -720,7 +745,7 @@
 
 </div>
 
-## [Version 2.4.0](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.3.0...v2.4.0)
+## [Version 2.4.0](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.3.0...v2.4.0)
 
 <sup>Released on **2023-06-29**</sup>
 
@@ -745,7 +770,7 @@
 
 </div>
 
-## [Version 2.3.0](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.2.2...v2.3.0)
+## [Version 2.3.0](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.2.2...v2.3.0)
 
 <sup>Released on **2023-06-29**</sup>
 
@@ -770,7 +795,7 @@
 
 </div>
 
-### [Version 2.2.2](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.2.1...v2.2.2)
+### [Version 2.2.2](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.2.1...v2.2.2)
 
 <sup>Released on **2023-06-28**</sup>
 
@@ -795,7 +820,7 @@
 
 </div>
 
-### [Version 2.2.1](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.2.0...v2.2.1)
+### [Version 2.2.1](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.2.0...v2.2.1)
 
 <sup>Released on **2023-06-28**</sup>
 
@@ -820,7 +845,7 @@
 
 </div>
 
-## [Version 2.2.0](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.1.0...v2.2.0)
+## [Version 2.2.0](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.1.0...v2.2.0)
 
 <sup>Released on **2023-06-28**</sup>
 
@@ -845,7 +870,7 @@
 
 </div>
 
-## [Version 2.1.0](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.0.4...v2.1.0)
+## [Version 2.1.0](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.0.4...v2.1.0)
 
 <sup>Released on **2023-06-28**</sup>
 
@@ -870,7 +895,7 @@
 
 </div>
 
-### [Version 2.0.4](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.0.3...v2.0.4)
+### [Version 2.0.4](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.0.3...v2.0.4)
 
 <sup>Released on **2023-06-28**</sup>
 
@@ -895,7 +920,7 @@
 
 </div>
 
-### [Version 2.0.3](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.0.2...v2.0.3)
+### [Version 2.0.3](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.0.2...v2.0.3)
 
 <sup>Released on **2023-06-28**</sup>
 
@@ -920,7 +945,7 @@
 
 </div>
 
-### [Version 2.0.2](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.0.1...v2.0.2)
+### [Version 2.0.2](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v2.0.1...v2.0.2)
 
 <sup>Released on **2023-06-28**</sup>
 
@@ -945,7 +970,7 @@
 
 </div>
 
-## [Version 2.0.0](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v1.8.3...v2.0.0)
+## [Version 2.0.0](https://github.com/canisminor1990/sd-webui-lobe-theme/compare/v1.8.3...v2.0.0)
 
 <sup>Released on **2023-06-28**</sup>
 
@@ -1009,7 +1034,7 @@
 
 </div>
 
-### Version 1.8.3
+### Version 1.8.3
 
 <sup>Released on **2023-05-30**</sup>
 
@@ -1034,7 +1059,7 @@
 
 </div>
 
-### Version 1.8.2
+### Version 1.8.2
 
 <sup>Released on **2023-05-30**</sup>
 
@@ -1059,7 +1084,7 @@
 
 </div>
 
-### Version 1.8.1
+### Version 1.8.1
 
 <sup>Released on **2023-05-19**</sup>
 
@@ -1084,7 +1109,7 @@
 
 </div>
 
-## Version 1.8.0
+## Version 1.8.0
 
 <sup>Released on **2023-05-19**</sup>
 
@@ -1109,7 +1134,7 @@
 
 </div>
 
-### Version 1.7.1
+### Version 1.7.1
 
 <sup>Released on **2023-05-19**</sup>
 
@@ -1134,7 +1159,7 @@
 
 </div>
 
-## Version 1.7.0
+## Version 1.7.0
 
 <sup>Released on **2023-04-26**</sup>
 
@@ -1169,7 +1194,7 @@
 
 </div>
 
-### Version 1.6.3
+### Version 1.6.3
 
 <sup>Released on **2023-04-23**</sup>
 
@@ -1194,7 +1219,7 @@
 
 </div>
 
-### Version 1.6.2
+### Version 1.6.2
 
 <sup>Released on **2023-04-22**</sup>
 
@@ -1228,7 +1253,7 @@
 
 </div>
 
-### Version 1.6.1
+### Version 1.6.1
 
 <sup>Released on **2023-04-22**</sup>
 
@@ -1253,7 +1278,7 @@
 
 </div>
 
-## Version 1.6.0
+## Version 1.6.0
 
 <sup>Released on **2023-04-22**</sup>
 
@@ -1278,7 +1303,7 @@
 
 </div>
 
-### Version 1.5.2
+### Version 1.5.2
 
 <sup>Released on **2023-04-22**</sup>
 
@@ -1303,7 +1328,7 @@
 
 </div>
 
-### Version 1.5.1
+### Version 1.5.1
 
 <sup>Released on **2023-04-22**</sup>
 
@@ -1328,7 +1353,7 @@
 
 </div>
 
-## Version 1.5.0
+## Version 1.5.0
 
 <sup>Released on **2023-04-22**</sup>
 
@@ -1353,7 +1378,7 @@
 
 </div>
 
-### Version 1.4.7
+### Version 1.4.7
 
 <sup>Released on **2023-04-22**</sup>
 
@@ -1378,7 +1403,7 @@
 
 </div>
 
-### Version 1.4.6
+### Version 1.4.6
 
 <sup>Released on **2023-04-22**</sup>
 
@@ -1403,7 +1428,7 @@
 
 </div>
 
-### Version 1.4.5
+### Version 1.4.5
 
 <sup>Released on **2023-04-22**</sup>
 
@@ -1429,7 +1454,7 @@
 
 </div>
 
-### Version 1.4.4
+### Version 1.4.4
 
 <sup>Released on **2023-04-21**</sup>
 
@@ -1454,7 +1479,7 @@
 
 </div>
 
-### Version 1.4.3
+### Version 1.4.3
 
 <sup>Released on **2023-04-21**</sup>
 
@@ -1479,7 +1504,7 @@
 
 </div>
 
-### Version 1.4.2
+### Version 1.4.2
 
 <sup>Released on **2023-04-21**</sup>
 
@@ -1504,7 +1529,7 @@
 
 </div>
 
-### Version 1.4.1
+### Version 1.4.1
 
 <sup>Released on **2023-04-21**</sup>
 
@@ -1529,7 +1554,7 @@
 
 </div>
 
-## Version 1.4.0
+## Version 1.4.0
 
 <sup>Released on **2023-04-21**</sup>
 
@@ -1554,7 +1579,7 @@
 
 </div>
 
-### Version 1.3.2
+### Version 1.3.2
 
 <sup>Released on **2023-04-21**</sup>
 
@@ -1579,7 +1604,7 @@
 
 </div>
 
-### Version 1.3.1
+### Version 1.3.1
 
 <sup>Released on **2023-04-21**</sup>
 
@@ -1604,7 +1629,7 @@
 
 </div>
 
-## Version 1.3.0
+## Version 1.3.0
 
 <sup>Released on **2023-04-20**</sup>
 
@@ -1629,7 +1654,7 @@
 
 </div>
 
-### Version 1.2.2
+### Version 1.2.2
 
 <sup>Released on **2023-04-20**</sup>
 
@@ -1654,7 +1679,7 @@
 
 </div>
 
-### Version 1.2.1
+### Version 1.2.1
 
 <sup>Released on **2023-04-20**</sup>
 
@@ -1679,7 +1704,7 @@
 
 </div>
 
-## Version 1.2.0
+## Version 1.2.0
 
 <sup>Released on **2023-04-20**</sup>
 
@@ -1712,7 +1737,7 @@
 
 </div>
 
-### Version 1.1.2
+### Version 1.1.2
 
 <sup>Released on **2023-04-18**</sup>
 
@@ -1737,7 +1762,7 @@
 
 </div>
 
-### Version 1.1.1
+### Version 1.1.1
 
 <sup>Released on **2023-04-14**</sup>
 
@@ -1762,7 +1787,7 @@
 
 </div>
 
-## Version 1.1.0
+## Version 1.1.0
 
 <sup>Released on **2023-04-14**</sup>
 
@@ -1787,7 +1812,7 @@
 
 </div>
 
-### Version 1.0.1
+### Version 1.0.1
 
 <sup>Released on **2023-04-10**</sup>
 
@@ -1812,7 +1837,7 @@
 
 </div>
 
-## Version 1.0.0
+## Version 1.0.0
 
 <sup>Released on **2023-04-08**</sup>
 
