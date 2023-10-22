@@ -86,7 +86,7 @@
     "antd-style": "latest",
     "babel-plugin-antd-style": "^1",
     "babel-plugin-styled-components": "^2",
-    "commitlint": "^17",
+    "commitlint": "^18.0.0",
     "concurrently": "^8",
     "eslint": "^8",
     "fast-deep-equal": "^3",
