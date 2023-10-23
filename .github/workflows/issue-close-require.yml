@@ -19,6 +19,7 @@ jobs:
         uses: actions-cool/issues-helper@v3
         with:
           actions: 'close-issues'
+          token: ${{ secrets.GH_TOKEN }}
           labels: '✅ Fixed'
           inactive-day: 3
           body: |
@@ -29,6 +30,7 @@ jobs:
         uses: actions-cool/issues-helper@v3
         with:
           actions: 'close-issues'
+          token: ${{ secrets.GH_TOKEN }}
           labels: '🤔 Need Reproduce'
           inactive-day: 3
           body: |
@@ -39,6 +41,7 @@ jobs:
         uses: actions-cool/issues-helper@v3
         with:
           actions: 'close-issues'
+          token: ${{ secrets.GH_TOKEN }}
           labels: "🙅🏻‍♀️ WON'T DO"
           inactive-day: 3
           body: |
@@ -49,6 +52,7 @@ jobs:
         uses: actions-cool/issues-helper@v3
         with:
           actions: 'close-issues'
+          token: ${{ secrets.GH_TOKEN }}
           labels: "Inactive"
           inactive-day: 30
           body: |
