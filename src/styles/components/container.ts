@@ -1,4 +1,5 @@
 import { Theme, css } from 'antd-style';
+import { readableColor } from 'polished';
 
 export default (token: Theme) => {
   return css`
@@ -47,6 +48,29 @@ export default (token: Theme) => {
     #extras_gallery_container {
       position: sticky;
       top: 80px !important;
+    }
+
+    #context-menu {
+      overflow: hidden;
+
+      color: ${token.colorText};
+
+      background: ${token.colorBgElevated} !important;
+      border: 1px solid ${token.colorBorder} !important;
+      border-radius: ${token.borderRadiusLG}px !important;
+      box-shadow: ${token.boxShadow} !important;
+
+      a {
+        padding: 8px;
+        font-weight: 400;
+        color: ${token.colorText};
+
+        &:hover {
+          font-weight: 600;
+          color: ${readableColor(token.colorPrimary)};
+          background: ${token.colorPrimary};
+        }
+      }
     }
   `;
 };
