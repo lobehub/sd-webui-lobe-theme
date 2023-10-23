@@ -1,4 +1,4 @@
-import react from '@vitejs/plugin-react';
+import react from '@vitejs/plugin-react-swc';
 import { resolve } from 'node:path';
 import * as process from 'node:process';
 import { defineConfig } from 'vite';
@@ -21,51 +21,13 @@ export default defineConfig({
         entryFileNames: `[name].js`,
       },
     },
-    terserOptions: {
-      compress: {
-        arguments: true,
-        drop_console: true,
-        hoist_funs: true,
-        hoist_props: true,
-        hoist_vars: true,
-        inline: true,
-        keep_fargs: false,
-        keep_fnames: false,
-        keep_infinity: false,
-        loops: true,
-        passes: 3,
-        pure_funcs: [],
-        pure_getters: true,
-        reduce_vars: true,
-        sequences: true,
-        unused: true,
-      },
-      format: {
-        comments: false,
-      },
-    },
   },
   define: {
     'process.env': process.env,
   },
   plugins: [
-    react({
-      babel: {
-        plugins: [
-          '@babel/plugin-syntax-import-assertions',
-          'babel-plugin-antd-style',
-          [
-            'babel-plugin-styled-components',
-            {
-              displayName: !isProduction,
-              minify: isProduction,
-              pure: true,
-              transpileTemplateLiterals: true,
-            },
-          ],
-        ],
-      },
-    }),
+    react(),
+
     !isProduction && {
       configureServer: (server) => {
         server.middlewares.use((_request, res, next) => {
@@ -78,7 +40,7 @@ export default defineConfig({
     },
     !isProduction && {
       configureServer: (server) => {
-        server.middlewares.use(async(_request, res, next): Promise<void> => {
+        server.middlewares.use(async (_request, res, next): Promise<void> => {
           if (
             _request.originalUrl === '/dev' ||
             _request.originalUrl === '/dev?__theme=dark' ||
