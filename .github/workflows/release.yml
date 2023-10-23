@@ -23,8 +23,8 @@ jobs:
       - name: Test
         run: bun run test
 
-      - name: Build
-        run: bun run build
+#      - name: Build
+#        run: bun run build
 
       - name: Release
         run: bun run release
