@@ -22,5 +22,9 @@
   {
     "label": "한국어",
     "value": "ko_KR"
+  },
+  {
+    "label": "Español",
+    "value": "es_ES"
   }
 ]
