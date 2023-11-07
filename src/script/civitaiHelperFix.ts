@@ -214,7 +214,7 @@ const updateCardForCivitai = () => {
         addTriggerWordsNode.title = 'Add trigger words to prompt';
         addTriggerWordsNode.setAttribute(
           'onclick',
-          `add_trigger_words(event, '${modelType}', ', ${searchTerm}')`,
+          `add_trigger_words(event, '${modelType}', '${searchTerm}')`,
         );
 
         const usePreviewPromptNode = document.createElement('a');
