@@ -6,7 +6,7 @@
 
 <h1 align="center">Lobe Theme</h1>
 
-高定 Stable Diffusion 现代主题，诸多体验优化\ <sup>历史版本为 Kitchen Theme</sup>
+高定 Stable Diffusion 现代主题，诸多体验优化<br/><sup>历史版本为 Kitchen Theme</sup>
 
 [English](./README.md)・简体中文・[变更日志](./CHANGELOG.md) · [反馈问题][github-issues-link] · [功能建议][github-issues-link]
 
