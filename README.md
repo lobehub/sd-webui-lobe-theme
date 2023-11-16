@@ -6,7 +6,7 @@
 
 <h1 align="center">Lobe Theme</h1>
 
-The modern theme for stable diffusion webui\ <sup>Legacy verison a.k.a kitchen theme</sup>
+The modern theme for stable diffusion webui<br/><sup>Legacy verison a.k.a kitchen theme</sup>
 
 English · [Russian ](./README-ru_RU.md)· [简体中文](./README-zh_CN.md) · [Changelog](./CHANGELOG.md) · [Report Bug][github-issues-link] · [Request Feature][github-issues-link]
 
