@@ -6,11 +6,9 @@
 
 <h1 align="center">Lobe Theme</h1>
 
-高定 Stable Diffusion 现代主题, 诸多体验优化
+高定 Stable Diffusion 现代主题，诸多体验优化\ <sup>历史版本为 Kitchen Theme</sup>
 
-历史版本为 Kitchen Theme
-
-[English](./README.md) · 简体中文 · [变更日志](./CHANGELOG.md) · [反馈问题][github-issues-link] · [功能建议][github-issues-link]
+[English](./README.md)・简体中文・[变更日志](./CHANGELOG.md) · [反馈问题][github-issues-link] · [功能建议][github-issues-link]
 
 <!-- SHIELD GROUP -->
 
@@ -35,21 +33,13 @@
 #### TOC
 
 - [✨ 主题特性](#-主题特性)
-
 - [📦 插件安装](#-插件安装)
-
 - [🤯 使用说明](#-使用说明)
-
 - [🖥 兼容环境](#-兼容环境)
-
 - [📦 生态系统](#-生态系统)
-
 - [⌨️ 本地开发](#️-本地开发)
-
 - [🤝 参与贡献](#-参与贡献)
-
 - [🔗 链接](#-链接)
-
   - [更多工具](#更多工具)
   - [参考](#参考)
 
@@ -59,7 +49,8 @@
 
 <br/>
 
-> **Warning**\
+> \[!WARNING]
+>
 > `Lobe Theme v3` 适配 `SD WebUI v1.6`, 并不向下兼容，`< 1.6` 以下版本移动到分支 [legacy-sd-webui-1.5](https://github.com/lobehub/sd-webui-lobe-theme/tree/legacy-sd-webui-1.5)
 
 ## ✨ 主题特性
@@ -86,7 +77,8 @@
 
 通过 stable diffusion webui 插件市场搜索 `Lobe Theme` 或 `Kitchen Theme` 进行安装
 
-> **Note**\
+> \[!NOTE]
+>
 > **Version 2.0.0** 后更名为 **Lobe Theme**
 
 #### 方法二
@@ -97,12 +89,13 @@
 git clone "https://github.com/lobehub/sd-webui-lobe-theme" extensions/lobe-theme
 ```
 
-> **Important**\
+> \[!IMPORTANT]
+>
 > 最低要求 `gradio-3.41.2` & `sd-webui 1.6`
 
 #### 保持更新
 
-收藏项目，你将从 GitHub 上无延迟地接收所有发布通知 \~ ⭐️
+收藏项目，你将从 GitHub 上无延迟地接收所有发布通知～⭐️
 
 <details><summary><kbd>Star History</kbd></summary>
   <picture>
@@ -123,7 +116,8 @@ git clone "https://github.com/lobehub/sd-webui-lobe-theme" extensions/lobe-theme
 
 #### 亮暗色主题
 
-> **Note**\
+> \[!TIP]
+>
 > 可在右上角导航栏快速切换
 
 当前主题支持亮暗色双主题，如果你想强制使用暗色模式，使用参数 `--theme=dark` 启动您的 WebUI。例如，在 Windows 上，您的 `webui-user.bat` 应包括：
@@ -149,7 +143,8 @@ http://localhost:7860/?__theme=dark
 
 #### 主体定制
 
-> **Note**\
+> \[!TIP]
+>
 > 右上角 `⚙` 图标打开设置面板，当前可用设置如下
 
 - **Theme**
@@ -181,7 +176,8 @@ http://localhost:7860/?__theme=dark
 
 #### 侧边栏定制
 
-> **Note**\
+> \[!TIP]
+>
 > 右上角 `⚙` 图标打开设置面板，当前可用设置如下
 
 - **Prompt Textarea**
@@ -255,7 +251,8 @@ sd_model_checkpoint, sd_vae, CLIP_stop_at_last_layers, img2img_background_color,
 
 点击 Prompt 下方 <kbd>🪄</kbd> 按钮即可将提示词一键格式化
 
-> **Note**\
+> \[!TIP]
+>
 > 全角标点转半角，去除多余空格，补充缺失逗号，把 Extra-Networks 模型移动到末尾
 
 格式化前
@@ -282,7 +279,8 @@ photorealistic photo of a handsome male, (wizard:1.2), short beard, white wizard
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | last 2 versions                                                                                                                                                                                              | last 2 versions                                                                                                                                                                                      | last 2 versions                                                                                                                                                                                              |
 
-> **Warning**\
+> \[!CAUTION]
+>
 > 目前已知道在 Firefox 火狐浏览器上存在样式兼容问题
 
 <div align="right">
@@ -311,7 +309,7 @@ photorealistic photo of a handsome male, (wizard:1.2), short beard, white wizard
 
 [![][codespaces-shield]][codespaces-link]
 
-或者克隆到本地开发, 热更新开发模式需要将 stable diffuison 提前启动到 `7860` 端口:
+或者克隆到本地开发，热更新开发模式需要将 stable diffuison 提前启动到 `7860` 端口:
 
 [![][bun-shield]][bun-link]
 
@@ -346,7 +344,7 @@ $ bun dev
 
 ### 更多工具
 
-- [🤖 Lobe Chat][lobe-chat] : LobeChat 是一个开源的、可扩展的（Function Calling）高性能聊天机器人框架, 支持一键免费部署私人 ChatGPT/LLM 网页应用程序。。
+- [🤖 Lobe Chat][lobe-chat] : LobeChat 是一个开源的、可扩展的（Function Calling）高性能聊天机器人框架，支持一键免费部署私人 ChatGPT/LLM 网页应用程序。。
 - [🌏 Lobe i18n][lobe-i18n] : Lobe i18n 是一个由 ChatGPT 驱动的 i18n（国际化）翻译过程的自动化工具。它支持自动分割大文件、增量更新，以及为 OpenAI 模型、API 代理和温度提供定制选项的功能。
 - [💌 Lobe Commit][lobe-commit] : Lobe Commit 是一个 CLI 工具，它利用 Langchain/ChatGPT 生成基于 Gitmoji 的提交消息。
 

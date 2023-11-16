@@ -6,9 +6,7 @@
 
 <h1 align="center">Lobe Theme</h1>
 
-The modern theme for stable diffusion webui
-
-Legacy verison a.k.a kitchen theme
+The modern theme for stable diffusion webui\ <sup>Legacy verison a.k.a kitchen theme</sup>
 
 English · [Russian ](./README-ru_RU.md)· [简体中文](./README-zh_CN.md) · [Changelog](./CHANGELOG.md) · [Report Bug][github-issues-link] · [Request Feature][github-issues-link]
 
@@ -29,7 +27,8 @@ English · [Russian ](./README-ru_RU.md)· [简体中文](./README-zh_CN.md) · 
 
 ![][cover]
 
-> **Warning**\
+> \[!WARNING]
+>
 > `Lobe Theme v3` is compatible with `SD WebUI v1.6` and is not backwards compatible. Versions below `< 1.6` should be moved to the branch [legacy-sd-webui-1.5](https://github.com/lobehub/sd-webui-lobe-theme/tree/legacy-sd-webui-1.5)
 
 <details>
@@ -38,21 +37,13 @@ English · [Russian ](./README-ru_RU.md)· [简体中文](./README-zh_CN.md) · 
 #### TOC
 
 - [✨ Features](#-features)
-
 - [📦 Installation](#-installation)
-
 - [🤯 Usage](#-usage)
-
 - [🖥 Environment Support](#-environment-support)
-
 - [📦 Ecosystem](#-ecosystem)
-
 - [⌨️ Local Development](#️-local-development)
-
 - [🤝 Contributing](#-contributing)
-
 - [🔗 Links](#-links)
-
   - [More Products](#more-products)
   - [Credits](#credits)
 
@@ -84,7 +75,8 @@ English · [Russian ](./README-ru_RU.md)· [简体中文](./README-zh_CN.md) · 
 
 Search for `Lobe Theme` or `Kitchen Theme` in the stable diffusion webui plugin market and install it.
 
-> **Note**\
+> \[!NOTE]
+>
 > **Version 2.0.0** was renamed to **Lobe Theme**
 
 #### Method 2
@@ -95,7 +87,8 @@ As an extension (recommended), clone the repository to your extension folder:
 git clone "https://github.com/lobehub/sd-webui-lobe-theme" extensions/lobe-theme
 ```
 
-> **Important**\
+> \[!IMPORTANT]
+>
 > minimum requirements `gradio-3.41.2` & `sd-webui 1.6`
 
 #### Upstream Sync
@@ -121,7 +114,8 @@ Star Us，You will receive all releases notifications from GitHub without any de
 
 #### Light and Dark Themes
 
-> **Note**\
+> \[!TIP]
+>
 > You can quickly switch between light and dark themes in the upper-right corner of the navigation bar.
 
 The current theme supports both light and dark themes. If you want to force dark mode, use the `--theme=dark` argument to launch your WebUI. For example, on Windows, your `webui-user.bat` should include:
@@ -147,7 +141,8 @@ http://localhost:7860/?__theme=dark
 
 #### Theme Customization
 
-> **Note**\
+> \[!TIP]
+>
 > Click the `⚙` icon in the upper-right corner to open the settings panel. The current available settings are as follows:
 
 - **Theme**
@@ -179,7 +174,8 @@ Automatically colorize prompt display according to the Stable Diffusion syntax r
 
 #### Sidebar Customization
 
-> **Note**\
+> \[!TIP]
+>
 > Click the `⚙` icon in the upper-right corner to open the settings panel. The current available settings are as follows:
 
 - **Prompt Textarea**
@@ -253,7 +249,8 @@ You can use Progressive Web Apps [PWA](https://support.google.com/chrome/answer/
 
 Click the <kbd>🪄</kbd> button below Prompt to format the prompt words with one click.
 
-> **Note**\
+> \[!TIP]
+>
 > Convert full-width punctuation to half-width, remove extra spaces, add missing commas, and move the Extra-Networks model to the end.
 
 Before formatting:
@@ -280,7 +277,8 @@ photorealistic photo of a handsome male, (wizard:1.2), short beard, white wizard
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | last 2 versions                                                                                                                                                                                              | last 2 versions                                                                                                                                                                                      | last 2 versions                                                                                                                                                                                              |
 
-> **Warning**\
+> \[!CAUTION]
+>
 > There is currently a known compatibility issue with styles on Firefox browser.
 
 <div align="right">
