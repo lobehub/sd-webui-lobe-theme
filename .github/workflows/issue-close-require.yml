@@ -71,8 +71,8 @@ jobs:
           actions: 'close-issues'
           token: ${{ secrets.GH_TOKEN }}
           labels: "Inactive"
-          inactive-day: 30
+          inactive-day: 90
           body: |
             Since the issue was labeled with `Inactive`, and no response in 30 days. This issue will be closed. If you have any questions, you can comment and reply.
 
-            由于该 issue 被标记为 Inactive，同时 30 天未收到回应。现关闭 issue，若有任何问题，可评论回复。
+            由于该 issue 被标记为 Inactive，同时 90 天未收到回应。现关闭 issue，若有任何问题，可评论回复。
