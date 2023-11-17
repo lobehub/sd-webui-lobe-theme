@@ -5,12 +5,8 @@ export const useStyles = createStyles(({ css, token, cx, stylish, prefixCls }) =
   return {
     container: css`
       pointer-events: none;
-
       position: absolute;
-
-      overflow-x: hidden;
-      overflow-y: auto;
-
+      overflow: hidden auto;
       padding: 8px;
 
       pre {
