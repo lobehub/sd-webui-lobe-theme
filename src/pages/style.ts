@@ -57,6 +57,7 @@ export const useStyles = createStyles(
     `,
     quicksettings: css`
       #quicksettings {
+        align-items: start;
         padding: 16px !important;
       }
     `,

@@ -8,18 +8,18 @@ export default (token: Theme) => {
       gap: 12px !important;
     }
 
+    &.gradio-box,
+    &.gradio-accordion {
+      &:not(.hidden):has(div) {
+        margin: 0 !important;
+        padding: 16px !important;
+        border: 1px solid ${token.colorBorderSecondary} !important;
+      }
+    }
+
     .block.padded {
       &.gradio-box:not(.gradio-accordion) {
         padding: 16px !important;
-      }
-
-      &.gradio-box,
-      &.gradio-accordion {
-        &:not(.hidden):has(div) {
-          margin: 0 !important;
-          padding: 16px !important;
-          border: 1px solid ${token.colorBorderSecondary} !important;
-        }
       }
     }
 
@@ -45,7 +45,7 @@ export default (token: Theme) => {
 
     #img2img_results,
     #txt2img_results,
-    #extras_gallery_container {
+    #extras_results {
       position: sticky;
       top: 80px !important;
     }

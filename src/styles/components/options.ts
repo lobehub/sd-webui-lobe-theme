@@ -1,6 +1,20 @@
 import { Theme, css } from 'antd-style';
 
 export default (token: Theme) => css`
+  .gradio-dropdown {
+    .wrap,
+    input {
+      cursor: pointer;
+    }
+
+    .container .wrap {
+      .wrap-inner input {
+        font-size: var(--text-sm);
+        line-height: 0;
+      }
+    }
+  }
+
   .dropdown-arrow {
     margin: 0 !important;
   }

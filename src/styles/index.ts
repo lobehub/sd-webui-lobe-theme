@@ -8,6 +8,7 @@ import extensions from './components/extensions';
 import gallery from './components/gallery';
 import input from './components/input';
 import label from './components/label';
+import lightboxModal from './components/lightboxModal';
 import options from './components/options';
 import progress from './components/progress';
 import slider from './components/slider';
@@ -30,6 +31,7 @@ const GlobalStyle = createGlobalStyle(({ theme }) => [
   table(theme),
   tabs(theme),
   extensions(theme),
+  lightboxModal(theme),
 ]);
 
 export default GlobalStyle;

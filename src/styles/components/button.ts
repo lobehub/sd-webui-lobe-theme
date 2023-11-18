@@ -6,7 +6,7 @@ export default (token: Theme) => css`
     min-width: fit-content !important;
 
     &.gradio-button {
-      &.tool {
+      &.tool:not(.hidden) {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -14,12 +14,12 @@ export default (token: Theme) => css`
         width: 36px;
         min-width: 36px !important;
         max-width: 36px !important;
-        height: 36px;
-        min-height: 36px !important;
-        max-height: 36px;
+        height: var(--button-lg-tool-height);
+        min-height: var(--button-lg-tool-height) !important;
+        max-height: var(--button-lg-tool-height);
         padding: 0;
 
-        font-size: 14px;
+        font-size: var(--text-md);
         line-height: 1;
 
         background: ${token.colorFillSecondary};
@@ -30,22 +30,18 @@ export default (token: Theme) => css`
           background: ${token.colorFill};
         }
 
-        &.lg {
-          max-width: max(36px, 100%) !important;
-        }
-      }
+        &.secondary,
+        &.primary {
+          overflow: hidden;
+          flex: 1;
 
-      &.secondary,
-      &.primary {
-        overflow: hidden;
-        flex: 1;
+          font-size: var(--text-md);
+          line-height: 1;
+          text-overflow: ellipsis;
 
-        font-size: 14px;
-        line-height: 1;
-        text-overflow: ellipsis;
-
-        &:active {
-          box-shadow: ${token.boxShadowSecondary};
+          &:active {
+            box-shadow: ${token.boxShadowSecondary};
+          }
         }
       }
 
@@ -66,61 +62,64 @@ export default (token: Theme) => css`
         &.primary,
         &.secondary {
           &.lg {
-            height: 44px !important;
-            min-height: 44px !important;
-            max-height: 44px !important;
+            height: var(--button-lg-height) !important;
+            min-height: var(--button-lg-height) !important;
+            max-height: var(--button-lg-height) !important;
           }
         }
       }
 
       &[id$='_generate'] {
-        height: 44px !important;
-        min-height: 44px !important;
-        max-height: 44px !important;
+        height: var(--button-lg-height) !important;
+        min-height: var(--button-lg-height) !important;
+        max-height: var(--button-lg-height) !important;
       }
 
       &[id$='_interrupt'] {
         min-width: 0;
+
+        color: var(--button-cancel-text-color) !important;
+
+        background: ${token.colorError} !important;
+        border: 1px solid ${token.colorError};
         border-right: none !important;
         border-radius: ${token.borderRadius}px 0 0 ${token.borderRadius}px !important;
+
+        &:hover,
+        &:active {
+          background: ${token.colorErrorHover} !important;
+          border: 1px solid ${token.colorErrorHover};
+        }
       }
 
       &[id$='_skip'] {
         min-width: 0;
+        background: ${token.colorBorderSecondary} !important;
         border-radius: 0 ${token.borderRadius}px ${token.borderRadius}px 0 !important;
-      }
 
-      &[id$='_interrupt'],
-      &[id$='_skip'] {
-        color: #fff !important;
-        background: ${token.colorError} !important;
-
-        &:hover {
-          color: #fff !important;
-          background: ${token.colorErrorHover} !important;
-        }
-
+        &:hover,
         &:active {
-          color: #fff !important;
-          background: ${token.colorErrorActive} !important;
+          background: ${token.colorBorder} !important;
         }
       }
 
       &#interrogate,
       &#deepbooru {
-        display: block !important;
+        height: auto !important;
+        max-height: fit-content !important;
+        line-height: inherit;
+        white-space: break-spaces;
       }
     }
   }
 
   div[id^='image_buttons_'] {
     flex-wrap: wrap;
-    gap: 4px !important;
 
-    > button {
+    button.gradio-button.tool {
       flex: 1;
-      min-width: min(30%, 56px);
-      font-size: 12px !important;
+      max-width: max(36px, 100%) !important;
+      font-size: var(--text-md) !important;
     }
   }
 `;

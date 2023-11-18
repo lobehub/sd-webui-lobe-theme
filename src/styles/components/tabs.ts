@@ -29,13 +29,14 @@ export default (token: Theme) => css`
       min-width: 100px;
       padding: 8px !important;
 
-      font-size: 14px;
+      font-size: var(--text-md);
+      color: ${token.colorTextTertiary} !important;
 
       background: ${token.colorFillTertiary} !important;
       border: none !important;
       border-radius: 4px !important;
 
-      transition: all 0.2s ease-in-out;
+      transition: var(--button-transition);
 
       &:hover {
         color: ${token.colorText} !important;
@@ -56,22 +57,40 @@ export default (token: Theme) => css`
     }
   }
 
-  #tab_settings .tab-nav {
-    button {
-      background: transparent !important;
-      border-radius: 0 !important;
+  #tab_settings {
+    #settings .tab-nav {
+      width: 15%;
 
-      &:hover {
+      button {
+        width: 100%;
         background: transparent !important;
-        border-radius: 0 !important;
+
+        &.selected {
+          background: transparent !important;
+          border: none !important;
+          border-radius: 0 !important;
+        }
       }
 
-      &.selected {
-        background: transparent !important;
-        border: none !important;
-        border-left: 2px solid var(--color-primary) !important;
-        border-radius: 0 !important;
+      #settings_show_all_pages {
+        width: auto;
+        background: ${token.colorFillTertiary} !important;
+        border: 1px solid ${token.colorBorderSecondary};
+        border-radius: ${token.borderRadius}px !important;
+
+        &:hover {
+          background: ${token.colorFill} !important;
+          border-color: ${token.colorBorder} !important;
+        }
       }
+    }
+
+    .tabitem {
+      margin-left: 15%;
+    }
+
+    #settings_search {
+      margin: 0 0 var(--spacing-xl);
     }
   }
 `;

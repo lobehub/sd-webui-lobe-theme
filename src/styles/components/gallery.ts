@@ -45,8 +45,52 @@ export default (token: Theme) => {
       }
     }
 
-    button.thumbnail-item {
-      background: ${token.colorBgContainer} !important;
+    .block.gradio-gallery {
+      .thumbnail-item {
+        position: unset;
+        background: ${token.colorBgContainer} !important;
+        box-shadow: none;
+
+        &.thumbnail-small {
+          transform: none;
+          border-radius: 4px;
+          transition: var(--button-transition);
+        }
+
+        &.thumbnail-lg {
+          border-radius: 5px;
+          transition: var(--button-transition);
+        }
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow:
+            0 0 0 1px ${token.colorBorder},
+            var(--thumbnail-shadow);
+        }
+
+        &.thumbnail-small:hover {
+          transform: none;
+          box-shadow: 0 0 0 1px ${token.colorBorder};
+        }
+      }
+
+      > .grid-wrap {
+        margin: -52px;
+        padding: 60px;
+      }
+    }
+
+    [id$='_gallery_container'] {
+      min-height: 470px;
+
+      > div {
+        flex-grow: 1;
+
+        [id$='_gallery'] {
+          flex-grow: 1;
+        }
+      }
     }
   `;
 };

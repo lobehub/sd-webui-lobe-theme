@@ -20,8 +20,13 @@ export const useStyles = createStyles(
           padding: 0 !important;
         }
 
+        .gap:has(#quicksettings):first-child {
+          gap: 0;
+        }
+
         .float {
           ${stylish.blur};
+          border: none;
           border-top-left-radius: 0;
           border-top-right-radius: 0;
           border-bottom-left-radius: 0;
@@ -29,26 +34,33 @@ export const useStyles = createStyles(
 
         [id^='html_info_']:has(div.prose) {
           p {
-            padding: 8px;
-
-            font-family: ${token.fontFamilyCode};
-            font-size: 13px !important;
-            color: ${token.colorInfo} !important;
-
-            background: ${token.colorInfoBg};
-            border: 1px solid ${token.colorInfoBorder};
-            border-radius: ${token.borderRadius}px;
+            color: ${token.colorTextDescription} !important;
           }
         }
 
-        #txt2img_styles_edit_button， #img2img_styles_edit_button {
-          max-width: 36px !important;
+        [id^='html_info_']:has(div.prose),
+        [id^='html_log_']:has(div.prose) {
+          .pending {
+            opacity: 1;
+          }
         }
 
-        #txt2img_generate,
-        #img2img_generate,
         #extras_generate {
           border-radius: ${token.borderRadius}px !important;
+        }
+
+        [id$='img_styles_dialog'] {
+          label {
+            white-space: normal;
+          }
+
+          .gradio-row:not(:first-child) {
+            margin-top: 1em;
+          }
+        }
+
+        .block.border_focus {
+          border-color: ${token.colorPrimary} !important;
         }
 
         #txt2img_results,
@@ -78,6 +90,16 @@ export const useStyles = createStyles(
           }
         }
 
+        #tab_pnginfo {
+          #pnginfo_image {
+            height: auto !important;
+          }
+
+          .block.gradio-html:has(div.prose) p {
+            color: ${token.colorText};
+          }
+        }
+
         [id$='_override_settings_row']:has(div.hidden) {
           display: none;
         }
@@ -91,6 +113,83 @@ export const useStyles = createStyles(
             flex-direction: column-reverse;
           }
         }
+
+        .extra-networks {
+          .tab-nav [id*='_extra_'] {
+            margin: 0;
+          }
+
+          .gradio-button {
+            &[id$='_extra_sortorder'],
+            &[id$='_extra_refresh'] {
+              align-self: center;
+            }
+
+            &.secondary.lg[id$='_extra_refresh'] {
+              max-width: fit-content;
+              height: var(--button-lg-tool-height) !important;
+              min-height: var(--button-lg-tool-height) !important;
+              max-height: var(--button-lg-tool-height) !important;
+
+              font-size: var(--text-md);
+            }
+          }
+        }
+
+        .extra-network-cards .card {
+          box-shadow: 0 0 0 3px ${token.colorFillSecondary};
+          transition: var(--button-transition);
+
+          &:hover {
+            box-shadow: 0 0 0 3px ${token.colorPrimary};
+          }
+
+          .actions {
+            background: rgb(0 0 0 / 30%);
+            backdrop-filter: saturate(120%) blur(4px);
+            box-shadow: none;
+
+            .name {
+              font-size: var(--text-lg);
+              word-break: break-word;
+              line-break: auto;
+            }
+
+            &:hover {
+              .description {
+                max-height: none;
+              }
+            }
+          }
+        }
+
+        .global-popup-close {
+          background-color: var(--popup-overlay) !important;
+          background-image: var(--grain);
+          backdrop-filter: saturate(120%) blur(80px);
+        }
+
+        .global-popup-inner {
+          max-width: 80%;
+
+          .popup-metadata {
+            padding: 16px;
+
+            font-family: var(--font-mono);
+            color: ${token.colorText};
+            word-break: break-word;
+
+            background: ${token.colorBgLayout};
+            border-radius: ${token.borderRadius}px;
+            box-shadow: var(--lightbox-img-shadow);
+          }
+
+          .edit-user-metadata {
+            > div:not(.edit-user-metadata-buttons):not(:last-child) {
+              margin: 0 0 8px;
+            }
+          }
+        }
       `,
       splitView: css`
         #txt2img_toprow,
@@ -102,25 +201,9 @@ export const useStyles = createStyles(
       `,
       text2img: css`
         button[id$='_generate'] {
-          height: 44px !important;
-          min-height: 44px !important;
-          max-height: 44px !important;
-        }
-
-        #txt2img_accordions,
-        #img2img_accordions {
-          flex-direction: column;
-          padding: 0 !important;
-          background: transparent !important;
-
-          > div {
-            background-color: ${token.colorBgContainer}!important;
-          }
-        }
-
-        #img2img_toprow .interrogate-col {
-          flex-flow: row wrap;
-          min-width: 100% !important;
+          height: var(--button-lg-height) !important;
+          min-height: var(--button-lg-height) !important;
+          max-height: var(--button-lg-height) !important;
         }
 
         [id$='img_settings'],
@@ -145,7 +228,7 @@ export const useStyles = createStyles(
             border-radius: ${token.borderRadius}px !important;
           }
 
-          .gradio-tabitem {
+          .gradio-tabitem:has(.gradio-image) {
             background: ${token.colorFillTertiary} !important;
           }
 
@@ -202,7 +285,27 @@ export const useStyles = createStyles(
             #script_list {
               padding: 8px 16px 12px !important;
             }
+
+            #axis_options {
+              margin: 16px 0;
+            }
           }
+        }
+
+        #txt2img_accordions,
+        #img2img_accordions {
+          flex-direction: column;
+          padding: 0 !important;
+          background: transparent !important;
+
+          > div {
+            background-color: ${token.colorBgContainer}!important;
+          }
+        }
+
+        #img2img_toprow .interrogate-col {
+          flex-flow: column wrap;
+          min-width: 100% !important;
         }
 
         #img2img_column_batch {
@@ -214,9 +317,15 @@ export const useStyles = createStyles(
           [id$='_settings'] {
             min-width: 0 !important;
 
-            div.svelte-15lo0d8 > *,
-            div.svelte-15lo0d8 > .form > * {
-              flex: 1;
+            [id^='img2img_tab_resize_'].tabitem.gradio-tabitem {
+              padding: 16px 0 !important;
+            }
+
+            [id$='img_seed_extras'],
+            #inpaint_controls {
+              div {
+                flex: 1;
+              }
             }
           }
 
@@ -265,8 +374,7 @@ export const useStyles = createStyles(
 
             padding: 8px !important;
 
-            font-family: ${token.fontFamilyCode};
-            font-size: 13px !important;
+            font-family: var(--font);
             line-height: 1.5 !important;
             word-wrap: break-word !important;
             white-space: pre-wrap !important;
@@ -295,11 +403,12 @@ export const useStyles = createStyles(
 
         .block.token-counter {
           z-index: 10 !important;
-          top: -12px;
+          top: -14px;
           right: 4px;
           scale: 0.8;
 
           background: ${token.colorBgContainer} !important;
+          border-radius: 0.4em !important;
 
           > .translucent {
             display: none;
@@ -307,7 +416,13 @@ export const useStyles = createStyles(
 
           span {
             display: inline-block;
-            font-family: ${token.fontFamilyCode};
+            font-family: var(--font-mono);
+            border: 2px solid ${token.colorFillSecondary} !important;
+          }
+
+          span,
+          &.error span {
+            box-shadow: none;
           }
         }
 

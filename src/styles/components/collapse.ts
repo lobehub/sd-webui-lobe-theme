@@ -10,7 +10,7 @@ export default (token: Theme) => {
         gap: 8px;
         align-items: center;
 
-        font-size: 14px;
+        font-size: var(--text-md);
         font-weight: 600;
         line-height: 1;
 
