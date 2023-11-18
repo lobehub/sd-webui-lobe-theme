@@ -7,12 +7,6 @@ export const useStyles = createStyles(
         display: none;
       }
 
-      .extra-networks .tab-nav > button {
-        &:first-child {
-          display: none;
-        }
-      }
-
       #txt2img_extra_search,
       #img2img_extra_search {
         width: 100% !important;
@@ -35,6 +29,11 @@ export const useStyles = createStyles(
       }
 
       .extra-network-cards {
+        overflow: unset;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(${size}px, 1fr));
+        gap: 8px;
+
         height: unset;
         min-height: unset;
 
@@ -45,25 +44,6 @@ export const useStyles = createStyles(
         .additional {
           position: relative !important;
         }
-      }
-
-      .extra-network-thumbs .name {
-        overflow: hidden;
-        display: block;
-
-        font-size: 12px !important;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-
-        background: transparent;
-      }
-
-      .extra-network-cards,
-      .extra-network-thumbs {
-        overflow: unset;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(${size}px, 1fr));
-        gap: 8px;
 
         &:has(.nocards) {
           display: flex;
@@ -78,7 +58,13 @@ export const useStyles = createStyles(
           > * {
             height: 40px !important;
             margin: 0 !important;
-            font-size: 14px !important;
+            font-size: var(--text-md) !important;
+          }
+
+          > button {
+            &:first-child {
+              display: none;
+            }
           }
         }
 
@@ -104,6 +90,10 @@ export const useStyles = createStyles(
         }
 
         .actions {
+          background: rgb(0 0 0 / 30%);
+          backdrop-filter: saturate(120%) blur(4px);
+          box-shadow: none !important;
+
           .name {
             overflow: hidden;
             display: block;
@@ -112,8 +102,6 @@ export const useStyles = createStyles(
             text-overflow: ellipsis;
             text-shadow: 0 1px 1px rgb(0 0 0 / 90%);
             white-space: nowrap;
-
-            background: linear-gradient(0deg, rgb(0 0 0 / 80%), transparent);
           }
 
           .additional {
@@ -132,12 +120,18 @@ export const useStyles = createStyles(
                 margin: 0 !important;
                 padding: 0 !important;
 
-                font-size: 15px !important;
+                font-size: var(--text-md) !important;
                 color: #fff;
                 text-overflow: ellipsis;
                 text-shadow: 1px 1px black;
                 white-space: nowrap;
               }
+            }
+          }
+
+          .description {
+            a:hover {
+              color: var(--link-text-color-hover);
             }
           }
         }
@@ -159,7 +153,7 @@ export const useStyles = createStyles(
             scale 400ms ${token.motionEaseOut};
 
           .name {
-            font-size: 12px !important;
+            font-size: var(--text-sm) !important;
           }
 
           &:hover {
@@ -171,6 +165,8 @@ export const useStyles = createStyles(
             }
 
             .name {
+              word-break: break-word;
+              line-break: auto;
               white-space: unset;
             }
           }
@@ -186,7 +182,7 @@ export const useStyles = createStyles(
           border-bottom-left-radius: ${token.borderRadius}px;
 
           > div {
-            font-size: 15px !important;
+            font-size: var(--text-md) !important;
             text-shadow: none !important;
           }
         }
@@ -211,7 +207,7 @@ export const useStyles = createStyles(
           box-sizing: border-box;
           width: 100%;
           max-width: 100%;
-          max-height: 36px !important;
+          max-height: var(--button-lg-tool-height) !important;
           padding: 8px;
         }
 

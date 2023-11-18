@@ -18,11 +18,7 @@ export default (token: Theme) => css`
     overflow: hidden;
 
     opacity: 1 !important;
-    background: linear-gradient(
-      to right,
-      ${token.colorFillQuaternary},
-      ${token.colorFill}
-    ) !important;
+    background: ${token.colorFillQuaternary} !important;
     backdrop-filter: saturate(180%) blur(10px);
     border: 1px solid ${token.colorBorder};
     border-radius: ${token.borderRadius}px;
@@ -48,7 +44,7 @@ export default (token: Theme) => css`
     position: relative !important;
     top: 0 !important;
     overflow: hidden;
-    background: ${token.colorBgElevated} !important;
+    background: ${token.colorFillSecondary} !important;
 
     > .progress {
       position: relative;
@@ -56,10 +52,12 @@ export default (token: Theme) => css`
       overflow: hidden;
       display: flex;
       align-items: center;
-      justify-content: flex-end;
+      justify-content: flex-start;
 
-      line-height: 1;
-      text-shadow: 0 1px 1px rgba(0, 0, 0, 40%);
+      font-family: var(--font-mono);
+      font-size: var(--text-md);
+      font-weight: 600 !important;
+      text-shadow: 0 1px 4px rgb(0 0 0 / 80%);
 
       &::before {
         content: '';

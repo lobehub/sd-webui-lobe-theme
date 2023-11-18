@@ -6,6 +6,11 @@ export default (token: Theme) => {
       margin: 0 !important;
     }
 
+    label:has(input[type='radio']),
+    label:has(input[type='checkbox']) {
+      border-radius: ${token.borderRadius}px !important;
+    }
+
     input {
       &:not([type='range'], [type='checkbox'], [type='number'], [type='radio'], .border-none) {
         resize: none;
@@ -13,7 +18,7 @@ export default (token: Theme) => {
         overflow: hidden;
 
         width: 100%;
-        height: 36px !important;
+        height: var(--button-lg-tool-height) !important;
 
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -56,7 +61,7 @@ export default (token: Theme) => {
       }
 
       &[type='number'] {
-        height: 28px !important;
+        height: var(--button-lg-tool-height) !important;
         border-radius: ${token.borderRadius}px;
       }
     }

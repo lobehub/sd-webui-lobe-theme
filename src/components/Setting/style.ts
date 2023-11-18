@@ -7,5 +7,9 @@ export const useStyles = createStyles(
         flex-direction: column !important;
       }
     }
+
+    small {
+      line-height: 1.3 !important;
+    }
   `,
 );

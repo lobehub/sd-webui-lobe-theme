@@ -12,28 +12,32 @@ export default (token: Theme) => css`
     border-radius: ${token.borderRadiusXS}px;
     outline: none;
 
+    transition: var(--button-transition);
+
     &::-webkit-slider-thumb {
       width: 12px;
       height: 16px;
 
       appearance: none;
-      background: ${token.colorBgElevated};
-      border: 1px solid ${token.colorTextQuaternary};
+      background: ${token.colorPrimary};
+      border: 1px solid ${token.colorPrimary};
       border-radius: ${token.borderRadiusSM}px;
+
+      transition: var(--button-transition);
 
       &:hover,
       &:active {
-        background: ${token.colorPrimary};
-        border-color: ${token.colorPrimary};
+        background: ${token.colorPrimaryHover};
+        border-color: ${token.colorPrimaryHover};
       }
     }
 
     &:hover {
-      background: ${token.colorPrimaryBorderHover};
+      background: ${token.colorPrimaryHover};
     }
 
     &:active {
-      background: ${token.colorPrimary};
+      background: ${token.colorPrimaryHover};
     }
   }
 `;
