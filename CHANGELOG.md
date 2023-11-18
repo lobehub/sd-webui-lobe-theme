@@ -2,6 +2,23 @@
 
 # Changelog
 
+### [Version 3.0.11](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.0.10...v3.0.11)
+
+<sup>Released on **2023-11-18**</sup>
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.0.10](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.0.9...v3.0.10)
 
 <sup>Released on **2023-10-23**</sup>
