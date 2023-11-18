@@ -21,6 +21,8 @@
   "setting": "Настройки",
   "settingButtonReset": "Сбросить",
   "settingButtonSubmit": "Применить и перезапустить интерфейс",
+  "settingConfirmPageUnload": "Подтверждать закрытие страницы",
+  "settingConfirmPageUnloadDesc": "Помогает предотвратить потерю несохраненных данных",
   "settingCustomFont": "Загружать спец. шрифт",
   "settingCustomFontDesc": "Когда он включен, он автоматически загружает веб-шрифт для улучшения отображения текста на китайском, английском и кодовом языках.",
   "settingCustomLogo": "Пользовательский логотип",

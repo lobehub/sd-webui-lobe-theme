@@ -21,6 +21,8 @@
   "setting": "设置",
   "settingButtonReset": "重置",
   "settingButtonSubmit": "应用并重启界面",
+  "settingConfirmPageUnload": "确认离开页面",
+  "settingConfirmPageUnloadDesc": "有助于防止丢失未保存的数据",
   "settingCustomFont": "加载字体美化",
   "settingCustomFontDesc": "开启后会自动加载 Webfont 美化字体，优化中英文和代码显示效果",
   "settingCustomLogo": "自定义 Logo",

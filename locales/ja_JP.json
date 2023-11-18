@@ -21,6 +21,8 @@
   "setting": "設定",
   "settingButtonReset": "リセット",
   "settingButtonSubmit": "適用して再起動",
+  "settingConfirmPageUnload": "ページのクローズ確認",
+  "settingConfirmPageUnloadDesc": "未保存のデータの損失を防ぐ",
   "settingCustomFont": "カスタムフォントの読み込み",
   "settingCustomFontDesc": "有効にすると、Webフォントを自動的に読み込んで、英語、中国語、およびコードの表示効果を最適化します",
   "settingCustomLogo": "カスタムロゴ",

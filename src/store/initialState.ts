@@ -5,6 +5,7 @@ import { DEFAULT_LOCALE_OPTIONS, DEFAULT_VERSION } from '@/store/api';
 import type { I18n } from '@/types';
 
 export interface WebuiSetting {
+  confirmPageUnload: boolean;
   enableExtraNetworkSidebar: boolean;
   enableHighlight: boolean;
   enableSidebar: boolean;
@@ -33,6 +34,7 @@ export interface WebuiSetting {
 export type WebuiSettingKeys = keyof WebuiSetting;
 
 export const DEFAULT_SETTING: WebuiSetting = {
+  confirmPageUnload: false,
   enableExtraNetworkSidebar: true,
   enableHighlight: false,
   enableSidebar: true,
