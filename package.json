@@ -119,7 +119,7 @@
     "stylelint": "^15",
     "terser": "^5",
     "typescript": "^5",
-    "vite": "^4",
+    "vite": "^5.0.0",
     "vitest": "latest"
   },
   "peerDependencies": {
