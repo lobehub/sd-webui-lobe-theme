@@ -7,14 +7,12 @@ export const useStyles = createStyles(({ css, token, cx, stylish, prefixCls }) =
       pointer-events: none;
       position: absolute;
       overflow: hidden auto;
-      padding: 8px;
+      padding: calc(8px + var(--input-border-width));
 
       pre {
         font-family: var(--font) !important;
         font-size: var(--input-text-size) !important;
         line-height: 1.5 !important;
-        color: ${token.colorSuccess};
-        text-overflow: ellipsis !important;
         word-wrap: break-word;
         white-space: pre-wrap;
         vertical-align: bottom !important;
@@ -45,11 +43,9 @@ export const useStyles = createStyles(({ css, token, cx, stylish, prefixCls }) =
       `${prefix}-shiki`,
       css`
         margin: 0;
-        padding: var(--input-border-width);
 
         .shiki {
           overflow-x: auto;
-          margin: 0;
           padding: 0;
           background: none !important;
 
