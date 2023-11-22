@@ -4,12 +4,12 @@ import { ThemeAppearance } from 'antd-style';
 export const themeConfig: any = (isDarkMode: ThemeAppearance) => {
   const type = isDarkMode ? 'dark' : 'light';
 
-  const colorTextTertiary = isDarkMode ? colorScales.gray[type][6] : colorScales.gray[type][7];
-  const colorYellow = isDarkMode ? colorScales.yellow[type][9] : colorScales.yellow[type][10];
-  const colorOrange = isDarkMode ? colorScales.gold[type][9] : colorScales.orange[type][9];
+  const colorYellow = isDarkMode ? colorScales.yellow[type][9] : colorScales.gold[type][10];
+  const colorOrange = isDarkMode ? colorScales.gold[type][9] : colorScales.orange[type][10];
+  const colorVolcano = isDarkMode ? colorScales.volcano[type][10] : colorScales.volcano[type][8];
   const colorGreen = isDarkMode ? colorScales.lime[type][9] : colorScales.green[type][10];
-  const colorBlue = isDarkMode ? colorScales.blue[type][9] : colorScales.geekblue[type][8];
-  const colorPurple = isDarkMode ? colorScales.purple[type][10] : colorScales.purple[type][9];
+  const colorBlue = isDarkMode ? colorScales.blue[type][9] : colorScales.geekblue[type][9];
+  const colorPurple = isDarkMode ? colorScales.purple[type][11] : colorScales.purple[type][8];
   return {
     colors: {
       'editor.foreground': colorGreen,
@@ -19,46 +19,44 @@ export const themeConfig: any = (isDarkMode: ThemeAppearance) => {
       {
         scope: 'comma',
         settings: {
-          foreground: colorTextTertiary,
+          foreground: colorGreen,
         },
       },
       {
         scope: 'func',
         settings: {
-          foreground: colorBlue,
+          foreground: colorPurple,
         },
       },
       {
-        scope: 'and',
+        scope: ['and', 'break'],
         settings: {
-          fontStyle: 'bold',
           foreground: colorBlue,
         },
       },
       {
         scope: 'bracket',
         settings: {
-          foreground: colorBlue,
+          foreground: colorPurple,
         },
       },
       {
         scope: 'model-type',
         settings: {
           fontStyle: 'italic',
-          foreground: colorOrange,
+          foreground: colorVolcano,
         },
       },
       {
         scope: 'model-name',
         settings: {
-          fontStyle: 'bold',
           foreground: colorOrange,
         },
       },
       {
         scope: 'model-bracket',
         settings: {
-          foreground: colorOrange,
+          foreground: colorPurple,
         },
       },
       {
@@ -70,7 +68,6 @@ export const themeConfig: any = (isDarkMode: ThemeAppearance) => {
       {
         scope: 'wildcards',
         settings: {
-          fontStyle: 'italic',
           foreground: colorYellow,
         },
       },

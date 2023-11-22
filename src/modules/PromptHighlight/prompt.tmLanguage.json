@@ -16,6 +16,10 @@
       "name": "and"
     },
     {
+      "match": "BREAK",
+      "name": "break"
+    },
+    {
       "match": "<([^:]+):([^:]+):([^>]+)>",
       "captures": {
         "0": {
@@ -41,7 +45,7 @@
       "name": "bracket"
     },
     {
-      "match": "\\d+(\\.\\d+)?",
+      "match": "(?<!\\w)(\\d*\\.?\\d+|\\.\\d+)",
       "name": "number"
     },
     {

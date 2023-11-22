@@ -40,6 +40,14 @@ const App = memo<AppProps>(({ parentId }) => {
     setPrompt(event.target.value);
   }, []);
 
+  const handlePromptResize = useCallback(() => {
+    if (nativeTextarea.clientHeight < nativeTextarea.scrollHeight) {
+      return size?.width === undefined ? '' : size?.width + 6;
+    } else {
+      return size?.width === undefined ? '' : size?.width + 2;
+    }
+  }, [nativeTextarea.clientWidth]);
+
   useEffect(() => {
     ref.current.scroll(0, scroll?.top || 0);
   }, [scroll?.top]);
@@ -67,7 +75,7 @@ const App = memo<AppProps>(({ parentId }) => {
       className={styles.container}
       data-code-type="highlighter"
       ref={ref}
-      style={{ height: size?.height, width: size?.width }}
+      style={{ height: size?.height, width: handlePromptResize() }}
     >
       <SyntaxHighlighter language="prompt" options={options}>
         {prompt.trim()}
