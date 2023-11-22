@@ -19,6 +19,14 @@ const Footer = memo<DivProps>(({ className, ...props }) => {
     console.time('🤯 [layout] inject - Footer');
     const footer = gradioApp().querySelector('#footer');
     if (footer) footerReference.current?.append(footer);
+    if (setting.confirmPageUnload) {
+      window.addEventListener('beforeunload', (event) => {
+        if (footer?.isConnected) {
+          event.preventDefault();
+          return (event.returnValue = '');
+        }
+      });
+    }
     console.timeEnd('🤯 [layout] inject - Footer');
   }, []);
   return (

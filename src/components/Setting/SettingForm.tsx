@@ -163,6 +163,13 @@ const SettingForm = memo(() => {
           name: 'enableWebFont',
           valuePropName: 'checked',
         },
+        {
+          children: <Switch />,
+          desc: t('settingConfirmPageUnloadDesc'),
+          label: t('settingConfirmPageUnload'),
+          name: 'confirmPageUnload',
+          valuePropName: 'checked',
+        },
       ],
       icon: Palette,
       title: t('settingGroupTheme'),
