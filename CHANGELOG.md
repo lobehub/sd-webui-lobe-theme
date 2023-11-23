@@ -2,6 +2,32 @@
 
 # Changelog
 
+### [Version 3.0.13](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.0.12...v3.0.13)
+
+<sup>Released on **2023-11-23**</sup>
+
+#### 💄 Styles
+
+- **misc**: Add locales and improve devops, Add locales and improve devops.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Add locales and improve devops ([7a6b37d](https://github.com/lobehub/sd-webui-lobe-theme/commit/7a6b37d))
+- **misc**: Add locales and improve devops ([a03f1b3](https://github.com/lobehub/sd-webui-lobe-theme/commit/a03f1b3))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.0.12](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.0.11...v3.0.12)
 
 <sup>Released on **2023-11-23**</sup>
