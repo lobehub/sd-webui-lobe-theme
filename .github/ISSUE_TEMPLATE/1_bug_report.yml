@@ -1,8 +1,27 @@
 name: '🐛 反馈缺陷 Bug Report'
-description: '反馈一个问题缺陷 | Report an bug'
+description: |
+  反馈一个问题缺陷, 请确保你已经阅读了 [常见问题](https://github.com/lobehub/sd-webui-lobe-theme/issues/467)
+  Report an bug, please make sure you have read the [FAQ](https://github.com/lobehub/sd-webui-lobe-theme/issues/468)
 title: '[Bug] '
 labels: '🐛 Bug'
 body:
+  - type: markdown
+    attributes:
+      value: |
+        - 反馈一个问题缺陷, 请确保你已经阅读了 [常见问题](https://github.com/lobehub/sd-webui-lobe-theme/issues/467)
+        - Report an bug, please make sure you have read the [FAQ](https://github.com/lobehub/sd-webui-lobe-theme/issues/468)
+  - type: checkboxes
+    attributes:
+      label: '👀 检查清单 | Initial checklist'
+      options:
+        - label: 已经阅读了 [常见问题](https://github.com/lobehub/sd-webui-lobe-theme/issues/467) | I have read the [FAQ](https://github.com/lobehub/sd-webui-lobe-theme/issues/468)
+          required: true
+        - label: 插件和 SD WebUI 均为为最新版本 | Plugin and SD WebUI both are the latest version
+          required: true
+        - label: 插件的分支为 main | The branch of the plugin is main
+          required: true
+        - label: 在单独开启插件的情况下，问题仍然存在 | The problem still exists when the plugin is turned on separately
+          required: true
   - type: dropdown
     attributes:
       label: '💻 系统环境 | Operating System'
