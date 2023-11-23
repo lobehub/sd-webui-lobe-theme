@@ -7,7 +7,7 @@ import { memo, useEffect, useRef, useState } from 'react';
 import { shallow } from 'zustand/shallow';
 
 import { useStyles } from '@/features/ExtraNetworkSidebar/style';
-import civitaiHelperFix from '@/scriptS/civitaiHelperFix';
+import civitaiHelperFix from '@/scripts/civitaiHelperFix';
 import { selectors, useAppStore } from '@/store';
 
 const Inner = memo(() => {

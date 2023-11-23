@@ -4,7 +4,7 @@ import { memo, useEffect } from 'react';
 
 import '@/locales/config';
 import { PromptHighlight } from '@/modules/PromptHighlight';
-import replaceIcon from '@/scriptS/replaceIcon';
+import replaceIcon from '@/scripts/replaceIcon';
 import { selectors, useAppStore } from '@/store';
 import GlobalStyle from '@/styles';
 

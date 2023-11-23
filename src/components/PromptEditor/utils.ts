@@ -1,4 +1,4 @@
-import { Converter } from '@/scriptS/formatPrompt';
+import { Converter } from '@/scripts/formatPrompt';
 
 import { TagItem } from './TagList';
 

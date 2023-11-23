@@ -2,7 +2,7 @@ import { useResponsive } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { memo, useEffect, useRef } from 'react';
 
-import formatPrompt from '@/scriptS/formatPrompt';
+import formatPrompt from '@/scripts/formatPrompt';
 import { selectors, useAppStore } from '@/store';
 import { type DivProps } from '@/types';
 
