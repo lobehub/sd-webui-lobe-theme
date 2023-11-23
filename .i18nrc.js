@@ -10,7 +10,6 @@ module.exports = {
   entryLocale: 'en_US',
   output: 'locales',
   outputLocales: outputLocales,
-  temperature: 0,
   modelName: 'gpt-3.5-turbo-1106',
   experimental: {
     jsonMode: true,

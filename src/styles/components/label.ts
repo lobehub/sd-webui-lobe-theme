@@ -1,7 +1,7 @@
 import { css } from 'antd-style';
 
 export default () => {
-  return css`
+    return css`
     [id$='_settings'] {
       label.svelte-1ojmf70 {
         overflow: hidden;

@@ -1,82 +1,159 @@
 {
-  "appInitializing": "StableDiffusion / LobeTheme инициализируется, пожалуйста, подождите...",
-  "community": "Сообщество",
-  "custom": "Кастомный",
-  "extraNetwork": "Доп. Сети",
-  "feedback": "Отзыв",
-  "fixed": "Фиксированный",
-  "float": "Плавающий",
-  "help": "Помощь",
-  "kitchen": "Kitchen",
-  "loadPrompt": "Подгрузить промт",
-  "lobe": "Lobe",
-  "moreProducts": "Другие проекты",
-  "negative": "Отрицательные",
-  "positive": "Положительные",
-  "quickSetting": "Быстрые настройки",
-  "resizable": "Растягиваемый",
-  "resources": "Ресурсы",
-  "scroll": "Скрол",
-  "setPrompt": "Вставить промт",
-  "setting": "Настройки",
-  "settingButtonReset": "Сбросить",
-  "settingButtonSubmit": "Применить и перезапустить интерфейс",
-  "settingConfirmPageUnload": "Подтверждать закрытие страницы",
-  "settingConfirmPageUnloadDesc": "Помогает предотвратить потерю несохраненных данных",
-  "settingCustomFont": "Загружать спец. шрифт",
-  "settingCustomFontDesc": "Когда он включен, он автоматически загружает веб-шрифт для улучшения отображения текста на китайском, английском и кодовом языках.",
-  "settingCustomLogo": "Пользовательский логотип",
-  "settingCustomLogoDesc": "Поддержка символов URL/Base64/Emoji",
-  "settingCustomTitle": "Пользовательское название",
-  "settingCustomTitleDesc": "Название пользовательского логотипа",
-  "settingExtraNetworkSidebarDefaultCardSize": "Размер превью модели",
-  "settingExtraNetworkSidebarDefaultCardSizeDesc": "Значение по умолчанию размера обложки модели при запуске",
-  "settingExtraNetworkSidebarDefaultExpand": "Состояние разворота по умолчанию",
-  "settingExtraNetworkSidebarDefaultExpandDesc": "Нужно ли по умолчанию разворачивать боковую панель при запуске?",
-  "settingExtraNetworkSidebarDefaultWidth": "Ширина по умолчанию",
-  "settingExtraNetworkSidebarDefaultWidthDesc": "Ширина боковой панели по умолчанию при запуске",
-  "settingExtraNetworkSidebarDisplayMode": "Режим отображения",
-  "settingExtraNetworkSidebarDisplayModeDesc": "Фиксирован постоянно или появляется при наведении на боковую панель",
-  "settingExtraNetworkSidebarEnable": "Включено",
-  "settingExtraNetworkSidebarEnableDesc": "Включить Панель Доп. моделей справа",
-  "settingGroupExtraNetworkSidebar": "Боковая панель с доп сетями",
-  "settingGroupLayout": "Настройки макета",
-  "settingGroupPromptTextarea": "Промт(подсказка)",
-  "settingGroupQuickSettingSidebar": "Боковая панель быстрых настроек",
-  "settingGroupTheme": "Настройка темы",
-  "settingHideFooter": "Скрыть футтер",
-  "settingHideFooterDesc": "Скрыть футтер темы и отображать только футтер дефолтного веб-интерфейса.",
-  "settingLanguage": "Язык",
-  "settingLanguageDesc": "Язык Lobe темы",
-  "settingLogoPreview": "Предпросмотр",
-  "settingLogoType": "Стиль лого",
-  "settingLogoTypeDesc": "Стиль лого",
-  "settingNeutralColor": "Нейтральный цвет",
-  "settingNeutralColorDesc": "Настройте различные оттенки серого с различными цветовыми тенденциями, второй - оригинальный нейтральный цвет темы Kitchen.",
-  "settingPrimaryColor": "Основной цвет",
-  "settingPrimaryColorDesc": "Основной цвет - пользовательский, второй - оригинальный цвет темы Kitchen",
-  "settingPromptDisplayMode": "Режим отображения",
-  "settingPromptDisplayModeDesc": "Фиксированная высота или автоматическая высота с поддержкой перетаскиваемого изменения размера",
-  "settingPromptEditor": "Редактор промта",
-  "settingPromptEditorDesc": "Включить простой редактор подсказок в верхней части боковой панели быстрых настроек",
-  "settingPromptHighlight": "Подсветка синтаксиса промта",
-  "settingPromptHighlightDesc": "Автоматическое изменение цвета отображения подсказок в соответствии с правилами синтаксиса Stable Diffusion",
-  "settingQuickSettingSidebarDefaultExpand": "Состояние разворота по умолчанию",
-  "settingQuickSettingSidebarDefaultExpandDesc": "Нужно ли по умолчанию разворачивать боковую панель при запуске?",
-  "settingQuickSettingSidebarDefaultWidth": "Ширина по умолчанию",
-  "settingQuickSettingSidebarDefaultWidthDesc": "Ширина боковой панели по умолчанию при запуске",
-  "settingQuickSettingSidebarDisplayMode": "Режим отображения",
-  "settingQuickSettingSidebarDisplayModeDesc": "Фиксирован постоянно или появляется при наведении на боковую панель",
-  "settingQuickSettingSidebarEnable": "Включено",
-  "settingQuickSettingSidebarEnableDesc": "Включить боковую панель быстрых настроек в левой части экрана",
-  "settingReduceAnimation": "Уменьшить анимации",
-  "settingReduceAnimationDesc": "Уменьшить эффект размытия и цвет фоновой подсветки, что позволит повысить плавность работы и снизить нагрузку на процессор",
-  "settingSplitPreviewer": "Рзделенный просмоторщик",
-  "settingSplitPreviewerDesc": "Разделяет страницу на настройки генрации и поле ввода промта, а на второй половине остается окно сгенерированной картинки и кнопка генерации ",
-  "settingSvgIcons": "Использование SVG-значков",
-  "settingSvgIconsDesc": "Заменить все иконки Emoji в стабильном diffusion webui на SVG-иконки в глобальном масштабе",
-  "switchTheme": "Переключатель светлой/темной темы",
-  "sync": "Синхронизация с настройками webui",
-  "themeFeedback": "Отзыв о теме",
-  "themeSetting": "Настройки темы"
+  "brand": {
+    "kitchen": "Kitchen",
+    "lobe": "LobeHub",
+    "custom": "Пользовательский"
+  },
+  "custom": {
+    "initializing": "StableDiffusion / LobeTheme инициализируется, пожалуйста, подождите..."
+  },
+  "footer": {
+    "resources": "Ресурсы",
+    "community": "Сообщество",
+    "help": "Помощь",
+    "moreProducts": "Дополнительные продукты"
+  },
+  "header": {
+    "feedback": "Обратная связь",
+    "switchTheme": "Переключить светлую/темную тему",
+    "setting": "Настройка"
+  },
+  "modal": {
+    "themeFeedback": {
+      "title": "Обратная связь по теме"
+    },
+    "themeSetting": {
+      "title": "Настройки темы"
+    }
+  },
+  "prompt": {
+    "load": "Загрузить подсказку",
+    "set": "Установить подсказку",
+    "negative": "Негативный",
+    "positive": "Позитивный"
+  },
+  "setting": {
+    "button": {
+      "reset": "Сброс",
+      "submit": "Применить и перезапустить интерфейс"
+    },
+    "confirmPageUnload": {
+      "title": "Подтверждение покидания страницы",
+      "desc": "Помогает предотвратить потерю несохраненных данных"
+    },
+    "customFont": {
+      "title": "Пользовательский шрифт",
+      "desc": "При включении автоматически загружает веб-шрифт для улучшения отображения текста на китайском, английском и коде"
+    },
+    "customLogo": {
+      "title": "Пользовательский логотип",
+      "desc": "Поддерживает URL / Base64 / символы Emoji"
+    },
+    "customTitle": {
+      "title": "Пользовательское название",
+      "desc": "Пользовательское название логотипа"
+    },
+    "extraNetworkSidebar": {
+      "defaultCardSize": {
+        "title": "Размер обложки модели",
+        "desc": "Значение по умолчанию размера обложки модели при запуске"
+      },
+      "defaultExpand": {
+        "title": "Раскрыть по умолчанию",
+        "desc": "Развернуть боковую панель по умолчанию при запуске"
+      },
+      "defaultWidth": {
+        "title": "Ширина по умолчанию",
+        "desc": "Ширина боковой панели по умолчанию при запуске"
+      },
+      "displayMode": {
+        "title": "Режим отображения",
+        "desc": "Фиксированный режим сетки для постоянного отображения, автоматическое развертывание при перемещении мыши к боковой стороне в плавающем режиме"
+      },
+      "enable": {
+        "title": "Включить",
+        "desc": "Включить дополнительную боковую панель сети справа"
+      }
+    },
+    "group": {
+      "extraNetworkSidebar": "Дополнительная боковая панель сети",
+      "layout": "Настройки макета",
+      "promptTextarea": "Текстовое поле подсказки",
+      "quickSettingSidebar": "Быстрая боковая панель настроек",
+      "theme": "Настройки темы"
+    },
+    "hideFooter": {
+      "title": "Скрыть нижний колонтитул",
+      "desc": "Скрыть нижний колонтитул темы и отобразить только стандартный колонтитул стабильного веб-интерфейса диффузии"
+    },
+    "language": {
+      "title": "Язык",
+      "desc": "Язык темы Lobe"
+    },
+    "logoType": {
+      "title": "Тип логотипа",
+      "desc": "Тип логотипа",
+      "preview": "Предварительный просмотр"
+    },
+    "neutralColor": {
+      "title": "Нейтральный цвет",
+      "desc": "Настроить различные оттенки серого с различными цветовыми тенденциями, второй - это оригинальный нейтральный цвет кухни"
+    },
+    "primaryColor": {
+      "title": "Основной цвет",
+      "desc": "Пользовательский основной цвет, второй - это оригинальный цвет темы кухни"
+    },
+    "promptDisplayMode": {
+      "title": "Режим отображения подсказки",
+      "desc": "Фиксированная высота или автоматическая высота с поддержкой изменения размера",
+      "resizable": "Изменяемый размер",
+      "scroll": "Прокрутка"
+    },
+    "promptEditor": {
+      "title": "Редактор подсказки",
+      "desc": "Предоставляет простой редактор подсказок в верхней части быстрой боковой панели настроек"
+    },
+    "promptHighlight": {
+      "title": "Подсветка синтаксиса подсказки",
+      "desc": "Автоматическое окрашивание отображения подсказок в соответствии с правилами синтаксиса Stable Diffusion"
+    },
+    "quickSettingSidebar": {
+      "defaultExpand": {
+        "title": "Раскрыть по умолчанию",
+        "desc": "Развернуть боковую панель по умолчанию при запуске"
+      },
+      "defaultWidth": {
+        "title": "Ширина по умолчанию",
+        "desc": "Ширина боковой панели по умолчанию при запуске"
+      },
+      "displayMode": {
+        "title": "Режим отображения",
+        "desc": "Фиксированный режим сетки для постоянного отображения, автоматическое развертывание при перемещении мыши к боковой стороне в плавающем режиме"
+      },
+      "enable": {
+        "title": "Включить",
+        "desc": "Включить быструю боковую панель настроек слева"
+      }
+    },
+    "reduceAnimation": {
+      "title": "Уменьшить анимацию",
+      "desc": "Уменьшить эффект размытия и цвет фона, что может улучшить плавность и экономить использование ЦП"
+    },
+    "splitPreviewer": {
+      "title": "Разделить предварительный просмотр",
+      "desc": "Разместить поле ввода подсказки слева и кнопку генерации справа, обеспечивая отображение сгенерированного изображения всегда вверху при прокрутке (экспериментально)"
+    },
+    "svgIcons": {
+      "title": "SVG-иконы",
+      "desc": "Заменить все иконки Emoji в стабильном веб-интерфейсе диффузии на глобальные SVG-иконы"
+    }
+  },
+  "sidebar": {
+    "extraNetwork": "Дополнительная сеть",
+    "quickSetting": "Быстрая настройка",
+    "mode": {
+      "fixed": "Фиксированный",
+      "float": "Плавающий"
+    }
+  }
 }

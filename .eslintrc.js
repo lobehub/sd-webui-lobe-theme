@@ -1,19 +1,8 @@
 const config = require('@lobehub/lint').eslint;
 
-config.rules['indent'] = ['off', 2];
+config.rules['linebreak-style'] = 0;
+config.rules['no-undef'] = 0;
+config.rules['object-curly-spacing'] = 0;
+config.rules['unicorn/prefer-add-event-listener'] = 0;
 
-module.exports = {
-  ...config,
-  overrides: [
-    {
-      files: ['*.ts', '*.tsx'],
-      rules: {
-        'linebreak-style': 0,
-        'no-undef': 0,
-        'object-curly-spacing': 0,
-        'unicorn/prefer-add-event-listener': 0,
-        'unused-imports/no-unused-imports': 0,
-      },
-    },
-  ],
-};
+module.exports = config;

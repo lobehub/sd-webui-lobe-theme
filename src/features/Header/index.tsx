@@ -12,36 +12,36 @@ import Actions from './Actions';
 import Nav from './Nav';
 
 const Header = memo<DivProps>(({ children }) => {
-  const { themeMode, version } = useAppStore(
-    (st) => ({ themeMode: st.themeMode, version: st.version }),
-    shallow,
-  );
-  const theme = useTheme();
+    const { themeMode, version } = useAppStore(
+        (st) => ({ themeMode: st.themeMode, version: st.version }),
+        shallow,
+    );
+    const theme = useTheme();
 
-  return (
-    <H
-      actions={<Actions themeMode={themeMode} />}
-      actionsStyle={{ flex: 0 }}
-      logo={
-        <a
-          href={`${homepage}/releases`}
-          rel="noreferrer"
-          style={{ alignItems: 'center', color: theme.colorText, display: 'flex' }}
-          target="_blank"
-        >
-          <Tooltip title={`${name} v${version}`}>
-            <Logo />
-          </Tooltip>
-        </a>
-      }
-      nav={
-        <>
-          <Nav />
-          {children}
-        </>
-      }
-    />
-  );
+    return (
+        <H
+            actions={<Actions themeMode={themeMode} />}
+            actionsStyle={{ flex: 0 }}
+            logo={
+                <a
+                    href={`${homepage}/releases`}
+                    rel="noreferrer"
+                    style={{ alignItems: 'center', color: theme.colorText, display: 'flex' }}
+                    target="_blank"
+                >
+                    <Tooltip title={`${name} v${version}`}>
+                        <Logo />
+                    </Tooltip>
+                </a>
+            }
+            nav={
+                <>
+                    <Nav />
+                    {children}
+                </>
+            }
+        />
+    );
 });
 
 export default Header;

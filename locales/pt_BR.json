@@ -1,0 +1,159 @@
+{
+  "brand": {
+    "kitchen": "Kitchen",
+    "lobe": "LobeHub",
+    "custom": "Personalizado"
+  },
+  "custom": {
+    "initializing": "StableDiffusion / LobeTheme está inicializando, por favor aguarde..."
+  },
+  "footer": {
+    "resources": "Recursos",
+    "community": "Comunidade",
+    "help": "Ajuda",
+    "moreProducts": "Mais Produtos"
+  },
+  "header": {
+    "feedback": "Feedback",
+    "switchTheme": "Alternar Tema Claro/Escuro",
+    "setting": "Configuração"
+  },
+  "modal": {
+    "themeFeedback": {
+      "title": "Feedback do Tema"
+    },
+    "themeSetting": {
+      "title": "Configurações do Tema"
+    }
+  },
+  "prompt": {
+    "load": "Carregar Prompt",
+    "set": "Definir Prompt",
+    "negative": "Negativo",
+    "positive": "Positivo"
+  },
+  "setting": {
+    "button": {
+      "reset": "Redefinir",
+      "submit": "Aplicar e Reiniciar Interface"
+    },
+    "confirmPageUnload": {
+      "title": "Confirmação ao sair da página",
+      "desc": "Ajuda a evitar a perda de dados não salvos"
+    },
+    "customFont": {
+      "title": "Fonte Personalizada",
+      "desc": "Quando ativado, carregará automaticamente uma webfont para aprimorar a exibição de texto em chinês, inglês e código"
+    },
+    "customLogo": {
+      "title": "Logotipo Personalizado",
+      "desc": "Suporte URL / Base64 / Símbolos de Emoji"
+    },
+    "customTitle": {
+      "title": "Título Personalizado",
+      "desc": "Título do Logotipo Personalizado"
+    },
+    "extraNetworkSidebar": {
+      "defaultCardSize": {
+        "title": "Tamanho da Capa do Modelo",
+        "desc": "Valor padrão do tamanho da capa do modelo ao iniciar"
+      },
+      "defaultExpand": {
+        "title": "Expansão Padrão",
+        "desc": "Se deve expandir a barra lateral por padrão ao iniciar"
+      },
+      "defaultWidth": {
+        "title": "Largura Padrão",
+        "desc": "Largura padrão da barra lateral ao iniciar"
+      },
+      "displayMode": {
+        "title": "Modo de Exibição",
+        "desc": "Fixo como modo de grade para exibição constante, auto-expandir quando o mouse se move para o lado no modo flutuante"
+      },
+      "enable": {
+        "title": "Habilitar",
+        "desc": "Habilitar a barra lateral de rede extra no lado direito"
+      }
+    },
+    "group": {
+      "extraNetworkSidebar": "Barra Lateral de Rede Extra",
+      "layout": "Configurações de Layout",
+      "promptTextarea": "Caixa de Texto do Prompt",
+      "quickSettingSidebar": "Barra Lateral de Configuração Rápida",
+      "theme": "Configurações do Tema"
+    },
+    "hideFooter": {
+      "title": "Ocultar Rodapé",
+      "desc": "Ocultar o rodapé do tema e exibir apenas o rodapé padrão do stable diffusion webui"
+    },
+    "language": {
+      "title": "Idioma",
+      "desc": "Idioma do Tema Lobe"
+    },
+    "logoType": {
+      "title": "Tipo de Logotipo",
+      "desc": "Tipo de Logotipo",
+      "preview": "Visualização"
+    },
+    "neutralColor": {
+      "title": "Cor Neutra",
+      "desc": "Personalize diferentes tons de cinza com diferentes tendências de cor, o segundo é a cor neutra original da Cozinha"
+    },
+    "primaryColor": {
+      "title": "Cor Primária",
+      "desc": "Cor primária personalizada, o segundo é a cor do tema original da Cozinha"
+    },
+    "promptDisplayMode": {
+      "title": "Modo de Exibição do Prompt",
+      "desc": "Altura fixa ou altura automática com suporte para redimensionamento arrastável",
+      "resizable": "Redimensionável",
+      "scroll": "Rolagem"
+    },
+    "promptEditor": {
+      "title": "Editor de Prompt",
+      "desc": "Fornece um editor de prompt simples no topo da barra lateral de configuração rápida"
+    },
+    "promptHighlight": {
+      "title": "Realce de Sintaxe do Prompt",
+      "desc": "Colorize automaticamente a exibição do prompt de acordo com as regras de sintaxe do Stable Diffusion"
+    },
+    "quickSettingSidebar": {
+      "defaultExpand": {
+        "title": "Expansão Padrão",
+        "desc": "Se deve expandir a barra lateral por padrão ao iniciar"
+      },
+      "defaultWidth": {
+        "title": "Largura Padrão",
+        "desc": "Largura padrão da barra lateral ao iniciar"
+      },
+      "displayMode": {
+        "title": "Modo de Exibição",
+        "desc": "Fixo como modo de grade para exibição constante, auto-expandir quando o mouse se move para o lado no modo flutuante"
+      },
+      "enable": {
+        "title": "Habilitar",
+        "desc": "Habilitar a barra lateral de configuração rápida no lado esquerdo"
+      }
+    },
+    "reduceAnimation": {
+      "title": "Reduzir Animação",
+      "desc": "Reduzir o efeito de desfoque e cor de fundo, o que pode melhorar a suavidade e economizar o uso da CPU"
+    },
+    "splitPreviewer": {
+      "title": "Dividir Visualizador",
+      "desc": "Coloque a caixa de entrada do prompt à esquerda e o botão de geração à direita, garantindo que a imagem gerada seja sempre exibida no topo ao rolar (experimental)"
+    },
+    "svgIcons": {
+      "title": "Ícones SVG",
+      "desc": "Substituir todos os ícones de Emoji no stable diffusion webui por ícones SVG globalmente"
+    }
+  },
+  "sidebar": {
+    "extraNetwork": "Rede Extra",
+    "quickSetting": "Configuração Rápida",
+    "mode": {
+      "fixed": "Fixo",
+      "float": "Flutuante"
+    }
+  }
+}

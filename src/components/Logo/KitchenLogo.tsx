@@ -9,13 +9,13 @@ export interface KitchenLogoProps {
 }
 
 const KitchenLogo = memo<KitchenLogoProps>(({ size = 32, style, themeMode }) => {
-  return (
-    <img
-      alt="logo"
-      src={themeMode === 'dark' ? darkLogo : lightLogo}
-      style={{ height: size, ...style }}
-    />
-  );
+    return (
+        <img
+            alt="logo"
+            src={themeMode === 'dark' ? darkLogo : lightLogo}
+            style={{ height: size, ...style }}
+        />
+    );
 });
 
 export default KitchenLogo;

@@ -1,82 +1,159 @@
 {
-  "appInitializing": "StableDiffusion / LobeThemeが初期化中です。お待ちください...",
-  "community": "コミュニティ",
-  "custom": "カスタム",
-  "extraNetwork": "追加ネットワーク",
-  "feedback": "フィードバック",
-  "fixed": "固定",
-  "float": "フロート",
-  "help": "ヘルプ",
-  "kitchen": "キッチン",
-  "loadPrompt": "プロンプトをロード",
-  "lobe": "ローブ",
-  "moreProducts": "その他の製品",
-  "negative": "ネガティブなヒント",
-  "positive": "ポジティブなヒント",
-  "quickSetting": "クイック設定",
-  "resizable": "リサイズ可能",
-  "resources": "関連リソース",
-  "scroll": "スクロール",
-  "setPrompt": "プロンプトを設定",
-  "setting": "設定",
-  "settingButtonReset": "リセット",
-  "settingButtonSubmit": "適用して再起動",
-  "settingConfirmPageUnload": "ページのクローズ確認",
-  "settingConfirmPageUnloadDesc": "未保存のデータの損失を防ぐ",
-  "settingCustomFont": "カスタムフォントの読み込み",
-  "settingCustomFontDesc": "有効にすると、Webフォントを自動的に読み込んで、英語、中国語、およびコードの表示効果を最適化します",
-  "settingCustomLogo": "カスタムロゴ",
-  "settingCustomLogoDesc": "URL / Base64 / 絵文字をサポート",
-  "settingCustomTitle": "カスタムタイトル",
-  "settingCustomTitleDesc": "カスタムロゴのタイトル名",
-  "settingExtraNetworkSidebarDefaultCardSize": "モデルカバーサイズ",
-  "settingExtraNetworkSidebarDefaultCardSizeDesc": "起動時のモデルカバーサイズのデフォルト値",
-  "settingExtraNetworkSidebarDefaultExpand": "デフォルトで展開",
-  "settingExtraNetworkSidebarDefaultExpandDesc": "起動時にサイドバーをデフォルトで展開しますか？",
-  "settingExtraNetworkSidebarDefaultWidth": "デフォルト幅",
-  "settingExtraNetworkSidebarDefaultWidthDesc": "起動時のサイドバーのデフォルト幅",
-  "settingExtraNetworkSidebarDisplayMode": "表示モード",
-  "settingExtraNetworkSidebarDisplayModeDesc": "グリッドモードで常に表示するか、ホバー時に自動的に展開するフロートモードで表示するか",
-  "settingExtraNetworkSidebarEnable": "有効にする",
-  "settingExtraNetworkSidebarEnableDesc": "右側の追加ネットワークサイドバーを有効にする",
-  "settingGroupExtraNetworkSidebar": "追加ネットワークサイドバー",
-  "settingGroupLayout": "レイアウト設定",
-  "settingGroupPromptTextarea": "プロンプトテキストエリア",
-  "settingGroupQuickSettingSidebar": "クイック設定サイドバー",
-  "settingGroupTheme": "テーマ設定",
-  "settingHideFooter": "フッターを非表示にする",
-  "settingHideFooterDesc": "テーマのフッターを非表示にし、stable diffusion webui のデフォルトフッターのみ表示します",
-  "settingLanguage": "言語",
-  "settingLanguageDesc": "Lobe Themeの言語",
-  "settingLogoPreview": "プレビュー",
-  "settingLogoType": "ロゴタイプ",
-  "settingLogoTypeDesc": "ロゴタイプ",
-  "settingNeutralColor": "中立色",
-  "settingNeutralColorDesc": "異なる色相のグレースケールのカスタマイズ。2番目は元のKitchenの中立色です",
-  "settingPrimaryColor": "プライマリカラー",
-  "settingPrimaryColorDesc": "カスタムプライマリカラー。2番目は元のKitchenのプライマリカラーです",
-  "settingPromptDisplayMode": "表示モード",
-  "settingPromptDisplayModeDesc": "固定の高さまたはドラッグリサイズをサポートする自動の高さ",
-  "settingPromptEditor": "プロンプトエディタ",
-  "settingPromptEditorDesc": "クイック設定サイドバーの上部に簡単なプロンプトエディタを提供します",
-  "settingPromptHighlight": "Promptのシンタックスハイライト",
-  "settingPromptHighlightDesc": "Stable Diffusionのシンタックスルールに基づいて、promptの表示を自動的にハイライトします",
-  "settingQuickSettingSidebarDefaultExpand": "デフォルトで展開",
-  "settingQuickSettingSidebarDefaultExpandDesc": "起動時にサイドバーをデフォルトで展開しますか？",
-  "settingQuickSettingSidebarDefaultWidth": "デフォルト幅",
-  "settingQuickSettingSidebarDefaultWidthDesc": "起動時のサイドバーのデフォルト幅",
-  "settingQuickSettingSidebarDisplayMode": "表示モード",
-  "settingQuickSettingSidebarDisplayModeDesc": "グリッドモードで常に表示するか、ホバー時に自動的に展開するフロートモードで表示するか",
-  "settingQuickSettingSidebarEnable": "有効にする",
-  "settingQuickSettingSidebarEnableDesc": "左側のクイック設定サイドバーを有効にする",
-  "settingReduceAnimation": "アニメーションを削減",
-  "settingReduceAnimationDesc": "ガラスのエフェクトと背景の流れる色を削減し、スムーズさを向上させ、CPUの使用量を節約できます",
-  "settingSplitPreviewer": "2列モード",
-  "settingSplitPreviewerDesc": "プロンプト入力ボックスを左側に配置し、生成ボタンを右側に配置し、スクロール時に生成された画像が常にトップに表示されるようにします（実験的）",
-  "settingSvgIcons": "SVGアイコンを使用",
-  "settingSvgIconsDesc": "stable diffusion webuiの絵文字アイコンをすべてSVGアイコンに置き換えます",
-  "switchTheme": "明暗テーマを切り替える",
-  "sync": "WebUIの設定と同期する",
-  "themeFeedback": "テーマのフィードバック",
-  "themeSetting": "テーマ設定"
+  "brand": {
+    "kitchen": "Kitchen",
+    "lobe": "LobeHub",
+    "custom": "カスタム"
+  },
+  "custom": {
+    "initializing": "StableDiffusion / LobeTheme が初期化中です。お待ちください..."
+  },
+  "footer": {
+    "resources": "リソース",
+    "community": "コミュニティ",
+    "help": "ヘルプ",
+    "moreProducts": "その他の製品"
+  },
+  "header": {
+    "feedback": "フィードバック",
+    "switchTheme": "ライト/ダークテーマの切り替え",
+    "setting": "設定"
+  },
+  "modal": {
+    "themeFeedback": {
+      "title": "テーマフィードバック"
+    },
+    "themeSetting": {
+      "title": "テーマ設定"
+    }
+  },
+  "prompt": {
+    "load": "プロンプトの読み込み",
+    "set": "プロンプトの設定",
+    "negative": "ネガティブ",
+    "positive": "ポジティブ"
+  },
+  "setting": {
+    "button": {
+      "reset": "リセット",
+      "submit": "適用してインターフェースを再起動"
+    },
+    "confirmPageUnload": {
+      "title": "ページ離脱の確認",
+      "desc": "未保存のデータの損失を防ぐのに役立ちます"
+    },
+    "customFont": {
+      "title": "カスタムフォント",
+      "desc": "有効にすると、中国語、英語、コードのテキストの表示を向上させるために自動的にWebフォントを読み込みます"
+    },
+    "customLogo": {
+      "title": "カスタムロゴ",
+      "desc": "URL / Base64 / 絵文字シンボルをサポート"
+    },
+    "customTitle": {
+      "title": "カスタムタイトル",
+      "desc": "カスタムロゴのタイトル"
+    },
+    "extraNetworkSidebar": {
+      "defaultCardSize": {
+        "title": "モデルカバーサイズ",
+        "desc": "開始時のモデルカバーサイズのデフォルト値"
+      },
+      "defaultExpand": {
+        "title": "デフォルト展開",
+        "desc": "開始時にサイドバーをデフォルトで展開するかどうか"
+      },
+      "defaultWidth": {
+        "title": "デフォルト幅",
+        "desc": "開始時のサイドバーのデフォルト幅"
+      },
+      "displayMode": {
+        "title": "表示モード",
+        "desc": "固定表示のグリッドモードまたは浮動モードでサイドにマウスを移動すると自動的に展開"
+      },
+      "enable": {
+        "title": "有効にする",
+        "desc": "右側に追加のネットワークサイドバーを有効にする"
+      }
+    },
+    "group": {
+      "extraNetworkSidebar": "追加のネットワークサイドバー",
+      "layout": "レイアウト設定",
+      "promptTextarea": "プロンプトテキストボックス",
+      "quickSettingSidebar": "クイック設定サイドバー",
+      "theme": "テーマ設定"
+    },
+    "hideFooter": {
+      "title": "フッターを非表示",
+      "desc": "テーマのフッターを非表示にし、Stable Diffusion WebUI のデフォルトフッターのみを表示"
+    },
+    "language": {
+      "title": "言語",
+      "desc": "Lobeテーマの言語"
+    },
+    "logoType": {
+      "title": "ロゴタイプ",
+      "desc": "ロゴタイプ",
+      "preview": "プレビュー"
+    },
+    "neutralColor": {
+      "title": "ニュートラルカラー",
+      "desc": "異なる色傾向のグレーの異なるシェードをカスタマイズします。2番目は元のキッチンのニュートラルカラーです"
+    },
+    "primaryColor": {
+      "title": "プライマリカラー",
+      "desc": "カスタムプライマリカラー。2番目は元のキッチンのテーマカラーです"
+    },
+    "promptDisplayMode": {
+      "title": "プロンプト表示モード",
+      "desc": "固定高さまたはドラッグ可能なリサイズサポート付きの自動高さ",
+      "resizable": "リサイズ可能",
+      "scroll": "スクロール"
+    },
+    "promptEditor": {
+      "title": "プロンプトエディタ",
+      "desc": "クイック設定サイドバーの上部にシンプルなプロンプトエディタを提供"
+    },
+    "promptHighlight": {
+      "title": "プロンプトシンタックスハイライト",
+      "desc": "Stable Diffusionの構文ルールに従ってプロンプト表示を自動的にカラーリング"
+    },
+    "quickSettingSidebar": {
+      "defaultExpand": {
+        "title": "デフォルト展開",
+        "desc": "開始時にサイドバーをデフォルトで展開するかどうか"
+      },
+      "defaultWidth": {
+        "title": "デフォルト幅",
+        "desc": "開始時のサイドバーのデフォルト幅"
+      },
+      "displayMode": {
+        "title": "表示モード",
+        "desc": "固定表示のグリッドモードまたは浮動モードでサイドにマウスを移動すると自動的に展開"
+      },
+      "enable": {
+        "title": "有効にする",
+        "desc": "左側にクイック設定サイドバーを有効にする"
+      }
+    },
+    "reduceAnimation": {
+      "title": "アニメーションを削減",
+      "desc": "ぼかし効果と背景フローカラーを削減し、滑らかさを向上させCPU使用量を節約"
+    },
+    "splitPreviewer": {
+      "title": "分割プレビューア",
+      "desc": "プロンプト入力ボックスを左側に配置し、生成ボタンを右側に配置し、スクロール時に常に生成された画像が上部に表示されるようにします（実験的）"
+    },
+    "svgIcons": {
+      "title": "SVGアイコン",
+      "desc": "Stable Diffusion WebUI のすべての絵文字アイコンをグローバルにSVGアイコンで置き換えます"
+    }
+  },
+  "sidebar": {
+    "extraNetwork": "追加のネットワーク",
+    "quickSetting": "クイック設定",
+    "mode": {
+      "fixed": "固定",
+      "float": "フロート"
+    }
+  }
 }

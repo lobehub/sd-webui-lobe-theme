@@ -1,16 +1,16 @@
 import { createStyles } from 'antd-style';
 
 export const useStyles = createStyles(({ css }) => ({
-  buttonGroup: css`
+    buttonGroup: css`
     display: flex;
     gap: 8px;
   `,
-  promptView: css`
+    promptView: css`
     display: flex;
     flex-direction: column;
     gap: 8px;
   `,
-  view: css`
+    view: css`
     display: flex;
     flex-direction: column;
     gap: 1em;

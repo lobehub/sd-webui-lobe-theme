@@ -15,35 +15,35 @@ export interface SyntaxHighlighterProps {
 }
 
 const SyntaxHighlighter = memo<SyntaxHighlighterProps>(({ children, language, options }) => {
-  const { styles } = useStyles();
-  const { isDarkMode } = useThemeMode();
-  const [codeToHtml, isLoading] = useHighlight((s) => [s.codeToHtml, !s.highlighter]);
+    const { styles } = useStyles();
+    const { isDarkMode } = useThemeMode();
+    const [codeToHtml, isLoading] = useHighlight((s) => [s.codeToHtml, !s.highlighter]);
 
-  useEffect(() => {
-    useHighlight.getState().initHighlighter(options);
-  }, [options]);
+    useEffect(() => {
+        useHighlight.getState().initHighlighter(options);
+    }, [options]);
 
-  return (
-    <>
-      {isLoading ? (
-        <code>{children}</code>
-      ) : (
-        <div
-          className={styles.shiki}
-          dangerouslySetInnerHTML={{
-            __html: codeToHtml(children, language, isDarkMode) || '',
-          }}
-        />
-      )}
+    return (
+        <>
+            {isLoading ? (
+                <code>{children}</code>
+            ) : (
+                <div
+                    className={styles.shiki}
+                    dangerouslySetInnerHTML={{
+                        __html: codeToHtml(children, language, isDarkMode) || '',
+                    }}
+                />
+            )}
 
-      {isLoading && (
-        <Center className={styles.loading} gap={8} horizontal>
-          <Icon icon={Loader2} spin />
+            {isLoading && (
+                <Center className={styles.loading} gap={8} horizontal>
+                    <Icon icon={Loader2} spin />
           Highlighting...
-        </Center>
-      )}
-    </>
-  );
+                </Center>
+            )}
+        </>
+    );
 });
 
 export default SyntaxHighlighter;

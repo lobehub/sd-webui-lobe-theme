@@ -1,7 +1,7 @@
 import { Theme, css } from 'antd-style';
 
 export default (token: Theme) => {
-  const galleryBackground = css`
+    const galleryBackground = css`
     background-color: ${token.colorBgContainer};
     background-image: linear-gradient(45deg, ${token.colorFillTertiary} 25%, transparent 25%),
       linear-gradient(-45deg, ${token.colorFillTertiary} 25%, transparent 25%),
@@ -16,7 +16,7 @@ export default (token: Theme) => {
     border: 2px solid ${token.colorBorderSecondary} !important;
     border-radius: ${token.borderRadius}px !important;
   `;
-  return css`
+    return css`
     .livePreview,
     .gradio-gallery,
     .gradio-image,

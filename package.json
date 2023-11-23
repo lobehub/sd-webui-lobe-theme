@@ -70,6 +70,7 @@
     "ahooks": "^3",
     "antd": "^5",
     "antd-style": "latest",
+    "consola": "^3.2.3",
     "i18next": "^23",
     "i18next-http-backend": "^2",
     "lodash-es": "^4",

@@ -1,7 +1,7 @@
 import { Theme, css } from 'antd-style';
 
 export default (token: Theme) => {
-  return css`
+    return css`
     #root {
       /* sd-webui-prompt-all-in-one */
       .physton-highlight-prompt {

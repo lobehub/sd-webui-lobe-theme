@@ -1,0 +1,159 @@
+{
+  "brand": {
+    "kitchen": "Kitchen",
+    "lobe": "LobeHub",
+    "custom": "Benutzerdefiniert"
+  },
+  "custom": {
+    "initializing": "StableDiffusion / LobeTheme initialisiert, bitte warten..."
+  },
+  "footer": {
+    "resources": "Ressourcen",
+    "community": "Gemeinschaft",
+    "help": "Hilfe",
+    "moreProducts": "Weitere Produkte"
+  },
+  "header": {
+    "feedback": "Feedback",
+    "switchTheme": "Wechseln Sie das Licht-/Dunkel-Thema",
+    "setting": "Einstellung"
+  },
+  "modal": {
+    "themeFeedback": {
+      "title": "Themenfeedback"
+    },
+    "themeSetting": {
+      "title": "Themen-Einstellungen"
+    }
+  },
+  "prompt": {
+    "load": "Lade-Prompt",
+    "set": "Setze-Prompt",
+    "negative": "Negativ",
+    "positive": "Positiv"
+  },
+  "setting": {
+    "button": {
+      "reset": "Zurücksetzen",
+      "submit": "Anwenden und Schnittstelle neu starten"
+    },
+    "confirmPageUnload": {
+      "title": "Bestätigung beim Verlassen der Seite",
+      "desc": "Hilft, den Verlust von ungespeicherten Daten zu verhindern"
+    },
+    "customFont": {
+      "title": "Benutzerdefinierte Schriftart",
+      "desc": "Wenn aktiviert, wird automatisch eine Webfont geladen, um die Anzeige von Text in Chinesisch, Englisch und Code zu verbessern"
+    },
+    "customLogo": {
+      "title": "Benutzerdefiniertes Logo",
+      "desc": "Unterstützt URL / Base64 / Emoji-Symbole"
+    },
+    "customTitle": {
+      "title": "Benutzerdefinierter Titel",
+      "desc": "Benutzerdefinierter Logotitel"
+    },
+    "extraNetworkSidebar": {
+      "defaultCardSize": {
+        "title": "Modell-Cover-Größe",
+        "desc": "Standardwert der Modell-Cover-Größe beim Starten"
+      },
+      "defaultExpand": {
+        "title": "Standardmäßig erweitern",
+        "desc": "Ob die Seitenleiste beim Starten standardmäßig erweitert werden soll"
+      },
+      "defaultWidth": {
+        "title": "Standardbreite",
+        "desc": "Standardbreite der Seitenleiste beim Starten"
+      },
+      "displayMode": {
+        "title": "Anzeigemodus",
+        "desc": "Festgelegt als Rastermodus für konstante Anzeige, automatische Erweiterung, wenn die Maus an den Rand im schwebenden Modus bewegt wird"
+      },
+      "enable": {
+        "title": "Aktivieren",
+        "desc": "Aktivieren Sie die zusätzliche Netzwerkseitenleiste auf der rechten Seite"
+      }
+    },
+    "group": {
+      "extraNetworkSidebar": "Zusätzliche Netzwerkseitenleiste",
+      "layout": "Layout-Einstellungen",
+      "promptTextarea": "Prompt-Textfeld",
+      "quickSettingSidebar": "Schnelle Einstellungsseitenleiste",
+      "theme": "Themen-Einstellungen"
+    },
+    "hideFooter": {
+      "title": "Fußzeile ausblenden",
+      "desc": "Blenden Sie die Themenfußzeile aus und zeigen Sie nur die Standardfußzeile von Stable Diffusion WebUI an"
+    },
+    "language": {
+      "title": "Sprache",
+      "desc": "Lappen-Themensprache"
+    },
+    "logoType": {
+      "title": "Logo-Typ",
+      "desc": "Logo-Typ",
+      "preview": "Vorschau"
+    },
+    "neutralColor": {
+      "title": "Neutrale Farbe",
+      "desc": "Passen Sie verschiedene Grautöne mit unterschiedlichen Farbtendenzen an, der zweite ist die originale neutrale Farbe der Küche"
+    },
+    "primaryColor": {
+      "title": "Primärfarbe",
+      "desc": "Benutzerdefinierte Primärfarbe, die zweite ist die originale Farbe des Küchenthemas"
+    },
+    "promptDisplayMode": {
+      "title": "Prompt-Anzeigemodus",
+      "desc": "Feste Höhe oder automatische Höhe mit ziehbarer Größenänderungsunterstützung",
+      "resizable": "Größenänderbar",
+      "scroll": "Scrollen"
+    },
+    "promptEditor": {
+      "title": "Prompt-Editor",
+      "desc": "Bietet einen einfachen Prompt-Editor oben in der Schnelleinstellungsseitenleiste"
+    },
+    "promptHighlight": {
+      "title": "Prompt-Syntaxhervorhebung",
+      "desc": "Färbt die Prompt-Anzeige automatisch gemäß den Stable Diffusion-Syntaxregeln ein"
+    },
+    "quickSettingSidebar": {
+      "defaultExpand": {
+        "title": "Standardmäßig erweitern",
+        "desc": "Ob die Seitenleiste beim Starten standardmäßig erweitert werden soll"
+      },
+      "defaultWidth": {
+        "title": "Standardbreite",
+        "desc": "Standardbreite der Seitenleiste beim Starten"
+      },
+      "displayMode": {
+        "title": "Anzeigemodus",
+        "desc": "Festgelegt als Rastermodus für konstante Anzeige, automatische Erweiterung, wenn die Maus an den Rand im schwebenden Modus bewegt wird"
+      },
+      "enable": {
+        "title": "Aktivieren",
+        "desc": "Aktivieren Sie die Schnelleinstellungsseitenleiste auf der linken Seite"
+      }
+    },
+    "reduceAnimation": {
+      "title": "Animation reduzieren",
+      "desc": "Reduzieren Sie den Unschärfeeffekt und die Hintergrundflussfarbe, um die Geschmeidigkeit zu verbessern und die CPU-Auslastung zu reduzieren"
+    },
+    "splitPreviewer": {
+      "title": "Split-Previewer",
+      "desc": "Platzieren Sie das Prompt-Eingabefeld links und die Generierungsschaltfläche rechts, um sicherzustellen, dass das generierte Bild beim Scrollen immer oben angezeigt wird (experimentell)"
+    },
+    "svgIcons": {
+      "title": "SVG-Symbole",
+      "desc": "Ersetzen Sie alle Emoji-Symbole in Stable Diffusion WebUI global durch SVG-Symbole"
+    }
+  },
+  "sidebar": {
+    "extraNetwork": "Zusätzliches Netzwerk",
+    "quickSetting": "Schnelleinstellung",
+    "mode": {
+      "fixed": "Fixiert",
+      "float": "Schwebend"
+    }
+  }
+}

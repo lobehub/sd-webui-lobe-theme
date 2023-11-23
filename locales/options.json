@@ -16,15 +16,27 @@
     "value": "ja_JP"
   },
   {
-    "label": "Русский",
-    "value": "ru_RU"
-  },
-  {
     "label": "한국어",
     "value": "ko_KR"
   },
   {
+    "label": "Français",
+    "value": "fr_FR"
+  },
+  {
+    "label": "Deutsch",
+    "value": "de_DE"
+  },
+  {
+    "label": "Русский",
+    "value": "ru_RU"
+  },
+  {
     "label": "Español",
     "value": "es_ES"
+  },
+  {
+    "label": "Português",
+    "value": "pt_BR"
   }
 ]

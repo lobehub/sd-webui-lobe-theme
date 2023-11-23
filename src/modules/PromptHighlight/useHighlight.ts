@@ -28,33 +28,33 @@ interface Store {
 }
 
 export const useHighlight = createWithEqualityFn<Store>(
-  (set, get) => ({
-    codeToHtml: (text, language, isDarkMode) => {
-      const { highlighter } = get();
+    (set, get) => ({
+        codeToHtml: (text, language, isDarkMode) => {
+            const { highlighter } = get();
 
-      if (!highlighter) return '';
+            if (!highlighter) return '';
 
-      try {
-        return highlighter?.codeToHtml(text, {
-          lang: language,
-          theme: isDarkMode ? 'dark' : 'light',
-        });
-      } catch {
-        return text;
-      }
-    },
-    highlighter: undefined,
+            try {
+                return highlighter?.codeToHtml(text, {
+                    lang: language,
+                    theme: isDarkMode ? 'dark' : 'light',
+                });
+            } catch {
+                return text;
+            }
+        },
+        highlighter: undefined,
 
-    initHighlighter: async(options) => {
-      if (!get().highlighter) {
-        const highlighter = await getHighlighter({
-          langs: options?.langs,
-          themes: options?.themes,
-        });
+        initHighlighter: async(options) => {
+            if (!get().highlighter) {
+                const highlighter = await getHighlighter({
+                    langs: options?.langs,
+                    themes: options?.themes,
+                });
 
-        set({ highlighter });
-      }
-    },
-  }),
-  shallow,
+                set({ highlighter });
+            }
+        },
+    }),
+    shallow,
 );

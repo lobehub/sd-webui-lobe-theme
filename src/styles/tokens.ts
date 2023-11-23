@@ -2,7 +2,7 @@ import { type Theme, css } from 'antd-style';
 import { readableColor } from 'polished';
 
 export default (token: Theme) => {
-  return css`
+    return css`
     :root,
     .dark {
       --primary-50: ${token.geekblue1};

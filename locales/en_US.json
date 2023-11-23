@@ -1,82 +1,159 @@
 {
-  "appInitializing": "StableDiffusion / LobeTheme is initializing, please wait...",
-  "community": "Community",
-  "custom": "Custom",
-  "extraNetwork": "Extra Network",
-  "feedback": "Feedback",
-  "fixed": "Fixed",
-  "float": "Float",
-  "help": "Help",
-  "kitchen": "Kitchen",
-  "loadPrompt": "Load Prompt",
-  "lobe": "Lobe",
-  "moreProducts": "More Products",
-  "negative": "Negative",
-  "positive": "Positive",
-  "quickSetting": "Quick Setting",
-  "resizable": "Resizable",
-  "resources": "Resources",
-  "scroll": "Scroll",
-  "setPrompt": "Set Prompt",
-  "setting": "Setting",
-  "settingButtonReset": "Reset",
-  "settingButtonSubmit": "Apply and Restart Interface",
-  "settingConfirmPageUnload": "Confirmation on page leaving",
-  "settingConfirmPageUnloadDesc": "Helps prevent loss of unsaved data",
-  "settingCustomFont": "Load Custom Font",
-  "settingCustomFontDesc": "When enabled, it will automatically load a webfont to enhance the display of text in Chinese, English, and code",
-  "settingCustomLogo": "Custom Logo",
-  "settingCustomLogoDesc": "Support URL / Base64 / Emoji symbols",
-  "settingCustomTitle": "Custom Title",
-  "settingCustomTitleDesc": "Custom Logo Title",
-  "settingExtraNetworkSidebarDefaultCardSize": "Model Cover Size",
-  "settingExtraNetworkSidebarDefaultCardSizeDesc": "Default value of model cover size when starting",
-  "settingExtraNetworkSidebarDefaultExpand": "Default Expand",
-  "settingExtraNetworkSidebarDefaultExpandDesc": "Whether to expand the sidebar by default when starting",
-  "settingExtraNetworkSidebarDefaultWidth": "Default Width",
-  "settingExtraNetworkSidebarDefaultWidthDesc": "Default width of the sidebar when starting",
-  "settingExtraNetworkSidebarDisplayMode": "Display Mode",
-  "settingExtraNetworkSidebarDisplayModeDesc": "Fixed as grid mode for constant display, auto-expand when the mouse moves to the side in floating mode",
-  "settingExtraNetworkSidebarEnable": "Enable",
-  "settingExtraNetworkSidebarEnableDesc": "Enable the extra network sidebar on the right side",
-  "settingGroupExtraNetworkSidebar": "Extra Network Sidebar",
-  "settingGroupLayout": "Layout Settings",
-  "settingGroupPromptTextarea": "Prompt Textbox",
-  "settingGroupQuickSettingSidebar": "Quick Setting Sidebar",
-  "settingGroupTheme": "Theme Settings",
-  "settingHideFooter": "Hide Footer",
-  "settingHideFooterDesc": "Hide the theme footer and only display the default footer of stable diffusion webui",
-  "settingLanguage": "Language",
-  "settingLanguageDesc": "Lobe Theme language",
-  "settingLogoPreview": "Preview",
-  "settingLogoType": "Logo Type",
-  "settingLogoTypeDesc": "Logo Type",
-  "settingNeutralColor": "Neutral Color",
-  "settingNeutralColorDesc": "Customize different shades of gray with different color tendencies, the second one is the original Kitchen neutral color",
-  "settingPrimaryColor": "Primary Color",
-  "settingPrimaryColorDesc": "Custom primary color, the second one is the original Kitchen theme color",
-  "settingPromptDisplayMode": "Display Mode",
-  "settingPromptDisplayModeDesc": "Fixed height or auto height with draggable resize support",
-  "settingPromptEditor": "Prompt Editor",
-  "settingPromptEditorDesc": "Provide a simple prompt editor at the top of the quick setting sidebar",
-  "settingPromptHighlight": "Prompt Syntax Highlighting",
-  "settingPromptHighlightDesc": "Automatically colorize prompt display according to the Stable Diffusion syntax rules",
-  "settingQuickSettingSidebarDefaultExpand": "Default Expand",
-  "settingQuickSettingSidebarDefaultExpandDesc": "Whether to expand the sidebar by default when starting",
-  "settingQuickSettingSidebarDefaultWidth": "Default Width",
-  "settingQuickSettingSidebarDefaultWidthDesc": "Default width of the sidebar when starting",
-  "settingQuickSettingSidebarDisplayMode": "Display Mode",
-  "settingQuickSettingSidebarDisplayModeDesc": "Fixed as grid mode for constant display, auto-expand when the mouse moves to the side in floating mode",
-  "settingQuickSettingSidebarEnable": "Enable",
-  "settingQuickSettingSidebarEnableDesc": "Enable the quick setting sidebar on the left side",
-  "settingReduceAnimation": "Reduce Animation",
-  "settingReduceAnimationDesc": "Reduce the blur effect and background flow color, which can improve smoothness and save CPU usage",
-  "settingSplitPreviewer": "Split Previewer",
-  "settingSplitPreviewerDesc": "Put the prompt input box on the left and the generate button on the right, ensuring that the generated image is always displayed at the top when scrolling (experimental)",
-  "settingSvgIcons": "Use SVG Icons",
-  "settingSvgIconsDesc": "Replace all Emoji icons in stable diffusion webui with SVG icons globally",
-  "switchTheme": "Switch Light/Dark Theme",
-  "sync": "Sync with webui setting",
-  "themeFeedback": "Theme Feedback",
-  "themeSetting": "Theme Settings"
+  "brand": {
+    "kitchen": "Kitchen",
+    "lobe": "LobeHub",
+    "custom": "Custom"
+  },
+  "custom": {
+    "initializing": "StableDiffusion / LobeTheme is initializing, please wait..."
+  },
+  "footer": {
+    "resources": "Resources",
+    "community": "Community",
+    "help": "Help",
+    "moreProducts": "More Products"
+  },
+  "header": {
+    "feedback": "Feedback",
+    "switchTheme": "Switch Light/Dark Theme",
+    "setting": "Setting"
+  },
+  "modal": {
+    "themeFeedback": {
+      "title": "Theme Feedback"
+    },
+    "themeSetting": {
+      "title": "Theme Settings"
+    }
+  },
+  "prompt": {
+    "load": "Load Prompt",
+    "set": "Set Prompt",
+    "negative": "Negative",
+    "positive": "Positive"
+  },
+  "setting": {
+    "button": {
+      "reset": "Reset",
+      "submit": "Apply and Restart Interface"
+    },
+    "confirmPageUnload": {
+      "title": "Confirmation on page leaving",
+      "desc": "Helps prevent loss of unsaved data"
+    },
+    "customFont": {
+      "title": "Custom Font",
+      "desc": "When enabled, it will automatically load a webfont to enhance the display of text in Chinese, English, and code"
+    },
+    "customLogo": {
+      "title": "Custom Logo",
+      "desc": "Support URL / Base64 / Emoji symbols"
+    },
+    "customTitle": {
+      "title": "Custom Title",
+      "desc": "Custom Logo Title"
+    },
+    "extraNetworkSidebar": {
+      "defaultCardSize": {
+        "title": "Model Cover Size",
+        "desc": "Default value of model cover size when starting"
+      },
+      "defaultExpand": {
+        "title": "Default Expand",
+        "desc": "Whether to expand the sidebar by default when starting"
+      },
+      "defaultWidth": {
+        "title": "Default Width",
+        "desc": "Default width of the sidebar when starting"
+      },
+      "displayMode": {
+        "title": "Display Mode",
+        "desc": "Fixed as grid mode for constant display, auto-expand when the mouse moves to the side in floating mode"
+      },
+      "enable": {
+        "title": "Enable",
+        "desc": "Enable the extra network sidebar on the right side"
+      }
+    },
+    "group": {
+      "extraNetworkSidebar": "Extra Network Sidebar",
+      "layout": "Layout Settings",
+      "promptTextarea": "Prompt Textbox",
+      "quickSettingSidebar": "Quick Setting Sidebar",
+      "theme": "Theme Settings"
+    },
+    "hideFooter": {
+      "title": "Hide Footer",
+      "desc": "Hide the theme footer and only display the default footer of stable diffusion webui"
+    },
+    "language": {
+      "title": "Language",
+      "desc": "Lobe Theme language"
+    },
+    "logoType": {
+      "title": "Logo Type",
+      "desc": "Logo Type",
+      "preview": "Preview"
+    },
+    "neutralColor": {
+      "title": "Neutral Color",
+      "desc": "Customize different shades of gray with different color tendencies, the second one is the original Kitchen neutral color"
+    },
+    "primaryColor": {
+      "title": "Primary Color",
+      "desc": "Custom primary color, the second one is the original Kitchen theme color"
+    },
+    "promptDisplayMode": {
+      "title": "Prompt Display Mode",
+      "desc": "Fixed height or auto height with draggable resize support",
+      "resizable": "Resizable",
+      "scroll": "Scroll"
+    },
+    "promptEditor": {
+      "title": "Prompt Editor",
+      "desc": "Provide a simple prompt editor at the top of the quick setting sidebar"
+    },
+    "promptHighlight": {
+      "title": "Prompt Syntax Highlighting",
+      "desc": "Automatically colorize prompt display according to the Stable Diffusion syntax rules"
+    },
+    "quickSettingSidebar": {
+      "defaultExpand": {
+        "title": "Default Expand",
+        "desc": "Whether to expand the sidebar by default when starting"
+      },
+      "defaultWidth": {
+        "title": "Default Width",
+        "desc": "Default width of the sidebar when starting"
+      },
+      "displayMode": {
+        "title": "Display Mode",
+        "desc": "Fixed as grid mode for constant display, auto-expand when the mouse moves to the side in floating mode"
+      },
+      "enable": {
+        "title": "Enable",
+        "desc": "Enable the quick setting sidebar on the left side"
+      }
+    },
+    "reduceAnimation": {
+      "title": "Reduce Animation",
+      "desc": "Reduce the blur effect and background flow color, which can improve smoothness and save CPU usage"
+    },
+    "splitPreviewer": {
+      "title": "Split Previewer",
+      "desc": "Put the prompt input box on the left and the generate button on the right, ensuring that the generated image is always displayed at the top when scrolling (experimental)"
+    },
+    "svgIcons": {
+      "title": "SVG Icons",
+      "desc": "Replace all Emoji icons in stable diffusion webui with SVG icons globally"
+    }
+  },
+  "sidebar": {
+    "extraNetwork": "Extra Network",
+    "quickSetting": "Quick Setting",
+    "mode": {
+      "fixed": "Fixed",
+      "float": "Float"
+    }
+  }
 }

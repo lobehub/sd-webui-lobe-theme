@@ -1,8 +1,8 @@
 import { createStyles } from 'antd-style';
 
 export const useStyles = createStyles(
-  ({ css }, { headerHeight = 64, width }: { headerHeight?: number; width: number }) => ({
-    container: css`
+    ({ css }, { headerHeight = 64, width }: { headerHeight?: number; width: number }) => ({
+        container: css`
       height: calc(100vh - ${headerHeight}px);
 
       ul.options {
@@ -68,5 +68,5 @@ export const useStyles = createStyles(
         }
       }
     `,
-  }),
+    }),
 );

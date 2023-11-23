@@ -2,7 +2,7 @@ import { Theme, css } from 'antd-style';
 import { readableColor } from 'polished';
 
 export default (token: Theme) => {
-  return css`
+    return css`
     .gradio-group,
     .gradio-row {
       gap: 12px !important;

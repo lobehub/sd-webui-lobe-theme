@@ -1,7 +1,7 @@
 import { Theme, css } from 'antd-style';
 
 export default (token: Theme) => {
-  return css`
+    return css`
     .block.gradio-checkbox {
       margin: 0 !important;
     }

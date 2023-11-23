@@ -16,27 +16,27 @@ export interface SettingProps {
 }
 
 const Setting = memo<SettingProps>(({ open, onCancel }) => {
-  const { t } = useTranslation();
-  return (
-    <Modal
-      footer={false}
-      onCancel={onCancel}
-      open={open}
-      title={
-        <Flexbox align={'center'} gap={4} horizontal>
-          <a href={homepage} rel="noreferrer" target="_blank">
-            <ActionIcon icon={Book} title="Setting Documents" />
-          </a>
-          <Space>
-            {t('themeSetting')}
-            <VersionTag />
-          </Space>
-        </Flexbox>
-      }
-    >
-      <SettingForm />
-    </Modal>
-  );
+    const { t } = useTranslation();
+    return (
+        <Modal
+            footer={false}
+            onCancel={onCancel}
+            open={open}
+            title={
+                <Flexbox align={'center'} gap={4} horizontal>
+                    <a href={homepage} rel="noreferrer" target="_blank">
+                        <ActionIcon icon={Book} title="Setting Documents" />
+                    </a>
+                    <Space>
+                        {t('modal.themeSetting.title')}
+                        <VersionTag />
+                    </Space>
+                </Flexbox>
+            }
+        >
+            <SettingForm />
+        </Modal>
+    );
 });
 
 export default Setting;
