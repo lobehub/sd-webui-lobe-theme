@@ -5,9 +5,9 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
-import { homepage } from '@/../package.json';
 import VersionTag from '@/components/VersionTag';
 
+import { homepage } from '../../../package.json';
 import SettingForm from './SettingForm';
 
 export interface SettingProps {

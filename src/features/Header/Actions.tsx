@@ -7,7 +7,8 @@ import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { shallow } from 'zustand/shallow';
 
-import { Giscus, Setting } from '@/components';
+import { Giscus } from '@/components';
+import Setting from '@/features/Setting';
 import { selectors, useAppStore } from '@/store';
 
 const CivitaiLogo: LucideIcon | any = ({ size }: any) => (

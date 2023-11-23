@@ -10,7 +10,17 @@ module.exports = defineConfig({
   entryLocale: 'en_US',
   output: 'locales',
   outputLocales: outputLocales,
-  splitToken: 2500,
   temperature: 0,
-  modelName: 'gpt-3.5-turbo',
+  modelName: 'gpt-3.5-turbo-1106',
+  experimental: {
+    jsonMode: true,
+  },
+  markdown: {
+    entry: ['./README.md'],
+    outputLocales: ['zh_CN'],
+    outputExtensions: (locale) => {
+      if (locale === 'en_US') return '.md';
+      return `.${locale.replace('_', '-')}.md`;
+    },
+  },
 });
