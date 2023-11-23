@@ -1,6 +1,6 @@
 name: '🌠 功能需求 Feature Request'
 description: '需求或建议 | Suggest an idea'
-title: '[Request] '
+title: '[Request] 请取一个需求概要描述标题 | Please take a brief description of the title'
 labels: '🌠 Feature Request'
 body:
   - type: textarea

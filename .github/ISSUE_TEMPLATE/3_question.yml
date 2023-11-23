@@ -1,6 +1,6 @@
-name: '😇 疑问或帮助 Help Wanted'
-description: '疑问或需要帮助 | Need help'
-title: '[Question] '
+name: '😇 Help Wanted 疑问或帮助'
+description: 'Need help | 疑问或需要帮助'
+title: '[Question] 请取一个疑问概要描述标题 | Please take a brief description of the title'
 labels: '😇 Help Wanted'
 body:
   - type: markdown

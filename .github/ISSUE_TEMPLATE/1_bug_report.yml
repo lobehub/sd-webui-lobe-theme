@@ -1,8 +1,6 @@
 name: '🐛 反馈缺陷 Bug Report'
-description: |
-  反馈一个问题缺陷, 请确保你已经阅读了 [常见问题](https://github.com/lobehub/sd-webui-lobe-theme/issues/467)
-  Report an bug, please make sure you have read the [FAQ](https://github.com/lobehub/sd-webui-lobe-theme/issues/468)
-title: '[Bug] '
+description: '反馈一个问题缺陷 | Report an bug'
+title: '[Bug] 请取一个问题概要描述标题 | Please take a brief description of the title'
 labels: '🐛 Bug'
 body:
   - type: markdown
