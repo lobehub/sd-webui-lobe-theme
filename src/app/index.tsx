@@ -2,17 +2,17 @@ import { LayoutHeader, LayoutMain, LayoutSidebar } from '@lobehub/ui';
 import isEqual from 'fast-deep-equal';
 import { memo, useEffect } from 'react';
 
-import '@/i18n/config';
+import '@/locales/config';
 import { PromptHighlight } from '@/modules/PromptHighlight';
-import replaceIcon from '@/script/replaceIcon';
+import replaceIcon from '@/scriptS/replaceIcon';
 import { selectors, useAppStore } from '@/store';
 import GlobalStyle from '@/styles';
 
-import Content from './Content';
-import ExtraNetworkSidebar from './ExtraNetworkSidebar';
-import Footer from './Footer';
-import Header from './Header';
-import QuickSettingSidebar from './QuickSettingSidebar';
+import Content from '../features/Content';
+import ExtraNetworkSidebar from '../features/ExtraNetworkSidebar';
+import Footer from '../features/Footer';
+import Header from '../features/Header';
+import QuickSettingSidebar from '../features/QuickSettingSidebar';
 import { useStyles } from './style';
 
 const HEADER_HEIGHT = 64;

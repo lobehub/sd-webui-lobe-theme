@@ -3,11 +3,11 @@ import { useTheme } from 'antd-style';
 import { memo } from 'react';
 import { shallow } from 'zustand/shallow';
 
-import { homepage, name } from '@/../package.json';
 import { Logo } from '@/components';
 import { useAppStore } from '@/store';
 import { type DivProps } from '@/types';
 
+import { homepage, name } from '../../../package.json';
 import Actions from './Actions';
 import Nav from './Nav';
 

@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client';
 
-import App from './App';
+import Page from './app/page';
 
 if (window.global === undefined) window.global = window;
 
@@ -19,7 +19,7 @@ if (!skipLoad) {
         document.querySelector('gradio-app')?.append(root);
       }
       const client = createRoot(root);
-      client.render(<App />);
+      client.render(<Page />);
       console.timeEnd('🤯 Lobe Theme load in DevMode');
     },
     { once: true },

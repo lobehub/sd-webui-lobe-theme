@@ -11,6 +11,7 @@ export default defineConfig({
   base: '/dev',
   build: {
     cssMinify: true,
+    emptyOutDir: true,
     minify: 'terser',
     outDir: './javascript',
     rollupOptions: {
@@ -26,7 +27,7 @@ export default defineConfig({
     'process.env': process.env,
   },
   plugins: [
-    react(),
+    react({ devTarget: 'esnext', tsDecorators: true }),
 
     !isProduction && {
       configureServer: (server) => {
@@ -40,7 +41,7 @@ export default defineConfig({
     },
     !isProduction && {
       configureServer: (server) => {
-        server.middlewares.use(async (_request, res, next): Promise<void> => {
+        server.middlewares.use(async(_request, res, next): Promise<void> => {
           if (
             _request.originalUrl === '/dev' ||
             _request.originalUrl === '/dev?__theme=dark' ||

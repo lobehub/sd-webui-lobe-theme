@@ -204,8 +204,8 @@ export const Converter = {
         return a.includes('<') && !b.includes('<') ?
           1 :
           b.includes('<') && !a.includes('<') ?
-          -1 :
-          0;
+            -1 :
+            0;
       });
   },
 

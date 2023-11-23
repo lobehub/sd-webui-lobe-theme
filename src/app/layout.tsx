@@ -1,15 +1,14 @@
-import { Suspense, memo, useEffect, useState } from 'react';
+import { PropsWithChildren, Suspense, memo, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { shallow } from 'zustand/shallow';
 
 import { Loading } from '@/components';
 import Layout from '@/layouts';
-import Index from '@/pages';
 import { useAppStore } from '@/store';
 
 import manifest from './manifest';
 
-export const App = memo(() => {
+export const Layouts = memo<PropsWithChildren>(({ children }) => {
   const [loading, setLoading] = useState(true);
   const { setCurrentTab, onInit, storeLoading } = useAppStore(
     (st) => ({
@@ -62,9 +61,9 @@ export const App = memo(() => {
         <meta content="#000000" name="theme-color" />
         <link href={manifest} rel="manifest" />
       </Helmet>
-      <Layout>{storeLoading === false && loading === false ? <Index /> : <Loading />}</Layout>
+      <Layout>{storeLoading === false && loading === false ? children : <Loading />}</Layout>
     </Suspense>
   );
 });
 
-export default App;
+export default Layouts;

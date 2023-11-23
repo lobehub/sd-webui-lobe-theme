@@ -6,8 +6,8 @@ import { ZoomIn, ZoomOut } from 'lucide-react';
 import { memo, useEffect, useRef, useState } from 'react';
 import { shallow } from 'zustand/shallow';
 
-import { useStyles } from '@/pages/ExtraNetworkSidebar/style';
-import civitaiHelperFix from '@/script/civitaiHelperFix';
+import { useStyles } from '@/features/ExtraNetworkSidebar/style';
+import civitaiHelperFix from '@/scriptS/civitaiHelperFix';
 import { selectors, useAppStore } from '@/store';
 
 const Inner = memo(() => {
