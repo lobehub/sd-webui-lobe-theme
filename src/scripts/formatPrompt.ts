@@ -175,13 +175,13 @@ export const Converter = {
       let inBracket = false;
       for (let index = 0; index < string__.length; index++) {
         if (string__[index] === ',' && !inBracket) {
-          array.push(string__.slice(start, index).trim());
+          array.push(string__.slice(start, index));
           start = index + 1;
         } else if (bracketRegex.test(string__[index])) {
           inBracket = !inBracket;
         }
       }
-      array.push(string__.slice(Math.max(0, start)).trim());
+      array.push(string__.slice(Math.max(0, start)));
       return array;
     };
 

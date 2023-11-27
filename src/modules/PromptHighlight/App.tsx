@@ -78,7 +78,7 @@ const App = memo<AppProps>(({ parentId }) => {
       style={{ height: size?.height, width: handlePromptResize() }}
     >
       <SyntaxHighlighter language="prompt" options={options}>
-        {prompt.trim()}
+        {prompt}
       </SyntaxHighlighter>
     </div>
   );
