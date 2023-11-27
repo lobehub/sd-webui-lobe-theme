@@ -1,4 +1,4 @@
-import type {LobeCustomStylish, LobeCustomToken} from '@lobehub/ui';
+import type { LobeCustomStylish, LobeCustomToken } from '@lobehub/ui';
 import 'antd-style';
 
 declare module 'antd-style' {

@@ -1,8 +1,8 @@
-import type {SelectProps} from 'antd';
+import type { SelectProps } from 'antd';
 
-import type {NeutralColor, PrimaryColor} from '@/features/Setting/data';
-import {DEFAULT_LOCALE_OPTIONS, DEFAULT_VERSION} from '@/store/api';
-import type {I18n} from '@/types';
+import type { NeutralColor, PrimaryColor } from '@/features/Setting/data';
+import { DEFAULT_LOCALE_OPTIONS, DEFAULT_VERSION } from '@/store/api';
+import type { I18n } from '@/types';
 
 export interface WebuiSetting {
   confirmPageUnload: boolean;
@@ -34,30 +34,30 @@ export interface WebuiSetting {
 export type WebuiSettingKeys = keyof WebuiSetting;
 
 export const DEFAULT_SETTING: WebuiSetting = {
-    confirmPageUnload: false,
-    enableExtraNetworkSidebar: true,
-    enableHighlight: false,
-    enableSidebar: true,
-    enableWebFont: true,
-    extraNetworkCardSize: 86,
-    extraNetworkFixedMode: 'fixed',
-    extraNetworkSidebarExpand: true,
-    extraNetworkSidebarWidth: 340,
-    i18n: 'en_US',
-    layoutHideFooter: false,
-    layoutSplitPreview: false,
-    liteAnimation: false,
-    logoCustomTitle: '',
-    logoCustomUrl: '',
-    logoType: 'lobe',
-    neutralColor: undefined,
-    primaryColor: undefined,
-    promptEditor: false,
-    promptTextareaType: 'resizable',
-    sidebarExpand: true,
-    sidebarFixedMode: 'fixed',
-    sidebarWidth: 280,
-    svgIcon: true,
+  confirmPageUnload: false,
+  enableExtraNetworkSidebar: true,
+  enableHighlight: false,
+  enableSidebar: true,
+  enableWebFont: true,
+  extraNetworkCardSize: 86,
+  extraNetworkFixedMode: 'fixed',
+  extraNetworkSidebarExpand: true,
+  extraNetworkSidebarWidth: 340,
+  i18n: 'en_US',
+  layoutHideFooter: false,
+  layoutSplitPreview: false,
+  liteAnimation: false,
+  logoCustomTitle: '',
+  logoCustomUrl: '',
+  logoType: 'lobe',
+  neutralColor: undefined,
+  primaryColor: undefined,
+  promptEditor: false,
+  promptTextareaType: 'resizable',
+  sidebarExpand: true,
+  sidebarFixedMode: 'fixed',
+  sidebarWidth: 280,
+  svgIcon: true,
 };
 
 export interface StroeState {
@@ -71,11 +71,11 @@ export interface StroeState {
 }
 
 export const initialState: StroeState = {
-    currentTab: 'tab_txt2img',
-    latestVersion: DEFAULT_VERSION,
-    loading: true,
-    localeOptions: DEFAULT_LOCALE_OPTIONS,
-    setting: DEFAULT_SETTING,
-    themeMode: 'dark',
-    version: DEFAULT_VERSION,
+  currentTab: 'tab_txt2img',
+  latestVersion: DEFAULT_VERSION,
+  loading: true,
+  localeOptions: DEFAULT_LOCALE_OPTIONS,
+  setting: DEFAULT_SETTING,
+  themeMode: 'dark',
+  version: DEFAULT_VERSION,
 };

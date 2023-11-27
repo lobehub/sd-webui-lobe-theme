@@ -1,4 +1,4 @@
-import {type HTMLAttributes} from 'react';
+import { type HTMLAttributes } from 'react';
 
 import translation from '@/../locales/en_US.json';
 import i18nOptions from '@/../locales/options.json';
@@ -6,7 +6,7 @@ import i18nOptions from '@/../locales/options.json';
 export type I18n = (typeof i18nOptions)[number]['value'];
 
 export const resources = {
-    translation,
+  translation,
 } as const;
 
 type TranslationKeys = keyof typeof translation;

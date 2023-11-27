@@ -70,7 +70,7 @@ jobs:
         with:
           actions: 'close-issues'
           token: ${{ secrets.GH_TOKEN }}
-          labels: "Inactive"
+          labels: 'Inactive'
           inactive-day: 90
           body: |
             Since the issue was labeled with `Inactive`, and no response in 30 days. This issue will be closed. If you have any questions, you can comment and reply.

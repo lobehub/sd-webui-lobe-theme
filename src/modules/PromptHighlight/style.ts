@@ -1,9 +1,9 @@
-import {createStyles} from 'antd-style';
+import { createStyles } from 'antd-style';
 
-export const useStyles = createStyles(({css, token, cx, stylish, prefixCls}) => {
-    const prefix = `${prefixCls}-highlighter`;
-    return {
-        container: css`
+export const useStyles = createStyles(({ css, token, cx, stylish, prefixCls }) => {
+  const prefix = `${prefixCls}-highlighter`;
+  return {
+    container: css`
       pointer-events: none;
       position: absolute;
       overflow: hidden auto;
@@ -18,9 +18,9 @@ export const useStyles = createStyles(({css, token, cx, stylish, prefixCls}) => 
         vertical-align: bottom !important;
       }
     `,
-        loading: cx(
-            stylish.blur,
-            css`
+    loading: cx(
+      stylish.blur,
+      css`
         position: absolute;
         z-index: 10;
         top: 0;
@@ -38,10 +38,10 @@ export const useStyles = createStyles(({css, token, cx, stylish, prefixCls}) => 
 
         border-radius: ${token.borderRadius};
       `,
-        ),
-        shiki: cx(
-            `${prefix}-shiki`,
-            css`
+    ),
+    shiki: cx(
+      `${prefix}-shiki`,
+      css`
         margin: 0;
 
         .shiki {
@@ -55,6 +55,6 @@ export const useStyles = createStyles(({css, token, cx, stylish, prefixCls}) => 
           }
         }
       `,
-        ),
-    };
+    ),
+  };
 });

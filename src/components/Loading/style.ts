@@ -1,14 +1,14 @@
-import {createStyles} from 'antd-style';
-import {adjustHue, rgba} from 'polished';
+import { createStyles } from 'antd-style';
+import { adjustHue, rgba } from 'polished';
 
 export const useStyles = createStyles(
-    (
-        {css, stylish, cx, token},
-        {isPrimaryColor, liteAnimation}: { isPrimaryColor?: boolean; liteAnimation?: boolean },
-    ) => ({
-        canvas: cx(
-            stylish.gradientAnimation,
-            isPrimaryColor &&
+  (
+    { css, stylish, cx, token },
+    { isPrimaryColor, liteAnimation }: { isPrimaryColor?: boolean; liteAnimation?: boolean },
+  ) => ({
+    canvas: cx(
+      stylish.gradientAnimation,
+      isPrimaryColor &&
         css`
           background-image: linear-gradient(
             -45deg,
@@ -18,7 +18,7 @@ export const useStyles = createStyles(
             ${adjustHue(-45, token.colorPrimary)}
           );
         `,
-            css`
+      css`
         pointer-events: none;
 
         position: absolute;
@@ -33,10 +33,10 @@ export const useStyles = createStyles(
         opacity: 0.2;
         filter: blur(100px);
       `,
-        ),
-        container: cx(
-            !liteAnimation && stylish.blur,
-            css`
+    ),
+    container: cx(
+      !liteAnimation && stylish.blur,
+      css`
         position: fixed;
         z-index: 9999;
         inset: 0;
@@ -50,11 +50,11 @@ export const useStyles = createStyles(
 
         background: ${liteAnimation ? token.colorBgLayout : rgba(token.colorBgLayout, 0.5)};
       `,
-        ),
-        icon: css`
+    ),
+    icon: css`
       color: ${token.colorPrimary};
     `,
-        inner: css`
+    inner: css`
       display: flex;
       flex-direction: column;
       gap: 16px;
@@ -63,5 +63,5 @@ export const useStyles = createStyles(
 
       width: min(50%, 580px);
     `,
-    }),
+  }),
 );

@@ -1,8 +1,8 @@
-import {createStyles} from 'antd-style';
+import { createStyles } from 'antd-style';
 
 export const useStyles = createStyles(
-    ({css, token}, {headerHeight = 64, size = 86}: { headerHeight?: number; size?: number }) => ({
-        body: css`
+  ({ css, token }, { headerHeight = 64, size = 86 }: { headerHeight?: number; size?: number }) => ({
+    body: css`
       .hide {
         display: none;
       }
@@ -222,8 +222,8 @@ export const useStyles = createStyles(
         font-family: ${token.fontFamily};
       }
     `,
-        container: css`
+    container: css`
       height: calc(100vh - ${headerHeight}px);
     `,
-    }),
+  }),
 );

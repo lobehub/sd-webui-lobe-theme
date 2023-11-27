@@ -1,4 +1,4 @@
-import {createGlobalStyle} from 'antd-style';
+import { createGlobalStyle } from 'antd-style';
 
 import antdOverride from './antdOverride';
 import button from './components/button';
@@ -16,22 +16,22 @@ import table from './components/table';
 import tabs from './components/tabs';
 import tokens from './tokens';
 
-const GlobalStyle = createGlobalStyle(({theme}) => [
-    tokens(theme),
-    antdOverride(theme),
-    button(theme),
-    container(theme),
-    gallery(theme),
-    input(theme),
-    label(),
-    collapse(theme),
-    options(theme),
-    progress(theme),
-    slider(theme),
-    table(theme),
-    tabs(theme),
-    extensions(theme),
-    lightboxModal(theme),
+const GlobalStyle = createGlobalStyle(({ theme }) => [
+  tokens(theme),
+  antdOverride(theme),
+  button(theme),
+  container(theme),
+  gallery(theme),
+  input(theme),
+  label(),
+  collapse(theme),
+  options(theme),
+  progress(theme),
+  slider(theme),
+  table(theme),
+  tabs(theme),
+  extensions(theme),
+  lightboxModal(theme),
 ]);
 
 export default GlobalStyle;

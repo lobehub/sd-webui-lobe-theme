@@ -1,14 +1,14 @@
-import {createStyles} from 'antd-style';
-import {adjustHue} from 'polished';
+import { createStyles } from 'antd-style';
+import { adjustHue } from 'polished';
 
 export const useStyles = createStyles(
-    (
-        {cx, css, stylish, token, isDarkMode},
-        {headerHeight, isPrimaryColor}: { headerHeight: number; isPrimaryColor: boolean },
-    ) => ({
-        background: cx(
-            stylish.gradientAnimation,
-            isPrimaryColor &&
+  (
+    { cx, css, stylish, token, isDarkMode },
+    { headerHeight, isPrimaryColor }: { headerHeight: number; isPrimaryColor: boolean },
+  ) => ({
+    background: cx(
+      stylish.gradientAnimation,
+      isPrimaryColor &&
         css`
           background-image: linear-gradient(
             -45deg,
@@ -18,7 +18,7 @@ export const useStyles = createStyles(
             ${adjustHue(-45, token.colorPrimary)}
           );
         `,
-            css`
+      css`
         pointer-events: none;
 
         position: absolute !important;
@@ -32,8 +32,8 @@ export const useStyles = createStyles(
         opacity: 0.2;
         filter: blur(100px);
       `,
-        ),
-        backgroundLite: css`
+    ),
+    backgroundLite: css`
       pointer-events: none;
 
       position: absolute !important;
@@ -50,19 +50,19 @@ export const useStyles = createStyles(
         transparent
       );
     `,
-        panel: css`
+    panel: css`
       .draggable-panel {
         border-style: dashed;
       }
     `,
-        quicksettings: css`
+    quicksettings: css`
       #quicksettings {
         align-items: start;
         padding: 16px !important;
       }
     `,
-        sidebar: css`
+    sidebar: css`
       height: calc(100vh - ${headerHeight}px);
     `,
-    }),
+  }),
 );

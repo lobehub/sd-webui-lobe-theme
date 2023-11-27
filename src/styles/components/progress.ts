@@ -1,4 +1,4 @@
-import {Theme, css, keyframes} from 'antd-style';
+import { Theme, css, keyframes } from 'antd-style';
 
 const progressAnimation = keyframes`
       0% {

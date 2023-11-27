@@ -1,7 +1,7 @@
-import {Theme, css} from 'antd-style';
+import { Theme, css } from 'antd-style';
 
 export default (token: Theme) => {
-    return css`
+  return css`
     .label-wrap {
       transition: padding 400ms ${token.motionEaseOut};
 

@@ -56,7 +56,7 @@
     ],
     "*.{js,jsx}": [
       "prettier --write",
-      "stylelint --fix --allow-empty-input",
+      "stylelint --fix",
       "eslint --fix"
     ],
     "*.{ts,tsx}": [

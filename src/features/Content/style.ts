@@ -1,17 +1,17 @@
-import {createStyles} from 'antd-style';
+import { createStyles } from 'antd-style';
 
 const TEXT2IMG_PROMPT_HEIGHT = 74;
 const IMG2IMG_PROMPT_HEIGHT = 98;
 export const useStyles = createStyles(
-    (
-        {css, token, stylish, isDarkMode, responsive},
-        {
-            isPromptResizable,
-            layoutSplitPreview,
-        }: { isPromptResizable: boolean; layoutSplitPreview: boolean },
-    ) => {
-        return {
-            container: css`
+  (
+    { css, token, stylish, isDarkMode, responsive },
+    {
+      isPromptResizable,
+      layoutSplitPreview,
+    }: { isPromptResizable: boolean; layoutSplitPreview: boolean },
+  ) => {
+    return {
+      container: css`
         position: relative;
         flex: 1;
         min-width: ${layoutSplitPreview ? '200px' : '0'};
@@ -191,7 +191,7 @@ export const useStyles = createStyles(
           }
         }
       `,
-            splitView: css`
+      splitView: css`
         #txt2img_toprow,
         #img2img_toprow {
           flex-direction: column !important;
@@ -199,7 +199,7 @@ export const useStyles = createStyles(
           background: transparent !important;
         }
       `,
-            text2img: css`
+      text2img: css`
         button[id$='_generate'] {
           height: var(--button-lg-height) !important;
           min-height: var(--button-lg-height) !important;
@@ -364,7 +364,7 @@ export const useStyles = createStyles(
           box-shadow: none;
         }
       `,
-            textares: css`
+      textares: css`
         [id$='2img_prompt'],
         [id$='2img_neg_prompt'] {
           textarea {
@@ -452,6 +452,6 @@ export const useStyles = createStyles(
           }
         }
       `,
-        };
-    },
+    };
+  },
 );
