@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 3.0.14](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.0.13...v3.0.14)
+
+<sup>Released on **2023-11-27**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix typo in setting.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix typo in setting, closes [#470](https://github.com/lobehub/sd-webui-lobe-theme/issues/470) ([120ebe8](https://github.com/lobehub/sd-webui-lobe-theme/commit/120ebe8))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.0.13](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.0.12...v3.0.13)
 
 <sup>Released on **2023-11-23**</sup>
