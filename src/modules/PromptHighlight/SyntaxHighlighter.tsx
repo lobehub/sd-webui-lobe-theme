@@ -1,12 +1,12 @@
-import { Icon } from '@lobehub/ui';
-import { useThemeMode } from 'antd-style';
-import { Loader2 } from 'lucide-react';
-import { memo, useEffect } from 'react';
-import { Center } from 'react-layout-kit';
-import { type HighlighterOptions } from 'shiki-es';
+import {Icon} from '@lobehub/ui';
+import {useThemeMode} from 'antd-style';
+import {Loader2} from 'lucide-react';
+import {memo, useEffect} from 'react';
+import {Center} from 'react-layout-kit';
+import {type HighlighterOptions} from 'shiki-es';
 
-import { useStyles } from './style';
-import { useHighlight } from './useHighlight';
+import {useStyles} from './style';
+import {useHighlight} from './useHighlight';
 
 export interface SyntaxHighlighterProps {
   children: string;
@@ -14,9 +14,9 @@ export interface SyntaxHighlighterProps {
   options?: HighlighterOptions;
 }
 
-const SyntaxHighlighter = memo<SyntaxHighlighterProps>(({ children, language, options }) => {
-    const { styles } = useStyles();
-    const { isDarkMode } = useThemeMode();
+const SyntaxHighlighter = memo<SyntaxHighlighterProps>(({children, language, options}) => {
+    const {styles} = useStyles();
+    const {isDarkMode} = useThemeMode();
     const [codeToHtml, isLoading] = useHighlight((s) => [s.codeToHtml, !s.highlighter]);
 
     useEffect(() => {

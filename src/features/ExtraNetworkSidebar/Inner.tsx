@@ -1,14 +1,14 @@
-import { ActionIcon, DraggablePanelBody, DraggablePanelFooter } from '@lobehub/ui';
-import { useTimeout } from 'ahooks';
-import { Skeleton, Slider } from 'antd';
-import { consola } from 'consola';
+import {ActionIcon, DraggablePanelBody, DraggablePanelFooter} from '@lobehub/ui';
+import {useTimeout} from 'ahooks';
+import {Skeleton, Slider} from 'antd';
+import {consola} from 'consola';
 import isEqual from 'fast-deep-equal';
-import { ZoomIn, ZoomOut } from 'lucide-react';
-import { memo, useEffect, useRef, useState } from 'react';
+import {ZoomIn, ZoomOut} from 'lucide-react';
+import {memo, useEffect, useRef, useState} from 'react';
 
-import { useStyles } from '@/features/ExtraNetworkSidebar/style';
+import {useStyles} from '@/features/ExtraNetworkSidebar/style';
 import civitaiHelperFix from '@/scripts/civitaiHelperFix';
-import { selectors, useAppStore } from '@/store';
+import {selectors, useAppStore} from '@/store';
 
 const Inner = memo(() => {
     const txt2imgExtraNetworkSidebarReference = useRef<HTMLDivElement>(null);
@@ -17,7 +17,7 @@ const Inner = memo(() => {
     const setting = useAppStore(selectors.currentSetting, isEqual);
     const currentTab = useAppStore(selectors.currentTab);
     const [size, setSize] = useState<number>(setting.extraNetworkCardSize || 86);
-    const { styles } = useStyles({ size });
+    const {styles} = useStyles({size});
 
     useEffect(() => {
         try {
@@ -105,16 +105,16 @@ const Inner = memo(() => {
         <>
             <DraggablePanelBody className={styles.body}>
                 {extraLoading && <Skeleton active />}
-                <div style={extraLoading ? { display: 'none' } : {}}>
+                <div style={extraLoading ? {display: 'none'} : {}}>
                     <div
                         id="txt2img-extra-network-sidebar"
                         ref={txt2imgExtraNetworkSidebarReference}
-                        style={currentTab === 'tab_img2img' ? { display: 'none' } : {}}
+                        style={currentTab === 'tab_img2img' ? {display: 'none'} : {}}
                     />
                     <div
                         id="img2img-extra-network-sidebar"
                         ref={img2imgExtraNetworkSidebarReference}
-                        style={currentTab === 'tab_img2img' ? {} : { display: 'none' }}
+                        style={currentTab === 'tab_img2img' ? {} : {display: 'none'}}
                     />
                 </div>
             </DraggablePanelBody>
@@ -122,7 +122,7 @@ const Inner = memo(() => {
                 <ActionIcon
                     icon={setting.extraNetworkCardSize < size ? ZoomOut : ZoomIn}
                     onClick={() => setSize(setting.extraNetworkCardSize)}
-                    size={{ blockSize: 24, fontSize: 16 }}
+                    size={{blockSize: 24, fontSize: 16}}
                 />
                 <Slider
                     defaultValue={size}
@@ -130,7 +130,7 @@ const Inner = memo(() => {
                     min={64}
                     onChange={setSize}
                     step={8}
-                    style={{ flex: 1 }}
+                    style={{flex: 1}}
                     value={size}
                 />
             </DraggablePanelFooter>

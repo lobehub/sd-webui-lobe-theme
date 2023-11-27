@@ -1,12 +1,12 @@
-import { useScroll, useSize } from 'ahooks';
-import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import {useScroll, useSize} from 'ahooks';
+import {memo, useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
-import { useExternalTextareaObserver } from '@/hooks/useExternalTextareaObserver';
+import {useExternalTextareaObserver} from '@/hooks/useExternalTextareaObserver';
 
 import SyntaxHighlighter from './SyntaxHighlighter';
 import grammar from './prompt.tmLanguage.json';
-import { themeConfig } from './promptTheme';
-import { useStyles } from './style';
+import {themeConfig} from './promptTheme';
+import {useStyles} from './style';
 
 const options: any = {
     langs: [
@@ -24,10 +24,10 @@ interface AppProps {
   parentId: string;
 }
 
-const App = memo<AppProps>(({ parentId }) => {
+const App = memo<AppProps>(({parentId}) => {
     const ref: any = useRef(null);
     const [prompt, setPrompt] = useState<string>('');
-    const { styles, theme } = useStyles();
+    const {styles, theme} = useStyles();
     const nativeTextareaValue = useExternalTextareaObserver(`${parentId} label textarea`);
     const nativeTextarea = useMemo(
         () => gradioApp().querySelector(`${parentId} label textarea`) as HTMLTextAreaElement,
@@ -75,7 +75,7 @@ const App = memo<AppProps>(({ parentId }) => {
             className={styles.container}
             data-code-type="highlighter"
             ref={ref}
-            style={{ height: size?.height, width: handlePromptResize() }}
+            style={{height: size?.height, width: handlePromptResize()}}
         >
             <SyntaxHighlighter language="prompt" options={options}>
                 {prompt.trim()}

@@ -1,4 +1,4 @@
-import { consola } from 'consola';
+import {consola} from 'consola';
 
 const TAB_PREFIX_LIST = ['txt2img', 'img2img'] as const;
 const MODEL_TYPE_LIST = [

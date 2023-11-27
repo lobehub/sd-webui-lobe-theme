@@ -1,17 +1,17 @@
-import { consola } from 'consola';
-import { PropsWithChildren, Suspense, memo, useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet';
-import { shallow } from 'zustand/shallow';
+import {consola} from 'consola';
+import {PropsWithChildren, Suspense, memo, useEffect, useState} from 'react';
+import {Helmet} from 'react-helmet';
+import {shallow} from 'zustand/shallow';
 
-import { Loading } from '@/components';
+import {Loading} from '@/components';
 import Layout from '@/layouts';
-import { useAppStore } from '@/store';
+import {useAppStore} from '@/store';
 
 import manifest from './manifest';
 
-export const Layouts = memo<PropsWithChildren>(({ children }) => {
+export const Layouts = memo<PropsWithChildren>(({children}) => {
     const [loading, setLoading] = useState(true);
-    const { setCurrentTab, onInit, storeLoading } = useAppStore(
+    const {setCurrentTab, onInit, storeLoading} = useAppStore(
         (st) => ({
             onInit: st.onInit,
             setCurrentTab: st.setCurrentTab,

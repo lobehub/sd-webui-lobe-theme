@@ -1,19 +1,19 @@
-import { consola } from 'consola';
-import { memo, useCallback, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import {consola} from 'consola';
+import {memo, useCallback, useState} from 'react';
+import {useTranslation} from 'react-i18next';
 
-import TagList, { PromptType, TagItem } from './TagList';
-import { useStyles } from './style';
-import { formatPrompt } from './utils';
+import TagList, {PromptType, TagItem} from './TagList';
+import {useStyles} from './style';
+import {formatPrompt} from './utils';
 
 interface PromptProps {
   type: PromptType;
 }
 
-const Prompt = memo<PromptProps>(({ type }) => {
+const Prompt = memo<PromptProps>(({type}) => {
     const [tags, setTags] = useState<TagItem[]>([]);
-    const { styles } = useStyles();
-    const { t } = useTranslation();
+    const {styles} = useStyles();
+    const {t} = useTranslation();
 
     const id =
     type === 'positive' ? "[id$='2img_prompt'] textarea" : "[id$='2img_neg_prompt'] textarea";

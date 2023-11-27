@@ -1,11 +1,11 @@
-import { LayoutHeader, LayoutMain, LayoutSidebar } from '@lobehub/ui';
+import {LayoutHeader, LayoutMain, LayoutSidebar} from '@lobehub/ui';
 import isEqual from 'fast-deep-equal';
-import { memo, useEffect } from 'react';
+import {memo, useEffect} from 'react';
 
 import '@/locales/config';
-import { PromptHighlight } from '@/modules/PromptHighlight';
+import {PromptHighlight} from '@/modules/PromptHighlight';
 import replaceIcon from '@/scripts/replaceIcon';
-import { selectors, useAppStore } from '@/store';
+import {selectors, useAppStore} from '@/store';
 import GlobalStyle from '@/styles';
 
 import Content from '../features/Content';
@@ -13,13 +13,13 @@ import ExtraNetworkSidebar from '../features/ExtraNetworkSidebar';
 import Footer from '../features/Footer';
 import Header from '../features/Header';
 import QuickSettingSidebar from '../features/QuickSettingSidebar';
-import { useStyles } from './style';
+import {useStyles} from './style';
 
 const HEADER_HEIGHT = 64;
 
 const Index = memo(() => {
     const setting = useAppStore(selectors.currentSetting, isEqual);
-    const { cx, styles } = useStyles({
+    const {cx, styles} = useStyles({
         headerHeight: HEADER_HEIGHT,
         isPrimaryColor: Boolean(setting.primaryColor),
     });
@@ -44,7 +44,7 @@ const Index = memo(() => {
                     <LayoutSidebar
                         className={styles.sidebar}
                         headerHeight={HEADER_HEIGHT}
-                        style={{ flex: 0, zIndex: 50 }}
+                        style={{flex: 0, zIndex: 50}}
                     >
                         <QuickSettingSidebar headerHeight={HEADER_HEIGHT} />
                     </LayoutSidebar>
@@ -54,7 +54,7 @@ const Index = memo(() => {
                     <LayoutSidebar
                         className={styles.sidebar}
                         headerHeight={HEADER_HEIGHT}
-                        style={{ flex: 0, zIndex: 50 }}
+                        style={{flex: 0, zIndex: 50}}
                     >
                         <ExtraNetworkSidebar headerHeight={HEADER_HEIGHT} />
                     </LayoutSidebar>

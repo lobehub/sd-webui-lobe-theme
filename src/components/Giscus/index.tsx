@@ -7,17 +7,17 @@ import {
     Modal,
     type ModalProps,
 } from '@lobehub/ui';
-import { Button, Space } from 'antd';
-import { useTheme } from 'antd-style';
+import {Button, Space} from 'antd';
+import {useTheme} from 'antd-style';
 import isEqual from 'fast-deep-equal';
-import { Github } from 'lucide-react';
-import { memo } from 'react';
-import { useTranslation } from 'react-i18next';
-import { Center, Flexbox } from 'react-layout-kit';
+import {Github} from 'lucide-react';
+import {memo} from 'react';
+import {useTranslation} from 'react-i18next';
+import {Center, Flexbox} from 'react-layout-kit';
 
-import { homepage } from '@/../package.json';
+import {homepage} from '@/../package.json';
 import VersionTag from '@/components/VersionTag';
-import { selectors, useAppStore } from '@/store';
+import {selectors, useAppStore} from '@/store';
 
 export interface GiscusProps {
   onCancel?: ModalProps['onCancel'];
@@ -26,10 +26,10 @@ export interface GiscusProps {
 
 const repoName = homepage.replace('https://github.com/', '') as `${string}/${string}`;
 
-const Giscus = memo<GiscusProps>(({ open, onCancel }) => {
+const Giscus = memo<GiscusProps>(({open, onCancel}) => {
     const setting = useAppStore(selectors.currentSetting, isEqual);
     const theme = useTheme();
-    const { t } = useTranslation();
+    const {t} = useTranslation();
     return (
         <Modal
             footer={false}

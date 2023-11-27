@@ -1,7 +1,7 @@
-import { createStyles } from 'antd-style';
+import {createStyles} from 'antd-style';
 
 export const useStyles = createStyles(
-    ({ css, token }, { headerHeight = 64, size = 86 }: { headerHeight?: number; size?: number }) => ({
+    ({css, token}, {headerHeight = 64, size = 86}: { headerHeight?: number; size?: number }) => ({
         body: css`
       .hide {
         display: none;

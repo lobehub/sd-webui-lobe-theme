@@ -1,4 +1,4 @@
-import { css } from 'antd-style';
+import {css} from 'antd-style';
 
 export default () => {
     return css`

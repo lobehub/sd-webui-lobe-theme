@@ -1,12 +1,12 @@
-import { StrictMode, Suspense, memo } from 'react';
-import { createRoot } from 'react-dom/client';
+import {StrictMode, Suspense, memo} from 'react';
+import {createRoot} from 'react-dom/client';
 
 import Layout from '@/layouts';
-import { useAppStore } from '@/store';
+import {useAppStore} from '@/store';
 
 import App from './App';
 
-const Main = memo<{ parentId: string }>(({ parentId }) => {
+const Main = memo<{ parentId: string }>(({parentId}) => {
     const loading = useAppStore((st) => st.loading);
 
     return <Layout>{loading === false && <App parentId={parentId} />}</Layout>;

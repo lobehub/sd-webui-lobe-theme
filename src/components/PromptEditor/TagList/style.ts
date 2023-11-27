@@ -1,7 +1,7 @@
-import { createStyles } from 'antd-style';
+import {createStyles} from 'antd-style';
 
 export const useStyles = createStyles(
-    ({ css, token }, type: 'positive' | 'negative') => css`
+    ({css, token}, type: 'positive' | 'negative') => css`
     .autocompleteResults {
       left: 16px !important;
       min-width: 200px !important;

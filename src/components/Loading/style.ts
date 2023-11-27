@@ -1,10 +1,10 @@
-import { createStyles } from 'antd-style';
-import { adjustHue, rgba } from 'polished';
+import {createStyles} from 'antd-style';
+import {adjustHue, rgba} from 'polished';
 
 export const useStyles = createStyles(
     (
-        { css, stylish, cx, token },
-        { isPrimaryColor, liteAnimation }: { isPrimaryColor?: boolean; liteAnimation?: boolean },
+        {css, stylish, cx, token},
+        {isPrimaryColor, liteAnimation}: { isPrimaryColor?: boolean; liteAnimation?: boolean },
     ) => ({
         canvas: cx(
             stylish.gradientAnimation,

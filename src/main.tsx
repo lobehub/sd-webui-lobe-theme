@@ -1,5 +1,5 @@
-import { consola } from 'consola';
-import { createRoot } from 'react-dom/client';
+import {consola} from 'consola';
+import {createRoot} from 'react-dom/client';
 
 import Page from './app/page';
 
@@ -22,6 +22,6 @@ if (!skipLoad) {
             const client = createRoot(root);
             client.render(<Page />);
         },
-        { once: true },
+        {once: true},
     );
 }

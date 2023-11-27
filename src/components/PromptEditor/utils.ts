@@ -1,6 +1,6 @@
-import { Converter } from '@/scripts/formatPrompt';
+import {Converter} from '@/scripts/formatPrompt';
 
-import { TagItem } from './TagList';
+import {TagItem} from './TagList';
 
 export const genTagType = (tag: TagItem): TagItem => {
     const newTag = tag;
@@ -29,5 +29,5 @@ export const formatPrompt = (value: string) => {
             .replaceAll(',', ', ');
         return Converter.convertStr2Array(newItem).join(', ');
     });
-    return textArray.map((tag) => genTagType({ id: tag, text: tag }));
+    return textArray.map((tag) => genTagType({id: tag, text: tag}));
 };

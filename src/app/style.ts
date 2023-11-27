@@ -1,10 +1,10 @@
-import { createStyles } from 'antd-style';
-import { adjustHue } from 'polished';
+import {createStyles} from 'antd-style';
+import {adjustHue} from 'polished';
 
 export const useStyles = createStyles(
     (
-        { cx, css, stylish, token, isDarkMode },
-        { headerHeight, isPrimaryColor }: { headerHeight: number; isPrimaryColor: boolean },
+        {cx, css, stylish, token, isDarkMode},
+        {headerHeight, isPrimaryColor}: { headerHeight: number; isPrimaryColor: boolean },
     ) => ({
         background: cx(
             stylish.gradientAnimation,

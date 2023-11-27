@@ -1,21 +1,21 @@
-import { useResponsive } from 'antd-style';
-import { consola } from 'consola';
+import {useResponsive} from 'antd-style';
+import {consola} from 'consola';
 import isEqual from 'fast-deep-equal';
-import { memo, useEffect, useRef } from 'react';
+import {memo, useEffect, useRef} from 'react';
 
 import formatPrompt from '@/scripts/formatPrompt';
-import { selectors, useAppStore } from '@/store';
-import { type DivProps } from '@/types';
+import {selectors, useAppStore} from '@/store';
+import {type DivProps} from '@/types';
 
 import SplitView from './SplitView';
-import { useStyles } from './style';
+import {useStyles} from './style';
 
-const Content = memo<DivProps>(({ className, ...props }) => {
+const Content = memo<DivProps>(({className, ...props}) => {
     const mainReference = useRef<HTMLDivElement>(null);
-    const { mobile } = useResponsive();
+    const {mobile} = useResponsive();
     const setting = useAppStore(selectors.currentSetting, isEqual);
 
-    const { cx, styles } = useStyles({
+    const {cx, styles} = useStyles({
         isPromptResizable: setting.promptTextareaType === 'resizable',
         layoutSplitPreview: setting.layoutSplitPreview,
     });

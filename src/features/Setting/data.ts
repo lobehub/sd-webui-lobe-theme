@@ -5,7 +5,7 @@ import {
     primaryColors as ps,
 } from '@lobehub/ui';
 
-import { kitchenNeutral, kitchenPrimary } from '@/styles/kitchenColors';
+import {kitchenNeutral, kitchenPrimary} from '@/styles/kitchenColors';
 
 export const primaryColors = {
     kitchen: kitchenPrimary.dark.colorPrimary,

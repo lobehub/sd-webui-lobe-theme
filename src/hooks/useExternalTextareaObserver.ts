@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 
 export const useExternalTextareaObserver = (textareaSelector: string) => {
     const [value, setValue] = useState('');

@@ -1,6 +1,6 @@
-import { type Highlighter, type HighlighterOptions, getHighlighter } from 'shiki-es';
-import { shallow } from 'zustand/shallow';
-import { createWithEqualityFn } from 'zustand/traditional';
+import {type Highlighter, type HighlighterOptions, getHighlighter} from 'shiki-es';
+import {shallow} from 'zustand/shallow';
+import {createWithEqualityFn} from 'zustand/traditional';
 
 export const languageMap = [] as const;
 
@@ -30,7 +30,7 @@ interface Store {
 export const useHighlight = createWithEqualityFn<Store>(
     (set, get) => ({
         codeToHtml: (text, language, isDarkMode) => {
-            const { highlighter } = get();
+            const {highlighter} = get();
 
             if (!highlighter) return '';
 
@@ -52,7 +52,7 @@ export const useHighlight = createWithEqualityFn<Store>(
                     themes: options?.themes,
                 });
 
-                set({ highlighter });
+                set({highlighter});
             }
         },
     }),

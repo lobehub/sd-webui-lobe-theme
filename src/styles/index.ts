@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'antd-style';
+import {createGlobalStyle} from 'antd-style';
 
 import antdOverride from './antdOverride';
 import button from './components/button';
@@ -16,7 +16,7 @@ import table from './components/table';
 import tabs from './components/tabs';
 import tokens from './tokens';
 
-const GlobalStyle = createGlobalStyle(({ theme }) => [
+const GlobalStyle = createGlobalStyle(({theme}) => [
     tokens(theme),
     antdOverride(theme),
     button(theme),

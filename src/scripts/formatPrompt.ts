@@ -1,4 +1,4 @@
-import { consola } from 'consola';
+import {consola} from 'consola';
 
 /**
  * 转换器工具类
@@ -38,8 +38,8 @@ export const Converter = {
         const square_bracket_multiplier = 1 / 1.05;
 
         const brackets: Record<string, { multiplier: number; stack: number[] }> = {
-            '[': { multiplier: square_bracket_multiplier, stack: [] },
-            '{': { multiplier: curly_bracket_multiplier, stack: [] },
+            '[': {multiplier: square_bracket_multiplier, stack: []},
+            '{': {multiplier: curly_bracket_multiplier, stack: []},
         };
 
         /**
@@ -235,7 +235,7 @@ export const Converter = {
    */
     dispatchInputEvent(target: EventTarget) {
         let inputEvent = new Event('input');
-        Object.defineProperty(inputEvent, 'target', { value: target });
+        Object.defineProperty(inputEvent, 'target', {value: target});
         target.dispatchEvent(inputEvent);
     },
 

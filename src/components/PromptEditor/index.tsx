@@ -1,18 +1,18 @@
-import { memo } from 'react';
-import { useTranslation } from 'react-i18next';
+import {memo} from 'react';
+import {useTranslation} from 'react-i18next';
 
-import { useStyles } from '@/components/PromptEditor/style';
+import {useStyles} from '@/components/PromptEditor/style';
 
 import Prompt from './Prompt';
 
 const PromptEditor = memo(() => {
-    const { styles } = useStyles();
-    const { t } = useTranslation();
+    const {styles} = useStyles();
+    const {t} = useTranslation();
     return (
         <div className={styles.view}>
-            <span style={{ marginBottom: -10 }}>{t('prompt.positive')}</span>
+            <span style={{marginBottom: -10}}>{t('prompt.positive')}</span>
             <Prompt type="positive" />
-            <span style={{ marginBottom: -10 }}>{t('prompt.negative')}</span>
+            <span style={{marginBottom: -10}}>{t('prompt.negative')}</span>
             <Prompt type="negative" />
         </div>
     );

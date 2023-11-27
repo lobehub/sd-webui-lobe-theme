@@ -1,9 +1,9 @@
-import { consola } from 'consola';
-import { type FC, memo, useCallback, useEffect, useState } from 'react';
-import { WithContext, ReactTagsProps as WithContextProps } from 'react-tag-input';
+import {consola} from 'consola';
+import {type FC, memo, useCallback, useEffect, useState} from 'react';
+import {WithContext, ReactTagsProps as WithContextProps} from 'react-tag-input';
 
-import { genTagType } from '../utils';
-import { useStyles } from './style';
+import {genTagType} from '../utils';
+import {useStyles} from './style';
 
 export interface TagItem {
   className?: string;
@@ -35,10 +35,10 @@ interface TagListProps {
   type: PromptType;
 }
 
-const TagList = memo<TagListProps>(({ tags, setTags, type, setValue }) => {
+const TagList = memo<TagListProps>(({tags, setTags, type, setValue}) => {
     const id = `${type}_tag_editor`;
     const [bind, setBind] = useState(false);
-    const { styles } = useStyles(type);
+    const {styles} = useStyles(type);
     const handleDelete = useCallback(
         (index_: number) => {
             const newTags = tags.filter((tag, index) => index !== index_);

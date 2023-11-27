@@ -1,4 +1,4 @@
-import { type HTMLAttributes } from 'react';
+import {type HTMLAttributes} from 'react';
 
 import translation from '@/../locales/en_US.json';
 import i18nOptions from '@/../locales/options.json';

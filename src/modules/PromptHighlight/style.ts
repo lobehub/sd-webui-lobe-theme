@@ -1,6 +1,6 @@
-import { createStyles } from 'antd-style';
+import {createStyles} from 'antd-style';
 
-export const useStyles = createStyles(({ css, token, cx, stylish, prefixCls }) => {
+export const useStyles = createStyles(({css, token, cx, stylish, prefixCls}) => {
     const prefix = `${prefixCls}-highlighter`;
     return {
         container: css`

@@ -1,6 +1,6 @@
-import { type CSSProperties, memo } from 'react';
+import {type CSSProperties, memo} from 'react';
 
-import { darkLogo, lightLogo } from './style';
+import {darkLogo, lightLogo} from './style';
 
 export interface KitchenLogoProps {
   size?: number;
@@ -8,12 +8,12 @@ export interface KitchenLogoProps {
   themeMode: 'dark' | 'light';
 }
 
-const KitchenLogo = memo<KitchenLogoProps>(({ size = 32, style, themeMode }) => {
+const KitchenLogo = memo<KitchenLogoProps>(({size = 32, style, themeMode}) => {
     return (
         <img
             alt="logo"
             src={themeMode === 'dark' ? darkLogo : lightLogo}
-            style={{ height: size, ...style }}
+            style={{height: size, ...style}}
         />
     );
 });

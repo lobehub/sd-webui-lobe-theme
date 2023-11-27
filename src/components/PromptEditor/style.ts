@@ -1,6 +1,6 @@
-import { createStyles } from 'antd-style';
+import {createStyles} from 'antd-style';
 
-export const useStyles = createStyles(({ css }) => ({
+export const useStyles = createStyles(({css}) => ({
     buttonGroup: css`
     display: flex;
     gap: 8px;

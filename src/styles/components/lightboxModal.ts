@@ -1,4 +1,4 @@
-import { Theme, css } from 'antd-style';
+import {Theme, css} from 'antd-style';
 
 export default (token: Theme) => css`
   #lightboxModal {

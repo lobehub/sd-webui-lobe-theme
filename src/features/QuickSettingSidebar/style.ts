@@ -1,7 +1,7 @@
-import { createStyles } from 'antd-style';
+import {createStyles} from 'antd-style';
 
 export const useStyles = createStyles(
-    ({ css }, { headerHeight = 64, width }: { headerHeight?: number; width: number }) => ({
+    ({css}, {headerHeight = 64, width}: { headerHeight?: number; width: number }) => ({
         container: css`
       height: calc(100vh - ${headerHeight}px);
 

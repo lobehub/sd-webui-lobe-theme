@@ -1,10 +1,10 @@
-import { Burger, TabsNav, type TabsNavProps } from '@lobehub/ui';
-import { useResponsive } from 'antd-style';
-import { consola } from 'consola';
-import { startCase } from 'lodash-es';
-import { memo, useCallback, useEffect, useMemo, useState } from 'react';
+import {Burger, TabsNav, type TabsNavProps} from '@lobehub/ui';
+import {useResponsive} from 'antd-style';
+import {consola} from 'consola';
+import {startCase} from 'lodash-es';
+import {memo, useCallback, useEffect, useMemo, useState} from 'react';
 
-import { selectors, useAppStore } from '@/store';
+import {selectors, useAppStore} from '@/store';
 
 const hideOriganlNav = () => {
     (gradioApp().querySelector('#tabs > .tab-nav:first-of-type') as HTMLDivElement).style.display =
@@ -43,7 +43,7 @@ const genNavList = (): NavItem[] => {
 
 const Nav = memo(() => {
     const currentTab = useAppStore(selectors.currentTab);
-    const { mobile } = useResponsive();
+    const {mobile} = useResponsive();
     const [opened, setOpened] = useState(false);
     const [items, setItems] = useState<TabsNavProps['items']>([]);
 

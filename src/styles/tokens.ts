@@ -1,5 +1,5 @@
-import { type Theme, css } from 'antd-style';
-import { readableColor } from 'polished';
+import {type Theme, css} from 'antd-style';
+import {readableColor} from 'polished';
 
 export default (token: Theme) => {
     return css`

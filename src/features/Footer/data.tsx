@@ -1,7 +1,7 @@
-import { Icon } from '@lobehub/ui';
-import { Bug, FileClock, GitFork, Github } from 'lucide-react';
+import {Icon} from '@lobehub/ui';
+import {Bug, FileClock, GitFork, Github} from 'lucide-react';
 
-import { homepage } from '../../../package.json';
+import {homepage} from '../../../package.json';
 
 export const Resources = [
     {

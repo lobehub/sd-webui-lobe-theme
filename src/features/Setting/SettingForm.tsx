@@ -1,12 +1,12 @@
-import { Form, type ItemGroup, Swatches } from '@lobehub/ui';
-import { Button, Input, InputNumber, Segmented, Select, Switch } from 'antd';
+import {Form, type ItemGroup, Swatches} from '@lobehub/ui';
+import {Button, Input, InputNumber, Segmented, Select, Switch} from 'antd';
 import isEqual from 'fast-deep-equal';
-import { Layout, Palette, PanelLeftClose, PanelRightClose, TextCursorInput } from 'lucide-react';
-import { memo, useCallback, useMemo, useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { shallow } from 'zustand/shallow';
+import {Layout, Palette, PanelLeftClose, PanelRightClose, TextCursorInput} from 'lucide-react';
+import {memo, useCallback, useMemo, useState} from 'react';
+import {useTranslation} from 'react-i18next';
+import {shallow} from 'zustand/shallow';
 
-import { CustomLogo } from '@/components';
+import {CustomLogo} from '@/components';
 import {
     DEFAULT_SETTING,
     type WebuiSetting,
@@ -24,7 +24,7 @@ import {
     primaryColors,
     primaryColorsSwatches,
 } from './data';
-import { useStyles } from './style';
+import {useStyles} from './style';
 
 type SettingItemGroup = ItemGroup & {
   children: {
@@ -34,8 +34,8 @@ type SettingItemGroup = ItemGroup & {
 
 const SettingForm = memo(() => {
     const setting = useAppStore(selectors.currentSetting, isEqual);
-    const { onSetSetting, localeOptions } = useAppStore(
-        (st) => ({ localeOptions: st.localeOptions, onSetSetting: st.onSetSetting }),
+    const {onSetSetting, localeOptions} = useAppStore(
+        (st) => ({localeOptions: st.localeOptions, onSetSetting: st.onSetSetting}),
         shallow,
     );
     const [rawSetting, setRawSetting] = useState<WebuiSetting>(setting);
@@ -45,8 +45,8 @@ const SettingForm = memo(() => {
     const [neutralColor, setNeutralColor] = useState<NeutralColor | undefined>(
         setting.neutralColor || undefined,
     );
-    const { styles } = useStyles();
-    const { t } = useTranslation();
+    const {styles} = useStyles();
+    const {t} = useTranslation();
 
     const onReset = useCallback(() => {
         onSetSetting(DEFAULT_SETTING);
@@ -55,7 +55,7 @@ const SettingForm = memo(() => {
 
     const onFinish = useCallback(
         (value: WebuiSetting) => {
-            onSetSetting({ ...value, neutralColor, primaryColor });
+            onSetSetting({...value, neutralColor, primaryColor});
             location.reload();
         },
         [primaryColor, neutralColor],
@@ -255,8 +255,8 @@ const SettingForm = memo(() => {
             children: [
                 {
                     children: <Switch />,
-                    desc: t('setting.quickSettingSidebar.displayMode.desc'),
-                    label: t('setting.quickSettingSidebar.displayMode.title'),
+                    desc: t('setting.quickSettingSidebar.enable.desc'),
+                    label: t('setting.quickSettingSidebar.enable.title'),
                     name: 'enableSidebar',
                     valuePropName: 'checked',
                 },
@@ -366,10 +366,10 @@ const SettingForm = memo(() => {
             className={styles}
             footer={
                 <>
-                    <Button htmlType="button" onClick={onReset} style={{ borderRadius: 4 }}>
+                    <Button htmlType="button" onClick={onReset} style={{borderRadius: 4}}>
                         {t('setting.button.reset')}
                     </Button>
-                    <Button htmlType="submit" style={{ borderRadius: 4 }} type="primary">
+                    <Button htmlType="submit" style={{borderRadius: 4}} type="primary">
                         {t('setting.button.submit')}
                     </Button>
                 </>

@@ -8,16 +8,16 @@ import {
 } from '@lobehub/ui';
 import isEqual from 'fast-deep-equal';
 import qs from 'query-string';
-import { memo, useCallback, useEffect } from 'react';
-import { shallow } from 'zustand/shallow';
+import {memo, useCallback, useEffect} from 'react';
+import {shallow} from 'zustand/shallow';
 
-import { useIsDarkMode } from '@/hooks/useIsDarkMode';
-import { selectors, useAppStore } from '@/store';
-import { kitchenNeutral, kitchenPrimary } from '@/styles/kitchenColors';
+import {useIsDarkMode} from '@/hooks/useIsDarkMode';
+import {selectors, useAppStore} from '@/store';
+import {kitchenNeutral, kitchenPrimary} from '@/styles/kitchenColors';
 
-const Layout = memo<DivProps>(({ children }) => {
-    const { onSetThemeMode, themeMode } = useAppStore(
-        (st) => ({ onInit: st.onInit, onSetThemeMode: st.onSetThemeMode, themeMode: st.themeMode }),
+const Layout = memo<DivProps>(({children}) => {
+    const {onSetThemeMode, themeMode} = useAppStore(
+        (st) => ({onInit: st.onInit, onSetThemeMode: st.onSetThemeMode, themeMode: st.themeMode}),
         shallow,
     );
     const setting = useAppStore(selectors.currentSetting, isEqual);
@@ -42,7 +42,7 @@ const Layout = memo<DivProps>(({ children }) => {
                 primaryTokens = kitchenPrimary[themeMode];
             } else {
                 const scale = colorScales[setting.primaryColor];
-                primaryTokens = generateColorPalette({ appearance: themeMode, scale, type: 'Primary' });
+                primaryTokens = generateColorPalette({appearance: themeMode, scale, type: 'Primary'});
             }
         }
         if (setting.neutralColor) {
@@ -50,11 +50,11 @@ const Layout = memo<DivProps>(({ children }) => {
                 neutralTokens = kitchenNeutral[themeMode];
             } else {
                 const scale = neutralColorScales[setting.neutralColor];
-                neutralTokens = generateColorNeutralPalette({ appearance: themeMode, scale });
+                neutralTokens = generateColorNeutralPalette({appearance: themeMode, scale});
             }
         }
 
-        return { ...primaryTokens, ...neutralTokens };
+        return {...primaryTokens, ...neutralTokens};
     }, [setting.primaryColor, setting.neutralColor, themeMode]);
 
     return (

@@ -1,19 +1,19 @@
-import { Footer as F } from '@lobehub/ui';
-import { consola } from 'consola';
+import {Footer as F} from '@lobehub/ui';
+import {consola} from 'consola';
 import isEqual from 'fast-deep-equal';
-import { memo, useEffect, useRef } from 'react';
-import { useTranslation } from 'react-i18next';
+import {memo, useEffect, useRef} from 'react';
+import {useTranslation} from 'react-i18next';
 
-import { selectors, useAppStore } from '@/store';
-import { type DivProps } from '@/types';
+import {selectors, useAppStore} from '@/store';
+import {type DivProps} from '@/types';
 
-import { Community, Help, MoreProducts, Resources } from './data';
-import { useStyles } from './style';
+import {Community, Help, MoreProducts, Resources} from './data';
+import {useStyles} from './style';
 
-const Footer = memo<DivProps>(({ className, ...props }) => {
+const Footer = memo<DivProps>(({className, ...props}) => {
     const setting = useAppStore(selectors.currentSetting, isEqual);
-    const { cx, styles } = useStyles();
-    const { t } = useTranslation();
+    const {cx, styles} = useStyles();
+    const {t} = useTranslation();
     const footerReference = useRef<HTMLDivElement>(null);
 
     useEffect(() => {

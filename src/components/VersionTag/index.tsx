@@ -1,14 +1,14 @@
-import { Tag, TagProps } from 'antd';
-import { memo } from 'react';
+import {Tag, TagProps} from 'antd';
+import {memo} from 'react';
 import semver from 'semver';
-import { shallow } from 'zustand/shallow';
+import {shallow} from 'zustand/shallow';
 
-import { homepage } from '@/../package.json';
-import { useAppStore } from '@/store';
+import {homepage} from '@/../package.json';
+import {useAppStore} from '@/store';
 
 const VersionTag = memo<TagProps>((props) => {
-    const { version, latestVersion } = useAppStore(
-        (st) => ({ latestVersion: st.latestVersion, version: st.version }),
+    const {version, latestVersion} = useAppStore(
+        (st) => ({latestVersion: st.latestVersion, version: st.version}),
         shallow,
     );
 

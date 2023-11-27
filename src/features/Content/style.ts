@@ -1,10 +1,10 @@
-import { createStyles } from 'antd-style';
+import {createStyles} from 'antd-style';
 
 const TEXT2IMG_PROMPT_HEIGHT = 74;
 const IMG2IMG_PROMPT_HEIGHT = 98;
 export const useStyles = createStyles(
     (
-        { css, token, stylish, isDarkMode, responsive },
+        {css, token, stylish, isDarkMode, responsive},
         {
             isPromptResizable,
             layoutSplitPreview,

@@ -1,5 +1,5 @@
-import { consola } from 'consola';
-import { memo, useEffect } from 'react';
+import {consola} from 'consola';
+import {memo, useEffect} from 'react';
 
 const Preview = memo(() => {
     useEffect(() => {

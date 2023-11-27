@@ -1,11 +1,11 @@
-import { Icon, Logo } from '@lobehub/ui';
-import { Loader2 } from 'lucide-react';
-import { memo } from 'react';
-import { useTranslation } from 'react-i18next';
-import { Center, Flexbox } from 'react-layout-kit';
+import {Icon, Logo} from '@lobehub/ui';
+import {Loader2} from 'lucide-react';
+import {memo} from 'react';
+import {useTranslation} from 'react-i18next';
+import {Center, Flexbox} from 'react-layout-kit';
 
 const Loading = memo(() => {
-    const { t } = useTranslation();
+    const {t} = useTranslation();
 
     return (
         <Flexbox height={'100vh'} width={'100%'}>

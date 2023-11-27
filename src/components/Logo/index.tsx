@@ -1,8 +1,8 @@
-import { Logo as LobeLogo } from '@lobehub/ui';
+import {Logo as LobeLogo} from '@lobehub/ui';
 import isEqual from 'fast-deep-equal';
-import { type CSSProperties, memo } from 'react';
+import {type CSSProperties, memo} from 'react';
 
-import { selectors, useAppStore } from '@/store';
+import {selectors, useAppStore} from '@/store';
 
 import CustomLogo from './CustomLogo';
 import KitchenLogo from './KitchenLogo';
@@ -12,7 +12,7 @@ export interface LogoProps {
   style?: CSSProperties;
 }
 
-const Logo = memo<LogoProps>(({ size = 32, style }) => {
+const Logo = memo<LogoProps>(({size = 32, style}) => {
     const setting = useAppStore(selectors.currentSetting, isEqual);
     const themeMode = useAppStore(selectors.themeMode);
 
