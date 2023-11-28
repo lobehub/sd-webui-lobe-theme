@@ -34,7 +34,7 @@
   },
   "setting": {
     "button": {
-      "reset": "Reset",
+      "reset": "Revert to default",
       "submit": "Apply and Restart Interface"
     },
     "confirmPageUnload": {

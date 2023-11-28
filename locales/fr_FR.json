@@ -34,7 +34,7 @@
   },
   "setting": {
     "button": {
-      "reset": "Réinitialiser",
+      "reset": "Retour à la valeur par défaut",
       "submit": "Appliquer et redémarrer l'interface"
     },
     "confirmPageUnload": {

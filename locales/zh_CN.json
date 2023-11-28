@@ -34,7 +34,7 @@
   },
   "setting": {
     "button": {
-      "reset": "重置",
+      "reset": "恢复默认值",
       "submit": "应用并重新启动界面"
     },
     "confirmPageUnload": {

@@ -34,7 +34,7 @@
   },
   "setting": {
     "button": {
-      "reset": "Restablecer",
+      "reset": "Volver a la configuración por defecto",
       "submit": "Aplicar y reiniciar interfaz"
     },
     "confirmPageUnload": {

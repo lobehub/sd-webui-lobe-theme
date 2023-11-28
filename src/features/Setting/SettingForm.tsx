@@ -363,7 +363,7 @@ const SettingForm = memo(() => {
     <Form
       footer={
         <>
-          <Button htmlType="button" onClick={onReset} style={{ borderRadius: 4 }}>
+          <Button danger onClick={onReset} style={{ borderRadius: 4 }} type="text">
             {t('setting.button.reset')}
           </Button>
           <Button htmlType="submit" style={{ borderRadius: 4 }} type="primary">

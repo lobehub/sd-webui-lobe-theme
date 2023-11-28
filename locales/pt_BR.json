@@ -34,7 +34,7 @@
   },
   "setting": {
     "button": {
-      "reset": "Redefinir",
+      "reset": "Reverter para a predefinição",
       "submit": "Aplicar e Reiniciar Interface"
     },
     "confirmPageUnload": {
