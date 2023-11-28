@@ -1,14 +1,17 @@
 import { ActionIcon, Modal, type ModalProps } from '@lobehub/ui';
-import { Space } from 'antd';
 import { Book } from 'lucide-react';
-import { memo } from 'react';
+import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
 import VersionTag from '@/components/VersionTag';
 
 import { homepage } from '../../../package.json';
-import SettingForm from './SettingForm';
+import FormAppearance from './Form/Appearance';
+import FormExperimental from './Form/Experimental';
+import FormLayout from './Form/Layout';
+import FormSidebar from './Form/Sidebar';
+import Sidebar, { SettingsTabs } from './Sidebar';
 
 export interface SettingProps {
   onCancel?: ModalProps['onCancel'];
@@ -16,6 +19,7 @@ export interface SettingProps {
 }
 
 const Setting = memo<SettingProps>(({ open, onCancel }) => {
+  const [tab, setTab] = useState<SettingsTabs>(SettingsTabs.Appearance);
   const { t } = useTranslation();
   return (
     <Modal
@@ -23,18 +27,26 @@ const Setting = memo<SettingProps>(({ open, onCancel }) => {
       onCancel={onCancel}
       open={open}
       title={
-        <Flexbox align={'center'} gap={4} horizontal>
-          <a href={homepage} rel="noreferrer" target="_blank">
-            <ActionIcon icon={Book} title="Setting Documents" />
-          </a>
-          <Space>
+        <Flexbox align={'center'} gap={4}>
+          <Flexbox align={'center'} gap={4} horizontal>
+            <a href={homepage} rel="noreferrer" target="_blank">
+              <ActionIcon icon={Book} title="Setting Documents" />
+            </a>
+
             {t('modal.themeSetting.title')}
             <VersionTag />
-          </Space>
+          </Flexbox>
         </Flexbox>
       }
+      width={960}
     >
-      <SettingForm />
+      <Flexbox gap={16} horizontal>
+        <Sidebar setTab={setTab} tab={tab} />
+        {tab === SettingsTabs.Appearance && <FormAppearance />}
+        {tab === SettingsTabs.Layout && <FormLayout />}
+        {tab === SettingsTabs.Sidebar && <FormSidebar />}
+        {tab === SettingsTabs.Experimental && <FormExperimental />}
+      </Flexbox>
     </Modal>
   );
 });

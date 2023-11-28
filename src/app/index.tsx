@@ -3,7 +3,8 @@ import isEqual from 'fast-deep-equal';
 import { memo, useEffect } from 'react';
 
 import '@/locales/config';
-import { PromptHighlight } from '@/modules/PromptHighlight';
+import ImageInfo from '@/modules/ImageInfo/page';
+import PromptHighlight from '@/modules/PromptHighlight/page';
 import replaceIcon from '@/scripts/replaceIcon';
 import { selectors, useAppStore } from '@/store';
 import GlobalStyle from '@/styles';
@@ -25,10 +26,8 @@ const Index = memo(() => {
   });
 
   useEffect(() => {
-    if (setting.enableHighlight) {
-      PromptHighlight('#txt2img_prompt', '#lobe_txt2img_prompt');
-      PromptHighlight('#img2img_prompt', '#lobe_img2img_prompt');
-    }
+    if (setting.enableHighlight) PromptHighlight();
+    if (setting.enableImageInfo) ImageInfo();
     if (setting.svgIcon) replaceIcon();
   }, []);
 

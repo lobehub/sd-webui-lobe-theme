@@ -304,7 +304,7 @@ export const useStyles = createStyles(
         }
 
         #img2img_toprow .interrogate-col {
-          flex-flow: column wrap;
+          flex-direction: row !important;
           min-width: 100% !important;
         }
 
@@ -374,7 +374,8 @@ export const useStyles = createStyles(
 
             padding: 8px !important;
 
-            font-family: var(--font);
+            font-family: ${token.fontFamilyCode} !important;
+            font-size: 13px !important;
             line-height: 1.5 !important;
             word-wrap: break-word !important;
             white-space: pre-wrap !important;

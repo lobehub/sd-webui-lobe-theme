@@ -107,6 +107,8 @@ export default (token: Theme) => css`
       &#deepbooru {
         height: auto !important;
         max-height: fit-content !important;
+
+        font-size: 14px;
         line-height: inherit;
         white-space: break-spaces;
       }

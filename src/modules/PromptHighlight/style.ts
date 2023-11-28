@@ -10,11 +10,11 @@ export const useStyles = createStyles(({ css, token, cx, stylish, prefixCls }) =
       padding: calc(8px + var(--input-border-width));
 
       pre {
-        font-family: var(--font) !important;
-        font-size: var(--input-text-size) !important;
+        font-family: ${token.fontFamilyCode} !important;
+        font-size: 13px !important;
         line-height: 1.5 !important;
-        word-wrap: break-word;
-        white-space: pre-wrap;
+        word-wrap: break-word !important;
+        white-space: pre-wrap !important;
         vertical-align: bottom !important;
       }
     `,
@@ -51,7 +51,7 @@ export const useStyles = createStyles(({ css, token, cx, stylish, prefixCls }) =
 
           code,
           code span {
-            font-family: var(--font) !important;
+            font-family: ${token.fontFamilyCode} !important;
           }
         }
       `,

@@ -4,7 +4,6 @@ import isEqual from 'fast-deep-equal';
 import { Layout, Palette, PanelLeftClose, PanelRightClose, TextCursorInput } from 'lucide-react';
 import { memo, useCallback, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { shallow } from 'zustand/shallow';
 
 import { CustomLogo } from '@/components';
 import {
@@ -24,7 +23,6 @@ import {
   primaryColors,
   primaryColorsSwatches,
 } from './data';
-import { useStyles } from './style';
 
 type SettingItemGroup = ItemGroup & {
   children: {
@@ -34,10 +32,10 @@ type SettingItemGroup = ItemGroup & {
 
 const SettingForm = memo(() => {
   const setting = useAppStore(selectors.currentSetting, isEqual);
-  const { onSetSetting, localeOptions } = useAppStore(
-    (st) => ({ localeOptions: st.localeOptions, onSetSetting: st.onSetSetting }),
-    shallow,
-  );
+  const { onSetSetting, localeOptions } = useAppStore((st) => ({
+    localeOptions: st.localeOptions,
+    onSetSetting: st.onSetSetting,
+  }));
   const [rawSetting, setRawSetting] = useState<WebuiSetting>(setting);
   const [primaryColor, setPrimaryColor] = useState<PrimaryColor | undefined>(
     setting.primaryColor || undefined,
@@ -45,7 +43,7 @@ const SettingForm = memo(() => {
   const [neutralColor, setNeutralColor] = useState<NeutralColor | undefined>(
     setting.neutralColor || undefined,
   );
-  const { styles } = useStyles();
+
   const { t } = useTranslation();
 
   const onReset = useCallback(() => {
@@ -363,7 +361,6 @@ const SettingForm = memo(() => {
 
   return (
     <Form
-      className={styles}
       footer={
         <>
           <Button htmlType="button" onClick={onReset} style={{ borderRadius: 4 }}>
@@ -378,6 +375,7 @@ const SettingForm = memo(() => {
       items={[theme, promptTextarea, layout, quickSettingSidebar, extraNetworkSidebar]}
       onFinish={onFinish}
       onValuesChange={(_, v) => setRawSetting(v)}
+      style={{ flex: 1 }}
     />
   );
 });

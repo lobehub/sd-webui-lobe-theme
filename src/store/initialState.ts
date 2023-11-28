@@ -8,6 +8,7 @@ export interface WebuiSetting {
   confirmPageUnload: boolean;
   enableExtraNetworkSidebar: boolean;
   enableHighlight: boolean;
+  enableImageInfo: boolean;
   enableSidebar: boolean;
   enableWebFont: boolean;
   extraNetworkCardSize: number;
@@ -37,6 +38,7 @@ export const DEFAULT_SETTING: WebuiSetting = {
   confirmPageUnload: false,
   enableExtraNetworkSidebar: true,
   enableHighlight: false,
+  enableImageInfo: true,
   enableSidebar: true,
   enableWebFont: true,
   extraNetworkCardSize: 86,

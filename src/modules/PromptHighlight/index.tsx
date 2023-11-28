@@ -1,32 +1,71 @@
-import { StrictMode, Suspense, memo } from 'react';
-import { createRoot } from 'react-dom/client';
+import { useScroll, useSize } from 'ahooks';
+import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
-import Layout from '@/layouts';
-import { useAppStore } from '@/store';
+import { useExternalTextareaObserver } from '@/hooks/useExternalTextareaObserver';
 
-import App from './App';
+import SyntaxHighlighter from './features/SyntaxHighlighter';
+import { useStyles } from './style';
 
-const Main = memo<{ parentId: string }>(({ parentId }) => {
-  const loading = useAppStore((st) => st.loading);
+interface AppProps {
+  parentId: string;
+}
 
-  return <Layout>{loading === false && <App parentId={parentId} />}</Layout>;
+const Index = memo<AppProps>(({ parentId }) => {
+  const ref: any = useRef(null);
+  const [prompt, setPrompt] = useState<string>('');
+  const { styles, theme } = useStyles();
+  const nativeTextareaValue = useExternalTextareaObserver(`${parentId} label textarea`);
+  const nativeTextarea = useMemo(
+    () => gradioApp().querySelector(`${parentId} label textarea`) as HTMLTextAreaElement,
+    [parentId],
+  );
+  const size = useSize(nativeTextarea);
+  const scroll = useScroll(nativeTextarea);
+
+  const handlePromptChange = useCallback((event: any) => {
+    setPrompt(event.target.value);
+  }, []);
+
+  const handlePromptResize = useCallback(() => {
+    if (nativeTextarea.clientHeight < nativeTextarea.scrollHeight) {
+      return size?.width === undefined ? '' : size?.width + 6;
+    } else {
+      return size?.width === undefined ? '' : size?.width + 2;
+    }
+  }, [nativeTextarea.clientWidth]);
+
+  useEffect(() => {
+    ref.current.scroll(0, scroll?.top || 0);
+  }, [scroll?.top]);
+
+  useEffect(() => {
+    nativeTextarea.addEventListener('change', handlePromptChange);
+    return () => {
+      nativeTextarea.removeEventListener('change', handlePromptChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (theme) {
+      nativeTextarea.style.color = 'transparent';
+      nativeTextarea.style.caretColor = theme.colorSuccess;
+    }
+  }, [theme]);
+
+  useEffect(() => {
+    setPrompt(nativeTextareaValue);
+  }, [nativeTextareaValue]);
+
+  return (
+    <div
+      className={styles.container}
+      data-code-type="highlighter"
+      ref={ref}
+      style={{ height: size?.height, width: handlePromptResize() }}
+    >
+      <SyntaxHighlighter>{prompt}</SyntaxHighlighter>
+    </div>
+  );
 });
 
-export const PromptHighlight = (parentId: string, containerId: string) => {
-  if (document.querySelector(containerId)) return;
-  const settingsDiv = document.createElement('div') as HTMLDivElement;
-  settingsDiv.id = containerId.replace('#', '');
-
-  (gradioApp().querySelector(parentId) as HTMLDivElement).insertBefore(
-    settingsDiv,
-    (gradioApp().querySelector(parentId) as HTMLDivElement).firstChild,
-  );
-
-  createRoot(settingsDiv).render(
-    <StrictMode>
-      <Suspense fallback="loading...">
-        <Main parentId={parentId} />
-      </Suspense>
-    </StrictMode>,
-  );
-};
+export default Index;
