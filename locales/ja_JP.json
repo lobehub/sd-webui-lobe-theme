@@ -34,7 +34,7 @@
   },
   "setting": {
     "button": {
-      "reset": "リセット",
+      "reset": "デフォルトに戻る",
       "submit": "適用してインターフェースを再起動"
     },
     "confirmPageUnload": {

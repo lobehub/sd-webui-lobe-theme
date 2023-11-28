@@ -34,7 +34,7 @@
   },
   "setting": {
     "button": {
-      "reset": "Zurücksetzen",
+      "reset": "Zum Standard zurückkehren",
       "submit": "Anwenden und Schnittstelle neu starten"
     },
     "confirmPageUnload": {

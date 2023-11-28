@@ -34,7 +34,7 @@
   },
   "setting": {
     "button": {
-      "reset": "재설정",
+      "reset": "기본값으로 돌아가기",
       "submit": "적용 및 인터페이스 재시작"
     },
     "confirmPageUnload": {
