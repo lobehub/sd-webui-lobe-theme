@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 3.1.2](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.1.1...v3.1.2)
+
+<sup>Released on **2023-11-28**</sup>
+
+#### 💄 Styles
+
+- **misc**: Update i18n.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Update i18n ([db11c16](https://github.com/lobehub/sd-webui-lobe-theme/commit/db11c16))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.1.1](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.1.0...v3.1.1)
 
 <sup>Released on **2023-11-28**</sup>
