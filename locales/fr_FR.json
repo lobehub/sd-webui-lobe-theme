@@ -159,6 +159,25 @@
       "desc": "Afficher de meilleures informations sur l'image dans l'image générée"
     }
   },
+  "share": "Partager",
+  "shareModal": {
+    "download": "Télécharger la capture d'écran",
+    "imageType": "Format d'image",
+    "screenshot": "Capture d'écran",
+    "settings": "Paramètres d'export",
+    "withBackground": "Inclure l'image de fond",
+    "withFooter": "Inclure le pied de page",
+    "warn": "Veuillez d'abord générer l'image",
+    "info": "Informations sur l'image",
+    "showNegative": "Afficher la promotion négative",
+    "showConfig": "Afficher la configuration générée",
+    "title": "Nom de l'image",
+    "tabs": {
+      "info": "Info",
+      "settings": "Paramètres"
+    },
+    "showAllImages": "Afficher toutes les images"
+  },
   "sidebar": {
     "extraNetwork": "Réseau supplémentaire",
     "quickSetting": "Réglage rapide",

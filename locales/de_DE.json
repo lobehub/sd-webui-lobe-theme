@@ -159,6 +159,25 @@
       "desc": "Zeigt bessere Bildinformationen im generierten Bild an"
     }
   },
+  "share": "Teilen",
+  "shareModal": {
+    "download": "Screenshot herunterladen",
+    "imageType": "Bildformat",
+    "screenshot": "Screenshot",
+    "settings": "Exporteinstellungen",
+    "withBackground": "Hintergrundbild einbeziehen",
+    "withFooter": "Fußzeile einbeziehen",
+    "warn": "Bitte zuerst ein Bild generieren",
+    "info": "Bildinformationen",
+    "showNegative": "Negative anzeigen",
+    "showConfig": "Konfiguration anzeigen",
+    "title": "Bildname",
+    "tabs": {
+      "info": "Info",
+      "settings": "Einstellungen"
+    },
+    "showAllImages": "Alle Bilder anzeigen"
+  },
   "sidebar": {
     "extraNetwork": "Zusätzliches Netzwerk",
     "quickSetting": "Schnelleinstellung",

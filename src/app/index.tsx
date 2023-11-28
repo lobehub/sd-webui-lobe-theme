@@ -14,6 +14,7 @@ import ExtraNetworkSidebar from '../features/ExtraNetworkSidebar';
 import Footer from '../features/Footer';
 import Header from '../features/Header';
 import QuickSettingSidebar from '../features/QuickSettingSidebar';
+import Share from '../features/Share';
 import { useStyles } from './style';
 
 const HEADER_HEIGHT = 64;
@@ -49,6 +50,7 @@ const Index = memo(() => {
           </LayoutSidebar>
         )}
         <Content className={cx(!setting.enableSidebar && styles.quicksettings)} />
+        <Share />
         {setting?.enableExtraNetworkSidebar && (
           <LayoutSidebar
             className={styles.sidebar}

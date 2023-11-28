@@ -6,7 +6,7 @@ const formatPrompt = (prompt: string) => {
 };
 
 export const formatInfo = (info: string) => {
-  if (!info) return;
+  if (!info || info === 'undefined') return;
   if (!info.includes('<br>')) return;
   const data = info.split('<br>').filter(Boolean);
   const config = data[2] || data[1];

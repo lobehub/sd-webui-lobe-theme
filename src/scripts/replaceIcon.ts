@@ -29,6 +29,7 @@ import {
   refreshCcw,
   save,
   settings,
+  share2,
   trash,
   undo,
   wand2,
@@ -78,6 +79,7 @@ export default () => {
     replaceIcon(button, ['📒'], book, 16);
     replaceIcon(button, ['📎'], paperclip, 16);
     replaceIcon(button, ['📦'], box, 16);
+    replaceIcon(button, ['💞'], share2, 16);
   }
 
   for (const span of document.querySelectorAll('span')) {

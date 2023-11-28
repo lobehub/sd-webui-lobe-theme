@@ -159,6 +159,25 @@
       "desc": "생성된 이미지에서 더 나은 이미지 정보 표시"
     }
   },
+  "share": "공유",
+  "shareModal": {
+    "download": "스크린샷 다운로드",
+    "imageType": "이미지 형식",
+    "screenshot": "스크린샷",
+    "settings": "내보내기 설정",
+    "withBackground": "배경 이미지 포함",
+    "withFooter": "푸터 포함",
+    "warn": "먼저 이미지를 생성해주세요",
+    "info": "이미지 정보",
+    "showNegative": "부정적 프로모션 표시",
+    "showConfig": "생성 구성 표시",
+    "title": "이미지 이름",
+    "tabs": {
+      "info": "정보",
+      "settings": "설정"
+    },
+    "showAllImages": "모든 이미지 표시"
+  },
   "sidebar": {
     "extraNetwork": "추가 네트워크",
     "quickSetting": "빠른 설정",

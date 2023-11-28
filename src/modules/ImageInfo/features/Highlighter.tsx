@@ -78,6 +78,7 @@ export interface HighlighterProps extends DivProps {
    * @description The code content to be highlighted
    */
   children: string;
+  showCopy?: boolean;
   /**
    * @description The language of the code content
    */
@@ -85,7 +86,7 @@ export interface HighlighterProps extends DivProps {
 }
 
 export const Highlighter = memo<HighlighterProps>(
-  ({ children, title = 'Prompt', className, style, ...rest }) => {
+  ({ children, title = 'Prompt', className, style, showCopy = true, ...rest }) => {
     const [expand, setExpand] = useState(true);
     const { styles, cx } = useStyles('block');
     const container = cx(styles.container, className);
@@ -102,11 +103,15 @@ export const Highlighter = memo<HighlighterProps>(
           <ActionIcon size={{ blockSize: 24 }} style={{ width: 'unset' }}>
             {title}
           </ActionIcon>
-          <CopyButton
-            content={children}
-            placement="left"
-            size={{ blockSize: 24, fontSize: 14, strokeWidth: 2 }}
-          />
+          {showCopy ? (
+            <CopyButton
+              content={children}
+              placement="left"
+              size={{ blockSize: 24, fontSize: 14, strokeWidth: 2 }}
+            />
+          ) : (
+            <div />
+          )}
         </Flexbox>
         <div style={expand ? {} : { height: 0, overflow: 'hidden' }}>
           <SyntaxHighlighter>{children}</SyntaxHighlighter>

@@ -12,9 +12,13 @@ const Inner = memo<DivProps>(() => {
   const sidebarReference = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const sidebar = gradioApp().querySelector('#quicksettings');
-    if (sidebar) sidebarReference.current?.append(sidebar);
-    consola.success('🤯 [layout] inject - QuickSettingSidebar');
+    try {
+      const sidebar = gradioApp().querySelector('#quicksettings');
+      if (sidebar) sidebarReference.current?.append(sidebar);
+      consola.success('🤯 [layout] inject - QuickSettingSidebar');
+    } catch (error) {
+      consola.error('🤯 [layout] inject - QuickSettingSidebar', error);
+    }
   }, []);
 
   return (

@@ -159,6 +159,25 @@
       "desc": "Replace all Emoji icons in stable diffusion webui with SVG icons globally"
     }
   },
+  "share": "Share",
+  "shareModal": {
+    "download": "Download Screenshot",
+    "imageType": "Image Format",
+    "screenshot": "Screenshot",
+    "info": "Image Info",
+    "settings": "Export Settings",
+    "withBackground": "Include Background Image",
+    "withFooter": "Include Footer",
+    "warn": "Please Generate Image First",
+    "showNegative": "Show Negative Promot",
+    "showConfig": "Show Generate Config",
+    "showAllImages": "Show All Images",
+    "title": "Image Name",
+    "tabs": {
+      "info": "Info",
+      "settings": "Settings"
+    }
+  },
   "sidebar": {
     "extraNetwork": "Extra Network",
     "quickSetting": "Quick Setting",

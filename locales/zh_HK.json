@@ -159,6 +159,25 @@
       "desc": "在生成的圖片中顯示更好的圖片資訊"
     }
   },
+  "share": "分享",
+  "shareModal": {
+    "download": "下載截圖",
+    "imageType": "圖片格式",
+    "screenshot": "截圖",
+    "settings": "匯出設定",
+    "withBackground": "包括背景圖片",
+    "withFooter": "包括頁腳",
+    "warn": "請先生成圖片",
+    "info": "圖片資訊",
+    "showNegative": "顯示負面推廣",
+    "showConfig": "顯示生成配置",
+    "title": "圖片名稱",
+    "tabs": {
+      "info": "資訊",
+      "settings": "設定"
+    },
+    "showAllImages": "顯示所有圖片"
+  },
   "sidebar": {
     "extraNetwork": "額外網絡",
     "quickSetting": "快速設置",
