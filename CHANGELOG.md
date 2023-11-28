@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 3.1.0](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.0.15...v3.1.0)
+
+<sup>Released on **2023-11-28**</sup>
+
+#### ✨ Features
+
+- **misc**: Add ImageInfo modules.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Add ImageInfo modules ([d1d079b](https://github.com/lobehub/sd-webui-lobe-theme/commit/d1d079b))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.0.15](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.0.14...v3.0.15)
 
 <sup>Released on **2023-11-27**</sup>
