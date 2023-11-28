@@ -1,24 +1,20 @@
 import { consola } from 'consola';
 import { PropsWithChildren, Suspense, memo, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { shallow } from 'zustand/shallow';
 
 import { Loading } from '@/components';
-import Layout from '@/layouts';
+import GlobalLayout from '@/layouts';
 import { useAppStore } from '@/store';
 
 import manifest from './manifest';
 
-export const Layouts = memo<PropsWithChildren>(({ children }) => {
+export const Layout = memo<PropsWithChildren>(({ children }) => {
   const [loading, setLoading] = useState(true);
-  const { setCurrentTab, onInit, storeLoading } = useAppStore(
-    (st) => ({
-      onInit: st.onInit,
-      setCurrentTab: st.setCurrentTab,
-      storeLoading: st.loading,
-    }),
-    shallow,
-  );
+  const { setCurrentTab, onInit, storeLoading } = useAppStore((st) => ({
+    onInit: st.onInit,
+    setCurrentTab: st.setCurrentTab,
+    storeLoading: st.loading,
+  }));
 
   useEffect(() => {
     onInit();
@@ -61,9 +57,11 @@ export const Layouts = memo<PropsWithChildren>(({ children }) => {
         <meta content="#000000" name="theme-color" />
         <link href={manifest} rel="manifest" />
       </Helmet>
-      <Layout>{storeLoading === false && loading === false ? children : <Loading />}</Layout>
+      <GlobalLayout>
+        {storeLoading === false && loading === false ? children : <Loading />}
+      </GlobalLayout>
     </Suspense>
   );
 });
 
-export default Layouts;
+export default Layout;

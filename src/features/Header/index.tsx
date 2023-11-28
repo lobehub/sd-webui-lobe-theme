@@ -1,7 +1,6 @@
 import { Header as H, Tooltip } from '@lobehub/ui';
 import { useTheme } from 'antd-style';
 import { memo } from 'react';
-import { shallow } from 'zustand/shallow';
 
 import { Logo } from '@/components';
 import { useAppStore } from '@/store';
@@ -12,10 +11,10 @@ import Actions from './Actions';
 import Nav from './Nav';
 
 const Header = memo<DivProps>(({ children }) => {
-  const { themeMode, version } = useAppStore(
-    (st) => ({ themeMode: st.themeMode, version: st.version }),
-    shallow,
-  );
+  const { themeMode, version } = useAppStore((st) => ({
+    themeMode: st.themeMode,
+    version: st.version,
+  }));
   const theme = useTheme();
 
   return (

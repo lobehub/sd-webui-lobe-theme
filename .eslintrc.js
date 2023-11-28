@@ -26,7 +26,6 @@ module.exports = {
         'no-undef': 0,
         'object-curly-spacing': 0,
         'unicorn/prefer-add-event-listener': 0,
-        'unused-imports/no-unused-imports': 0,
       },
     },
   ],

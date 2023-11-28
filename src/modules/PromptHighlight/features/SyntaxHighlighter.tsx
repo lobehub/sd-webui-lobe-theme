@@ -1,27 +1,17 @@
 import { Icon } from '@lobehub/ui';
 import { useThemeMode } from 'antd-style';
 import { Loader2 } from 'lucide-react';
-import { memo, useEffect } from 'react';
+import { PropsWithChildren, memo } from 'react';
 import { Center } from 'react-layout-kit';
-import { type HighlighterOptions } from 'shiki-es';
 
-import { useStyles } from './style';
-import { useHighlight } from './useHighlight';
+import { useHighlight } from '@/hooks/useHighlight';
 
-export interface SyntaxHighlighterProps {
-  children: string;
-  language: string;
-  options?: HighlighterOptions;
-}
+import { useStyles } from '../style';
 
-const SyntaxHighlighter = memo<SyntaxHighlighterProps>(({ children, language, options }) => {
+const SyntaxHighlighter = memo<PropsWithChildren>(({ children }) => {
   const { styles } = useStyles();
   const { isDarkMode } = useThemeMode();
-  const [codeToHtml, isLoading] = useHighlight((s) => [s.codeToHtml, !s.highlighter]);
-
-  useEffect(() => {
-    useHighlight.getState().initHighlighter(options);
-  }, [options]);
+  const { data: codeToHtml, isLoading } = useHighlight(children as string, isDarkMode);
 
   return (
     <>
@@ -31,7 +21,7 @@ const SyntaxHighlighter = memo<SyntaxHighlighterProps>(({ children, language, op
         <div
           className={styles.shiki}
           dangerouslySetInnerHTML={{
-            __html: codeToHtml(children, language, isDarkMode) || '',
+            __html: codeToHtml as any,
           }}
         />
       )}

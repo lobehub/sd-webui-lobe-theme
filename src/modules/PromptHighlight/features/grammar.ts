@@ -1,0 +1,62 @@
+export const lang = {
+  $schema: 'https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json',
+  fileTypes: ['prompt'],
+  name: 'prompt',
+  patterns: [
+    {
+      match: '[,]',
+      name: 'comma',
+    },
+    {
+      match: '[:|]',
+      name: 'func',
+    },
+    {
+      match: 'AND',
+      name: 'and',
+    },
+    {
+      match: 'BREAK',
+      name: 'break',
+    },
+    {
+      captures: {
+        0: {
+          name: 'model-bracket',
+        },
+        1: {
+          name: 'model-type',
+        },
+        2: {
+          name: 'model-name',
+        },
+        3: {
+          name: 'number',
+        },
+      },
+      match: '<([^:]+):([^:]+):([^>]+)>',
+    },
+    {
+      match: '[<|>]',
+      name: 'model-bracket',
+    },
+    {
+      match: '[(|)|\\[|\\]|{|}]',
+      name: 'bracket',
+    },
+    {
+      match: '(?<!\\w)(\\d*\\.?\\d+|\\.\\d+)(?!\\w)',
+      name: 'number',
+    },
+    {
+      match: '__.*__',
+      name: 'wildcards',
+    },
+  ],
+
+  scopeName: 'source.prompt',
+};
+
+const prompt = [lang];
+
+export default prompt;

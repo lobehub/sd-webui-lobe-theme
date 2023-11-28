@@ -42,6 +42,4 @@ test-output
 # add other ignore file below
 __pycache__
 /lobe_theme_config.json
-/javascript/**/*
-!/javascript/main.js
 bun.lockb

@@ -19,7 +19,7 @@ export const themeConfig: any = (isDarkMode: ThemeAppearance) => {
       {
         scope: 'comma',
         settings: {
-          foreground: colorGreen,
+          foreground: colorScales.gray[type][6],
         },
       },
       {

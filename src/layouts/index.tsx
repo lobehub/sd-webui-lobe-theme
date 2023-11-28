@@ -9,17 +9,17 @@ import {
 import isEqual from 'fast-deep-equal';
 import qs from 'query-string';
 import { memo, useCallback, useEffect } from 'react';
-import { shallow } from 'zustand/shallow';
 
 import { useIsDarkMode } from '@/hooks/useIsDarkMode';
 import { selectors, useAppStore } from '@/store';
 import { kitchenNeutral, kitchenPrimary } from '@/styles/kitchenColors';
 
-const Layout = memo<DivProps>(({ children }) => {
-  const { onSetThemeMode, themeMode } = useAppStore(
-    (st) => ({ onInit: st.onInit, onSetThemeMode: st.onSetThemeMode, themeMode: st.themeMode }),
-    shallow,
-  );
+const GlobalLayout = memo<DivProps>(({ children }) => {
+  const { onSetThemeMode, themeMode } = useAppStore((st) => ({
+    onInit: st.onInit,
+    onSetThemeMode: st.onSetThemeMode,
+    themeMode: st.themeMode,
+  }));
   const setting = useAppStore(selectors.currentSetting, isEqual);
   const isDarkMode = useIsDarkMode();
 
@@ -70,4 +70,4 @@ const Layout = memo<DivProps>(({ children }) => {
   );
 });
 
-export default Layout;
+export default GlobalLayout;

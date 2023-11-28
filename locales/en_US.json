@@ -75,12 +75,23 @@
         "desc": "Enable the extra network sidebar on the right side"
       }
     },
+    "tab": {
+      "appearance": "Appearance",
+      "sidebar": "Sidebar",
+      "layout": "Layout",
+      "experimental": "Experimental"
+    },
     "group": {
       "extraNetworkSidebar": "Extra Network Sidebar",
       "layout": "Layout Settings",
       "promptTextarea": "Prompt Textbox",
       "quickSettingSidebar": "Quick Setting Sidebar",
-      "theme": "Theme Settings"
+      "theme": "Theme Settings",
+      "experimental": "Experimental Features"
+    },
+    "imageInfo": {
+      "title": "Image Info Alternative",
+      "desc": "Display better image information in the generated image"
     },
     "hideFooter": {
       "title": "Hide Footer",
