@@ -162,34 +162,6 @@ export const useStyles = createStyles(
             }
           }
         }
-
-        .global-popup-close {
-          background-color: var(--popup-overlay) !important;
-          background-image: var(--grain);
-          backdrop-filter: saturate(120%) blur(80px);
-        }
-
-        .global-popup-inner {
-          max-width: 80%;
-
-          .popup-metadata {
-            padding: 16px;
-
-            font-family: var(--font-mono);
-            color: ${token.colorText};
-            word-break: break-word;
-
-            background: ${token.colorBgLayout};
-            border-radius: ${token.borderRadius}px;
-            box-shadow: var(--lightbox-img-shadow);
-          }
-
-          .edit-user-metadata {
-            > div:not(.edit-user-metadata-buttons):not(:last-child) {
-              margin: 0 0 8px;
-            }
-          }
-        }
       `,
       splitView: css`
         #txt2img_toprow,

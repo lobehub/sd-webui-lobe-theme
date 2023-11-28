@@ -3,41 +3,63 @@ import { Theme, css } from 'antd-style';
 export default (token: Theme) => css`
   #lightboxModal {
     background-color: var(--popup-overlay) !important;
-    background-image: var(--grain);
     backdrop-filter: saturate(120%) blur(80px);
     outline: none;
+
+    > img:not(.modalImageFullscreen) {
+      box-shadow: var(--lightbox-img-shadow);
+    }
   }
 
   .modalControls {
     transition: var(--button-transition) !important;
-  }
 
-  .modalControls:hover {
-    background-color: transparent !important;
-  }
+    &:hover {
+      background-color: transparent !important;
+    }
 
-  .modalControls span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    .cursor {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
 
-    width: 32px !important;
+      width: 32px !important;
+      height: 32px !important;
 
-    font-size: 35px !important;
-    color: ${token.colorTextDescription} !important;
-    text-align: center;
-    text-shadow: none !important;
+      background-color: ${token.colorFillTertiary};
+      backdrop-filter: saturate(120%) blur(80px);
+      border-radius: ${token.borderRadius}px;
 
-    transition: var(--button-transition);
-  }
+      > svg {
+        width: 20px !important;
+        height: 20px !important;
+      }
 
-  .modalControls span:hover,
-  .modalControls span:focus {
-    color: ${token.colorPrimary} !important;
-  }
+      &:hover {
+        color: ${token.colorPrimary} !important;
+        background-color: ${token.colorFillSecondary} !important;
+      }
+    }
 
-  #lightboxModal > img:not(.modalImageFullscreen) {
-    box-shadow: var(--lightbox-img-shadow);
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 32px !important;
+
+      font-size: 35px !important;
+      color: ${token.colorTextDescription} !important;
+      text-align: center;
+      text-shadow: none !important;
+
+      transition: var(--button-transition);
+
+      &:hover,
+      &:focus {
+        color: ${token.colorPrimary} !important;
+      }
+    }
   }
 
   .modalPrev,
@@ -49,7 +71,7 @@ export default (token: Theme) => css`
     align-items: center;
     justify-content: center;
 
-    width: 48px !important;
+    width: 44px !important;
     height: 50%;
     padding: 8px !important;
 
@@ -58,13 +80,18 @@ export default (token: Theme) => css`
     color: ${token.colorTextDescription} !important;
 
     background-color: ${token.colorFillTertiary};
-    border-radius: 0 16px 16px 0 !important;
+    border-radius: 0 ${token.borderRadius}px ${token.borderRadius}px 0 !important;
 
     transition: var(--button-transition) !important;
+
+    svg {
+      width: 20px !important;
+      height: 20px !important;
+    }
   }
 
   .modalNext {
-    border-radius: 16px 0 0 16px !important;
+    border-radius: ${token.borderRadius}px 0 0 ${token.borderRadius}px !important;
   }
 
   .modalPrev:hover,

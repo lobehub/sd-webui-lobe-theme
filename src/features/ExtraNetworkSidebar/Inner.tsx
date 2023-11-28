@@ -83,18 +83,23 @@ const Inner = memo(() => {
       index2indexButton.click();
       setExtraLoading(false);
 
-      const civitaiText2ImgButton = document.querySelector('#txt2img_extra_refresh')
-        ?.nextSibling as HTMLButtonElement;
-      if (civitaiText2ImgButton) {
-        civitaiText2ImgButton.onclick = civitaiHelperFix;
-      }
-      const civitaiImg2ImgButton = document.querySelector('#img2img_extra_refresh')
-        ?.nextSibling as HTMLButtonElement;
-      if (civitaiImg2ImgButton) {
-        civitaiImg2ImgButton.onclick = civitaiHelperFix;
+      const isCivitaiHelper = !!document.querySelector('#txt2img_extra_refresh');
+
+      if (isCivitaiHelper) {
+        const civitaiText2ImgButton = document.querySelector('#txt2img_extra_refresh')
+          ?.nextSibling as HTMLButtonElement;
+        if (civitaiText2ImgButton) {
+          civitaiText2ImgButton.onclick = civitaiHelperFix;
+        }
+        const civitaiImg2ImgButton = document.querySelector('#img2img_extra_refresh')
+          ?.nextSibling as HTMLButtonElement;
+        if (civitaiImg2ImgButton) {
+          civitaiImg2ImgButton.onclick = civitaiHelperFix;
+        }
+
+        civitaiHelperFix();
       }
 
-      civitaiHelperFix();
       consola.success('🤯 [extranetwork] force reload');
     } catch (error) {
       consola.error('🤯 [extranetwork] force reload', error);

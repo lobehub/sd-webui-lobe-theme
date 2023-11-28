@@ -72,5 +72,9 @@ export default (token: Theme) => {
         }
       }
     }
+
+    #tabs_extensions > .tabitem > .gap > .gradio-row {
+      overflow: auto;
+    }
   `;
 };

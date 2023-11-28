@@ -200,23 +200,18 @@ export default (token: Theme) => {
       --button-small-radius: ${token.borderRadiusSM}px;
       --button-small-text-size: var(--text-md);
       --button-small-text-weight: 400;
-      --button-transition: all 0.12s cubic-bezier(0.35, 0.12, 0.17, 1);
+      --button-transition: all 0.12s ${token.motionEaseInOut};
       --button-lg-height: 44px;
       --button-lg-tool-height: 36px;
-      --popup-overlay: rgb(180 187 190 / 70%);
-      --thumbnail-shadow: 0 24px 16px -10px rgb(0 0 0 / 15%), 0 36px 40px -15px rgb(0 0 0 / 30%);
-      --lightbox-img-shadow: 0 70px 80px -10px rgb(0 0 0 / 10%), 0 30px 60px -15px rgb(0 0 0 / 10%),
-        0 50px 40px -30px rgb(0 0 0 / 8%);
+      --popup-overlay: ${token.colorBgMask};
+      --thumbnail-shadow: ${token.boxShadow};
+      --lightbox-img-shadow: ${token.boxShadowSecondary};
       --grain: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='turbulence' baseFrequency='2.5' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.2'/%3E%3C/svg%3E");
     }
 
     .dark {
       --checkbox-check: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='black' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
       --radio-circle: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='black' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
-      --popup-overlay: rgb(39 45 47 / 80%);
-      --thumbnail-shadow: 0 24px 16px -10px rgb(0 0 0 / 30%), 0 36px 40px -15px rgb(0 0 0 / 40%);
-      --lightbox-img-shadow: 0 70px 80px -10px rgb(0 0 0 / 30%), 0 30px 60px -15px rgb(0 0 0 / 20%),
-        0 50px 40px -30px rgb(0 0 0 / 30%);
     }
   `;
 };
