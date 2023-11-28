@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 3.2.0](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.1.2...v3.2.0)
+
+<sup>Released on **2023-11-28**</sup>
+
+#### ✨ Features
+
+- **misc**: Add Share Image.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Add Share Image ([a0734ae](https://github.com/lobehub/sd-webui-lobe-theme/commit/a0734ae))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.1.2](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.1.1...v3.1.2)
 
 <sup>Released on **2023-11-28**</sup>
