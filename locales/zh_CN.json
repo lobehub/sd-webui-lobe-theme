@@ -80,7 +80,8 @@
       "layout": "布局设置",
       "promptTextarea": "提示文本框",
       "quickSettingSidebar": "快速设置侧边栏",
-      "theme": "主题设置"
+      "theme": "主题设置",
+      "experimental": "实验性功能"
     },
     "hideFooter": {
       "title": "隐藏页脚",
@@ -146,6 +147,16 @@
     "svgIcons": {
       "title": "SVG 图标",
       "desc": "全局替换 Stable Diffusion webui 中的所有表情符号为 SVG 图标"
+    },
+    "tab": {
+      "appearance": "外观",
+      "sidebar": "侧边栏",
+      "layout": "布局",
+      "experimental": "实验性"
+    },
+    "imageInfo": {
+      "title": "图像信息替代",
+      "desc": "在生成的图像中显示更好的图像信息"
     }
   },
   "sidebar": {

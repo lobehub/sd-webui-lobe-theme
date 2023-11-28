@@ -80,7 +80,8 @@
       "layout": "레이아웃 설정",
       "promptTextarea": "프롬프트 텍스트 상자",
       "quickSettingSidebar": "빠른 설정 사이드바",
-      "theme": "테마 설정"
+      "theme": "테마 설정",
+      "experimental": "실험적 기능"
     },
     "hideFooter": {
       "title": "푸터 숨기기",
@@ -146,6 +147,16 @@
     "svgIcons": {
       "title": "SVG 아이콘",
       "desc": "Stable Diffusion 웹UI의 모든 이모지 아이콘을 전역적으로 SVG 아이콘으로 대체"
+    },
+    "tab": {
+      "appearance": "외관",
+      "sidebar": "사이드바",
+      "layout": "레이아웃",
+      "experimental": "실험적 기능"
+    },
+    "imageInfo": {
+      "title": "대체 이미지 정보",
+      "desc": "생성된 이미지에서 더 나은 이미지 정보 표시"
     }
   },
   "sidebar": {

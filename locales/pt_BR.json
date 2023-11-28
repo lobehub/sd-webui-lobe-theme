@@ -80,7 +80,8 @@
       "layout": "Configurações de Layout",
       "promptTextarea": "Caixa de Texto do Prompt",
       "quickSettingSidebar": "Barra Lateral de Configuração Rápida",
-      "theme": "Configurações do Tema"
+      "theme": "Configurações do Tema",
+      "experimental": "Recursos Experimentais"
     },
     "hideFooter": {
       "title": "Ocultar Rodapé",
@@ -146,6 +147,16 @@
     "svgIcons": {
       "title": "Ícones SVG",
       "desc": "Substituir todos os ícones de Emoji no stable diffusion webui por ícones SVG globalmente"
+    },
+    "tab": {
+      "appearance": "Aparência",
+      "sidebar": "Barra lateral",
+      "layout": "Layout",
+      "experimental": "Experimental"
+    },
+    "imageInfo": {
+      "title": "Informações da Imagem Alternativas",
+      "desc": "Exibir informações melhores da imagem na imagem gerada"
     }
   },
   "sidebar": {

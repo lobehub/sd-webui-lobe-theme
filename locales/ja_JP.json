@@ -80,7 +80,8 @@
       "layout": "レイアウト設定",
       "promptTextarea": "プロンプトテキストボックス",
       "quickSettingSidebar": "クイック設定サイドバー",
-      "theme": "テーマ設定"
+      "theme": "テーマ設定",
+      "experimental": "実験的な機能"
     },
     "hideFooter": {
       "title": "フッターを非表示",
@@ -146,6 +147,16 @@
     "svgIcons": {
       "title": "SVGアイコン",
       "desc": "Stable Diffusion WebUI のすべての絵文字アイコンをグローバルにSVGアイコンで置き換えます"
+    },
+    "tab": {
+      "appearance": "外観",
+      "sidebar": "サイドバー",
+      "layout": "レイアウト",
+      "experimental": "実験的"
+    },
+    "imageInfo": {
+      "title": "画像情報の代替",
+      "desc": "生成された画像でより良い画像情報を表示します"
     }
   },
   "sidebar": {

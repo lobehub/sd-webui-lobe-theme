@@ -80,7 +80,8 @@
       "layout": "Layout-Einstellungen",
       "promptTextarea": "Prompt-Textfeld",
       "quickSettingSidebar": "Schnelle Einstellungsseitenleiste",
-      "theme": "Themen-Einstellungen"
+      "theme": "Themen-Einstellungen",
+      "experimental": "Experimentelle Funktionen"
     },
     "hideFooter": {
       "title": "Fußzeile ausblenden",
@@ -146,6 +147,16 @@
     "svgIcons": {
       "title": "SVG-Symbole",
       "desc": "Ersetzen Sie alle Emoji-Symbole in Stable Diffusion WebUI global durch SVG-Symbole"
+    },
+    "tab": {
+      "appearance": "Erscheinungsbild",
+      "sidebar": "Seitenleiste",
+      "layout": "Layout",
+      "experimental": "Experimentell"
+    },
+    "imageInfo": {
+      "title": "Alternative Bildinformationen",
+      "desc": "Zeigt bessere Bildinformationen im generierten Bild an"
     }
   },
   "sidebar": {

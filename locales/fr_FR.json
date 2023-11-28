@@ -80,7 +80,8 @@
       "layout": "Réglages de mise en page",
       "promptTextarea": "Zone de texte de la demande",
       "quickSettingSidebar": "Barre latérale de réglage rapide",
-      "theme": "Paramètres du thème"
+      "theme": "Paramètres du thème",
+      "experimental": "Fonctionnalités expérimentales"
     },
     "hideFooter": {
       "title": "Masquer le pied de page",
@@ -146,6 +147,16 @@
     "svgIcons": {
       "title": "Icônes SVG",
       "desc": "Remplacer tous les icônes Emoji dans stable diffusion webui par des icônes SVG globalement"
+    },
+    "tab": {
+      "appearance": "Apparence",
+      "sidebar": "Barre latérale",
+      "layout": "Disposition",
+      "experimental": "Expérimental"
+    },
+    "imageInfo": {
+      "title": "Informations sur l'image alternatives",
+      "desc": "Afficher de meilleures informations sur l'image dans l'image générée"
     }
   },
   "sidebar": {
