@@ -4,6 +4,8 @@
     "lobe": "LobeHub",
     "custom": "Personnalisé"
   },
+  "cancel": "Annuler",
+  "confirm": "Confirmer",
   "custom": {
     "initializing": "StableDiffusion / LobeTheme est en cours d'initialisation, veuillez patienter..."
   },

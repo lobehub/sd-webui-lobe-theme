@@ -4,6 +4,8 @@
     "lobe": "LobeHub",
     "custom": "사용자 정의"
   },
+  "cancel": "취소",
+  "confirm": "확인",
   "custom": {
     "initializing": "StableDiffusion / LobeTheme이 초기화 중입니다. 잠시 기다려주세요..."
   },

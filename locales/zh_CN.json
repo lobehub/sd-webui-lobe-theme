@@ -4,6 +4,8 @@
     "lobe": "LobeHub",
     "custom": "自定义"
   },
+  "cancel": "取消",
+  "confirm": "确认",
   "custom": {
     "initializing": "StableDiffusion / LobeTheme 正在初始化，请稍候..."
   },

@@ -23,9 +23,20 @@ export const formatInfo = (info: string) => {
     configs[items[0].trim()] = items[1].trim();
   }
 
+  let position = data[0];
+  let negative = data[2] ? data[1] : '';
+
+  if (position.includes('Negative prompt:')) {
+    negative = position;
+    position = '';
+  }
+
+  position = formatPrompt(position);
+  negative = formatPrompt(negative.split('Negative prompt: ')[1]);
+
   return {
     config: configs,
-    negative: formatPrompt(data[2] ? decodeURI(data[1]).split('Negative prompt: ')[1] : ''),
-    positive: formatPrompt(decodeURI(data[0])),
+    negative: negative,
+    positive: position,
   };
 };

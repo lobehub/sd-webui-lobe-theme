@@ -1,4 +1,4 @@
-import { Button } from 'antd';
+import { Button, Popconfirm } from 'antd';
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -16,9 +16,17 @@ const Footer = memo(() => {
 
   return (
     <>
-      <Button danger onClick={onReset} style={{ borderRadius: 4 }} type="text">
-        {t('setting.button.reset')}
-      </Button>
+      <Popconfirm
+        cancelText={t('cancel')}
+        okText={t('confirm')}
+        okType={'danger'}
+        onConfirm={onReset}
+        title={t('setting.button.reset')}
+      >
+        <Button danger style={{ borderRadius: 4 }}>
+          {t('setting.button.reset')}
+        </Button>
+      </Popconfirm>
       <Button htmlType="submit" style={{ borderRadius: 4 }} type="primary">
         {t('setting.button.submit')}
       </Button>

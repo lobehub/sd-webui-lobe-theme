@@ -4,6 +4,8 @@
     "lobe": "LobeHub",
     "custom": "カスタム"
   },
+  "cancel": "キャンセル",
+  "confirm": "確認",
   "custom": {
     "initializing": "StableDiffusion / LobeTheme が初期化中です。お待ちください..."
   },

@@ -84,13 +84,17 @@ export default (token: Theme) => {
     [id$='_gallery_container'] {
       min-height: 470px;
 
-      > div {
+      > div:not([id$='_generate_box']) {
         flex-grow: 1;
 
         [id$='_gallery'] {
           flex-grow: 1;
         }
       }
+    }
+
+    div[id^='img2img_'].block.gradio-image {
+      height: auto !important;
     }
   `;
 };
