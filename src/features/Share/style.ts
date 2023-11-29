@@ -45,9 +45,10 @@ export const useStyles = createStyles(({ css, token, stylish, cx }, withBackgrou
       border-radius: ${token.borderRadiusLG}px;
 
       * {
-        pointer-events: none;
-        overflow: hidden;
+        pointer-events: none !important;
+        overflow: hidden !important;
 
+        ${stylish.noScrollbar}
         ::-webkit-scrollbar {
           width: 0 !important;
           height: 0 !important;
