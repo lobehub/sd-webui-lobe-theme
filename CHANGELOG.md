@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 3.3.0](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.2.2...v3.3.0)
+
+<sup>Released on **2023-11-29**</sup>
+
+#### ✨ Features
+
+- **misc**: Add new prompt editor.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Add new prompt editor ([03e67ba](https://github.com/lobehub/sd-webui-lobe-theme/commit/03e67ba))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.2.2](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.2.1...v3.2.2)
 
 <sup>Released on **2023-11-29**</sup>
