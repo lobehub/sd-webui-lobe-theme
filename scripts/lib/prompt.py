@@ -22,7 +22,7 @@ class LobePrompt:
         if os.path.exists(self.prompt_file):
             LobeLog.debug(f"Loading prompt from prompt.json")
 
-            with open(self.prompt_file, 'r') as f:
+            with open(self.prompt_file, 'r', encoding='utf-8') as f:
                 self.prompt = json.load(f)
         else:
             LobeLog.debug(f"Prompt file not found")
