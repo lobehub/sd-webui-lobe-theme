@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 3.3.2](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.3.1...v3.3.2)
+
+<sup>Released on **2023-11-29**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix encoding.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix encoding ([a308dab](https://github.com/lobehub/sd-webui-lobe-theme/commit/a308dab))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.3.1](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.3.0...v3.3.1)
 
 <sup>Released on **2023-11-29**</sup>
