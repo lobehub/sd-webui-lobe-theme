@@ -10,10 +10,7 @@ const ImageInfo = (parentId: string, containerId: string) => {
   const settingsDiv = document.createElement('div') as HTMLDivElement;
   settingsDiv.id = containerId.replace('#', '');
 
-  (gradioApp().querySelector(parentId) as HTMLDivElement).insertBefore(
-    settingsDiv,
-    (gradioApp().querySelector(parentId) as HTMLDivElement).firstChild,
-  );
+  (gradioApp().querySelector(parentId) as HTMLDivElement).append(settingsDiv);
 
   createRoot(settingsDiv).render(
     <StrictMode>

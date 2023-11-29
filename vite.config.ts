@@ -1,4 +1,5 @@
 import react from '@vitejs/plugin-react-swc';
+import { consola } from 'consola';
 import dotenv from 'dotenv';
 import { resolve } from 'node:path';
 import * as process from 'node:process';
@@ -11,7 +12,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 const SD_HOST = process.env.SD_HOST || '127.0.0.1';
 const SD_PORT = process.env.SD_PORT || 7860;
 
-console.log(SD_HOST, SD_PORT);
+consola.info('Proxy:', `http://${SD_HOST}:${SD_PORT}`);
 export default defineConfig({
   base: '/dev',
   build: {
