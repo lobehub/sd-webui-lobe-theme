@@ -10,10 +10,10 @@ class LobeLogClass:
 
     def debug(self, message: str):
         if self.logging_enabled:
-            print(f"[Lobe:DEBUG]: {message}")
+            print(f"[DEBUG] 🤯 LobeTheme: {message}")
 
     def info(self, message: str):
-        print(f"[Lobe]: {message}")
+        print(f"🤯 LobeTheme: {message}")
 
 
 LobeLog = LobeLogClass()

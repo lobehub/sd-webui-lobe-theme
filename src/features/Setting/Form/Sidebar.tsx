@@ -2,7 +2,7 @@ import { Form } from '@lobehub/ui';
 import { InputNumber, Segmented, Switch } from 'antd';
 import isEqual from 'fast-deep-equal';
 import { PanelLeftClose, PanelRightClose } from 'lucide-react';
-import { memo, useMemo, useState } from 'react';
+import { memo, useCallback, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import Footer from '@/features/Setting/Form/Footer';
@@ -15,6 +15,11 @@ const SettingForm = memo(() => {
   const [rawSetting, setRawSetting] = useState<WebuiSetting>(setting);
 
   const { t } = useTranslation();
+
+  const onFinish = useCallback((value: WebuiSetting) => {
+    onSetSetting(value);
+    location.reload();
+  }, []);
 
   const quickSettingSidebar: SettingItemGroup = useMemo(
     () => ({
@@ -132,7 +137,7 @@ const SettingForm = memo(() => {
       footer={<Footer />}
       initialValues={setting}
       items={[quickSettingSidebar, extraNetworkSidebar]}
-      onFinish={onSetSetting}
+      onFinish={onFinish}
       onValuesChange={(_, v) => setRawSetting(v)}
       style={{ flex: 1 }}
     />

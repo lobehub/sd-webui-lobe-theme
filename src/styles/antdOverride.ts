@@ -2,8 +2,17 @@ import { Theme, css } from 'antd-style';
 import { readableColor } from 'polished';
 
 export default (token: Theme) => css`
-  body {
+  html,
+  body,
+  #__next,
+  .ant-app {
+    position: relative;
+    overscroll-behavior: none;
+    height: 100% !important;
+    min-height: 100% !important;
+
     ::-webkit-scrollbar {
+      display: none;
       width: 0;
       height: 0;
     }

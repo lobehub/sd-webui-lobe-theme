@@ -5,12 +5,14 @@ from fastapi import FastAPI, Response, Request
 
 from scripts.lib.config import LobeConfig
 from scripts.lib.package import LobePackage
+from scripts.lib.prompt import LobePrompt
 from scripts.lib.locale import LobeLocale
 from scripts.lib.lobe_log import LobeLog
 
 class LobeApi:
-    def __init__(self, config: LobeConfig, package: LobePackage, locale: LobeLocale):
+    def __init__(self, config: LobeConfig, package: LobePackage, prompt:LobePrompt, locale: LobeLocale):
         self.package = package
+        self.prompt = prompt
         self.config = config
         self.locale = locale
         pass
@@ -24,6 +26,14 @@ class LobeApi:
             if self.package.is_empty():
                 return Response(content=self.package.json(), media_type="application/json", status_code=404)
             return Response(content=self.package.json(), media_type="application/json", status_code=200)
+
+        @app.get("/lobe/prompt")
+        async def lobe_prompt_get():
+            LobeLog.debug("lobe_prompt_get")
+
+            if self.prompt.is_empty():
+                return Response(content=self.prompt.json(), media_type="application/json", status_code=404)
+            return Response(content=self.prompt.json(), media_type="application/json", status_code=200)
 
         @app.get("/lobe/locales/{lng}")
         async def lobe_locale_get(lng: str):

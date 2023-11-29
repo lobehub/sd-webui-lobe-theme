@@ -1,6 +1,7 @@
 import { consola } from 'consola';
 import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Flexbox } from 'react-layout-kit';
 
 import TagList, { PromptType, TagItem } from './TagList';
 import { useStyles } from './style';
@@ -51,24 +52,26 @@ const Prompt = memo<PromptProps>(({ type }) => {
   return (
     <div className={styles.promptView}>
       <TagList setTags={setTags} setValue={setCurrentValue} tags={tags} type={type} />
-      <div className={styles.buttonGroup}>
+      <Flexbox gap={8} horizontal>
         <button
-          className="lg secondary gradio-button tool svelte-1ipelgc"
+          className="secondary gradio-button"
           onClick={getValue}
+          style={{ flex: 1, height: 36 }}
           title={t('prompt.load')}
           type="button"
         >
           🔄
         </button>
         <button
-          className="lg secondary gradio-button tool svelte-1ipelgc"
+          className="secondary gradio-button"
           onClick={setValue}
+          style={{ flex: 1, height: 36 }}
           title={t('prompt.set')}
           type="button"
         >
           ➡️
         </button>
-      </div>
+      </Flexbox>
     </div>
   );
 });

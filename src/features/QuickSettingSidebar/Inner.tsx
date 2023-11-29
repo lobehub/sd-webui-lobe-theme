@@ -1,16 +1,24 @@
 import { DraggablePanelBody } from '@lobehub/ui';
+import { Segmented } from 'antd';
+import { useTheme } from 'antd-style';
 import { consola } from 'consola';
-import isEqual from 'fast-deep-equal';
-import { memo, useEffect, useRef } from 'react';
+import { memo, useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Flexbox } from 'react-layout-kit';
 
 import { PromptEditor } from '@/components';
-import { selectors, useAppStore } from '@/store';
 import { type DivProps } from '@/types';
 
-const Inner = memo<DivProps>(() => {
-  const setting = useAppStore(selectors.currentSetting, isEqual);
-  const sidebarReference = useRef<HTMLDivElement>(null);
+enum Tabs {
+  Prompt = 'prompt',
+  Setting = 'setting',
+}
 
+const Inner = memo<DivProps>(() => {
+  const theme = useTheme();
+  const [tab, setTab] = useState<Tabs>(Tabs.Setting);
+  const sidebarReference = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation();
   useEffect(() => {
     try {
       const sidebar = gradioApp().querySelector('#quicksettings');
@@ -23,8 +31,20 @@ const Inner = memo<DivProps>(() => {
 
   return (
     <DraggablePanelBody>
-      {setting.promptEditor && <PromptEditor />}
-      <div ref={sidebarReference} />
+      <Flexbox gap={16}>
+        <Segmented
+          block
+          onChange={(value) => setTab(value as Tabs)}
+          options={[
+            { label: t('sidebar.quickSetting'), value: Tabs.Setting },
+            { label: t('setting.promptEditor.title'), value: Tabs.Prompt },
+          ]}
+          style={{ background: theme.colorBgContainer, width: '100%' }}
+          value={tab}
+        />
+        <div ref={sidebarReference} style={tab === Tabs.Setting ? {} : { display: 'none' }} />
+        {tab === Tabs.Prompt && <PromptEditor />}
+      </Flexbox>
     </DraggablePanelBody>
   );
 });

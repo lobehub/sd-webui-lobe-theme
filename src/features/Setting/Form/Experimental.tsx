@@ -2,18 +2,23 @@ import { Form } from '@lobehub/ui';
 import { Switch } from 'antd';
 import isEqual from 'fast-deep-equal';
 import { Puzzle, TextCursorInput } from 'lucide-react';
-import { memo, useMemo } from 'react';
+import { memo, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import Footer from '@/features/Setting/Form/Footer';
 import { SettingItemGroup } from '@/features/Setting/Form/types';
-import { selectors, useAppStore } from '@/store';
+import { WebuiSetting, selectors, useAppStore } from '@/store';
 
 const SettingForm = memo(() => {
   const setting = useAppStore(selectors.currentSetting, isEqual);
   const onSetSetting = useAppStore((st) => st.onSetSetting);
 
   const { t } = useTranslation();
+
+  const onFinish = useCallback((value: WebuiSetting) => {
+    onSetSetting(value);
+    location.reload();
+  }, []);
 
   const experimental: SettingItemGroup = useMemo(
     () => ({
@@ -61,7 +66,7 @@ const SettingForm = memo(() => {
       footer={<Footer />}
       initialValues={setting}
       items={[experimental, promptTextarea]}
-      onFinish={onSetSetting}
+      onFinish={onFinish}
       style={{ flex: 1 }}
     />
   );

@@ -1,0 +1,5914 @@
+{
+  "color": {
+    "children": {
+      "colorPalette": {
+        "children": {
+          "yellowColorScheme": {
+            "langName": "黄色调色方案",
+            "name": "yellow color scheme"
+          },
+          "warmColorPalette": {
+            "langName": "暖色调",
+            "name": "Warm Color Palette"
+          },
+          "coolColorPalette": {
+            "langName": "冷色调",
+            "name": "Cool Color Palette"
+          },
+          "colorful": {
+            "langName": "多彩的",
+            "name": "Colorful"
+          },
+          "rainbow": {
+            "langName": "彩虹",
+            "name": "Rainbow"
+          },
+          "spectralColor": {
+            "langName": "光谱色",
+            "name": "Spectral Color"
+          },
+          "invertedColors": {
+            "langName": "反色",
+            "name": "Inverted Colors"
+          },
+          "chroma": {
+            "langName": "色度",
+            "name": "Chroma"
+          },
+          "dichromatism": {
+            "langName": "二色性",
+            "name": "Dichromatism"
+          },
+          "tetrachromacy": {
+            "langName": "四色视觉",
+            "name": "Tetrachromacy"
+          },
+          "saturated": {
+            "langName": "饱和的",
+            "name": "Saturated"
+          },
+          "neon": {
+            "langName": "霓虹",
+            "name": "Neon"
+          },
+          "electricColors": {
+            "langName": "电气色彩",
+            "name": "Electric Colors"
+          },
+          "tonalColors": {
+            "langName": "色调",
+            "name": "Tonal Colors"
+          },
+          "vividColors": {
+            "langName": "鲜艳的颜色",
+            "name": "Vivid Colors"
+          },
+          "complimentaryColors": {
+            "langName": "互补色",
+            "name": "Complimentary-Colors"
+          },
+          "splitComplementaryColors": {
+            "langName": "分割互补色",
+            "name": "Split-Complementary-Colors"
+          },
+          "supplementaryColors": {
+            "langName": "补色",
+            "name": "Supplementary-Colors"
+          },
+          "analogousColors": {
+            "langName": "类似色",
+            "name": "Analogous-Colors"
+          },
+          "triadicColors": {
+            "langName": "三色调",
+            "name": "Triadic-Colors"
+          },
+          "tetradicColors": {
+            "langName": "四色调",
+            "name": "Tetradic-Colors"
+          },
+          "polychromaticColors": {
+            "langName": "多色彩",
+            "name": "Polychromatic-Colors"
+          },
+          "light": {
+            "langName": "光",
+            "name": "Light"
+          },
+          "dark": {
+            "langName": "黑暗",
+            "name": "Dark"
+          },
+          "lightMode": {
+            "langName": "明亮模式",
+            "name": "Light Mode"
+          },
+          "darkMode": {
+            "langName": "暗模式",
+            "name": "Dark Mode"
+          },
+          "tonesOfBlack": {
+            "langName": "黑色调",
+            "name": "Tones of Black"
+          },
+          "tonesOfBlackInBackground": {
+            "langName": "背景中的黑色调",
+            "name": "Tones of Black in Background"
+          },
+          "lightBlueBackground": {
+            "langName": "浅蓝色背景",
+            "name": "Light Blue Background"
+          },
+          "lightBlueForeground": {
+            "langName": "浅蓝色前景",
+            "name": "Light Blue Foreground"
+          },
+          "lightBlue": {
+            "langName": "浅蓝色",
+            "name": "Light Blue"
+          }
+        },
+        "langName": "彩色调色板",
+        "name": "Color Palette"
+      },
+      "monochromePalette": {
+        "children": {
+          "monochrome": {
+            "langName": "单色",
+            "name": "Monochrome"
+          },
+          "blackAndWhite": {
+            "langName": "黑白",
+            "name": "Black and White"
+          },
+          "desaturated": {
+            "langName": "脱色的",
+            "name": "Desaturated"
+          },
+          "sepia": {
+            "langName": "棕褐色",
+            "name": "Sepia"
+          }
+        },
+        "langName": "单色调色板",
+        "name": "Monochrome Palette"
+      },
+      "contrast": {
+        "children": {
+          "highContrast": {
+            "langName": "高对比度",
+            "name": "High Contrast"
+          },
+          "lowContrast": {
+            "langName": "低对比度",
+            "name": "Low Contrast"
+          }
+        },
+        "langName": "对比度",
+        "name": "Contrast"
+      },
+      "displayPalette": {
+        "children": {
+          "rgb": {
+            "langName": "RGB",
+            "name": "RGB"
+          },
+          "cmyk": {
+            "langName": "CMYK",
+            "name": "CMYK"
+          },
+          "vga": {
+            "langName": "视频图形阵列",
+            "name": "VGA"
+          },
+          "ega": {
+            "langName": "EGA",
+            "name": "EGA"
+          },
+          "cga": {
+            "langName": "CGA",
+            "name": "CGA"
+          },
+          "hdr": {
+            "langName": "HDR",
+            "name": "HDR"
+          },
+          "atariGraphics": {
+            "langName": "Atari图形",
+            "name": "Atari Graphics"
+          },
+          "iigsGraphics": {
+            "langName": "IIGS图形",
+            "name": "IIGS Graphics"
+          },
+          "amigaOcsGraphics": {
+            "langName": "Amiga OCS图形",
+            "name": "Amiga OCS Graphics"
+          },
+          "sRgb": {
+            "langName": "sRGB",
+            "name": "sRGB"
+          },
+          "adobeRgb": {
+            "langName": "Adobe RGB",
+            "name": "Adobe RGB"
+          },
+          "dciP3": {
+            "langName": "DCI-P3",
+            "name": "DCI-P3"
+          },
+          "hsv": {
+            "langName": "HSV",
+            "name": "HSV"
+          },
+          "hsl": {
+            "langName": "HSL",
+            "name": "HSL"
+          },
+          "hcl": {
+            "langName": "HCL",
+            "name": "HCL"
+          },
+          "yCbCr": {
+            "langName": "YCbCr",
+            "name": "YCbCr"
+          },
+          "yPbPr": {
+            "langName": "YPbPr",
+            "name": "YPbPr"
+          },
+          "scRgb": {
+            "langName": "scRGB",
+            "name": "scRGB"
+          },
+          "coloroid": {
+            "langName": "彩色的",
+            "name": "Coloroid"
+          },
+          "pantone": {
+            "langName": "潘通",
+            "name": "Pantone"
+          },
+          "proPhotoRgb": {
+            "langName": "专业照片 RGB",
+            "name": "ProPhoto RGB"
+          }
+        },
+        "langName": "显示器调色板",
+        "name": "Display Palette"
+      },
+      "bit": {
+        "children": {
+          "1Bit": {
+            "langName": "1位",
+            "name": "1-bit"
+          },
+          "2Bit": {
+            "langName": "2位",
+            "name": "2-bit"
+          },
+          "3Bit": {
+            "langName": "3位",
+            "name": "3-bit"
+          },
+          "4Bit": {
+            "langName": "4位",
+            "name": "4-bit"
+          },
+          "6Bit": {
+            "langName": "6位",
+            "name": "6-bit"
+          },
+          "8Bit": {
+            "langName": "8位",
+            "name": "8-bit"
+          },
+          "12Bit": {
+            "langName": "12位",
+            "name": "12-bit"
+          },
+          "16Bit": {
+            "langName": "16位",
+            "name": "16-bit"
+          },
+          "4BitRgb": {
+            "langName": "4位RGB",
+            "name": "4-bit RGB"
+          },
+          "8BitRgb": {
+            "langName": "8位RGB",
+            "name": "8-bit RGB"
+          },
+          "12BitRgb": {
+            "langName": "12位RGB",
+            "name": "12-bit RGB"
+          },
+          "16BitRgb": {
+            "langName": "16位RGB",
+            "name": "16-bit RGB"
+          }
+        },
+        "langName": "Bit",
+        "name": "Bit"
+      },
+      "filmmaking": {
+        "children": {
+          "technicolor": {
+            "langName": "技师彩色",
+            "name": "Technicolor"
+          },
+          "kinemacolor": {
+            "langName": "动感色彩",
+            "name": "Kinemacolor"
+          },
+          "kodachrome": {
+            "langName": "柯达克隆",
+            "name": "Kodachrome"
+          },
+          "cinecolor": {
+            "langName": "影院彩色",
+            "name": "Cinecolor"
+          },
+          "agfacolor": {
+            "langName": "Agfacolor",
+            "name": "Agfacolor"
+          }
+        },
+        "langName": "电影制作",
+        "name": "Filmmaking"
+      }
+    },
+    "langName": "颜色",
+    "name": "Color"
+  },
+  "geometricShape": {
+    "children": {
+      "shape": {
+        "children": {
+          "point": {
+            "langName": "点",
+            "name": "Point"
+          },
+          "dot": {
+            "langName": "点",
+            "name": "Dot"
+          },
+          "line": {
+            "langName": "线",
+            "name": "Line"
+          },
+          "curve": {
+            "langName": "曲线",
+            "name": "Curve"
+          },
+          "bezierCurve": {
+            "langName": "贝塞尔曲线",
+            "name": "Bezier Curve"
+          },
+          "triangle": {
+            "langName": "三角形",
+            "name": "Triangle"
+          },
+          "square": {
+            "langName": "正方形",
+            "name": "Square"
+          },
+          "pentagon": {
+            "langName": "五边形",
+            "name": "Pentagon"
+          },
+          "hexagon": {
+            "langName": "六边形",
+            "name": "Hexagon"
+          },
+          "hexagonal": {
+            "langName": "六角形的",
+            "name": "Hexagonal"
+          },
+          "heptagon": {
+            "langName": "七边形",
+            "name": "Heptagon"
+          },
+          "octagon": {
+            "langName": "八边形",
+            "name": "Octagon"
+          },
+          "nonagon": {
+            "langName": "九边形",
+            "name": "Nonagon"
+          },
+          "decagon": {
+            "langName": "十边形",
+            "name": "Decagon"
+          },
+          "rectangle": {
+            "langName": "矩形",
+            "name": "Rectangle"
+          },
+          "rectangular": {
+            "langName": "长方形的",
+            "name": "Rectangular"
+          },
+          "parallelogram": {
+            "langName": "平行四边形",
+            "name": "Parallelogram"
+          },
+          "rhombus": {
+            "langName": "菱形",
+            "name": "Rhombus"
+          },
+          "star": {
+            "langName": "星星",
+            "name": "Star"
+          },
+          "heart": {
+            "langName": "心形",
+            "name": "Heart"
+          },
+          "spirangle": {
+            "langName": "螺旋图案",
+            "name": "Spirangle"
+          }
+        },
+        "langName": "形状",
+        "name": "Shape"
+      },
+      "objectItem": {
+        "children": {
+          "cube": {
+            "langName": "立方体",
+            "name": "Cube"
+          },
+          "cuboid": {
+            "langName": "长方体",
+            "name": "Cuboid"
+          },
+          "sphere": {
+            "langName": "球体",
+            "name": "Sphere"
+          },
+          "cone": {
+            "langName": "圆锥",
+            "name": "Cone"
+          },
+          "cylinder": {
+            "langName": "圆柱体",
+            "name": "Cylinder"
+          },
+          "pyramid": {
+            "langName": "金字塔",
+            "name": "Pyramid"
+          },
+          "torus": {
+            "langName": "环面",
+            "name": "Torus"
+          },
+          "rectangularPrism": {
+            "langName": "长方体",
+            "name": "Rectangular Prism"
+          },
+          "starPrism": {
+            "langName": "星形棱镜",
+            "name": "Star Prism"
+          },
+          "wedge": {
+            "langName": "楔形物",
+            "name": "Wedge"
+          },
+          "zonohedron": {
+            "langName": "缩并多面体",
+            "name": "Zonohedron"
+          },
+          "tetrahedron": {
+            "langName": "四面体",
+            "name": "Tetrahedron"
+          },
+          "octahedron": {
+            "langName": "八面体",
+            "name": "Octahedron"
+          },
+          "dodecahedron": {
+            "langName": "十二面体",
+            "name": "Dodecahedron"
+          },
+          "icosahedron": {
+            "langName": "二十面体",
+            "name": "Icosahedron"
+          },
+          "keplerPoinsotPolyhedra": {
+            "langName": "开普勒-波安索多面体",
+            "name": "Kepler-Poinsot Polyhedra"
+          },
+          "cuboctahedron": {
+            "langName": "截半立方体",
+            "name": "Cuboctahedron"
+          },
+          "rhombicuboctahedron": {
+            "langName": "正八面体十二面体",
+            "name": "Rhombicuboctahedron"
+          },
+          "icosidodecahedron": {
+            "langName": "二十二面体",
+            "name": "Icosidodecahedron"
+          },
+          "rhombicosidodecahedron": {
+            "langName": "二十面体十二角形",
+            "name": "Rhombicosidodecahedron"
+          },
+          "trapezohedron": {
+            "langName": "梯形十二面体",
+            "name": "Trapezohedron"
+          },
+          "cupola": {
+            "langName": "穹顶",
+            "name": "Cupola"
+          },
+          "anticupola": {
+            "langName": "反穹顶",
+            "name": "Anticupola"
+          },
+          "hypercupolae": {
+            "langName": "超圆顶",
+            "name": "Hypercupolae"
+          },
+          "bicupola": {
+            "langName": "双顶多面体",
+            "name": "Bicupola"
+          },
+          "frustum": {
+            "langName": "截锥体",
+            "name": "Frustum"
+          },
+          "bifrustum": {
+            "langName": "双截锥体",
+            "name": "Bifrustum"
+          },
+          "rotunda": {
+            "langName": "圆形建筑",
+            "name": "Rotunda"
+          },
+          "birotunda": {
+            "langName": "双旋转圆柱体",
+            "name": "Birotunda"
+          },
+          "prismatoid": {
+            "langName": "棱柱体",
+            "name": "Prismatoid"
+          },
+          "scutoid": {
+            "langName": "楔形体",
+            "name": "Scutoid"
+          },
+          "bipyramid": {
+            "langName": "双金字塔",
+            "name": "Bipyramid"
+          },
+          "starBipyramid": {
+            "langName": "星形双棱柱",
+            "name": "Star Bipyramid"
+          },
+          "antiprism": {
+            "langName": "反棱柱",
+            "name": "Antiprism"
+          },
+          "antiPrism": {
+            "langName": "反棱柱",
+            "name": "Anti-Prism"
+          },
+          "trapezohedra": {
+            "langName": "梯形十二面体",
+            "name": "Trapezohedra"
+          },
+          "starTrapezohedron": {
+            "langName": "星形梯形六面体",
+            "name": "Star Trapezohedron"
+          },
+          "sphericalPolyhedron": {
+            "langName": "球面多面体",
+            "name": "Spherical polyhedron"
+          },
+          "mobiusStrip": {
+            "langName": "莫比乌斯环",
+            "name": "Mobius strip"
+          },
+          "hexaflexagon": {
+            "langName": "六面折叠体",
+            "name": "Hexaflexagon"
+          },
+          "miuraFold": {
+            "langName": "三浦折叠",
+            "name": "Miura fold"
+          }
+        },
+        "langName": "物体",
+        "name": "Object Item"
+      },
+      "hyperShape": {
+        "children": {
+          "hypercube": {
+            "langName": "超立方体",
+            "name": "Hypercube"
+          },
+          "hyperprism": {
+            "langName": "超棱柱",
+            "name": "Hyperprism"
+          },
+          "hyperpyramid": {
+            "langName": "超金字塔",
+            "name": "Hyperpyramid"
+          },
+          "hypertorus": {
+            "langName": "超环面",
+            "name": "Hypertorus"
+          },
+          "hypersphere": {
+            "langName": "超球",
+            "name": "Hypersphere"
+          },
+          "hypercone": {
+            "langName": "超圆锥",
+            "name": "Hypercone"
+          },
+          "hypercylinder": {
+            "langName": "超圆柱",
+            "name": "Hypercylinder"
+          },
+          "hyperzonohedron": {
+            "langName": "超宗正多面体",
+            "name": "Hyperzonohedron"
+          },
+          "hypertetrahedron": {
+            "langName": "超四面体",
+            "name": "Hypertetrahedron"
+          },
+          "hyperoctahedron": {
+            "langName": "超八面体",
+            "name": "Hyperoctahedron"
+          },
+          "hyperdodecahedron": {
+            "langName": "超十二面体",
+            "name": "Hyperdodecahedron"
+          },
+          "hypericosahedron": {
+            "langName": "超二十面体",
+            "name": "Hypericosahedron"
+          },
+          "flexiblePolyhedron": {
+            "langName": "柔性多面体",
+            "name": "Flexible Polyhedron"
+          },
+          "kleinBottle": {
+            "langName": "克莱因瓶",
+            "name": "Klein bottle"
+          },
+          "monogon": {
+            "langName": "单面体",
+            "name": "Monogon"
+          },
+          "digon": {
+            "langName": "Digon",
+            "name": "Digon"
+          }
+        },
+        "langName": "超形状",
+        "name": "Hyper Shape"
+      },
+      "multiverse": {
+        "children": {
+          "ar": {
+            "langName": "增强现实",
+            "name": "AR"
+          },
+          "vr": {
+            "langName": "虚拟现实",
+            "name": "VR"
+          },
+          "2Dimensional": {
+            "langName": "2维",
+            "name": "2-Dimensional"
+          },
+          "2D": {
+            "langName": "2D",
+            "name": "2D"
+          },
+          "25Dimensional": {
+            "langName": "2.5维",
+            "name": "2.5-Dimensional"
+          },
+          "25D": {
+            "langName": "2.5D",
+            "name": "2.5D"
+          },
+          "3Dimensional": {
+            "langName": "3维",
+            "name": "3-Dimensional"
+          },
+          "3D": {
+            "langName": "3D",
+            "name": "3D"
+          },
+          "4Dimensional": {
+            "langName": "4维",
+            "name": "4-Dimensional"
+          },
+          "4D": {
+            "langName": "4D",
+            "name": "4D"
+          },
+          "5Dimensional": {
+            "langName": "5维",
+            "name": "5-Dimensional"
+          },
+          "5D": {
+            "langName": "5D",
+            "name": "5D"
+          },
+          "overdimensional": {
+            "langName": "超尺寸的",
+            "name": "Overdimensional"
+          },
+          "underdimensional": {
+            "langName": "次维的",
+            "name": "Underdimensional"
+          },
+          "hyperdimensional": {
+            "langName": "超维度的",
+            "name": "Hyperdimensional"
+          },
+          "subdimensional": {
+            "langName": "次维度",
+            "name": "Subdimensional"
+          },
+          "omnidimensional": {
+            "langName": "全向的",
+            "name": "Omnidimensional"
+          },
+          "everdimensional": {
+            "langName": "永恒维度",
+            "name": "Everdimensional"
+          },
+          "extradimensional": {
+            "langName": "超维度的",
+            "name": "Extradimensional"
+          },
+          "beyondDimensional": {
+            "langName": "超越维度的",
+            "name": "Beyond-Dimensional"
+          },
+          "excessivelyDimensional": {
+            "langName": "过度维度",
+            "name": "Excessively-dimensional"
+          },
+          "alldimensional": {
+            "langName": "全维度",
+            "name": "Alldimensional"
+          },
+          "multiverse": {
+            "langName": "多元宇宙",
+            "name": "Multiverse"
+          }
+        },
+        "langName": "多元宇宙",
+        "name": "Multiverse"
+      },
+      "style": {
+        "children": {
+          "lowPoly": {
+            "langName": "低多边形",
+            "name": "Low Poly"
+          },
+          "geometric": {
+            "langName": "几何的",
+            "name": "Geometric"
+          },
+          "nonEuclidian": {
+            "langName": "非欧几里得",
+            "name": "Non-Euclidian"
+          },
+          "poly": {
+            "langName": "聚合物",
+            "name": "Poly"
+          },
+          "polygon": {
+            "langName": "多边形",
+            "name": "Polygon"
+          },
+          "polygonal": {
+            "langName": "多边形的",
+            "name": "Polygonal"
+          },
+          "polyhedron": {
+            "langName": "多面体",
+            "name": "Polyhedron"
+          },
+          "polyhedral": {
+            "langName": "多面体",
+            "name": "Polyhedral"
+          },
+          "platonicSolids": {
+            "langName": "柏拉图固体",
+            "name": "Platonic Solids"
+          },
+          "archimedeanSolids": {
+            "langName": "阿基米德立体",
+            "name": "Archimedean Solids"
+          },
+          "catalanSolids": {
+            "langName": "卡塔兰立体",
+            "name": "Catalan solids"
+          }
+        },
+        "langName": "样式",
+        "name": "Style"
+      },
+      "properties": {
+        "children": {
+          "vertex": {
+            "langName": "顶点",
+            "name": "Vertex"
+          },
+          "edge": {
+            "langName": "边缘",
+            "name": "Edge"
+          },
+          "surface": {
+            "langName": "表面",
+            "name": "Surface"
+          },
+          "interior": {
+            "langName": "内部",
+            "name": "Interior"
+          },
+          "exterior": {
+            "langName": "外部的",
+            "name": "Exterior"
+          },
+          "convex": {
+            "langName": "凸的",
+            "name": "Convex"
+          },
+          "concave": {
+            "langName": "凹的",
+            "name": "Concave"
+          },
+          "equiangular": {
+            "langName": "等角的",
+            "name": "Equiangular"
+          },
+          "equilateral": {
+            "langName": "等边的",
+            "name": "Equilateral"
+          },
+          "cyclic": {
+            "langName": "循环的",
+            "name": "Cyclic"
+          },
+          "tangential": {
+            "langName": "切线的",
+            "name": "Tangential"
+          },
+          "rectilinear": {
+            "langName": "直线的",
+            "name": "Rectilinear"
+          },
+          "traverse": {
+            "langName": "横穿",
+            "name": "Traverse"
+          },
+          "quasi": {
+            "langName": "准",
+            "name": "Quasi"
+          },
+          "quasiRegular": {
+            "langName": "准规则的",
+            "name": "Quasi-Regular"
+          },
+          "uniform": {
+            "langName": "统一的",
+            "name": "Uniform"
+          },
+          "isogonal": {
+            "langName": "等角的",
+            "name": "Isogonal"
+          },
+          "isotoxal": {
+            "langName": "等角的",
+            "name": "Isotoxal"
+          },
+          "isohedral": {
+            "langName": "等面的",
+            "name": "Isohedral"
+          },
+          "stellation": {
+            "langName": "星形图案",
+            "name": "Stellation"
+          },
+          "ehrhartPolynomial": {
+            "langName": "Ehrhart多项式",
+            "name": "Ehrhart Polynomial"
+          },
+          "idealPolyhedron": {
+            "langName": "理想多面体",
+            "name": "Ideal polyhedron"
+          },
+          "polytope": {
+            "langName": "多胞体",
+            "name": "Polytope"
+          }
+        },
+        "langName": "特性",
+        "name": "Properties"
+      }
+    },
+    "langName": "几何形状",
+    "name": "Geometric Shape"
+  },
+  "imageTypeOrMedium": {
+    "children": {
+      "painting": {
+        "children": {
+          "illustration": {
+            "langName": "插图",
+            "name": "Illustration"
+          },
+          "sketch": {
+            "langName": "素描",
+            "name": "Sketch"
+          },
+          "drawing": {
+            "langName": "绘画",
+            "name": "Drawing"
+          },
+          "realisticPainting": {
+            "langName": "写实绘画",
+            "name": "Realistic Painting"
+          },
+          "doodle": {
+            "langName": "涂鸦",
+            "name": "Doodle"
+          },
+          "childrensDrawing": {
+            "langName": "儿童画",
+            "name": "Children's Drawing"
+          },
+          "dotArt": {
+            "langName": "点彩艺术",
+            "name": "Dot Art"
+          },
+          "lineArt": {
+            "langName": "线条艺术",
+            "name": "Line Art"
+          },
+          "stipple": {
+            "langName": "点刻",
+            "name": "Stipple"
+          },
+          "handDrawn": {
+            "langName": "手绘的",
+            "name": "Hand-Drawn"
+          },
+          "illuminatedManuscript": {
+            "langName": "插图手稿",
+            "name": "Illuminated Manuscript"
+          },
+          "crosshatch": {
+            "langName": "交叉划线",
+            "name": "Crosshatch"
+          },
+          "storybookIllustration": {
+            "langName": "故事插图",
+            "name": "Storybook Illustration"
+          },
+          "graphicNovel": {
+            "langName": "图像小说",
+            "name": "Graphic Novel"
+          },
+          "visualNovel": {
+            "langName": "视觉小说",
+            "name": "Visual Novel"
+          },
+          "illustratedBooklet": {
+            "langName": "插图手册",
+            "name": "Illustrated-Booklet"
+          },
+          "assemblyDrawing": {
+            "langName": "装配图",
+            "name": "Assembly Drawing"
+          },
+          "anatomicalDrawing": {
+            "langName": "解剖图",
+            "name": "Anatomical Drawing"
+          },
+          "cartographic": {
+            "langName": "制图的",
+            "name": "Cartographic"
+          }
+        },
+        "langName": "绘画",
+        "name": "Painting"
+      },
+      "pencil": {
+        "children": {
+          "pencilArt": {
+            "langName": "铅笔画",
+            "name": "Pencil Art"
+          },
+          "graphite": {
+            "langName": "石墨",
+            "name": "Graphite"
+          },
+          "coloredPencil": {
+            "langName": "彩色铅笔",
+            "name": "Colored Pencil"
+          },
+          "charcoalArt": {
+            "langName": "木炭艺术",
+            "name": "Charcoal Art"
+          }
+        },
+        "langName": "铅笔",
+        "name": "Pencil"
+      },
+      "ink": {
+        "children": {
+          "ink": {
+            "langName": "墨水",
+            "name": "Ink"
+          },
+          "ballpointPen": {
+            "langName": "圆珠笔",
+            "name": "Ballpoint Pen"
+          },
+          "gelPen": {
+            "langName": "凝胶笔",
+            "name": "Gel Pen"
+          },
+          "fountainPen": {
+            "langName": "钢笔",
+            "name": "Fountain Pen"
+          },
+          "fountainPenArt": {
+            "langName": "钢笔艺术",
+            "name": "Fountain Pen Art"
+          },
+          "calligraphy": {
+            "langName": "书法",
+            "name": "Calligraphy"
+          },
+          "markerArt": {
+            "langName": "马克笔艺术",
+            "name": "Marker Art"
+          },
+          "dryEraseMarker": {
+            "langName": "干擦笔",
+            "name": "Dry-Erase Marker"
+          },
+          "wetEraseMarker": {
+            "langName": "湿擦记号笔",
+            "name": "Wet-Erase Marker"
+          },
+          "whiteboard": {
+            "langName": "白板",
+            "name": "Whiteboard"
+          }
+        },
+        "langName": "墨水",
+        "name": "Ink"
+      },
+      "chalk": {
+        "children": {
+          "crayon": {
+            "langName": "蜡笔",
+            "name": "Crayon"
+          },
+          "conte": {
+            "langName": "彩铅画",
+            "name": "Conte"
+          },
+          "chalk": {
+            "langName": "粉笔",
+            "name": "Chalk"
+          },
+          "pastelArt": {
+            "langName": "粉彩艺术",
+            "name": "Pastel Art"
+          },
+          "blackboard": {
+            "langName": "黑板",
+            "name": "Blackboard"
+          },
+          "chalkboard": {
+            "langName": "黑板",
+            "name": "Chalkboard"
+          }
+        },
+        "langName": "粉笔",
+        "name": "Chalk"
+      },
+      "drawing": {
+        "children": {
+          "painting": {
+            "langName": "绘画",
+            "name": "Painting"
+          },
+          "oilPaint": {
+            "langName": "油画",
+            "name": "Oil Paint"
+          },
+          "watercolor": {
+            "langName": "水彩",
+            "name": "Watercolor"
+          },
+          "canvas": {
+            "langName": "画布",
+            "name": "Canvas"
+          },
+          "stillLife": {
+            "langName": "静物",
+            "name": "Still-Life"
+          },
+          "fineArt": {
+            "langName": "美术",
+            "name": "Fine Art"
+          },
+          "colorFieldPainting": {
+            "langName": "色块绘画",
+            "name": "Color Field Painting"
+          },
+          "hardEdgePainting": {
+            "langName": "硬边绘画",
+            "name": "Hard Edge Painting"
+          },
+          "scrollPainting": {
+            "langName": "卷轴绘画",
+            "name": "Scroll Painting"
+          },
+          "paperMarbling": {
+            "langName": "纸浆装饰",
+            "name": "Paper-Marbling"
+          },
+          "hydroDipping": {
+            "langName": "水转印",
+            "name": "Hydro-Dipping"
+          },
+          "hydrodipped": {
+            "langName": "水转印的",
+            "name": "Hydrodipped"
+          },
+          "easterEgg": {
+            "langName": "复活节彩蛋",
+            "name": "Easter Egg"
+          },
+          "eggDecorating": {
+            "langName": "彩蛋装饰",
+            "name": "Egg Decorating"
+          },
+          "rockArt": {
+            "langName": "岩石艺术",
+            "name": "Rock Art"
+          },
+          "caveArt": {
+            "langName": "洞穴艺术",
+            "name": "Cave Art"
+          },
+          "streetArt": {
+            "langName": "街头艺术",
+            "name": "Street Art"
+          },
+          "mural": {
+            "langName": "壁画",
+            "name": "Mural"
+          },
+          "artwork": {
+            "langName": "艺术品",
+            "name": "Artwork"
+          },
+          "chinesePainting": {
+            "langName": "国画",
+            "name": "Chinese Painting"
+          },
+          "tibetanPainting": {
+            "langName": "藏传绘画",
+            "name": "Tibetan Painting"
+          },
+          "airbrush": {
+            "langName": "喷枪",
+            "name": "Airbrush"
+          },
+          "paint": {
+            "langName": "油漆",
+            "name": "Paint"
+          },
+          "acrylicPaint": {
+            "langName": "丙烯颜料",
+            "name": "Acrylic Paint"
+          },
+          "temperaPaint": {
+            "langName": "蛋彩画",
+            "name": "Tempera Paint"
+          },
+          "gouachePaint": {
+            "langName": "水粉画",
+            "name": "Gouache Paint"
+          },
+          "wetPaint": {
+            "langName": "湿油漆",
+            "name": "Wet Paint"
+          },
+          "drippingPaint": {
+            "langName": "滴漏油漆",
+            "name": "Dripping Paint"
+          },
+          "splatterPaint": {
+            "langName": "飞溅油漆",
+            "name": "Splatter Paint"
+          },
+          "sprayPaint": {
+            "langName": "喷漆",
+            "name": "Spray Paint"
+          },
+          "puffyPaint": {
+            "langName": "蓬松颜料",
+            "name": "Puffy Paint"
+          },
+          "glassPaint": {
+            "langName": "玻璃彩绘",
+            "name": "Glass Paint"
+          },
+          "coffeePaint": {
+            "langName": "咖啡颜料",
+            "name": "Coffee Paint"
+          }
+        },
+        "langName": "画画",
+        "name": "Drawing"
+      },
+      "text": {
+        "children": {
+          "text": {
+            "langName": "文本",
+            "name": "Text"
+          },
+          "typeface": {
+            "langName": "字体",
+            "name": "Typeface"
+          },
+          "font": {
+            "langName": "字体",
+            "name": "Font"
+          },
+          "says": {
+            "langName": "说",
+            "name": "Says"
+          },
+          "letters": {
+            "langName": "字母",
+            "name": "Letters"
+          },
+          "graphemes": {
+            "langName": "字素",
+            "name": "Graphemes"
+          },
+          "writtenLetters": {
+            "langName": "书信",
+            "name": "Written Letters"
+          },
+          "words": {
+            "langName": "文字",
+            "name": "Words"
+          },
+          "lexemes": {
+            "langName": "词素",
+            "name": "Lexemes"
+          },
+          "writtenWords": {
+            "langName": "书面文字",
+            "name": "Written Words"
+          },
+          "caption": {
+            "langName": "标题",
+            "name": "Caption"
+          }
+        },
+        "langName": "文本",
+        "name": "Text"
+      },
+      "printing": {
+        "children": {
+          "logo": {
+            "langName": "标志",
+            "name": "Logo"
+          },
+          "stamp": {
+            "langName": "邮票",
+            "name": "Stamp"
+          },
+          "postageStamp": {
+            "langName": "邮票",
+            "name": "Postage Stamp"
+          },
+          "businessCard": {
+            "langName": "名片",
+            "name": "Business Card"
+          },
+          "collage": {
+            "langName": "拼贴画",
+            "name": "Collage"
+          },
+          "photocollage": {
+            "langName": "照片拼贴",
+            "name": "Photocollage"
+          },
+          "fotocollage": {
+            "langName": "照片拼贴",
+            "name": "Fotocollage"
+          },
+          "lithography": {
+            "langName": "石版画",
+            "name": "Lithography"
+          },
+          "blockPrinting": {
+            "langName": "木刻",
+            "name": "Block Printing"
+          },
+          "magazine": {
+            "langName": "杂志",
+            "name": "Magazine"
+          },
+          "newspaper": {
+            "langName": "报纸",
+            "name": "Newspaper"
+          },
+          "newsprint": {
+            "langName": "新闻纸",
+            "name": "Newsprint"
+          },
+          "blueprint": {
+            "langName": "蓝图",
+            "name": "Blueprint"
+          },
+          "comicBook": {
+            "langName": "漫画书",
+            "name": "Comic Book"
+          },
+          "booklet": {
+            "langName": "小册子",
+            "name": "Booklet"
+          },
+          "poster": {
+            "langName": "海报",
+            "name": "Poster"
+          },
+          "sticker": {
+            "langName": "贴纸",
+            "name": "Sticker"
+          },
+          "barcode": {
+            "langName": "条形码",
+            "name": "Barcode"
+          },
+          "qrCode": {
+            "langName": "二维码",
+            "name": "QR Code"
+          },
+          "pokemon": {
+            "langName": "宝可梦",
+            "name": "Pokémon"
+          },
+          "pokemonCard": {
+            "langName": "宝可梦卡片",
+            "name": "Pokémon Card"
+          }
+        },
+        "langName": "打印",
+        "name": "Printing"
+      },
+      "paperFolding": {
+        "children": {
+          "origami": {
+            "langName": "折纸",
+            "name": "Origami"
+          },
+          "modularOrigami": {
+            "langName": "模块折纸",
+            "name": "Modular Origami"
+          },
+          "rigidOrigami": {
+            "langName": "硬质折纸",
+            "name": "Rigid Origami"
+          },
+          "sonobe": {
+            "langName": "曽野边",
+            "name": "Sonobe"
+          },
+          "kirigami": {
+            "langName": "切割纸艺术",
+            "name": "Kirigami"
+          },
+          "moneygami": {
+            "langName": "纸币折纸",
+            "name": "Moneygami"
+          },
+          "wetFolding": {
+            "langName": "湿折",
+            "name": "Wet-Folding"
+          }
+        },
+        "langName": "折纸",
+        "name": "Paper Folding"
+      },
+      "mosaic": {
+        "children": {
+          "mosaic": {
+            "langName": "马赛克",
+            "name": "Mosaic"
+          },
+          "micromosaic": {
+            "langName": "微型马赛克",
+            "name": "Micromosaic"
+          },
+          "glassMosaic": {
+            "langName": "玻璃马赛克",
+            "name": "Glass Mosaic"
+          },
+          "photographicMosaic": {
+            "langName": "摄影马赛克",
+            "name": "Photographic Mosaic"
+          },
+          "impressionistMosaic": {
+            "langName": "印象派马赛克",
+            "name": "Impressionist Mosaic"
+          }
+        },
+        "langName": "马赛克",
+        "name": "Mosaic"
+      },
+      "frame": {
+        "children": {
+          "frame": {
+            "langName": "框架",
+            "name": "Frame"
+          },
+          "framed": {
+            "langName": "装框的",
+            "name": "Framed"
+          },
+          "woodenFrame": {
+            "langName": "木框",
+            "name": "Wooden Frame"
+          },
+          "woodenFramed": {
+            "langName": "木框装裱的",
+            "name": "Wooden Framed"
+          }
+        },
+        "langName": "框架",
+        "name": "Frame"
+      },
+      "carvingEtchingModeling": {
+        "children": {
+          "carving": {
+            "langName": "雕刻",
+            "name": "Carving"
+          },
+          "etching": {
+            "langName": "蚀刻",
+            "name": "Etching"
+          },
+          "sculpture": {
+            "langName": "雕塑",
+            "name": "Sculpture"
+          },
+          "papercutting": {
+            "langName": "剪纸",
+            "name": "Papercutting"
+          },
+          "whittling": {
+            "langName": "削木",
+            "name": "Whittling"
+          },
+          "woodCarving": {
+            "langName": "木雕",
+            "name": "Wood-Carving"
+          },
+          "chipCarving": {
+            "langName": "刻花",
+            "name": "Chip-Carving"
+          },
+          "reliefCarving": {
+            "langName": "浮雕雕刻",
+            "name": "Relief-Carving"
+          },
+          "iceCarving": {
+            "langName": "冰雕",
+            "name": "Ice-Carving"
+          },
+          "lacquer": {
+            "langName": "漆器",
+            "name": "Lacquer"
+          },
+          "stringArt": {
+            "langName": "线艺",
+            "name": "String-Art"
+          },
+          "paperMache": {
+            "langName": "纸浆塑料",
+            "name": "Paper-Mache"
+          },
+          "paperModel": {
+            "langName": "纸模型",
+            "name": "Paper Model"
+          },
+          "card": {
+            "langName": "卡片",
+            "name": "Card"
+          },
+          "carvedLacquer": {
+            "langName": "雕漆",
+            "name": "Carved Lacquer"
+          },
+          "fretwork": {
+            "langName": "格子样工艺",
+            "name": "Fretwork"
+          },
+          "intaglio": {
+            "langName": "凹版印刷",
+            "name": "Intaglio"
+          },
+          "mezzotint": {
+            "langName": "摩瑟铜版画",
+            "name": "Mezzotint"
+          },
+          "aquatint": {
+            "langName": "水铸版画",
+            "name": "Aquatint"
+          },
+          "linocut": {
+            "langName": "木刻画",
+            "name": "Linocut"
+          },
+          "pyrography": {
+            "langName": "木烧画",
+            "name": "Pyrography"
+          },
+          "puppet": {
+            "langName": "木偶",
+            "name": "Puppet"
+          },
+          "balloonModelling": {
+            "langName": "气球造型",
+            "name": "Balloon Modelling"
+          },
+          "balloonTwisting": {
+            "langName": "气球扭曲",
+            "name": "Balloon Twisting"
+          },
+          "circuit": {
+            "langName": "电路",
+            "name": "Circuit"
+          },
+          "circuitry": {
+            "langName": "电路设计",
+            "name": "Circuitry"
+          }
+        },
+        "langName": "雕刻、蚀刻和建模",
+        "name": "Carving Etching Modeling"
+      },
+      "potteryAndGlass": {
+        "children": {
+          "glaze": {
+            "langName": "釉料",
+            "name": "Glaze"
+          },
+          "overglaze": {
+            "langName": "上釉",
+            "name": "Overglaze"
+          },
+          "inglaze": {
+            "langName": "釉上的",
+            "name": "Inglaze"
+          },
+          "azulejo": {
+            "langName": "蓝色瓷砖",
+            "name": "Azulejo"
+          },
+          "paleolithicPottery": {
+            "langName": "旧石器陶器",
+            "name": "Paleolithic Pottery"
+          },
+          "neolithicPottery": {
+            "langName": "新石器陶器",
+            "name": "Neolithic Pottery"
+          },
+          "boneChina": {
+            "langName": "骨瓷",
+            "name": "Bone China"
+          },
+          "ornament": {
+            "langName": "装饰品",
+            "name": "Ornament"
+          }
+        },
+        "langName": "陶器和玻璃",
+        "name": "Pottery And Glass"
+      },
+      "light": {
+        "children": {
+          "lightArt": {
+            "langName": "光艺术",
+            "name": "Light Art"
+          },
+          "lightPainting": {
+            "langName": "光绘",
+            "name": "Light Painting"
+          },
+          "lightpainting": {
+            "langName": "光绘",
+            "name": "Lightpainting"
+          }
+        },
+        "langName": "光",
+        "name": "Light"
+      },
+      "otherMedia": {
+        "children": {
+          "cartoon": {
+            "langName": "卡通",
+            "name": "Cartoon"
+          },
+          "wallDecal": {
+            "langName": "墙贴",
+            "name": "Wall Decal"
+          },
+          "banner": {
+            "langName": "横幅",
+            "name": "Banner"
+          },
+          "signage": {
+            "langName": "标识",
+            "name": "Signage"
+          },
+          "artsAndCrafts": {
+            "langName": "工艺品",
+            "name": "Arts and Crafts"
+          },
+          "resin": {
+            "langName": "树脂",
+            "name": "Resin"
+          },
+          "enamelPin": {
+            "langName": "搪瓷别针",
+            "name": "Enamel Pin"
+          },
+          "bejeweled": {
+            "langName": "镶嵌宝石的",
+            "name": "Bejeweled"
+          },
+          "latteArt": {
+            "langName": "拿铁艺术",
+            "name": "Latte Art"
+          },
+          "coffeeStain": {
+            "langName": "咖啡渍",
+            "name": "Coffee Stain"
+          },
+          "smokeArt": {
+            "langName": "烟雾艺术",
+            "name": "Smoke Art"
+          },
+          "tattoo": {
+            "langName": "纹身",
+            "name": "Tattoo"
+          },
+          "stickerBomb": {
+            "langName": "贴纸轰炸",
+            "name": "Sticker Bomb"
+          },
+          "jigsaw": {
+            "langName": "拼图",
+            "name": "Jigsaw"
+          },
+          "puzzle": {
+            "langName": "拼图",
+            "name": "Puzzle"
+          },
+          "maze": {
+            "langName": "迷宫",
+            "name": "Maze"
+          },
+          "toy": {
+            "langName": "玩具",
+            "name": "Toy"
+          },
+          "siteSpecificArt": {
+            "langName": "特定场所艺术",
+            "name": "Site-Specific art"
+          },
+          "publicArt": {
+            "langName": "公共艺术",
+            "name": "Public Art"
+          },
+          "diorama": {
+            "langName": "透视画",
+            "name": "Diorama"
+          },
+          "hedgeTrimming": {
+            "langName": "修剪树篱",
+            "name": "Hedge Trimming"
+          },
+          "shoe": {
+            "langName": "鞋",
+            "name": "Shoe"
+          },
+          "shoes": {
+            "langName": "鞋子",
+            "name": "Shoes"
+          },
+          "hat": {
+            "langName": "帽子",
+            "name": "Hat"
+          },
+          "hatmaking": {
+            "langName": "制帽",
+            "name": "Hatmaking"
+          },
+          "stencil": {
+            "langName": "模板",
+            "name": "Stencil"
+          },
+          "negativeSpace": {
+            "langName": "负空间",
+            "name": "Negative Space"
+          },
+          "scrapbooking": {
+            "langName": "拼贴手工",
+            "name": "Scrapbooking"
+          },
+          "mixedMedia": {
+            "langName": "混合媒体",
+            "name": "Mixed Media"
+          },
+          "frottage": {
+            "langName": "拓印",
+            "name": "Frottage"
+          },
+          "outlined": {
+            "langName": "轮廓",
+            "name": "Outlined"
+          },
+          "glitter": {
+            "langName": "闪闪发光",
+            "name": "Glitter"
+          },
+          "sparkly": {
+            "langName": "闪闪发光",
+            "name": "Sparkly"
+          },
+          "indianArt": {
+            "langName": "印度艺术",
+            "name": "Indian Art"
+          },
+          "sovietArt": {
+            "langName": "苏联艺术",
+            "name": "Soviet Art"
+          }
+        },
+        "langName": "其他媒介",
+        "name": "Other Media"
+      }
+    },
+    "langName": "图像种类/媒介",
+    "name": "Image Type Or Medium"
+  },
+  "lighting": {
+    "children": {
+      "lighting": {
+        "children": {
+          "frontlight": {
+            "langName": "前置灯",
+            "name": "Frontlight"
+          },
+          "halfrearLighting": {
+            "langName": "半后照明",
+            "name": "Halfrear Lighting"
+          },
+          "backlight": {
+            "langName": "背光",
+            "name": "Backlight"
+          },
+          "rimLights": {
+            "langName": "边缘光",
+            "name": "Rim Lights"
+          },
+          "rimLighting": {
+            "langName": "边缘光照",
+            "name": "Rim Lighting"
+          },
+          "floodlight": {
+            "langName": "泛光灯",
+            "name": "Floodlight"
+          },
+          "ledLight": {
+            "langName": "LED灯",
+            "name": "LED light"
+          },
+          "spotlight": {
+            "langName": "聚光灯",
+            "name": "Spotlight"
+          },
+          "marquee": {
+            "langName": "万圣节游行",
+            "name": "Marquee"
+          },
+          "strobe": {
+            "langName": "频闪灯",
+            "name": "Strobe"
+          },
+          "strobeLight": {
+            "langName": "频闪灯",
+            "name": "Strobe Light"
+          },
+          "stroboscope": {
+            "langName": "频闪灯",
+            "name": "Stroboscope"
+          },
+          "bright": {
+            "langName": "明亮的",
+            "name": "Bright"
+          },
+          "ultrabright": {
+            "langName": "超亮",
+            "name": "Ultrabright"
+          },
+          "crepuscularRays": {
+            "langName": "黄昏光线",
+            "name": "Crepuscular Rays"
+          },
+          "raysOfShimmeringLight": {
+            "langName": "闪光光线",
+            "name": "Rays of Shimmering Light"
+          },
+          "artificialLighting": {
+            "langName": "人工照明",
+            "name": "Artificial Lighting"
+          },
+          "naturalLighting": {
+            "langName": "自然光",
+            "name": "Natural Lighting"
+          },
+          "sunlight": {
+            "langName": "阳光",
+            "name": "Sunlight"
+          },
+          "incandescent": {
+            "langName": "白炽的",
+            "name": "Incandescent"
+          },
+          "fluorescent": {
+            "langName": "荧光的",
+            "name": "Fluorescent"
+          },
+          "fluorescentLamp": {
+            "langName": "荧光灯",
+            "name": "Fluorescent Lamp"
+          },
+          "glowStick": {
+            "langName": "发光棒",
+            "name": "Glow Stick"
+          },
+          "plasmaGlobe": {
+            "langName": "等离子球",
+            "name": "Plasma Globe"
+          },
+          "teslaCoil": {
+            "langName": "特斯拉线圈",
+            "name": "Tesla Coil"
+          },
+          "electricArc": {
+            "langName": "电弧",
+            "name": "Electric Arc"
+          },
+          "crackleTube": {
+            "langName": "裂纹管",
+            "name": "Crackle Tube"
+          },
+          "edisonBulb": {
+            "langName": "爱迪生灯泡",
+            "name": "Edison Bulb"
+          },
+          "vacuumTubeLamp": {
+            "langName": "真空管灯",
+            "name": "Vacuum Tube Lamp"
+          },
+          "nixieTube": {
+            "langName": "Nixie管",
+            "name": "Nixie Tube"
+          },
+          "halogen": {
+            "langName": "卤素",
+            "name": "Halogen"
+          },
+          "halogenLamp": {
+            "langName": "卤素灯",
+            "name": "Halogen Lamp"
+          },
+          "neonLamp": {
+            "langName": "霓虹灯",
+            "name": "Neon Lamp"
+          },
+          "xenonLamp": {
+            "langName": "氙灯",
+            "name": "Xenon Lamp"
+          },
+          "kryptonLamp": {
+            "langName": "氪灯",
+            "name": "Krypton Lamp"
+          },
+          "argonLamp": {
+            "langName": "氩灯",
+            "name": "Argon Lamp"
+          },
+          "heliumLamp": {
+            "langName": "氦气灯",
+            "name": "Helium Lamp"
+          },
+          "carbideLamp": {
+            "langName": "碳化灯",
+            "name": "Carbide Lamp"
+          },
+          "argandLamp": {
+            "langName": "阿甘灯",
+            "name": "Argand Lamp"
+          },
+          "diyaLamp": {
+            "langName": "Diya灯",
+            "name": "Diya Lamp"
+          },
+          "lantern": {
+            "langName": "灯笼",
+            "name": "Lantern"
+          },
+          "schwarzLantern": {
+            "langName": "施瓦兹灯",
+            "name": "Schwarz Lantern"
+          },
+          "nightlight": {
+            "langName": "夜灯",
+            "name": "Nightlight"
+          },
+          "christmasLights": {
+            "langName": "圣诞灯",
+            "name": "Christmas Lights"
+          },
+          "opticalFiber": {
+            "langName": "光纤",
+            "name": "Optical Fiber"
+          },
+          "electroluminescentWire": {
+            "langName": "电致发光导线",
+            "name": "Electroluminescent Wire"
+          },
+          "laser": {
+            "langName": "激光",
+            "name": "Laser"
+          },
+          "flare": {
+            "langName": "耀斑",
+            "name": "Flare"
+          },
+          "electromagneticSpectrum": {
+            "langName": "电磁波谱",
+            "name": "Electromagnetic Spectrum"
+          },
+          "infrared": {
+            "langName": "红外的",
+            "name": "Infrared"
+          },
+          "ultraviolet": {
+            "langName": "紫外线",
+            "name": "Ultraviolet"
+          },
+          "uv": {
+            "langName": "紫外线",
+            "name": "UV"
+          },
+          "xRay": {
+            "langName": "X射线",
+            "name": "X-Ray"
+          }
+        },
+        "langName": "照明",
+        "name": "Lighting"
+      },
+      "display": {
+        "children": {
+          "crt": {
+            "langName": "CRT",
+            "name": "CRT"
+          },
+          "lcd": {
+            "langName": "液晶显示器",
+            "name": "LCD"
+          },
+          "led": {
+            "langName": "LED",
+            "name": "LED"
+          },
+          "oled": {
+            "langName": "有机发光二极管",
+            "name": "OLED"
+          },
+          "amoled": {
+            "langName": "AMOLED",
+            "name": "AMOLED"
+          },
+          "7SegmentDisplay": {
+            "langName": "7段显示",
+            "name": "7 Segment Display"
+          },
+          "dotMatrixDisplay": {
+            "langName": "点阵显示",
+            "name": "Dot Matrix Display"
+          },
+          "electroluminescentDisplay": {
+            "langName": "电致发光显示屏",
+            "name": "Electroluminescent Display"
+          },
+          "vacuumFluorescentDisplay": {
+            "langName": "真空荧光显示",
+            "name": "Vacuum Fluorescent Display"
+          },
+          "phosphorDisplay": {
+            "langName": "磷光显示",
+            "name": "Phosphor Display"
+          },
+          "plasmaDisplay": {
+            "langName": "等离子显示",
+            "name": "Plasma Display"
+          },
+          "quantumDot": {
+            "langName": "量子点",
+            "name": "Quantum Dot"
+          },
+          "quantumDotDisplay": {
+            "langName": "量子点显示",
+            "name": "Quantum Dot Display"
+          }
+        },
+        "langName": "显示器",
+        "name": "Display"
+      },
+      "style": {
+        "children": {
+          "moodyLighting": {
+            "langName": "情绪照明",
+            "name": "Moody Lighting"
+          },
+          "cinematicLighting": {
+            "langName": "电影灯光",
+            "name": "Cinematic Lighting"
+          },
+          "studioLighting": {
+            "langName": "工作室照明",
+            "name": "Studio Lighting"
+          },
+          "softLighting": {
+            "langName": "柔和光线",
+            "name": "Soft Lighting"
+          },
+          "hardLighting": {
+            "langName": "强光照明",
+            "name": "Hard Lighting"
+          },
+          "volumetricLight": {
+            "langName": "体积光",
+            "name": "volumetric Light"
+          },
+          "volumetricLighting": {
+            "langName": "体积光照",
+            "name": "Volumetric Lighting"
+          },
+          "volumetric": {
+            "langName": "体积的",
+            "name": "Volumetric"
+          },
+          "contreJour": {
+            "langName": "逆光",
+            "name": "Contre-Jour"
+          },
+          "rembrandtLighting": {
+            "langName": "伦勃朗光影",
+            "name": "Rembrandt Lighting"
+          },
+          "splitLighting": {
+            "langName": "分割照明",
+            "name": "Split Lighting"
+          },
+          "beautifulLighting": {
+            "langName": "美丽的照明",
+            "name": "Beautiful Lighting"
+          },
+          "accentLighting": {
+            "langName": "重点照明",
+            "name": "Accent Lighting"
+          }
+        },
+        "langName": "样式",
+        "name": "Style"
+      },
+      "globalIllumination": {
+        "children": {
+          "globalIllumination": {
+            "langName": "全局光照",
+            "name": "Global Illumination"
+          },
+          "lumenGlobalIllumination": {
+            "langName": "流明全局照明",
+            "name": "Lumen Global Illumination"
+          },
+          "screenSpaceGlobalIllumination": {
+            "langName": "屏幕空间全局光照",
+            "name": "Screen Space Global Illumination"
+          },
+          "rayTracingGlobalIllumination": {
+            "langName": "光线追踪全局光照",
+            "name": "Ray Tracing Global Illumination"
+          }
+        },
+        "langName": "全局照明",
+        "name": "Global Illumination"
+      }
+    },
+    "langName": "光线/灯光",
+    "name": "Lighting"
+  },
+  "material": {
+    "children": {
+      "opacity": {
+        "children": {
+          "transparent": {
+            "langName": "透明的",
+            "name": "Transparent"
+          },
+          "translucent": {
+            "langName": "半透明",
+            "name": "Translucent"
+          },
+          "opaque": {
+            "langName": "不透明的",
+            "name": "Opaque"
+          }
+        },
+        "langName": "不透明度",
+        "name": "Opacity"
+      },
+      "light": {
+        "children": {
+          "optics": {
+            "langName": "光学",
+            "name": "Optics"
+          },
+          "materiality": {
+            "langName": "物质性",
+            "name": "Materiality"
+          },
+          "ambientOcclusion": {
+            "langName": "环境光遮蔽",
+            "name": "Ambient Occlusion"
+          },
+          "scattering": {
+            "langName": "散射",
+            "name": "Scattering"
+          }
+        },
+        "langName": "光",
+        "name": "Light"
+      },
+      "emission": {
+        "children": {
+          "glowing": {
+            "langName": "发光的",
+            "name": "Glowing"
+          },
+          "glowInTheDark": {
+            "langName": "夜光",
+            "name": "Glow-In-The-Dark"
+          },
+          "bioluminescence": {
+            "langName": "生物发光",
+            "name": "Bioluminescence"
+          },
+          "photoluminescence": {
+            "langName": "光致发光",
+            "name": "Photoluminescence"
+          },
+          "chemiluminescence": {
+            "langName": "化学发光",
+            "name": "Chemiluminescence"
+          },
+          "cathodoluminescence": {
+            "langName": "阴极发光",
+            "name": "Cathodoluminescence"
+          },
+          "electroluminescence": {
+            "langName": "电致发光",
+            "name": "Electroluminescence"
+          },
+          "radioluminescence": {
+            "langName": "放射性发光",
+            "name": "Radioluminescence"
+          },
+          "fluorescence": {
+            "langName": "荧光",
+            "name": "Fluorescence"
+          },
+          "phosphorescence": {
+            "langName": "磷光",
+            "name": "Phosphorescence"
+          },
+          "thermoluminescence": {
+            "langName": "热释光",
+            "name": "Thermoluminescence"
+          },
+          "electrochemiluminescence": {
+            "langName": "电化学发光",
+            "name": "Electrochemiluminescence"
+          },
+          "crystalloluminescence": {
+            "langName": "晶体发光",
+            "name": "Crystalloluminescence"
+          },
+          "piezoluminescence": {
+            "langName": "压电发光",
+            "name": "Piezoluminescence"
+          },
+          "triboluminescence": {
+            "langName": "摩擦发光",
+            "name": "Triboluminescence"
+          },
+          "mechanoluminescence": {
+            "langName": "机械发光",
+            "name": "Mechanoluminescence"
+          },
+          "lyoluminescence": {
+            "langName": "荧光发光",
+            "name": "Lyoluminescence"
+          },
+          "candoluminescence": {
+            "langName": "烛光发光",
+            "name": "Candoluminescence"
+          },
+          "fractoluminescence": {
+            "langName": "裂光",
+            "name": "Fractoluminescence"
+          },
+          "sonoluminescence": {
+            "langName": "声致发光",
+            "name": "Sonoluminescence"
+          },
+          "translucidluminescence": {
+            "langName": "半透明发光",
+            "name": "Translucidluminescence"
+          },
+          "shadows": {
+            "langName": "阴影",
+            "name": "Shadows"
+          }
+        },
+        "langName": "发光",
+        "name": "Emission"
+      },
+      "reflectionRefraction": {
+        "children": {
+          "rough": {
+            "langName": "粗糙的",
+            "name": "Rough"
+          },
+          "matte": {
+            "langName": "哑光",
+            "name": "Matte"
+          },
+          "glossy": {
+            "langName": "光滑的",
+            "name": "Glossy"
+          },
+          "smooth": {
+            "langName": "光滑",
+            "name": "smooth"
+          },
+          "shiny": {
+            "langName": "闪亮",
+            "name": "Shiny"
+          },
+          "reflective": {
+            "langName": "反射的",
+            "name": "Reflective"
+          },
+          "polished": {
+            "langName": "抛光的",
+            "name": "Polished"
+          },
+          "caustics": {
+            "langName": "焦散",
+            "name": "Caustics"
+          },
+          "refractive": {
+            "langName": "折射的",
+            "name": "Refractive"
+          },
+          "shimmer": {
+            "langName": "闪烁",
+            "name": "Shimmer"
+          },
+          "shimmering": {
+            "langName": "闪闪发光",
+            "name": "Shimmering"
+          }
+        },
+        "langName": "反射和折射",
+        "name": "Reflection Refraction"
+      },
+      "color": {
+        "children": {
+          "iridescent": {
+            "langName": "虹彩的",
+            "name": "Iridescent"
+          },
+          "dispersion": {
+            "langName": "色散",
+            "name": "Dispersion"
+          },
+          "chromatic": {
+            "langName": "色彩的",
+            "name": "Chromatic"
+          },
+          "prismatic": {
+            "langName": "棱镜的",
+            "name": "Prismatic"
+          }
+        },
+        "langName": "颜色",
+        "name": "Color"
+      },
+      "map": {
+        "children": {
+          "bumpMap": {
+            "langName": "凹凸贴图",
+            "name": "Bump Map"
+          },
+          "bumpMapped": {
+            "langName": "凹凸贴图的",
+            "name": "Bump Mapped"
+          },
+          "bumpMapping": {
+            "langName": "凹凸贴图",
+            "name": "Bump Mapping"
+          },
+          "normalMap": {
+            "langName": "法线贴图",
+            "name": "Normal Map"
+          },
+          "depthMap": {
+            "langName": "深度图",
+            "name": "Depth Map"
+          }
+        },
+        "langName": "地图",
+        "name": "Map"
+      },
+      "softBody": {
+        "children": {
+          "softBody": {
+            "langName": "软体",
+            "name": "Soft Body"
+          },
+          "squishy": {
+            "langName": "软绵绵",
+            "name": "Squishy"
+          }
+        },
+        "langName": "柔体",
+        "name": "Soft Body"
+      },
+      "properties": {
+        "children": {
+          "anisotropy": {
+            "langName": "各向异性",
+            "name": "Anisotropy"
+          },
+          "carbonated": {
+            "langName": "碳酸的",
+            "name": "Carbonated"
+          },
+          "effervescent": {
+            "langName": "起泡的",
+            "name": "Effervescent"
+          },
+          "icy": {
+            "langName": "冰冷的",
+            "name": "Icy"
+          },
+          "charred": {
+            "langName": "烧焦的",
+            "name": "Charred"
+          },
+          "corrugated": {
+            "langName": "波纹的",
+            "name": "Corrugated"
+          },
+          "perforated": {
+            "langName": "穿孔的",
+            "name": "Perforated"
+          }
+        },
+        "langName": "特性",
+        "name": "Properties"
+      },
+      "woodAndPaper": {
+        "children": {
+          "wooden": {
+            "langName": "木制的",
+            "name": "Wooden"
+          },
+          "lumber": {
+            "langName": "木材",
+            "name": "Lumber"
+          },
+          "plywood": {
+            "langName": "胶合板",
+            "name": "Plywood"
+          },
+          "particleBoard": {
+            "langName": "刨花板",
+            "name": "Particle-Board"
+          },
+          "sawdust": {
+            "langName": "锯末",
+            "name": "Sawdust"
+          },
+          "cork": {
+            "langName": "软木",
+            "name": "Cork"
+          },
+          "cherryWood": {
+            "langName": "樱桃木",
+            "name": "Cherry-Wood"
+          },
+          "mapleWood": {
+            "langName": "枫木",
+            "name": "Maple-Wood"
+          },
+          "pineWood": {
+            "langName": "松木",
+            "name": "Pine-Wood"
+          },
+          "oakWood": {
+            "langName": "橡木",
+            "name": "Oak-Wood"
+          },
+          "birchWood": {
+            "langName": "桦木",
+            "name": "Birch-Wood"
+          },
+          "acaciaWood": {
+            "langName": "相思木",
+            "name": "Acacia-Wood"
+          },
+          "cedarWood": {
+            "langName": "雪松木",
+            "name": "Cedar-Wood"
+          },
+          "woodStain": {
+            "langName": "木纹",
+            "name": "Wood-Stain"
+          },
+          "planks": {
+            "langName": "木板",
+            "name": "Planks"
+          },
+          "woodenPlanks": {
+            "langName": "木板",
+            "name": "Wooden Planks"
+          },
+          "nailedWood": {
+            "langName": "钉木",
+            "name": "Nailed-Wood"
+          },
+          "woodenFence": {
+            "langName": "木栅栏",
+            "name": "Wooden Fence"
+          },
+          "cardboard": {
+            "langName": "纸板",
+            "name": "Cardboard"
+          },
+          "corrugatedFiberboard": {
+            "langName": "瓦楞纸板",
+            "name": "Corrugated Fiberboard"
+          },
+          "paperboard": {
+            "langName": "纸板",
+            "name": "Paperboard"
+          },
+          "cardstock": {
+            "langName": "卡纸",
+            "name": "Cardstock"
+          },
+          "paper": {
+            "langName": "纸",
+            "name": "Paper"
+          },
+          "constructionPaper": {
+            "langName": "工程纸",
+            "name": "Construction Paper"
+          },
+          "tissuePaper": {
+            "langName": "纸巾",
+            "name": "Tissue Paper"
+          },
+          "graphPaper": {
+            "langName": "格子纸",
+            "name": "Graph Paper"
+          },
+          "kraftPaper": {
+            "langName": "牛皮纸",
+            "name": "Kraft Paper"
+          },
+          "washi": {
+            "langName": "和纸",
+            "name": "Washi"
+          },
+          "wasli": {
+            "langName": "瓦斯利",
+            "name": "Wasli"
+          },
+          "papyrus": {
+            "langName": "纸莎草",
+            "name": "Papyrus"
+          },
+          "manuscriptPaper": {
+            "langName": "手稿纸",
+            "name": "Manuscript Paper"
+          },
+          "wrappingPaper": {
+            "langName": "包装纸",
+            "name": "Wrapping Paper"
+          },
+          "parchment": {
+            "langName": "羊皮纸",
+            "name": "Parchment"
+          },
+          "parchmentPaper": {
+            "langName": "羊皮纸",
+            "name": "Parchment Paper"
+          },
+          "medievalParchment": {
+            "langName": "中世纪羊皮纸",
+            "name": "Medieval Parchment"
+          },
+          "toiletPaper": {
+            "langName": "卫生纸",
+            "name": "Toilet Paper"
+          },
+          "paperTowel": {
+            "langName": "纸巾",
+            "name": "Paper Towel"
+          },
+          "manilaPaper": {
+            "langName": "马尼拉纸",
+            "name": "Manila Paper"
+          },
+          "manilaFolder": {
+            "langName": "马尼拉文件夹",
+            "name": "Manila Folder"
+          },
+          "envelope": {
+            "langName": "信封",
+            "name": "Envelope"
+          },
+          "securityPaper": {
+            "langName": "安全纸",
+            "name": "Security Paper"
+          },
+          "rollingPaper": {
+            "langName": "卷烟纸",
+            "name": "Rolling Paper"
+          },
+          "cottonPaper": {
+            "langName": "棉纸",
+            "name": "Cotton Paper"
+          },
+          "hempFiber": {
+            "langName": "大麻纤维",
+            "name": "Hemp Fiber"
+          },
+          "hempPaper": {
+            "langName": "大麻纸",
+            "name": "Hemp Paper"
+          },
+          "cellulose": {
+            "langName": "纤维素",
+            "name": "Cellulose"
+          },
+          "plasticCoatedPaper": {
+            "langName": "塑料涂层纸",
+            "name": "Plastic-Coated Paper"
+          },
+          "tarPaper": {
+            "langName": "沥青纸",
+            "name": "Tar Paper"
+          }
+        },
+        "langName": "木材和纸张",
+        "name": "Wood And Paper"
+      },
+      "soil": {
+        "children": {
+          "soil": {
+            "langName": "土壤",
+            "name": "Soil"
+          },
+          "dirt": {
+            "langName": "污垢",
+            "name": "Dirt"
+          },
+          "mud": {
+            "langName": "泥浆",
+            "name": "Mud"
+          },
+          "mudBrick": {
+            "langName": "泥砖",
+            "name": "Mud Brick"
+          },
+          "clay": {
+            "langName": "黏土",
+            "name": "Clay"
+          },
+          "sand": {
+            "langName": "沙",
+            "name": "Sand"
+          },
+          "gravel": {
+            "langName": "砾石",
+            "name": "Gravel"
+          },
+          "silt": {
+            "langName": "淤泥",
+            "name": "Silt"
+          },
+          "dust": {
+            "langName": "灰尘",
+            "name": "Dust"
+          },
+          "spodosol": {
+            "langName": "斯波多索尔",
+            "name": "Spodosol"
+          },
+          "podzol": {
+            "langName": "灰褐土",
+            "name": "Podzol"
+          },
+          "sandpaper": {
+            "langName": "砂纸",
+            "name": "Sandpaper"
+          }
+        },
+        "langName": "土壤",
+        "name": "Soil"
+      },
+      "stoneAndMinerals": {
+        "children": {
+          "stone": {
+            "langName": "石头",
+            "name": "Stone"
+          },
+          "cobblestone": {
+            "langName": "鹅卵石",
+            "name": "Cobblestone"
+          },
+          "pebbles": {
+            "langName": "鹅卵石",
+            "name": "Pebbles"
+          },
+          "rock": {
+            "langName": "岩石",
+            "name": "Rock"
+          },
+          "rocky": {
+            "langName": "多岩石的",
+            "name": "Rocky"
+          },
+          "bedrock": {
+            "langName": "基岩",
+            "name": "Bedrock"
+          },
+          "flint": {
+            "langName": "燧石",
+            "name": "Flint"
+          },
+          "sandstone": {
+            "langName": "砂岩",
+            "name": "Sandstone"
+          },
+          "basalt": {
+            "langName": "玄武岩",
+            "name": "Basalt"
+          },
+          "marble": {
+            "langName": "大理石",
+            "name": "Marble"
+          },
+          "granite": {
+            "langName": "花岗岩",
+            "name": "Granite"
+          },
+          "diorite": {
+            "langName": "闪长岩",
+            "name": "Diorite"
+          },
+          "andesite": {
+            "langName": "安山岩",
+            "name": "Andesite"
+          },
+          "gypsum": {
+            "langName": "石膏",
+            "name": "Gypsum"
+          },
+          "coal": {
+            "langName": "煤炭",
+            "name": "Coal"
+          },
+          "sulfur": {
+            "langName": "硫",
+            "name": "Sulfur"
+          },
+          "graphene": {
+            "langName": "石墨烯",
+            "name": "Graphene"
+          },
+          "carbonNanotubes": {
+            "langName": "碳纳米管",
+            "name": "Carbon Nanotubes"
+          },
+          "carbonFiber": {
+            "langName": "碳纤维",
+            "name": "Carbon Fiber"
+          },
+          "concrete": {
+            "langName": "混凝土",
+            "name": "Concrete"
+          },
+          "sidewalk": {
+            "langName": "人行道",
+            "name": "Sidewalk"
+          },
+          "asphalt": {
+            "langName": "沥青",
+            "name": "Asphalt"
+          },
+          "road": {
+            "langName": "道路",
+            "name": "Road"
+          },
+          "hempcrete": {
+            "langName": "大麻混凝土",
+            "name": "Hempcrete"
+          },
+          "brick": {
+            "langName": "砖",
+            "name": "Brick"
+          },
+          "terracotta": {
+            "langName": "陶器",
+            "name": "Terracotta"
+          },
+          "pottery": {
+            "langName": "陶器",
+            "name": "Pottery"
+          },
+          "ceramic": {
+            "langName": "陶瓷",
+            "name": "Ceramic"
+          },
+          "enamel": {
+            "langName": "搪瓷",
+            "name": "Enamel"
+          },
+          "tile": {
+            "langName": "瓷砖",
+            "name": "Tile"
+          },
+          "sheetrock": {
+            "langName": "石膏板",
+            "name": "Sheetrock"
+          },
+          "plaster": {
+            "langName": "石膏",
+            "name": "Plaster"
+          },
+          "asbestos": {
+            "langName": "石棉",
+            "name": "Asbestos"
+          },
+          "slag": {
+            "langName": "矿渣",
+            "name": "Slag"
+          },
+          "vermiculite": {
+            "langName": "蛭石",
+            "name": "Vermiculite"
+          },
+          "perlite": {
+            "langName": "珍珠岩",
+            "name": "Perlite"
+          },
+          "borax": {
+            "langName": "硼砂",
+            "name": "Borax"
+          }
+        },
+        "langName": "石头和矿物",
+        "name": "Stone And Minerals"
+      },
+      "metal": {
+        "children": {
+          "metallic": {
+            "langName": "金属质感",
+            "name": "Metallic"
+          },
+          "metal": {
+            "langName": "金属",
+            "name": "Metal"
+          },
+          "liquidMetal": {
+            "langName": "液态金属",
+            "name": "Liquid Metal"
+          },
+          "foil": {
+            "langName": "箔",
+            "name": "Foil"
+          },
+          "rusty": {
+            "langName": "生锈的",
+            "name": "Rusty"
+          },
+          "pewter": {
+            "langName": "锡器",
+            "name": "Pewter"
+          },
+          "copper": {
+            "langName": "铜",
+            "name": "Copper"
+          },
+          "tin": {
+            "langName": "锡",
+            "name": "Tin"
+          },
+          "aluminum": {
+            "langName": "铝",
+            "name": "Aluminum"
+          },
+          "brushedAluminum": {
+            "langName": "拉丝铝",
+            "name": "Brushed Aluminum"
+          },
+          "bronze": {
+            "langName": "青铜",
+            "name": "Bronze"
+          },
+          "brass": {
+            "langName": "黄铜",
+            "name": "Brass"
+          },
+          "iron": {
+            "langName": "铁",
+            "name": "Iron"
+          },
+          "wroughtIron": {
+            "langName": "锻铁",
+            "name": "Wrought Iron"
+          },
+          "steel": {
+            "langName": "钢铁",
+            "name": "Steel"
+          },
+          "stainlessSteel": {
+            "langName": "不锈钢",
+            "name": "Stainless Steel"
+          },
+          "damascusSteel": {
+            "langName": "大马士革钢",
+            "name": "Damascus Steel"
+          },
+          "titanium": {
+            "langName": "钛",
+            "name": "Titanium"
+          },
+          "anodizedTitanium": {
+            "langName": "阳极氧化钛",
+            "name": "Anodized Titanium"
+          },
+          "damascusTitanium": {
+            "langName": "大马士革钛",
+            "name": "Damascus Titanium"
+          },
+          "silver": {
+            "langName": "银色",
+            "name": "Silver"
+          },
+          "sterlingSilver": {
+            "langName": "纯银",
+            "name": "Sterling Silver"
+          },
+          "sterling": {
+            "langName": "纯银",
+            "name": "Sterling"
+          },
+          "gold": {
+            "langName": "金色",
+            "name": "Gold"
+          },
+          "roseGold": {
+            "langName": "玫瑰金",
+            "name": "Rose-Gold"
+          },
+          "platinum": {
+            "langName": "铂金",
+            "name": "Platinum"
+          },
+          "chromium": {
+            "langName": "铬",
+            "name": "Chromium"
+          },
+          "chrome": {
+            "langName": "铬",
+            "name": "Chrome"
+          },
+          "mercury": {
+            "langName": "水银",
+            "name": "Mercury"
+          },
+          "mercuryMetal": {
+            "langName": "汞金属",
+            "name": "Mercury Metal"
+          },
+          "moltenMercury": {
+            "langName": "熔化的水银",
+            "name": "Molten Mercury"
+          },
+          "moltenMercuryMetal": {
+            "langName": "熔化的汞金属",
+            "name": "Molten Mercury Metal"
+          },
+          "gallium": {
+            "langName": "镓",
+            "name": "Gallium"
+          },
+          "magnesium": {
+            "langName": "镁",
+            "name": "Magnesium"
+          },
+          "zinc": {
+            "langName": "锌",
+            "name": "Zinc"
+          },
+          "lead": {
+            "langName": "铅",
+            "name": "Lead"
+          },
+          "tungsten": {
+            "langName": "钨",
+            "name": "Tungsten"
+          },
+          "zirconium": {
+            "langName": "锆",
+            "name": "Zirconium"
+          },
+          "cubicZirconium": {
+            "langName": "立方氧化锆",
+            "name": "Cubic Zirconium"
+          },
+          "cobalt": {
+            "langName": "钴",
+            "name": "Cobalt"
+          },
+          "uranium": {
+            "langName": "铀",
+            "name": "Uranium"
+          },
+          "sodium": {
+            "langName": "钠",
+            "name": "Sodium"
+          },
+          "potassium": {
+            "langName": "钾",
+            "name": "Potassium"
+          },
+          "constantan": {
+            "langName": "康斯坦丹",
+            "name": "Constantan"
+          },
+          "hepatizon": {
+            "langName": "赤铜",
+            "name": "Hepatizon"
+          },
+          "nichrome": {
+            "langName": "镍铬合金",
+            "name": "Nichrome"
+          },
+          "damascus": {
+            "langName": "大马士革",
+            "name": "Damascus"
+          },
+          "ironFilings": {
+            "langName": "铁屑",
+            "name": "Iron Filings"
+          },
+          "copperSulfate": {
+            "langName": "硫酸铜",
+            "name": "Copper-Sulfate"
+          },
+          "solder": {
+            "langName": "焊料",
+            "name": "Solder"
+          },
+          "metallicFiber": {
+            "langName": "金属纤维",
+            "name": "Metallic Fiber"
+          },
+          "armatureWire": {
+            "langName": "铁架线",
+            "name": "Armature Wire"
+          },
+          "metalFoam": {
+            "langName": "金属泡沫",
+            "name": "Metal Foam"
+          },
+          "needle": {
+            "langName": "针",
+            "name": "Needle"
+          },
+          "screw": {
+            "langName": "螺丝",
+            "name": "Screw"
+          },
+          "nail": {
+            "langName": "钉子",
+            "name": "Nail"
+          },
+          "paperClips": {
+            "langName": "纸夹",
+            "name": "Paper Clips"
+          },
+          "chain": {
+            "langName": "链条",
+            "name": "Chain"
+          },
+          "chainLink": {
+            "langName": "链环",
+            "name": "Chain-link"
+          },
+          "fence": {
+            "langName": "围栏",
+            "name": "Fence"
+          },
+          "chickenWire": {
+            "langName": "铁丝网",
+            "name": "Chicken Wire"
+          },
+          "chainLinkFence": {
+            "langName": "链环围栏",
+            "name": "Chain-link Fence"
+          }
+        },
+        "langName": "金属",
+        "name": "Metal"
+      },
+      "glassAndCrystal": {
+        "children": {
+          "glassy": {
+            "langName": "玻璃般的",
+            "name": "Glassy"
+          },
+          "stainedGlass": {
+            "langName": "彩色玻璃",
+            "name": "Stained Glass"
+          },
+          "stainedGlassWindows": {
+            "langName": "彩色玻璃窗",
+            "name": "Stained Glass Windows"
+          },
+          "seaglass": {
+            "langName": "海玻璃",
+            "name": "Seaglass"
+          },
+          "mirror": {
+            "langName": "镜子",
+            "name": "Mirror"
+          },
+          "fiberglass": {
+            "langName": "玻璃纤维",
+            "name": "Fiberglass"
+          },
+          "glassFiber": {
+            "langName": "玻璃纤维",
+            "name": "Glass Fiber"
+          },
+          "glassAndCrystals": {
+            "langName": "玻璃和水晶",
+            "name": "Glass and Crystals"
+          },
+          "crystalline": {
+            "langName": "晶体的",
+            "name": "Crystalline"
+          },
+          "diamond": {
+            "langName": "钻石",
+            "name": "Diamond"
+          },
+          "amethyst": {
+            "langName": "紫水晶",
+            "name": "Amethyst"
+          },
+          "quartz": {
+            "langName": "石英",
+            "name": "Quartz"
+          },
+          "smokyQuartz": {
+            "langName": "烟熏石英",
+            "name": "Smoky Quartz"
+          },
+          "roseQuartz": {
+            "langName": "玫瑰石英",
+            "name": "Rose Quartz"
+          },
+          "milkyQuartz": {
+            "langName": "乳白石英",
+            "name": "Milky Quartz"
+          },
+          "rutilatedQuartz": {
+            "langName": "带金红发晶",
+            "name": "Rutilated Quartz"
+          },
+          "sceptredQuartz": {
+            "langName": "权杖状水晶",
+            "name": "Sceptred Quartz"
+          },
+          "herkimerDiamond": {
+            "langName": "赫尔基默钻石",
+            "name": "Herkimer Diamond"
+          },
+          "ruby": {
+            "langName": "红宝石",
+            "name": "Ruby"
+          },
+          "sapphire": {
+            "langName": "蓝宝石",
+            "name": "Sapphire"
+          },
+          "emerald": {
+            "langName": "翡翠",
+            "name": "Emerald"
+          },
+          "pearl": {
+            "langName": "珍珠",
+            "name": "Pearl"
+          },
+          "citrine": {
+            "langName": "黄水晶",
+            "name": "Citrine"
+          },
+          "fluorite": {
+            "langName": "萤石",
+            "name": "Fluorite"
+          },
+          "onyx": {
+            "langName": "缟玛瑙",
+            "name": "Onyx"
+          },
+          "lapisLazuli": {
+            "langName": "天青石",
+            "name": "Lapis Lazuli"
+          },
+          "obsidian": {
+            "langName": "黑曜石",
+            "name": "Obsidian"
+          },
+          "selenite": {
+            "langName": "膏状石膏",
+            "name": "Selenite"
+          },
+          "jasper": {
+            "langName": "碧玉",
+            "name": "Jasper"
+          },
+          "opal": {
+            "langName": "蛋白石",
+            "name": "Opal"
+          },
+          "opalite": {
+            "langName": "蛋白石",
+            "name": "Opalite"
+          },
+          "topaz": {
+            "langName": "黄玉",
+            "name": "Topaz"
+          },
+          "agate": {
+            "langName": "玛瑙",
+            "name": "Agate"
+          },
+          "carnelian": {
+            "langName": "红玉髓",
+            "name": "Carnelian"
+          },
+          "ametrine": {
+            "langName": "紫黄晶",
+            "name": "Ametrine"
+          },
+          "aventurine": {
+            "langName": "碧玺",
+            "name": "Aventurine"
+          },
+          "boraxCrystals": {
+            "langName": "硼砂晶体",
+            "name": "Borax Crystals"
+          },
+          "jewelry": {
+            "langName": "珠宝",
+            "name": "Jewelry"
+          },
+          "colloidalCrystal": {
+            "langName": "胶体晶体",
+            "name": "Colloidal Crystal"
+          }
+        },
+        "langName": "玻璃和水晶",
+        "name": "Glass And Crystal"
+      },
+      "fabric": {
+        "children": {
+          "cloth": {
+            "langName": "布料",
+            "name": "Cloth"
+          },
+          "cotton": {
+            "langName": "棉花",
+            "name": "Cotton"
+          },
+          "polyester": {
+            "langName": "涤纶",
+            "name": "Polyester"
+          },
+          "twine": {
+            "langName": "麻绳",
+            "name": "Twine"
+          },
+          "silk": {
+            "langName": "丝绸",
+            "name": "Silk"
+          },
+          "denim": {
+            "langName": "牛仔布",
+            "name": "Denim"
+          },
+          "jeans": {
+            "langName": "牛仔裤",
+            "name": "Jeans"
+          },
+          "khaki": {
+            "langName": "卡其色",
+            "name": "Khaki"
+          },
+          "leather": {
+            "langName": "皮革",
+            "name": "Leather"
+          },
+          "felt": {
+            "langName": "毡布",
+            "name": "Felt"
+          },
+          "feltCloth": {
+            "langName": "毡布",
+            "name": "Felt Cloth"
+          },
+          "cashmere": {
+            "langName": "羊绒",
+            "name": "Cashmere"
+          },
+          "linen": {
+            "langName": "亚麻布",
+            "name": "Linen"
+          },
+          "velvet": {
+            "langName": "天鹅绒",
+            "name": "Velvet"
+          },
+          "corduroy": {
+            "langName": "灯芯绒",
+            "name": "Corduroy"
+          },
+          "nylon": {
+            "langName": "尼龙",
+            "name": "Nylon"
+          },
+          "polyamide": {
+            "langName": "聚酰胺",
+            "name": "Polyamide"
+          },
+          "kevlar": {
+            "langName": "凯夫拉",
+            "name": "Kevlar"
+          },
+          "spandex": {
+            "langName": "氨纶",
+            "name": "Spandex"
+          },
+          "rayon": {
+            "langName": "尼龙",
+            "name": "Rayon"
+          },
+          "microfiber": {
+            "langName": "超细纤维",
+            "name": "Microfiber"
+          },
+          "fibers": {
+            "langName": "纤维",
+            "name": "Fibers"
+          },
+          "lyocell": {
+            "langName": "莱赛尔纤维",
+            "name": "Lyocell"
+          },
+          "cordura": {
+            "langName": "科杜拉",
+            "name": "Cordura"
+          },
+          "lurex": {
+            "langName": "露瑞克丝",
+            "name": "Lurex"
+          },
+          "nomex": {
+            "langName": "诺迈克斯",
+            "name": "Nomex"
+          },
+          "quilt": {
+            "langName": "被子",
+            "name": "Quilt"
+          },
+          "memoryFoam": {
+            "langName": "记忆海绵",
+            "name": "Memory Foam"
+          },
+          "lint": {
+            "langName": "棉絮",
+            "name": "Lint"
+          },
+          "blanket": {
+            "langName": "毯子",
+            "name": "Blanket"
+          },
+          "pillow": {
+            "langName": "枕头",
+            "name": "Pillow"
+          },
+          "cushion": {
+            "langName": "垫子",
+            "name": "Cushion"
+          },
+          "pinCushion": {
+            "langName": "针垫",
+            "name": "Pin Cushion"
+          },
+          "yarn": {
+            "langName": "纱线",
+            "name": "Yarn"
+          },
+          "knitted": {
+            "langName": "编织的",
+            "name": "Knitted"
+          },
+          "rug": {
+            "langName": "地毯",
+            "name": "Rug"
+          },
+          "carpet": {
+            "langName": "地毯",
+            "name": "Carpet"
+          },
+          "crochet": {
+            "langName": "钩编",
+            "name": "Crochet"
+          },
+          "crossStich": {
+            "langName": "十字绣",
+            "name": "Cross Stich"
+          },
+          "needlePoint": {
+            "langName": "针尖",
+            "name": "Needle Point"
+          },
+          "patch": {
+            "langName": "补丁",
+            "name": "Patch"
+          },
+          "sewen": {
+            "langName": "缝纫",
+            "name": "Sewen"
+          },
+          "sewing": {
+            "langName": "缝纫",
+            "name": "Sewing"
+          },
+          "applique": {
+            "langName": "贴花",
+            "name": "Applique"
+          },
+          "lace": {
+            "langName": "蕾丝",
+            "name": "Lace"
+          },
+          "embroidery": {
+            "langName": "刺绣",
+            "name": "Embroidery"
+          },
+          "macrame": {
+            "langName": "马克拉米编织品",
+            "name": "Macrame"
+          },
+          "weave": {
+            "langName": "编织",
+            "name": "Weave"
+          },
+          "net": {
+            "langName": "网",
+            "name": "Net"
+          },
+          "netting": {
+            "langName": "网眼",
+            "name": "Netting"
+          },
+          "bandAid": {
+            "langName": "创可贴",
+            "name": "Band-Aid"
+          },
+          "bandage": {
+            "langName": "绷带",
+            "name": "Bandage"
+          },
+          "gauze": {
+            "langName": "纱布",
+            "name": "Gauze"
+          },
+          "spiderWeb": {
+            "langName": "蜘蛛网",
+            "name": "Spider Web"
+          }
+        },
+        "langName": "布料",
+        "name": "Fabric"
+      },
+      "plasticFoam": {
+        "children": {
+          "plastic": {
+            "langName": "塑料",
+            "name": "Plastic"
+          },
+          "shrinkWrap": {
+            "langName": "收缩包装",
+            "name": "Shrink Wrap"
+          },
+          "plasticWrap": {
+            "langName": "保鲜膜",
+            "name": "Plastic Wrap"
+          },
+          "clingWrap": {
+            "langName": "保鲜膜",
+            "name": "Cling Wrap"
+          },
+          "teflon": {
+            "langName": "聚四氟乙烯",
+            "name": "Teflon"
+          },
+          "lego": {
+            "langName": "乐高",
+            "name": "Lego"
+          },
+          "polyurethane": {
+            "langName": "聚氨酯",
+            "name": "Polyurethane"
+          },
+          "polyethylene": {
+            "langName": "聚乙烯",
+            "name": "Polyethylene"
+          },
+          "polyvinyl": {
+            "langName": "聚乙烯",
+            "name": "Polyvinyl"
+          },
+          "polypropylene": {
+            "langName": "聚丙烯",
+            "name": "Polypropylene"
+          },
+          "polyimide": {
+            "langName": "聚酰亚胺",
+            "name": "Polyimide"
+          },
+          "styrofoam": {
+            "langName": "聚苯乙烯泡沫",
+            "name": "Styrofoam"
+          },
+          "foam": {
+            "langName": "泡沫",
+            "name": "Foam"
+          }
+        },
+        "langName": "塑料/泡沫膜",
+        "name": "Plastic Foam"
+      },
+      "rubber": {
+        "children": {
+          "rubber": {
+            "langName": "橡胶",
+            "name": "Rubber"
+          },
+          "rubberBand": {
+            "langName": "橡皮筋",
+            "name": "Rubber Band"
+          },
+          "rubberBandBall": {
+            "langName": "橡皮筋球",
+            "name": "Rubber Band Ball"
+          },
+          "balloon": {
+            "langName": "气球",
+            "name": "Balloon"
+          },
+          "latex": {
+            "langName": "乳胶",
+            "name": "Latex"
+          },
+          "nitrile": {
+            "langName": "丁腈",
+            "name": "Nitrile"
+          },
+          "silicone": {
+            "langName": "硅胶",
+            "name": "Silicone"
+          },
+          "vinyl": {
+            "langName": "乙烯基",
+            "name": "Vinyl"
+          },
+          "linoleum": {
+            "langName": "油布",
+            "name": "Linoleum"
+          },
+          "sillyBand": {
+            "langName": "傻乐队",
+            "name": "Silly Band"
+          }
+        },
+        "langName": "橡胶",
+        "name": "Rubber"
+      },
+      "wax": {
+        "children": {
+          "wax": {
+            "langName": "蜡",
+            "name": "Wax"
+          },
+          "waxPaper": {
+            "langName": "蜡纸",
+            "name": "Wax Paper"
+          },
+          "carnaubaWax": {
+            "langName": "卡那蜡",
+            "name": "Carnauba Wax"
+          },
+          "candelillaWax": {
+            "langName": "蜡菊蜡",
+            "name": "Candelilla Wax"
+          },
+          "paraffinWax": {
+            "langName": "石蜡",
+            "name": "Paraffin Wax"
+          },
+          "shellac": {
+            "langName": "虫胶",
+            "name": "Shellac"
+          },
+          "lipstick": {
+            "langName": "口红",
+            "name": "Lipstick"
+          }
+        },
+        "langName": "蜡",
+        "name": "Wax"
+      },
+      "iceSnow": {
+        "children": {
+          "ice": {
+            "langName": "冰",
+            "name": "Ice"
+          },
+          "blueIce": {
+            "langName": "蓝冰",
+            "name": "Blue-Ice"
+          },
+          "dryIce": {
+            "langName": "干冰",
+            "name": "Dry Ice"
+          },
+          "snow": {
+            "langName": "雪",
+            "name": "Snow"
+          },
+          "snowflake": {
+            "langName": "雪花",
+            "name": "Snowflake"
+          }
+        },
+        "langName": "冰雪",
+        "name": "Ice Snow"
+      },
+      "hairFur": {
+        "children": {
+          "hairy": {
+            "langName": "多毛的",
+            "name": "Hairy"
+          },
+          "furry": {
+            "langName": "毛茸茸的",
+            "name": "Furry"
+          },
+          "fuzz": {
+            "langName": "模糊",
+            "name": "Fuzz"
+          },
+          "beard": {
+            "langName": "胡须",
+            "name": "Beard"
+          },
+          "mustache": {
+            "langName": "胡须",
+            "name": "Mustache"
+          },
+          "feathers": {
+            "langName": "羽毛",
+            "name": "Feathers"
+          },
+          "zebra": {
+            "langName": "斑马",
+            "name": "Zebra"
+          },
+          "tiger": {
+            "langName": "老虎",
+            "name": "Tiger"
+          },
+          "dustBunny": {
+            "langName": "灰尘兔",
+            "name": "Dust-Bunny"
+          }
+        },
+        "langName": "头发/毛皮",
+        "name": "Hair Fur"
+      },
+      "liquid": {
+        "children": {
+          "liquid": {
+            "langName": "液体",
+            "name": "Liquid"
+          },
+          "water": {
+            "langName": "水",
+            "name": "Water"
+          },
+          "lava": {
+            "langName": "岩浆",
+            "name": "Lava"
+          },
+          "magma": {
+            "langName": "岩浆",
+            "name": "Magma"
+          },
+          "moltenRock": {
+            "langName": "熔岩",
+            "name": "Molten Rock"
+          },
+          "ferroFluid": {
+            "langName": "铁磁流体",
+            "name": "Ferro Fluid"
+          },
+          "liquidCrystal": {
+            "langName": "液晶",
+            "name": "Liquid Crystal"
+          },
+          "oil": {
+            "langName": "油",
+            "name": "Oil"
+          },
+          "gasoline": {
+            "langName": "汽油",
+            "name": "Gasoline"
+          },
+          "turpentine": {
+            "langName": "松节油",
+            "name": "Turpentine"
+          },
+          "mineralOil": {
+            "langName": "矿物油",
+            "name": "Mineral Oil"
+          },
+          "motorOil": {
+            "langName": "机油",
+            "name": "Motor Oil"
+          },
+          "seaFoam": {
+            "langName": "海泡",
+            "name": "Sea Foam"
+          },
+          "waterfall": {
+            "langName": "瀑布",
+            "name": "Waterfall"
+          },
+          "river": {
+            "langName": "河流",
+            "name": "River"
+          },
+          "lake": {
+            "langName": "湖",
+            "name": "Lake"
+          },
+          "ocean": {
+            "langName": "海洋",
+            "name": "Ocean"
+          },
+          "emulsion": {
+            "langName": "乳剂",
+            "name": "Emulsion"
+          },
+          "lipid": {
+            "langName": "脂质",
+            "name": "Lipid"
+          }
+        },
+        "langName": "液体",
+        "name": "Liquid"
+      },
+      "slime": {
+        "children": {
+          "slime": {
+            "langName": "黏液",
+            "name": "Slime"
+          },
+          "flubber": {
+            "langName": "弹性胶",
+            "name": "Flubber"
+          },
+          "putty": {
+            "langName": "填缝腻子",
+            "name": "Putty"
+          },
+          "posterTack": {
+            "langName": "海报胶",
+            "name": "Poster Tack"
+          }
+        },
+        "langName": "黏液",
+        "name": "Slime"
+      },
+      "viscosity": {
+        "children": {
+          "gel": {
+            "langName": "凝胶",
+            "name": "Gel"
+          },
+          "aerogel": {
+            "langName": "气凝胶",
+            "name": "Aerogel"
+          },
+          "softgel": {
+            "langName": "软胶囊",
+            "name": "Softgel"
+          },
+          "silicaGel": {
+            "langName": "硅胶",
+            "name": "Silica Gel"
+          },
+          "ballisticGel": {
+            "langName": "防弹凝胶",
+            "name": "Ballistic Gel"
+          },
+          "jellyfish": {
+            "langName": "水母",
+            "name": "Jellyfish"
+          },
+          "ballisticFoam": {
+            "langName": "防弹泡沫",
+            "name": "Ballistic Foam"
+          },
+          "sponge": {
+            "langName": "海绵",
+            "name": "Sponge"
+          },
+          "spongy": {
+            "langName": "海绵状",
+            "name": "Spongy"
+          }
+        },
+        "langName": "黏稠度",
+        "name": "Viscosity"
+      },
+      "adhesive": {
+        "children": {
+          "tape": {
+            "langName": "胶带",
+            "name": "Tape"
+          },
+          "ductTape": {
+            "langName": "胶带",
+            "name": "Duct Tape"
+          },
+          "scotchTape": {
+            "langName": "透明胶带",
+            "name": "Scotch Tape"
+          },
+          "clearTape": {
+            "langName": "透明胶带",
+            "name": "Clear Tape"
+          },
+          "packingTape": {
+            "langName": "胶带",
+            "name": "Packing Tape"
+          },
+          "maskingTape": {
+            "langName": "遮光胶带",
+            "name": "Masking Tape"
+          },
+          "kapton": {
+            "langName": "凯夫特",
+            "name": "Kapton"
+          },
+          "kaptonTape": {
+            "langName": "凯夫特胶带",
+            "name": "Kapton Tape"
+          },
+          "adhesive": {
+            "langName": "粘合剂",
+            "name": "Adhesive"
+          },
+          "glue": {
+            "langName": "胶水",
+            "name": "Glue"
+          },
+          "epoxy": {
+            "langName": "环氧树脂",
+            "name": "Epoxy"
+          }
+        },
+        "langName": "粘合剂",
+        "name": "Adhesive"
+      },
+      "polymer": {
+        "children": {
+          "polymer": {
+            "langName": "聚合物",
+            "name": "Polymer"
+          },
+          "orbeez": {
+            "langName": "水晶珠",
+            "name": "Orbeez"
+          },
+          "oobleck": {
+            "langName": "奥布雷克",
+            "name": "Oobleck"
+          }
+        },
+        "langName": "聚合物",
+        "name": "Polymer"
+      },
+      "gasPowder": {
+        "children": {
+          "vapor": {
+            "langName": "蒸汽",
+            "name": "Vapor"
+          },
+          "clouds": {
+            "langName": "云",
+            "name": "Clouds"
+          },
+          "fog": {
+            "langName": "雾",
+            "name": "Fog"
+          },
+          "mist": {
+            "langName": "薄雾",
+            "name": "Mist"
+          },
+          "gas": {
+            "langName": "气体",
+            "name": "Gas"
+          },
+          "aerosol": {
+            "langName": "喷雾剂",
+            "name": "Aerosol"
+          },
+          "powder": {
+            "langName": "粉末",
+            "name": "Powder"
+          },
+          "smoke": {
+            "langName": "烟雾",
+            "name": "Smoke"
+          }
+        },
+        "langName": "气体/粉末",
+        "name": "Gas Powder"
+      },
+      "plasmaEnergy": {
+        "children": {
+          "plasma": {
+            "langName": "等离子",
+            "name": "Plasma"
+          },
+          "electric": {
+            "langName": "电动的",
+            "name": "Electric"
+          },
+          "electricity": {
+            "langName": "电力",
+            "name": "Electricity"
+          },
+          "lightning": {
+            "langName": "闪电",
+            "name": "Lightning"
+          },
+          "fire": {
+            "langName": "火",
+            "name": "Fire"
+          },
+          "burn": {
+            "langName": "燃烧",
+            "name": "Burn"
+          },
+          "inferno": {
+            "langName": "地狱般的",
+            "name": "Inferno"
+          },
+          "explosion": {
+            "langName": "爆炸",
+            "name": "Explosion"
+          },
+          "firework": {
+            "langName": "烟花",
+            "name": "Firework"
+          }
+        },
+        "langName": "等离子与能源",
+        "name": "Plasma Energy"
+      },
+      "foodConsumables": {
+        "children": {
+          "jelly": {
+            "langName": "果冻",
+            "name": "Jelly"
+          },
+          "gelatin": {
+            "langName": "明胶",
+            "name": "Gelatin"
+          },
+          "agar": {
+            "langName": "琼脂",
+            "name": "Agar"
+          },
+          "wagyu": {
+            "langName": "和牛",
+            "name": "Wagyu"
+          },
+          "tallow": {
+            "langName": "牛脂",
+            "name": "Tallow"
+          },
+          "butter": {
+            "langName": "黄油",
+            "name": "Butter"
+          },
+          "margarine": {
+            "langName": "人造黄油",
+            "name": "Margarine"
+          },
+          "cheese": {
+            "langName": "奶酪",
+            "name": "Cheese"
+          },
+          "egg": {
+            "langName": "鸡蛋",
+            "name": "Egg"
+          },
+          "eggYolk": {
+            "langName": "蛋黄",
+            "name": "Egg Yolk"
+          },
+          "beans": {
+            "langName": "豆类",
+            "name": "Beans"
+          },
+          "macaroni": {
+            "langName": "通心粉",
+            "name": "Macaroni"
+          },
+          "marconiAndCheese": {
+            "langName": "马可尼意面奶酪",
+            "name": "Marconi and Cheese"
+          },
+          "pretzel": {
+            "langName": "椒盐脆饼",
+            "name": "Pretzel"
+          },
+          "churros": {
+            "langName": "西班牙油条",
+            "name": "Churros"
+          },
+          "bread": {
+            "langName": "面包",
+            "name": "Bread"
+          },
+          "madeOfBread": {
+            "langName": "面包制品",
+            "name": "Made of Bread"
+          },
+          "cake": {
+            "langName": "蛋糕",
+            "name": "Cake"
+          },
+          "sourCream": {
+            "langName": "酸奶油",
+            "name": "Sour Cream"
+          },
+          "sauce": {
+            "langName": "酱料",
+            "name": "Sauce"
+          },
+          "pastaSauce": {
+            "langName": "意大利面酱",
+            "name": "Pasta Sauce"
+          },
+          "ketchup": {
+            "langName": "番茄酱",
+            "name": "Ketchup"
+          },
+          "mustard": {
+            "langName": "芥末",
+            "name": "Mustard"
+          },
+          "mayonnaise": {
+            "langName": "蛋黄酱",
+            "name": "Mayonnaise"
+          },
+          "syrup": {
+            "langName": "糖浆",
+            "name": "Syrup"
+          },
+          "mapleSyrup": {
+            "langName": "枫糖浆",
+            "name": "Maple Syrup"
+          },
+          "cream": {
+            "langName": "奶油",
+            "name": "Cream"
+          },
+          "whippedCream": {
+            "langName": "打发奶油",
+            "name": "Whipped Cream"
+          },
+          "candy": {
+            "langName": "糖果",
+            "name": "Candy"
+          },
+          "lollipop": {
+            "langName": "棒棒糖",
+            "name": "Lollipop"
+          },
+          "chocolate": {
+            "langName": "巧克力",
+            "name": "Chocolate"
+          },
+          "cinnamon": {
+            "langName": "肉桂",
+            "name": "Cinnamon"
+          },
+          "caramel": {
+            "langName": "焦糖",
+            "name": "Caramel"
+          },
+          "taffy": {
+            "langName": "太妃糖",
+            "name": "Taffy"
+          },
+          "honeycomb": {
+            "langName": "蜂窝",
+            "name": "Honeycomb"
+          },
+          "edibleInk": {
+            "langName": "食用墨水",
+            "name": "Edible Ink"
+          },
+          "foodColoring": {
+            "langName": "食用色素",
+            "name": "Food Coloring"
+          },
+          "iceCream": {
+            "langName": "冰淇淋",
+            "name": "Ice Cream"
+          },
+          "sprinkles": {
+            "langName": "糖屑",
+            "name": "Sprinkles"
+          },
+          "fondantIcing": {
+            "langName": "翻糖糖霜",
+            "name": "Fondant Icing"
+          },
+          "royalIcing": {
+            "langName": "皇家糖霜",
+            "name": "Royal Icing"
+          },
+          "weddingCake": {
+            "langName": "婚礼蛋糕",
+            "name": "Wedding Cake"
+          },
+          "cakeDecorating": {
+            "langName": "蛋糕装饰",
+            "name": "Cake Decorating"
+          },
+          "shortcrustPastry": {
+            "langName": "酥皮糕点",
+            "name": "Shortcrust-Pastry"
+          },
+          "flakyPastry": {
+            "langName": "酥皮点心",
+            "name": "Flaky-Pastry"
+          },
+          "puffPastry": {
+            "langName": "酥皮",
+            "name": "Puff-Pastry"
+          },
+          "eclair": {
+            "langName": "法式泡芙",
+            "name": "Eclair"
+          },
+          "cannoli": {
+            "langName": "卡诺利甜甜圈",
+            "name": "Cannoli"
+          },
+          "fruitTart": {
+            "langName": "水果挞",
+            "name": "Fruit-Tart"
+          },
+          "cremeBrule": {
+            "langName": "焦糖布丁",
+            "name": "Creme Brule"
+          },
+          "gum": {
+            "langName": "口香糖",
+            "name": "Gum"
+          },
+          "toothpaste": {
+            "langName": "牙膏",
+            "name": "Toothpaste"
+          },
+          "vegetableOil": {
+            "langName": "植物油",
+            "name": "Vegetable Oil"
+          },
+          "oliveOil": {
+            "langName": "橄榄油",
+            "name": "Olive Oil"
+          },
+          "soda": {
+            "langName": "苏打",
+            "name": "Soda"
+          },
+          "coffee": {
+            "langName": "咖啡",
+            "name": "Coffee"
+          },
+          "tea": {
+            "langName": "茶",
+            "name": "Tea"
+          }
+        },
+        "langName": "食品和消耗品",
+        "name": "Food Consumables"
+      },
+      "plants": {
+        "children": {
+          "plant": {
+            "langName": "植物",
+            "name": "Plant"
+          },
+          "grass": {
+            "langName": "草地",
+            "name": "Grass"
+          },
+          "grassy": {
+            "langName": "多草的",
+            "name": "Grassy"
+          },
+          "flowers": {
+            "langName": "花朵",
+            "name": "Flowers"
+          },
+          "floral": {
+            "langName": "花卉的",
+            "name": "Floral"
+          },
+          "vines": {
+            "langName": "藤蔓",
+            "name": "Vines"
+          },
+          "treeBark": {
+            "langName": "树皮",
+            "name": "Tree Bark"
+          },
+          "branches": {
+            "langName": "树枝",
+            "name": "Branches"
+          },
+          "leaves": {
+            "langName": "叶子",
+            "name": "Leaves"
+          },
+          "pinecone": {
+            "langName": "松果",
+            "name": "Pinecone"
+          },
+          "acorn": {
+            "langName": "橡子",
+            "name": "Acorn"
+          },
+          "moss": {
+            "langName": "苔藓",
+            "name": "Moss"
+          },
+          "bamboo": {
+            "langName": "竹子",
+            "name": "Bamboo"
+          },
+          "cactus": {
+            "langName": "仙人掌",
+            "name": "Cactus"
+          },
+          "straw": {
+            "langName": "稻草",
+            "name": "Straw"
+          },
+          "strawBale": {
+            "langName": "稻草包",
+            "name": "Straw-Bale"
+          },
+          "hay": {
+            "langName": "干草",
+            "name": "Hay"
+          },
+          "hayBale": {
+            "langName": "干草捆",
+            "name": "Hay-Bale"
+          },
+          "hemp": {
+            "langName": "大麻",
+            "name": "Hemp"
+          }
+        },
+        "langName": "植物",
+        "name": "Plants"
+      },
+      "fungi": {
+        "children": {
+          "fungi": {
+            "langName": "真菌",
+            "name": "Fungi"
+          },
+          "mushrooms": {
+            "langName": "蘑菇",
+            "name": "Mushrooms"
+          },
+          "mycelium": {
+            "langName": "菌丝体",
+            "name": "Mycelium"
+          },
+          "moldy": {
+            "langName": "发霉的",
+            "name": "Moldy"
+          },
+          "lactariusIndigo": {
+            "langName": "靛蓝乳菇",
+            "name": "Lactarius-Indigo"
+          },
+          "latticedStinkhorn": {
+            "langName": "格子蘑菇",
+            "name": "Latticed-Stinkhorn"
+          },
+          "clathrusRuber": {
+            "langName": "红网状菌",
+            "name": "Clathrus-Ruber"
+          },
+          "laccariaAmethystina": {
+            "langName": "紫紫菇",
+            "name": "Laccaria-Amethystina"
+          },
+          "entolomaHochstetteri": {
+            "langName": "霍克斯泰特尔拟红菇",
+            "name": "Entoloma-Hochstetteri"
+          },
+          "clavariaZollingeri": {
+            "langName": "佐林格丝丝盖菌",
+            "name": "Clavaria-Zollingeri"
+          },
+          "chlorociboria": {
+            "langName": "绿杯菌",
+            "name": "Chlorociboria"
+          },
+          "goldenScruffyCollybia": {
+            "langName": "金色粗糙蘑菇",
+            "name": "Golden-Scruffy-Collybia"
+          },
+          "cyptotramaAsprata": {
+            "langName": "Cyptotrama-Asprata",
+            "name": "Cyptotrama-Asprata"
+          },
+          "mycenaAcicula": {
+            "langName": "针孢菇",
+            "name": "Mycena Acicula"
+          },
+          "hygrocybeCantharellus": {
+            "langName": "湿度变化坎萨勒斯",
+            "name": "Hygrocybe-Cantharellus"
+          },
+          "amanitaMuscaria": {
+            "langName": "曼氏毒蝇伞",
+            "name": "Amanita-Muscaria"
+          },
+          "favolaschiaCalocera": {
+            "langName": "卡洛塞拉黄褐孢菇",
+            "name": "Favolaschia-Calocera"
+          },
+          "marasmiusHaematocephalus": {
+            "langName": "血头小蘑菇",
+            "name": "Marasmius-Haematocephalus"
+          },
+          "cystoagaricusTrisulphuratus": {
+            "langName": "Cystoagaricus-Trisulphuratus",
+            "name": "Cystoagaricus-Trisulphuratus"
+          },
+          "tremellaMesenterica": {
+            "langName": "黄耳",
+            "name": "Tremella-Mesenterica"
+          },
+          "tremellaFuciformis": {
+            "langName": "银耳",
+            "name": "Tremella-Fuciformis"
+          }
+        },
+        "langName": "菌",
+        "name": "Fungi"
+      },
+      "object": {
+        "children": {
+          "piano": {
+            "langName": "钢琴",
+            "name": "Piano"
+          },
+          "accordion": {
+            "langName": "手风琴",
+            "name": "Accordion"
+          },
+          "saxophone": {
+            "langName": "萨克斯管",
+            "name": "Saxophone"
+          },
+          "seashell": {
+            "langName": "贝壳",
+            "name": "Seashell"
+          },
+          "toilet": {
+            "langName": "厕所",
+            "name": "Toilet"
+          },
+          "tornado": {
+            "langName": "龙卷风",
+            "name": "Tornado"
+          },
+          "cage": {
+            "langName": "笼子",
+            "name": "Cage"
+          },
+          "cheeseGrater": {
+            "langName": "奶酪刨丝器",
+            "name": "Cheese Grater"
+          },
+          "slinky": {
+            "langName": "弹簧玩具",
+            "name": "Slinky"
+          },
+          "bracelet": {
+            "langName": "手镯",
+            "name": "Bracelet"
+          }
+        },
+        "langName": "对象",
+        "name": "Object"
+      },
+      "symbol": {
+        "children": {
+          "yinYang": {
+            "langName": "阴阳",
+            "name": "Yin Yang"
+          }
+        },
+        "langName": "符号",
+        "name": "Symbol"
+      },
+      "concept": {
+        "children": {
+          "gorgeous": {
+            "langName": "华丽的",
+            "name": "Gorgeous"
+          },
+          "refreshing": {
+            "langName": "清新的",
+            "name": "Refreshing"
+          },
+          "divine": {
+            "langName": "神圣的",
+            "name": "Divine"
+          },
+          "infused": {
+            "langName": "注入的",
+            "name": "Infused"
+          },
+          "essence": {
+            "langName": "精华",
+            "name": "Essence"
+          },
+          "ineffable": {
+            "langName": "难以言喻的",
+            "name": "Ineffable"
+          },
+          "strong": {
+            "langName": "强壮",
+            "name": "Strong"
+          },
+          "powerful": {
+            "langName": "强大的",
+            "name": "Powerful"
+          },
+          "weak": {
+            "langName": "虚弱的",
+            "name": "Weak"
+          },
+          "thin": {
+            "langName": "薄",
+            "name": "Thin"
+          },
+          "thick": {
+            "langName": "厚",
+            "name": "Thick"
+          },
+          "massiveScale": {
+            "langName": "大规模",
+            "name": "Massive Scale"
+          },
+          "massive": {
+            "langName": "巨大的",
+            "name": "Massive"
+          },
+          "huge": {
+            "langName": "巨大的",
+            "name": "Huge"
+          },
+          "large": {
+            "langName": "大",
+            "name": "Large"
+          },
+          "big": {
+            "langName": "大",
+            "name": "Big"
+          },
+          "mini": {
+            "langName": "微型",
+            "name": "Mini"
+          },
+          "tiny": {
+            "langName": "微小的",
+            "name": "Tiny"
+          },
+          "micro": {
+            "langName": "微观",
+            "name": "Micro"
+          },
+          "nano": {
+            "langName": "纳米",
+            "name": "Nano"
+          },
+          "flexible": {
+            "langName": "灵活的",
+            "name": "Flexible"
+          },
+          "upsideDown": {
+            "langName": "颠倒的",
+            "name": "Upside-Down"
+          },
+          "paradox": {
+            "langName": "悖论",
+            "name": "Paradox"
+          },
+          "fengShui": {
+            "langName": "风水",
+            "name": "Feng Shui"
+          },
+          "perfectionism": {
+            "langName": "完美主义",
+            "name": "Perfectionism"
+          },
+          "ocd": {
+            "langName": "强迫症",
+            "name": "OCD"
+          },
+          "array": {
+            "langName": "阵列",
+            "name": "Array"
+          },
+          "muted": {
+            "langName": "柔和的",
+            "name": "Muted"
+          },
+          "visualPerception": {
+            "langName": "视觉感知",
+            "name": "Visual Perception"
+          },
+          "visualAgnosia": {
+            "langName": "视觉失认",
+            "name": "Visual Agnosia"
+          }
+        },
+        "langName": "概念",
+        "name": "Concept"
+      },
+      "otherMaterials": {
+        "children": {
+          "ivory": {
+            "langName": "象牙",
+            "name": "Ivory"
+          },
+          "amber": {
+            "langName": "琥珀",
+            "name": "Amber"
+          },
+          "inlay": {
+            "langName": "镶嵌",
+            "name": "Inlay"
+          },
+          "soap": {
+            "langName": "肥皂",
+            "name": "Soap"
+          },
+          "wires": {
+            "langName": "电线",
+            "name": "Wires"
+          },
+          "cables": {
+            "langName": "电缆",
+            "name": "Cables"
+          },
+          "cells": {
+            "langName": "细胞",
+            "name": "Cells"
+          },
+          "cellular": {
+            "langName": "细胞的",
+            "name": "Cellular"
+          },
+          "transistor": {
+            "langName": "晶体管",
+            "name": "Transistor"
+          },
+          "diode": {
+            "langName": "二极管",
+            "name": "Diode"
+          }
+        },
+        "langName": "其他素材",
+        "name": "Other Materials"
+      }
+    },
+    "langName": "素材",
+    "name": "Material"
+  },
+  "person": {
+    "children": {
+      "humanBody": {
+        "children": {
+          "detailedGorgeousFace": {
+            "langName": "精美的容颜",
+            "name": "detailed gorgeous face"
+          },
+          "delicateFeatures": {
+            "langName": "精致的特征",
+            "name": "delicate features"
+          },
+          "gradientEyes": {
+            "langName": "渐变眼睛",
+            "name": "gradient eyes"
+          },
+          "aquaEyes": {
+            "langName": "水色眼睛",
+            "name": "aqua eyes"
+          },
+          "googlyEyes": {
+            "langName": "动态眼睛",
+            "name": "Googly Eyes"
+          },
+          "bigTits": {
+            "langName": "大胸部",
+            "name": "big tits"
+          },
+          "oliveSkin": {
+            "langName": "橄榄色皮肤",
+            "name": "olive skin"
+          },
+          "miniSmile": {
+            "langName": "微笑",
+            "name": "mini smile"
+          },
+          "grin": {
+            "langName": "咧嘴笑",
+            "name": "grin"
+          },
+          "evilSmile": {
+            "langName": "邪恶的微笑",
+            "name": "evil smile"
+          },
+          "fullBlush": {
+            "langName": "满脸红晕",
+            "name": "full blush"
+          },
+          "bone": {
+            "langName": "骨头",
+            "name": "bone"
+          }
+        },
+        "langName": "人体",
+        "name": "Human Body"
+      },
+      "hair": {
+        "children": {
+          "blondeHair": {
+            "langName": "金发",
+            "name": "blonde hair"
+          },
+          "silverHair": {
+            "langName": "银发",
+            "name": "silver hair"
+          },
+          "greyHair": {
+            "langName": "灰色头发",
+            "name": "grey hair"
+          },
+          "whiteHair": {
+            "langName": "白发",
+            "name": "white hair"
+          },
+          "blackHair": {
+            "langName": "黑发",
+            "name": "black hair"
+          },
+          "gradientHair": {
+            "langName": "渐变发色",
+            "name": "gradient hair"
+          },
+          "bangs": {
+            "langName": "刘海",
+            "name": "bangs"
+          },
+          "bluntBangs": {
+            "langName": "齐刘海",
+            "name": "blunt bangs"
+          },
+          "braid": {
+            "langName": "辫子",
+            "name": "braid"
+          },
+          "braidedPonytail": {
+            "langName": "编织马尾",
+            "name": "braided ponytail"
+          },
+          "longBraid": {
+            "langName": "长辫子",
+            "name": "long braid"
+          },
+          "twintails": {
+            "langName": "双马尾",
+            "name": "twintails"
+          },
+          "doubleBun": {
+            "langName": "双丸子头",
+            "name": "double bun"
+          },
+          "drillHair": {
+            "langName": "编织发型",
+            "name": "drill hair"
+          },
+          "curlyHair": {
+            "langName": "卷发",
+            "name": "curly hair"
+          },
+          "straightHair": {
+            "langName": "直发",
+            "name": "straight hair"
+          },
+          "buzzCut": {
+            "langName": "光头",
+            "name": "buzz cut"
+          },
+          "crewCut": {
+            "langName": "平头",
+            "name": "crew cut"
+          }
+        },
+        "langName": "头发",
+        "name": "Hair"
+      },
+      "positiveEmotions": {
+        "children": {
+          "joyful": {
+            "langName": "快乐的",
+            "name": "joyful"
+          },
+          "cheerful": {
+            "langName": "快乐的",
+            "name": "cheerful"
+          },
+          "enchanting": {
+            "langName": "迷人的",
+            "name": "enchanting"
+          },
+          "happy": {
+            "langName": "快乐的",
+            "name": "happy"
+          },
+          "happyAccidents": {
+            "langName": "意外的快乐",
+            "name": "happy accidents"
+          },
+          "vibrant": {
+            "langName": "充满活力的",
+            "name": "vibrant"
+          },
+          "dynamic": {
+            "langName": "动态的",
+            "name": "dynamic"
+          },
+          "energetic": {
+            "langName": "充满活力的",
+            "name": "energetic"
+          },
+          "bustling": {
+            "langName": "熙熙攘攘的",
+            "name": "bustling"
+          },
+          "lively": {
+            "langName": "活泼的",
+            "name": "lively"
+          },
+          "excited": {
+            "langName": "兴奋的",
+            "name": "excited"
+          },
+          "noseBlush": {
+            "langName": "鼻红",
+            "name": "nose blush"
+          },
+          "peaceful": {
+            "langName": "宁静的",
+            "name": "peaceful"
+          },
+          "serene": {
+            "langName": "宁静的",
+            "name": "serene"
+          },
+          "soothing": {
+            "langName": "舒缓",
+            "name": "soothing"
+          },
+          "calming": {
+            "langName": "宁静的",
+            "name": "calming"
+          }
+        },
+        "langName": "积极情绪",
+        "name": "Positive Emotions"
+      },
+      "negativeEmotions": {
+        "children": {
+          "melancholic": {
+            "langName": "忧郁的",
+            "name": "melancholic"
+          },
+          "eerie": {
+            "langName": "怪异的",
+            "name": "eerie"
+          },
+          "ominous": {
+            "langName": "不祥的",
+            "name": "ominous"
+          },
+          "gloom": {
+            "langName": "阴郁",
+            "name": "gloom"
+          },
+          "unsettling": {
+            "langName": "令人不安的",
+            "name": "unsettling"
+          },
+          "sad": {
+            "langName": "悲伤的",
+            "name": "Sad"
+          },
+          "lonely": {
+            "langName": "孤独的",
+            "name": "Lonely"
+          },
+          "angry": {
+            "langName": "愤怒的",
+            "name": "Angry"
+          }
+        },
+        "langName": "负面情绪",
+        "name": "Negative Emotions"
+      },
+      "temperament": {
+        "children": {
+          "elegant": {
+            "langName": "优雅的",
+            "name": "Elegant"
+          },
+          "angelic": {
+            "langName": "天使般的",
+            "name": "Angelic"
+          },
+          "good": {
+            "langName": "好的",
+            "name": "Good"
+          },
+          "mysterious": {
+            "langName": "神秘的",
+            "name": "mysterious"
+          },
+          "enigmatic": {
+            "langName": "神秘的",
+            "name": "enigmatic"
+          },
+          "cryptic": {
+            "langName": "神秘的",
+            "name": "cryptic"
+          },
+          "evil": {
+            "langName": "邪恶",
+            "name": "Evil"
+          }
+        },
+        "langName": "气质",
+        "name": "Temperament"
+      }
+    },
+    "langName": "人物",
+    "name": "Person"
+  },
+  "photography": {
+    "children": {
+      "scene": {
+        "children": {
+          "portraitPhotogram": {
+            "langName": "肖像摄影画",
+            "name": "Portrait Photogram"
+          },
+          "photorealistic": {
+            "langName": "照片逼真",
+            "name": "Photorealistic"
+          },
+          "bokeh": {
+            "langName": "浅景深",
+            "name": "Bokeh"
+          },
+          "cinematic": {
+            "langName": "电影的",
+            "name": "Cinematic"
+          },
+          "colorGrading": {
+            "langName": "色彩分级",
+            "name": "Color Grading"
+          },
+          "dashcamFootage": {
+            "langName": "行车记录仪录像",
+            "name": "Dashcam-Footage"
+          },
+          "dramatic": {
+            "langName": "戏剧性的",
+            "name": "Dramatic"
+          },
+          "editorialPhotography": {
+            "langName": "编辑摄影",
+            "name": "Editorial Photography"
+          },
+          "filmic": {
+            "langName": "电影般的",
+            "name": "Filmic"
+          },
+          "filmGrain": {
+            "langName": "胶片颗粒",
+            "name": "Film Grain"
+          },
+          "glamorShot": {
+            "langName": "时尚摄影",
+            "name": "Glamor Shot"
+          },
+          "goldenHour": {
+            "langName": "金色时刻",
+            "name": "Golden Hour"
+          },
+          "highSpeedPhotograph": {
+            "langName": "高速摄影",
+            "name": "High-Speed Photograph"
+          },
+          "intentionalCameraMovement": {
+            "langName": "有意的相机移动",
+            "name": "Intentional camera movement"
+          },
+          "paparazziPhotography": {
+            "langName": "狗仔摄影",
+            "name": "Paparazzi Photography"
+          },
+          "photography": {
+            "langName": "摄影",
+            "name": "Photography"
+          },
+          "photoshoot": {
+            "langName": "摄影活动",
+            "name": "Photoshoot"
+          },
+          "photojournalism": {
+            "langName": "摄影新闻",
+            "name": "Photojournalism"
+          },
+          "timeLapse": {
+            "langName": "延时摄影",
+            "name": "Time-Lapse"
+          },
+          "satelliteImagery": {
+            "langName": "卫星图像",
+            "name": "Satellite Imagery"
+          },
+          "warPhotography": {
+            "langName": "战争摄影",
+            "name": "War Photography"
+          },
+          "wildlifePhotography": {
+            "langName": "野生动物摄影",
+            "name": "Wildlife Photography"
+          }
+        },
+        "langName": "场景",
+        "name": "Scene"
+      },
+      "lens": {
+        "children": {
+          "macro": {
+            "langName": "微距",
+            "name": "Macro"
+          },
+          "telephoto": {
+            "langName": "远摄",
+            "name": "Telephoto"
+          },
+          "magnification": {
+            "langName": "放大",
+            "name": "Magnification"
+          },
+          "microscopic": {
+            "langName": "微观的",
+            "name": "Microscopic"
+          },
+          "electronMicroscope": {
+            "langName": "电子显微镜",
+            "name": "Electron Microscope"
+          },
+          "superResolutionMicroscopy": {
+            "langName": "超分辨率显微镜",
+            "name": "Super-Resolution Microscopy"
+          },
+          "wideAngle": {
+            "langName": "广角",
+            "name": "Wide Angle"
+          },
+          "ultraWideAngle": {
+            "langName": "超广角",
+            "name": "Ultra-Wide Angle"
+          },
+          "panorama": {
+            "langName": "全景",
+            "name": "Panorama"
+          },
+          "360Panorama": {
+            "langName": "360全景",
+            "name": "360 Panorama"
+          },
+          "360Angle": {
+            "langName": "360度角",
+            "name": "360 Angle"
+          },
+          "fisheyeLens": {
+            "langName": "鱼眼镜头",
+            "name": "Fisheye Lens"
+          },
+          "fisheyeLensEffect": {
+            "langName": "鱼眼镜头效果",
+            "name": "Fisheye Lens Effect"
+          },
+          "miniatureFaking": {
+            "langName": "微缩仿真",
+            "name": "Miniature Faking"
+          },
+          "brenizerMethod": {
+            "langName": "布伦泽合成法",
+            "name": "Brenizer Method"
+          },
+          "paniniProjection": {
+            "langName": "帕尼尼投影",
+            "name": "Panini Projection"
+          },
+          "orthographic": {
+            "langName": "正交的",
+            "name": "Orthographic"
+          },
+          "isometric": {
+            "langName": "等距的",
+            "name": "Isometric"
+          },
+          "dof": {
+            "langName": "景深",
+            "name": "DOF"
+          },
+          "sharpFocus": {
+            "langName": "锐利对焦",
+            "name": "Sharp Focus"
+          },
+          "zoom": {
+            "langName": "缩放",
+            "name": "Zoom"
+          },
+          "dollyZoom": {
+            "langName": "推拉变焦",
+            "name": "Dolly Zoom"
+          }
+        },
+        "langName": "镜头",
+        "name": "Lens"
+      },
+      "perspective": {
+        "children": {
+          "aerialView": {
+            "langName": "航拍视角",
+            "name": "Aerial View"
+          },
+          "topView": {
+            "langName": "俯视图",
+            "name": "Top-View"
+          },
+          "sideView": {
+            "langName": "侧视",
+            "name": "Side-View"
+          },
+          "satelliteView": {
+            "langName": "卫星视图",
+            "name": "Satellite-View"
+          },
+          "macroView": {
+            "langName": "微距视图",
+            "name": "Macro View"
+          },
+          "productView": {
+            "langName": "产品视图",
+            "name": "Product-View"
+          },
+          "closeup": {
+            "langName": "特写",
+            "name": "Closeup"
+          },
+          "closeupView": {
+            "langName": "特写视图",
+            "name": "Closeup-View"
+          },
+          "firstPerson": {
+            "langName": "第一人称",
+            "name": "First-Person"
+          },
+          "firstPersonView": {
+            "langName": "第一人称视角",
+            "name": "First-Person view"
+          },
+          "thirdPerson": {
+            "langName": "第三人称",
+            "name": "Third-Person"
+          },
+          "thirdPersonView": {
+            "langName": "第三人称视角",
+            "name": "Third-Person View"
+          },
+          "perspective": {
+            "langName": "透视",
+            "name": "Perspective"
+          },
+          "depthOfField": {
+            "langName": "景深",
+            "name": "Depth of Field"
+          },
+          "fieldOfView": {
+            "langName": "视野",
+            "name": "Field of View"
+          }
+        },
+        "langName": "视角",
+        "name": "Perspective"
+      },
+      "blurDistortion": {
+        "children": {
+          "blurry": {
+            "langName": "模糊的",
+            "name": "Blurry"
+          },
+          "blurEffect": {
+            "langName": "模糊效果",
+            "name": "Blur Effect"
+          },
+          "tiltBlur": {
+            "langName": "倾斜模糊",
+            "name": "Tilt Blur"
+          },
+          "lensDistortion": {
+            "langName": "镜头畸变",
+            "name": "Lens Distortion"
+          }
+        },
+        "langName": "模糊/失真",
+        "name": "Blur Distortion"
+      },
+      "cameraSettings": {
+        "children": {
+          "exposure": {
+            "langName": "曝光",
+            "name": "Exposure"
+          },
+          "shortExposure": {
+            "langName": "短曝光",
+            "name": "Short Exposure"
+          },
+          "longExposure": {
+            "langName": "长曝光",
+            "name": "Long Exposure"
+          },
+          "doubleExposure": {
+            "langName": "双重曝光",
+            "name": "Double-Exposure"
+          },
+          "shutterSpeed11000": {
+            "langName": "快门速度1/1000",
+            "name": "Shutter Speed 1/1000"
+          },
+          "shutterSpeed12": {
+            "langName": "快门速度1/2",
+            "name": "Shutter Speed 1/2"
+          },
+          "f28": {
+            "langName": "F/2.8",
+            "name": "F/2.8"
+          },
+          "f22": {
+            "langName": "F/22",
+            "name": "F/22"
+          },
+          "gamma": {
+            "langName": "伽马",
+            "name": "Gamma"
+          },
+          "whiteBalance": {
+            "langName": "白平衡",
+            "name": "White Balance"
+          }
+        },
+        "langName": "相机设置",
+        "name": "Camera Settings"
+      },
+      "filmGenre": {
+        "children": {
+          "schlieren": {
+            "langName": "剪影",
+            "name": "Schlieren"
+          },
+          "nightVision": {
+            "langName": "夜视",
+            "name": "Night Vision"
+          },
+          "hyperspectralImaging": {
+            "langName": "高光谱成像",
+            "name": "Hyperspectral Imaging"
+          },
+          "multispectralImaging": {
+            "langName": "多光谱成像",
+            "name": "Multispectral Imaging"
+          },
+          "camcorderEffect": {
+            "langName": "摄像机效果",
+            "name": "Camcorder Effect"
+          },
+          "dslr": {
+            "langName": "数码单反相机",
+            "name": "DSLR"
+          },
+          "polaroid": {
+            "langName": "宝丽来",
+            "name": "Polaroid"
+          },
+          "35Mm": {
+            "langName": "35毫米",
+            "name": "35mm"
+          },
+          "triX400Tx": {
+            "langName": "Tri-X 400 TX",
+            "name": "Tri-X 400 TX"
+          },
+          "instax": {
+            "langName": "Instax相机",
+            "name": "Instax"
+          },
+          "ektachrome": {
+            "langName": "Ektachrome",
+            "name": "Ektachrome"
+          },
+          "fujifilmSuperia": {
+            "langName": "富士Superia",
+            "name": "Fujifilm Superia"
+          },
+          "ilfordHp5": {
+            "langName": "伊尔福德HP5",
+            "name": "Ilford HP5"
+          },
+          "kodakEktar": {
+            "langName": "柯达Ektar",
+            "name": "Kodak Ektar"
+          },
+          "kodakGold200": {
+            "langName": "柯达Gold200",
+            "name": "Kodak Gold 200"
+          },
+          "kodakPortra": {
+            "langName": "柯达Portra",
+            "name": "Kodak Portra"
+          },
+          "lomo": {
+            "langName": "LOMO相机",
+            "name": "Lomo"
+          },
+          "nikonD750": {
+            "langName": "尼康D750",
+            "name": "Nikon D750"
+          },
+          "provia": {
+            "langName": "普洛维亚",
+            "name": "Provia"
+          },
+          "shotOn70Mm": {
+            "langName": "70毫米拍摄",
+            "name": "Shot on 70mm"
+          },
+          "velvia": {
+            "langName": "维尔维亚",
+            "name": "Velvia"
+          },
+          "vintage": {
+            "langName": "复古的",
+            "name": "Vintage"
+          },
+          "pinholePhotography": {
+            "langName": "针孔摄影",
+            "name": "Pinhole Photography"
+          },
+          "photogram": {
+            "langName": "摄影画",
+            "name": "Photogram"
+          },
+          "daguerrotype": {
+            "langName": "达盖尔罗银版照相",
+            "name": "Daguerrotype"
+          },
+          "ambrotype": {
+            "langName": "琥珀色照片",
+            "name": "Ambrotype"
+          },
+          "calotype": {
+            "langName": "卡罗泰普相纸",
+            "name": "Calotype"
+          },
+          "tintype": {
+            "langName": "锡版照片",
+            "name": "Tintype"
+          }
+        },
+        "langName": "电影类型",
+        "name": "Film Genre"
+      },
+      "otherPhotographyForms": {
+        "children": {
+          "lensFlare": {
+            "langName": "镜头耀斑",
+            "name": "Lens Flare"
+          },
+          "vignette": {
+            "langName": "小插图",
+            "name": "Vignette"
+          },
+          "splitToning": {
+            "langName": "分割调色",
+            "name": "Split Toning"
+          },
+          "rephotography": {
+            "langName": "再摄影",
+            "name": "Rephotography"
+          },
+          "scanography": {
+            "langName": "扫描摄影",
+            "name": "Scanography"
+          },
+          "slitScanPhotography": {
+            "langName": "缝隙扫描摄影",
+            "name": "Slit-Scan Photography"
+          }
+        },
+        "langName": "其他摄影形式",
+        "name": "Other Photography Forms"
+      },
+      "digitalSystems": {
+        "children": {
+          "unary": {
+            "langName": "一元的",
+            "name": "Unary"
+          },
+          "binary": {
+            "langName": "二进制",
+            "name": "Binary"
+          },
+          "ternary": {
+            "langName": "三元的",
+            "name": "Ternary"
+          },
+          "quaternary": {
+            "langName": "四元的",
+            "name": "Quaternary"
+          },
+          "quinary": {
+            "langName": "五元的",
+            "name": "Quinary"
+          },
+          "senary": {
+            "langName": "六进制的",
+            "name": "Senary"
+          },
+          "septenary": {
+            "langName": "七进制的",
+            "name": "Septenary"
+          },
+          "octal": {
+            "langName": "八进制",
+            "name": "Octal"
+          },
+          "nonary": {
+            "langName": "九进制",
+            "name": "Nonary"
+          },
+          "decimal": {
+            "langName": "十进制",
+            "name": "Decimal"
+          },
+          "hexadecimal": {
+            "langName": "十六进制",
+            "name": "Hexadecimal"
+          }
+        },
+        "langName": "数字系统",
+        "name": "Digital Systems"
+      }
+    },
+    "langName": "摄影",
+    "name": "Photography"
+  },
+  "postProcessing": {
+    "children": {
+      "resolution": {
+        "children": {
+          "4K": {
+            "langName": "4K",
+            "name": "4k"
+          },
+          "8K": {
+            "langName": "8K",
+            "name": "8K"
+          },
+          "16K": {
+            "langName": "16K",
+            "name": "16k"
+          },
+          "32K": {
+            "langName": "32K",
+            "name": "32k"
+          },
+          "hd": {
+            "langName": "高清",
+            "name": "HD"
+          },
+          "fullHd": {
+            "langName": "全高清",
+            "name": "Full-HD"
+          },
+          "ultraHd": {
+            "langName": "超高清",
+            "name": "Ultra-HD"
+          },
+          "superResolution": {
+            "langName": "超分辨率",
+            "name": "Super-Resolution"
+          },
+          "megapixel": {
+            "langName": "百万像素",
+            "name": "Megapixel"
+          }
+        },
+        "langName": "分辨率",
+        "name": "Resolution"
+      },
+      "reflectionEffect": {
+        "children": {
+          "rayTracingReflections": {
+            "langName": "光线追踪反射",
+            "name": "Ray Tracing Reflections"
+          },
+          "lumenReflections": {
+            "langName": "流明反射",
+            "name": "Lumen Reflections"
+          },
+          "screenSpaceReflections": {
+            "langName": "屏幕空间反射",
+            "name": "Screen Space Reflections"
+          },
+          "diffractionGrading": {
+            "langName": "衍射分级",
+            "name": "Diffraction Grading"
+          }
+        },
+        "langName": "反射",
+        "name": "Reflection Effect"
+      },
+      "filter": {
+        "children": {
+          "chromaticAberration": {
+            "langName": "色差",
+            "name": "Chromatic Aberration"
+          },
+          "rgbDisplacement": {
+            "langName": "RGB位移",
+            "name": "RGB Displacement"
+          },
+          "anaglyph": {
+            "langName": "立体红蓝图",
+            "name": "Anaglyph"
+          },
+          "multiscopy": {
+            "langName": "多重复制",
+            "name": "Multiscopy"
+          },
+          "autostereoscopy": {
+            "langName": "自动立体成像",
+            "name": "Autostereoscopy"
+          },
+          "stereoscopy": {
+            "langName": "立体摄影",
+            "name": "Stereoscopy"
+          },
+          "parallax": {
+            "langName": "视差",
+            "name": "Parallax"
+          },
+          "scanLines": {
+            "langName": "扫描线",
+            "name": "Scan Lines"
+          },
+          "posterization": {
+            "langName": "海报效果",
+            "name": "Posterization"
+          },
+          "quantization": {
+            "langName": "量化",
+            "name": "Quantization"
+          },
+          "sobelOperator": {
+            "langName": "Sobel算子",
+            "name": "Sobel Operator"
+          },
+          "edgeDetection": {
+            "langName": "边缘检测",
+            "name": "Edge Detection"
+          },
+          "interlaced": {
+            "langName": "交织的",
+            "name": "Interlaced"
+          },
+          "moirePatterns": {
+            "langName": "摩尔纹样",
+            "name": "Moire Patterns"
+          },
+          "rounded": {
+            "langName": "圆润的",
+            "name": "Rounded"
+          },
+          "wavy": {
+            "langName": "波浪状的",
+            "name": "Wavy"
+          },
+          "ripple": {
+            "langName": "涟漪",
+            "name": "Ripple"
+          },
+          "whirl": {
+            "langName": "旋转",
+            "name": "Whirl"
+          },
+          "squiggly": {
+            "langName": "蜿蜒",
+            "name": "Squiggly"
+          },
+          "morph": {
+            "langName": "变形",
+            "name": "Morph"
+          },
+          "spiraling": {
+            "langName": "螺旋",
+            "name": "Spiraling"
+          },
+          "twistedRays": {
+            "langName": "扭曲光线",
+            "name": "Twisted Rays"
+          },
+          "starburst": {
+            "langName": "星芒",
+            "name": "Starburst"
+          },
+          "emboss": {
+            "langName": "浮雕",
+            "name": "Emboss"
+          },
+          "tessellated": {
+            "langName": "镶嵌的",
+            "name": "Tessellated"
+          },
+          "blobby": {
+            "langName": "多囊的",
+            "name": "Blobby"
+          },
+          "blobs": {
+            "langName": "斑点",
+            "name": "Blobs"
+          },
+          "cracks": {
+            "langName": "裂缝",
+            "name": "Cracks"
+          },
+          "textured": {
+            "langName": "纹理的",
+            "name": "Textured"
+          },
+          "convolutionMatrix": {
+            "langName": "卷积矩阵",
+            "name": "Convolution Matrix"
+          },
+          "dilate": {
+            "langName": "扩张",
+            "name": "Dilate"
+          },
+          "erode": {
+            "langName": "侵蚀",
+            "name": "Erode"
+          },
+          "dirty": {
+            "langName": "肮脏的",
+            "name": "Dirty"
+          },
+          "withImperfections": {
+            "langName": "带有瑕疵",
+            "name": "With Imperfections"
+          },
+          "distortion": {
+            "langName": "失真",
+            "name": "Distortion"
+          },
+          "lenticular": {
+            "langName": "透镜状的",
+            "name": "Lenticular"
+          },
+          "cropped": {
+            "langName": "裁剪的",
+            "name": "Cropped"
+          },
+          "quantumWavetracing": {
+            "langName": "量子波追踪",
+            "name": "Quantum-Wavetracing"
+          },
+          "tornadic": {
+            "langName": "龙卷风的",
+            "name": "Tornadic"
+          },
+          "sabattierEffect": {
+            "langName": "萨巴提尔效应",
+            "name": "Sabattier Effect"
+          },
+          "smudged": {
+            "langName": "弄脏",
+            "name": "Smudged"
+          },
+          "sharpened": {
+            "langName": "锐化的",
+            "name": "Sharpened"
+          },
+          "glowingEdges": {
+            "langName": "发光边缘",
+            "name": "Glowing Edges"
+          },
+          "spherize": {
+            "langName": "球化",
+            "name": "Spherize"
+          },
+          "harrisShutter": {
+            "langName": "哈里斯快门",
+            "name": "Harris Shutter"
+          },
+          "mordancage": {
+            "langName": "腐蚀画",
+            "name": "Mordancage"
+          }
+        },
+        "langName": "过滤器",
+        "name": "Filter"
+      },
+      "shader": {
+        "children": {
+          "rayTraced": {
+            "langName": "光线追踪",
+            "name": "Ray Traced"
+          },
+          "rayTracingAmbientOcclusion": {
+            "langName": "光线追踪环境遮蔽",
+            "name": "Ray Tracing Ambient Occlusion"
+          },
+          "antiAliasing": {
+            "langName": "抗锯齿",
+            "name": "Anti-Aliasing"
+          },
+          "fxaa": {
+            "langName": "FXAA",
+            "name": "FXAA"
+          },
+          "txaa": {
+            "langName": "TXAA",
+            "name": "TXAA"
+          },
+          "rtx": {
+            "langName": "RTX",
+            "name": "RTX"
+          },
+          "ssao": {
+            "langName": "屏幕空间环境光遮蔽",
+            "name": "SSAO"
+          },
+          "deNoise": {
+            "langName": "降噪",
+            "name": "De-Noise"
+          },
+          "shaders": {
+            "langName": "着色器",
+            "name": "Shaders"
+          },
+          "openGlShaders": {
+            "langName": "OpenGL着色器",
+            "name": "OpenGL-Shaders"
+          },
+          "glslShaders": {
+            "langName": "GLSL着色器",
+            "name": "GLSL-Shaders"
+          },
+          "postProcessing": {
+            "langName": "后期处理",
+            "name": "Post Processing"
+          },
+          "postProduction": {
+            "langName": "后期制作",
+            "name": "Post-Production"
+          },
+          "celShading": {
+            "langName": "卡通渲染",
+            "name": "Cel Shading"
+          },
+          "toneMapping": {
+            "langName": "色调映射",
+            "name": "Tone Mapping"
+          },
+          "cgi": {
+            "langName": "CGI",
+            "name": "CGI"
+          },
+          "vfx": {
+            "langName": "视觉特效",
+            "name": "VFX"
+          },
+          "sfx": {
+            "langName": "特效",
+            "name": "SFX"
+          },
+          "unrealEngine": {
+            "langName": "虚幻引擎",
+            "name": "Unreal Engine"
+          }
+        },
+        "langName": "着色器",
+        "name": "Shader"
+      },
+      "referencePlatform": {
+        "children": {
+          "trendingOnArtStation": {
+            "langName": "在ArtStation上热门",
+            "name": "Trending on ArtStation"
+          },
+          "trendingOnFacebook": {
+            "langName": "在Facebook上热门",
+            "name": "Trending on Facebook"
+          },
+          "trendingOnPixiv": {
+            "langName": "在Pixiv上热门",
+            "name": "Trending on Pixiv"
+          },
+          "trendingOnPixbay": {
+            "langName": "在Pixbay上热门",
+            "name": "Trending on Pixbay"
+          }
+        },
+        "langName": "参考平台",
+        "name": "Reference Platform"
+      },
+      "styleItem": {
+        "children": {
+          "hyperrealistic": {
+            "langName": "超写实",
+            "name": "Hyperrealistic"
+          },
+          "surrealistic": {
+            "langName": "超现实主义的",
+            "name": "Surrealistic"
+          },
+          "modernArt": {
+            "langName": "现代艺术",
+            "name": "Modern Art"
+          },
+          "conceptArt": {
+            "langName": "概念艺术",
+            "name": "Concept Art"
+          },
+          "digitalArt": {
+            "langName": "数码艺术",
+            "name": "Digital Art"
+          },
+          "futurism": {
+            "langName": "未来主义",
+            "name": "Futurism"
+          },
+          "socialRealism": {
+            "langName": "社会现实主义",
+            "name": "Social realism"
+          },
+          "chiaroscuro": {
+            "langName": "明暗对比",
+            "name": "chiaroscuro"
+          },
+          "minimalism": {
+            "langName": "极简主义",
+            "name": "Minimalism"
+          },
+          "romanticism": {
+            "langName": "浪漫主义",
+            "name": "Romanticism"
+          },
+          "renaissance": {
+            "langName": "文艺复兴",
+            "name": "Renaissance"
+          },
+          "classicism": {
+            "langName": "古典主义",
+            "name": "Classicism"
+          },
+          "neoclassicism": {
+            "langName": "新古典主义",
+            "name": "Neoclassicism"
+          },
+          "gothicArt": {
+            "langName": "哥特艺术",
+            "name": "Gothic art"
+          },
+          "baroque": {
+            "langName": "巴洛克风格",
+            "name": "Baroque"
+          },
+          "preRaphaeliteBrotherhood": {
+            "langName": "前拉斐尔派",
+            "name": "Pre-Raphaelite Brotherhood"
+          },
+          "popArt": {
+            "langName": "波普艺术",
+            "name": "Pop art"
+          },
+          "ukiyoE": {
+            "langName": "浮世绘",
+            "name": "Ukiyo-e"
+          },
+          "ghibliLikeColours": {
+            "langName": "吉卜力式色彩",
+            "name": "Ghibli-like colours"
+          },
+          "3DItemRende": {
+            "langName": "3D物品渲染",
+            "name": "3D Item Rende"
+          }
+        },
+        "langName": "风格",
+        "name": "Style Item"
+      },
+      "quality": {
+        "children": {
+          "awardWinning": {
+            "langName": "获奖",
+            "name": "award winning"
+          },
+          "professional": {
+            "langName": "专业的",
+            "name": "professional"
+          },
+          "breathtaking": {
+            "langName": "令人叹为观止",
+            "name": "breathtaking"
+          },
+          "groundbreaking": {
+            "langName": "开创性的",
+            "name": "groundbreaking"
+          },
+          "superb": {
+            "langName": "极好的",
+            "name": "superb"
+          },
+          "outstanding": {
+            "langName": "杰出的",
+            "name": "outstanding"
+          }
+        },
+        "langName": "质量",
+        "name": "Quality"
+      },
+      "advanced": {
+        "children": {
+          "inASymbolicAndMeaningfulStyle": {
+            "langName": "以象征性和有意义的风格",
+            "name": "in a symbolic and meaningful style"
+          },
+          "insanelyDetailedAndIntricate": {
+            "langName": "疯狂地详细和复杂",
+            "name": "insanely detailed and intricate"
+          },
+          "veryCoherentSymmetricalArtwork": {
+            "langName": "非常连贯对称的艺术作品",
+            "name": "very coherent symmetrical artwork"
+          }
+        },
+        "langName": "进阶",
+        "name": "Advanced"
+      }
+    },
+    "langName": "后期处理",
+    "name": "Post Processing"
+  }
+}

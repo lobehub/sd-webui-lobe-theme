@@ -29,6 +29,11 @@
     }
   },
   "prompt": {
+    "area": {
+      "object": "对象选择区",
+      "attribute": "属性选择区",
+      "tag": "标签选择区"
+    },
     "load": "加载提示",
     "set": "设置提示",
     "negative": "否定",

@@ -29,6 +29,11 @@
     }
   },
   "prompt": {
+    "area": {
+      "object": "Object Selection",
+      "attribute": "Attribute Selection",
+      "tag": "Tag Selection"
+    },
     "load": "Load Prompt",
     "set": "Set Prompt",
     "negative": "Negative",

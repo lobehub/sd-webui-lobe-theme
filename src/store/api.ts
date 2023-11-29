@@ -32,6 +32,31 @@ export const getVersion = async(): Promise<string> => {
   return data.version;
 };
 
+interface PromptData {
+  [key: string]: {
+    children: {
+      [key: string]: {
+        children: {
+          [key: string]: {
+            langName: string;
+            name: string;
+          };
+        };
+        langName: string;
+        name: string;
+      };
+    };
+    langName: string;
+    name: string;
+  };
+}
+
+export const getPrompt = async(): Promise<PromptData> => {
+  const res = await fetch('/lobe/prompt');
+  const data = (await res.json()) as any;
+  return data;
+};
+
 export const getLocaleOptions = async(): Promise<SelectProps['options']> => {
   const res = await fetch('/lobe/locales/options');
   const data = (await res.json()) as SelectProps['options'];
