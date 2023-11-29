@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 3.3.1](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.3.0...v3.3.1)
+
+<sup>Released on **2023-11-29**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix ImageInfo reload.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix ImageInfo reload, closes [#474](https://github.com/lobehub/sd-webui-lobe-theme/issues/474) ([8b17a70](https://github.com/lobehub/sd-webui-lobe-theme/commit/8b17a70))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 3.3.0](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.2.2...v3.3.0)
 
 <sup>Released on **2023-11-29**</sup>
