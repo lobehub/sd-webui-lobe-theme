@@ -1,5 +1,4 @@
 import {
-  ActionIcon,
   DiscordIcon,
   Giscus as G,
   GradientButton,
@@ -7,7 +6,7 @@ import {
   Modal,
   type ModalProps,
 } from '@lobehub/ui';
-import { Button, Space } from 'antd';
+import { Button } from 'antd';
 import { useTheme } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { Github } from 'lucide-react';
@@ -37,16 +36,8 @@ const Giscus = memo<GiscusProps>(({ open, onCancel }) => {
       open={open}
       title={
         <Flexbox align={'center'} gap={4} horizontal>
-          <a href={'https://discord.gg/AYFPHvv2jT'} rel="noreferrer" target="_blank">
-            <ActionIcon icon={DiscordIcon} title={'Discord'} />
-          </a>
-          <a href={homepage} rel="noreferrer" target="_blank">
-            <ActionIcon icon={Github} title={repoName} />
-          </a>
-          <Space>
-            {t('modal.themeFeedback.title')}
-            <VersionTag />
-          </Space>
+          {t('modal.themeFeedback.title')}
+          <VersionTag />
         </Flexbox>
       }
     >
@@ -61,10 +52,14 @@ const Giscus = memo<GiscusProps>(({ open, onCancel }) => {
             padding: '16px 0',
           }}
         >
-          <Button icon={<Icon icon={DiscordIcon} />} size={'large'}>
-            Join Discover
-          </Button>
-          <GradientButton icon={<Icon icon={Github} />}>LobeTheme Github</GradientButton>
+          <a href={'https://discord.gg/AYFPHvv2jT'} rel="noreferrer" target="_blank">
+            <Button icon={<Icon icon={DiscordIcon} />} size={'large'}>
+              Join Discover
+            </Button>
+          </a>
+          <a href={homepage} rel="noreferrer" target="_blank">
+            <GradientButton icon={<Icon icon={Github} />}>LobeTheme Github</GradientButton>
+          </a>
         </Center>
         <G lang={setting.i18n} mapping="number" repo={repoName} repoId="R_kgDOJCPcNg" term="53" />
       </Flexbox>
