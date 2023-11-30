@@ -1,40 +1,17 @@
 import { Theme, css } from 'antd-style';
 
 export default (token: Theme) => css`
-  .global-popup {
-    backdrop-filter: saturate(120%) blur(4px) !important;
-  }
-
   .global-popup-close {
-    position: relative;
-    top: 16px !important;
-    right: 16px !important;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 32px;
-    height: 32px;
-
-    background-color: ${token.colorFillSecondary};
-    backdrop-filter: saturate(120%) blur(80px);
-    border-radius: ${token.borderRadius}px;
+    background-color: ${token.colorBgMask} !important;
+    backdrop-filter: blur(4px);
 
     &::before {
       font-size: 24px !important;
       line-height: 24px !important;
     }
-
-    &:hover {
-      color: ${token.colorPrimary} !important;
-      background-color: ${token.colorFillSecondary} !important;
-    }
   }
 
   .global-popup-inner {
-    max-width: 80%;
-
     > div {
       border-radius: ${token.borderRadiusLG}px !important;
       box-shadow: ${token.boxShadow} !important;
@@ -44,7 +21,7 @@ export default (token: Theme) => css`
       overflow: auto;
 
       width: 75vw;
-      height: 75vh;
+      max-height: 85vh;
       padding: 32px;
 
       font-family: ${token.fontFamilyCode};
@@ -61,6 +38,22 @@ export default (token: Theme) => css`
       > div:not(.edit-user-metadata-buttons):not(:last-child) {
         margin: 0 0 8px;
       }
+
+      .standalone-card-preview {
+        cursor: default;
+        display: contents;
+        width: 100%;
+        height: auto;
+
+        > img {
+          position: relative;
+        }
+      }
+    }
+
+    .popup-dialog,
+    .edit-user-metadata {
+      width: 50vw !important;
     }
   }
 `;
