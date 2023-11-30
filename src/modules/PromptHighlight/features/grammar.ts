@@ -8,10 +8,6 @@ export const lang = {
       name: 'comma',
     },
     {
-      match: '[:|]',
-      name: 'func',
-    },
-    {
       match: 'AND',
       name: 'and',
     },
@@ -41,12 +37,16 @@ export const lang = {
       name: 'model-bracket',
     },
     {
-      match: '[(|)|\\[|\\]|{|}]',
+      match: '[(|)|\\[|\\]|{|}\\\\]',
       name: 'bracket',
     },
     {
-      match: '(?<!\\w)(\\d*\\.?\\d+|\\.\\d+)(?!\\w)',
+      match: ':\\d*\\.?\\d+|:\\.\\d+',
       name: 'number',
+    },
+    {
+      match: '[:|]',
+      name: 'func',
     },
     {
       match: '__.*__',

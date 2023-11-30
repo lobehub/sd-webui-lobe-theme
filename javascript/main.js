@@ -154,7 +154,7 @@ const le=2;
       span[style='color:${o.toUpperCase()}'] {
         color: ${t.colorErrorTextHover} !important;
       }
-    `}})),pee=[{$schema:"https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",fileTypes:["prompt"],name:"prompt",patterns:[{match:"[,]",name:"comma"},{match:"[:|]",name:"func"},{match:"AND",name:"and"},{match:"BREAK",name:"break"},{captures:{0:{name:"model-bracket"},1:{name:"model-type"},2:{name:"model-name"},3:{name:"number"}},match:"<([^:]+):([^:]+):([^>]+)>"},{match:"[<|>]",name:"model-bracket"},{match:"[(|)|\\[|\\]|{|}]",name:"bracket"},{match:"(?<!\\w)(\\d*\\.?\\d+|\\.\\d+)(?!\\w)",name:"number"},{match:"__.*__",name:"wildcards"}],scopeName:"source.prompt"}],hee=e=>{const t=e?"dark":"light",n=e?KZ.yellow[t][9]:KZ.gold[t][10],r=e?KZ.gold[t][9]:KZ.orange[t][10],o=e?KZ.volcano[t][10]:KZ.volcano[t][8],i=e?KZ.lime[t][9]:KZ.green[t][10],a=e?KZ.blue[t][9]:KZ.geekblue[t][9],l=e?KZ.purple[t][11]:KZ.purple[t][8];return{colors:{"editor.foreground":i},name:t,tokenColors:[{scope:"comma",settings:{foreground:KZ.gray[t][6]}},{scope:"func",settings:{foreground:l}},{scope:["and","break"],settings:{foreground:a}},{scope:"bracket",settings:{foreground:l}},{scope:"model-type",settings:{fontStyle:"italic",foreground:o}},{scope:"model-name",settings:{foreground:r}},{scope:"model-bracket",settings:{foreground:l}},{scope:"number",settings:{foreground:l}},{scope:"wildcards",settings:{foreground:n}}],type:t}};let gee;const mee=async()=>{let e=gee;return e||(e=await async function(e={}){const t=await iQ(e);return{codeToThemedTokens:(e,n)=>_J(t,e,n),codeToTokensWithThemes:(e,n)=>MJ(t,e,n),codeToHast:(e,n)=>LJ(t,e,n),codeToHtml:(e,n)=>HJ(t,e,n),loadLanguage:t.loadLanguage,loadTheme:t.loadTheme,getTheme:t.getTheme,getLoadedThemes:t.getLoadedThemes,getLoadedLanguages:t.getLoadedLanguages}}({langs:[pee],loadWasm:_Y,themes:[hee(!0),hee(!1)]}),gee=e,e)},bee=BB((({css:e,token:t,cx:n,stylish:r,prefixCls:o})=>{const i=`${o}-highlighter`;return{container:e`
+    `}})),pee=[{$schema:"https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",fileTypes:["prompt"],name:"prompt",patterns:[{match:"[,]",name:"comma"},{match:"AND",name:"and"},{match:"BREAK",name:"break"},{captures:{0:{name:"model-bracket"},1:{name:"model-type"},2:{name:"model-name"},3:{name:"number"}},match:"<([^:]+):([^:]+):([^>]+)>"},{match:"[<|>]",name:"model-bracket"},{match:"[(|)|\\[|\\]|{|}\\\\]",name:"bracket"},{match:":\\d*\\.?\\d+|:\\.\\d+",name:"number"},{match:"[:|]",name:"func"},{match:"__.*__",name:"wildcards"}],scopeName:"source.prompt"}],hee=e=>{const t=e?"dark":"light",n=e?KZ.yellow[t][9]:KZ.gold[t][10],r=e?KZ.gold[t][9]:KZ.orange[t][10],o=e?KZ.volcano[t][10]:KZ.volcano[t][8],i=e?KZ.lime[t][9]:KZ.green[t][10],a=e?KZ.blue[t][9]:KZ.geekblue[t][9],l=e?KZ.purple[t][11]:KZ.purple[t][8];return{colors:{"editor.foreground":i},name:t,tokenColors:[{scope:"comma",settings:{foreground:KZ.gray[t][6]}},{scope:["and","break"],settings:{foreground:a}},{scope:"bracket",settings:{foreground:l}},{scope:"model-type",settings:{fontStyle:"italic",foreground:o}},{scope:"model-name",settings:{foreground:r}},{scope:"model-bracket",settings:{foreground:l}},{scope:"number",settings:{foreground:l}},{scope:"func",settings:{foreground:l}},{scope:"wildcards",settings:{foreground:n}}],type:t}};let gee;const mee=async()=>{let e=gee;return e||(e=await async function(e={}){const t=await iQ(e);return{codeToThemedTokens:(e,n)=>_J(t,e,n),codeToTokensWithThemes:(e,n)=>MJ(t,e,n),codeToHast:(e,n)=>LJ(t,e,n),codeToHtml:(e,n)=>HJ(t,e,n),loadLanguage:t.loadLanguage,loadTheme:t.loadTheme,getTheme:t.getTheme,getLoadedThemes:t.getLoadedThemes,getLoadedLanguages:t.getLoadedLanguages}}({langs:[pee],loadWasm:_Y,themes:[hee(!0),hee(!1)]}),gee=e,e)},bee=BB((({css:e,token:t,cx:n,stylish:r,prefixCls:o})=>{const i=`${o}-highlighter`;return{container:e`
       pointer-events: none;
       position: absolute;
       overflow: hidden auto;
@@ -985,7 +985,6 @@ var ote='<svg\n  class="lucide lucide-arrow-right"\n  xmlns="http://www.w3.org/2
   }
 
   .global-popup-inner {
-
     > div {
       border-radius: ${e.borderRadiusLG}px !important;
       box-shadow: ${e.boxShadow} !important;
@@ -1014,10 +1013,10 @@ var ote='<svg\n  class="lucide lucide-arrow-right"\n  xmlns="http://www.w3.org/2
       }
 
       .standalone-card-preview {
+        cursor: default;
         display: contents;
         width: 100%;
         height: auto;
-        cursor: default;
 
         > img {
           position: relative;
