@@ -66,10 +66,16 @@ export default (token: Theme) => css`
         background: transparent !important;
 
         &.selected {
+          color: ${token.colorPrimary} !important;
           background: transparent !important;
           border: none !important;
           border-radius: 0 !important;
         }
+      }
+
+      .settings-category {
+        text-decoration: none;
+        text-transform: uppercase;
       }
 
       #settings_show_all_pages {
