@@ -6,7 +6,7 @@
 
 <h1 align="center">Lobe Theme</h1>
 
-The modern theme for stable diffusion webui<br/><sup>Legacy verison a.k.a kitchen theme</sup>
+A modern interface framework designed for Stable Diffusion WebUI<br/>with an exquisite interface design, a highly customizable UI, and efficiency-boosting features.
 
 English · [简体中文](./README.zh-CN.md) · [Changelog](./CHANGELOG.md) · [Report Bug][github-issues-link] · [Request Feature][github-issues-link]
 
@@ -36,9 +36,8 @@ English · [简体中文](./README.zh-CN.md) · [Changelog](./CHANGELOG.md) · [
 
 #### TOC
 
-- [✨ Features](#-features)
-- [📦 Installation](#-installation)
-- [🤯 Usage](#-usage)
+- [📦 Plugin Installation](#-plugin-installation)
+- [✨ Feature Overview](#-feature-overview)
 - [🖥 Environment Support](#-environment-support)
 - [📦 Ecosystem](#-ecosystem)
 - [⌨️ Local Development](#️-local-development)
@@ -51,49 +50,41 @@ English · [简体中文](./README.zh-CN.md) · [Changelog](./CHANGELOG.md) · [
 
 </details>
 
-## ✨ Features
+## 📦 Plugin Installation
 
-- [x] 🌗 Supports light and dark themes, with the ability to quickly switch in the navigation bar
-- [x] 🌈 Supports custom theme colors and neutral colors, with the option to customize the logo
-- [x] 🪄 Supports one-click formatting of the prompt, with a simple tag editor provided
-- [x] 🎛️ Highly customizable sidebar, with a quick settings sidebar on the left and a model sidebar on the right
-- [x] 🖼️ Adjustable canvas ratio, ensuring that generated images are always displayed at the top
-- [x] 📱 Mobile-friendly, with partial optimization for mobile screens
-- [x] 🌍Support i18n and welcome [PR](https://github.com/lobehub/sd-webui-lobe-theme/tree/main/locales) contributions
-- [x] 📝 Syntax highlighting in the prompt input box
-- [x] 📦 Support [PWA](https://support.google.com/chrome/answer/9658361) progressive web app
-
-<div align="right">
-
-[![][back-to-top]](#readme-top)
-
-</div>
-
-## 📦 Installation
-
-#### Method 1
-
-Search for `Lobe Theme` or `Kitchen Theme` in the stable diffusion webui plugin market and install it.
-
-> \[!NOTE]
+> \[!IMPORTANT]
 >
-> **Version 2.0.0** was renamed to **Lobe Theme**
+> Before installing the plugin, please check the environment version of Stable Diffusion WebUI, with a minimum requirement of `gradio-3.41.2` & `sd-webui 1.6`
 
-#### Method 2
+#### `A` Installation via SD WebUI Plugin Market
 
-As an extension (recommended), clone the repository to your extension folder:
+In Stable Diffusion WebUI, you can install the Lobe Theme plugin through the built-in plugin market.
+
+- First, open Stable Diffusion WebUI and go to the plugin market. Enter "Lobe Theme" in the search box and click the search button. You will see a list of related plugins.
+- After finding the Lobe Theme plugin, click the install button. The system will start downloading and installing the plugin. After installation, you can find the Lobe Theme in the plugin list, and it will take effect after reloading the UI.
+
+<br/>
+
+#### `B` Clone this Repository via Git (Recommended)
+
+If you prefer to manage plugins using Git, you can clone the repository to your extensions folder. Here are the detailed steps:
+
+- Open the command line interface and navigate to the root directory of Stable Diffusion WebUI.
+- Run the following command in the command line to clone the repository:
 
 ```shell
 git clone "https://github.com/lobehub/sd-webui-lobe-theme" extensions/lobe-theme
 ```
 
-> \[!IMPORTANT]
+- Once you have completed these steps, the Lobe Theme plugin will be successfully installed in Stable Diffusion WebUI.
+
+<br/>
+
+#### Keeping Up-to-Date
+
+> \[!TIP]
 >
-> minimum requirements `gradio-3.41.2` & `sd-webui 1.6`
-
-#### Upstream Sync
-
-Star Us，You will receive all releases notifications from GitHub without any delay \~ ⭐️
+> By bookmarking the project, you will receive all release notifications from GitHub without delay\~⭐️
 
 <details><summary><kbd>Star History</kbd></summary>
   <picture>
@@ -108,28 +99,30 @@ Star Us，You will receive all releases notifications from GitHub without any de
 
 </div>
 
-## 🤯 Usage
+## ✨ Feature Overview
 
 ![][feat-thememode]
 
-#### Light and Dark Themes
+#### `1` Light & Dark Theme
+
+The current theme design provides two visual effects: light theme and dark theme, to meet the visual comfort needs of users in different lighting environments, which can be quickly switched in the upper right corner of the navigation bar. If you prefer to default to the dark theme, you can achieve this by using the startup parameter `--theme=dark`.
 
 > \[!TIP]
 >
-> You can quickly switch between light and dark themes in the upper-right corner of the navigation bar.
-
-The current theme supports both light and dark themes. If you want to force dark mode, use the `--theme=dark` argument to launch your WebUI. For example, on Windows, your `webui-user.bat` should include:
+> To force a certain color theme in the startup file, for example, if you want to default to the dark mode in the Windows system, you can add the following content to the `webui-user.bat` file:
 
 ```shell
 set COMMANDLINE_ARGS= --theme=dark
 ```
 
-Alternatively, you can switch directly through URL Props:
+In addition, you can also directly switch the theme through URL parameters:
 
 ```shell
 http://localhost:7860/?__theme=light
 http://localhost:7860/?__theme=dark
 ```
+
+Through these simple and intuitive operations, users can quickly switch the interface theme according to their personal preferences or current environment, in order to achieve the best user experience.
 
 <div align="right">
 
@@ -139,18 +132,19 @@ http://localhost:7860/?__theme=dark
 
 ![][feat-theme-modify]
 
-#### Theme Customization
+#### `2` Personalized Theme Customization
+
+As a design engineer, LobeChat considers the personalized experience of users in interface design, and has introduced a flexible and changeable theme mode, providing a series of color customization options, allowing users to adjust the theme color of the application according to their preferences. Whether you want a stable deep blue, a lively peach pink, or a professional gray and white, users can find color options that match their style in LobeTheme.
 
 > \[!TIP]
 >
-> Click the `⚙` icon in the upper-right corner to open the settings panel. The current available settings are as follows:
-
-- **Theme**
-  - Primary color: Currently offers `13` theme color combinations
-  - Neutral color: Currently offers `6` different grayscale color combinations
-  - Logo type: `Lobe`, `Kitchen`, `Custom`
-    - Custom logo: Supports `img url`, `base64`, and `emoji`. When a single emoji is entered, it will be automatically replaced with 3D Fluent Emoji.
-    - Custom title: Customize the site name.
+> By clicking the gear icon in the upper right corner of the page, you can enter the settings panel for personalized customization.
+>
+> - **Primary Color**: We provide `13` carefully selected theme color schemes to meet your personalized color needs.
+> - **Neutral Color**: For a more detailed adjustment of the visual experience, you can also choose from `6` different neutral gray levels.
+> - **Logo Type**: You can choose the default `Lobe` and `Kitchen` logos, or customize them.
+> - **Logo Customization**: Support inputting `img url`, `base64` encoded images, or `emoji` emoticons for logo customization. When entering a single `emoji`, the system will automatically convert it into a 3D Fluent Emoji, enriching the visual effect.
+> - **Site Title Customization**: Allows you to customize the title of the website according to your needs.
 
 <div align="right">
 
@@ -160,9 +154,9 @@ http://localhost:7860/?__theme=dark
 
 ![][feat-highlight]
 
-#### Prompt Syntax Highlighting
+#### `3` Prompt Syntax Highlighting
 
-Automatically colorize prompt display according to the Stable Diffusion syntax rules
+When using the Stable Diffusion model for Prompt writing, an effective feature is the Prompt syntax highlighting. This feature automatically adds color coding to the input Prompt text according to preset syntax rules, enhancing the user experience and the intuitiveness of operations. Prompt syntax highlighting can not only help users identify and construct syntax structures more clearly, but also improve the efficiency of text editing and debugging.
 
 <div align="right">
 
@@ -172,37 +166,37 @@ Automatically colorize prompt display according to the Stable Diffusion syntax r
 
 ![][feat-sidebar]
 
-#### Sidebar Customization
+#### `4` Customizable Sidebar
+
+One of the key highlights of LobeTheme is its highly customizable sidebar feature, designed to make the image generation workflow smoother, ensuring that every user can adjust and optimize their workspace according to their preferences.
 
 > \[!TIP]
 >
-> Click the `⚙` icon in the upper-right corner to open the settings panel. The current available settings are as follows:
-
-- **Prompt Textarea**
-  - Display mode: `scroll fixed height` | `resizable by text lines`
-- **Sidebar**
-  - Default expand: `true`
-  - Display mode: `fixed` | `float`
-  - Default width: `280`
-- **ExtraNetwork Sidebar**
-  - Enable: `true`
-  - Default expand: `true`
-  - Display mode: `fixed` | `float`
-  - Default width: `340`
-  - Default card size: `86`
+> By clicking the gear icon in the upper right corner of the interface, you can easily access and adjust the following settings:
+>
+> - **Input Area**
+>   - Display Mode: `Scroll Fixed Height` | `Adjust Size According to Text Lines`
+> - **Sidebar Configuration**
+>   - Default Expansion: `true`
+>   - Display Mode: `Fixed` | `Floating`
+>   - Default Width: `280 pixels`
+> - **Extra Network Sidebar**
+>   - Enable: `true`
+>   - Default Expansion: `true`
+>   - Display Mode: `Fixed` | `Floating`
+>   - Default Width: `340 pixels`
+>   - Model Card Default Size: `86 pixels`
 
 <details>
 <summary><kbd>Recommended System Settings</kbd></summary>
 
-#### Extra-Networks
+**Extra-Networks Extension Model Window**
 
-- thumbs
-- width: 86
-- height: 128
+- Thumbnail View
+- Card Width: 86
+- Card Height: 128
 
-<br/>
-
-#### Quick-Setting
+**Quick-Setting**
 
 ```txt
 sd_model_checkpoint, sd_vae, CLIP_stop_at_last_layers, img2img_background_color, img2img_color_correction, samples_save, samples_format, grid_save, return_grid,  n_rows, live_previews_enable, show_progress_every_n_steps, live_preview_refresh_period
@@ -216,11 +210,47 @@ sd_model_checkpoint, sd_vae, CLIP_stop_at_last_layers, img2img_background_color,
 
 </div>
 
+![][feat-generation-info]
+
+#### `5` Improved Image Information Display
+
+The display of generation information has been improved, with a deep optimization of the data presentation mechanism, and the introduction of a "one-click copy" function to improve information retrieval efficiency. Now, you can quickly obtain the required Seeds without tedious searching in long strings.
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
+![][feat-share]
+
+#### `6` Image Recipe Sharing
+
+A brand-new image sharing feature has been launched. With a simple one-click operation, you can easily share the current image recipe, create exquisite shared images, and explore more customizable settings to make the shared images more personalized.
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
+![][feat-prompt-editor]
+
+#### `7` Prompt Editor
+
+A user-friendly prompt word editor has been added to the second tab of the quick setting menu. It includes a series of preset tags covering post-processing, style description, and other key words, simplifying your operation process and helping you edit and manage prompts more efficiently.
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
 ![][feat-mobile-friendly]
 
-#### Mobile Adaptation
+#### `8` Mobile-Friendly Adaptation
 
-Partial convenience adaptation design has been completed for mobile devices, including breadcrumb foldable navigation bar, sidebar adaptation, etc. However, due to the high complexity and fixed values of the stable diffusion interface, it is difficult to ensure the same user experience as the desktop version. Feedback is welcome for more ideas.
+In order to improve the interactive experience of mobile users, LobeTheme has implemented an intelligent folding mechanism for breadcrumb navigation and finely adapted the sidebar. These adjustments are aimed at providing convenient and intuitive navigation experience on any device. However, achieving the same complex functions and detailed customization as the desktop on the mobile end poses certain challenges. Especially when integrating with the Stable Diffusion WebUI interface, high complexity and precise parameter settings are required, which may result in differences in user experience between mobile and desktop. If you have any suggestions or ideas, please feel free to provide feedback through GitHub Issues or Pull Requests.
 
 <div align="right">
 
@@ -230,14 +260,18 @@ Partial convenience adaptation design has been completed for mobile devices, inc
 
 ![][feat-pwa]
 
-#### Progress Web App
+#### `9` PWA Progressive Web Application
 
-You can use Progressive Web Apps [PWA](https://support.google.com/chrome/answer/9658361) for a fast stable diffusion experience on your computer or mobile device.
+In today's multi-device environment, providing a seamless experience for users is crucial. Therefore, we have adopted the Progressive Web Application [PWA](https://support.google.com/chrome/answer/9658361) technology, which is a modern web technology that can elevate web applications to a near-native application experience. Through PWA, LobeTheme can provide a highly optimized user experience on desktop and mobile devices, while maintaining lightweight and high performance characteristics. Visually and perceptually, it has been carefully designed to ensure that its interface is indistinguishable from native applications, providing smooth animations, responsive layout, and adaptation to different screen resolutions of different devices.
 
-- On your computer, open Chrome.
-- Go to stable diffusion website you want to install
-- At the top right of the address bar, click `Install`
-- Follow the onscreen instructions to install the PWA
+> \[!NOTE]
+>
+> If you are not familiar with the installation process of PWA, you can follow these steps to add LobeChat as your desktop application (also applicable to mobile devices):
+>
+> - Run the Chrome or Edge browser on your computer.
+> - Visit the LobeChat website.
+> - Click the <kbd>Install</kbd> icon in the upper right corner of the address bar.
+> - Follow the on-screen instructions to complete the installation of PWA.
 
 <div align="right">
 
@@ -245,25 +279,39 @@ You can use Progressive Web Apps [PWA](https://support.google.com/chrome/answer/
 
 </div>
 
-#### Prompt formatting
+#### `10` Prompt Word Formatting
 
-Click the <kbd>🪄</kbd> button below Prompt to format the prompt words with one click.
+Click the <kbd>🪄</kbd> button below the Prompt to format the prompt words with one click.
 
 > \[!TIP]
 >
 > Convert full-width punctuation to half-width, remove extra spaces, add missing commas, and move the Extra-Networks model to the end.
 
-Before formatting:
+Before formatting
 
 ```text
 photorealistic   photo of a handsome male (wizard  :1.2）， <lora:LuisapHotlineStyle:0.5> <lora:ElegantHanfuRuqunStyle:0.2>    short beard, white wizard  shirt, (with golden    trim:0.8),
 ```
 
-After formatting:
+After formatting
 
 ```text
 photorealistic photo of a handsome male, (wizard:1.2), short beard, white wizard shirt, (with golden trim:0.8), <lora:LuisapHotlineStyle:0.5>, <lora:ElegantHanfuRuqunStyle:0.2>
 ```
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
+#### More Features
+
+- [x] 💎 **Exquisite UI Design**: Carefully designed interface with elegant appearance and smooth interactive effects.
+- [x] 🖼️ **Multiple Layout Modes**: In the dual-column mode, it achieves adjustable canvas proportions, ensuring that the generated images are always on top.
+- [x] 🌍 **Internationalization Support**: Fully supports major i18n languages and welcomes contributions on [PR](https://github.com/lobehub/sd-webui-lobe-theme/tree/main/locales).
+
+> ✨ With continuous updates in product iterations, we hope to bring more exciting features!
 
 <div align="right">
 
@@ -384,9 +432,12 @@ This project is [AGPL3](./LICENSE) licensed.
 [cover]: https://gw.alipayobjects.com/zos/kitchen/8Ab%24hLJ5ur/cover.webp
 [discord-link]: https://discord.gg/AYFPHvv2jT
 [discord-shield]: https://img.shields.io/discord/1127171173982154893?color=5865F2&label=discord&labelColor=black&logo=discord&logoColor=white&style=flat-square
+[feat-generation-info]: https://gw.alipayobjects.com/zos/kitchen/rIv%24%24AAE6A/feat_generation_info.webp
 [feat-highlight]: https://gw.alipayobjects.com/zos/kitchen/iD%24W4U2y3Y/feat_highlight.webp
 [feat-mobile-friendly]: https://gw.alipayobjects.com/zos/kitchen/WpWe6Hw8UT/feat_mobile_friendly.webp
+[feat-prompt-editor]: https://gw.alipayobjects.com/zos/kitchen/FrA0mjmNv7/feat_prompt_editor.webp
 [feat-pwa]: https://gw.alipayobjects.com/zos/kitchen/az49akOKJT/feat_pwa.webp
+[feat-share]: https://gw.alipayobjects.com/zos/kitchen/h4QrGbJ9dF/feat_share.webp
 [feat-sidebar]: https://gw.alipayobjects.com/zos/kitchen/Olum2IjxCW/feat_sidebar.webp
 [feat-theme-modify]: https://gw.alipayobjects.com/zos/kitchen/CbhlynwJYg/feat_theme_modify.webp
 [feat-thememode]: https://gw.alipayobjects.com/zos/kitchen/nSFtJidWUR/feat_thememode.webp
