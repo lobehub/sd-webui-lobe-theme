@@ -23,12 +23,6 @@ export const themeConfig: any = (isDarkMode: ThemeAppearance) => {
         },
       },
       {
-        scope: 'func',
-        settings: {
-          foreground: colorPurple,
-        },
-      },
-      {
         scope: ['and', 'break'],
         settings: {
           foreground: colorBlue,
@@ -61,6 +55,12 @@ export const themeConfig: any = (isDarkMode: ThemeAppearance) => {
       },
       {
         scope: 'number',
+        settings: {
+          foreground: colorPurple,
+        },
+      },
+      {
+        scope: 'func',
         settings: {
           foreground: colorPurple,
         },
