@@ -27,11 +27,16 @@ Stable Diffusion WebUI 现代化界面框架<br/>具有精致的界面设计，�
 
 ![][cover]
 
+> \[!WARNING]
+>
+> `Lobe Theme v3` 适配 `SD WebUI v1.6`, 并不向下兼容，`< 1.6` 以下版本移动到分支 [legacy-sd-webui-1.5](https://github.com/lobehub/sd-webui-lobe-theme/tree/legacy-sd-webui-1.5)
+
 <details>
 <summary><kbd>文档目录</kbd></summary>
 
 #### TOC
 
+- [👋🏻 开始使用 & 交流](#-开始使用--交流)
 - [📦 插件安装](#-插件安装)
 - [✨ 特性一览](#-特性一览)
 - [🖥 兼容环境](#-兼容环境)
@@ -46,11 +51,23 @@ Stable Diffusion WebUI 现代化界面框架<br/>具有精致的界面设计，�
 
 </details>
 
-<br/>
+## 👋🏻 开始使用 & 交流
 
-> \[!WARNING]
+我们是一群充满热情的设计工程师，希望为 AIGC 提供现代化的设计组件和工具，并以开源的方式分享，以促进它们在更广泛的社区中的发展和采用，LobeTheme 目前正在积极开发中，有需求或者问题，欢迎提交 [issues][github-issues-link]。
+
+| [![][discord-shield-badge]][discord-link] | 加入我们的 Discord 社区！这是你可以与开发者和其他 LobeHub 热衷用户交流的地方 |
+| :---------------------------------------- | :--------------------------------------------------------------------------- |
+
+> \[!IMPORTANT]
 >
-> `Lobe Theme v3` 适配 `SD WebUI v1.6`, 并不向下兼容，`< 1.6` 以下版本移动到分支 [legacy-sd-webui-1.5](https://github.com/lobehub/sd-webui-lobe-theme/tree/legacy-sd-webui-1.5)
+> **收藏项目**，你将从 GitHub 上无延迟地接收所有发布通知～⭐️
+
+<details><summary><kbd>Star History</kbd></summary>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=lobehub%2Fsd-webui-lobe-theme&theme=dark&type=Date">
+    <img src="https://api.star-history.com/svg?repos=lobehub%2Fsd-webui-lobe-theme&type=Date">
+  </picture>
+</details>
 
 <div align="right">
 
@@ -71,8 +88,6 @@ Stable Diffusion WebUI 现代化界面框架<br/>具有精致的界面设计，�
 - 首先，打开 Stable Diffusion WebUI，并进入插件市场。在搜索框中输入 "Lobe Theme"，然后点击搜索按钮。您将看到相关的插件列表。
 - 找到 Lobe Theme 插件后，点击安装按钮。系统将开始下载并安装插件。安装完成后，您可以在插件列表中找到 Lobe Theme，重载 UI 后即可生效。
 
-<br/>
-
 #### `B` 通过 Git 克隆本仓库（推荐）
 
 如果您更喜欢使用 Git 来管理插件，您可以将存储库克隆到您的扩展文件夹中。以下是详细的步骤：
@@ -84,22 +99,7 @@ Stable Diffusion WebUI 现代化界面框架<br/>具有精致的界面设计，�
 git clone "https://github.com/lobehub/sd-webui-lobe-theme" extensions/lobe-theme
 ```
 
-- 一旦您完成了这些步骤，Lobe Theme 插件就会被成功安装到 Stable Diffusion WebUI 中
-
-<br/>
-
-#### 保持更新
-
-> \[!TIP]
->
-> 收藏项目，你将从 GitHub 上无延迟地接收所有发布通知～⭐️
-
-<details><summary><kbd>Star History</kbd></summary>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=lobehub%2Fsd-webui-lobe-theme&theme=dark&type=Date">
-    <img src="https://api.star-history.com/svg?repos=lobehub%2Fsd-webui-lobe-theme&type=Date">
-  </picture>
-</details>
+> 一旦您完成了这些步骤，Lobe Theme 插件就会被成功安装到 Stable Diffusion WebUI 中
 
 <div align="right">
 
@@ -308,13 +308,13 @@ sd_model_checkpoint, sd_vae, CLIP_stop_at_last_layers, img2img_background_color,
 >
 > 全角标点转半角，去除多余空格，补充缺失逗号，把 Extra-Networks 模型移动到末尾
 
-格式化前
+**格式化前:**
 
 ```text
 photorealistic   photo of a handsome male (wizard  :1.2）， <lora:LuisapHotlineStyle:0.5> <lora:ElegantHanfuRuqunStyle:0.2>    short beard, white wizard  shirt, (with golden    trim:0.8),
 ```
 
-格式化后
+**格式化后:**
 
 ```text
 photorealistic photo of a handsome male, (wizard:1.2), short beard, white wizard shirt, (with golden trim:0.8), <lora:LuisapHotlineStyle:0.5>, <lora:ElegantHanfuRuqunStyle:0.2>
@@ -453,6 +453,7 @@ This project is [AGPL3](./LICENSE) licensed.
 [cover]: https://gw.alipayobjects.com/zos/kitchen/8Ab%24hLJ5ur/cover.webp
 [discord-link]: https://discord.gg/AYFPHvv2jT
 [discord-shield]: https://img.shields.io/discord/1127171173982154893?color=5865F2&label=discord&labelColor=black&logo=discord&logoColor=white&style=flat-square
+[discord-shield-badge]: https://img.shields.io/discord/1127171173982154893?color=5865F2&label=discord&labelColor=black&logo=discord&logoColor=white&style=for-the-badge
 [feat-generation-info]: https://gw.alipayobjects.com/zos/kitchen/rIv%24%24AAE6A/feat_generation_info.webp
 [feat-highlight]: https://gw.alipayobjects.com/zos/kitchen/iD%24W4U2y3Y/feat_highlight.webp
 [feat-mobile-friendly]: https://gw.alipayobjects.com/zos/kitchen/WpWe6Hw8UT/feat_mobile_friendly.webp

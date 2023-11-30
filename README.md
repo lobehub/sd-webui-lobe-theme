@@ -36,7 +36,8 @@ English · [简体中文](./README.zh-CN.md) · [Changelog](./CHANGELOG.md) · [
 
 #### TOC
 
-- [📦 Plugin Installation](#-plugin-installation)
+- [👋🏻 Getting Started & Join Our Community](#-getting-started--join-our-community)
+- [📦 Extension Installation](#-extension-installation)
 - [✨ Feature Overview](#-feature-overview)
 - [🖥 Environment Support](#-environment-support)
 - [📦 Ecosystem](#-ecosystem)
@@ -50,24 +51,46 @@ English · [简体中文](./README.zh-CN.md) · [Changelog](./CHANGELOG.md) · [
 
 </details>
 
-## 📦 Plugin Installation
+## 👋🏻 Getting Started & Join Our Community
+
+Please be aware that LobeTheme is currently under active development, and feedback is welcome for any [issues][github-issues-link] encountered.
+
+| [![][discord-shield-badge]][discord-link] | Join our Discord community! This is where you can connect with developers and other enthusiastic users of LobeHub. |
+| :---------------------------------------- | :----------------------------------------------------------------------------------------------------------------- |
 
 > \[!IMPORTANT]
 >
-> Before installing the plugin, please check the environment version of Stable Diffusion WebUI, with a minimum requirement of `gradio-3.41.2` & `sd-webui 1.6`
+> **Star Us**, You will receive all release notifications from GitHub without any delay \~ ⭐️
 
-#### `A` Installation via SD WebUI Plugin Market
+<details><summary><kbd>Star History</kbd></summary>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=lobehub%2Fsd-webui-lobe-theme&theme=dark&type=Date">
+    <img src="https://api.star-history.com/svg?repos=lobehub%2Fsd-webui-lobe-theme&type=Date">
+  </picture>
+</details>
 
-In Stable Diffusion WebUI, you can install the Lobe Theme plugin through the built-in plugin market.
+<div align="right">
 
-- First, open Stable Diffusion WebUI and go to the plugin market. Enter "Lobe Theme" in the search box and click the search button. You will see a list of related plugins.
-- After finding the Lobe Theme plugin, click the install button. The system will start downloading and installing the plugin. After installation, you can find the Lobe Theme in the plugin list, and it will take effect after reloading the UI.
+[![][back-to-top]](#readme-top)
 
-<br/>
+</div>
+
+## 📦 Extension Installation
+
+> \[!IMPORTANT]
+>
+> Before installing the extension, please check the environment version of Stable Diffusion WebUI, with a minimum requirement of `gradio-3.41.2` & `sd-webui 1.6`
+
+#### `A` Installation via SD WebUI Extension Market
+
+In Stable Diffusion WebUI, you can install the Lobe Theme extension through the built-in extension market.
+
+- First, open Stable Diffusion WebUI and go to the extension market. Enter "Lobe Theme" in the search box and click the search button. You will see a list of related extensions.
+- After finding the Lobe Theme extension, click the install button. The system will start downloading and installing the extension. After installation, you can find the Lobe Theme in the extension list, and it will take effect after reloading the UI.
 
 #### `B` Clone this Repository via Git (Recommended)
 
-If you prefer to manage plugins using Git, you can clone the repository to your extensions folder. Here are the detailed steps:
+If you prefer to manage extensions using Git, you can clone the repository to your extensions folder. Here are the detailed steps:
 
 - Open the command line interface and navigate to the root directory of Stable Diffusion WebUI.
 - Run the following command in the command line to clone the repository:
@@ -76,22 +99,7 @@ If you prefer to manage plugins using Git, you can clone the repository to your 
 git clone "https://github.com/lobehub/sd-webui-lobe-theme" extensions/lobe-theme
 ```
 
-- Once you have completed these steps, the Lobe Theme plugin will be successfully installed in Stable Diffusion WebUI.
-
-<br/>
-
-#### Keeping Up-to-Date
-
-> \[!TIP]
->
-> By bookmarking the project, you will receive all release notifications from GitHub without delay\~⭐️
-
-<details><summary><kbd>Star History</kbd></summary>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=lobehub%2Fsd-webui-lobe-theme&theme=dark&type=Date">
-    <img src="https://api.star-history.com/svg?repos=lobehub%2Fsd-webui-lobe-theme&type=Date">
-  </picture>
-</details>
+> Once you have completed these steps, the Lobe Theme extension will be successfully installed in Stable Diffusion WebUI.
 
 <div align="right">
 
@@ -432,6 +440,7 @@ This project is [AGPL3](./LICENSE) licensed.
 [cover]: https://gw.alipayobjects.com/zos/kitchen/8Ab%24hLJ5ur/cover.webp
 [discord-link]: https://discord.gg/AYFPHvv2jT
 [discord-shield]: https://img.shields.io/discord/1127171173982154893?color=5865F2&label=discord&labelColor=black&logo=discord&logoColor=white&style=flat-square
+[discord-shield-badge]: https://img.shields.io/discord/1127171173982154893?color=5865F2&label=discord&labelColor=black&logo=discord&logoColor=white&style=for-the-badge
 [feat-generation-info]: https://gw.alipayobjects.com/zos/kitchen/rIv%24%24AAE6A/feat_generation_info.webp
 [feat-highlight]: https://gw.alipayobjects.com/zos/kitchen/iD%24W4U2y3Y/feat_highlight.webp
 [feat-mobile-friendly]: https://gw.alipayobjects.com/zos/kitchen/WpWe6Hw8UT/feat_mobile_friendly.webp
