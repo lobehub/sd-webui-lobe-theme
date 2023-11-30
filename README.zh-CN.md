@@ -77,7 +77,7 @@ Stable Diffusion WebUI 现代化界面框架<br/>具有精致的界面设计，�
 
 ## 📦 插件安装
 
-> \[!IMPORTANT]
+> \[!NOTE]
 >
 > 安装插件前，请检查 Stable Diffusion WebUI 版本环境，最低要求 `gradio-3.41.2` & `sd-webui 1.6`
 

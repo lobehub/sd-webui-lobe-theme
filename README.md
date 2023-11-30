@@ -77,7 +77,7 @@ Please be aware that LobeTheme is currently under active development, and feedba
 
 ## 📦 Extension Installation
 
-> \[!IMPORTANT]
+> \[!NOTE]
 >
 > Before installing the extension, please check the environment version of Stable Diffusion WebUI, with a minimum requirement of `gradio-3.41.2` & `sd-webui 1.6`
 
@@ -113,7 +113,11 @@ git clone "https://github.com/lobehub/sd-webui-lobe-theme" extensions/lobe-theme
 
 #### `1` Light & Dark Theme
 
-The current theme design provides two visual effects: light theme and dark theme, to meet the visual comfort needs of users in different lighting environments, which can be quickly switched in the upper right corner of the navigation bar. If you prefer to default to the dark theme, you can achieve this by using the startup parameter `--theme=dark`.
+The current theme design provides two visual effects: light theme and dark theme,
+to meet the visual comfort needs of users in different lighting environments,
+which can be quickly switched in the upper right corner of the navigation bar.
+
+If you prefer to default to the dark theme, you can achieve this by using the startup parameter `--theme=dark`.
 
 > \[!TIP]
 >
@@ -130,7 +134,9 @@ http://localhost:7860/?__theme=light
 http://localhost:7860/?__theme=dark
 ```
 
-Through these simple and intuitive operations, users can quickly switch the interface theme according to their personal preferences or current environment, in order to achieve the best user experience.
+Through these simple and intuitive operations,
+users can quickly switch the interface theme according to their personal preferences or current environment,
+in order to achieve the best user experience.
 
 <div align="right">
 
@@ -142,7 +148,12 @@ Through these simple and intuitive operations, users can quickly switch the inte
 
 #### `2` Personalized Theme Customization
 
-As a design engineer, LobeChat considers the personalized experience of users in interface design, and has introduced a flexible and changeable theme mode, providing a series of color customization options, allowing users to adjust the theme color of the application according to their preferences. Whether you want a stable deep blue, a lively peach pink, or a professional gray and white, users can find color options that match their style in LobeTheme.
+As a design engineer, LobeChat considers the personalized experience of users in interface design,
+and has introduced a flexible and changeable theme mode, providing a series of color customization options,
+allowing users to adjust the theme color of the application according to their preferences.
+
+Whether you want a stable deep blue, a lively peach pink, or a professional gray and white,
+users can find color options that match their style in LobeTheme.
 
 > \[!TIP]
 >
@@ -164,7 +175,13 @@ As a design engineer, LobeChat considers the personalized experience of users in
 
 #### `3` Prompt Syntax Highlighting
 
-When using the Stable Diffusion model for Prompt writing, an effective feature is the Prompt syntax highlighting. This feature automatically adds color coding to the input Prompt text according to preset syntax rules, enhancing the user experience and the intuitiveness of operations. Prompt syntax highlighting can not only help users identify and construct syntax structures more clearly, but also improve the efficiency of text editing and debugging.
+When using the Stable Diffusion model for Prompt writing,
+an effective feature is the Prompt syntax highlighting.
+
+This feature automatically adds color coding to the input Prompt text according to preset syntax rules,
+enhancing the user experience and the intuitiveness of operations.
+Prompt syntax highlighting can not only help users identify and construct syntax structures more clearly,
+but also improve the efficiency of text editing and debugging.
 
 <div align="right">
 
@@ -176,7 +193,9 @@ When using the Stable Diffusion model for Prompt writing, an effective feature i
 
 #### `4` Customizable Sidebar
 
-One of the key highlights of LobeTheme is its highly customizable sidebar feature, designed to make the image generation workflow smoother, ensuring that every user can adjust and optimize their workspace according to their preferences.
+One of the key highlights of LobeTheme is its highly customizable sidebar feature,
+designed to make the image generation workflow smoother,
+ensuring that every user can adjust and optimize their workspace according to their preferences.
 
 > \[!TIP]
 >
@@ -222,7 +241,11 @@ sd_model_checkpoint, sd_vae, CLIP_stop_at_last_layers, img2img_background_color,
 
 #### `5` Improved Image Information Display
 
-The display of generation information has been improved, with a deep optimization of the data presentation mechanism, and the introduction of a "one-click copy" function to improve information retrieval efficiency. Now, you can quickly obtain the required Seeds without tedious searching in long strings.
+The display of generation information has been improved,
+with a deep optimization of the data presentation mechanism,
+and the introduction of a "one-click copy" function to improve information retrieval efficiency.
+
+Now, you can quickly obtain the required Seeds without tedious searching in long strings.
 
 <div align="right">
 
@@ -234,7 +257,9 @@ The display of generation information has been improved, with a deep optimizatio
 
 #### `6` Image Recipe Sharing
 
-A brand-new image sharing feature has been launched. With a simple one-click operation, you can easily share the current image recipe, create exquisite shared images, and explore more customizable settings to make the shared images more personalized.
+A brand-new image sharing feature has been launched.
+With a simple one-click operation, you can easily share the current image recipe,
+create exquisite shared images, and explore more customizable settings to make the shared images more personalized.
 
 <div align="right">
 
@@ -246,7 +271,9 @@ A brand-new image sharing feature has been launched. With a simple one-click ope
 
 #### `7` Prompt Editor
 
-A user-friendly prompt word editor has been added to the second tab of the quick setting menu. It includes a series of preset tags covering post-processing, style description, and other key words, simplifying your operation process and helping you edit and manage prompts more efficiently.
+A user-friendly prompt word editor has been added to the second tab of the quick setting menu.
+It includes a series of preset tags covering post-processing, style description, and other key words,
+simplifying your operation process and helping you edit and manage prompts more efficiently.
 
 <div align="right">
 
@@ -258,7 +285,15 @@ A user-friendly prompt word editor has been added to the second tab of the quick
 
 #### `8` Mobile-Friendly Adaptation
 
-In order to improve the interactive experience of mobile users, LobeTheme has implemented an intelligent folding mechanism for breadcrumb navigation and finely adapted the sidebar. These adjustments are aimed at providing convenient and intuitive navigation experience on any device. However, achieving the same complex functions and detailed customization as the desktop on the mobile end poses certain challenges. Especially when integrating with the Stable Diffusion WebUI interface, high complexity and precise parameter settings are required, which may result in differences in user experience between mobile and desktop. If you have any suggestions or ideas, please feel free to provide feedback through GitHub Issues or Pull Requests.
+In order to improve the interactive experience of mobile users,
+LobeTheme has implemented an intelligent folding mechanism for breadcrumb navigation and finely adapted the sidebar.
+These adjustments are aimed at providing convenient and intuitive navigation experience on any device.
+
+However, achieving the same complex functions and detailed customization as the desktop on the mobile end poses certain challenges.
+Especially when integrating with the Stable Diffusion WebUI interface, high complexity and precise parameter settings are required,
+which may result in differences in user experience between mobile and desktop.
+
+If you have any suggestions or ideas, please feel free to provide feedback through GitHub Issues or Pull Requests.
 
 <div align="right">
 
@@ -270,7 +305,14 @@ In order to improve the interactive experience of mobile users, LobeTheme has im
 
 #### `9` PWA Progressive Web Application
 
-In today's multi-device environment, providing a seamless experience for users is crucial. Therefore, we have adopted the Progressive Web Application [PWA](https://support.google.com/chrome/answer/9658361) technology, which is a modern web technology that can elevate web applications to a near-native application experience. Through PWA, LobeTheme can provide a highly optimized user experience on desktop and mobile devices, while maintaining lightweight and high performance characteristics. Visually and perceptually, it has been carefully designed to ensure that its interface is indistinguishable from native applications, providing smooth animations, responsive layout, and adaptation to different screen resolutions of different devices.
+In today's multi-device environment, providing a seamless experience for users is crucial.
+Therefore, we have adopted the Progressive Web Application [PWA](https://support.google.com/chrome/answer/9658361) technology,
+which is a modern web technology that can elevate web applications to a near-native application experience.
+
+Through PWA, LobeTheme can provide a highly optimized user experience on desktop and mobile devices,
+while maintaining lightweight and high performance characteristics. Visually and perceptually,
+it has been carefully designed to ensure that its interface is indistinguishable from native applications,
+providing smooth animations, responsive layout, and adaptation to different screen resolutions of different devices.
 
 > \[!NOTE]
 >
