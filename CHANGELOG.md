@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 3.3.4](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.3.3...v3.3.4)
+
+<sup>Released on **2023-12-03**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix img2img Gallery image auto height.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix img2img Gallery image auto height, closes [#481](https://github.com/lobehub/sd-webui-lobe-theme/issues/481) ([a32cdec](https://github.com/lobehub/sd-webui-lobe-theme/commit/a32cdec))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.3.3](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.3.2...v3.3.3)
 
 <sup>Released on **2023-11-29**</sup>
