@@ -92,9 +92,5 @@ export default (token: Theme) => {
         }
       }
     }
-
-    div[id^='img2img_'].block.gradio-image {
-      height: auto !important;
-    }
   `;
 };
