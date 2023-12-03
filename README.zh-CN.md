@@ -21,7 +21,8 @@ Stable Diffusion WebUI 现代化界面框架<br/>具有精致的界面设计，�
 [![][github-forks-shield]][github-forks-link]
 [![][github-stars-shield]][github-stars-link]
 [![][github-issues-shield]][github-issues-link]
-[![][github-license-shield]][github-license-link]
+[![][github-license-shield]][github-license-link]<br>
+[![](https://img.shields.io/badge/-Sponsor%20LobeHub-f04f88?logo=opencollective&logoColor=white&style=flat-square)](https://opencollective.com/lobehub 'Sponsor LobeHub on open-collective')
 
 </div>
 
@@ -399,7 +400,37 @@ $ bun dev
 
 [![][pr-welcome-shield]][pr-welcome-link]
 
-[![][contributors-contrib]][contributors-link]
+<a href="https://github.com/lobehub/sd-webui-lobe-theme/graphs/contributors" target="_blank">
+  <table>
+    <tr>
+      <th colspan="2">
+        <br><img src="https://contrib.rocks/image?repo=lobehub/sd-webui-lobe-theme"><br><br>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://next.ossinsight.io/widgets/official/compose-org-active-contributors/thumbnail.png?activity=active&period=past_28_days&owner_id=131470832&repo_ids=606329910&image_size=2x3&color_scheme=dark">
+          <img src="https://next.ossinsight.io/widgets/official/compose-org-active-contributors/thumbnail.png?activity=active&period=past_28_days&owner_id=131470832&repo_ids=606329910&image_size=2x3&color_scheme=light">
+        </picture>
+      </td>
+      <td rowspan="2">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://next.ossinsight.io/widgets/official/compose-org-participants-growth/thumbnail.png?activity=active&period=past_28_days&owner_id=131470832&repo_ids=606329910&image_size=4x7&color_scheme=dark">
+          <img src="https://next.ossinsight.io/widgets/official/compose-org-participants-growth/thumbnail.png?activity=active&period=past_28_days&owner_id=131470832&repo_ids=606329910&image_size=4x7&color_scheme=light">
+        </picture>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://next.ossinsight.io/widgets/official/compose-org-active-contributors/thumbnail.png?activity=new&period=past_28_days&owner_id=131470832&repo_ids=606329910&image_size=2x3&color_scheme=dark">
+          <img src="https://next.ossinsight.io/widgets/official/compose-org-active-contributors/thumbnail.png?activity=new&period=past_28_days&owner_id=131470832&repo_ids=606329910&image_size=2x3&color_scheme=light">
+        </picture>
+      </td>
+    </tr>
+  </table>
+</a>
 
 <div align="right">
 
@@ -448,8 +479,6 @@ This project is [AGPL3](./LICENSE) licensed.
 [bun-shield]: https://img.shields.io/badge/-speedup%20with%20bun-black?logo=bun&style=for-the-badge
 [codespaces-link]: https://codespaces.new/lobehub/sd-webui-lobe-theme
 [codespaces-shield]: https://github.com/codespaces/badge.svg
-[contributors-contrib]: https://contrib.rocks/image?repo=lobehub/sd-webui-lobe-theme
-[contributors-link]: https://github.com/lobehub/sd-webui-lobe-theme/graphs/contributors
 [cover]: https://gw.alipayobjects.com/zos/kitchen/8Ab%24hLJ5ur/cover.webp
 [discord-link]: https://discord.gg/AYFPHvv2jT
 [discord-shield]: https://img.shields.io/discord/1127171173982154893?color=5865F2&label=discord&labelColor=black&logo=discord&logoColor=white&style=flat-square
