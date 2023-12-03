@@ -748,10 +748,6 @@ var ote='<svg\n  class="lucide lucide-arrow-right"\n  xmlns="http://www.w3.org/2
         }
       }
     }
-
-    div[id^='img2img_'].block.gradio-image {
-      height: auto !important;
-    }
   `},fte=e=>WB`
     .block.gradio-checkbox {
       margin: 0 !important;
