@@ -111,7 +111,7 @@
     "eslint": "^8",
     "fast-deep-equal": "^3",
     "husky": "^8",
-    "jsdom": "^22",
+    "jsdom": "^23.0.0",
     "lint-staged": "^15",
     "prettier": "^3",
     "query-string": "^8",
