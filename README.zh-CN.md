@@ -22,7 +22,7 @@ Stable Diffusion WebUI 现代化界面框架<br/>具有精致的界面设计，�
 [![][github-stars-shield]][github-stars-link]
 [![][github-issues-shield]][github-issues-link]
 [![][github-license-shield]][github-license-link]<br>
-[![](https://img.shields.io/badge/-Sponsor%20LobeHub-f04f88?logo=opencollective&logoColor=white&style=flat-square)](https://opencollective.com/lobehub 'Sponsor LobeHub on open-collective')
+[![][sponsor-shield]][sponsor-link]
 
 </div>
 
@@ -44,6 +44,7 @@ Stable Diffusion WebUI 现代化界面框架<br/>具有精致的界面设计，�
 - [📦 生态系统](#-生态系统)
 - [⌨️ 本地开发](#️-本地开发)
 - [🤝 参与贡献](#-参与贡献)
+- [🩷 感谢赞助](#-感谢赞助)
 - [🔗 链接](#-链接)
   - [更多工具](#更多工具)
   - [参考](#参考)
@@ -438,6 +439,23 @@ $ bun dev
 
 </div>
 
+## 🩷 感谢赞助
+
+每一分支持都珍贵无比，汇聚成我们支持的璀璨银河！你就像一颗划破夜空的流星，瞬间点亮我们前行的道路。感谢你对我们的信任 —— 你的支持笔就像星辰导航，一次又一次地为项目指明前进的光芒。
+
+<a href="https://opencollective.com/lobehub" target="_blank">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://readme-wizard.lobehub.com/api/sponsor?themeMode=dark">
+    <img  src="https://readme-wizard.lobehub.com/api/sponsor">
+  </picture>
+</a>
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
 ## 🔗 链接
 
 ### 更多工具
@@ -525,3 +543,5 @@ This project is [AGPL3](./LICENSE) licensed.
 [pr-welcome-link]: https://github.com/lobehub/lobe-chat/pulls
 [pr-welcome-shield]: https://img.shields.io/badge/🤯_pr_welcome-%E2%86%92-ffcb47?labelColor=black&style=for-the-badge
 [profile-link]: https://github.com/canisminor1990
+[sponsor-link]: https://opencollective.com/lobehub 'Become 🩷 LobeHub Sponsor'
+[sponsor-shield]: https://img.shields.io/badge/-Sponsor%20LobeHub-f04f88?logo=opencollective&logoColor=white&style=flat-square
