@@ -118,7 +118,7 @@
     "remark": "^14",
     "remark-cli": "^11",
     "semantic-release": "^21",
-    "stylelint": "^15",
+    "stylelint": "^16.0.0",
     "terser": "^5",
     "typescript": "^5",
     "vite": "^5",
