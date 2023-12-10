@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 3.3.5](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.3.4...v3.3.5)
+
+<sup>Released on **2023-12-10**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix Gallery "position: sticky" for mobile UI.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix Gallery "position: sticky" for mobile UI, closes [#483](https://github.com/lobehub/sd-webui-lobe-theme/issues/483) [#483](https://github.com/lobehub/sd-webui-lobe-theme/issues/483) ([44a04bd](https://github.com/lobehub/sd-webui-lobe-theme/commit/44a04bd))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.3.4](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.3.3...v3.3.4)
 
 <sup>Released on **2023-12-03**</sup>
