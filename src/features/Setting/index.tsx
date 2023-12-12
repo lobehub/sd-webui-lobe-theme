@@ -5,8 +5,8 @@ import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
 import VersionTag from '@/components/VersionTag';
+import { GITHUB_REPO_URL } from '@/const/url';
 
-import { homepage } from '../../../package.json';
 import FormAppearance from './Form/Appearance';
 import FormExperimental from './Form/Experimental';
 import FormLayout from './Form/Layout';
@@ -29,7 +29,7 @@ const Setting = memo<SettingProps>(({ open, onCancel }) => {
       title={
         <Flexbox align={'center'} gap={4}>
           <Flexbox align={'center'} gap={4} horizontal>
-            <a href={homepage} rel="noreferrer" target="_blank">
+            <a href={GITHUB_REPO_URL} rel="noreferrer" target="_blank">
               <ActionIcon icon={Book} title="Setting Documents" />
             </a>
 

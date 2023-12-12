@@ -1,30 +1,4 @@
-import { consola } from 'consola';
-
-/**
- * 转换器工具类
- */
 export const Converter = {
-  /**
-   * 添加转换按钮
-   * @param type - 组件类型
-   */
-  addPromptButton(type: string): void {
-    consola.info('🤯 [formatPrompt] inject', type);
-    const actionsColumn: HTMLElement | null = gradioApp().querySelector(
-      `#${type}_tools > div.form`,
-    );
-    const formatBtn: HTMLElement | null = gradioApp().querySelector(`#${type}_formatconvert`);
-    if (!actionsColumn || formatBtn) return;
-    const convertButton: HTMLElement = Converter.createButton(`${type}_formatconvert`, '🪄', () =>
-      Converter.onClickConvert(type));
-    actionsColumn.append(convertButton);
-  },
-
-  /**
-   * 将输入的字符串转换成特定格式的字符串
-   * @param input 输入的字符串
-   * @returns 转换后的字符串
-   */
   convert(input: string): string {
     const re_attention = /\{|\[|\}|\]|[^{}[\]]+/gmu;
 
@@ -92,7 +66,7 @@ export const Converter = {
     for (const [word, value] of res) {
       result += value === 1 ? word : `(${word}:${value.toString()})`;
     }
-    return result;
+    return result.trim().replaceAll(/\s+/g, ' ');
   },
 
   /**
@@ -212,24 +186,6 @@ export const Converter = {
   },
 
   /**
-   * 创建转换按钮
-   * @param id 按钮 id
-   * @param innerHTML 按钮文本
-   * @param onClick 点击事件处理函数
-   * @returns 新建的按钮元素
-   */
-  createButton(id: string, innerHTML: string, onClick: () => void): HTMLButtonElement {
-    const button = document.createElement('button');
-    button.id = id;
-    button.type = 'button';
-    button.innerHTML = innerHTML;
-    button.title = 'Format prompt~🪄';
-    button.className = 'lg secondary gradio-button tool svelte-cmf5ev';
-    button.addEventListener('click', onClick);
-    return button;
-  },
-
-  /**
    * 触发 input 事件
    * @param target 目标元素
    */
@@ -248,14 +204,14 @@ export const Converter = {
     const default_negative = '';
 
     const prompt = gradioApp().querySelector(
-      `#${type}_prompt > label > textarea`,
+      `#${type}2img_prompt > label > textarea`,
     ) as HTMLTextAreaElement;
     const result = Converter.convert(prompt.value);
     prompt.value =
       result.match(/^masterpiece, best quality,/) === null ? default_prompt + result : result;
     Converter.dispatchInputEvent(prompt);
     const negprompt = gradioApp().querySelector(
-      `#${type}_neg_prompt > label > textarea`,
+      `#${type}2img_neg_prompt > label > textarea`,
     ) as HTMLTextAreaElement;
     const negResult = Converter.convert(negprompt.value);
     negprompt.value =
@@ -275,10 +231,4 @@ export const Converter = {
   round(value: number): number {
     return Math.round(value * 10_000) / 10_000;
   },
-};
-
-export default () => {
-  Converter.addPromptButton('txt2img');
-  Converter.addPromptButton('img2img');
-  consola.success('🤯 [formatPrompt] inject');
 };

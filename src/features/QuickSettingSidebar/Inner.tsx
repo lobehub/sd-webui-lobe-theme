@@ -1,12 +1,12 @@
 import { DraggablePanelBody } from '@lobehub/ui';
 import { Segmented } from 'antd';
 import { useTheme } from 'antd-style';
-import { consola } from 'consola';
-import { memo, useEffect, useRef, useState } from 'react';
+import { memo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
 import { PromptEditor } from '@/components';
+import { useInject } from '@/hooks/useInject';
 import { type DivProps } from '@/types';
 
 enum Tabs {
@@ -19,15 +19,10 @@ const Inner = memo<DivProps>(() => {
   const [tab, setTab] = useState<Tabs>(Tabs.Setting);
   const sidebarReference = useRef<HTMLDivElement>(null);
   const { t } = useTranslation();
-  useEffect(() => {
-    try {
-      const sidebar = gradioApp().querySelector('#quicksettings');
-      if (sidebar) sidebarReference.current?.append(sidebar);
-      consola.success('🤯 [layout] inject - QuickSettingSidebar');
-    } catch (error) {
-      consola.error('🤯 [layout] inject - QuickSettingSidebar', error);
-    }
-  }, []);
+
+  useInject(sidebarReference, '#quicksettings', {
+    debug: '[layout] inject - QuickSettingSidebar',
+  });
 
   return (
     <DraggablePanelBody>

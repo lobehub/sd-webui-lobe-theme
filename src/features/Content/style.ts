@@ -171,7 +171,96 @@ export const useStyles = createStyles(
           background: transparent !important;
         }
       `,
-      text2img: css`
+      textares: css`
+        [id$='2img_prompt'],
+        [id$='2img_neg_prompt'] {
+          textarea {
+            resize: ${isPromptResizable ? 'vertical' : 'none'};
+
+            overflow-y: auto;
+
+            padding: 8px !important;
+
+            font-family: ${token.fontFamilyCode} !important;
+            font-size: 13px !important;
+            line-height: 1.5 !important;
+            word-wrap: break-word !important;
+            white-space: pre-wrap !important;
+
+            transition:
+              all 0.3s,
+              height 0s;
+          }
+        }
+
+        [id$='2img_prompt'] > label > textarea {
+          color: ${token.colorSuccessTextHover};
+
+          &:focus {
+            color: ${token.colorSuccessText};
+          }
+        }
+
+        [id$='2img_neg_prompt'] > label > textarea {
+          color: ${token.colorErrorTextHover};
+
+          &:focus {
+            color: ${token.colorError};
+          }
+        }
+
+        .block.token-counter {
+          z-index: 10 !important;
+          top: -14px;
+          right: 4px;
+          scale: 0.8;
+
+          background: ${token.colorBgContainer} !important;
+          border-radius: 0.4em !important;
+
+          > .translucent {
+            display: none;
+          }
+
+          span {
+            display: inline-block;
+            font-family: var(--font-mono);
+            border: 2px solid ${token.colorFillSecondary} !important;
+          }
+
+          span,
+          &.error span {
+            box-shadow: none;
+          }
+        }
+
+        #lobe_txt2img_prompt .prompt_editor {
+          min-height: ${TEXT2IMG_PROMPT_HEIGHT}px;
+          max-height: ${isPromptResizable ? 'unset' : `${TEXT2IMG_PROMPT_HEIGHT}px`};
+        }
+
+        #lobe_img2img_prompt .prompt_editor {
+          min-height: ${IMG2IMG_PROMPT_HEIGHT}px;
+          max-height: ${isPromptResizable ? 'unset' : `${IMG2IMG_PROMPT_HEIGHT}px`};
+        }
+
+        #txt2img_prompt,
+        #txt2img_neg_prompt {
+          textarea {
+            min-height: ${TEXT2IMG_PROMPT_HEIGHT}px;
+            max-height: ${isPromptResizable ? 'unset' : `${TEXT2IMG_PROMPT_HEIGHT}px`};
+          }
+        }
+
+        #img2img_prompt,
+        #img2img_neg_prompt {
+          textarea {
+            min-height: ${IMG2IMG_PROMPT_HEIGHT}px;
+            max-height: ${isPromptResizable ? 'unset' : `${IMG2IMG_PROMPT_HEIGHT}px`};
+          }
+        }
+      `,
+      txt2img: css`
         button[id$='_generate'] {
           height: var(--button-lg-height) !important;
           min-height: var(--button-lg-height) !important;
@@ -334,95 +423,6 @@ export const useStyles = createStyles(
           border: 1px solid ${token.colorBorderSecondary} !important;
           border-radius: ${token.borderRadius}px !important;
           box-shadow: none;
-        }
-      `,
-      textares: css`
-        [id$='2img_prompt'],
-        [id$='2img_neg_prompt'] {
-          textarea {
-            resize: ${isPromptResizable ? 'vertical' : 'none'};
-
-            overflow-y: auto;
-
-            padding: 8px !important;
-
-            font-family: ${token.fontFamilyCode} !important;
-            font-size: 13px !important;
-            line-height: 1.5 !important;
-            word-wrap: break-word !important;
-            white-space: pre-wrap !important;
-
-            transition:
-              all 0.3s,
-              height 0s;
-          }
-        }
-
-        [id$='2img_prompt'] > label > textarea {
-          color: ${token.colorSuccessTextHover};
-
-          &:focus {
-            color: ${token.colorSuccessText};
-          }
-        }
-
-        [id$='2img_neg_prompt'] > label > textarea {
-          color: ${token.colorErrorTextHover};
-
-          &:focus {
-            color: ${token.colorError};
-          }
-        }
-
-        .block.token-counter {
-          z-index: 10 !important;
-          top: -14px;
-          right: 4px;
-          scale: 0.8;
-
-          background: ${token.colorBgContainer} !important;
-          border-radius: 0.4em !important;
-
-          > .translucent {
-            display: none;
-          }
-
-          span {
-            display: inline-block;
-            font-family: var(--font-mono);
-            border: 2px solid ${token.colorFillSecondary} !important;
-          }
-
-          span,
-          &.error span {
-            box-shadow: none;
-          }
-        }
-
-        #lobe_txt2img_prompt .prompt_editor {
-          min-height: ${TEXT2IMG_PROMPT_HEIGHT}px;
-          max-height: ${isPromptResizable ? 'unset' : `${TEXT2IMG_PROMPT_HEIGHT}px`};
-        }
-
-        #lobe_img2img_prompt .prompt_editor {
-          min-height: ${IMG2IMG_PROMPT_HEIGHT}px;
-          max-height: ${isPromptResizable ? 'unset' : `${IMG2IMG_PROMPT_HEIGHT}px`};
-        }
-
-        #text2img_prompt,
-        #text2img_neg_prompt {
-          textarea {
-            min-height: ${TEXT2IMG_PROMPT_HEIGHT}px;
-            max-height: ${isPromptResizable ? 'unset' : `${TEXT2IMG_PROMPT_HEIGHT}px`};
-          }
-        }
-
-        #img2img_prompt,
-        #img2img_neg_prompt {
-          textarea {
-            min-height: ${IMG2IMG_PROMPT_HEIGHT}px;
-            max-height: ${isPromptResizable ? 'unset' : `${IMG2IMG_PROMPT_HEIGHT}px`};
-          }
         }
       `,
     };

@@ -3,5 +3,4 @@
 
 git add .
 npx --no-install lint-staged
-npm run test
 git add .

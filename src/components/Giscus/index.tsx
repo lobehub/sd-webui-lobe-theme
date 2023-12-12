@@ -7,15 +7,22 @@ import {
   type ModalProps,
 } from '@lobehub/ui';
 import { Button } from 'antd';
-import { useTheme } from 'antd-style';
+import { useTheme, useThemeMode } from 'antd-style';
 import isEqual from 'fast-deep-equal';
-import { Github } from 'lucide-react';
+import { Github, Heart } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 
-import { homepage } from '@/../package.json';
 import VersionTag from '@/components/VersionTag';
+import {
+  DISCORD_URL,
+  GISCUS_REPO_ID,
+  GITHUB_REPO_URL,
+  REPO_NAME,
+  SPONSOR_IMG,
+  SPONSOR_URL,
+} from '@/const/url';
 import { selectors, useAppStore } from '@/store';
 
 export interface GiscusProps {
@@ -23,11 +30,10 @@ export interface GiscusProps {
   open?: ModalProps['open'];
 }
 
-const repoName = homepage.replace('https://github.com/', '') as `${string}/${string}`;
-
 const Giscus = memo<GiscusProps>(({ open, onCancel }) => {
   const setting = useAppStore(selectors.currentSetting, isEqual);
   const theme = useTheme();
+  const { isDarkMode } = useThemeMode();
   const { t } = useTranslation();
   return (
     <Modal
@@ -44,7 +50,6 @@ const Giscus = memo<GiscusProps>(({ open, onCancel }) => {
       <Flexbox gap={32}>
         <Center
           gap={16}
-          horizontal
           style={{
             background: theme.colorBgLayout,
             border: `1px solid ${theme.colorBorderSecondary}`,
@@ -52,16 +57,32 @@ const Giscus = memo<GiscusProps>(({ open, onCancel }) => {
             padding: '16px 0',
           }}
         >
-          <a href={'https://discord.gg/AYFPHvv2jT'} rel="noreferrer" target="_blank">
-            <Button icon={<Icon icon={DiscordIcon} />} size={'large'}>
-              Join Discover
-            </Button>
-          </a>
-          <a href={homepage} rel="noreferrer" target="_blank">
-            <GradientButton icon={<Icon icon={Github} />}>LobeTheme Github</GradientButton>
+          <Flexbox gap={16} horizontal>
+            <a href={DISCORD_URL} rel="noreferrer" target="_blank">
+              <Button icon={<Icon icon={DiscordIcon} />} size={'large'}>
+                Join Discover
+              </Button>
+            </a>
+            <a href={GITHUB_REPO_URL} rel="noreferrer" target="_blank">
+              <Button icon={<Icon icon={Github} />} size={'large'}>
+                Github
+              </Button>
+            </a>
+            <a href={SPONSOR_URL} rel="noreferrer" target="_blank">
+              <GradientButton icon={<Icon icon={Heart} />}>Sponsor</GradientButton>
+            </a>
+          </Flexbox>
+          <a href={SPONSOR_URL} rel="noreferrer" target="_blank">
+            <img alt={'sponsor'} src={`${SPONSOR_IMG}${isDarkMode ? '?themeMode=dark' : ''}`} />
           </a>
         </Center>
-        <G lang={setting.i18n} mapping="number" repo={repoName} repoId="R_kgDOJCPcNg" term="53" />
+        <G
+          lang={setting.i18n}
+          mapping="number"
+          repo={REPO_NAME}
+          repoId={GISCUS_REPO_ID}
+          term="53"
+        />
       </Flexbox>
     </Modal>
   );
