@@ -7,22 +7,15 @@ import {
   type ModalProps,
 } from '@lobehub/ui';
 import { Button } from 'antd';
-import { useTheme, useThemeMode } from 'antd-style';
+import { useTheme } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { Github, Heart } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Center, Flexbox } from 'react-layout-kit';
+import { Flexbox } from 'react-layout-kit';
 
 import VersionTag from '@/components/VersionTag';
-import {
-  DISCORD_URL,
-  GISCUS_REPO_ID,
-  GITHUB_REPO_URL,
-  REPO_NAME,
-  SPONSOR_IMG,
-  SPONSOR_URL,
-} from '@/const/url';
+import { DISCORD_URL, GISCUS_REPO_ID, GITHUB_REPO_URL, REPO_NAME, SPONSOR_URL } from '@/const/url';
 import { selectors, useAppStore } from '@/store';
 
 export interface GiscusProps {
@@ -33,7 +26,6 @@ export interface GiscusProps {
 const Giscus = memo<GiscusProps>(({ open, onCancel }) => {
   const setting = useAppStore(selectors.currentSetting, isEqual);
   const theme = useTheme();
-  const { isDarkMode } = useThemeMode();
   const { t } = useTranslation();
   return (
     <Modal
@@ -48,13 +40,14 @@ const Giscus = memo<GiscusProps>(({ open, onCancel }) => {
       }
     >
       <Flexbox gap={32}>
-        <Center
+        <Flexbox
+          align={'center'}
           gap={16}
           style={{
             background: theme.colorBgLayout,
             border: `1px solid ${theme.colorBorderSecondary}`,
             borderRadius: theme.borderRadiusLG,
-            padding: '16px 0',
+            padding: '16px',
           }}
         >
           <Flexbox gap={16} horizontal>
@@ -72,10 +65,7 @@ const Giscus = memo<GiscusProps>(({ open, onCancel }) => {
               <GradientButton icon={<Icon icon={Heart} />}>Sponsor</GradientButton>
             </a>
           </Flexbox>
-          <a href={SPONSOR_URL} rel="noreferrer" target="_blank">
-            <img alt={'sponsor'} src={`${SPONSOR_IMG}${isDarkMode ? '?themeMode=dark' : ''}`} />
-          </a>
-        </Center>
+        </Flexbox>
         <G
           lang={setting.i18n}
           mapping="number"
