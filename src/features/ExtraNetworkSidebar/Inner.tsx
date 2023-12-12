@@ -4,10 +4,11 @@ import isEqual from 'fast-deep-equal';
 import { ZoomIn, ZoomOut } from 'lucide-react';
 import { memo, useState } from 'react';
 
-import { useStyles } from '@/features/ExtraNetworkSidebar/style';
-import { useCivitaiHelperFix } from '@/features/ExtraNetworkSidebar/useCivitaiHelperFix';
-import { useInjectExtraNetwork } from '@/features/ExtraNetworkSidebar/useInjectExtraNetwork';
 import { selectors, useAppStore } from '@/store';
+
+import { useStyles } from './style';
+import { useCivitaiHelperFix } from './useCivitaiHelperFix';
+import { useInjectExtraNetwork } from './useInjectExtraNetwork';
 
 const Inner = memo(() => {
   const txt2imgExtraNetworkSidebarReference = useInjectExtraNetwork('txt');

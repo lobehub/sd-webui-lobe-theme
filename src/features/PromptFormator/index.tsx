@@ -1,6 +1,6 @@
 import { memo } from 'react';
 
-import { useInjectPromptFormator } from '@/features/PromptFormator/useInjectPromptFormator';
+import { useInjectPromptFormator } from './useInjectPromptFormator';
 
 const PromptFormator = memo(() => {
   useInjectPromptFormator('txt');

@@ -5,10 +5,11 @@ import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 import useSWR from 'swr';
 
-import { TagItem } from '@/components/PromptEditor/TagList';
-import { formatPrompt } from '@/components/PromptEditor/utils';
 import { selectors, useAppStore } from '@/store';
 import { getPrompt } from '@/store/api';
+
+import { TagItem } from '../TagList';
+import { formatPrompt } from '../utils';
 
 const ID = `[id$='2img_prompt'] textarea`;
 

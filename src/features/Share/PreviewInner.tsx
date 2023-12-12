@@ -4,10 +4,11 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
-import { useStyles } from '@/features/Share/style';
 import { useGalleryObserver } from '@/hooks/useGalleryObserver';
 import { useObserver } from '@/hooks/useObserver';
 import InfoBox from '@/modules/ImageInfo/features/InfoBox';
+
+import { useStyles } from './style';
 
 export interface PreviewInnerProps {
   showAllImages?: boolean;

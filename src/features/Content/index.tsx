@@ -2,12 +2,12 @@ import { useResponsive } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { memo, useRef } from 'react';
 
-import { removePromptScrollHide } from '@/features/Content/removePromptScrollHide';
 import { useInject } from '@/hooks/useInject';
 import { selectors, useAppStore } from '@/store';
 import { type DivProps } from '@/types';
 
 import SplitView from './SplitView';
+import { removePromptScrollHide } from './removePromptScrollHide';
 import { useStyles } from './style';
 
 const Content = memo<DivProps>(({ className, ...props }) => {

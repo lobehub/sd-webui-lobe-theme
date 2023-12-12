@@ -6,7 +6,6 @@ import { memo, useCallback, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { CustomLogo } from '@/components';
-import { SettingItemGroup } from '@/features/Setting/Form/types';
 import { type WebuiSetting, selectors, useAppStore } from '@/store';
 
 import Footer from './Footer';
@@ -19,6 +18,7 @@ import {
   primaryColors,
   primaryColorsSwatches,
 } from './data';
+import { SettingItemGroup } from './types';
 
 const SettingForm = memo(() => {
   const setting = useAppStore(selectors.currentSetting, isEqual);
