@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 3.3.6](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.3.5...v3.3.6)
+
+<sup>Released on **2023-12-12**</sup>
+
+#### ♻ Code Refactoring
+
+- **misc**: Refactor inject with react hook.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Code refactoring
+
+- **misc**: Refactor inject with react hook, closes [#489](https://github.com/lobehub/sd-webui-lobe-theme/issues/489) ([c376aa6](https://github.com/lobehub/sd-webui-lobe-theme/commit/c376aa6))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.3.5](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.3.4...v3.3.5)
 
 <sup>Released on **2023-12-10**</sup>
