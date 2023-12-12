@@ -4,6 +4,7 @@ import { RefObject, useEffect, useRef, useState } from 'react';
 interface InjectOptions {
   debug?: string;
   id?: string;
+  inverse?: boolean;
   onError?: (error: Error) => void;
   onStart?: (ele: HTMLDivElement) => void;
   onSuccess?: (ele: HTMLDivElement) => void;
@@ -12,7 +13,7 @@ interface InjectOptions {
 export const useInject = (
   ref: RefObject<HTMLDivElement>,
   selectors: string,
-  { onSuccess, onError, debug, id, onStart, parent }: InjectOptions = {},
+  { onSuccess, onError, debug, id, onStart, parent, inverse }: InjectOptions = {},
 ) => {
   const [isLoading, setIsLoading] = useState(true);
   const [element, setElement] = useState<HTMLDivElement>();
@@ -26,7 +27,11 @@ export const useInject = (
       if (ele) {
         if (id) ele.id = id;
         onStart?.(ele);
-        ref.current?.append(ele);
+        if (inverse && ref.current) {
+          ele.append(ref.current);
+        } else {
+          ref.current?.append(ele);
+        }
         setElement(ele);
         onSuccess?.(ele);
         isInject.current = true;

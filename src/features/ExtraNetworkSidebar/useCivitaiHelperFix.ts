@@ -3,6 +3,17 @@ import { useEffect, useRef, useState } from 'react';
 
 import civitaiHelperFix from '@/scripts/civitaiHelperFix';
 
+const replaceCivitaiHelper = (type: 'txt' | 'img') => {
+  const button = document.querySelector(`#${type}2img_extra_refresh`) as HTMLButtonElement;
+  button.click();
+
+  const civitaiButton = document.querySelector(`#${type}2img_extra_refresh`)
+    ?.nextSibling as HTMLButtonElement;
+  if (civitaiButton) {
+    civitaiButton.onclick = civitaiHelperFix;
+  }
+};
+
 interface CivitaiHelperFixOptions {
   debug?: string;
   onStart?: () => void;
@@ -13,7 +24,7 @@ export const useCivitaiHelperFix = ({
   onStart,
   onSuccess,
   debug,
-  timeout = 2000,
+  timeout = 1000,
 }: CivitaiHelperFixOptions = {}) => {
   const [isLoading, setIsLoading] = useState(true);
   const isInject = useRef(false);
@@ -27,26 +38,8 @@ export const useCivitaiHelperFix = ({
     if (canInject) {
       try {
         setTimeout(() => {
-          const txt2imgButton = document.querySelector(
-            '#txt2img_extra_refresh',
-          ) as HTMLButtonElement;
-          const img2imgButton = document.querySelector(
-            '#img2img_extra_refresh',
-          ) as HTMLButtonElement;
-          txt2imgButton.click();
-          img2imgButton.click();
-
-          const civitaiText2ImgButton = document.querySelector('#txt2img_extra_refresh')
-            ?.nextSibling as HTMLButtonElement;
-          if (civitaiText2ImgButton) {
-            civitaiText2ImgButton.onclick = civitaiHelperFix;
-          }
-          const civitaiImg2ImgButton = document.querySelector('#img2img_extra_refresh')
-            ?.nextSibling as HTMLButtonElement;
-          if (civitaiImg2ImgButton) {
-            civitaiImg2ImgButton.onclick = civitaiHelperFix;
-          }
-
+          replaceCivitaiHelper('txt');
+          replaceCivitaiHelper('img');
           civitaiHelperFix();
         }, timeout);
       } catch (error: any) {

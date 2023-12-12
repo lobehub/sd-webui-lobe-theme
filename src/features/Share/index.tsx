@@ -1,25 +1,21 @@
 import { Modal } from '@lobehub/ui';
-import { consola } from 'consola';
-import { memo, useCallback, useEffect, useState } from 'react';
+import { memo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { useInject } from '@/hooks/useInject';
+
 import Inner from './Inner';
-import addShareButton from './addShareButton';
+import { createButton } from './createButton';
 
 const Share = memo<{ type: 'txt' | 'img' }>(({ type }) => {
   const [open, setOpen] = useState(false);
-  const handleShare = useCallback(() => {
-    setOpen(true);
-  }, []);
+  const buttonReference = useRef<any>(createButton(type, setOpen));
   const { t } = useTranslation();
-  useEffect(() => {
-    try {
-      addShareButton(type, handleShare);
-      consola.success(`🤯 [layout] inject - Share ${type}`);
-    } catch (error) {
-      consola.error(`🤯 [layout] inject - Share ${type}`, error);
-    }
-  }, [type]);
+
+  useInject(buttonReference, `#image_buttons_${type}2img > .form`, {
+    debug: `[layout] inject - Share ${type}`,
+    inverse: true,
+  });
 
   return (
     <Modal

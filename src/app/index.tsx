@@ -2,6 +2,7 @@ import { LayoutHeader, LayoutMain, LayoutSidebar } from '@lobehub/ui';
 import isEqual from 'fast-deep-equal';
 import { memo, useEffect } from 'react';
 
+import PromptFormator from '@/features/PromptFormator';
 import '@/locales/config';
 import ImageInfo from '@/modules/ImageInfo/page';
 import PromptHighlight from '@/modules/PromptHighlight/page';
@@ -50,6 +51,7 @@ const Index = memo(() => {
           </LayoutSidebar>
         )}
         <Content className={cx(!setting.enableSidebar && styles.quicksettings)} />
+        <PromptFormator />
         <Share />
         {setting?.enableExtraNetworkSidebar && (
           <LayoutSidebar

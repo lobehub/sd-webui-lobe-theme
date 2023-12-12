@@ -2,8 +2,8 @@ import { useResponsive } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { memo, useRef } from 'react';
 
+import { removePromptScrollHide } from '@/features/Content/removePromptScrollHide';
 import { useInject } from '@/hooks/useInject';
-import formatPrompt from '@/scripts/formatPrompt';
 import { selectors, useAppStore } from '@/store';
 import { type DivProps } from '@/types';
 
@@ -22,27 +22,7 @@ const Content = memo<DivProps>(({ className, ...props }) => {
   useInject(mainReference, '.app', {
     debug: '[layout] inject - Content',
     onSuccess: () => {
-      // remove prompt scroll-hide
-      const textares = gradioApp().querySelectorAll(
-        `[id$="_prompt_container"] textarea`,
-      ) as NodeListOf<HTMLTextAreaElement>;
-      if (textares) {
-        for (const textarea of textares) {
-          textarea.classList.remove('scroll-hide');
-          textarea.style.height = 'auto';
-        }
-      }
-
-      // textarea
-      const interrogate = gradioApp().querySelector(
-        '#img2img_toprow .interrogate-col',
-      ) as HTMLDivElement;
-      const actions = gradioApp().querySelector('#img2img_actions_column') as HTMLDivElement;
-      if (interrogate && actions) {
-        actions.append(interrogate);
-      }
-
-      formatPrompt();
+      removePromptScrollHide();
     },
   });
 
@@ -59,6 +39,7 @@ const Content = memo<DivProps>(({ className, ...props }) => {
         ref={mainReference}
         {...props}
       />
+
       {setting.layoutSplitPreview && mobile === false && <SplitView />}
     </>
   );

@@ -11,6 +11,10 @@ export const useStyles = createStyles(
       #img2img_extra_search {
         width: 100% !important;
         max-width: unset !important;
+
+        textarea {
+          height: unset !important;
+        }
       }
 
       #txt2img-extra-network-sidebar,

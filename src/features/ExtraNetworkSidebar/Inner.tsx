@@ -2,45 +2,23 @@ import { ActionIcon, DraggablePanelBody, DraggablePanelFooter } from '@lobehub/u
 import { Skeleton, Slider } from 'antd';
 import isEqual from 'fast-deep-equal';
 import { ZoomIn, ZoomOut } from 'lucide-react';
-import { memo, useRef, useState } from 'react';
+import { memo, useState } from 'react';
 
 import { useStyles } from '@/features/ExtraNetworkSidebar/style';
-import { useCivitaiHelperFix } from '@/hooks/useCivitaiHelperFix';
-import { useInject } from '@/hooks/useInject';
+import { useCivitaiHelperFix } from '@/features/ExtraNetworkSidebar/useCivitaiHelperFix';
+import { useInjectExtraNetwork } from '@/features/ExtraNetworkSidebar/useInjectExtraNetwork';
 import { selectors, useAppStore } from '@/store';
 
 const Inner = memo(() => {
-  const txt2imgTabReference = useRef<HTMLDivElement>(gradioApp().querySelector('div#tab_txt2img'));
-  const img2imgTabReference = useRef<HTMLDivElement>(gradioApp().querySelector('div#tab_img2img'));
-  const txt2imgExtraNetworkSidebarReference = useRef<HTMLDivElement>(null);
-  const img2imgExtraNetworkSidebarReference = useRef<HTMLDivElement>(null);
+  const txt2imgExtraNetworkSidebarReference = useInjectExtraNetwork('txt');
+  const img2imgExtraNetworkSidebarReference = useInjectExtraNetwork('img');
   const setting = useAppStore(selectors.currentSetting, isEqual);
   const currentTab = useAppStore(selectors.currentTab);
   const [size, setSize] = useState<number>(setting.extraNetworkCardSize || 86);
   const { styles } = useStyles({ size });
 
-  useInject(txt2imgExtraNetworkSidebarReference, 'div#txt2img_extra_tabs');
-  useInject(img2imgExtraNetworkSidebarReference, 'div#img2img_extra_tabs');
-  useInject(txt2imgTabReference, 'div.tabitem.gradio-tabitem', {
-    id: 'txt2img_render',
-    parent: 'div#txt2img_extra_tabs',
-  });
-  useInject(img2imgTabReference, 'div.tabitem.gradio-tabitem', {
-    id: 'img2img_render',
-    parent: 'div#img2img_extra_tabs',
-  });
-
   const { isLoading } = useCivitaiHelperFix({
-    onSuccess: () => {
-      const txt2imgExtraNetworkButton = document.querySelectorAll(
-        '#txt2img_extra_tabs > .tab-nav > button',
-      )[1] as HTMLButtonElement;
-      txt2imgExtraNetworkButton?.click();
-      const img2imgExtraNetworkButton = document.querySelectorAll(
-        '#img2img_extra_tabs > .tab-nav > button',
-      )[1] as HTMLButtonElement;
-      img2imgExtraNetworkButton?.click();
-    },
+    debug: '[layout] inject - ExtraNetworkSidebar',
   });
 
   return (
