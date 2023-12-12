@@ -2,7 +2,7 @@ import { Tag, TagProps } from 'antd';
 import { memo } from 'react';
 import semver from 'semver';
 
-import { homepage } from '@/../package.json';
+import { GITHUB_REPO_URL } from '@/const/url';
 import { useAppStore } from '@/store';
 
 const VersionTag = memo<TagProps>((props) => {
@@ -14,7 +14,7 @@ const VersionTag = memo<TagProps>((props) => {
   const isLatest = semver.gte(version, latestVersion);
 
   return (
-    <a href={homepage} rel="noreferrer" target="_blank">
+    <a href={GITHUB_REPO_URL} rel="noreferrer" target="_blank">
       {isLatest ? (
         <Tag color="success" {...props}>
           v{version}

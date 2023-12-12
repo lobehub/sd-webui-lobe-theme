@@ -2,7 +2,8 @@ import type { SelectProps } from 'antd';
 import semver from 'semver';
 
 import defualtLocaleOptions from '@/../locales/options.json';
-import { homepage, version } from '@/../package.json';
+import { version } from '@/../package.json';
+import { GITHUB_REPO_URL } from '@/const/url';
 
 import type { WebuiSetting } from './initialState';
 
@@ -66,7 +67,10 @@ export const getLocaleOptions = async(): Promise<SelectProps['options']> => {
 
 export const getLatestVersion = async(): Promise<string> => {
   const res = await fetch(
-    `https://api.github.com/repos/${homepage.replace('https://github.com/', '')}/releases/latest`,
+    `https://api.github.com/repos/${GITHUB_REPO_URL.replace(
+      'https://github.com/',
+      '',
+    )}/releases/latest`,
   );
   const data = (await res.json()) as any;
   if (!data || !data.tag_name) return DEFAULT_VERSION;

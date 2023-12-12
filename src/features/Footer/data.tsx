@@ -1,7 +1,7 @@
 import { Icon } from '@lobehub/ui';
-import { Bug, FileClock, GitFork, Github } from 'lucide-react';
+import { Bug, FileClock, GitFork, Github, Heart } from 'lucide-react';
 
-import { homepage } from '../../../package.json';
+import { GITHUB_REPO_URL } from '@/const/url';
 
 export const Resources = [
   {
@@ -38,16 +38,22 @@ export const Resources = [
 
 export const Community = [
   {
+    icon: <Icon icon={Heart} size="small" />,
+    openExternal: true,
+    title: 'Sponsor',
+    url: `https://opencollective.com/lobehub`,
+  },
+  {
     icon: <Icon icon={Bug} size="small" />,
     openExternal: true,
     title: 'Report Bug',
-    url: `${homepage}/issues/new/choose`,
+    url: `${GITHUB_REPO_URL}/issues/new/choose`,
   },
   {
     icon: <Icon icon={GitFork} size="small" />,
     openExternal: true,
     title: 'Request Feature',
-    url: `${homepage}/issues/new/choose`,
+    url: `${GITHUB_REPO_URL}/issues/new/choose`,
   },
 ];
 
@@ -56,17 +62,23 @@ export const Help = [
     icon: <Icon icon={Github} size="small" />,
     openExternal: true,
     title: 'GitHub',
-    url: homepage,
+    url: GITHUB_REPO_URL,
   },
   {
     icon: <Icon icon={FileClock} size="small" />,
     openExternal: true,
     title: 'Changelog',
-    url: `${homepage}/blob/main/CHANGELOG.md`,
+    url: `${GITHUB_REPO_URL}/blob/main/CHANGELOG.md`,
   },
 ];
 
 export const MoreProducts = [
+  {
+    description: 'Stable Diffusion Extension',
+    openExternal: true,
+    title: '🤯 Lobe Theme',
+    url: 'https://github.com/lobehub/sd-webui-lobe-theme',
+  },
   {
     description: 'Minifier ExtraNetwrok Covers',
     openExternal: true,
@@ -86,9 +98,9 @@ export const MoreProducts = [
     url: 'https://ui.lobehub.com',
   },
   {
-    description: 'AI Commit CLI',
+    description: 'I18n AI Workflow',
     openExternal: true,
-    title: '💌 Lobe Commit',
-    url: 'https://github.com/lobehub/lobe-commit',
+    title: '🌐 Lobe i18n',
+    url: 'https://github.com/lobehub/lobe-cli-toolbox',
   },
 ];

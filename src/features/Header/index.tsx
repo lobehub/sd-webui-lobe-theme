@@ -3,10 +3,10 @@ import { useTheme } from 'antd-style';
 import { memo } from 'react';
 
 import { Logo } from '@/components';
+import { GITHUB_REPO_URL } from '@/const/url';
 import { useAppStore } from '@/store';
 import { type DivProps } from '@/types';
 
-import { homepage, name } from '../../../package.json';
 import Actions from './Actions';
 import Nav from './Nav';
 
@@ -23,12 +23,12 @@ const Header = memo<DivProps>(({ children }) => {
       actionsStyle={{ flex: 0 }}
       logo={
         <a
-          href={`${homepage}/releases`}
+          href={`${GITHUB_REPO_URL}/releases`}
           rel="noreferrer"
           style={{ alignItems: 'center', color: theme.colorText, display: 'flex' }}
           target="_blank"
         >
-          <Tooltip title={`${name} v${version}`}>
+          <Tooltip title={`LobeTheme v${version}`}>
             <Logo />
           </Tooltip>
         </a>

@@ -7,7 +7,7 @@ import { PropsWithChildren, memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
-import pkg from '@/../package.json';
+import { GITHUB_REPO_URL } from '@/const/url';
 
 import { useStyles } from './style';
 
@@ -99,7 +99,7 @@ const Preview = memo<PreviewProps>(({ imageType, withBackground, withFooter, chi
             {withFooter ? (
               <Flexbox align={'center'} className={styles.footer} gap={4}>
                 <Logo extra={'SD'} type={'combine'} />
-                <div className={styles.url}>{pkg.homepage}</div>
+                <div className={styles.url}>{GITHUB_REPO_URL}</div>
               </Flexbox>
             ) : (
               <div />

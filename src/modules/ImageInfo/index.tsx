@@ -1,16 +1,13 @@
-import { memo, useEffect } from 'react';
+import { memo } from 'react';
 
 import { useObserver } from '@/hooks/useObserver';
+import { useSelectorHide } from '@/hooks/useSelectorHide';
 
 import InfoBox from './features/InfoBox';
 
 const Index = memo<{ parentId: string }>(({ parentId }) => {
   const value = useObserver(`${parentId} .infotext`, { subSelector: 'p' });
-
-  useEffect(() => {
-    const infoContainer = gradioApp().querySelector(`${parentId} .infotext`) as HTMLDivElement;
-    infoContainer.style.display = 'none';
-  }, []);
+  useSelectorHide(`${parentId} .infotext`);
 
   return <InfoBox value={value} />;
 });
