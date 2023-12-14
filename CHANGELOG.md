@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 3.3.8](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.3.7...v3.3.8)
+
+<sup>Released on **2023-12-14**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix PWA.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix PWA ([21be524](https://github.com/lobehub/sd-webui-lobe-theme/commit/21be524))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.3.7](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.3.6...v3.3.7)
 
 <sup>Released on **2023-12-12**</sup>
