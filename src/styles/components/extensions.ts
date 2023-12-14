@@ -46,6 +46,10 @@ export default (token: Theme) => {
 
           &:nth-of-type(odd) {
             background: transparent !important;
+
+            &:hover {
+              background: ${token.colorFillSecondary} !important;
+            }
           }
         }
       }
