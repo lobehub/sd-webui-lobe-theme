@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 3.3.9](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.3.8...v3.3.9)
+
+<sup>Released on **2023-12-14**</sup>
+
+#### 💄 Styles
+
+- **misc**: Fix Items are not highlighted in the list.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Fix Items are not highlighted in the list, closes [#454](https://github.com/lobehub/sd-webui-lobe-theme/issues/454) ([1f8f85c](https://github.com/lobehub/sd-webui-lobe-theme/commit/1f8f85c))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.3.8](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.3.7...v3.3.8)
 
 <sup>Released on **2023-12-14**</sup>
