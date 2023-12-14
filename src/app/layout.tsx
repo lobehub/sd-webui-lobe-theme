@@ -1,12 +1,17 @@
+import { useCdnFn } from '@lobehub/ui';
 import { consola } from 'consola';
-import { PropsWithChildren, Suspense, memo, useEffect, useState } from 'react';
+import { PropsWithChildren, Suspense, memo, useCallback, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 
+import pkg from '@/../package.json';
 import { Loading } from '@/components';
 import GlobalLayout from '@/layouts';
 import { useAppStore } from '@/store';
 
 import manifest from './manifest';
+
+const TITLE = 'Stable Diffusion · LobeHub';
+const DESC = pkg.description;
 
 export const Layout = memo<PropsWithChildren>(({ children }) => {
   const [loading, setLoading] = useState(true);
@@ -15,6 +20,16 @@ export const Layout = memo<PropsWithChildren>(({ children }) => {
     setCurrentTab: st.setCurrentTab,
     storeLoading: st.loading,
   }));
+  const genCdnUrl = useCdnFn();
+  const genAssets = useCallback(
+    (path: string) =>
+      genCdnUrl({
+        path,
+        pkg: '@lobehub/assets-favicons',
+        version: 'latest',
+      }),
+    [],
+  );
 
   useEffect(() => {
     onInit();
@@ -30,32 +45,38 @@ export const Layout = memo<PropsWithChildren>(({ children }) => {
   return (
     <Suspense fallback="loading...">
       <Helmet>
+        <link href={genAssets('assets/favicon.ico')} rel="shortcut icon" />
         <link
-          href="https://registry.npmmirror.com/@lobehub/assets-favicons/1.1.0/files/assets/apple-touch-icon.png"
+          href={genAssets('assets/apple-touch-icon.png')}
           rel="apple-touch-icon"
           sizes="180x180"
         />
         <link
-          href="https://registry.npmmirror.com/@lobehub/assets-favicons/1.1.0/files/assets/favicon-32x32.png"
+          href={genAssets('assets/favicon-32x32.png')}
           rel="icon"
           sizes="32x32"
           type="image/png"
         />
         <link
-          href="https://registry.npmmirror.com/@lobehub/assets-favicons/1.1.0/files/assets/favicon-16x16.png"
+          href={genAssets('assets/favicon-16x16.png')}
           rel="icon"
           sizes="16x16"
           type="image/png"
         />
-        <link
-          href="https://registry.npmmirror.com/@lobehub/assets-favicons/1.1.0/files/assets/site.webmanifest"
-          rel="manifest"
+        <meta
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no"
+          name="viewport"
         />
-        <meta content="Stable Diffusion · LobeHub" name="apple-mobile-web-app-title" />
-        <meta content="Stable Diffusion · LobeHub" name="application-name" />
+        <meta content={TITLE} name="apple-mobile-web-app-title" />
+        <meta content={TITLE} name="application-name" />
+        <meta content={DESC} name="description" />
         <meta content="#000000" name="msapplication-TileColor" />
-        <meta content="#000000" name="theme-color" />
-        <link href={manifest} rel="manifest" />
+        <meta content="#fff" media="(prefers-color-scheme: light)" name="theme-color" />
+        <meta content="#000" media="(prefers-color-scheme: dark)" name="theme-color" />
+        <meta content="yes" name="apple-mobile-web-app-capable" />
+        <meta content={TITLE} name="apple-mobile-web-app-title" />
+        <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" />
+        <link href={manifest(genAssets)} rel="manifest" />
       </Helmet>
       <GlobalLayout>
         {storeLoading === false && loading === false ? children : <Loading />}
