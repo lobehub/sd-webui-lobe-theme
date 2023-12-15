@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 3.3.10](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.3.9...v3.3.10)
+
+<sup>Released on **2023-12-15**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix ImageInfo render error.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix ImageInfo render error ([3b5cde4](https://github.com/lobehub/sd-webui-lobe-theme/commit/3b5cde4))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.3.9](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.3.8...v3.3.9)
 
 <sup>Released on **2023-12-14**</sup>
