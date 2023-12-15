@@ -24,7 +24,7 @@ export const useCivitaiHelperFix = ({
   onStart,
   onSuccess,
   debug,
-  timeout = 1000,
+  timeout = 500,
 }: CivitaiHelperFixOptions = {}) => {
   const [isLoading, setIsLoading] = useState(true);
   const isInject = useRef(false);

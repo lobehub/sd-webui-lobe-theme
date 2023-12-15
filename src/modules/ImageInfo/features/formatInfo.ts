@@ -8,33 +8,26 @@ const formatPrompt = (prompt: string) => {
 export const formatInfo = (info: string) => {
   if (!info || info === 'undefined') return;
   if (!info.includes('<br>')) return;
-  const data = info?.split('<br>').filter(Boolean);
 
-  let position: any;
-  let negative: any;
-  let config: any;
+  let position: any = '';
+  let negative: any = '';
+  let config: any = '';
 
-  switch (data.length) {
-    case 1: {
-      config = data[0] || info;
-      break;
-    }
-    case 2: {
-      if (data[0].includes('Negative prompt:')) {
-        negative = data[0];
-        config = data[1];
-      } else {
-        position = data[0];
-        config = data[1];
-      }
-      break;
-    }
-    case 3: {
-      position = data[0];
-      negative = data[1];
-      config = data[2];
-    }
+  let data = info?.split('Negative prompt:').filter(Boolean);
+  if (data[1]) {
+    position = data[0];
+    data = data[1].split('Steps:');
+    negative = `Negative prompt: ${data[0]}`;
+    config = `Steps: ${data[1]}`;
+  } else {
+    data = data[0].split('Steps:');
+    position = data[0];
+    config = `Steps: ${data[1]}`;
   }
+
+  position = position.trim().replaceAll('<br>', '');
+  negative = negative.trim().replaceAll('<br>', '');
+  config = config.trim().replaceAll('<br>', '');
 
   if (!config.includes(',')) return;
   const clearConfigs = config

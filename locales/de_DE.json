@@ -1,8 +1,8 @@
 {
   "brand": {
+    "custom": "Benutzerdefiniert",
     "kitchen": "Kitchen",
-    "lobe": "LobeHub",
-    "custom": "Benutzerdefiniert"
+    "lobe": "LobeHub"
   },
   "cancel": "Abbrechen",
   "confirm": "Bestätigen",
@@ -10,15 +10,15 @@
     "initializing": "StableDiffusion / LobeTheme initialisiert, bitte warten..."
   },
   "footer": {
-    "resources": "Ressourcen",
     "community": "Gemeinschaft",
     "help": "Hilfe",
-    "moreProducts": "Weitere Produkte"
+    "moreProducts": "Weitere Produkte",
+    "resources": "Ressourcen"
   },
   "header": {
     "feedback": "Feedback",
-    "switchTheme": "Wechseln Sie das Licht-/Dunkel-Thema",
-    "setting": "Einstellung"
+    "setting": "Einstellung",
+    "switchTheme": "Wechseln Sie das Licht-/Dunkel-Thema"
   },
   "modal": {
     "themeFeedback": {
@@ -29,10 +29,15 @@
     }
   },
   "prompt": {
+    "area": {
+      "attribute": "Attributauswahl",
+      "object": "Objektauswahl",
+      "tag": "Tagauswahl"
+    },
     "load": "Lade-Prompt",
-    "set": "Setze-Prompt",
     "negative": "Negativ",
-    "positive": "Positiv"
+    "positive": "Positiv",
+    "set": "Setze-Prompt"
   },
   "setting": {
     "button": {
@@ -40,152 +45,152 @@
       "submit": "Anwenden und Schnittstelle neu starten"
     },
     "confirmPageUnload": {
-      "title": "Bestätigung beim Verlassen der Seite",
-      "desc": "Hilft, den Verlust von ungespeicherten Daten zu verhindern"
+      "desc": "Hilft, den Verlust von ungespeicherten Daten zu verhindern",
+      "title": "Bestätigung beim Verlassen der Seite"
     },
     "customFont": {
-      "title": "Benutzerdefinierte Schriftart",
-      "desc": "Wenn aktiviert, wird automatisch eine Webfont geladen, um die Anzeige von Text in Chinesisch, Englisch und Code zu verbessern"
+      "desc": "Wenn aktiviert, wird automatisch eine Webfont geladen, um die Anzeige von Text in Chinesisch, Englisch und Code zu verbessern",
+      "title": "Benutzerdefinierte Schriftart"
     },
     "customLogo": {
-      "title": "Benutzerdefiniertes Logo",
-      "desc": "Unterstützt URL / Base64 / Emoji-Symbole"
+      "desc": "Unterstützt URL / Base64 / Emoji-Symbole",
+      "title": "Benutzerdefiniertes Logo"
     },
     "customTitle": {
-      "title": "Benutzerdefinierter Titel",
-      "desc": "Benutzerdefinierter Logotitel"
+      "desc": "Benutzerdefinierter Logotitel",
+      "title": "Benutzerdefinierter Titel"
     },
     "extraNetworkSidebar": {
       "defaultCardSize": {
-        "title": "Modell-Cover-Größe",
-        "desc": "Standardwert der Modell-Cover-Größe beim Starten"
+        "desc": "Standardwert der Modell-Cover-Größe beim Starten",
+        "title": "Modell-Cover-Größe"
       },
       "defaultExpand": {
-        "title": "Standardmäßig erweitern",
-        "desc": "Ob die Seitenleiste beim Starten standardmäßig erweitert werden soll"
+        "desc": "Ob die Seitenleiste beim Starten standardmäßig erweitert werden soll",
+        "title": "Standardmäßig erweitern"
       },
       "defaultWidth": {
-        "title": "Standardbreite",
-        "desc": "Standardbreite der Seitenleiste beim Starten"
+        "desc": "Standardbreite der Seitenleiste beim Starten",
+        "title": "Standardbreite"
       },
       "displayMode": {
-        "title": "Anzeigemodus",
-        "desc": "Festgelegt als Rastermodus für konstante Anzeige, automatische Erweiterung, wenn die Maus an den Rand im schwebenden Modus bewegt wird"
+        "desc": "Festgelegt als Rastermodus für konstante Anzeige, automatische Erweiterung, wenn die Maus an den Rand im schwebenden Modus bewegt wird",
+        "title": "Anzeigemodus"
       },
       "enable": {
-        "title": "Aktivieren",
-        "desc": "Aktivieren Sie die zusätzliche Netzwerkseitenleiste auf der rechten Seite"
+        "desc": "Aktivieren Sie die zusätzliche Netzwerkseitenleiste auf der rechten Seite",
+        "title": "Aktivieren"
       }
     },
     "group": {
+      "experimental": "Experimentelle Funktionen",
       "extraNetworkSidebar": "Zusätzliche Netzwerkseitenleiste",
       "layout": "Layout-Einstellungen",
       "promptTextarea": "Prompt-Textfeld",
       "quickSettingSidebar": "Schnelle Einstellungsseitenleiste",
-      "theme": "Themen-Einstellungen",
-      "experimental": "Experimentelle Funktionen"
+      "theme": "Themen-Einstellungen"
     },
     "hideFooter": {
-      "title": "Fußzeile ausblenden",
-      "desc": "Blenden Sie die Themenfußzeile aus und zeigen Sie nur die Standardfußzeile von Stable Diffusion WebUI an"
+      "desc": "Blenden Sie die Themenfußzeile aus und zeigen Sie nur die Standardfußzeile von Stable Diffusion WebUI an",
+      "title": "Fußzeile ausblenden"
+    },
+    "imageInfo": {
+      "desc": "Zeigt bessere Bildinformationen im generierten Bild an",
+      "title": "Alternative Bildinformationen"
     },
     "language": {
-      "title": "Sprache",
-      "desc": "Lappen-Themensprache"
+      "desc": "Lappen-Themensprache",
+      "title": "Sprache"
     },
     "logoType": {
-      "title": "Logo-Typ",
       "desc": "Logo-Typ",
-      "preview": "Vorschau"
+      "preview": "Vorschau",
+      "title": "Logo-Typ"
     },
     "neutralColor": {
-      "title": "Neutrale Farbe",
-      "desc": "Passen Sie verschiedene Grautöne mit unterschiedlichen Farbtendenzen an, der zweite ist die originale neutrale Farbe der Küche"
+      "desc": "Passen Sie verschiedene Grautöne mit unterschiedlichen Farbtendenzen an, der zweite ist die originale neutrale Farbe der Küche",
+      "title": "Neutrale Farbe"
     },
     "primaryColor": {
-      "title": "Primärfarbe",
-      "desc": "Benutzerdefinierte Primärfarbe, die zweite ist die originale Farbe des Küchenthemas"
+      "desc": "Benutzerdefinierte Primärfarbe, die zweite ist die originale Farbe des Küchenthemas",
+      "title": "Primärfarbe"
     },
     "promptDisplayMode": {
-      "title": "Prompt-Anzeigemodus",
       "desc": "Feste Höhe oder automatische Höhe mit ziehbarer Größenänderungsunterstützung",
       "resizable": "Größenänderbar",
-      "scroll": "Scrollen"
+      "scroll": "Scrollen",
+      "title": "Prompt-Anzeigemodus"
     },
     "promptEditor": {
-      "title": "Prompt-Editor",
-      "desc": "Bietet einen einfachen Prompt-Editor oben in der Schnelleinstellungsseitenleiste"
+      "desc": "Bietet einen einfachen Prompt-Editor oben in der Schnelleinstellungsseitenleiste",
+      "title": "Prompt-Editor"
     },
     "promptHighlight": {
-      "title": "Prompt-Syntaxhervorhebung",
-      "desc": "Färbt die Prompt-Anzeige automatisch gemäß den Stable Diffusion-Syntaxregeln ein"
+      "desc": "Färbt die Prompt-Anzeige automatisch gemäß den Stable Diffusion-Syntaxregeln ein",
+      "title": "Prompt-Syntaxhervorhebung"
     },
     "quickSettingSidebar": {
       "defaultExpand": {
-        "title": "Standardmäßig erweitern",
-        "desc": "Ob die Seitenleiste beim Starten standardmäßig erweitert werden soll"
+        "desc": "Ob die Seitenleiste beim Starten standardmäßig erweitert werden soll",
+        "title": "Standardmäßig erweitern"
       },
       "defaultWidth": {
-        "title": "Standardbreite",
-        "desc": "Standardbreite der Seitenleiste beim Starten"
+        "desc": "Standardbreite der Seitenleiste beim Starten",
+        "title": "Standardbreite"
       },
       "displayMode": {
-        "title": "Anzeigemodus",
-        "desc": "Festgelegt als Rastermodus für konstante Anzeige, automatische Erweiterung, wenn die Maus an den Rand im schwebenden Modus bewegt wird"
+        "desc": "Festgelegt als Rastermodus für konstante Anzeige, automatische Erweiterung, wenn die Maus an den Rand im schwebenden Modus bewegt wird",
+        "title": "Anzeigemodus"
       },
       "enable": {
-        "title": "Aktivieren",
-        "desc": "Aktivieren Sie die Schnelleinstellungsseitenleiste auf der linken Seite"
+        "desc": "Aktivieren Sie die Schnelleinstellungsseitenleiste auf der linken Seite",
+        "title": "Aktivieren"
       }
     },
     "reduceAnimation": {
-      "title": "Animation reduzieren",
-      "desc": "Reduzieren Sie den Unschärfeeffekt und die Hintergrundflussfarbe, um die Geschmeidigkeit zu verbessern und die CPU-Auslastung zu reduzieren"
+      "desc": "Reduzieren Sie den Unschärfeeffekt und die Hintergrundflussfarbe, um die Geschmeidigkeit zu verbessern und die CPU-Auslastung zu reduzieren",
+      "title": "Animation reduzieren"
     },
     "splitPreviewer": {
-      "title": "Split-Previewer",
-      "desc": "Platzieren Sie das Prompt-Eingabefeld links und die Generierungsschaltfläche rechts, um sicherzustellen, dass das generierte Bild beim Scrollen immer oben angezeigt wird (experimentell)"
+      "desc": "Platzieren Sie das Prompt-Eingabefeld links und die Generierungsschaltfläche rechts, um sicherzustellen, dass das generierte Bild beim Scrollen immer oben angezeigt wird (experimentell)",
+      "title": "Split-Previewer"
     },
     "svgIcons": {
-      "title": "SVG-Symbole",
-      "desc": "Ersetzen Sie alle Emoji-Symbole in Stable Diffusion WebUI global durch SVG-Symbole"
+      "desc": "Ersetzen Sie alle Emoji-Symbole in Stable Diffusion WebUI global durch SVG-Symbole",
+      "title": "SVG-Symbole"
     },
     "tab": {
       "appearance": "Erscheinungsbild",
-      "sidebar": "Seitenleiste",
+      "experimental": "Experimentell",
       "layout": "Layout",
-      "experimental": "Experimentell"
-    },
-    "imageInfo": {
-      "title": "Alternative Bildinformationen",
-      "desc": "Zeigt bessere Bildinformationen im generierten Bild an"
+      "sidebar": "Seitenleiste"
     }
   },
   "share": "Teilen",
   "shareModal": {
     "download": "Screenshot herunterladen",
     "imageType": "Bildformat",
+    "info": "Bildinformationen",
     "screenshot": "Screenshot",
     "settings": "Exporteinstellungen",
-    "withBackground": "Hintergrundbild einbeziehen",
-    "withFooter": "Fußzeile einbeziehen",
-    "warn": "Bitte zuerst ein Bild generieren",
-    "info": "Bildinformationen",
-    "showNegative": "Negative anzeigen",
+    "showAllImages": "Alle Bilder anzeigen",
     "showConfig": "Konfiguration anzeigen",
-    "title": "Bildname",
+    "showNegative": "Negative anzeigen",
     "tabs": {
       "info": "Info",
       "settings": "Einstellungen"
     },
-    "showAllImages": "Alle Bilder anzeigen"
+    "title": "Bildname",
+    "warn": "Bitte zuerst ein Bild generieren",
+    "withBackground": "Hintergrundbild einbeziehen",
+    "withFooter": "Fußzeile einbeziehen"
   },
   "sidebar": {
     "extraNetwork": "Zusätzliches Netzwerk",
-    "quickSetting": "Schnelleinstellung",
     "mode": {
       "fixed": "Fixiert",
       "float": "Schwebend"
-    }
+    },
+    "quickSetting": "Schnelleinstellung"
   }
 }

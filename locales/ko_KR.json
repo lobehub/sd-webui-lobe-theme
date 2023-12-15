@@ -1,8 +1,8 @@
 {
   "brand": {
+    "custom": "사용자 정의",
     "kitchen": "Kitchen",
-    "lobe": "LobeHub",
-    "custom": "사용자 정의"
+    "lobe": "LobeHub"
   },
   "cancel": "취소",
   "confirm": "확인",
@@ -10,15 +10,15 @@
     "initializing": "StableDiffusion / LobeTheme이 초기화 중입니다. 잠시 기다려주세요..."
   },
   "footer": {
-    "resources": "자료",
     "community": "커뮤니티",
     "help": "도움말",
-    "moreProducts": "더 많은 제품"
+    "moreProducts": "더 많은 제품",
+    "resources": "자료"
   },
   "header": {
     "feedback": "피드백",
-    "switchTheme": "밝은/어두운 테마 전환",
-    "setting": "설정"
+    "setting": "설정",
+    "switchTheme": "밝은/어두운 테마 전환"
   },
   "modal": {
     "themeFeedback": {
@@ -29,10 +29,15 @@
     }
   },
   "prompt": {
+    "area": {
+      "attribute": "속성 선택",
+      "object": "객체 선택",
+      "tag": "태그 선택"
+    },
     "load": "로드 프롬프트",
-    "set": "설정 프롬프트",
     "negative": "부정적",
-    "positive": "긍정적"
+    "positive": "긍정적",
+    "set": "설정 프롬프트"
   },
   "setting": {
     "button": {
@@ -40,152 +45,152 @@
       "submit": "적용 및 인터페이스 재시작"
     },
     "confirmPageUnload": {
-      "title": "페이지 이탈 확인",
-      "desc": "저장되지 않은 데이터 손실을 방지하는 데 도움이 됩니다."
+      "desc": "저장되지 않은 데이터 손실을 방지하는 데 도움이 됩니다.",
+      "title": "페이지 이탈 확인"
     },
     "customFont": {
-      "title": "사용자 정의 글꼴",
-      "desc": "활성화되면 중국어, 영어 및 코드의 텍스트 표시를 향상시키기 위해 자동으로 웹 글꼴을 로드합니다."
+      "desc": "활성화되면 중국어, 영어 및 코드의 텍스트 표시를 향상시키기 위해 자동으로 웹 글꼴을 로드합니다.",
+      "title": "사용자 정의 글꼴"
     },
     "customLogo": {
-      "title": "사용자 정의 로고",
-      "desc": "URL / Base64 / 이모지 심볼 지원"
+      "desc": "URL / Base64 / 이모지 심볼 지원",
+      "title": "사용자 정의 로고"
     },
     "customTitle": {
-      "title": "사용자 정의 제목",
-      "desc": "사용자 정의 로고 제목"
+      "desc": "사용자 정의 로고 제목",
+      "title": "사용자 정의 제목"
     },
     "extraNetworkSidebar": {
       "defaultCardSize": {
-        "title": "모델 커버 크기",
-        "desc": "시작할 때 모델 커버 크기의 기본값"
+        "desc": "시작할 때 모델 커버 크기의 기본값",
+        "title": "모델 커버 크기"
       },
       "defaultExpand": {
-        "title": "기본 확장",
-        "desc": "시작할 때 사이드바를 기본적으로 확장할지 여부"
+        "desc": "시작할 때 사이드바를 기본적으로 확장할지 여부",
+        "title": "기본 확장"
       },
       "defaultWidth": {
-        "title": "기본 너비",
-        "desc": "시작할 때 사이드바의 기본 너비"
+        "desc": "시작할 때 사이드바의 기본 너비",
+        "title": "기본 너비"
       },
       "displayMode": {
-        "title": "표시 모드",
-        "desc": "고정된 그리드 모드로 상시 표시하거나 부유 모드에서 측면으로 마우스를 이동할 때 자동으로 확장"
+        "desc": "고정된 그리드 모드로 상시 표시하거나 부유 모드에서 측면으로 마우스를 이동할 때 자동으로 확장",
+        "title": "표시 모드"
       },
       "enable": {
-        "title": "활성화",
-        "desc": "오른쪽에 추가 네트워크 사이드바 활성화"
+        "desc": "오른쪽에 추가 네트워크 사이드바 활성화",
+        "title": "활성화"
       }
     },
     "group": {
+      "experimental": "실험적 기능",
       "extraNetworkSidebar": "추가 네트워크 사이드바",
       "layout": "레이아웃 설정",
       "promptTextarea": "프롬프트 텍스트 상자",
       "quickSettingSidebar": "빠른 설정 사이드바",
-      "theme": "테마 설정",
-      "experimental": "실험적 기능"
+      "theme": "테마 설정"
     },
     "hideFooter": {
-      "title": "푸터 숨기기",
-      "desc": "테마 푸터를 숨기고 Stable Diffusion 웹UI의 기본 푸터만 표시"
+      "desc": "테마 푸터를 숨기고 Stable Diffusion 웹UI의 기본 푸터만 표시",
+      "title": "푸터 숨기기"
+    },
+    "imageInfo": {
+      "desc": "생성된 이미지에서 더 나은 이미지 정보 표시",
+      "title": "대체 이미지 정보"
     },
     "language": {
-      "title": "언어",
-      "desc": "로브 테마 언어"
+      "desc": "로브 테마 언어",
+      "title": "언어"
     },
     "logoType": {
-      "title": "로고 유형",
       "desc": "로고 유형",
-      "preview": "미리보기"
+      "preview": "미리보기",
+      "title": "로고 유형"
     },
     "neutralColor": {
-      "title": "중립 색상",
-      "desc": "다른 색상 경향을 가진 다양한 회색 음영을 사용자 정의합니다. 두 번째는 원래 주방의 중립 색상입니다."
+      "desc": "다른 색상 경향을 가진 다양한 회색 음영을 사용자 정의합니다. 두 번째는 원래 주방의 중립 색상입니다.",
+      "title": "중립 색상"
     },
     "primaryColor": {
-      "title": "기본 색상",
-      "desc": "사용자 정의 기본 색상, 두 번째는 원래 주방 테마 색상입니다."
+      "desc": "사용자 정의 기본 색상, 두 번째는 원래 주방 테마 색상입니다.",
+      "title": "기본 색상"
     },
     "promptDisplayMode": {
-      "title": "프롬프트 표시 모드",
       "desc": "고정 높이 또는 드래그 가능한 크기 조정 지원을 통한 자동 높이",
       "resizable": "크기 조절 가능",
-      "scroll": "스크롤"
+      "scroll": "스크롤",
+      "title": "프롬프트 표시 모드"
     },
     "promptEditor": {
-      "title": "프롬프트 편집기",
-      "desc": "빠른 설정 사이드바 상단에 간단한 프롬프트 편집기 제공"
+      "desc": "빠른 설정 사이드바 상단에 간단한 프롬프트 편집기 제공",
+      "title": "프롬프트 편집기"
     },
     "promptHighlight": {
-      "title": "프롬프트 구문 강조",
-      "desc": "Stable Diffusion 구문 규칙에 따라 프롬프트 표시를 자동으로 색상화"
+      "desc": "Stable Diffusion 구문 규칙에 따라 프롬프트 표시를 자동으로 색상화",
+      "title": "프롬프트 구문 강조"
     },
     "quickSettingSidebar": {
       "defaultExpand": {
-        "title": "기본 확장",
-        "desc": "시작할 때 사이드바를 기본적으로 확장할지 여부"
+        "desc": "시작할 때 사이드바를 기본적으로 확장할지 여부",
+        "title": "기본 확장"
       },
       "defaultWidth": {
-        "title": "기본 너비",
-        "desc": "시작할 때 사이드바의 기본 너비"
+        "desc": "시작할 때 사이드바의 기본 너비",
+        "title": "기본 너비"
       },
       "displayMode": {
-        "title": "표시 모드",
-        "desc": "고정된 그리드 모드로 상시 표시하거나 부유 모드에서 측면으로 마우스를 이동할 때 자동으로 확장"
+        "desc": "고정된 그리드 모드로 상시 표시하거나 부유 모드에서 측면으로 마우스를 이동할 때 자동으로 확장",
+        "title": "표시 모드"
       },
       "enable": {
-        "title": "활성화",
-        "desc": "왼쪽에 빠른 설정 사이드바 활성화"
+        "desc": "왼쪽에 빠른 설정 사이드바 활성화",
+        "title": "활성화"
       }
     },
     "reduceAnimation": {
-      "title": "애니메이션 줄이기",
-      "desc": "부드러움을 향상시키고 CPU 사용량을 줄일 수 있는 흐림 효과와 배경 흐름 색상을 줄입니다."
+      "desc": "부드러움을 향상시키고 CPU 사용량을 줄일 수 있는 흐림 효과와 배경 흐름 색상을 줄입니다.",
+      "title": "애니메이션 줄이기"
     },
     "splitPreviewer": {
-      "title": "분할 미리보기",
-      "desc": "프롬프트 입력 상자를 왼쪽에 놓고 생성 버튼을 오른쪽에 놓아 스크롤할 때 항상 생성된 이미지가 위에 표시되도록 합니다 (실험적)"
+      "desc": "프롬프트 입력 상자를 왼쪽에 놓고 생성 버튼을 오른쪽에 놓아 스크롤할 때 항상 생성된 이미지가 위에 표시되도록 합니다 (실험적)",
+      "title": "분할 미리보기"
     },
     "svgIcons": {
-      "title": "SVG 아이콘",
-      "desc": "Stable Diffusion 웹UI의 모든 이모지 아이콘을 전역적으로 SVG 아이콘으로 대체"
+      "desc": "Stable Diffusion 웹UI의 모든 이모지 아이콘을 전역적으로 SVG 아이콘으로 대체",
+      "title": "SVG 아이콘"
     },
     "tab": {
       "appearance": "외관",
-      "sidebar": "사이드바",
+      "experimental": "실험적 기능",
       "layout": "레이아웃",
-      "experimental": "실험적 기능"
-    },
-    "imageInfo": {
-      "title": "대체 이미지 정보",
-      "desc": "생성된 이미지에서 더 나은 이미지 정보 표시"
+      "sidebar": "사이드바"
     }
   },
   "share": "공유",
   "shareModal": {
     "download": "스크린샷 다운로드",
     "imageType": "이미지 형식",
+    "info": "이미지 정보",
     "screenshot": "스크린샷",
     "settings": "내보내기 설정",
-    "withBackground": "배경 이미지 포함",
-    "withFooter": "푸터 포함",
-    "warn": "먼저 이미지를 생성해주세요",
-    "info": "이미지 정보",
-    "showNegative": "부정적 프로모션 표시",
+    "showAllImages": "모든 이미지 표시",
     "showConfig": "생성 구성 표시",
-    "title": "이미지 이름",
+    "showNegative": "부정적 프로모션 표시",
     "tabs": {
       "info": "정보",
       "settings": "설정"
     },
-    "showAllImages": "모든 이미지 표시"
+    "title": "이미지 이름",
+    "warn": "먼저 이미지를 생성해주세요",
+    "withBackground": "배경 이미지 포함",
+    "withFooter": "푸터 포함"
   },
   "sidebar": {
     "extraNetwork": "추가 네트워크",
-    "quickSetting": "빠른 설정",
     "mode": {
       "fixed": "고정",
       "float": "부유"
-    }
+    },
+    "quickSetting": "빠른 설정"
   }
 }

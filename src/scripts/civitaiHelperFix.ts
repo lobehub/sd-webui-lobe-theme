@@ -250,14 +250,14 @@ export default () => {
   // eslint-disable-next-line unicorn/consistent-function-scoping
   const fnClick = () => {
     // eslint-disable-next-line @typescript-eslint/no-use-before-define
-    setTimeout(fn, 2000);
+    setTimeout(fn, 500);
   };
   fn = () => {
     let retryTimes = 0;
     const fixInterval = setInterval(() => {
       consola.info('🤯 [civitai helper] update card for civitai');
       const checkDom = document.querySelector('#txt2img_lora_cards') as any;
-      if (checkDom || retryTimes > 10) {
+      if (checkDom || retryTimes > 5) {
         if (checkDomCurrent !== checkDom) {
           x = 0;
           checkDomCurrent = checkDom;
@@ -273,13 +273,13 @@ export default () => {
         }
         const y = updateCardForCivitai()?.length as number;
         if (typeof y === 'number' && y < x) x = y;
-        if (retryTimes > 10 || !checkDom || y >= MODEL_TYPE_LIST.length || y > x) {
+        if (retryTimes > 5 || !checkDom || y >= MODEL_TYPE_LIST.length || y > x) {
           clearInterval(fixInterval);
           x = y ?? x;
         }
       }
       retryTimes++;
-    }, 2000);
+    }, 500);
   };
 
   return fn();

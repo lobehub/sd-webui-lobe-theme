@@ -1,8 +1,8 @@
 {
   "brand": {
+    "custom": "自定義",
     "kitchen": "Kitchen",
-    "lobe": "LobeHub",
-    "custom": "自定義"
+    "lobe": "LobeHub"
   },
   "cancel": "取消",
   "confirm": "確認",
@@ -10,15 +10,15 @@
     "initializing": "StableDiffusion / LobeTheme 正在初始化，請稍候..."
   },
   "footer": {
-    "resources": "資源",
     "community": "社區",
     "help": "幫助",
-    "moreProducts": "更多產品"
+    "moreProducts": "更多產品",
+    "resources": "資源"
   },
   "header": {
     "feedback": "反饋",
-    "switchTheme": "切換明/暗主題",
-    "setting": "設置"
+    "setting": "設置",
+    "switchTheme": "切換明/暗主題"
   },
   "modal": {
     "themeFeedback": {
@@ -29,10 +29,15 @@
     }
   },
   "prompt": {
+    "area": {
+      "attribute": "屬性選擇",
+      "object": "對象選擇",
+      "tag": "標籤選擇"
+    },
     "load": "載入提示",
-    "set": "設置提示",
     "negative": "否定",
-    "positive": "肯定"
+    "positive": "肯定",
+    "set": "設置提示"
   },
   "setting": {
     "button": {
@@ -40,152 +45,152 @@
       "submit": "應用並重新啟動界面"
     },
     "confirmPageUnload": {
-      "title": "離開頁面確認",
-      "desc": "幫助防止未保存數據的丟失"
+      "desc": "幫助防止未保存數據的丟失",
+      "title": "離開頁面確認"
     },
     "customFont": {
-      "title": "自定義字體",
-      "desc": "啟用後，將自動加載網頁字體，以增強中文、英文和代碼的顯示效果"
+      "desc": "啟用後，將自動加載網頁字體，以增強中文、英文和代碼的顯示效果",
+      "title": "自定義字體"
     },
     "customLogo": {
-      "title": "自定義標誌",
-      "desc": "支援 URL / Base64 / 表情符號"
+      "desc": "支援 URL / Base64 / 表情符號",
+      "title": "自定義標誌"
     },
     "customTitle": {
-      "title": "自定義標題",
-      "desc": "自定義標誌標題"
+      "desc": "自定義標誌標題",
+      "title": "自定義標題"
     },
     "extraNetworkSidebar": {
       "defaultCardSize": {
-        "title": "模型封面大小",
-        "desc": "啟動時的模型封面大小的默認值"
+        "desc": "啟動時的模型封面大小的默認值",
+        "title": "模型封面大小"
       },
       "defaultExpand": {
-        "title": "默認展開",
-        "desc": "啟動時是否默認展開側邊欄"
+        "desc": "啟動時是否默認展開側邊欄",
+        "title": "默認展開"
       },
       "defaultWidth": {
-        "title": "默認寬度",
-        "desc": "啟動時側邊欄的默認寬度"
+        "desc": "啟動時側邊欄的默認寬度",
+        "title": "默認寬度"
       },
       "displayMode": {
-        "title": "顯示模式",
-        "desc": "固定為網格模式以保持恆定顯示，在浮動模式下當滑鼠移至側邊時自動展開"
+        "desc": "固定為網格模式以保持恆定顯示，在浮動模式下當滑鼠移至側邊時自動展開",
+        "title": "顯示模式"
       },
       "enable": {
-        "title": "啟用",
-        "desc": "在右側啟用額外的網絡側邊欄"
+        "desc": "在右側啟用額外的網絡側邊欄",
+        "title": "啟用"
       }
     },
     "group": {
+      "experimental": "實驗性功能",
       "extraNetworkSidebar": "額外網絡側邊欄",
       "layout": "佈局設置",
       "promptTextarea": "提示文本框",
       "quickSettingSidebar": "快速設置側邊欄",
-      "theme": "主題設置",
-      "experimental": "實驗性功能"
+      "theme": "主題設置"
     },
     "hideFooter": {
-      "title": "隱藏頁腳",
-      "desc": "隱藏主題頁腳，僅顯示 Stable Diffusion webui 的默認頁腳"
+      "desc": "隱藏主題頁腳，僅顯示 Stable Diffusion webui 的默認頁腳",
+      "title": "隱藏頁腳"
+    },
+    "imageInfo": {
+      "desc": "在生成的圖片中顯示更好的圖片資訊",
+      "title": "替代圖片資訊"
     },
     "language": {
-      "title": "語言",
-      "desc": "Lobe 主題語言"
+      "desc": "Lobe 主題語言",
+      "title": "語言"
     },
     "logoType": {
-      "title": "標誌類型",
       "desc": "標誌類型",
-      "preview": "預覽"
+      "preview": "預覽",
+      "title": "標誌類型"
     },
     "neutralColor": {
-      "title": "中性顏色",
-      "desc": "使用不同的色調自定義不同的灰色，第二個是原始 Kitchen 中性顏色"
+      "desc": "使用不同的色調自定義不同的灰色，第二個是原始 Kitchen 中性顏色",
+      "title": "中性顏色"
     },
     "primaryColor": {
-      "title": "主要顏色",
-      "desc": "自定義主要顏色，第二個是原始 Kitchen 主題顏色"
+      "desc": "自定義主要顏色，第二個是原始 Kitchen 主題顏色",
+      "title": "主要顏色"
     },
     "promptDisplayMode": {
-      "title": "提示顯示模式",
       "desc": "固定高度或可拖動調整大小的自動高度",
       "resizable": "可調整大小",
-      "scroll": "滾動"
+      "scroll": "滾動",
+      "title": "提示顯示模式"
     },
     "promptEditor": {
-      "title": "提示編輯器",
-      "desc": "在快速設置側邊欄頂部提供簡單的提示編輯器"
+      "desc": "在快速設置側邊欄頂部提供簡單的提示編輯器",
+      "title": "提示編輯器"
     },
     "promptHighlight": {
-      "title": "提示語法高亮",
-      "desc": "根據 Stable Diffusion 語法規則自動著色提示顯示"
+      "desc": "根據 Stable Diffusion 語法規則自動著色提示顯示",
+      "title": "提示語法高亮"
     },
     "quickSettingSidebar": {
       "defaultExpand": {
-        "title": "默認展開",
-        "desc": "啟動時是否默認展開側邊欄"
+        "desc": "啟動時是否默認展開側邊欄",
+        "title": "默認展開"
       },
       "defaultWidth": {
-        "title": "默認寬度",
-        "desc": "啟動時側邊欄的默認寬度"
+        "desc": "啟動時側邊欄的默認寬度",
+        "title": "默認寬度"
       },
       "displayMode": {
-        "title": "顯示模式",
-        "desc": "固定為網格模式以保持恆定顯示，在浮動模式下當滑鼠移至側邊時自動展開"
+        "desc": "固定為網格模式以保持恆定顯示，在浮動模式下當滑鼠移至側邊時自動展開",
+        "title": "顯示模式"
       },
       "enable": {
-        "title": "啟用",
-        "desc": "在左側啟用快速設置側邊欄"
+        "desc": "在左側啟用快速設置側邊欄",
+        "title": "啟用"
       }
     },
     "reduceAnimation": {
-      "title": "減少動畫",
-      "desc": "減少模糊效果和背景流動顏色，可提高流暢度並節省 CPU 使用率"
+      "desc": "減少模糊效果和背景流動顏色，可提高流暢度並節省 CPU 使用率",
+      "title": "減少動畫"
     },
     "splitPreviewer": {
-      "title": "分割預覽器",
-      "desc": "將提示輸入框放在左側，生成按鈕放在右側，確保滾動時始終在頂部顯示生成的圖像（實驗性）"
+      "desc": "將提示輸入框放在左側，生成按鈕放在右側，確保滾動時始終在頂部顯示生成的圖像（實驗性）",
+      "title": "分割預覽器"
     },
     "svgIcons": {
-      "title": "SVG 圖示",
-      "desc": "全局替換 Stable Diffusion webui 中的所有表情符號為 SVG 圖示"
+      "desc": "全局替換 Stable Diffusion webui 中的所有表情符號為 SVG 圖示",
+      "title": "SVG 圖示"
     },
     "tab": {
       "appearance": "外觀",
-      "sidebar": "側邊欄",
+      "experimental": "實驗性",
       "layout": "佈局",
-      "experimental": "實驗性"
-    },
-    "imageInfo": {
-      "title": "替代圖片資訊",
-      "desc": "在生成的圖片中顯示更好的圖片資訊"
+      "sidebar": "側邊欄"
     }
   },
   "share": "分享",
   "shareModal": {
     "download": "下載截圖",
     "imageType": "圖片格式",
+    "info": "圖片資訊",
     "screenshot": "截圖",
     "settings": "匯出設定",
-    "withBackground": "包括背景圖片",
-    "withFooter": "包括頁腳",
-    "warn": "請先生成圖片",
-    "info": "圖片資訊",
-    "showNegative": "顯示負面推廣",
+    "showAllImages": "顯示所有圖片",
     "showConfig": "顯示生成配置",
-    "title": "圖片名稱",
+    "showNegative": "顯示負面推廣",
     "tabs": {
       "info": "資訊",
       "settings": "設定"
     },
-    "showAllImages": "顯示所有圖片"
+    "title": "圖片名稱",
+    "warn": "請先生成圖片",
+    "withBackground": "包括背景圖片",
+    "withFooter": "包括頁腳"
   },
   "sidebar": {
     "extraNetwork": "額外網絡",
-    "quickSetting": "快速設置",
     "mode": {
       "fixed": "固定",
       "float": "浮動"
-    }
+    },
+    "quickSetting": "快速設置"
   }
 }

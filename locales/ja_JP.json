@@ -1,8 +1,8 @@
 {
   "brand": {
+    "custom": "カスタム",
     "kitchen": "Kitchen",
-    "lobe": "LobeHub",
-    "custom": "カスタム"
+    "lobe": "LobeHub"
   },
   "cancel": "キャンセル",
   "confirm": "確認",
@@ -10,15 +10,15 @@
     "initializing": "StableDiffusion / LobeTheme が初期化中です。お待ちください..."
   },
   "footer": {
-    "resources": "リソース",
     "community": "コミュニティ",
     "help": "ヘルプ",
-    "moreProducts": "その他の製品"
+    "moreProducts": "その他の製品",
+    "resources": "リソース"
   },
   "header": {
     "feedback": "フィードバック",
-    "switchTheme": "ライト/ダークテーマの切り替え",
-    "setting": "設定"
+    "setting": "設定",
+    "switchTheme": "ライト/ダークテーマの切り替え"
   },
   "modal": {
     "themeFeedback": {
@@ -29,10 +29,15 @@
     }
   },
   "prompt": {
+    "area": {
+      "attribute": "属性選択",
+      "object": "オブジェクト選択",
+      "tag": "タグ選択"
+    },
     "load": "プロンプトの読み込み",
-    "set": "プロンプトの設定",
     "negative": "ネガティブ",
-    "positive": "ポジティブ"
+    "positive": "ポジティブ",
+    "set": "プロンプトの設定"
   },
   "setting": {
     "button": {
@@ -40,152 +45,152 @@
       "submit": "適用してインターフェースを再起動"
     },
     "confirmPageUnload": {
-      "title": "ページ離脱の確認",
-      "desc": "未保存のデータの損失を防ぐのに役立ちます"
+      "desc": "未保存のデータの損失を防ぐのに役立ちます",
+      "title": "ページ離脱の確認"
     },
     "customFont": {
-      "title": "カスタムフォント",
-      "desc": "有効にすると、中国語、英語、コードのテキストの表示を向上させるために自動的にWebフォントを読み込みます"
+      "desc": "有効にすると、中国語、英語、コードのテキストの表示を向上させるために自動的にWebフォントを読み込みます",
+      "title": "カスタムフォント"
     },
     "customLogo": {
-      "title": "カスタムロゴ",
-      "desc": "URL / Base64 / 絵文字シンボルをサポート"
+      "desc": "URL / Base64 / 絵文字シンボルをサポート",
+      "title": "カスタムロゴ"
     },
     "customTitle": {
-      "title": "カスタムタイトル",
-      "desc": "カスタムロゴのタイトル"
+      "desc": "カスタムロゴのタイトル",
+      "title": "カスタムタイトル"
     },
     "extraNetworkSidebar": {
       "defaultCardSize": {
-        "title": "モデルカバーサイズ",
-        "desc": "開始時のモデルカバーサイズのデフォルト値"
+        "desc": "開始時のモデルカバーサイズのデフォルト値",
+        "title": "モデルカバーサイズ"
       },
       "defaultExpand": {
-        "title": "デフォルト展開",
-        "desc": "開始時にサイドバーをデフォルトで展開するかどうか"
+        "desc": "開始時にサイドバーをデフォルトで展開するかどうか",
+        "title": "デフォルト展開"
       },
       "defaultWidth": {
-        "title": "デフォルト幅",
-        "desc": "開始時のサイドバーのデフォルト幅"
+        "desc": "開始時のサイドバーのデフォルト幅",
+        "title": "デフォルト幅"
       },
       "displayMode": {
-        "title": "表示モード",
-        "desc": "固定表示のグリッドモードまたは浮動モードでサイドにマウスを移動すると自動的に展開"
+        "desc": "固定表示のグリッドモードまたは浮動モードでサイドにマウスを移動すると自動的に展開",
+        "title": "表示モード"
       },
       "enable": {
-        "title": "有効にする",
-        "desc": "右側に追加のネットワークサイドバーを有効にする"
+        "desc": "右側に追加のネットワークサイドバーを有効にする",
+        "title": "有効にする"
       }
     },
     "group": {
+      "experimental": "実験的な機能",
       "extraNetworkSidebar": "追加のネットワークサイドバー",
       "layout": "レイアウト設定",
       "promptTextarea": "プロンプトテキストボックス",
       "quickSettingSidebar": "クイック設定サイドバー",
-      "theme": "テーマ設定",
-      "experimental": "実験的な機能"
+      "theme": "テーマ設定"
     },
     "hideFooter": {
-      "title": "フッターを非表示",
-      "desc": "テーマのフッターを非表示にし、Stable Diffusion WebUI のデフォルトフッターのみを表示"
+      "desc": "テーマのフッターを非表示にし、Stable Diffusion WebUI のデフォルトフッターのみを表示",
+      "title": "フッターを非表示"
+    },
+    "imageInfo": {
+      "desc": "生成された画像でより良い画像情報を表示します",
+      "title": "画像情報の代替"
     },
     "language": {
-      "title": "言語",
-      "desc": "Lobeテーマの言語"
+      "desc": "Lobeテーマの言語",
+      "title": "言語"
     },
     "logoType": {
-      "title": "ロゴタイプ",
       "desc": "ロゴタイプ",
-      "preview": "プレビュー"
+      "preview": "プレビュー",
+      "title": "ロゴタイプ"
     },
     "neutralColor": {
-      "title": "ニュートラルカラー",
-      "desc": "異なる色傾向のグレーの異なるシェードをカスタマイズします。2番目は元のキッチンのニュートラルカラーです"
+      "desc": "異なる色傾向のグレーの異なるシェードをカスタマイズします。2番目は元のキッチンのニュートラルカラーです",
+      "title": "ニュートラルカラー"
     },
     "primaryColor": {
-      "title": "プライマリカラー",
-      "desc": "カスタムプライマリカラー。2番目は元のキッチンのテーマカラーです"
+      "desc": "カスタムプライマリカラー。2番目は元のキッチンのテーマカラーです",
+      "title": "プライマリカラー"
     },
     "promptDisplayMode": {
-      "title": "プロンプト表示モード",
       "desc": "固定高さまたはドラッグ可能なリサイズサポート付きの自動高さ",
       "resizable": "リサイズ可能",
-      "scroll": "スクロール"
+      "scroll": "スクロール",
+      "title": "プロンプト表示モード"
     },
     "promptEditor": {
-      "title": "プロンプトエディタ",
-      "desc": "クイック設定サイドバーの上部にシンプルなプロンプトエディタを提供"
+      "desc": "クイック設定サイドバーの上部にシンプルなプロンプトエディタを提供",
+      "title": "プロンプトエディタ"
     },
     "promptHighlight": {
-      "title": "プロンプトシンタックスハイライト",
-      "desc": "Stable Diffusionの構文ルールに従ってプロンプト表示を自動的にカラーリング"
+      "desc": "Stable Diffusionの構文ルールに従ってプロンプト表示を自動的にカラーリング",
+      "title": "プロンプトシンタックスハイライト"
     },
     "quickSettingSidebar": {
       "defaultExpand": {
-        "title": "デフォルト展開",
-        "desc": "開始時にサイドバーをデフォルトで展開するかどうか"
+        "desc": "開始時にサイドバーをデフォルトで展開するかどうか",
+        "title": "デフォルト展開"
       },
       "defaultWidth": {
-        "title": "デフォルト幅",
-        "desc": "開始時のサイドバーのデフォルト幅"
+        "desc": "開始時のサイドバーのデフォルト幅",
+        "title": "デフォルト幅"
       },
       "displayMode": {
-        "title": "表示モード",
-        "desc": "固定表示のグリッドモードまたは浮動モードでサイドにマウスを移動すると自動的に展開"
+        "desc": "固定表示のグリッドモードまたは浮動モードでサイドにマウスを移動すると自動的に展開",
+        "title": "表示モード"
       },
       "enable": {
-        "title": "有効にする",
-        "desc": "左側にクイック設定サイドバーを有効にする"
+        "desc": "左側にクイック設定サイドバーを有効にする",
+        "title": "有効にする"
       }
     },
     "reduceAnimation": {
-      "title": "アニメーションを削減",
-      "desc": "ぼかし効果と背景フローカラーを削減し、滑らかさを向上させCPU使用量を節約"
+      "desc": "ぼかし効果と背景フローカラーを削減し、滑らかさを向上させCPU使用量を節約",
+      "title": "アニメーションを削減"
     },
     "splitPreviewer": {
-      "title": "分割プレビューア",
-      "desc": "プロンプト入力ボックスを左側に配置し、生成ボタンを右側に配置し、スクロール時に常に生成された画像が上部に表示されるようにします（実験的）"
+      "desc": "プロンプト入力ボックスを左側に配置し、生成ボタンを右側に配置し、スクロール時に常に生成された画像が上部に表示されるようにします（実験的）",
+      "title": "分割プレビューア"
     },
     "svgIcons": {
-      "title": "SVGアイコン",
-      "desc": "Stable Diffusion WebUI のすべての絵文字アイコンをグローバルにSVGアイコンで置き換えます"
+      "desc": "Stable Diffusion WebUI のすべての絵文字アイコンをグローバルにSVGアイコンで置き換えます",
+      "title": "SVGアイコン"
     },
     "tab": {
       "appearance": "外観",
-      "sidebar": "サイドバー",
+      "experimental": "実験的",
       "layout": "レイアウト",
-      "experimental": "実験的"
-    },
-    "imageInfo": {
-      "title": "画像情報の代替",
-      "desc": "生成された画像でより良い画像情報を表示します"
+      "sidebar": "サイドバー"
     }
   },
   "share": "共有",
   "shareModal": {
     "download": "スクリーンショットをダウンロード",
     "imageType": "画像形式",
+    "info": "画像情報",
     "screenshot": "スクリーンショット",
     "settings": "エクスポート設定",
-    "withBackground": "背景画像を含める",
-    "withFooter": "フッターを含める",
-    "warn": "まず画像を生成してください",
-    "info": "画像情報",
-    "showNegative": "ネガティブプロモーションを表示",
+    "showAllImages": "すべての画像を表示",
     "showConfig": "生成設定を表示",
-    "title": "画像名",
+    "showNegative": "ネガティブプロモーションを表示",
     "tabs": {
       "info": "情報",
       "settings": "設定"
     },
-    "showAllImages": "すべての画像を表示"
+    "title": "画像名",
+    "warn": "まず画像を生成してください",
+    "withBackground": "背景画像を含める",
+    "withFooter": "フッターを含める"
   },
   "sidebar": {
     "extraNetwork": "追加のネットワーク",
-    "quickSetting": "クイック設定",
     "mode": {
       "fixed": "固定",
       "float": "フロート"
-    }
+    },
+    "quickSetting": "クイック設定"
   }
 }
