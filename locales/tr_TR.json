@@ -1,0 +1,196 @@
+{
+  "brand": {
+    "custom": "Özel",
+    "kitchen": "Mutfak",
+    "lobe": "LobeHub"
+  },
+  "cancel": "İptal",
+  "confirm": "Onayla",
+  "custom": {
+    "initializing": "StableDiffusion / LobeTheme başlatılıyor, lütfen bekleyin..."
+  },
+  "footer": {
+    "community": "Topluluk",
+    "help": "Yardım",
+    "moreProducts": "Daha Fazla Ürün",
+    "resources": "Kaynaklar"
+  },
+  "header": {
+    "feedback": "Geribildirim",
+    "setting": "Ayarlar",
+    "switchTheme": "Aydınlık/Karanlık Tema Değiştir"
+  },
+  "modal": {
+    "themeFeedback": {
+      "title": "Tema Geri Bildirimi"
+    },
+    "themeSetting": {
+      "title": "Tema Ayarları"
+    }
+  },
+  "prompt": {
+    "area": {
+      "attribute": "Özellik Seçimi",
+      "object": "Nesne Seçimi",
+      "tag": "Etiket Seçimi"
+    },
+    "load": "Yükleme İsteği",
+    "negative": "Negatif",
+    "positive": "Pozitif",
+    "set": "Ayar İsteği"
+  },
+  "setting": {
+    "button": {
+      "reset": "Varsayılana Sıfırla",
+      "submit": "Uygula ve Arayüzü Yeniden Başlat"
+    },
+    "confirmPageUnload": {
+      "desc": "Kaydedilmemiş veri kaybını önlemeye yardımcı olur",
+      "title": "Sayfadan Ayrılma Onayı"
+    },
+    "customFont": {
+      "desc": "Etkinleştirildiğinde, Çince, İngilizce ve kod metninin görüntüsünü geliştirmek için otomatik olarak bir web yazı tipi yükler",
+      "title": "Özel Yazı Tipi"
+    },
+    "customLogo": {
+      "desc": "URL / Base64 / Emoji sembolleri desteği",
+      "title": "Özel Logo"
+    },
+    "customTitle": {
+      "desc": "Özel Logo Başlığı",
+      "title": "Özel Başlık"
+    },
+    "extraNetworkSidebar": {
+      "defaultCardSize": {
+        "desc": "Başlangıçta model kapak boyutunun varsayılan değeri",
+        "title": "Model Kapak Boyutu"
+      },
+      "defaultExpand": {
+        "desc": "Başlangıçta kenar çubuğunu varsayılan olarak genişletmek için",
+        "title": "Varsayılan Genişletme"
+      },
+      "defaultWidth": {
+        "desc": "Başlangıçta kenar çubuğunun varsayılan genişliği",
+        "title": "Varsayılan Genişlik"
+      },
+      "displayMode": {
+        "desc": "Sabit görüntüleme için ızgara modu olarak sabitlenmiş, kayan modda fare kenara geldiğinde otomatik genişler",
+        "title": "Görüntüleme Modu"
+      },
+      "enable": {
+        "desc": "Sağ tarafta ek ağ kenar çubuğunu etkinleştir",
+        "title": "Etkinleştir"
+      }
+    },
+    "group": {
+      "experimental": "Deneysel Özellikler",
+      "extraNetworkSidebar": "Ek Ağ Kenar Çubuğu",
+      "layout": "Düzen Ayarları",
+      "promptTextarea": "İsteğe Bağlı Metin Kutusu",
+      "quickSettingSidebar": "Hızlı Ayar Kenar Çubuğu",
+      "theme": "Tema Ayarları"
+    },
+    "hideFooter": {
+      "desc": "Tema altbilgisini gizle ve sadece stable diffusion webui'nin varsayılan altbilgisini göster",
+      "title": "Altbilgiyi Gizle"
+    },
+    "imageInfo": {
+      "desc": "Oluşturulan görüntüde daha iyi görüntü bilgisi göster",
+      "title": "Görüntü Bilgisi Alternatifi"
+    },
+    "language": {
+      "desc": "Lobe Tema dili",
+      "title": "Dil"
+    },
+    "logoType": {
+      "desc": "Logo Türü",
+      "preview": "Önizleme",
+      "title": "Logo Türü"
+    },
+    "neutralColor": {
+      "desc": "Farklı renk eğilimleri olan farklı tonlarda griyi özelleştirin, ikincisi orijinal Mutfak nötr rengidir",
+      "title": "Nötr Renk"
+    },
+    "primaryColor": {
+      "desc": "Özel birincil renk, ikincisi orijinal Mutfak tema rengidir",
+      "title": "Birincil Renk"
+    },
+    "promptDisplayMode": {
+      "desc": "Sabit yükseklik veya sürüklenebilir yeniden boyutlandırma desteği ile otomatik yükseklik",
+      "resizable": "Yeniden Boyutlanabilir",
+      "scroll": "Kaydırma",
+      "title": "İsteğe Bağlı Görüntüleme Modu"
+    },
+    "promptEditor": {
+      "desc": "Hızlı ayar kenar çubuğunun üstünde basit bir isteğe bağlı düzenleyici sağlar",
+      "title": "İsteğe Bağlı Düzenleyici"
+    },
+    "promptHighlight": {
+      "desc": "Stable Diffusion sözdizimi kurallarına göre otomatik olarak isteği bağlı renklendirme",
+      "title": "İsteğe Bağlı Sözdizimi Vurgulama"
+    },
+    "quickSettingSidebar": {
+      "defaultExpand": {
+        "desc": "Başlangıçta kenar çubuğunu varsayılan olarak genişletmek için",
+        "title": "Varsayılan Genişletme"
+      },
+      "defaultWidth": {
+        "desc": "Başlangıçta kenar çubuğunun varsayılan genişliği",
+        "title": "Varsayılan Genişlik"
+      },
+      "displayMode": {
+        "desc": "Sabit görüntüleme için ızgara modu olarak sabitlenmiş, kayan modda fare kenara geldiğinde otomatik genişler",
+        "title": "Görüntüleme Modu"
+      },
+      "enable": {
+        "desc": "Sol tarafta hızlı ayar kenar çubuğunu etkinleştir",
+        "title": "Etkinleştir"
+      }
+    },
+    "reduceAnimation": {
+      "desc": "Bulanıklık efektini ve arka plan akış rengini azaltarak akıcılığı artırabilir ve CPU kullanımını azaltabilir",
+      "title": "Animasyonu Azalt"
+    },
+    "splitPreviewer": {
+      "desc": "İsteğe bağlı olarak, isteğe bağlı olarak, oluşturulan görüntünün her zaman en üstte görüntülendiğinden, isteğin giriş kutusunu solda ve oluştur düğmesini sağda yerleştirir (deneysel)",
+      "title": "Bölünmüş Önizleyici"
+    },
+    "svgIcons": {
+      "desc": "Stable diffusion webui'deki tüm Emoji simgelerini global olarak SVG simgeleriyle değiştir",
+      "title": "SVG Simgeleri"
+    },
+    "tab": {
+      "appearance": "Görünüm",
+      "experimental": "Deneysel",
+      "layout": "Düzen",
+      "sidebar": "Kenar Çubuğu"
+    }
+  },
+  "share": "Paylaş",
+  "shareModal": {
+    "download": "Ekran Görüntüsünü İndir",
+    "imageType": "Görüntü Biçimi",
+    "info": "Görüntü Bilgisi",
+    "screenshot": "Ekran Görüntüsü",
+    "settings": "Ayarları Dışa Aktar",
+    "showAllImages": "Tüm Görüntüleri Göster",
+    "showConfig": "Oluşturma Yapılandırmasını Göster",
+    "showNegative": "Negatif İsteği Göster",
+    "tabs": {
+      "info": "Bilgi",
+      "settings": "Ayarlar"
+    },
+    "title": "Görüntü Adı",
+    "warn": "Lütfen Önce Görüntü Oluşturun",
+    "withBackground": "Arka Plan Görüntüsü Dahil Et",
+    "withFooter": "Altbilgi Dahil Et"
+  },
+  "sidebar": {
+    "extraNetwork": "Ek Ağ",
+    "mode": {
+      "fixed": "Sabit",
+      "float": "Yüzer"
+    },
+    "quickSetting": "Hızlı Ayar"
+  }
+}

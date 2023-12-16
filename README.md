@@ -516,7 +516,7 @@ Every bit counts and your one-time donation sparkles in our galaxy of support! Y
 
 </details>
 
-Copyright © 2023 [CanisMinor][profile-link]. <br />
+Copyright © 2023 [LobeHub][profile-link]. <br />
 This project is [AGPL3](./LICENSE) licensed.
 
 <!-- LINK GROUP -->
@@ -571,6 +571,6 @@ This project is [AGPL3](./LICENSE) licensed.
 [lobe-ui-shield]: https://img.shields.io/npm/v/@lobehub/ui?color=369eff&labelColor=black&logo=npm&logoColor=white&style=flat-square
 [pr-welcome-link]: https://github.com/lobehub/lobe-chat/pulls
 [pr-welcome-shield]: https://img.shields.io/badge/🤯_pr_welcome-%E2%86%92-ffcb47?labelColor=black&style=for-the-badge
-[profile-link]: https://github.com/canisminor1990
+[profile-link]: https://github.com/lobehub
 [sponsor-link]: https://opencollective.com/lobehub 'Become 🩷 LobeHub Sponsor'
 [sponsor-shield]: https://img.shields.io/badge/-Sponsor%20LobeHub-f04f88?logo=opencollective&logoColor=white&style=flat-square
