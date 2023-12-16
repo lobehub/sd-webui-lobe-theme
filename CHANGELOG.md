@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 3.4.0](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.3.11...v3.4.0)
+
+<sup>Released on **2023-12-16**</sup>
+
+#### ✨ Features
+
+- **locale**: Add tr_TR.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **locale**: Add tr_TR ([6add1f3](https://github.com/lobehub/sd-webui-lobe-theme/commit/6add1f3))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.3.11](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.3.10...v3.3.11)
 
 <sup>Released on **2023-12-16**</sup>
