@@ -31,6 +31,13 @@ export const useHighlight = (text: string, isDarkMode: boolean) =>
       const html = highlighter?.codeToHtml(text, {
         lang: 'prompt',
         theme: isDarkMode ? 'dark' : 'light',
+        transformers: [
+          {
+            code(node) {
+              node.properties['id'] = 'lobe_highlighter';
+            },
+          },
+        ],
       });
       return html;
     } catch {
