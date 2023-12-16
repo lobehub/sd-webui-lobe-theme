@@ -2,7 +2,7 @@ import { consola } from 'consola';
 import { StrictMode, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 
-import Inedx from './index';
+import Index from './index';
 import Layout from './layout';
 
 const ImageInfo = (parentId: string, containerId: string) => {
@@ -16,7 +16,7 @@ const ImageInfo = (parentId: string, containerId: string) => {
     <StrictMode>
       <Suspense fallback="loading...">
         <Layout>
-          <Inedx parentId={parentId} />
+          <Index parentId={parentId} />
         </Layout>
       </Suspense>
     </StrictMode>,
