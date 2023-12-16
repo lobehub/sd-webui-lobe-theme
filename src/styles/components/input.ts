@@ -6,6 +6,12 @@ export default (token: Theme) => {
       margin: 0 !important;
     }
 
+    .block.gradio-slider {
+      input[type='number'] {
+        margin-left: 12px;
+      }
+    }
+
     label:has(input[type='radio']),
     label:has(input[type='checkbox']) {
       border-radius: ${token.borderRadius}px !important;

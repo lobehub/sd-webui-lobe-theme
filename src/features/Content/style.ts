@@ -285,8 +285,8 @@ export const useStyles = createStyles(
             margin: 0 !important;
             padding: 16px !important;
 
-            background-color: ${token.colorBgContainer}!important;
-            border-radius: ${token.borderRadius}px !important;
+            background-color: ${token.colorBgContainer};
+            border-radius: ${token.borderRadius}px;
           }
 
           .gradio-tabitem:has(.gradio-image) {
@@ -360,7 +360,12 @@ export const useStyles = createStyles(
           background: transparent !important;
 
           > div {
-            background-color: ${token.colorBgContainer}!important;
+            background-color: ${token.colorBgContainer};
+            border-radius: ${token.borderRadius}px !important;
+          }
+
+          span.icon {
+            margin-right: 0;
           }
         }
 

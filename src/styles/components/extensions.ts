@@ -87,9 +87,10 @@ export default (token: Theme) => {
 
       /* Aspect Ratio selector */
       [id$='2img_container_aspect_ratio'] {
-        padding: var(--block-padding);
+        padding: 16px;
+        background-color: ${token.colorBgContainer};
         border: 1px solid var(--block-border-color);
-        border-radius: 8px;
+        border-radius: ${token.borderRadius}px;
 
         #arc_empty_space {
           display: none;
@@ -106,10 +107,12 @@ export default (token: Theme) => {
           font-weight: 500;
 
           border: none;
-          border-radius: 0.5em;
+          border-radius: ${token.borderRadius}px;
         }
 
         #arc_panel {
+          padding: 8px 0 0 !important;
+
           .block.gradio-markdown.padded.hide-container {
             .hide,
             .pending {
@@ -137,6 +140,41 @@ export default (token: Theme) => {
       #tab_checkpoint_toolkit {
         button {
           align-self: end;
+        }
+      }
+
+      /* WebUI txt2img/img2img Extra options */
+      .gr-group:has([id^='extra_options_'].gradio-accordion) {
+        padding: 4px 0 !important;
+      }
+
+      .gr-group:has([id^='extra_options_'].gradio-group) {
+        padding: 0 0 4px !important;
+      }
+
+      .gr-group:has([id^='extra_options_']) {
+        background: transparent;
+
+        .styler {
+          flex-grow: 1;
+        }
+
+        [id^='extra_options_'] {
+          &.gradio-accordion {
+            background-color: ${token.colorBgContainer};
+          }
+
+          &.gradio-group {
+            padding: 16px;
+            background-color: ${token.colorBgContainer};
+            border-radius: ${token.borderRadius}px;
+          }
+
+          .styler,
+          .gap,
+          .form {
+            gap: 16px;
+          }
         }
       }
     }
