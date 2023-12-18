@@ -279,7 +279,6 @@ export const useStyles = createStyles(
 
           > div:not([id$='_script_container'], .gradio-tabs):has(div),
           > fieldset {
-            flex-flow: row wrap;
             gap: 12px;
 
             margin: 0 !important;
@@ -290,7 +289,7 @@ export const useStyles = createStyles(
           }
 
           .gradio-tabitem:has(.gradio-image) {
-            background: ${token.colorFillTertiary} !important;
+            background: ${token.colorFillQuaternary};
           }
 
           [id$='_script_container'] {
