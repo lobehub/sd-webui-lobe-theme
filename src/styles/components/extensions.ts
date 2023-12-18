@@ -71,17 +71,25 @@ export default (token: Theme) => {
       }
 
       /* ControlNet */
-      .cnet-badge.primary {
-        font-size: var(--text-xs);
-        line-height: 1.3;
-        color: var(--body-background-fill);
-        background-color: ${token.colorSuccess};
-      }
+      [id$='img_controlnet'] {
+        .cnet-badge.primary {
+          font-size: var(--text-xs);
+          line-height: 1.3;
+          color: var(--body-background-fill);
+          background-color: ${token.colorSuccess};
+        }
 
-      .tab-nav button {
-        &.cnet-unit-active,
-        &.selected.cnet-unit-active {
-          color: ${token.colorSuccess} !important;
+        .tab-nav button {
+          &.cnet-unit-active,
+          &.selected.cnet-unit-active {
+            color: ${token.colorSuccess} !important;
+          }
+        }
+
+        .tabitem {
+          .controlnet_image_controls {
+            margin-top: 8px;
+          }
         }
       }
 
@@ -155,10 +163,6 @@ export default (token: Theme) => {
       .gr-group:has([id^='extra_options_']) {
         background: transparent;
 
-        .styler {
-          flex-grow: 1;
-        }
-
         [id^='extra_options_'] {
           &.gradio-accordion {
             background-color: ${token.colorBgContainer};
@@ -166,13 +170,27 @@ export default (token: Theme) => {
 
           &.gradio-group {
             padding: 16px;
-            background-color: ${token.colorBgContainer};
-            border-radius: ${token.borderRadius}px;
           }
 
           .styler,
           .gap,
           .form {
+            gap: 16px;
+          }
+        }
+      }
+
+      /* WebUI Soft inpainting */
+      .gr-group:has(#soft_inpainting_enabled) {
+        padding: 0 !important;
+        background: transparent;
+
+        #soft_inpainting_enabled {
+          &.gradio-accordion {
+            background-color: ${token.colorBgContainer};
+          }
+
+          .styler {
             gap: 16px;
           }
         }
