@@ -8,14 +8,16 @@ export default (token: Theme) => css`
   .ant-app {
     position: relative;
     overscroll-behavior: none;
-    height: 100% !important;
-    min-height: 100% !important;
 
     ::-webkit-scrollbar {
       display: none;
       width: 0;
       height: 0;
     }
+  }
+
+  body {
+    height: 100% !important;
   }
 
   .ant-slider-track,

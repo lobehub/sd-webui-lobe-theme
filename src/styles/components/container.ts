@@ -76,5 +76,13 @@ export default (token: Theme) => {
     #tabs_extensions > .tabitem > .gap > .gradio-row {
       overflow: auto;
     }
+
+    gradio-app #imageARPreview {
+      background: ${token.colorError}4d;
+      backdrop-filter: brightness(1.2);
+      border-color: ${token.colorError};
+      border-style: solid;
+      border-width: 2px;
+    }
   `;
 };
