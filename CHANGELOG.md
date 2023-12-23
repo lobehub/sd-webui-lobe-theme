@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 3.4.2](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.4.1...v3.4.2)
+
+<sup>Released on **2023-12-23**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Img2img Aspect Ratio Overlay.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Img2img Aspect Ratio Overlay, closes [#497](https://github.com/lobehub/sd-webui-lobe-theme/issues/497) ([04895e9](https://github.com/lobehub/sd-webui-lobe-theme/commit/04895e9))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.4.1](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.4.0...v3.4.1)
 
 <sup>Released on **2023-12-18**</sup>
