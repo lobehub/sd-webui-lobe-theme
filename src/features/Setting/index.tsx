@@ -1,4 +1,5 @@
 import { ActionIcon, Modal, type ModalProps } from '@lobehub/ui';
+import { useResponsive } from 'antd-style';
 import { Book } from 'lucide-react';
 import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -11,7 +12,7 @@ import FormAppearance from './Form/Appearance';
 import FormExperimental from './Form/Experimental';
 import FormLayout from './Form/Layout';
 import FormSidebar from './Form/Sidebar';
-import Sidebar, { SettingsTabs } from './Sidebar';
+import Sidebar, { MobileSidebar, SettingsTabs } from './Sidebar';
 
 export interface SettingProps {
   onCancel?: ModalProps['onCancel'];
@@ -20,7 +21,18 @@ export interface SettingProps {
 
 const Setting = memo<SettingProps>(({ open, onCancel }) => {
   const [tab, setTab] = useState<SettingsTabs>(SettingsTabs.Appearance);
+  const { mobile } = useResponsive();
   const { t } = useTranslation();
+
+  const content = (
+    <>
+      {tab === SettingsTabs.Appearance && <FormAppearance />}
+      {tab === SettingsTabs.Layout && <FormLayout />}
+      {tab === SettingsTabs.Sidebar && <FormSidebar />}
+      {tab === SettingsTabs.Experimental && <FormExperimental />}
+    </>
+  );
+
   return (
     <Modal
       footer={false}
@@ -40,13 +52,19 @@ const Setting = memo<SettingProps>(({ open, onCancel }) => {
       }
       width={960}
     >
-      <Flexbox gap={16} horizontal>
-        <Sidebar setTab={setTab} tab={tab} />
-        {tab === SettingsTabs.Appearance && <FormAppearance />}
-        {tab === SettingsTabs.Layout && <FormLayout />}
-        {tab === SettingsTabs.Sidebar && <FormSidebar />}
-        {tab === SettingsTabs.Experimental && <FormExperimental />}
-      </Flexbox>
+      {mobile ? (
+        <Flexbox>
+          <div style={{ padding: 16 }}>
+            <MobileSidebar setTab={setTab} tab={tab} />
+          </div>
+          {content}
+        </Flexbox>
+      ) : (
+        <Flexbox gap={16} horizontal>
+          <Sidebar setTab={setTab} tab={tab} />
+          {content}
+        </Flexbox>
+      )}
     </Modal>
   );
 });

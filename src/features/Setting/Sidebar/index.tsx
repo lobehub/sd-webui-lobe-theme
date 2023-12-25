@@ -1,7 +1,7 @@
-import { Brush, FlaskConical, Layout, PanelRight } from 'lucide-react';
 import { memo } from 'react';
-import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
+
+import { useTabItems } from '@/features/Setting/Sidebar/useTabItems';
 
 import Item from './Item';
 
@@ -18,14 +18,7 @@ interface SidebarProps {
 }
 
 const Sidebar = memo<SidebarProps>(({ tab, setTab }) => {
-  const { t } = useTranslation();
-
-  const items = [
-    { icon: Brush, label: t('setting.tab.appearance'), value: SettingsTabs.Appearance },
-    { icon: Layout, label: t('setting.tab.layout'), value: SettingsTabs.Layout },
-    { icon: PanelRight, label: t('setting.tab.sidebar'), value: SettingsTabs.Sidebar },
-    { icon: FlaskConical, label: t('setting.tab.experimental'), value: SettingsTabs.Experimental },
-  ];
+  const items = useTabItems();
 
   return (
     <Flexbox gap={4}>
@@ -43,3 +36,5 @@ const Sidebar = memo<SidebarProps>(({ tab, setTab }) => {
 });
 
 export default Sidebar;
+
+export { default as MobileSidebar } from './Mobile';
