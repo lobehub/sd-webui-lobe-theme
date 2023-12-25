@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 3.4.3](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.4.2...v3.4.3)
+
+<sup>Released on **2023-12-25**</sup>
+
+#### 💄 Styles
+
+- **misc**: Fix scroll layout and setting panel in mobile.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Fix scroll layout and setting panel in mobile ([2abac2d](https://github.com/lobehub/sd-webui-lobe-theme/commit/2abac2d))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.4.2](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.4.1...v3.4.2)
 
 <sup>Released on **2023-12-23**</sup>
