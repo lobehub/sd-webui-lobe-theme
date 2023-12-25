@@ -16,10 +16,6 @@ export default (token: Theme) => css`
     }
   }
 
-  body {
-    height: 100% !important;
-  }
-
   .ant-slider-track,
   .ant-tabs-ink-bar,
   .ant-switch-checked {
