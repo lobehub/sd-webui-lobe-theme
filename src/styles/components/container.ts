@@ -3,10 +3,6 @@ import { readableColor } from 'polished';
 
 export default (token: Theme) => {
   return css`
-    body {
-      height: 100vh !important;
-    }
-
     .gradio-group,
     .gradio-row {
       gap: 12px !important;

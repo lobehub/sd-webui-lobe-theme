@@ -2,8 +2,6 @@ import { Theme, css } from 'antd-style';
 
 export default (token: Theme) => css`
   .global-popup {
-    overscroll-behavior: none;
-
     .global-popup-close {
       background-color: ${token.colorBgMask} !important;
       backdrop-filter: blur(4px);
@@ -24,7 +22,6 @@ export default (token: Theme) => css`
 
       .popup-metadata {
         overflow: auto;
-        overscroll-behavior: none;
 
         width: 75vw;
         max-height: 85vh;
@@ -59,7 +56,6 @@ export default (token: Theme) => css`
 
       .popup-dialog,
       .edit-user-metadata {
-        overscroll-behavior: none;
         width: 50vw !important;
       }
     }
