@@ -16,8 +16,10 @@ const Footer = memo(() => {
     location.reload();
   }, []);
 
+  const buttonStyle = mobile ? { flex: 1 } : { margin: 0 };
+
   return (
-    <Flexbox gap={16} horizontal={!mobile} style={mobile ? { padding: 16, width: '100%' } : {}}>
+    <Flexbox flex={1} gap={12} horizontal justify={'flex-end'}>
       <Popconfirm
         cancelText={t('cancel')}
         okText={t('confirm')}
@@ -25,11 +27,11 @@ const Footer = memo(() => {
         onConfirm={onReset}
         title={t('setting.button.reset')}
       >
-        <Button block={mobile} danger style={{ borderRadius: 4 }}>
+        <Button danger style={buttonStyle}>
           {t('setting.button.reset')}
         </Button>
       </Popconfirm>
-      <Button block={mobile} htmlType="submit" style={{ borderRadius: 4 }} type="primary">
+      <Button htmlType="submit" style={buttonStyle} type="primary">
         {t('setting.button.submit')}
       </Button>
     </Flexbox>

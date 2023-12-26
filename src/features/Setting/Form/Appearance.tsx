@@ -8,7 +8,6 @@ import { useTranslation } from 'react-i18next';
 import { CustomLogo } from '@/components';
 import { type WebuiSetting, selectors, useAppStore } from '@/store';
 
-import Footer from './Footer';
 import {
   type NeutralColor,
   type PrimaryColor,
@@ -168,7 +167,6 @@ const SettingForm = memo(() => {
 
   return (
     <Form
-      footer={<Footer />}
       initialValues={setting}
       items={[theme]}
       onFinish={onFinish}

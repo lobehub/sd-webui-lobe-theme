@@ -7,7 +7,6 @@ import { useTranslation } from 'react-i18next';
 
 import { type WebuiSetting, selectors, useAppStore } from '@/store';
 
-import Footer from './Footer';
 import { SettingItemGroup } from './types';
 
 const SettingForm = memo(() => {
@@ -135,7 +134,6 @@ const SettingForm = memo(() => {
 
   return (
     <Form
-      footer={<Footer />}
       initialValues={setting}
       items={[quickSettingSidebar, extraNetworkSidebar]}
       onFinish={onFinish}

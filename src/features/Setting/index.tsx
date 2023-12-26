@@ -10,6 +10,7 @@ import { GITHUB_REPO_URL } from '@/const/url';
 
 import FormAppearance from './Form/Appearance';
 import FormExperimental from './Form/Experimental';
+import Footer from './Form/Footer';
 import FormLayout from './Form/Layout';
 import FormSidebar from './Form/Sidebar';
 import Sidebar, { MobileSidebar, SettingsTabs } from './Sidebar';
@@ -35,9 +36,12 @@ const Setting = memo<SettingProps>(({ open, onCancel }) => {
 
   return (
     <Modal
-      footer={false}
+      footer={<Footer />}
       onCancel={onCancel}
       open={open}
+      styles={{
+        body: mobile ? { padding: 0 } : {},
+      }}
       title={
         <Flexbox align={'center'} gap={4}>
           <Flexbox align={'center'} gap={4} horizontal>

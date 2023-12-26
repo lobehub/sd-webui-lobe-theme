@@ -4,17 +4,14 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import { FieldType } from '@/features/Share/type';
 import { useGalleryObserver } from '@/hooks/useGalleryObserver';
 import { useObserver } from '@/hooks/useObserver';
 import InfoBox from '@/modules/ImageInfo/features/InfoBox';
 
 import { useStyles } from './style';
 
-export interface PreviewInnerProps {
-  showAllImages?: boolean;
-  showConfig?: boolean;
-  showNegative?: boolean;
-  title?: string;
+export interface PreviewInnerProps extends FieldType {
   type: 'txt' | 'img';
 }
 

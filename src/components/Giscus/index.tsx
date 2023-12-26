@@ -29,7 +29,7 @@ const Giscus = memo<GiscusProps>(({ open, onCancel }) => {
   const { t } = useTranslation();
   return (
     <Modal
-      footer={false}
+      footer={null}
       onCancel={onCancel}
       open={open}
       title={
