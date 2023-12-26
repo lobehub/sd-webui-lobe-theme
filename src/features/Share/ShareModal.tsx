@@ -24,7 +24,11 @@ const DEFAULT_FIELD_VALUE: FieldType = {
   withFooter: false,
 };
 
-const ShareModal = memo<ModalProps & { type: 'txt' | 'img' }>(({ open, onCancel, type }) => {
+export interface ShareModalProps extends ModalProps {
+  type: 'txt' | 'img';
+}
+
+const ShareModal = memo<ShareModalProps>(({ open, onCancel, type }) => {
   const [fieldValue, setFieldValue] = useState<FieldType>(DEFAULT_FIELD_VALUE);
   const [tab, setTab] = useState<Tab>(Tab.Info);
   const { t } = useTranslation();
@@ -43,15 +47,17 @@ const ShareModal = memo<ModalProps & { type: 'txt' | 'img' }>(({ open, onCancel,
     [],
   );
 
-  const info: FormItemProps[] = useMemo(
+  const items: FormItemProps[] = useMemo(
     () => [
       {
         children: <Input />,
+        hidden: tab !== Tab.Info,
         label: t('shareModal.title'),
         name: 'title',
       },
       {
         children: <Switch />,
+        hidden: tab !== Tab.Info,
         label: t('shareModal.showAllImages'),
         minWidth: undefined,
         name: 'showAllImages',
@@ -59,6 +65,7 @@ const ShareModal = memo<ModalProps & { type: 'txt' | 'img' }>(({ open, onCancel,
       },
       {
         children: <Switch />,
+        hidden: tab !== Tab.Info,
         label: t('shareModal.showNegative'),
         minWidth: undefined,
         name: 'showNegative',
@@ -66,19 +73,15 @@ const ShareModal = memo<ModalProps & { type: 'txt' | 'img' }>(({ open, onCancel,
       },
       {
         children: <Switch />,
+        hidden: tab !== Tab.Info,
         label: t('shareModal.showConfig'),
         minWidth: undefined,
         name: 'showConfig',
         valuePropName: 'checked',
       },
-    ],
-    [],
-  );
-
-  const settings: FormItemProps[] = useMemo(
-    () => [
       {
         children: <Switch />,
+        hidden: tab !== Tab.Settings,
         label: t('shareModal.withBackground'),
         minWidth: undefined,
         name: 'withBackground',
@@ -86,6 +89,7 @@ const ShareModal = memo<ModalProps & { type: 'txt' | 'img' }>(({ open, onCancel,
       },
       {
         children: <Switch />,
+        hidden: tab !== Tab.Settings,
         label: t('shareModal.withFooter'),
         minWidth: undefined,
         name: 'withFooter',
@@ -93,12 +97,13 @@ const ShareModal = memo<ModalProps & { type: 'txt' | 'img' }>(({ open, onCancel,
       },
       {
         children: <Segmented options={imageTypeOptions} />,
+        hidden: tab !== Tab.Settings,
         label: t('shareModal.imageType'),
         minWidth: undefined,
         name: 'imageType',
       },
     ],
-    [],
+    [tab],
   );
 
   return (
@@ -110,6 +115,7 @@ const ShareModal = memo<ModalProps & { type: 'txt' | 'img' }>(({ open, onCancel,
           {t('shareModal.download')}
         </Button>
       }
+      maxHeight={false}
       onCancel={onCancel}
       open={open}
       title={t('share')}
@@ -122,22 +128,14 @@ const ShareModal = memo<ModalProps & { type: 'txt' | 'img' }>(({ open, onCancel,
           style={{ width: '100%' }}
           value={tab}
         />
-        {tab === Tab.Info && (
-          <Form
-            initialValues={DEFAULT_FIELD_VALUE}
-            items={info}
-            itemsType={'flat'}
-            onValuesChange={(_, v) => setFieldValue(v)}
-          />
-        )}
-        {tab === Tab.Settings && (
-          <Form
-            initialValues={DEFAULT_FIELD_VALUE}
-            items={settings}
-            itemsType={'flat'}
-            onValuesChange={(_, v) => setFieldValue(v)}
-          />
-        )}
+
+        <Form
+          initialValues={DEFAULT_FIELD_VALUE}
+          items={items}
+          itemsType={'flat'}
+          onValuesChange={(_, v) => setFieldValue({ ...fieldValue, ...v })}
+        />
+
         <Preview {...fieldValue}>
           <PreviewInner {...fieldValue} type={type} />
         </Preview>

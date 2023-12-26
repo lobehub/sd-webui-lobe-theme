@@ -5,7 +5,7 @@ import { useCallback, useState } from 'react';
 
 import { ImageType } from './type';
 
-export const useScreenshot = (imageType: ImageType) => {
+export const useScreenshot = (imageType: ImageType = ImageType.JPG) => {
   const [loading, setLoading] = useState(false);
 
   const handleDownload = useCallback(async() => {
