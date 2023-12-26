@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 3.4.5](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.4.4...v3.4.5)
+
+<sup>Released on **2023-12-26**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Setting form submit.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Setting form submit ([340ca92](https://github.com/lobehub/sd-webui-lobe-theme/commit/340ca92))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.4.4](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.4.3...v3.4.4)
 
 <sup>Released on **2023-12-26**</sup>
