@@ -134,6 +134,7 @@ const SettingForm = memo(() => {
 
   return (
     <Form
+      id="theme_settings"
       initialValues={setting}
       items={[quickSettingSidebar, extraNetworkSidebar]}
       onFinish={onFinish}

@@ -31,7 +31,7 @@ const Footer = memo(() => {
           {t('setting.button.reset')}
         </Button>
       </Popconfirm>
-      <Button htmlType="submit" style={buttonStyle} type="primary">
+      <Button form="theme_settings" htmlType="submit" style={buttonStyle} type="primary">
         {t('setting.button.submit')}
       </Button>
     </Flexbox>
