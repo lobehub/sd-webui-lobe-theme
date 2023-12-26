@@ -63,6 +63,7 @@ const SettingForm = memo(() => {
 
   return (
     <Form
+      id="theme_settings"
       initialValues={setting}
       items={[experimental, promptTextarea]}
       onFinish={onFinish}
