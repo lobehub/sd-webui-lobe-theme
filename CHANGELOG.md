@@ -2,6 +2,39 @@
 
 # Changelog
 
+### [Version 3.4.4](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.4.3...v3.4.4)
+
+<sup>Released on **2023-12-26**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix share modal.
+
+#### 💄 Styles
+
+- **misc**: Update Modal style.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix share modal ([984efab](https://github.com/lobehub/sd-webui-lobe-theme/commit/984efab))
+
+#### Styles
+
+- **misc**: Update Modal style ([cb6fb2d](https://github.com/lobehub/sd-webui-lobe-theme/commit/cb6fb2d))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.4.3](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.4.2...v3.4.3)
 
 <sup>Released on **2023-12-25**</sup>
