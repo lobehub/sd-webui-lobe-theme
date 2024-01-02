@@ -12,6 +12,7 @@ export const useStyles = createStyles(({ css, token, isDarkMode }) => {
     configValue: css`
       color: ${token.colorInfoText};
       text-align: right;
+      word-break: break-word;
     `,
     container: css`
       padding: 16px 10px 16px 24px;
