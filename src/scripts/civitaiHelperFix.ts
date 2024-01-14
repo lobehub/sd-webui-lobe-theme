@@ -1,4 +1,5 @@
 import { consola } from 'consola';
+import { isNumber } from 'lodash-es';
 
 const TAB_PREFIX_LIST = ['txt2img', 'img2img'] as const;
 const MODEL_TYPE_LIST = [
@@ -244,15 +245,11 @@ const updateCardForCivitai = () => {
 
 export default () => {
   let checkDomCurrent: INullable<HTMLElement>;
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   let x: number = 0;
-  let fn: () => any;
-  // eslint-disable-next-line unicorn/consistent-function-scoping
-  const fnClick = () => {
-    // eslint-disable-next-line @typescript-eslint/no-use-before-define
-    setTimeout(fn, 500);
-  };
-  fn = () => {
+
+  const helperFix = () => {
+    // eslint-disable-next-line unicorn/consistent-function-scoping
+    const fnClick = () => setTimeout(helperFix, 500);
     let retryTimes = 0;
     const fixInterval = setInterval(() => {
       consola.info('🤯 [civitai helper] update card for civitai');
@@ -272,7 +269,7 @@ export default () => {
           }
         }
         const y = updateCardForCivitai()?.length as number;
-        if (typeof y === 'number' && y < x) x = y;
+        if (isNumber(y) && y < x) x = y;
         if (retryTimes > 5 || !checkDom || y >= MODEL_TYPE_LIST.length || y > x) {
           clearInterval(fixInterval);
           x = y ?? x;
@@ -282,5 +279,5 @@ export default () => {
     }, 500);
   };
 
-  return fn();
+  return helperFix;
 };

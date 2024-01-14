@@ -35,9 +35,11 @@ export const useCivitaiHelperFix = ({
       !!document.querySelector('#tab_civitai_helper') &&
       !!document.querySelector('#txt2img_extra_refresh');
 
+    let timoutFn: any;
+
     if (canInject) {
       try {
-        setTimeout(() => {
+        timoutFn = setTimeout(() => {
           replaceCivitaiHelper('txt');
           replaceCivitaiHelper('img');
           civitaiHelperFix();
@@ -52,6 +54,10 @@ export const useCivitaiHelperFix = ({
     isInject.current = true;
     setIsLoading(false);
     if (debug) consola.success(`🤯 ${debug}`);
+
+    return () => {
+      if (timoutFn) clearTimeout(timoutFn);
+    };
   }, []);
 
   return {
