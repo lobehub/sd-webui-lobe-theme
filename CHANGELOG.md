@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 3.4.7](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.4.6...v3.4.7)
+
+<sup>Released on **2024-01-14**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix extranetwork loading.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix extranetwork loading ([0be4a24](https://github.com/lobehub/sd-webui-lobe-theme/commit/0be4a24))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.4.6](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.4.5...v3.4.6)
 
 <sup>Released on **2024-01-14**</sup>
