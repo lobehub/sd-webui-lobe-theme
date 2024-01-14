@@ -52,6 +52,7 @@ export const useCivitaiHelperFix = ({
 
     onSuccess?.();
     isInject.current = true;
+
     setIsLoading(false);
     if (debug) consola.success(`🤯 ${debug}`);
 

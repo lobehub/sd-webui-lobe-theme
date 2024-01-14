@@ -56,6 +56,14 @@ export const useStyles = createStyles(
       }
 
       .extra-networks {
+        .pending {
+          opacity: 1 !important;
+        }
+
+        .wrap.center.full.translucent {
+          display: none !important;
+        }
+
         .tab-nav {
           align-items: center;
 
