@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 3.4.6](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.4.5...v3.4.6)
+
+<sup>Released on **2024-01-14**</sup>
+
+#### 💄 Styles
+
+- **misc**: Update lucide-static and fix some style problem.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Update lucide-static and fix some style problem ([2a651f6](https://github.com/lobehub/sd-webui-lobe-theme/commit/2a651f6))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.4.5](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.4.4...v3.4.5)
 
 <sup>Released on **2023-12-26**</sup>
