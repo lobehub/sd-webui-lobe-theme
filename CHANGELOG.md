@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 3.4.8](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.4.7...v3.4.8)
+
+<sup>Released on **2024-01-15**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: ComfyUI extension canvas height.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: ComfyUI extension canvas height, closes [#516](https://github.com/lobehub/sd-webui-lobe-theme/issues/516) ([4111c01](https://github.com/lobehub/sd-webui-lobe-theme/commit/4111c01))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.4.7](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.4.6...v3.4.7)
 
 <sup>Released on **2024-01-14**</sup>
