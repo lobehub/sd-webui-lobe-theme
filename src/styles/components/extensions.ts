@@ -1,5 +1,7 @@
 import { Theme, css } from 'antd-style';
 
+import { HEADER_HEIGHT } from '../../app/index';
+
 export default (token: Theme) => {
   return css`
     #root {
@@ -194,6 +196,11 @@ export default (token: Theme) => {
             gap: 16px;
           }
         }
+      }
+
+      /* ComfyUI */
+      #comfyui_webui_container {
+        height: calc(100% - ${HEADER_HEIGHT}px) !important;
       }
     }
   `;
