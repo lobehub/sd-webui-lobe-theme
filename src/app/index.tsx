@@ -18,7 +18,7 @@ import QuickSettingSidebar from '../features/QuickSettingSidebar';
 import Share from '../features/Share';
 import { useStyles } from './style';
 
-const HEADER_HEIGHT = 64;
+export const HEADER_HEIGHT = 64;
 
 const Index = memo(() => {
   const setting = useAppStore(selectors.currentSetting, isEqual);
