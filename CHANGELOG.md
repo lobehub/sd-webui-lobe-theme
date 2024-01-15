@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 3.4.9](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.4.8...v3.4.9)
+
+<sup>Released on **2024-01-15**</sup>
+
+#### 💄 Styles
+
+- **misc**: Add svg icon for "Create an upscaled version of the current image".
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Add svg icon for "Create an upscaled version of the current image" ([688a874](https://github.com/lobehub/sd-webui-lobe-theme/commit/688a874))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.4.8](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.4.7...v3.4.8)
 
 <sup>Released on **2024-01-15**</sup>
