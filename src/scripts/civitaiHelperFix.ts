@@ -279,5 +279,5 @@ export default () => {
     }, 500);
   };
 
-  return helperFix;
+  return helperFix();
 };

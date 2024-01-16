@@ -79,11 +79,10 @@ const TagList = memo<TagListProps>(({ tags, setTags, type, setValue }) => {
   );
 
   useEffect(() => {
-    if (!addAutocompleteToArea || bind) return;
-    let retryTimes = 0;
-    let bindInterval: any;
     try {
-      bindInterval = setInterval(() => {
+      if (!addAutocompleteToArea || bind) return;
+      let retryTimes = 0;
+      const bindInterval = setInterval(() => {
         if (bind || retryTimes > 10) {
           const inputDom = document.querySelector(`#${id}`) as HTMLInputElement;
           if (inputDom) {
@@ -98,9 +97,6 @@ const TagList = memo<TagListProps>(({ tags, setTags, type, setValue }) => {
     } catch (error) {
       consola.error('🤯 [promptTagEditor]', error);
     }
-    return () => {
-      if (bindInterval) clearInterval(bindInterval);
-    };
   }, [bind]);
 
   return (
