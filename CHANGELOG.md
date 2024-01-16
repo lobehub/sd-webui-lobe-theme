@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 3.4.10](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.4.9...v3.4.10)
+
+<sup>Released on **2024-01-16**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: CivitAI Helper and PromptEditor.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: CivitAI Helper and PromptEditor, closes [#520](https://github.com/lobehub/sd-webui-lobe-theme/issues/520) [#198](https://github.com/lobehub/sd-webui-lobe-theme/issues/198) ([c545f09](https://github.com/lobehub/sd-webui-lobe-theme/commit/c545f09))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.4.9](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.4.8...v3.4.9)
 
 <sup>Released on **2024-01-15**</sup>
