@@ -85,7 +85,7 @@
     "react-dnd-html5-backend": "^16",
     "react-dom": "^18",
     "react-helmet": "^6",
-    "react-i18next": "^13",
+    "react-i18next": "^14.0.0",
     "react-layout-kit": "^1",
     "react-rnd": "^10",
     "react-tag-input": "^6",
