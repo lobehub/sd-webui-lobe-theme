@@ -113,7 +113,7 @@
     "dotenv": "^16",
     "eslint": "^8",
     "fast-deep-equal": "^3",
-    "husky": "^8",
+    "husky": "^9.0.0",
     "jsdom": "^23.0.0",
     "lint-staged": "^15",
     "prettier": "^3",
