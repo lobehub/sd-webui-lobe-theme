@@ -90,7 +90,7 @@
     "react-rnd": "^10",
     "react-tag-input": "^6",
     "semver": "^7",
-    "shikiji": "^0.9",
+    "shikiji": "^0.10.0",
     "swr": "^2",
     "zustand": "^4.4.1",
     "zustand-utils": "^1.3.1"
