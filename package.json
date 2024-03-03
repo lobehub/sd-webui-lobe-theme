@@ -117,7 +117,7 @@
     "jsdom": "^23.0.0",
     "lint-staged": "^15",
     "prettier": "^3",
-    "query-string": "^8",
+    "query-string": "^9.0.0",
     "remark": "^14",
     "remark-cli": "^11",
     "semantic-release": "^21",
