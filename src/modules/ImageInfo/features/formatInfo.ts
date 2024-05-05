@@ -9,9 +9,9 @@ export const formatInfo = (info: string) => {
   if (!info || info === 'undefined') return;
   if (!info.includes('<br>')) return;
 
-  let position: any = '';
-  let negative: any = '';
-  let config: any = '';
+  let position: string = '';
+  let negative: string = '';
+  let config: string = '';
 
   let data = info?.split('Negative prompt:').filter(Boolean);
   if (data[1]) {
@@ -25,22 +25,13 @@ export const formatInfo = (info: string) => {
     config = `Steps: ${data[1]}`;
   }
 
-  position = position.trim().replaceAll('<br>', '');
-  negative = negative.trim().replaceAll('<br>', '');
-  config = config.trim().replaceAll('<br>', '');
+  position = position.trim().replaceAll('<br>', '\n');
+  negative = negative.trim().replaceAll('<br>', '\n');
+  config = config.trim().replaceAll('<br>', '\n');
 
   if (!config.includes(',')) return;
-  const clearConfigs = config
-    .split(',')
-    .map((item: any) => item?.trim())
-    .filter(Boolean);
 
-  const configs: any = {};
-
-  for (const item of clearConfigs) {
-    const items = item.split(':');
-    configs[items[0]?.trim()] = items[1]?.trim();
-  }
+  const configs = infoparser(config);
 
   position = position ? formatPrompt(position) : '';
   negative = negative ? formatPrompt(negative.split('Negative prompt: ')[1]) : '';
@@ -51,3 +42,49 @@ export const formatInfo = (info: string) => {
     positive: position,
   };
 };
+
+function infoparser(line: string) {
+  let output: Record<string, string> = {};
+  let buffer = '';
+  let key: string;
+  let quotes = false;
+  if (line.at(-1) === ':') line = line.slice(0, -1);
+
+  let c_pre: string;
+
+  for (let i = 0; i < line.length; i++) {
+    let c = line[i];
+    let sp = true;
+
+    if (c === '"') {
+      quotes = !quotes;
+    }
+
+    if (!quotes) {
+      if (c === ':') {
+        key = buffer.trim();
+        buffer = '';
+        sp = false;
+      } else if (c === ',') {
+        // @ts-ignore
+        if (key === 'Cutoff targets' && c_pre !== ']') {
+          //
+        } else {
+          // @ts-ignore
+          output[key] = buffer.slice(1);
+          buffer = '';
+          sp = false;
+        }
+      }
+    }
+
+    if (sp) {
+      buffer += c;
+    }
+
+    c_pre = c;
+  }
+  // @ts-ignore
+  if (key) output[key] = buffer.slice(1);
+  return output
+}
