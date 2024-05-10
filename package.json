@@ -67,7 +67,9 @@
     ]
   },
   "dependencies": {
+    "@bluelovers/auto1111-pnginfo": "^2.0.1",
     "@lobehub/ui": "latest",
+    "@rollup/rollup-win32-x64-msvc": "^4.13.0",
     "ahooks": "^3",
     "antd": "^5",
     "antd-style": "latest",
