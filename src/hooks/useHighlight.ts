@@ -1,5 +1,5 @@
-import { HighlighterCore, getHighlighterCore } from 'shikiji/core';
-import { getWasmInlined } from 'shikiji/wasm';
+import { HighlighterCore, getHighlighterCore } from 'shiki/core';
+import getWasmInlined from 'shiki/wasm';
 import useSWR from 'swr';
 
 import prompt from '@/modules/PromptHighlight/features/grammar';
