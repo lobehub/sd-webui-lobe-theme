@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 3.5.2](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.5.1...v3.5.2)
+
+<sup>Released on **2024-05-15**</sup>
+
+#### ♻ Code Refactoring
+
+- **misc**: Update shiki.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Code refactoring
+
+- **misc**: Update shiki ([46757e3](https://github.com/lobehub/sd-webui-lobe-theme/commit/46757e3))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.5.1](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.5.0...v3.5.1)
 
 <sup>Released on **2024-05-15**</sup>
