@@ -25,7 +25,7 @@ const Sidebar = memo<SidebarProps>(({ tab, setTab }) => {
   return (
     <SidebarLayout
       desc={
-        <Flexbox align={'center'} gap={4} horizontal>
+        <Flexbox align={'center'} gap={8} horizontal wrap={'wrap'}>
           {t('modal.themeSetting.desc')}
           <VersionTag />
         </Flexbox>

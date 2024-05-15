@@ -38,6 +38,18 @@ export const Resources = [
 
 export const Community = [
   {
+    icon: <Icon icon={Github} size="small" />,
+    openExternal: true,
+    title: 'GitHub',
+    url: GITHUB_REPO_URL,
+  },
+  {
+    icon: <Icon icon={FileClock} size="small" />,
+    openExternal: true,
+    title: 'Changelog',
+    url: `${GITHUB_REPO_URL}/blob/main/CHANGELOG.md`,
+  },
+  {
     icon: <Icon icon={Heart} size="small" />,
     openExternal: true,
     title: 'Sponsor',
@@ -54,21 +66,6 @@ export const Community = [
     openExternal: true,
     title: 'Request Feature',
     url: `${GITHUB_REPO_URL}/issues/new/choose`,
-  },
-];
-
-export const Help = [
-  {
-    icon: <Icon icon={Github} size="small" />,
-    openExternal: true,
-    title: 'GitHub',
-    url: GITHUB_REPO_URL,
-  },
-  {
-    icon: <Icon icon={FileClock} size="small" />,
-    openExternal: true,
-    title: 'Changelog',
-    url: `${GITHUB_REPO_URL}/blob/main/CHANGELOG.md`,
   },
 ];
 

@@ -3,7 +3,7 @@ import { useTheme } from 'antd-style';
 import { memo } from 'react';
 
 import { Logo } from '@/components';
-import { GITHUB_REPO_URL } from '@/const/url';
+import { OFFICIAL_SITE } from '@/const/url';
 import { useAppStore } from '@/store';
 import { type DivProps } from '@/types';
 
@@ -23,7 +23,7 @@ const Header = memo<DivProps>(({ children }) => {
       actionsStyle={{ flex: 0 }}
       logo={
         <a
-          href={`${GITHUB_REPO_URL}/releases`}
+          href={OFFICIAL_SITE}
           rel="noreferrer"
           style={{ alignItems: 'center', color: theme.colorText, display: 'flex' }}
           target="_blank"

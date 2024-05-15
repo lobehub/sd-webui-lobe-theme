@@ -2,6 +2,7 @@ import { Logo as LobeLogo } from '@lobehub/ui';
 import isEqual from 'fast-deep-equal';
 import { type CSSProperties, memo } from 'react';
 
+import { GITHUB_REPO_URL } from '@/const/url';
 import { selectors, useAppStore } from '@/store';
 
 import CustomLogo from './CustomLogo';
@@ -31,7 +32,23 @@ const Logo = memo<LogoProps>(({ size = 32, style }) => {
     );
   }
 
-  return <LobeLogo extra="SD" size={size} style={style} type="combine" />;
+  return (
+    <LobeLogo
+      extra={
+        <a
+          href={GITHUB_REPO_URL}
+          rel="noreferrer"
+          style={{ color: 'inherit', fontWeight: 400 }}
+          target="_blank"
+        >
+          SD
+        </a>
+      }
+      size={size}
+      style={style}
+      type="combine"
+    />
+  );
 });
 
 export default Logo;

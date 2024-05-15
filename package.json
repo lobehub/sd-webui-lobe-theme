@@ -68,6 +68,7 @@
   },
   "dependencies": {
     "@bluelovers/auto1111-pnginfo": "^2.0.2",
+    "@icons-pack/react-simple-icons": "^9.5.0",
     "@lobehub/ui": "^1.138.24",
     "@rollup/rollup-win32-x64-msvc": "^4.17.2",
     "ahooks": "^3.7.11",

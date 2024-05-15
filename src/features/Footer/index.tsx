@@ -7,7 +7,8 @@ import { useInject } from '@/hooks/useInject';
 import { selectors, useAppStore } from '@/store';
 import { type DivProps } from '@/types';
 
-import { Community, Help, MoreProducts, Resources } from './data';
+import Brand from './Brand';
+import { Community, MoreProducts, Resources } from './data';
 import { useStyles } from './style';
 
 const Footer = memo<DivProps>(({ className, ...props }) => {
@@ -38,6 +39,9 @@ const Footer = memo<DivProps>(({ className, ...props }) => {
             [] :
             [
                 {
+                  title: <Brand />,
+                },
+                {
                   items: Resources,
                   title: t('footer.resources'),
                 },
@@ -46,15 +50,12 @@ const Footer = memo<DivProps>(({ className, ...props }) => {
                   title: t('footer.community'),
                 },
                 {
-                  items: Help,
-                  title: t('footer.help'),
-                },
-                {
                   items: MoreProducts,
                   title: t('footer.moreProducts'),
                 },
               ]
         }
+        contentMaxWidth={1280}
       />
     </div>
   );
