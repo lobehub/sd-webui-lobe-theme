@@ -1,4 +1,5 @@
 import { Converter } from '@/scripts/formatPrompt';
+import { parseFromRawInfo } from '@bluelovers/auto1111-pnginfo';
 
 const formatPrompt = (prompt: string) => {
   let newPrompt = prompt.replaceAll('&lt;', '<').replaceAll('&gt;', '>');
@@ -9,44 +10,22 @@ export const formatInfo = (info: string) => {
   if (!info || info === 'undefined') return;
   if (!info.includes('<br>')) return;
 
-  let position: any = '';
-  let negative: any = '';
-  let config: any = '';
+  let {
+    prompt: position,
+    negative_prompt: negative,
+    ...config,
+  } = parseFromRawInfo(info, {
+    isIncludePrompts: true,
+  })
 
-  let data = info?.split('Negative prompt:').filter(Boolean);
-  if (data[1]) {
-    position = data[0];
-    data = data[1].split('Steps:');
-    negative = `Negative prompt: ${data[0]}`;
-    config = `Steps: ${data[1]}`;
-  } else {
-    data = data[0].split('Steps:');
-    position = data[0];
-    config = `Steps: ${data[1]}`;
-  }
-
-  position = position.trim().replaceAll('<br>', '');
-  negative = negative.trim().replaceAll('<br>', '');
-  config = config.trim().replaceAll('<br>', '');
-
-  if (!config.includes(',')) return;
-  const clearConfigs = config
-    .split(',')
-    .map((item: any) => item?.trim())
-    .filter(Boolean);
-
-  const configs: any = {};
-
-  for (const item of clearConfigs) {
-    const items = item.split(':');
-    configs[items[0]?.trim()] = items[1]?.trim();
-  }
+  position = position.trim().replaceAll('<br>', '\n').replace(/[\s\r\n]+$/g, '');
+  negative = negative.trim().replaceAll('<br>', '\n').replace(/[\s\r\n]+$/g, '');
 
   position = position ? formatPrompt(position) : '';
-  negative = negative ? formatPrompt(negative.split('Negative prompt: ')[1]) : '';
+  negative = negative ? formatPrompt(negative) : '';
 
   return {
-    config: configs,
+    config,
     negative: negative,
     positive: position,
   };
