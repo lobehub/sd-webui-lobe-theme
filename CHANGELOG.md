@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 3.5.0](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.4.10...v3.5.0)
+
+<sup>Released on **2024-05-15**</sup>
+
+#### ✨ Features
+
+- **misc**: Fit SD WebUI 1.9.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Fit SD WebUI 1.9 ([3e01da0](https://github.com/lobehub/sd-webui-lobe-theme/commit/3e01da0))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.4.10](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.4.9...v3.4.10)
 
 <sup>Released on **2024-01-16**</sup>
