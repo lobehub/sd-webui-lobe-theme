@@ -1,9 +1,11 @@
 import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
-import { useTabItems } from '@/features/Setting/Sidebar/useTabItems';
-
-import Item from './Item';
+import VersionTag from '../../../components/VersionTag';
+import Menu from './Menu';
+import SidebarLayout from './SidebarLayout';
+import { useTabItems } from './useTabItems';
 
 export enum SettingsTabs {
   Appearance = 'appearance',
@@ -19,19 +21,24 @@ interface SidebarProps {
 
 const Sidebar = memo<SidebarProps>(({ tab, setTab }) => {
   const items = useTabItems();
-
+  const { t } = useTranslation();
   return (
-    <Flexbox gap={4}>
-      {items.map(({ value, icon, label }) => (
-        <Item
-          active={tab === value}
-          icon={icon}
-          key={value}
-          label={label}
-          onClick={() => setTab(value)}
-        />
-      ))}
-    </Flexbox>
+    <SidebarLayout
+      desc={
+        <Flexbox align={'center'} gap={4} horizontal>
+          {t('modal.themeSetting.desc')}
+          <VersionTag />
+        </Flexbox>
+      }
+      title={t('modal.themeSetting.title')}
+    >
+      <Menu
+        items={items}
+        onClick={({ key }) => setTab(key as SettingsTabs)}
+        selectable
+        selectedKeys={[tab as any]}
+      />
+    </SidebarLayout>
   );
 });
 

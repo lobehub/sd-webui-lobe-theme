@@ -15,7 +15,7 @@ const MobileSidebar = memo<SidebarProps>(({ tab, setTab }) => {
     <Segmented
       block
       onChange={setTab as any}
-      options={items.map(({ value, label }) => ({ label, value }))}
+      options={items.map(({ key, label }) => ({ label, value: key }))}
       value={tab}
     />
   );

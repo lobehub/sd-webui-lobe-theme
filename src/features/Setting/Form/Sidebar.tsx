@@ -1,7 +1,6 @@
 import { Form } from '@lobehub/ui';
 import { InputNumber, Segmented, Switch } from 'antd';
 import isEqual from 'fast-deep-equal';
-import { PanelLeftClose, PanelRightClose } from 'lucide-react';
 import { memo, useCallback, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -67,7 +66,7 @@ const SettingForm = memo(() => {
           name: 'sidebarWidth',
         },
       ],
-      icon: PanelLeftClose,
+
       title: t('setting.group.quickSettingSidebar'),
     }),
     [rawSetting.enableSidebar],
@@ -126,7 +125,7 @@ const SettingForm = memo(() => {
           name: 'extraNetworkCardSize',
         },
       ],
-      icon: PanelRightClose,
+
       title: t('setting.group.extraNetworkSidebar'),
     }),
     [rawSetting.enableExtraNetworkSidebar],
@@ -140,6 +139,7 @@ const SettingForm = memo(() => {
       onFinish={onFinish}
       onValuesChange={(_, v) => setRawSetting(v)}
       style={{ flex: 1 }}
+      variant={'pure'}
     />
   );
 });

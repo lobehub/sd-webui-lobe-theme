@@ -1,7 +1,6 @@
 import { Form, Swatches } from '@lobehub/ui';
 import { Input, Segmented, Select, Switch } from 'antd';
 import isEqual from 'fast-deep-equal';
-import { Palette } from 'lucide-react';
 import { memo, useCallback, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -153,7 +152,7 @@ const SettingForm = memo(() => {
           valuePropName: 'checked',
         },
       ],
-      icon: Palette,
+
       title: t('setting.group.theme'),
     }),
     [
@@ -173,6 +172,7 @@ const SettingForm = memo(() => {
       onFinish={onFinish}
       onValuesChange={(_, v) => setRawSetting(v)}
       style={{ flex: 1 }}
+      variant={'pure'}
     />
   );
 });

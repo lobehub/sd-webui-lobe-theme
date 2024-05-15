@@ -36,10 +36,13 @@ export const useStyles = createStyles(
         overflow: unset;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(${size}px, 1fr));
+        flex: none !important;
         gap: 8px;
 
         height: unset;
         min-height: unset;
+
+        border: unset !important;
 
         .name {
           background: unset !important;
@@ -52,6 +55,19 @@ export const useStyles = createStyles(
         &:has(.nocards) {
           display: flex;
           flex-direction: column;
+        }
+      }
+
+      .extra-network-dirs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 12px;
+
+        > button.lg.secondary.gradio-button {
+          padding: 4px 8px;
+          font-size: 12px;
+          line-height: 1;
         }
       }
 
@@ -76,6 +92,37 @@ export const useStyles = createStyles(
           > button {
             &:first-child {
               display: none;
+            }
+          }
+
+          .extra-networks-controls-div {
+            height: unset !important;
+          }
+
+          .extra-network-control {
+            position: relative;
+            flex: none;
+            flex-wrap: wrap;
+            gap: 8px;
+
+            .extra-network-control--search {
+              width: 100%;
+            }
+
+            small {
+              display: none;
+            }
+
+            > div:has(i) {
+              position: relative;
+
+              display: flex;
+              flex: none;
+
+              height: 32px;
+
+              background: ${token.colorFillTertiary};
+              border-radius: ${token.borderRadius}px;
             }
           }
         }

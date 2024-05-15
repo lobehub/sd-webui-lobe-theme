@@ -25,6 +25,7 @@
       "title": "테마 피드백"
     },
     "themeSetting": {
+      "desc": "테마 및 레이아웃 설정",
       "title": "테마 설정"
     }
   },

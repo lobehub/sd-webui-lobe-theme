@@ -67,6 +67,7 @@ export const Layout = memo<PropsWithChildren>(({ children }) => {
           content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no"
           name="viewport"
         />
+        <title>{TITLE}</title>
         <meta content={TITLE} name="apple-mobile-web-app-title" />
         <meta content={TITLE} name="application-name" />
         <meta content={DESC} name="description" />
@@ -76,7 +77,29 @@ export const Layout = memo<PropsWithChildren>(({ children }) => {
         <meta content="yes" name="apple-mobile-web-app-capable" />
         <meta content={TITLE} name="apple-mobile-web-app-title" />
         <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" />
+        <meta content={TITLE} name="apple-mobile-web-app-title" />
+        <meta content="yes" name="apple-mobile-web-app-capable" />
+        <meta content="index,follow" name="robots" />
         <link href={manifest(genAssets)} rel="manifest" />
+        <meta content={TITLE} property="og:title" />
+        <meta content={DESC} property="og:description" />
+        <meta content="https://github.com/lobehub/sd-webui-lobe-theme" property="og:url" />
+        <meta content={TITLE} property="og:site_name" />
+        <meta content="en-US" property="og:locale" />
+        <meta
+          content="https://repository-images.githubusercontent.com/606329910/7fd79db5-fd91-450c-9e95-8ccce8ffdc0b"
+          property="og:image"
+        />
+        <meta content="website" property="og:type" />
+        <meta content="summary_large_image" name="twitter:card" />
+        <meta content="@lobehub" name="twitter:site" />
+        <meta content={TITLE} name="twitter:title" />
+        <meta content={DESC} name="twitter:description" />
+        <meta
+          content="https://repository-images.githubusercontent.com/606329910/7fd79db5-fd91-450c-9e95-8ccce8ffdc0b"
+          name="twitter:image"
+        />
+        <link href="https://github.com/lobehub/sd-webui-lobe-theme" rel="canonical" />
       </Helmet>
       <GlobalLayout>
         {storeLoading === false && loading === false ? children : <Loading />}

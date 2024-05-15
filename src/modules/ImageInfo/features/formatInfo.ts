@@ -1,5 +1,6 @@
-import { Converter } from '@/scripts/formatPrompt';
 import { parseFromRawInfo } from '@bluelovers/auto1111-pnginfo';
+
+import { Converter } from '@/scripts/formatPrompt';
 
 const formatPrompt = (prompt: string) => {
   let newPrompt = prompt.replaceAll('&lt;', '<').replaceAll('&gt;', '>');
@@ -13,13 +14,13 @@ export const formatInfo = (info: string) => {
   let {
     prompt: position,
     negative_prompt: negative,
-    ...config,
+    ...config
   } = parseFromRawInfo(info, {
     isIncludePrompts: true,
-  })
+  });
 
-  position = position.trim().replaceAll('<br>', '\n').replace(/[\s\r\n]+$/g, '');
-  negative = negative.trim().replaceAll('<br>', '\n').replace(/[\s\r\n]+$/g, '');
+  position = position.trim().replaceAll('<br>', '\n').replaceAll(/\s+$/g, '');
+  negative = negative.trim().replaceAll('<br>', '\n').replaceAll(/\s+$/g, '');
 
   position = position ? formatPrompt(position) : '';
   negative = negative ? formatPrompt(negative) : '';

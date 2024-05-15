@@ -1,12 +1,7 @@
-import { ActionIcon, Modal, type ModalProps } from '@lobehub/ui';
-import { useResponsive } from 'antd-style';
-import { Book } from 'lucide-react';
+import { Modal, type ModalProps } from '@lobehub/ui';
+import { useResponsive, useTheme } from 'antd-style';
 import { memo, useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
-
-import VersionTag from '@/components/VersionTag';
-import { GITHUB_REPO_URL } from '@/const/url';
 
 import FormAppearance from './Form/Appearance';
 import FormExperimental from './Form/Experimental';
@@ -23,7 +18,7 @@ export interface SettingProps {
 const Setting = memo<SettingProps>(({ open, onCancel }) => {
   const [tab, setTab] = useState<SettingsTabs>(SettingsTabs.Appearance);
   const { mobile } = useResponsive();
-  const { t } = useTranslation();
+  const theme = useTheme();
 
   const content = (
     <>
@@ -36,37 +31,65 @@ const Setting = memo<SettingProps>(({ open, onCancel }) => {
 
   return (
     <Modal
-      footer={<Footer />}
+      allowFullscreen={true}
+      footer={mobile ? <Footer /> : null}
       onCancel={onCancel}
       open={open}
       styles={{
-        body: mobile ? { padding: 0 } : {},
+        body: {
+          display: 'flex',
+          minHeight: 'min(75vh, 750px)',
+          overflow: 'hidden',
+          padding: 0,
+          paddingBlock: 0,
+        },
+        content: {
+          background: mobile ? theme.colorBgContainer : undefined,
+          border: 'none',
+          boxShadow: `0 0 0 1px ${theme.colorBorderSecondary}`,
+        },
       }}
-      title={
-        <Flexbox align={'center'} gap={4}>
-          <Flexbox align={'center'} gap={4} horizontal>
-            <a href={GITHUB_REPO_URL} rel="noreferrer" target="_blank">
-              <ActionIcon icon={Book} title="Setting Documents" />
-            </a>
-
-            {t('modal.themeSetting.title')}
-            <VersionTag />
-          </Flexbox>
-        </Flexbox>
-      }
-      width={960}
+      title={false}
+      width={1024}
     >
       {mobile ? (
-        <Flexbox>
+        <Flexbox
+          height={'100%'}
+          style={{ overflow: 'hidden', position: 'relative' }}
+          width={'100%'}
+        >
           <div style={{ padding: 16 }}>
             <MobileSidebar setTab={setTab} tab={tab} />
           </div>
-          {content}
+          <Flexbox
+            height={'100%'}
+            style={{ overflowX: 'hidden', overflowY: 'auto', position: 'relative' }}
+            width={'100%'}
+          >
+            {content}
+          </Flexbox>
         </Flexbox>
       ) : (
-        <Flexbox gap={16} horizontal>
+        <Flexbox horizontal width={'100%'}>
           <Sidebar setTab={setTab} tab={tab} />
-          {content}
+          <Flexbox
+            align={'center'}
+            gap={64}
+            style={{
+              background: theme.isDarkMode ? theme.colorFillQuaternary : theme.colorBgElevated,
+              minHeight: '100%',
+              overflowX: 'hidden',
+              overflowY: 'auto',
+              paddingBlock: 40,
+              paddingInline: 56,
+            }}
+            width={'100%'}
+          >
+            {content}
+            <Flexbox width={'100%'}>
+              <Footer />
+            </Flexbox>
+          </Flexbox>
         </Flexbox>
       )}
     </Modal>

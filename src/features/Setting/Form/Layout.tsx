@@ -1,7 +1,6 @@
 import { Form } from '@lobehub/ui';
 import { Segmented, Switch } from 'antd';
 import isEqual from 'fast-deep-equal';
-import { Layout, TextCursorInput } from 'lucide-react';
 import { memo, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -38,7 +37,7 @@ const SettingForm = memo(() => {
           valuePropName: 'checked',
         },
       ],
-      icon: Layout,
+
       title: t('setting.group.layout'),
     }),
     [],
@@ -67,7 +66,7 @@ const SettingForm = memo(() => {
           name: 'promptTextareaType',
         },
       ],
-      icon: TextCursorInput,
+
       title: t('setting.group.promptTextarea'),
     }),
     [],
@@ -80,6 +79,7 @@ const SettingForm = memo(() => {
       items={[layout, promptTextarea]}
       onFinish={onFinish}
       style={{ flex: 1 }}
+      variant={'pure'}
     />
   );
 });

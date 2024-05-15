@@ -2,6 +2,7 @@ import { LayoutHeader, LayoutMain, LayoutSidebar } from '@lobehub/ui';
 import isEqual from 'fast-deep-equal';
 import { memo, useEffect } from 'react';
 
+import StructuredData from '@/components/StructuredData';
 import PromptFormator from '@/features/PromptFormator';
 import '@/locales/config';
 import ImageInfo from '@/modules/ImageInfo/page';
@@ -35,6 +36,7 @@ const Index = memo(() => {
 
   return (
     <>
+      <StructuredData />
       <GlobalStyle />
       <LayoutHeader headerHeight={HEADER_HEIGHT}>
         <Header />

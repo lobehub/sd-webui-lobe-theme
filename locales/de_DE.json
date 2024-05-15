@@ -25,6 +25,7 @@
       "title": "Themenfeedback"
     },
     "themeSetting": {
+      "desc": "Einstellungen für Thema und Layout",
       "title": "Themen-Einstellungen"
     }
   },

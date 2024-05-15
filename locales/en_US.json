@@ -1,8 +1,8 @@
 {
   "brand": {
+    "custom": "Custom",
     "kitchen": "Kitchen",
-    "lobe": "LobeHub",
-    "custom": "Custom"
+    "lobe": "LobeHub"
   },
   "cancel": "Cancel",
   "confirm": "Confirm",
@@ -10,34 +10,35 @@
     "initializing": "StableDiffusion / LobeTheme is initializing, please wait..."
   },
   "footer": {
-    "resources": "Resources",
     "community": "Community",
     "help": "Help",
-    "moreProducts": "More Products"
+    "moreProducts": "More Products",
+    "resources": "Resources"
   },
   "header": {
     "feedback": "Feedback",
-    "switchTheme": "Switch Light/Dark Theme",
-    "setting": "Setting"
+    "setting": "Setting",
+    "switchTheme": "Switch Light/Dark Theme"
   },
   "modal": {
     "themeFeedback": {
       "title": "Theme Feedback"
     },
     "themeSetting": {
+      "desc": "Preferences and Layout Settings",
       "title": "Theme Settings"
     }
   },
   "prompt": {
     "area": {
-      "object": "Object Selection",
       "attribute": "Attribute Selection",
+      "object": "Object Selection",
       "tag": "Tag Selection"
     },
     "load": "Load Prompt",
-    "set": "Set Prompt",
     "negative": "Negative",
-    "positive": "Positive"
+    "positive": "Positive",
+    "set": "Set Prompt"
   },
   "setting": {
     "button": {
@@ -45,152 +46,152 @@
       "submit": "Apply and Restart Interface"
     },
     "confirmPageUnload": {
-      "title": "Confirmation on page leaving",
-      "desc": "Helps prevent loss of unsaved data"
+      "desc": "Helps prevent loss of unsaved data",
+      "title": "Confirmation on page leaving"
     },
     "customFont": {
-      "title": "Custom Font",
-      "desc": "When enabled, it will automatically load a webfont to enhance the display of text in Chinese, English, and code"
+      "desc": "When enabled, it will automatically load a webfont to enhance the display of text in Chinese, English, and code",
+      "title": "Custom Font"
     },
     "customLogo": {
-      "title": "Custom Logo",
-      "desc": "Support URL / Base64 / Emoji symbols"
+      "desc": "Support URL / Base64 / Emoji symbols",
+      "title": "Custom Logo"
     },
     "customTitle": {
-      "title": "Custom Title",
-      "desc": "Custom Logo Title"
+      "desc": "Custom Logo Title",
+      "title": "Custom Title"
     },
     "extraNetworkSidebar": {
       "defaultCardSize": {
-        "title": "Model Cover Size",
-        "desc": "Default value of model cover size when starting"
+        "desc": "Default value of model cover size when starting",
+        "title": "Model Cover Size"
       },
       "defaultExpand": {
-        "title": "Default Expand",
-        "desc": "Whether to expand the sidebar by default when starting"
+        "desc": "Whether to expand the sidebar by default when starting",
+        "title": "Default Expand"
       },
       "defaultWidth": {
-        "title": "Default Width",
-        "desc": "Default width of the sidebar when starting"
+        "desc": "Default width of the sidebar when starting",
+        "title": "Default Width"
       },
       "displayMode": {
-        "title": "Display Mode",
-        "desc": "Fixed as grid mode for constant display, auto-expand when the mouse moves to the side in floating mode"
+        "desc": "Fixed as grid mode for constant display, auto-expand when the mouse moves to the side in floating mode",
+        "title": "Display Mode"
       },
       "enable": {
-        "title": "Enable",
-        "desc": "Enable the extra network sidebar on the right side"
+        "desc": "Enable the extra network sidebar on the right side",
+        "title": "Enable"
       }
     },
-    "tab": {
-      "appearance": "Appearance",
-      "sidebar": "Sidebar",
-      "layout": "Layout",
-      "experimental": "Experimental"
-    },
     "group": {
+      "experimental": "Experimental Features",
       "extraNetworkSidebar": "Extra Network Sidebar",
       "layout": "Layout Settings",
       "promptTextarea": "Prompt Textbox",
       "quickSettingSidebar": "Quick Setting Sidebar",
-      "theme": "Theme Settings",
-      "experimental": "Experimental Features"
-    },
-    "imageInfo": {
-      "title": "Image Info Alternative",
-      "desc": "Display better image information in the generated image"
+      "theme": "Theme Settings"
     },
     "hideFooter": {
-      "title": "Hide Footer",
-      "desc": "Hide the theme footer and only display the default footer of stable diffusion webui"
+      "desc": "Hide the theme footer and only display the default footer of stable diffusion webui",
+      "title": "Hide Footer"
+    },
+    "imageInfo": {
+      "desc": "Display better image information in the generated image",
+      "title": "Image Info Alternative"
     },
     "language": {
-      "title": "Language",
-      "desc": "Lobe Theme language"
+      "desc": "Lobe Theme language",
+      "title": "Language"
     },
     "logoType": {
-      "title": "Logo Type",
       "desc": "Logo Type",
-      "preview": "Preview"
+      "preview": "Preview",
+      "title": "Logo Type"
     },
     "neutralColor": {
-      "title": "Neutral Color",
-      "desc": "Customize different shades of gray with different color tendencies, the second one is the original Kitchen neutral color"
+      "desc": "Customize different shades of gray with different color tendencies, the second one is the original Kitchen neutral color",
+      "title": "Neutral Color"
     },
     "primaryColor": {
-      "title": "Primary Color",
-      "desc": "Custom primary color, the second one is the original Kitchen theme color"
+      "desc": "Custom primary color, the second one is the original Kitchen theme color",
+      "title": "Primary Color"
     },
     "promptDisplayMode": {
-      "title": "Prompt Display Mode",
       "desc": "Fixed height or auto height with draggable resize support",
       "resizable": "Resizable",
-      "scroll": "Scroll"
+      "scroll": "Scroll",
+      "title": "Prompt Display Mode"
     },
     "promptEditor": {
-      "title": "Prompt Editor",
-      "desc": "Provide a simple prompt editor at the top of the quick setting sidebar"
+      "desc": "Provide a simple prompt editor at the top of the quick setting sidebar",
+      "title": "Prompt Editor"
     },
     "promptHighlight": {
-      "title": "Prompt Syntax Highlighting",
-      "desc": "Automatically colorize prompt display according to the Stable Diffusion syntax rules"
+      "desc": "Automatically colorize prompt display according to the Stable Diffusion syntax rules",
+      "title": "Prompt Syntax Highlighting"
     },
     "quickSettingSidebar": {
       "defaultExpand": {
-        "title": "Default Expand",
-        "desc": "Whether to expand the sidebar by default when starting"
+        "desc": "Whether to expand the sidebar by default when starting",
+        "title": "Default Expand"
       },
       "defaultWidth": {
-        "title": "Default Width",
-        "desc": "Default width of the sidebar when starting"
+        "desc": "Default width of the sidebar when starting",
+        "title": "Default Width"
       },
       "displayMode": {
-        "title": "Display Mode",
-        "desc": "Fixed as grid mode for constant display, auto-expand when the mouse moves to the side in floating mode"
+        "desc": "Fixed as grid mode for constant display, auto-expand when the mouse moves to the side in floating mode",
+        "title": "Display Mode"
       },
       "enable": {
-        "title": "Enable",
-        "desc": "Enable the quick setting sidebar on the left side"
+        "desc": "Enable the quick setting sidebar on the left side",
+        "title": "Enable"
       }
     },
     "reduceAnimation": {
-      "title": "Reduce Animation",
-      "desc": "Reduce the blur effect and background flow color, which can improve smoothness and save CPU usage"
+      "desc": "Reduce the blur effect and background flow color, which can improve smoothness and save CPU usage",
+      "title": "Reduce Animation"
     },
     "splitPreviewer": {
-      "title": "Split Previewer",
-      "desc": "Put the prompt input box on the left and the generate button on the right, ensuring that the generated image is always displayed at the top when scrolling (experimental)"
+      "desc": "Put the prompt input box on the left and the generate button on the right, ensuring that the generated image is always displayed at the top when scrolling (experimental)",
+      "title": "Split Previewer"
     },
     "svgIcons": {
-      "title": "SVG Icons",
-      "desc": "Replace all Emoji icons in stable diffusion webui with SVG icons globally"
+      "desc": "Replace all Emoji icons in stable diffusion webui with SVG icons globally",
+      "title": "SVG Icons"
+    },
+    "tab": {
+      "appearance": "Appearance",
+      "experimental": "Experimental",
+      "layout": "Layout",
+      "sidebar": "Sidebar"
     }
   },
   "share": "Share",
   "shareModal": {
     "download": "Download Screenshot",
     "imageType": "Image Format",
-    "screenshot": "Screenshot",
     "info": "Image Info",
+    "screenshot": "Screenshot",
     "settings": "Export Settings",
-    "withBackground": "Include Background Image",
-    "withFooter": "Include Footer",
-    "warn": "Please Generate Image First",
-    "showNegative": "Show Negative Promot",
-    "showConfig": "Show Generate Config",
     "showAllImages": "Show All Images",
-    "title": "Image Name",
+    "showConfig": "Show Generate Config",
+    "showNegative": "Show Negative Promot",
     "tabs": {
       "info": "Info",
       "settings": "Settings"
-    }
+    },
+    "title": "Image Name",
+    "warn": "Please Generate Image First",
+    "withBackground": "Include Background Image",
+    "withFooter": "Include Footer"
   },
   "sidebar": {
     "extraNetwork": "Extra Network",
-    "quickSetting": "Quick Setting",
     "mode": {
       "fixed": "Fixed",
       "float": "Float"
-    }
+    },
+    "quickSetting": "Quick Setting"
   }
 }

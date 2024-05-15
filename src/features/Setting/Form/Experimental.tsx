@@ -1,7 +1,6 @@
 import { Form } from '@lobehub/ui';
 import { Switch } from 'antd';
 import isEqual from 'fast-deep-equal';
-import { Puzzle, TextCursorInput } from 'lucide-react';
 import { memo, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -31,7 +30,6 @@ const SettingForm = memo(() => {
           valuePropName: 'checked',
         },
       ],
-      icon: Puzzle,
       title: t('setting.group.experimental'),
     }),
     [],
@@ -55,7 +53,6 @@ const SettingForm = memo(() => {
           valuePropName: 'checked',
         },
       ],
-      icon: TextCursorInput,
       title: t('setting.group.promptTextarea'),
     }),
     [],
@@ -68,6 +65,7 @@ const SettingForm = memo(() => {
       items={[experimental, promptTextarea]}
       onFinish={onFinish}
       style={{ flex: 1 }}
+      variant={'pure'}
     />
   );
 });
