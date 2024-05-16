@@ -3,6 +3,9 @@ import { createStyles } from 'antd-style';
 export const useStyles = createStyles(
   ({ css, token }, { headerHeight = 64, size = 86 }: { headerHeight?: number; size?: number }) => ({
     body: css`
+      height: 100%;
+      padding: 0;
+
       .hide {
         display: none;
       }
@@ -27,20 +30,26 @@ export const useStyles = createStyles(
         }
 
         .tabitem {
+          position: relative;
           padding: 0 !important;
           background: transparent;
         }
       }
 
+      .extra-network-pane {
+        resize: none;
+        height: 100%;
+      }
+
       .extra-network-cards {
-        overflow: unset;
+        overflow: hidden auto;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(${size}px, 1fr));
         flex: none !important;
         gap: 8px;
 
-        height: unset;
-        min-height: unset;
+        max-height: 100%;
+        padding: 16px;
 
         border: unset !important;
 
@@ -62,7 +71,7 @@ export const useStyles = createStyles(
         display: flex;
         flex-wrap: wrap;
         gap: 6px;
-        margin-bottom: 12px;
+        padding-inline: 16px;
 
         > button.lg.secondary.gradio-button {
           padding: 4px 8px;
@@ -72,6 +81,11 @@ export const useStyles = createStyles(
       }
 
       .extra-networks {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
         .pending {
           opacity: 1 !important;
         }
@@ -82,14 +96,12 @@ export const useStyles = createStyles(
 
         .tab-nav {
           align-items: center;
-
-          > * {
-            height: 40px !important;
-            margin: 0 !important;
-            font-size: var(--text-md) !important;
-          }
+          margin: 0;
+          padding: 16px;
 
           > button {
+            font-size: 14px !important;
+
             &:first-child {
               display: none;
             }

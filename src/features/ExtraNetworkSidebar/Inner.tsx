@@ -3,6 +3,7 @@ import { Skeleton, Slider } from 'antd';
 import isEqual from 'fast-deep-equal';
 import { ZoomIn, ZoomOut } from 'lucide-react';
 import { memo, useState } from 'react';
+import { Flexbox } from 'react-layout-kit';
 
 import { selectors, useAppStore } from '@/store';
 
@@ -25,17 +26,29 @@ const Inner = memo(() => {
   return (
     <>
       <DraggablePanelBody className={styles.body}>
-        {isLoading && <Skeleton active />}
+        {isLoading && (
+          <Flexbox padding={16} width={'100%'}>
+            <Skeleton active />
+          </Flexbox>
+        )}
         <div style={isLoading ? { display: 'none' } : {}}>
           <div
             id="txt2img-extra-network-sidebar"
             ref={txt2imgExtraNetworkSidebarReference}
-            style={currentTab === 'tab_img2img' ? { display: 'none' } : {}}
+            style={
+              currentTab === 'tab_img2img' ?
+                { display: 'none' } :
+                { height: '100%', overflow: 'hidden', position: 'relative' }
+            }
           />
           <div
             id="img2img-extra-network-sidebar"
             ref={img2imgExtraNetworkSidebarReference}
-            style={currentTab === 'tab_img2img' ? {} : { display: 'none' }}
+            style={
+              currentTab === 'tab_img2img' ?
+                { height: '100%' } :
+                { display: 'none', overflow: 'hidden', position: 'relative' }
+            }
           />
         </div>
       </DraggablePanelBody>

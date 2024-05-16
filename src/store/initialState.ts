@@ -48,7 +48,7 @@ export const DEFAULT_SETTING: WebuiSetting = {
   i18n: 'en_US',
   layoutHideFooter: false,
   layoutSplitPreview: false,
-  liteAnimation: false,
+  liteAnimation: true,
   logoCustomTitle: '',
   logoCustomUrl: '',
   logoType: 'lobe',
