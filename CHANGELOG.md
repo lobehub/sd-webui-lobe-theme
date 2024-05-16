@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 3.5.3](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.5.2...v3.5.3)
+
+<sup>Released on **2024-05-16**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix extra network sidebar scroll.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix extra network sidebar scroll ([c729939](https://github.com/lobehub/sd-webui-lobe-theme/commit/c729939))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.5.2](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.5.1...v3.5.2)
 
 <sup>Released on **2024-05-15**</sup>
