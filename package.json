@@ -69,7 +69,7 @@
   "dependencies": {
     "@bluelovers/auto1111-pnginfo": "^2.0.2",
     "@icons-pack/react-simple-icons": "^9.5.0",
-    "@lobehub/ui": "^1.138.24",
+    "@lobehub/ui": "^1.138.25",
     "@rollup/rollup-win32-x64-msvc": "^4.17.2",
     "ahooks": "^3.7.11",
     "antd": "5.17.0",
@@ -94,6 +94,7 @@
     "react-tag-input": "^6.9.0",
     "semver": "^7.6.2",
     "shiki": "^1.5.2",
+    "split-smartly2": "^2.0.1",
     "swr": "^2.2.5",
     "url-join": "^5.0.0",
     "zustand": "^4.5.2",
