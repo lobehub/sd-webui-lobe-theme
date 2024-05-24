@@ -2,6 +2,39 @@
 
 # Changelog
 
+### [Version 3.5.4](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.5.3...v3.5.4)
+
+<sup>Released on **2024-05-24**</sup>
+
+#### ♻ Code Refactoring
+
+- **misc**: Update formatInfo.ts.
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix lint error.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Code refactoring
+
+- **misc**: Update formatInfo.ts, closes [#569](https://github.com/lobehub/sd-webui-lobe-theme/issues/569) ([2d33e85](https://github.com/lobehub/sd-webui-lobe-theme/commit/2d33e85))
+
+#### What's fixed
+
+- **misc**: Fix lint error ([7f6dc8a](https://github.com/lobehub/sd-webui-lobe-theme/commit/7f6dc8a))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.5.3](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.5.2...v3.5.3)
 
 <sup>Released on **2024-05-16**</sup>
