@@ -1,26 +1,23 @@
 import { parseFromRawInfo } from '@bluelovers/auto1111-pnginfo';
-
 import { splitSmartly } from 'split-smartly2';
 
 const formatPrompt = (prompt: string) => {
   let newPrompt = prompt
     .replaceAll('&lt;', '<')
     .replaceAll('&gt;', '>')
-    .replace(/^[\x00\s,，。]+$/gm, '')
-    .replace(/\n{2,}/g, '\n')
-  ;
-
-  const entries = splitSmartly(newPrompt.replace(/\n/g, '<br>'), [',','，','。'], {
+    // eslint-disable-next-line no-control-regex
+    .replaceAll(/^[\s\u0000,。，]+$/gm, '')
+    .replaceAll(/\n{2,}/g, '\n');
+  const entries = splitSmartly(newPrompt.replaceAll('\n', '<br>'), [',', '，', '。'], {
     brackets: true,
     trimSeparators: true,
   }) as string[];
 
   return entries
-    .filter(line => line.length)
+    .filter((line) => line.length)
     .join(', ')
-    .replace(/<br>/g, '\n')
-    .replace(/^\s+|\s+$/gm, '')
-    ;
+    .replaceAll('<br>', '\n')
+    .replaceAll(/^\s+|\s+$/gm, '');
 };
 
 export const formatInfo = (info: string) => {
