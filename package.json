@@ -112,7 +112,7 @@
     "@types/react-helmet": "^6.1.11",
     "@types/react-tag-input": "^6.6.6",
     "@types/semver": "^7.5.8",
-    "@vitejs/plugin-react-swc": "^3.7.0",
+    "@vitejs/plugin-react-swc": "^4.0.0",
     "@vitest/coverage-v8": "^1.6.0",
     "commitlint": "^19.3.0",
     "dotenv": "^16.4.5",
