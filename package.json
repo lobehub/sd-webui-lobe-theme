@@ -124,9 +124,5 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
-  },
-  "engines": {
-  "node": "20.x"
-},
-"packageManager": "pnpm@9.12.3"
+  }
 }
