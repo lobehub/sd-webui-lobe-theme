@@ -67,7 +67,7 @@
     "@commitlint/cli": "^17",
     "@lobehub/i18n-cli": "latest",
     "@lobehub/lint": "latest",
-    "@lobehub/ui": "latest",
+    "@lobehub/ui": "^1.141.0",
     "@types/lodash-es": "^4",
     "@types/node": "^20",
     "@types/react": "^18",
