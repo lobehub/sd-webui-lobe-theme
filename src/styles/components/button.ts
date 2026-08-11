@@ -18,13 +18,13 @@ export default (token: Theme) => css`
         min-height: var(--button-lg-tool-height) !important;
         max-height: var(--button-lg-tool-height);
         padding: 0;
+        border: 1px solid ${token.colorBorderSecondary};
+        border-radius: ${token.borderRadius}px;
 
         font-size: var(--text-md);
         line-height: 1;
 
         background: ${token.colorFillSecondary};
-        border: 1px solid ${token.colorBorderSecondary};
-        border-radius: ${token.borderRadius}px;
 
         &:hover {
           background: ${token.colorFill};
@@ -46,19 +46,19 @@ export default (token: Theme) => css`
       }
 
       &.secondary {
-        font-weight: 500;
-        background: ${token.colorFillTertiary};
         border: 1px solid ${token.colorBorderSecondary};
         border-radius: ${token.borderRadius}px !important;
+        font-weight: 500;
+        background: ${token.colorFillTertiary};
 
         &:hover {
+          border-color: ${token.colorBorder};
           color: ${token.colorText};
           background: ${token.colorFill};
-          border-color: ${token.colorBorder};
         }
       }
 
-      &:not(.tool, .svelte-1p4r00v) {
+      &:not(.tool) {
         &.primary,
         &.secondary {
           &.lg {
@@ -73,29 +73,45 @@ export default (token: Theme) => css`
         height: var(--button-lg-height) !important;
         min-height: var(--button-lg-height) !important;
         max-height: var(--button-lg-height) !important;
+        border-radius: ${token.borderRadius}px !important;
+
+        font-weight: 500 !important;
+
+        box-shadow: none !important;
+      }
+
+      &[id$='_enqueue'] {
+        height: var(--button-lg-height) !important;
+        min-height: var(--button-lg-height) !important;
+        max-height: var(--button-lg-height) !important;
+        border-radius: ${token.borderRadius}px !important;
+
+        font-weight: 500 !important;
+
+        box-shadow: none !important;
       }
 
       &[id$='_interrupt'] {
         min-width: 0;
-
-        color: var(--button-cancel-text-color) !important;
-
-        background: ${token.colorError} !important;
         border: 1px solid ${token.colorError};
         border-right: none !important;
         border-radius: ${token.borderRadius}px 0 0 ${token.borderRadius}px !important;
 
+        color: var(--button-cancel-text-color) !important;
+
+        background: ${token.colorError} !important;
+
         &:hover,
         &:active {
-          background: ${token.colorErrorHover} !important;
           border: 1px solid ${token.colorErrorHover};
+          background: ${token.colorErrorHover} !important;
         }
       }
 
       &[id$='_skip'] {
         min-width: 0;
-        background: ${token.colorBorderSecondary} !important;
         border-radius: 0 ${token.borderRadius}px ${token.borderRadius}px 0 !important;
+        background: ${token.colorBorderSecondary} !important;
 
         &:hover,
         &:active {

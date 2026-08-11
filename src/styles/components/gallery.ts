@@ -2,8 +2,12 @@ import { Theme, css } from 'antd-style';
 
 export default (token: Theme) => {
   const galleryBackground = css`
+    border: 2px solid ${token.colorBorderSecondary} !important;
+    border-radius: ${token.borderRadius}px !important;
+
     background-color: ${token.colorBgContainer};
-    background-image: linear-gradient(45deg, ${token.colorFillTertiary} 25%, transparent 25%),
+    background-image:
+      linear-gradient(45deg, ${token.colorFillTertiary} 25%, transparent 25%),
       linear-gradient(-45deg, ${token.colorFillTertiary} 25%, transparent 25%),
       linear-gradient(45deg, transparent 75%, ${token.colorFillTertiary} 75%),
       linear-gradient(-45deg, transparent 75%, ${token.colorFillTertiary} 75%);
@@ -13,8 +17,6 @@ export default (token: Theme) => {
       10px -10px,
       -10px 0;
     background-size: 20px 20px;
-    border: 2px solid ${token.colorBorderSecondary} !important;
-    border-radius: ${token.borderRadius}px !important;
   `;
   return css`
     .livePreview,
@@ -35,7 +37,9 @@ export default (token: Theme) => {
       }
     }
 
-    div.svelte-awbtu4 {
+    div.block,
+    .gradio-row,
+    .gradio-column {
       .livePreview,
       .gradio-gallery,
       .gradio-image,

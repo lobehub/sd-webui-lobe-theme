@@ -24,7 +24,9 @@ export default defineConfig({
       input: resolve(__dirname, 'src/main.tsx'),
       output: {
         assetFileNames: `[name].[ext]`,
-        chunkFileNames: `[name].js`,
+        // Keep chunks out of javascript/ root — Forge auto-loads every *.js there
+        // as a classic script, which breaks ES-module chunks (e.g. giscus).
+        chunkFileNames: `chunks/[name]-[hash].js`,
         entryFileNames: `[name].js`,
       },
     },
@@ -47,7 +49,7 @@ export default defineConfig({
     },
     !isProduction && {
       configureServer: (server) => {
-        server.middlewares.use(async(_request, res, next): Promise<void> => {
+        server.middlewares.use(async (_request, res, next): Promise<void> => {
           if (
             _request.originalUrl === '/dev' ||
             _request.originalUrl === '/dev?__theme=dark' ||

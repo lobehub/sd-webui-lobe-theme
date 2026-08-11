@@ -1,10 +1,11 @@
 import { Form } from '@lobehub/ui';
-import { Segmented, Switch } from 'antd';
+import { Segmented, Switch, message } from 'antd';
 import isEqual from 'fast-deep-equal';
 import { memo, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { WebuiSetting, selectors, useAppStore } from '@/store';
+import { needsLayoutReload } from '@/utils/settingApply';
 
 import { SettingItemGroup } from './types';
 
@@ -14,10 +15,17 @@ const SettingForm = memo(() => {
 
   const { t } = useTranslation();
 
-  const onFinish = useCallback((value: WebuiSetting) => {
-    onSetSetting(value);
-    location.reload();
-  }, []);
+  const onFinish = useCallback(
+    async (value: WebuiSetting) => {
+      await onSetSetting(value);
+      if (needsLayoutReload(setting, value)) {
+        location.reload();
+      } else {
+        message.success(t('setting.button.applySuccess'));
+      }
+    },
+    [onSetSetting, setting, t],
+  );
 
   const layout: SettingItemGroup = useMemo(
     () => ({

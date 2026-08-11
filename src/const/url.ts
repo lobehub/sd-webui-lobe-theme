@@ -9,6 +9,7 @@ export const REPO_NAME = GITHUB_REPO_URL.replace(
   '',
 ) as `${string}/${string}`;
 export const OFFICIAL_SITE = 'https://lobehub.com/';
+export const FORGE_NEO_URL = 'https://github.com/Haoming02/sd-webui-forge-classic';
 export const SITE_URL = location.origin;
 export const EMAIL_SUPPORT = 'support@lobehub.com';
 export const EMAIL_BUSINESS = 'hello@lobehub.com';

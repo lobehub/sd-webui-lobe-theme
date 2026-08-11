@@ -25,13 +25,14 @@ const GlobalLayout = memo<DivProps>(({ children }) => {
 
   useEffect(() => {
     const queryTheme: any = String(qs.parseUrl(window.location.href).query.__theme || '');
-    if (queryTheme) {
-      document.body.classList.add(queryTheme);
-      onSetThemeMode(queryTheme);
-    } else {
-      document.body.classList.add(isDarkMode ? 'dark' : 'light');
-      onSetThemeMode(isDarkMode ? 'dark' : 'light');
-    }
+    const themeMode = (queryTheme ? queryTheme : isDarkMode ? 'dark' : 'light') as 'dark' | 'light';
+    const reverseMode = themeMode === 'dark' ? 'light' : 'dark';
+
+    document.body.classList.remove(reverseMode);
+    document.body.classList.add(themeMode);
+    document.documentElement.classList.remove(reverseMode);
+    document.documentElement.classList.add(themeMode);
+    onSetThemeMode(themeMode);
   }, [isDarkMode]);
 
   const genCustomToken = useCallback(() => {

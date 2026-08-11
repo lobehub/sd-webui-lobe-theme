@@ -17,8 +17,8 @@ export const useObserver = (
       for (const mutation of mutationsList) {
         if (mutation.type === 'childList' || mutation.type === 'characterData') {
           if (subSelector) {
-            const info = (mutation.target as any).querySelector(subSelector);
-            setValue(String(info[valueProp]));
+            const info = (mutation.target as any)?.querySelector?.(subSelector);
+            if (info) setValue(String(info[valueProp]));
           } else {
             setValue(String((mutation.target as any)?.innerHTML));
           }

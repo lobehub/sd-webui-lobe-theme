@@ -5,8 +5,12 @@ export const useStyles = createStyles(({ css, token, cx, stylish, prefixCls }) =
   return {
     container: css`
       pointer-events: none;
+
       position: absolute;
+      z-index: 0;
+
       overflow: hidden auto;
+
       padding: calc(8px + var(--input-border-width));
 
       pre {
@@ -32,11 +36,10 @@ export const useStyles = createStyles(({ css, token, cx, stylish, prefixCls }) =
 
         height: 34px;
         padding: 0 8px;
+        border-radius: ${token.borderRadius};
 
         font-family: ${token.fontFamilyCode};
         color: ${token.colorTextTertiary};
-
-        border-radius: ${token.borderRadius};
       `,
     ),
     shiki: cx(

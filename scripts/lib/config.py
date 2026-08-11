@@ -22,8 +22,12 @@ class LobeConfig:
         if os.path.exists(self.config_file):
             LobeLog.debug(f"Loading config from {self.config_file}")
 
-            with open(self.config_file, 'r') as f:
-                self.config = json.load(f)
+            try:
+                with open(self.config_file, 'r', encoding='utf-8') as f:
+                    self.config = json.load(f)
+            except (json.JSONDecodeError, OSError) as e:
+                LobeLog.debug(f"Failed to load config: {e}")
+                self.config = LobeConfig.default()
         else:
             LobeLog.debug(f"Config file not found")
             self.config = LobeConfig.default()
@@ -32,7 +36,7 @@ class LobeConfig:
         return "empty" in self.config and self.config['empty']
 
     def json(self):
-        return json.dumps(self.config)
+        return json.dumps(self.config, ensure_ascii=False)
 
     def delete(self):
         if os.path.exists(self.config_file):
@@ -43,10 +47,27 @@ class LobeConfig:
         return False
 
     def save(self, settings):
-        self.config = settings
-        with open(self.config_file, 'w') as f:
-            f.write(json.dumps(self.config, indent=2))
-            f.close()
+        # Persist flat settings only (ignore export wrapper / empty marker)
+        if isinstance(settings, dict) and "setting" in settings and isinstance(settings["setting"], dict):
+            settings = settings["setting"]
+
+        cleaned = {k: v for k, v in settings.items() if k not in ("empty", "schemaVersion", "exportedAt")}
+        self.config = cleaned
+
+        tmp_file = Path(str(self.config_file) + ".tmp")
+        try:
+            with open(tmp_file, 'w', encoding='utf-8') as f:
+                json.dump(self.config, f, indent=2, ensure_ascii=False)
+                f.write("\n")
+            os.replace(tmp_file, self.config_file)
+        except OSError as e:
+            LobeLog.debug(f"Failed to save config: {e}")
+            if tmp_file.exists():
+                try:
+                    tmp_file.unlink()
+                except OSError:
+                    pass
+            raise
 
     @staticmethod
     def default():

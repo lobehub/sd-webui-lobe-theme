@@ -4,7 +4,7 @@ export const createButton = (type: string, setOpen: (open: boolean) => void): HT
   button.type = 'button';
   button.innerHTML = '💞';
   button.title = 'Share';
-  button.className = 'lg secondary gradio-button tool svelte-cmf5ev';
+  button.className = 'lg secondary gradio-button tool';
   button.addEventListener('click', () => setOpen(true));
   return button;
 };

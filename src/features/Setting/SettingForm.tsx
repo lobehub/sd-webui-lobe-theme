@@ -46,17 +46,17 @@ const SettingForm = memo(() => {
 
   const { t } = useTranslation();
 
-  const onReset = useCallback(() => {
-    onSetSetting(DEFAULT_SETTING);
+  const onReset = useCallback(async () => {
+    await onSetSetting(DEFAULT_SETTING);
     location.reload();
-  }, []);
+  }, [onSetSetting]);
 
   const onFinish = useCallback(
-    (value: WebuiSetting) => {
-      onSetSetting({ ...value, neutralColor, primaryColor });
+    async (value: WebuiSetting) => {
+      await onSetSetting({ ...value, neutralColor, primaryColor });
       location.reload();
     },
-    [primaryColor, neutralColor],
+    [primaryColor, neutralColor, onSetSetting],
   );
 
   const theme: SettingItemGroup = useMemo(

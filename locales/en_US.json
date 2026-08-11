@@ -11,9 +11,12 @@
   },
   "footer": {
     "community": "Community",
+    "compatForge": "Optimized for Forge Neo (Gradio 4)",
     "help": "Help",
     "moreProducts": "More Products",
-    "resources": "Resources"
+    "resources": "Resources",
+    "tagline": "Empowering your AI dreams",
+    "taglineForge": "Lobe Theme · Forge Neo compatible"
   },
   "header": {
     "feedback": "Feedback",
@@ -42,8 +45,14 @@
   },
   "setting": {
     "button": {
+      "applySuccess": "Settings applied",
+      "export": "Export",
+      "exportSuccess": "Settings exported",
+      "import": "Import",
+      "importError": "Failed to import settings",
+      "importSuccess": "Settings imported",
       "reset": "Revert to default",
-      "submit": "Apply and Restart Interface"
+      "submit": "Apply"
     },
     "confirmPageUnload": {
       "desc": "Helps prevent loss of unsaved data",

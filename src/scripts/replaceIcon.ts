@@ -49,8 +49,14 @@ const replaceIcon = (element: HTMLElement, emoji: string[], svg: string, size: n
   }
 };
 
+// Extra-network cards (LoRA/checkpoints/...) can number in the thousands and never
+// contain the toolbar emoji we replace here. Skipping their subtree avoids iterating
+// tens of thousands of nodes on startup, which otherwise freezes the UI.
+const isInExtraNetworkCard = (element: HTMLElement) => !!element.closest('.extra-network-cards');
+
 export default () => {
   for (const button of document.querySelectorAll('button')) {
+    if (isInExtraNetworkCard(button)) continue;
     replaceIcon(button, ['🖌️'], SquarePen, 16);
     replaceIcon(button, ['🗃️'], FileArchive, 16);
     replaceIcon(button, ['🖼️'], Image, 16);
@@ -85,6 +91,7 @@ export default () => {
   }
 
   for (const span of document.querySelectorAll('span')) {
+    if (isInExtraNetworkCard(span)) continue;
     replaceIcon(span, ['⤡'], Maximize, 36);
     replaceIcon(span, ['⊞'], Grid2x2, 36);
     replaceIcon(span, ['🖫'], Download, 36);
@@ -92,6 +99,7 @@ export default () => {
   }
 
   for (const a of document.querySelectorAll('a')) {
+    if (isInExtraNetworkCard(a)) continue;
     replaceIcon(a, ['❮'], ArrowLeft, 36);
     replaceIcon(a, ['❯'], ArrowRight, 36);
   }

@@ -1,11 +1,12 @@
 import { Form, Swatches } from '@lobehub/ui';
-import { Input, Segmented, Select, Switch } from 'antd';
+import { Input, Segmented, Select, Switch, message } from 'antd';
 import isEqual from 'fast-deep-equal';
 import { memo, useCallback, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { CustomLogo } from '@/components';
 import { type WebuiSetting, selectors, useAppStore } from '@/store';
+import { needsLayoutReload } from '@/utils/settingApply';
 
 import {
   type NeutralColor,
@@ -35,11 +36,16 @@ const SettingForm = memo(() => {
   const { t } = useTranslation();
 
   const onFinish = useCallback(
-    (value: WebuiSetting) => {
-      onSetSetting({ ...value, neutralColor, primaryColor });
-      location.reload();
+    async (value: WebuiSetting) => {
+      const next = { ...value, neutralColor, primaryColor };
+      await onSetSetting(next);
+      if (needsLayoutReload(setting, next)) {
+        location.reload();
+      } else {
+        message.success(t('setting.button.applySuccess'));
+      }
     },
-    [primaryColor, neutralColor],
+    [primaryColor, neutralColor, onSetSetting, setting, t],
   );
 
   const theme: SettingItemGroup = useMemo(
@@ -156,11 +162,13 @@ const SettingForm = memo(() => {
       title: t('setting.group.theme'),
     }),
     [
+      localeOptions,
       primaryColor,
       neutralColor,
       rawSetting.logoType,
       rawSetting.logoCustomTitle,
       rawSetting.logoCustomUrl,
+      t,
     ],
   );
 

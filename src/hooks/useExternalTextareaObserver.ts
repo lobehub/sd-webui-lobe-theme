@@ -7,8 +7,10 @@ export const useExternalTextareaObserver = (textareaSelector: string) => {
     const observerCallback: MutationCallback = (mutationsList) => {
       for (const mutation of mutationsList) {
         if (mutation.type === 'attributes') {
-          const externalTextarea = document.querySelector(textareaSelector) as HTMLTextAreaElement;
-          setValue(externalTextarea.value);
+          const externalTextarea = document.querySelector(
+            textareaSelector,
+          ) as HTMLTextAreaElement | null;
+          if (externalTextarea) setValue(externalTextarea.value);
         }
       }
     };

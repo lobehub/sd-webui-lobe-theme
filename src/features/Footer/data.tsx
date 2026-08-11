@@ -1,15 +1,22 @@
 import { Icon } from '@lobehub/ui';
 import { Bug, FileClock, GitFork, Github, Heart } from 'lucide-react';
 
-import { GITHUB_REPO_URL } from '@/const/url';
+import { FORGE_NEO_URL, GITHUB_REPO_URL } from '@/const/url';
 
-export const Resources = [
-  {
-    description: 'AUTOMATIC111',
-    openExternal: true,
-    title: 'Stable Diffusion Webui',
-    url: 'https://github.com/AUTOMATIC1111/stable-diffusion-webui',
-  },
+export const getResources = (isForgeNeo: boolean) => [
+  isForgeNeo
+    ? {
+        description: 'Forge Neo',
+        openExternal: true,
+        title: 'Stable Diffusion WebUI Forge Neo',
+        url: FORGE_NEO_URL,
+      }
+    : {
+        description: 'AUTOMATIC111',
+        openExternal: true,
+        title: 'Stable Diffusion Webui',
+        url: 'https://github.com/AUTOMATIC1111/stable-diffusion-webui',
+      },
   {
     description: 'WebUI extension',
     openExternal: true,
@@ -35,6 +42,9 @@ export const Resources = [
     url: 'https://www.birme.net/?target_width=512&target_height=512',
   },
 ];
+
+/** @deprecated use getResources(isForgeNeo) */
+export const Resources = getResources(false);
 
 export const Community = [
   {
@@ -73,7 +83,7 @@ export const MoreProducts = [
   {
     description: 'Stable Diffusion Extension',
     openExternal: true,
-    title: '🤯 Lobe Theme',
+    title: '🤯 Lobe Theme Neo',
     url: 'https://github.com/lobehub/sd-webui-lobe-theme',
   },
   {

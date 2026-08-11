@@ -25,14 +25,16 @@ export default (token: Theme) => {
 
       /* autocomplete */
       .autocompleteResults {
+        z-index: 1100 !important;
+
         min-width: 400px;
+        border-color: ${token.colorBorder} !important;
+        border-radius: ${token.borderRadius}px !important;
 
         font-family: ${token.fontFamilyCode};
         font-size: 12px;
 
         background: ${token.colorBgElevated} !important;
-        border-color: ${token.colorBorder} !important;
-        border-radius: ${token.borderRadius}px !important;
         box-shadow: ${token.boxShadow};
 
         ul {
@@ -98,9 +100,9 @@ export default (token: Theme) => {
       /* Aspect Ratio selector */
       [id$='2img_container_aspect_ratio'] {
         padding: 16px;
-        background-color: ${token.colorBgContainer};
         border: 1px solid var(--block-border-color);
         border-radius: ${token.borderRadius}px;
+        background-color: ${token.colorBgContainer};
 
         #arc_empty_space {
           display: none;
@@ -112,12 +114,11 @@ export default (token: Theme) => {
           min-height: var(--button-lg-tool-height) !important;
           max-height: var(--button-lg-tool-height) !important;
           padding: 0 1.25em !important;
+          border: none;
+          border-radius: ${token.borderRadius}px;
 
           font-size: var(--text-md);
           font-weight: 500;
-
-          border: none;
-          border-radius: ${token.borderRadius}px;
         }
 
         #arc_panel {
@@ -201,6 +202,27 @@ export default (token: Theme) => {
       /* ComfyUI */
       #comfyui_webui_container {
         height: calc(100% - ${HEADER_HEIGHT}px) !important;
+      }
+
+      /* Lobe + Extra Networks: avoid Helper-era opacity/progress bugs */
+      #txt2img_extra_tabs [style*='_cards_html'] .pending,
+      #img2img_extra_tabs [style*='_cards_html'] .pending {
+        opacity: 1 !important;
+      }
+
+      #txt2img_extra_tabs [id*='_cards_html'] .progress-text,
+      #img2img_extra_tabs [id*='_cards_html'] .progress-text {
+        display: none !important;
+      }
+
+      /* TagComplete: keep above PromptHighlight globally */
+      .autocompleteParent {
+        z-index: 1100 !important;
+      }
+
+      [data-code-type='highlighter'] {
+        pointer-events: none;
+        z-index: 0;
       }
     }
   `;

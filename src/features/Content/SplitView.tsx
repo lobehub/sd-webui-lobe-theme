@@ -1,6 +1,23 @@
 import { consola } from 'consola';
 import { memo, useEffect } from 'react';
 
+const moveGenerateWithEnqueue = (
+  generateBox: HTMLDivElement | null,
+  preview: HTMLDivElement | null,
+) => {
+  if (!generateBox || !preview) return;
+
+  const actionsColumn = generateBox.closest('[id$="_actions_column"]') as HTMLElement | null;
+  const enqueueWrapper =
+    (actionsColumn?.querySelector('[id$="_enqueue_wrapper"]') as HTMLElement | null) ||
+    (generateBox.parentElement?.querySelector('[id$="_enqueue_wrapper"]') as HTMLElement | null);
+
+  preview.prepend(generateBox);
+  if (enqueueWrapper) {
+    generateBox.after(enqueueWrapper);
+  }
+};
+
 const Preview = memo(() => {
   useEffect(() => {
     try {
@@ -13,7 +30,7 @@ const Preview = memo(() => {
       ) as HTMLDivElement;
       if (txt2imgToprow && txt2imgSettings && txt2imgGenerate && txt2imgPreview) {
         txt2imgSettings.prepend(txt2imgToprow);
-        txt2imgPreview.prepend(txt2imgGenerate);
+        moveGenerateWithEnqueue(txt2imgGenerate, txt2imgPreview);
       }
       // tab_img2img
       const img2imgToprow = gradioApp().querySelector('#img2img_toprow') as HTMLDivElement;
@@ -24,7 +41,7 @@ const Preview = memo(() => {
       ) as HTMLDivElement;
       if (img2imgSettings && img2imgToprow && img2imgGenerate && img2imgPreview) {
         img2imgSettings.prepend(img2imgToprow);
-        img2imgPreview.prepend(img2imgGenerate);
+        moveGenerateWithEnqueue(img2imgGenerate, img2imgPreview);
       }
 
       // extras_img2img

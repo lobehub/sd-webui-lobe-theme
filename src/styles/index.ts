@@ -5,6 +5,8 @@ import button from './components/button';
 import collapse from './components/collapse';
 import container from './components/container';
 import extensions from './components/extensions';
+import extensionsExtra from './components/extensionsExtra';
+import forge from './components/forge';
 import gallery from './components/gallery';
 import input from './components/input';
 import label from './components/label';
@@ -34,6 +36,8 @@ const GlobalStyle = createGlobalStyle(({ theme }) => [
   tabs(theme),
   popup(theme),
   extensions(theme),
+  extensionsExtra(theme),
+  forge(theme),
   lightboxModal(theme),
   mobile(),
 ]);

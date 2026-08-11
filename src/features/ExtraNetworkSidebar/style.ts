@@ -50,7 +50,6 @@ export const useStyles = createStyles(
 
         max-height: 100%;
         padding: 16px;
-
         border: unset !important;
 
         .name {
@@ -132,9 +131,9 @@ export const useStyles = createStyles(
               flex: none;
 
               height: 32px;
+              border-radius: ${token.borderRadius}px;
 
               background: ${token.colorFillTertiary};
-              border-radius: ${token.borderRadius}px;
             }
           }
         }
@@ -208,15 +207,19 @@ export const useStyles = createStyles(
         }
 
         .card {
+          /* Off-screen cards: keep intrinsic size so scroll height stays correct */
+          content-visibility: auto;
+          contain-intrinsic-size: ${size}px ${size * 1.5}px;
+
           overflow: hidden;
 
           width: 100% !important;
           height: ${size * 1.5}px !important;
           margin: 0 !important;
-
-          background-size: cover;
           border: 1px solid ${token.colorBorderSecondary};
           border-radius: ${token.borderRadiusSM}px;
+
+          background-size: cover;
           outline: none;
 
           transition:
@@ -249,8 +252,8 @@ export const useStyles = createStyles(
 
         .button-row {
           padding: 0 4px;
-          background: rgba(0, 0, 0, 50%);
           border-bottom-left-radius: ${token.borderRadius}px;
+          background: rgba(0, 0, 0, 50%);
 
           > div {
             font-size: var(--text-md) !important;
@@ -269,7 +272,7 @@ export const useStyles = createStyles(
       div#img2img_extra_networks {
         display: block !important;
 
-        .tabitem.gradio-tabitem.svelte-19hvt5v {
+        .tabitem.gradio-tabitem {
           padding: 0 !important;
           background: transparent;
         }

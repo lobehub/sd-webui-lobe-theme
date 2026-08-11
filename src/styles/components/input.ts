@@ -17,19 +17,35 @@ export default (token: Theme) => {
       border-radius: ${token.borderRadius}px !important;
     }
 
+    /* Gradio 4 file / checkbox polish */
+    .block.gradio-file,
+    .block.gradio-uploadbutton {
+      border-radius: ${token.borderRadius}px !important;
+    }
+
+    .wrap.default.full {
+      border-radius: ${token.borderRadius}px;
+    }
+
     input {
-      &:not([type='range'], [type='checkbox'], [type='number'], [type='radio'], .border-none) {
+      &:not(
+        [type='range'],
+        [type='checkbox'],
+        [type='number'],
+        [type='radio'],
+        [type='file'],
+        .border-none
+      ) {
         resize: none;
 
         overflow: hidden;
 
         width: 100%;
         height: var(--button-lg-tool-height) !important;
+        border-radius: ${token.borderRadius}px;
 
         text-overflow: ellipsis;
         white-space: nowrap;
-
-        border-radius: ${token.borderRadius}px;
       }
 
       &[type='checkbox'],
@@ -53,16 +69,17 @@ export default (token: Theme) => {
 
         position: relative;
 
-        line-height: var(--line-sm);
-
-        background-color: ${token.colorFillTertiary} !important;
         border: 1px solid ${token.colorBorder} !important;
         border-radius: ${token.borderRadiusSM}px !important;
 
+        line-height: var(--line-sm);
+
+        background-color: ${token.colorFillTertiary} !important;
+
         &:checked {
+          border-color: ${token.colorPrimaryBorder} !important;
           background-color: ${token.colorPrimary} !important;
           background-image: var(--checkbox-check) !important;
-          border-color: ${token.colorPrimaryBorder} !important;
         }
       }
 

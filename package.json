@@ -1,10 +1,12 @@
 {
-  "name": "sd-webui-lobe-theme",
-  "version": "3.5.4",
+  "name": "lobe-theme-neo",
+  "version": "3.5.4-forge.neo.2",
   "private": true,
-  "description": "LobeThem: The Modern Theme for Stable Diffusion WebUI, Exquisite interface design, Highly customizable UI, and Efficiency boosting features.",
+  "description": "Lobe Theme Neo for Forge Neo / Gradio 4 with layout enhancements, light/dark switching, and SplitView support.",
   "keywords": [
     "lobehub",
+    "lobe-theme-neo",
+    "forge-neo",
     "stable-diffusion-webui",
     "sd-webui-kitchen-theme",
     "kitchen-theme",
@@ -32,7 +34,7 @@
     "dev:sd": "cd ../../ && ./webui.sh",
     "i18n": "lobe-i18n",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
-    "lint:md": "remark . --quiet --output",
+    "lint:md": "prettier --write \"**/*.md\"",
     "lint:style": "stylelint \"src/**/*.{css,less,js,jsx,ts,tsx}\" --fix",
     "prepare": "husky install",
     "prettier": "prettier -c --write \"**/**\"",
@@ -45,7 +47,6 @@
   },
   "lint-staged": {
     "*.md": [
-      "remark --quiet --output --",
       "prettier --write --no-error-on-unmatched-pattern"
     ],
     "*.json": [
@@ -69,7 +70,7 @@
   "dependencies": {
     "@bluelovers/auto1111-pnginfo": "^2.0.3",
     "@icons-pack/react-simple-icons": "^9.5.0",
-    "@lobehub/ui": "^1.141.0",
+    "@lobehub/ui": "1.141.0",
     "@rollup/rollup-win32-x64-msvc": "^4.18.0",
     "ahooks": "^3.8.0",
     "antd": "5.17.0",
@@ -79,8 +80,8 @@
     "i18next": "^23.11.5",
     "i18next-http-backend": "^2.5.2",
     "lodash-es": "^4.17.21",
-    "lucide-react": "latest",
-    "lucide-static": "latest",
+    "lucide-react": "0.395.0",
+    "lucide-static": "0.395.0",
     "modern-screenshot": "^4.4.39",
     "polished": "^4.3.1",
     "react": "^18.3.1",

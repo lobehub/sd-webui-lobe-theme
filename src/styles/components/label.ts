@@ -3,7 +3,7 @@ import { css } from 'antd-style';
 export default () => {
   return css`
     [id$='_settings'] {
-      label.svelte-1ojmf70 {
+      label {
         overflow: hidden;
         display: block !important;
       }
@@ -15,11 +15,7 @@ export default () => {
       text-overflow: ellipsis;
       white-space: nowrap;
 
-      &.svelte-1pie7s6 {
-        display: unset !important;
-      }
-
-      > span.svelte-1gfkn6j {
+      > span {
         overflow: hidden;
         width: 100%;
         text-overflow: ellipsis;

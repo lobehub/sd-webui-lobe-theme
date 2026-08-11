@@ -24,15 +24,34 @@ const Actions = memo<ActionsProps>(() => {
   const [isSettingOpen, setIsSettingOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const themeMode = useAppStore(selectors.themeMode);
+  const onSetThemeMode = useAppStore((st) => st.onSetThemeMode);
   const { mobile } = useResponsive();
   const { t } = useTranslation();
 
+  // Soft toggle: full location.replace(?__theme=) reloads Gradio and used to leave
+  // Lobe stuck on Loading (onUiLoaded race). Keep URL in sync without reload.
   const handleSetTheme = useCallback(() => {
     const theme = themeMode === 'light' ? 'dark' : 'light';
+    const reverse = themeMode;
+
+    document.body.classList.remove(reverse);
+    document.body.classList.add(theme);
+    document.documentElement.classList.remove(reverse);
+    document.documentElement.classList.add(theme);
+    document.documentElement.style.colorScheme = theme;
+
+    const app = document.querySelector('gradio-app');
+    if (app) {
+      app.classList.toggle('dark', theme === 'dark');
+      app.classList.toggle('light', theme === 'light');
+    }
+
+    onSetThemeMode(theme);
+
     const gradioURL = qs.parseUrl(window.location.href);
     gradioURL.query.__theme = theme;
-    window.location.replace(qs.stringifyUrl(gradioURL));
-  }, [themeMode]);
+    window.history.replaceState({}, '', qs.stringifyUrl(gradioURL));
+  }, [themeMode, onSetThemeMode]);
 
   return (
     <>

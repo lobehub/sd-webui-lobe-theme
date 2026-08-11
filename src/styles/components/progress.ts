@@ -17,20 +17,22 @@ export default (token: Theme) => css`
   .eta-bar {
     overflow: hidden;
 
+    border: 1px solid ${token.colorBorder};
+    border-radius: ${token.borderRadius}px;
+
     opacity: 1 !important;
     background: ${token.colorFillQuaternary} !important;
     backdrop-filter: saturate(180%) blur(10px);
-    border: 1px solid ${token.colorBorder};
-    border-radius: ${token.borderRadius}px;
   }
 
+  .wrap:has(> div),
   .wrap.svelte-j1gjts:has(div) {
     overflow: hidden;
 
     min-height: 36px;
+    border-radius: ${token.borderRadius}px;
 
     background: ${token.colorBgContainer} !important;
-    border-radius: ${token.borderRadius}px;
     box-shadow: 0 0 0 2px ${token.colorBgContainer};
 
     .meta-text,
@@ -57,7 +59,9 @@ export default (token: Theme) => css`
       font-family: var(--font-mono);
       font-size: var(--text-md);
       font-weight: 600 !important;
-      text-shadow: 0 1px 4px rgb(0 0 0 / 80%);
+      text-shadow: none !important;
+
+      background: ${token.colorPrimary} !important;
 
       &::before {
         content: '';

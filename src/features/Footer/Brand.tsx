@@ -1,10 +1,12 @@
 import { Logo } from '@lobehub/ui';
 import { createStyles, useThemeMode } from 'antd-style';
 import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 import urlJoin from 'url-join';
 
-import { OFFICIAL_SITE, STATUS_URL } from '@/const/url';
+import { FORGE_NEO_URL, OFFICIAL_SITE, STATUS_URL } from '@/const/url';
+import { useAppStore } from '@/store';
 
 import Follow from './Follow';
 
@@ -25,9 +27,9 @@ const useStyles = createStyles(({ css, token }) => {
       color: inherit !important;
     `,
     status: css`
+      border: none !important;
       color-scheme: none;
       background: transparent;
-      border: none !important;
     `,
   };
 });
@@ -35,13 +37,16 @@ const useStyles = createStyles(({ css, token }) => {
 const Brand = memo(() => {
   const { styles } = useStyles();
   const { isDarkMode } = useThemeMode();
+  const isForgeNeo = useAppStore((st) => st.isForgeNeo);
+  const { t } = useTranslation();
 
   return (
     <Flexbox className={styles.container} gap={16}>
-      <a className={styles.logo} href={OFFICIAL_SITE}>
+      <a className={styles.logo} href={isForgeNeo ? FORGE_NEO_URL : OFFICIAL_SITE}>
         <Logo type={'combine'} />
       </a>
-      <div>Empowering your AI dreams</div>
+      <div>{isForgeNeo ? t('footer.taglineForge') : t('footer.tagline')}</div>
+      {isForgeNeo && <div className={styles.description}>{t('footer.compatForge')}</div>}
       <div className={styles.description}>{COPYRIGHT}</div>
       <Follow />
       <iframe

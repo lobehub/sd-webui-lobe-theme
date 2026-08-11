@@ -64,9 +64,12 @@ export const DEFAULT_SETTING: WebuiSetting = {
 
 export interface StroeState {
   currentTab: string;
+  isForgeNeo: boolean;
   latestVersion: string;
   loading: boolean;
   localeOptions: SelectProps['options'];
+  /** Mobile: only one sidebar open at a time */
+  mobileSidebar: 'none' | 'quick' | 'extra';
   setting: WebuiSetting;
   themeMode: 'light' | 'dark';
   version: string;
@@ -74,9 +77,11 @@ export interface StroeState {
 
 export const initialState: StroeState = {
   currentTab: 'tab_txt2img',
+  isForgeNeo: false,
   latestVersion: DEFAULT_VERSION,
   loading: true,
   localeOptions: DEFAULT_LOCALE_OPTIONS,
+  mobileSidebar: 'none',
   setting: DEFAULT_SETTING,
   themeMode: 'dark',
   version: DEFAULT_VERSION,

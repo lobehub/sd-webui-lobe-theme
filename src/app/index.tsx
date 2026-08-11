@@ -42,7 +42,7 @@ const Index = memo(() => {
         <Header />
       </LayoutHeader>
       <LayoutMain>
-        {<div className={setting.liteAnimation ? styles.backgroundLite : styles.background} />}
+        <div className={setting.liteAnimation ? styles.backgroundLite : styles.background} />
         {setting.enableSidebar && (
           <LayoutSidebar
             className={styles.sidebar}
@@ -55,7 +55,7 @@ const Index = memo(() => {
         <Content className={cx(!setting.enableSidebar && styles.quicksettings)} />
         <PromptFormator />
         <Share />
-        {setting?.enableExtraNetworkSidebar && (
+        {setting.enableExtraNetworkSidebar && (
           <LayoutSidebar
             className={styles.sidebar}
             headerHeight={HEADER_HEIGHT}
@@ -65,7 +65,7 @@ const Index = memo(() => {
           </LayoutSidebar>
         )}
       </LayoutMain>
-      <Footer />
+      {!setting.layoutHideFooter && <Footer />}
     </>
   );
 });

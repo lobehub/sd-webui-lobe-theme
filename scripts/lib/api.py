@@ -41,6 +41,13 @@ class LobeApi:
 
             language_data = self.locale.get_language_file(lng)
 
+            if language_data is None:
+                return Response(
+                    content=json.dumps({"error": "Language file not found"}),
+                    media_type="application/json",
+                    status_code=404,
+                )
+
             return Response(content=json.dumps(language_data), media_type="application/json", status_code=200)
 
         @app.get("/lobe/config")

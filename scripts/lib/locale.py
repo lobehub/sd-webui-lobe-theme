@@ -26,8 +26,9 @@ class LobeLocale:
         if language_data:
             return language_data
         else:
-            LobeLog.debug(f"Language file not found")
-            return {"error": "Language file not found"}
+            LobeLog.debug(f"Language file not found: {lng}")
+            return None
+
     @staticmethod
     def default():
         return {'empty': True}

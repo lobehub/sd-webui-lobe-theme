@@ -14,12 +14,15 @@ export const useGalleryObserver = (selector: string) => {
     const observer = new MutationObserver((mutationsList) => {
       for (const mutation of mutationsList) {
         if (mutation.type === 'childList' || mutation.type === 'characterData') {
-          const info = (mutation.target as any).querySelector('img[data-testid="detailed-image"]');
-          const infoDoms = (mutation.target as any).querySelectorAll('.thumbnails button img');
+          const info = (mutation.target as any)?.querySelector?.(
+            'img[data-testid="detailed-image"]',
+          );
+          const infoDoms =
+            (mutation.target as any)?.querySelectorAll?.('.thumbnails button img') ?? [];
           const infos = Array.from(infoDoms)
             .filter(Boolean)
             .map((i: any) => i.src);
-          setValue(String(info.src));
+          if (info) setValue(String(info.src));
           setAllValue(infos);
         }
       }

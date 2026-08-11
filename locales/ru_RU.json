@@ -11,9 +11,12 @@
   },
   "footer": {
     "community": "Сообщество",
+    "compatForge": "Оптимизировано для Forge Neo (Gradio 4)",
     "help": "Помощь",
     "moreProducts": "Дополнительные продукты",
-    "resources": "Ресурсы"
+    "resources": "Ресурсы",
+    "tagline": "Empowering your AI dreams",
+    "taglineForge": "Lobe Theme · совместимость с Forge Neo"
   },
   "header": {
     "feedback": "Обратная связь",
@@ -42,8 +45,14 @@
   },
   "setting": {
     "button": {
+      "applySuccess": "Настройки применены",
+      "export": "Экспорт",
+      "exportSuccess": "Настройки экспортированы",
+      "import": "Импорт",
+      "importError": "Не удалось импортировать настройки",
+      "importSuccess": "Настройки импортированы",
       "reset": "Вернуть настройки по умолчанию",
-      "submit": "Применить и перезапустить интерфейс"
+      "submit": "Применить"
     },
     "confirmPageUnload": {
       "desc": "Помогает предотвратить потерю несохраненных данных",

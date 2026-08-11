@@ -7,6 +7,7 @@ import pkg from '@/../package.json';
 import { Loading } from '@/components';
 import GlobalLayout from '@/layouts';
 import { useAppStore } from '@/store';
+import { applyForgeDocumentFlag } from '@/utils/forge';
 
 import manifest from './manifest';
 
@@ -33,10 +34,38 @@ export const Layout = memo<PropsWithChildren>(({ children }) => {
 
   useEffect(() => {
     onInit();
-    onUiLoaded(() => {
+
+    let done = false;
+    const finish = () => {
+      if (done) return;
+      done = true;
+      // Re-run after Gradio hydrates shadow DOM — early DOMContentLoaded detect can miss it
+      applyForgeDocumentFlag();
       setLoading(false);
       consola.success('🤯 Lobe Theme loading');
-    });
+    };
+
+    // Theme toggle used to full-reload with ?__theme=… After reload Gradio can
+    // fire onUiLoaded before React mounts, so the callback never runs and the
+    // UI stays stuck on the Loading screen. Also poll + hard timeout.
+    onUiLoaded(finish);
+    const alreadyReady = () =>
+      typeof gradioApp === 'function' && Boolean(gradioApp()?.querySelector('#txt2img_prompt'));
+    if (alreadyReady()) {
+      finish();
+    } else {
+      const poll = window.setInterval(() => {
+        if (alreadyReady()) {
+          window.clearInterval(poll);
+          finish();
+        }
+      }, 100);
+      window.setTimeout(() => {
+        window.clearInterval(poll);
+        finish();
+      }, 12_000);
+    }
+
     onUiTabChange(() => {
       setCurrentTab();
     });

@@ -7,7 +7,7 @@ import {
 } from '@lobehub/ui';
 import { useResponsive } from 'antd-style';
 import isEqual from 'fast-deep-equal';
-import { memo, useEffect, useState } from 'react';
+import { memo, useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { selectors, useAppStore } from '@/store';
@@ -22,6 +22,8 @@ export interface QuickSettingSidebarProps extends DivProps {
 const QuickSettingSidebar = memo<QuickSettingSidebarProps>(({ headerHeight }) => {
   const { mobile } = useResponsive();
   const setting = useAppStore(selectors.currentSetting, isEqual);
+  const mobileSidebar = useAppStore((st) => st.mobileSidebar);
+  const setMobileSidebar = useAppStore((st) => st.setMobileSidebar);
   const [expand, setExpand] = useState<boolean>(mobile ? false : setting.sidebarExpand);
   const [pin, setPin] = useState<boolean>(setting.sidebarFixedMode === 'fixed');
   const [width, setWidth] = useState<number>(setting.sidebarWidth);
@@ -29,8 +31,28 @@ const QuickSettingSidebar = memo<QuickSettingSidebarProps>(({ headerHeight }) =>
   const { t } = useTranslation();
 
   useEffect(() => {
-    if (mobile) setExpand(false);
-  }, [mobile]);
+    if (mobile) {
+      setExpand(false);
+      setMobileSidebar('none');
+    }
+  }, [mobile, setMobileSidebar]);
+
+  // On mobile only one sidebar at a time
+  useEffect(() => {
+    if (!mobile) return;
+    setExpand(mobileSidebar === 'quick');
+  }, [mobile, mobileSidebar]);
+
+  const onExpandChange = useCallback(
+    (next: boolean) => {
+      if (mobile) {
+        setMobileSidebar(next ? 'quick' : 'none');
+      } else {
+        setExpand(next);
+      }
+    },
+    [mobile, setMobileSidebar],
+  );
 
   const mode = mobile ? 'fixed' : pin ? 'fixed' : 'float';
 
@@ -40,7 +62,7 @@ const QuickSettingSidebar = memo<QuickSettingSidebarProps>(({ headerHeight }) =>
       expand={expand}
       minWidth={setting.sidebarWidth}
       mode={mode}
-      onExpandChange={setExpand}
+      onExpandChange={onExpandChange}
       onSizeChange={(_, size) => size?.width && setWidth(Number.parseInt(String(size.width)))}
       pin={pin}
       placement="left"
@@ -53,15 +75,15 @@ const QuickSettingSidebar = memo<QuickSettingSidebarProps>(({ headerHeight }) =>
         <DraggablePanelContainer
           className={styles.container}
           style={
-            mode === 'float' ?
-              { background: theme.colorBgContainer, minWidth: setting.sidebarWidth } :
-              { minWidth: setting.sidebarWidth }
+            mode === 'float'
+              ? { background: theme.colorBgContainer, minWidth: setting.sidebarWidth }
+              : { minWidth: setting.sidebarWidth }
           }
         >
           <DraggablePanelHeader
             pin={pin}
             position="left"
-            setExpand={setExpand}
+            setExpand={onExpandChange}
             setPin={setPin}
             title={t('sidebar.quickSetting')}
           />

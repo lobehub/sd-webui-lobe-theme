@@ -6,7 +6,7 @@ export const createButton = (type: 'txt' | 'img') => {
   button.type = 'button';
   button.innerHTML = '🪄';
   button.title = 'Format prompt~🪄';
-  button.className = 'lg secondary gradio-button tool svelte-cmf5ev';
+  button.className = 'lg secondary gradio-button tool';
   button.addEventListener('click', () => Converter.onClickConvert(type));
   return button;
 };

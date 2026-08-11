@@ -8,11 +8,12 @@ import { selectors, useAppStore } from '@/store';
 import { type DivProps } from '@/types';
 
 import Brand from './Brand';
-import { Community, MoreProducts, Resources } from './data';
+import { Community, MoreProducts, getResources } from './data';
 import { useStyles } from './style';
 
 const Footer = memo<DivProps>(({ className, ...props }) => {
   const setting = useAppStore(selectors.currentSetting, isEqual);
+  const isForgeNeo = useAppStore((st) => st.isForgeNeo);
   const { cx, styles } = useStyles();
   const { t } = useTranslation();
   const footerReference = useRef<HTMLDivElement>(null);
@@ -35,14 +36,14 @@ const Footer = memo<DivProps>(({ className, ...props }) => {
       <F
         bottom={<div ref={footerReference} />}
         columns={
-          setting.layoutHideFooter ?
-            [] :
-            [
+          setting.layoutHideFooter
+            ? []
+            : [
                 {
                   title: <Brand />,
                 },
                 {
-                  items: Resources,
+                  items: getResources(isForgeNeo),
                   title: t('footer.resources'),
                 },
                 {

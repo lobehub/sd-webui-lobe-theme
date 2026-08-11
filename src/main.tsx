@@ -1,6 +1,8 @@
 import { consola } from 'consola';
 import { createRoot } from 'react-dom/client';
 
+import { applyForgeDocumentFlag } from '@/utils/forge';
+
 import Page from './app/page';
 
 if (window.global === undefined) window.global = window;
@@ -11,6 +13,7 @@ if (!skipLoad) {
   document.addEventListener(
     'DOMContentLoaded',
     () => {
+      applyForgeDocumentFlag();
       consola.start(`🤯 Lobe Theme load in ${process.env.NODE_ENV}`);
       const root = document.createElement('div');
       root.setAttribute('id', 'root');

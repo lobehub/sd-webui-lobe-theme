@@ -215,8 +215,9 @@ export const useStyles = createStyles(
           right: 4px;
           scale: 0.8;
 
-          background: ${token.colorBgContainer} !important;
           border-radius: 0.4em !important;
+
+          background: ${token.colorBgContainer} !important;
 
           > .translucent {
             display: none;
@@ -224,8 +225,8 @@ export const useStyles = createStyles(
 
           span {
             display: inline-block;
-            font-family: var(--font-mono);
             border: 2px solid ${token.colorFillSecondary} !important;
+            font-family: var(--font-mono);
           }
 
           span,
@@ -273,8 +274,17 @@ export const useStyles = createStyles(
           flex-direction: column !important;
           gap: 12px !important;
 
-          .gradio-column:has(#img2img_res_switch_btn, #txt2img_res_switch_btn) {
+          .gradio-column:has(#img2img_res_switch_btn, #txt2img_res_switch_btn):not(
+              :has([id$='_size_toolbox'])
+            ) {
             min-width: min(36px, 100%) !important;
+          }
+
+          #txt2img_dimensions_row:has(#txt2img_size_toolbox),
+          #img2img_dimensions_row:has(#img2img_size_toolbox) {
+            flex-shrink: 0 !important;
+            min-width: fit-content !important;
+            max-width: none !important;
           }
 
           > div:not([id$='_script_container'], .gradio-tabs):has(div),
@@ -283,9 +293,9 @@ export const useStyles = createStyles(
 
             margin: 0 !important;
             padding: 16px !important;
+            border-radius: ${token.borderRadius}px;
 
             background-color: ${token.colorBgContainer};
-            border-radius: ${token.borderRadius}px;
           }
 
           .gradio-tabitem:has(.gradio-image) {
@@ -311,10 +321,10 @@ export const useStyles = createStyles(
 
                 margin: 0 !important;
                 padding: 16px !important;
-
-                background-color: ${token.colorBgContainer}!important;
                 border: 1px solid ${token.colorBorderSecondary} !important;
                 border-radius: ${token.borderRadius}px !important;
+
+                background-color: ${token.colorBgContainer}!important;
               }
             }
 
@@ -330,10 +340,10 @@ export const useStyles = createStyles(
 
               margin: 0;
               padding: 16px;
-
-              background-color: ${token.colorBgContainer} !important;
               border: 1px solid ${token.colorBorderSecondary} !important;
               border-radius: ${token.borderRadius}px !important;
+
+              background-color: ${token.colorBgContainer} !important;
               box-shadow: none;
 
               > .gradio-accordion {
@@ -359,8 +369,8 @@ export const useStyles = createStyles(
           background: transparent !important;
 
           > div {
-            background-color: ${token.colorBgContainer};
             border-radius: ${token.borderRadius}px !important;
+            background-color: ${token.colorBgContainer};
           }
 
           span.icon {
@@ -371,6 +381,18 @@ export const useStyles = createStyles(
         #img2img_toprow .interrogate-col {
           flex-direction: row !important;
           min-width: 100% !important;
+
+          &.has-queue-button {
+            flex-wrap: wrap;
+            gap: 4px;
+            min-width: unset !important;
+          }
+        }
+
+        #tab_agent_scheduler {
+          .gradio-group:has(.gradio-group:has(div:empty)) {
+            display: revert;
+          }
         }
 
         #img2img_column_batch {
@@ -422,10 +444,10 @@ export const useStyles = createStyles(
 
         #npw {
           padding: 16px !important;
-
-          background-color: ${token.colorBgContainer} !important;
           border: 1px solid ${token.colorBorderSecondary} !important;
           border-radius: ${token.borderRadius}px !important;
+
+          background-color: ${token.colorBgContainer} !important;
           box-shadow: none;
         }
       `,
