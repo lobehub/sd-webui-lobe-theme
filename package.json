@@ -77,7 +77,7 @@
     "consola": "^3.2.3",
     "dayjs": "^1.11.11",
     "i18next": "^23.11.5",
-    "i18next-http-backend": "^2.5.2",
+    "i18next-http-backend": "^3.0.5",
     "lodash-es": "^4.17.21",
     "lucide-react": "latest",
     "lucide-static": "latest",
