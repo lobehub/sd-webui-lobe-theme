@@ -66,6 +66,12 @@ The original Lobe Theme was made for AUTOMATIC1111 on Gradio 3. **Redux brings i
 
 </details>
 
+## Installation.
+
+```shell
+git clone "https://github.com/sca-285/sd-webui-lobe-theme-redux.git"
+```
+
 ### Runs on all three Forges
 
 | Forge Classic (Neo) · Gradio 4 | Forge · Gradio 4 | reForge · Gradio 3.41 |
@@ -270,7 +276,7 @@ If you prefer to manage extensions using Git, you can clone the repository to yo
 - Run the following command in the command line to clone the repository:
 
 ```shell
-git clone "https://github.com/sca-285/sd-webui-lobe-theme-redux.git"
+git clone "https://github.com/lobehub/sd-webui-lobe-theme" extensions/lobe-theme
 ```
 
 > Once you have completed these steps, the Lobe Theme extension will be successfully installed in Stable Diffusion WebUI.
