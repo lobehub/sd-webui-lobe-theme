@@ -1,5 +1,5 @@
 import { Icon } from '@lobehub/ui';
-import { Brush, FlaskConical, Layout, PanelRight, Wrench } from 'lucide-react';
+import { Brush, Layout, PanelRight, Wrench } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 import { SettingsTabs } from '@/features/Setting/Sidebar/index';
@@ -20,10 +20,5 @@ export const useTabItems = () => {
       label: t('setting.tab.sidebar'),
     },
     { icon: <Icon icon={Wrench} />, key: SettingsTabs.Tools, label: t('setting.tab.tools') },
-    {
-      icon: <Icon icon={FlaskConical} />,
-      key: SettingsTabs.Experimental,
-      label: t('setting.tab.experimental'),
-    },
   ];
 };

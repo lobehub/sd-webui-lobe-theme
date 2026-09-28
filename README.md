@@ -481,6 +481,56 @@ Under **Width** and **Height**, in txt2img and img2img:
 
 </div>
 
+#### `20` Look and Feel
+
+**Theme Settings → Appearance**:
+
+- **Corners**: Sharp, Soft (the default) or Round, for buttons, fields, panels and cards.
+- **Density**: Comfortable or Compact. Compact tightens tabs, accordions, fields and spacing so more fits on screen.
+- **Surfaces**: Flat, Glass (frosted, translucent header and sidebars) or Elevated (cards with soft shadows).
+- **Font** and **Monospace font**: HarmonyOS Sans, Inter, Geist, Manrope, Be Vietnam Pro or the system font; Hack, Geist Mono, JetBrains Mono or the system mono font. All ship with the theme (SIL Open Font License), so they work offline.
+- **Logo**: LobeHub, Kitchen, a spark mark or a wordmark in the primary colour, your own image or emoji, or none.
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
+#### `21` Layout Options
+
+**Theme Settings → Layout**:
+
+- **Swap sidebars**: Quick Setting on the right, Extra Network on the left.
+- **Accordions → One at a time**: opening an accordion folds the others next to it, so a long column of extensions stays short. Folding never switches an extension off: accordions with a ticked checkbox are only folded by the theme, and a click on the title unfolds them.
+- **Split Previewer**, **Prompt Syntax Highlighting**, **Prompt Editor** and **Image Info** (under Tools) are regular options now; they used to be experimental.
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
+#### `22` System Monitor
+
+Under the quick settings: CPU, RAM, GPU load, VRAM, GPU temperature and power, and disk, with a short history line, in the spirit of ComfyUI's Crystools. GPU load and temperature come from NVIDIA's NVML: the theme installs `nvidia-ml-py` on the next start (a small pure-Python package); without it, VRAM still shows. **Theme Settings → Sidebar → System monitor** turns it off.
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
+#### `23` Extra Network Folder Tree
+
+Folders of LoRAs, embeddings and checkpoints show as a tree: only the top level at first, sub-folders when their parent is clicked. The buttons keep doing what the WebUI does with them (search that folder). On WebUIs with the A1111 1.8+ tree view (reForge), that tree goes above the cards in the sidebar. **Theme Settings → Sidebar → Folder tree** turns it off.
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
 #### More Features
 
 - [x] 💎 **Exquisite UI Design**: Carefully designed interface with elegant appearance and smooth interactive effects.
@@ -622,7 +672,9 @@ Every bit counts and your one-time donation sparkles in our galaxy of support! Y
 - stable-diffusion-webui：<https://github.com/AUTOMATIC1111/stable-diffusion-webui>
 - gradio-theme-gallery: <https://huggingface.co/spaces/gradio/theme-gallery>
 - cozy-nest: <https://github.com/Nevysha/Cozy-Nest>
-- Fonts bundled in `assets/fonts`: HarmonyOS Sans (Copyright 2021 Huawei Device Co., Ltd., HarmonyOS Sans Fonts License Agreement) and Hack (MIT / Bitstream Vera License). Each folder contains its license.
+- Fonts bundled in `assets/fonts`: HarmonyOS Sans (Copyright 2021 Huawei Device Co., Ltd., HarmonyOS Sans Fonts License Agreement) and Hack (MIT / Bitstream Vera License); Inter, Geist, Geist Mono, Manrope, Be Vietnam Pro and JetBrains Mono (SIL Open Font License 1.1, via Fontsource; latin, latin-ext, vietnamese and cyrillic subsets). Each folder contains its license.
+- System monitor: GPU readings through NVIDIA's [nvidia-ml-py](https://pypi.org/project/nvidia-ml-py/) (BSD); the idea follows [ComfyUI-Crystools](https://github.com/crystian/ComfyUI-Crystools).
+- Thanks also to **Claude**, Anthropic's AI assistant, for help building this version.
 - _before `1.0.0` version_
   - sd-web-ui-quickcs: <https://github.com/Gerschel/sd-web-ui-quickcss/>
   - Dark-Themes-SD-WebUI-Automatic1111: <https://github.com/Nacurutu/Dark-Themes-SD-WebUI-Automatic1111>

@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'antd-style';
 
 import antdOverride from './antdOverride';
+import appearance from './appearance';
 import button from './components/button';
 import collapse from './components/collapse';
 import container from './components/container';
@@ -36,6 +37,7 @@ const GlobalStyle = createGlobalStyle(({ theme }) => [
   extensions(theme),
   lightboxModal(theme),
   mobile(),
+  appearance(),
 ]);
 
 export default GlobalStyle;

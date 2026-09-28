@@ -2,7 +2,10 @@
   "brand": {
     "custom": "Custom",
     "kitchen": "Kitchen",
-    "lobe": "LobeHub"
+    "lobe": "LobeHub",
+    "mark": "Spark mark",
+    "none": "None",
+    "wordmark": "Wordmark"
   },
   "cancel": "Cancel",
   "confirm": "Confirm",
@@ -98,6 +101,10 @@
       "enable": {
         "desc": "Enable the extra network sidebar on the right side",
         "title": "Enable"
+      },
+      "folderTree": {
+        "desc": "Show top-level folders only; click a folder to open its sub-folders",
+        "title": "Folder tree"
       }
     },
     "group": {
@@ -114,7 +121,7 @@
       "title": "Hide Footer"
     },
     "imageInfo": {
-      "desc": "Display better image information in the generated image",
+      "desc": "Show the generation parameters of the result as a tidy panel with copy buttons",
       "title": "Image Info Alternative"
     },
     "language": {
@@ -141,7 +148,7 @@
       "title": "Prompt Display Mode"
     },
     "promptEditor": {
-      "desc": "Provide a simple prompt editor at the top of the quick setting sidebar",
+      "desc": "Tag editor for the positive and negative prompt in the Prompt tab of the quick setting sidebar (the tag picker there is always on)",
       "title": "Prompt Editor"
     },
     "promptHighlight": {
@@ -171,7 +178,7 @@
       "title": "Reduce Animation"
     },
     "splitPreviewer": {
-      "desc": "Put the prompt input box on the left and the generate button on the right, ensuring that the generated image is always displayed at the top when scrolling (experimental)",
+      "desc": "Put the prompt input box on the left and the generate button on the right, ensuring that the generated image is always displayed at the top when scrolling",
       "title": "Split Previewer"
     },
     "svgIcons": {
@@ -222,6 +229,48 @@
     "sizeTools": {
       "title": "Aspect ratios and suggested settings",
       "desc": "Under Width and Height: aspect ratios at a base size that follows the model, a ratio lock, and steps / CFG scale suited to the loaded model"
+    },
+    "cornerStyle": {
+      "desc": "Corners of buttons, fields, panels and cards",
+      "round": "Round",
+      "sharp": "Sharp",
+      "soft": "Soft",
+      "title": "Corners"
+    },
+    "density": {
+      "compact": "Compact",
+      "comfortable": "Comfortable",
+      "desc": "Compact tightens tabs, accordions, fields and spacing so more fits on screen",
+      "title": "Density"
+    },
+    "surfaceStyle": {
+      "desc": "Flat: plain panels. Glass: frosted, translucent header and sidebars. Elevated: cards with soft shadows",
+      "elevated": "Elevated",
+      "flat": "Flat",
+      "glass": "Glass",
+      "title": "Surfaces"
+    },
+    "fontFamily": {
+      "desc": "Interface font. All are bundled, so they work offline; Be Vietnam Pro is drawn for Vietnamese",
+      "title": "Font"
+    },
+    "fontMono": {
+      "desc": "Font for prompts and code",
+      "title": "Monospace font"
+    },
+    "sidebarSwap": {
+      "desc": "Quick Setting on the right, Extra Network on the left",
+      "title": "Swap sidebars"
+    },
+    "accordionMode": {
+      "desc": "One at a time: opening an accordion folds the others next to it. Folding never switches an extension off",
+      "free": "Free",
+      "single": "One at a time",
+      "title": "Accordions"
+    },
+    "systemMonitor": {
+      "desc": "CPU, RAM, GPU load, VRAM, temperature and disk under the quick settings",
+      "title": "System monitor"
     }
   },
   "share": "Share",
@@ -250,7 +299,18 @@
       "float": "Float"
     },
     "quickSetting": "Quick Setting",
-    "presets": "Presets"
+    "presets": "Presets",
+    "system": {
+      "disk": "Disk",
+      "noNvml": "GPU load and temperature need nvidia-ml-py",
+      "noNvmlHint": "Restart the WebUI once so the theme can install nvidia-ml-py, or run: pip install nvidia-ml-py",
+      "temp": "Temp",
+      "title": "System"
+    },
+    "tabs": {
+      "prompt": "Prompt",
+      "settings": "Settings"
+    }
   },
   "tools": {
     "palette": {

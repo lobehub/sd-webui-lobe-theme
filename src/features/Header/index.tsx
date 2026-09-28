@@ -12,6 +12,7 @@ import Nav from './Nav';
 
 const Header = memo<DivProps>(({ children }) => {
   const themeMode = useAppStore((st) => st.themeMode);
+  const logoType = useAppStore((st) => st.setting.logoType);
   const theme = useTheme();
 
   return (
@@ -19,7 +20,7 @@ const Header = memo<DivProps>(({ children }) => {
       actions={<Actions themeMode={themeMode} />}
       actionsStyle={{ flex: 0 }}
       logo={
-        <a
+        logoType === 'none' ? undefined : <a
           href={OFFICIAL_SITE}
           rel="noreferrer"
           style={{ alignItems: 'center', color: theme.colorText, display: 'flex' }}

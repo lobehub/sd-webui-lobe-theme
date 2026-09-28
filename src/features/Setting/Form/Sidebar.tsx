@@ -65,6 +65,14 @@ const SettingForm = memo(() => {
           label: t('setting.quickSettingSidebar.defaultWidth.title'),
           name: 'sidebarWidth',
         },
+        {
+          children: <Switch />,
+          desc: t('setting.systemMonitor.desc'),
+          hidden: !rawSetting.enableSidebar,
+          label: t('setting.systemMonitor.title'),
+          name: 'enableSystemMonitor',
+          valuePropName: 'checked',
+        },
       ],
 
       title: t('setting.group.quickSettingSidebar'),
@@ -123,6 +131,14 @@ const SettingForm = memo(() => {
           hidden: !rawSetting.enableExtraNetworkSidebar,
           label: t('setting.extraNetworkSidebar.defaultCardSize.title'),
           name: 'extraNetworkCardSize',
+        },
+        {
+          children: <Switch />,
+          desc: t('setting.extraNetworkSidebar.folderTree.desc'),
+          hidden: !rawSetting.enableExtraNetworkSidebar,
+          label: t('setting.extraNetworkSidebar.folderTree.title'),
+          name: 'extraNetworkFolderTree',
+          valuePropName: 'checked',
         },
       ],
 

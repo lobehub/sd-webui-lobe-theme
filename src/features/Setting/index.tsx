@@ -4,7 +4,6 @@ import { memo, useState } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
 import FormAppearance from './Form/Appearance';
-import FormExperimental from './Form/Experimental';
 import Footer from './Form/Footer';
 import FormLayout from './Form/Layout';
 import FormSidebar from './Form/Sidebar';
@@ -27,7 +26,6 @@ const Setting = memo<SettingProps>(({ open, onCancel }) => {
       {tab === SettingsTabs.Layout && <FormLayout />}
       {tab === SettingsTabs.Sidebar && <FormSidebar />}
       {tab === SettingsTabs.Tools && <FormTools />}
-      {tab === SettingsTabs.Experimental && <FormExperimental />}
     </>
   );
 

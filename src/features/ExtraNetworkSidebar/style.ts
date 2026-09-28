@@ -41,9 +41,69 @@ export const useStyles = createStyles(
         height: 100%;
       }
 
+      /* WebUIs with the A1111 1.8+ folder tree (reForge): in the narrow
+         sidebar the tree goes above the cards instead of beside them. */
+      .extra-network-pane-content-tree {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+
+        > .resize-handle,
+        > .resize-handle-row {
+          display: none !important;
+        }
+
+        > .extra-network-tree {
+          overflow: auto;
+          flex: none !important;
+
+          width: 100% !important;
+          max-height: 30vh;
+          padding-inline: 12px;
+
+          border-block-end: 1px solid ${token.colorBorderSecondary};
+
+          &:not(:has(li)) {
+            display: none;
+          }
+        }
+
+        > .extra-network-cards {
+          flex: 1 1 auto !important;
+          width: 100% !important;
+          min-height: 0;
+        }
+
+        > .lobe-lora-filter {
+          flex: none !important;
+          height: auto !important;
+        }
+
+        .tree-list-content {
+          color: ${token.colorTextSecondary} !important;
+          background: transparent !important;
+          border-radius: ${token.borderRadiusSM}px;
+
+          &:hover {
+            color: ${token.colorText} !important;
+            background: ${token.colorFillTertiary} !important;
+          }
+
+          &[data-selected] {
+            color: ${token.colorText} !important;
+            background: ${token.colorFillSecondary} !important;
+          }
+
+          .tree-list-item-label {
+            color: inherit !important;
+          }
+        }
+      }
+
       .extra-network-cards {
         overflow: hidden auto;
         display: grid;
+        align-content: start;
         grid-template-columns: repeat(auto-fill, minmax(${size}px, 1fr));
         flex: none !important;
         gap: 8px;

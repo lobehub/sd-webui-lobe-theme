@@ -11,7 +11,7 @@ from scripts.lib.prompt import LobePrompt
 from scripts.lib.locale import LobeLocale
 from scripts.lib.lobe_log import LobeLog
 from scripts.lib.store import LobeStore
-from scripts.lib import choices, loras
+from scripts.lib import choices, loras, system
 
 ASSETS_FOLDER = (Path(__file__).parent.parent.parent / "assets").resolve()
 # not every Python registers these, and browsers want the right type for fonts
@@ -137,6 +137,10 @@ class LobeApi:
         @app.get("/lobe/model")
         def lobe_model():
             return loras.current_model()
+
+        @app.get("/lobe/system")
+        def lobe_system():
+            return system.stats()
 
         @app.get("/lobe/choices")
         def lobe_choices():

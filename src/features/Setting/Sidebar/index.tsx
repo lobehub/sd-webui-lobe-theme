@@ -9,7 +9,6 @@ import { useTabItems } from './useTabItems';
 
 export enum SettingsTabs {
   Appearance = 'appearance',
-  Experimental = 'experimental',
   Layout = 'layout',
   Sidebar = 'sidebar',
   Tools = 'tools',

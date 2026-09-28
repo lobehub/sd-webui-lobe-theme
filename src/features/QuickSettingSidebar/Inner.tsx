@@ -15,6 +15,7 @@ import { type DivProps } from '@/types';
 // the Prompt Editor tab is opened.
 const PromptEditor = lazy(() => import('@/components/PromptEditor'));
 const PresetsPanel = lazy(() => import('@/features/Tools/PresetsPanel'));
+const SystemMonitor = lazy(() => import('./SystemMonitor'));
 
 enum Tabs {
   Presets = 'presets',
@@ -42,8 +43,8 @@ const Inner = memo<DivProps>(() => {
           block
           onChange={(value) => setTab(value as Tabs)}
           options={[
-            { label: t('sidebar.quickSetting'), value: Tabs.Setting },
-            { label: t('setting.promptEditor.title'), value: Tabs.Prompt },
+            { label: t('sidebar.tabs.settings'), title: t('sidebar.quickSetting'), value: Tabs.Setting },
+            { label: t('sidebar.tabs.prompt'), title: t('setting.promptEditor.title'), value: Tabs.Prompt },
             ...(setting.enablePresets ? [{ label: t('sidebar.presets'), value: Tabs.Presets }] : []),
           ]}
           style={{ background: theme.colorBgContainer, width: '100%' }}
@@ -58,6 +59,11 @@ const Inner = memo<DivProps>(() => {
         {tab === Tabs.Presets && (
           <Suspense fallback={null}>
             <PresetsPanel />
+          </Suspense>
+        )}
+        {setting.enableSystemMonitor && (
+          <Suspense fallback={null}>
+            <SystemMonitor />
           </Suspense>
         )}
       </Flexbox>

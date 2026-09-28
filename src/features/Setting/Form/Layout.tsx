@@ -24,6 +24,26 @@ const SettingForm = memo(() => {
       children: [
         {
           children: <Switch />,
+          desc: t('setting.sidebarSwap.desc'),
+          label: t('setting.sidebarSwap.title'),
+          name: 'sidebarSwap',
+          valuePropName: 'checked',
+        },
+        {
+          children: (
+            <Segmented
+              options={[
+                { label: t('setting.accordionMode.free'), value: 'free' },
+                { label: t('setting.accordionMode.single'), value: 'single' },
+              ]}
+            />
+          ),
+          desc: t('setting.accordionMode.desc'),
+          label: t('setting.accordionMode.title'),
+          name: 'accordionMode',
+        },
+        {
+          children: <Switch />,
           desc: t('setting.splitPreviewer.desc'),
           label: t('setting.splitPreviewer.title'),
           name: 'layoutSplitPreview',
@@ -71,6 +91,20 @@ const SettingForm = memo(() => {
           desc: t('setting.promptDisplayMode.desc'),
           label: t('setting.promptDisplayMode.title'),
           name: 'promptTextareaType',
+        },
+        {
+          children: <Switch />,
+          desc: t('setting.promptHighlight.desc'),
+          label: t('setting.promptHighlight.title'),
+          name: 'enableHighlight',
+          valuePropName: 'checked',
+        },
+        {
+          children: <Switch />,
+          desc: t('setting.promptEditor.desc'),
+          label: t('setting.promptEditor.title'),
+          name: 'promptEditor',
+          valuePropName: 'checked',
         },
       ],
 

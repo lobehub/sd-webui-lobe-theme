@@ -32,6 +32,7 @@ const ExtraNetworkSidebar = memo<ExtraNetworkSidebarProps>(({ headerHeight }) =>
   }, [mobile]);
 
   const mode = mobile ? 'fixed' : pin ? 'fixed' : 'float';
+  const side = setting.sidebarSwap ? 'left' : 'right';
 
   return (
     <DraggablePanel
@@ -41,7 +42,7 @@ const ExtraNetworkSidebar = memo<ExtraNetworkSidebarProps>(({ headerHeight }) =>
       mode={mode}
       onExpandChange={setExpand}
       pin={pin}
-      placement="right"
+      placement={side}
     >
       <LayoutSidebarInner>
         <DraggablePanelContainer
@@ -54,7 +55,7 @@ const ExtraNetworkSidebar = memo<ExtraNetworkSidebarProps>(({ headerHeight }) =>
         >
           <DraggablePanelHeader
             pin={pin}
-            position="right"
+            position={side}
             setExpand={setExpand}
             setPin={setPin}
             title={t('sidebar.extraNetwork')}

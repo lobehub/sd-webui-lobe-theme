@@ -6,6 +6,7 @@
  * - suggested settings: steps and CFG scale that suit the loaded model's
  *   family (and its fast variants: Lightning, Turbo, LCM, Hyper, DMD2, Schnell).
  */
+import { readableColor } from 'polished';
 import { $, type GenTab, numberInput, readNumber, setInputValue } from '@/scripts/webui';
 
 import type { Arch } from './api';
@@ -154,12 +155,12 @@ const CSS = `
 .lobe-size-chip { display: inline-flex; gap: 4px; align-items: center; height: 26px; padding: 0 8px !important; min-width: 0 !important; font-size: 12px !important; line-height: 1;
   color: inherit !important; cursor: pointer; background: transparent !important; border: 1px solid var(--lobe-size-border, rgb(128 128 128 / 30%)) !important; border-radius: 13px !important; box-shadow: none !important; }
 .lobe-size-chip:hover { border-color: var(--lobe-size-primary, #1677ff) !important; }
-.lobe-size-chip.active { color: #fff !important; background: var(--lobe-size-primary, #1677ff) !important; border-color: var(--lobe-size-primary, #1677ff) !important; }
+.lobe-size-chip.active { color: var(--lobe-size-on-primary, #fff) !important; background: var(--lobe-size-primary, #1677ff) !important; border-color: var(--lobe-size-primary, #1677ff) !important; }
 .lobe-size-chip svg { flex-shrink: 0; }
 .lobe-size-chip small { opacity: 0.7; font-size: 10.5px; }
 .lobe-size-sep { width: 1px; height: 18px; margin: 0 4px; background: var(--lobe-size-border, rgb(128 128 128 / 30%)); }
 .lobe-size-note { font-size: 12px; opacity: 0.65; }
-.lobe-size-family { padding: 1px 6px; font-size: 10.5px; font-weight: 700; letter-spacing: 0.03em; color: #fff; background: var(--lobe-size-primary, #1677ff); border-radius: 4px; }
+.lobe-size-family { padding: 1px 6px; font-size: 10.5px; font-weight: 700; letter-spacing: 0.03em; color: var(--lobe-size-on-primary, #fff); background: var(--lobe-size-primary, #1677ff); border-radius: 4px; }
 `;
 
 interface Panel {
@@ -179,6 +180,8 @@ export const startSizeTools = ({ colors, text }: { colors: { border: string; fil
   document.head.append(style);
   const rootStyle = document.documentElement.style;
   rootStyle.setProperty('--lobe-size-primary', colors.primary);
+  // text on the primary colour: dark on a light primary (the default dark theme's is near white)
+  rootStyle.setProperty('--lobe-size-on-primary', readableColor(colors.primary, '#111', '#fff', false));
   rootStyle.setProperty('--lobe-size-fill', colors.fill);
   rootStyle.setProperty('--lobe-size-border', colors.border);
 

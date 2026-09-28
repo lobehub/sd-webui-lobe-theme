@@ -35,6 +35,18 @@ const Index = memo(() => {
     if (setting.svgIcon) replaceIcon();
   }, []);
 
+  // Left and right sidebars; "Swap sidebars" puts each on the other side.
+  const quickSettingSidebar = setting.enableSidebar && (
+    <LayoutSidebar className={styles.sidebar} headerHeight={HEADER_HEIGHT} style={{ flex: 0, zIndex: 50 }}>
+      <QuickSettingSidebar headerHeight={HEADER_HEIGHT} />
+    </LayoutSidebar>
+  );
+  const extraNetworkSidebar = setting.enableExtraNetworkSidebar && (
+    <LayoutSidebar className={styles.sidebar} headerHeight={HEADER_HEIGHT} style={{ flex: 0, zIndex: 50 }}>
+      <ExtraNetworkSidebar headerHeight={HEADER_HEIGHT} />
+    </LayoutSidebar>
+  );
+
   return (
     <>
       <StructuredData />
@@ -44,28 +56,12 @@ const Index = memo(() => {
       </LayoutHeader>
       <LayoutMain>
         {<div className={setting.liteAnimation ? styles.backgroundLite : styles.background} />}
-        {setting.enableSidebar && (
-          <LayoutSidebar
-            className={styles.sidebar}
-            headerHeight={HEADER_HEIGHT}
-            style={{ flex: 0, zIndex: 50 }}
-          >
-            <QuickSettingSidebar headerHeight={HEADER_HEIGHT} />
-          </LayoutSidebar>
-        )}
+        {setting.sidebarSwap ? extraNetworkSidebar : quickSettingSidebar}
         <Content className={cx(!setting.enableSidebar && styles.quicksettings)} />
         <PromptFormator />
         <Share />
         <Tools />
-        {setting?.enableExtraNetworkSidebar && (
-          <LayoutSidebar
-            className={styles.sidebar}
-            headerHeight={HEADER_HEIGHT}
-            style={{ flex: 0, zIndex: 50 }}
-          >
-            <ExtraNetworkSidebar headerHeight={HEADER_HEIGHT} />
-          </LayoutSidebar>
-        )}
+        {setting.sidebarSwap ? quickSettingSidebar : extraNetworkSidebar}
       </LayoutMain>
       <Footer />
     </>

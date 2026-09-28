@@ -7,6 +7,7 @@
  * - a button that adds the LoRA's trigger words to the prompt;
  * - a filter bar: all, favourites, recently used, compatible with the model.
  */
+import { readableColor } from 'polished';
 import { type GenTab, appendToPrompt, promptBox, setInputValue, webuiOpts } from '@/scripts/webui';
 
 import type { Arch, LoraInfo } from './api';
@@ -56,7 +57,7 @@ const CSS = `
 .lobe-lora-star:hover { color: #fadb14; }
 .lobe-lora-badge { padding: 1px 5px; font-size: 10px; font-weight: 600; line-height: 14px; color: #fff; letter-spacing: 0.02em; background: rgb(0 0 0 / 55%); border-radius: 4px; }
 .lobe-lora-badge.incompatible { color: #ffccc7; background: rgb(168 7 26 / 70%); }
-.lobe-lora-badge.weight { color: #fff; background: var(--lobe-tools-primary, #1677ff); }
+.lobe-lora-badge.weight { color: var(--lobe-tools-on-primary, #fff); background: var(--lobe-tools-primary, #1677ff); }
 .card:hover .lobe-lora-badge.weight { display: none; }
 .lobe-lora-controls { display: none; gap: 2px; align-items: center; justify-content: center; width: fit-content; margin: 0 auto 4px; padding: 1px; background: rgb(0 0 0 / 55%); border-radius: 8px; }
 .card:hover .lobe-lora-controls { display: flex; }
@@ -67,7 +68,7 @@ const CSS = `
 .lobe-lora-filter { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; padding: 0 16px 8px; }
 .lobe-lora-filter button { padding: 2px 10px; font-size: 12px; line-height: 20px; color: var(--body-text-color, inherit); cursor: pointer; background: var(--lobe-tools-fill, rgb(128 128 128 / 12%)); border: 1px solid transparent; border-radius: 999px; }
 .lobe-lora-filter button:hover { border-color: var(--lobe-tools-primary, #1677ff); }
-.lobe-lora-filter button.active { color: #fff; background: var(--lobe-tools-primary, #1677ff); }
+.lobe-lora-filter button.active { color: var(--lobe-tools-on-primary, #fff); background: var(--lobe-tools-primary, #1677ff); }
 .lobe-lora-filter .count { margin-left: auto; font-size: 12px; opacity: 0.6; }
 `;
 
@@ -92,6 +93,7 @@ export const startLoraTools = ({ colors, text }: { colors: { fill: string; prima
   style.textContent = CSS;
   document.head.append(style);
   document.documentElement.style.setProperty('--lobe-tools-primary', colors.primary);
+  document.documentElement.style.setProperty('--lobe-tools-on-primary', readableColor(colors.primary, '#111', '#fff', false));
   document.documentElement.style.setProperty('--lobe-tools-primary-light', colors.primaryLight);
   document.documentElement.style.setProperty('--lobe-tools-fill', colors.fill);
 

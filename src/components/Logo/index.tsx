@@ -7,6 +7,7 @@ import { selectors, useAppStore } from '@/store';
 
 import CustomLogo from './CustomLogo';
 import KitchenLogo from './KitchenLogo';
+import MarkLogo from './MarkLogo';
 
 export interface LogoProps {
   size?: number;
@@ -19,6 +20,12 @@ const Logo = memo<LogoProps>(({ size = 32, style }) => {
 
   if (setting.logoType === 'kitchen') {
     return <KitchenLogo size={size * 0.75} style={style} themeMode={themeMode} />;
+  }
+
+  if (setting.logoType === 'none') return null;
+
+  if (setting.logoType === 'mark' || setting.logoType === 'wordmark') {
+    return <MarkLogo size={size} style={style} type={setting.logoType} />;
   }
 
   if (setting.logoType === 'custom') {

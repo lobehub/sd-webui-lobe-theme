@@ -7,6 +7,7 @@ import { Flexbox } from 'react-layout-kit';
 
 import { CustomLogo } from '@/components';
 import { type WebuiSetting, selectors, useAppStore } from '@/store';
+import { fontOptions } from '@/styles/appearance';
 
 import { isHexColor } from '@/styles/colorScale';
 
@@ -116,19 +117,83 @@ const SettingForm = memo(() => {
           children: (
             <Segmented
               options={[
-                {
-                  label: t('brand.lobe'),
-                  value: 'lobe',
-                },
-                {
-                  label: t('brand.kitchen'),
-                  value: 'kitchen',
-                },
-                {
-                  label: t('brand.custom'),
-                  value: 'custom',
-                },
+                { label: t('setting.cornerStyle.sharp'), value: 'sharp' },
+                { label: t('setting.cornerStyle.soft'), value: 'soft' },
+                { label: t('setting.cornerStyle.round'), value: 'round' },
               ]}
+            />
+          ),
+          desc: t('setting.cornerStyle.desc'),
+          label: t('setting.cornerStyle.title'),
+          name: 'cornerStyle',
+        },
+        {
+          children: (
+            <Segmented
+              options={[
+                { label: t('setting.density.comfortable'), value: 'comfortable' },
+                { label: t('setting.density.compact'), value: 'compact' },
+              ]}
+            />
+          ),
+          desc: t('setting.density.desc'),
+          label: t('setting.density.title'),
+          name: 'density',
+        },
+        {
+          children: (
+            <Segmented
+              options={[
+                { label: t('setting.surfaceStyle.flat'), value: 'flat' },
+                { label: t('setting.surfaceStyle.glass'), value: 'glass' },
+                { label: t('setting.surfaceStyle.elevated'), value: 'elevated' },
+              ]}
+            />
+          ),
+          desc: t('setting.surfaceStyle.desc'),
+          label: t('setting.surfaceStyle.title'),
+          name: 'surfaceStyle',
+        },
+        {
+          children: (
+            <Select
+              options={fontOptions(false).map(([value, f]) => ({
+                label: <span style={{ fontFamily: f.family }}>{f.label}</span>,
+                value,
+              }))}
+              style={{ minWidth: 200 }}
+            />
+          ),
+          desc: t('setting.fontFamily.desc'),
+          label: t('setting.fontFamily.title'),
+          name: 'fontFamily',
+        },
+        {
+          children: (
+            <Select
+              options={fontOptions(true).map(([value, f]) => ({
+                label: <span style={{ fontFamily: f.family }}>{f.label}</span>,
+                value,
+              }))}
+              style={{ minWidth: 200 }}
+            />
+          ),
+          desc: t('setting.fontMono.desc'),
+          label: t('setting.fontMono.title'),
+          name: 'fontMono',
+        },
+        {
+          children: (
+            <Select
+              options={[
+                { label: t('brand.lobe'), value: 'lobe' },
+                { label: t('brand.kitchen'), value: 'kitchen' },
+                { label: t('brand.mark'), value: 'mark' },
+                { label: t('brand.wordmark'), value: 'wordmark' },
+                { label: t('brand.custom'), value: 'custom' },
+                { label: t('brand.none'), value: 'none' },
+              ]}
+              style={{ minWidth: 200 }}
             />
           ),
           desc: t('setting.logoType.desc'),

@@ -36,6 +36,7 @@ const SettingForm = memo(() => {
         ['enableSizeTools', 'sizeTools'],
         ['enableTabProgress', 'tabProgress'],
         ['enableNotification', 'notification'],
+        ['enableImageInfo', 'imageInfo'],
         ['localAssets', 'localAssets'],
       ].map(([name, key]) => ({
         children: <Switch />,

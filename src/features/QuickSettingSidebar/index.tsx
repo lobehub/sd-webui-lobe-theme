@@ -33,6 +33,7 @@ const QuickSettingSidebar = memo<QuickSettingSidebarProps>(({ headerHeight }) =>
   }, [mobile]);
 
   const mode = mobile ? 'fixed' : pin ? 'fixed' : 'float';
+  const side = setting.sidebarSwap ? 'right' : 'left';
 
   return (
     <DraggablePanel
@@ -43,7 +44,7 @@ const QuickSettingSidebar = memo<QuickSettingSidebarProps>(({ headerHeight }) =>
       onExpandChange={setExpand}
       onSizeChange={(_, size) => size?.width && setWidth(Number.parseInt(String(size.width)))}
       pin={pin}
-      placement="left"
+      placement={side}
       style={{
         display: 'flex',
         flexDirection: 'column',
@@ -60,7 +61,7 @@ const QuickSettingSidebar = memo<QuickSettingSidebarProps>(({ headerHeight }) =>
         >
           <DraggablePanelHeader
             pin={pin}
-            position="left"
+            position={side}
             setExpand={setExpand}
             setPin={setPin}
             title={t('sidebar.quickSetting')}

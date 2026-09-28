@@ -11,7 +11,9 @@ import { useTranslation } from 'react-i18next';
 
 import { selectors, useAppStore } from '@/store';
 
+import { startSingleAccordion } from './accordions';
 import { bus } from './bus';
+import { startFolderTree } from './folderTree';
 import { startGenerationCapture } from './generation';
 import { installProgressHook } from './hook';
 import { startImageButtons } from './imageButtons';
@@ -39,6 +41,16 @@ const Tools = memo(() => {
     // progressbar.js not run yet: try again once the UI is up
     onUiLoaded(() => installProgressHook());
   }, []);
+
+  useEffect(() => {
+    if (!setting.extraNetworkFolderTree) return;
+    return startFolderTree();
+  }, [setting.extraNetworkFolderTree]);
+
+  useEffect(() => {
+    if (setting.accordionMode !== 'single') return;
+    return startSingleAccordion();
+  }, [setting.accordionMode]);
 
   useEffect(() => {
     if (!setting.enableTabProgress) return;
