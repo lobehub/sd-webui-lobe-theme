@@ -100,7 +100,7 @@ If you prefer to manage extensions using Git, you can clone the repository to yo
 - Run the following command in the command line to clone the repository:
 
 ```shell
-git clone "https://github.com/lobehub/sd-webui-lobe-theme" extensions/lobe-theme
+git clone "https://github.com/sca-285/sd-webui-lobe-theme-redux.git"
 ```
 
 > Once you have completed these steps, the Lobe Theme extension will be successfully installed in Stable Diffusion WebUI.
