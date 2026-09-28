@@ -6,32 +6,66 @@
  * it. The buttons stay the WebUI's own (same click, same search), they are
  * only reordered, labelled with their last part and shown or hidden.
  *
- * The WebUI reads the folder to search for from the clicked button's text,
- * so the full path stays in the button (the parent part in a hidden span,
- * with pointer events off so the button itself is always the click target).
+ * The WebUI reads the folder to search for from the clicked button's text
+ * and matches it against the model paths as they are on disk, so the button
+ * keeps its exact text, separators included ("characters\\anime\\" on
+ * Windows, "/characters/" with the leading-slash option): the parent part and
+ * the trailing separator go in hidden spans, only the folder name shows.
+ * Pointer events are off on the spans so the button is always the click
+ * target.
  */
 
 const STYLE_ID = 'lobe-folder-tree-style';
 const CSS = `
-.extra-network-dirs.lobe-tree > button { display: inline-flex; align-items: center; gap: 4px; }
+.extra-network-dirs.lobe-tree {
+  display: flex !important; flex-direction: column !important; flex-wrap: nowrap !important;
+  align-items: stretch !important; gap: 2px !important;
+  max-height: 30vh; overflow: hidden auto; padding: 4px 12px 8px !important;
+}
+.extra-network-dirs.lobe-tree > button {
+  display: flex !important; align-items: center; justify-content: flex-start !important; gap: 6px;
+  width: 100% !important; min-width: 0 !important; min-height: 32px !important; height: 32px !important; margin: 0 !important;
+  padding: 0 10px 0 calc(10px + var(--lobe-depth, 0) * 16px) !important;
+  font-size: 13px !important; line-height: 1.2 !important;
+  text-align: start !important; white-space: nowrap !important; overflow: hidden;
+  color: var(--body-text-color-subdued) !important; background: transparent !important;
+  border: none !important; box-shadow: none !important; border-radius: var(--radius-md, 6px) !important;
+  flex: none !important;
+}
+.extra-network-dirs.lobe-tree > button:hover { color: var(--body-text-color) !important; background: var(--background-fill-secondary, rgba(128,128,128,0.12)) !important; }
+.extra-network-dirs.lobe-tree > button[data-lobe-active] {
+  color: var(--body-text-color) !important; background: var(--button-secondary-background-fill-hover, rgba(128,128,128,0.2)) !important;
+  font-weight: 600;
+}
 .extra-network-dirs.lobe-tree > button > span { pointer-events: none; }
-.extra-network-dirs.lobe-tree .lobe-tree-parent { display: none; }
+.extra-network-dirs.lobe-tree .lobe-tree-name { overflow: hidden; text-overflow: ellipsis; }
+.extra-network-dirs.lobe-tree .lobe-tree-parent,
+.extra-network-dirs.lobe-tree .lobe-tree-sep { display: none; }
 .extra-network-dirs.lobe-tree > button.lobe-tree-hidden { display: none !important; }
-.extra-network-dirs.lobe-tree > button[data-lobe-children]::after {
-  content: ''; width: 0; height: 0; margin-inline-start: 2px;
-  border-block: 3.5px solid transparent; border-inline-start: 4.5px solid currentColor; opacity: 0.6;
+/* caret for folders with sub-folders, a same-width gap for the rest */
+.extra-network-dirs.lobe-tree > button::before {
+  content: ''; order: -2; flex: none; width: 12px; height: 12px;
+  background: currentColor; opacity: 0;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M4 2.5 7.5 6 4 9.5' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M4 2.5 7.5 6 4 9.5' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
   transition: transform 150ms;
 }
-.extra-network-dirs.lobe-tree > button[data-lobe-open]::after { transform: rotate(90deg); }
-.extra-network-dirs.lobe-tree > button[data-lobe-depth]:not([data-lobe-depth='1']) { opacity: 0.85; border-style: dashed !important; }
-.extra-network-dirs.lobe-tree > button[data-lobe-depth]:not([data-lobe-depth='1'])::before {
-  content: ''; width: 6px; height: 6px; margin-inline-end: 2px;
-  border-inline-start: 1px solid currentColor; border-block-end: 1px solid currentColor; opacity: 0.45;
+.extra-network-dirs.lobe-tree > button[data-lobe-children]::before { opacity: 0.7; }
+.extra-network-dirs.lobe-tree > button[data-lobe-open]::before { transform: rotate(90deg); }
+/* folder glyph */
+.extra-network-dirs.lobe-tree > button:not(.search-all)::after {
+  content: ''; order: -1; flex: none; width: 14px; height: 14px;
+  background: currentColor; opacity: 0.55;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M1.5 4.5a1 1 0 0 1 1-1h3.6l1.5 1.5h5.9a1 1 0 0 1 1 1v6.5a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1z' fill='none' stroke='black' stroke-width='1.3' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M1.5 4.5a1 1 0 0 1 1-1h3.6l1.5 1.5h5.9a1 1 0 0 1 1 1v6.5a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1z' fill='none' stroke='black' stroke-width='1.3' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 `;
 
-const pathOf = (button: HTMLElement) =>
-  (button.dataset.lobePath ?? (button.textContent || '')).trim().replaceAll('\\', '/').replace(/\/+$/, '');
+/** The folder path with "/" separators and no leading or trailing slash, for the tree only. */
+const normalise = (raw: string) =>
+  raw.trim().replaceAll('\\', '/').replace(/^\/+/, '').replace(/\/+$/, '');
+
+const pathOf = (button: HTMLElement) => button.dataset.lobePath ?? normalise(button.textContent || '');
 
 const expanded = new Map<string, Set<string>>(); // per folder list (by id), the open folders
 
@@ -52,21 +86,27 @@ const apply = (box: HTMLElement) => {
 
   for (const [b, path] of paths) {
     if (b.dataset.lobePath === undefined) {
-      const cut = path.lastIndexOf('/');
-      const parent = cut >= 0 ? path.slice(0, cut + 1) : '';
-      const leaf = path.slice(cut + 1) + '/';
+      const raw = (b.textContent || '').trim();
+      const body = raw.replace(/[/\\]+$/, '');
+      const cut = Math.max(body.lastIndexOf('/'), body.lastIndexOf('\\'));
+      const parts = [
+        ['lobe-tree-parent', body.slice(0, cut + 1)],
+        ['lobe-tree-name', body.slice(cut + 1)],
+        ['lobe-tree-sep', raw.slice(body.length)],
+      ];
       b.textContent = '';
-      const hidden = document.createElement('span');
-      hidden.className = 'lobe-tree-parent';
-      hidden.textContent = parent;
-      const label = document.createElement('span');
-      label.textContent = leaf;
-      b.append(hidden, label);
+      for (const [className, text] of parts) {
+        const span = document.createElement('span');
+        span.className = className;
+        span.textContent = text;
+        b.append(span);
+      }
       b.dataset.lobePath = path;
-      b.title = path + '/';
+      b.title = raw;
     }
     const depth = path.split('/').length;
     b.dataset.lobeDepth = String(depth);
+    b.style.setProperty('--lobe-depth', String(depth - 1));
     const hasChildren = [...paths.values()].some((p) => p.startsWith(path + '/'));
     if (hasChildren) b.dataset.lobeChildren = '';
     else delete b.dataset.lobeChildren;
@@ -95,6 +135,7 @@ const apply = (box: HTMLElement) => {
     }
     b.classList.toggle('lobe-tree-hidden', !visible);
   }
+  if (all && !box.querySelector(':scope > button[data-lobe-active]')) all.dataset.lobeActive = '';
   box.classList.add('lobe-tree');
 };
 
@@ -115,6 +156,9 @@ export const startFolderTree = () => {
     const button = (event.target as HTMLElement | null)?.closest?.('button');
     const box = button?.parentElement;
     if (!button || !box?.classList.contains('lobe-tree')) return;
+    // the folder the cards are filtered to (the WebUI does not mark it)
+    for (const b of box.querySelectorAll<HTMLElement>(':scope > button[data-lobe-active]')) delete b.dataset.lobeActive;
+    button.dataset.lobeActive = '';
     if (button.dataset.lobeChildren === undefined) return;
     const key = box.id || 'dirs';
     const open = expanded.get(key) || new Set<string>();

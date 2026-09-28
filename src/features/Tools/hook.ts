@@ -39,7 +39,7 @@ export const installProgressHook = (): boolean => {
       ended = true;
       bus.emit('gen:end', { id: idTask, tab });
     };
-    bus.emit('gen:start', { id: idTask, tab });
+    bus.emit('gen:start', { gallery, id: idTask, tab });
     return original.call(
       this,
       idTask,

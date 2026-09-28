@@ -138,6 +138,17 @@ class LobeApi:
         def lobe_model():
             return loras.current_model()
 
+        @app.get("/lobe/state")
+        def lobe_state():
+            # sampling step of the running job, for the progress bar's "Step x/y"
+            try:
+                from modules import shared
+                s = shared.state
+                return {"step": int(getattr(s, "sampling_step", 0) or 0), "steps": int(getattr(s, "sampling_steps", 0) or 0),
+                        "job_no": int(getattr(s, "job_no", 0) or 0), "job_count": int(getattr(s, "job_count", 0) or 0)}
+            except Exception:
+                return {"step": 0, "steps": 0, "job_no": 0, "job_count": 0}
+
         @app.get("/lobe/system")
         def lobe_system():
             return system.stats()

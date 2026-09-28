@@ -271,6 +271,22 @@
     "systemMonitor": {
       "desc": "CPU, RAM, GPU load, VRAM, temperature and disk under the quick settings",
       "title": "System monitor"
+    },
+    "progressBarStyle": {
+      "aurora": "Aurora",
+      "classic": "Classic",
+      "desc": "Aurora: a flowing gradient with a glowing head, and step, percent and ETA on the bar",
+      "title": "Progress bar"
+    },
+    "resultFrameStyle": {
+      "ambient": "Ambient",
+      "desc": "Animated frame around the result while an image is made. Glow edge: a turning coloured edge. Pulse: a ring at every step. Ambient: the preview's own colours glow behind it. Scan: a line sweeps down. Orbit: lights circle the frame",
+      "glow": "Glow edge",
+      "off": "Off",
+      "orbit": "Orbit",
+      "pulse": "Pulse",
+      "scan": "Scan",
+      "title": "Result frame"
     }
   },
   "share": "Share",

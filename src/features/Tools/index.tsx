@@ -14,6 +14,7 @@ import { selectors, useAppStore } from '@/store';
 import { startSingleAccordion } from './accordions';
 import { bus } from './bus';
 import { startFolderTree } from './folderTree';
+import { startProgressFx } from './progressFx';
 import { startGenerationCapture } from './generation';
 import { installProgressHook } from './hook';
 import { startImageButtons } from './imageButtons';
@@ -41,6 +42,11 @@ const Tools = memo(() => {
     // progressbar.js not run yet: try again once the UI is up
     onUiLoaded(() => installProgressHook());
   }, []);
+
+  useEffect(() => {
+    if (setting.progressBarStyle === 'classic' && setting.resultFrameStyle === 'off') return;
+    return startProgressFx({ bar: setting.progressBarStyle, frame: setting.resultFrameStyle });
+  }, [setting.progressBarStyle, setting.resultFrameStyle]);
 
   useEffect(() => {
     if (!setting.extraNetworkFolderTree) return;

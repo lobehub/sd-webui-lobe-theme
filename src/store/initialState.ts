@@ -40,8 +40,10 @@ export interface WebuiSetting {
   logoType: 'lobe' | 'kitchen' | 'mark' | 'wordmark' | 'custom' | 'none';
   neutralColor: NeutralColor | undefined;
   primaryColor: PrimaryColor | undefined;
+  progressBarStyle: 'classic' | 'aurora';
   promptEditor: boolean;
   promptTextareaType: 'scroll' | 'resizable';
+  resultFrameStyle: 'off' | 'glow' | 'pulse' | 'ambient' | 'scan' | 'orbit';
   sidebarExpand: boolean;
   sidebarFixedMode: 'fixed' | 'float';
   sidebarSwap: boolean;
@@ -88,8 +90,10 @@ export const DEFAULT_SETTING: WebuiSetting = {
   logoType: 'lobe',
   neutralColor: undefined,
   primaryColor: undefined,
+  progressBarStyle: 'aurora',
   promptEditor: false,
   promptTextareaType: 'resizable',
+  resultFrameStyle: 'glow',
   sidebarExpand: true,
   sidebarFixedMode: 'fixed',
   sidebarSwap: false,

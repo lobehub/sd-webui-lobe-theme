@@ -156,6 +156,33 @@ const SettingForm = memo(() => {
         },
         {
           children: (
+            <Segmented
+              options={[
+                { label: t('setting.progressBarStyle.classic'), value: 'classic' },
+                { label: t('setting.progressBarStyle.aurora'), value: 'aurora' },
+              ]}
+            />
+          ),
+          desc: t('setting.progressBarStyle.desc'),
+          label: t('setting.progressBarStyle.title'),
+          name: 'progressBarStyle',
+        },
+        {
+          children: (
+            <Select
+              options={(['off', 'glow', 'pulse', 'ambient', 'scan', 'orbit'] as const).map((value) => ({
+                label: t(`setting.resultFrameStyle.${value}` as any) as string,
+                value,
+              }))}
+              style={{ minWidth: 200 }}
+            />
+          ),
+          desc: t('setting.resultFrameStyle.desc'),
+          label: t('setting.resultFrameStyle.title'),
+          name: 'resultFrameStyle',
+        },
+        {
+          children: (
             <Select
               options={fontOptions(false).map(([value, f]) => ({
                 label: <span style={{ fontFamily: f.family }}>{f.label}</span>,

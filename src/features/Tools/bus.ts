@@ -16,7 +16,7 @@ export interface ProgressInfo {
 export interface BusEvents {
   'gen:end': { id: string; tab: GenTab | string };
   'gen:progress': { id: string; info: ProgressInfo; tab: GenTab | string };
-  'gen:start': { id: string; tab: GenTab | string };
+  'gen:start': { gallery?: HTMLElement | null; id: string; tab: GenTab | string };
   'history:added': HistoryEntry;
   'open:history': undefined;
   'open:palette': undefined;
