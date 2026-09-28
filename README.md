@@ -8,7 +8,7 @@
 
 <h1 align="center">Lobe Theme Redux</h1>
 
-A continuation of [Lobe Theme](https://github.com/lobehub/sd-webui-lobe-theme) by LobeHub for Stable Diffusion WebUI Forge<br/>with an exquisite interface design, a highly customizable UI, and efficiency-boosting features.
+A continuation of [Lobe Theme](https://github.com/lobehub/sd-webui-lobe-theme) by LobeHub for Stable Diffusion WebUI Forge, Forge Classic (Neo) and reForge<br/>with an exquisite interface design, a highly customizable UI, and efficiency-boosting features.
 
 English · [简体中文](./README.zh-CN.md) · [Changelog](./CHANGELOG.md) · [Report Bug][github-issues-link] · [Request Feature][github-issues-link]
 
@@ -28,17 +28,187 @@ English · [简体中文](./README.zh-CN.md) · [Changelog](./CHANGELOG.md) · [
 
 </div>
 
-![][cover]
-
-> \[!WARNING]
+> \[!NOTE]
 >
-> Redux is made for WebUIs running on Gradio 4: Stable Diffusion WebUI Forge and Forge Classic (Neo). Gradio 3 WebUIs (AUTOMATIC1111 1.x, reForge's main branch) are not supported.
+> Redux runs on Stable Diffusion WebUI Forge and Forge Classic (Neo), both on Gradio 4, and on reForge (Gradio 3.41). Plain AUTOMATIC1111 is not tested.
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="./docs/redux/hero-light.webp">
+  <img alt="Lobe Theme Redux on Forge Classic (Neo)" src="./docs/redux/hero-dark.webp">
+</picture>
+
+</div>
+
+## 🔥 What's New in Redux
+
+The original Lobe Theme was made for AUTOMATIC1111 on Gradio 3. **Redux brings it back to life for the Forge family**: rebuilt for Gradio 4 on Forge and Neo, still at home on reForge's Gradio 3.41, and grown with the tools you reach for every day. Everything below is new in Redux; the original README follows further down.
+
+> \[!NOTE]
+>
+> The images in these screenshots come from a random-weight test model, so they are colour noise. Everything around them is the real theme.
+
+<details>
+<summary><kbd>What's new, at a glance</kbd></summary>
+
+- [Runs on all three Forges](#runs-on-all-three-forges)
+- [Aspect ratios and suggested settings](#aspect-ratios-and-suggested-settings)
+- [A tab bar that stays short](#a-tab-bar-that-stays-short)
+- [Extra Network, redesigned](#extra-network-redesigned)
+- [Quick Setting sidebar](#quick-setting-sidebar)
+- [Progress you can watch](#progress-you-can-watch)
+- [Appearance: make it yours](#appearance-make-it-yours)
+- [Command palette](#command-palette)
+- [Generation history](#generation-history)
+- [Presets](#presets)
+- [And the small things](#and-the-small-things)
+
+</details>
+
+### Runs on all three Forges
+
+| Forge Classic (Neo) · Gradio 4 | Forge · Gradio 4 | reForge · Gradio 3.41 |
+| :-: | :-: | :-: |
+| <img alt="Neo" src="./docs/redux/host-neo.webp"> | <img alt="Forge" src="./docs/redux/host-forge.webp"> | <img alt="reForge" src="./docs/redux/host-reforge.webp"> |
+
+One extension, the same theme on each. Redux follows what each WebUI has: Neo's and Forge's **UI Preset** (sd, xl, flux...), Neo's model families, Flux's **Distilled CFG Scale**, reForge's folder tree view.
+
+### Aspect ratios and suggested settings
+
+<img align="right" width="420" alt="Aspect ratios" src="./docs/redux/aspect-ratio.webp">
+
+Under **Width** and **Height**:
+
+- **Ratio**: 1:1 to 21:9 in one click, at the sizes models were trained on (832 × 1216 for 2:3 at 1024). The shape the sliders are at lights up.
+- 🔒 keeps the shape while you move a slider.
+- **Base**: how many pixels, from **Auto** (follows the loaded model) to 1536.
+- **Suggested**: steps and CFG for the loaded model's family, including Lightning, Turbo, LCM, Hyper, DMD2 and Schnell checkpoints.
+
+<br clear="right"/>
+
+### A tab bar that stays short
+
+<img alt="Tab bar" src="./docs/redux/tab-bar.webp">
+
+With many extensions installed, the header used to fill up with tabs. Now it holds only the tabs you pin; **All tabs** opens the rest, grouped into Generate, Tools, Extensions and System, with a search box. The bar is saved on the WebUI server, so every browser shows the same one.
+
+### Extra Network, redesigned
+
+<img alt="Quick Setting, Presets and Extra Network sidebars" src="./docs/redux/sidebars.webp">
+
+The right sidebar (on the right in the image above) keeps LoRAs, embeddings and checkpoints one glance away:
+
+- **Folder tree**: one folder per line, sub-folders open on click, the active folder highlighted. Works with Windows paths and with reForge's own tree view.
+- **LoRA cards**: a ☆ for favourites; a badge with the model family the LoRA was trained for, red when it does not match the loaded model; a weight control on hover (<kbd>−</kbd> / <kbd>+</kbd> or the mouse wheel), remembered per LoRA; a button that adds its trigger words.
+- **Filter bar**: All, Favorites, Recent, and Compatible with the loaded model.
+
+### Quick Setting sidebar
+
+The left sidebar has three tabs: **Settings** (the WebUI's quick settings), **Prompt** (the prompt editor) and **Presets**. Under them, a **System** card in the spirit of ComfyUI's Crystools: CPU, RAM, GPU load, VRAM, GPU temperature and power, and disk, with a short history line. GPU readings use NVIDIA's NVML, installed on the next start.
+
+### Progress you can watch
+
+<img align="right" width="320" alt="Aurora progress bar and Glow edge" src="./docs/redux/progress.webp">
+
+- **Aurora progress bar**: a flowing gradient with a glowing head, labelled with the step, the batch position, the percent and the ETA. Or **Classic**.
+- **Result frame**, around the image while it generates: **Glow edge** lights up as progress grows, **Pulse** sends a ring out on every step, **Ambient** glows in the live preview's colours, **Scan** sweeps a line down the image, **Orbit** sends glowing motes round the border. Or **Off**.
+- The browser tab shows a progress ring, and a ✓ when a generation finishes while you are elsewhere. A desktop notification can be turned on.
+
+Everything follows your primary colour and holds still when the system asks for reduced motion.
+
+<br clear="right"/>
+
+<img alt="The five result frames: Glow edge, Pulse, Ambient, Scan, Orbit" src="./docs/redux/result-frames.webp">
+
+<p align="center"><sub>Glow edge · Pulse · Ambient · Scan · Orbit</sub></p>
+
+### Appearance: make it yours
+
+<img alt="Appearance settings" src="./docs/redux/appearance.webp">
+
+**Theme Settings → Appearance**:
+
+- **Primary** and **neutral** colours: presets or any colour.
+- **Corners**: Sharp, Soft or Round.
+- **Density**: Comfortable or Compact.
+- **Surfaces**: Flat, Glass (frosted header and sidebars) or Elevated (cards with soft shadows).
+- **Fonts**: HarmonyOS Sans, Inter, Geist, Manrope, Be Vietnam Pro; Hack, Geist Mono or JetBrains Mono for code and prompts. All ship with the theme, so they work offline.
+- **Logo**: LobeHub, Kitchen, a spark mark, a wordmark, your own image or emoji, or none.
+- **Progress bar** and **Result frame**, above.
+
+<img alt="Three looks: sharp, compact, Inter and blue; round, glass, Manrope and purple; soft, elevated, Geist and orange in light mode" src="./docs/redux/appearance-variants.webp">
+
+**Theme Settings → Layout** swaps the sidebars and can fold accordions **one at a time**, so a long column of extensions stays short. Folding never switches an extension off.
+
+### Command palette
+
+<img align="right" width="420" alt="Command palette" src="./docs/redux/command-palette.webp">
+
+Press <kbd>Ctrl</kbd> + <kbd>K</kbd> (<kbd>⌘</kbd> + <kbd>K</kbd> on macOS) and type:
+
+- Generate, Interrupt, Skip, theme, history, presets;
+- any tab;
+- samplers, schedule types, checkpoints;
+- LoRAs (added with their saved weight), presets, recent generations;
+- any WebUI setting: the Settings tab opens right on it.
+
+<kbd>↑</kbd> <kbd>↓</kbd> to move, <kbd>Enter</kbd> to run, <kbd>Esc</kbd> to close.
+
+<br clear="right"/>
+
+### Generation history
+
+<img align="right" width="340" alt="Generation history" src="./docs/redux/history.webp">
+
+Every txt2img and img2img generation, kept with its parameters and a thumbnail. Open it from the clock in the header.
+
+- Search prompts and parameters, filter by tab, grouped by day.
+- **Reuse all**, or only the **Prompt** or the **Seed**.
+- Copy the parameters, save them as a preset, open the full images.
+- Tick two entries to compare them, prompt tokens included.
+
+History is kept on the WebUI server (`lobe_data/history/`), so it is the same in every browser. It keeps the newest 2,000 entries and never touches your outputs folder.
+
+<br clear="right"/>
+
+### Presets
+
+The **Presets** tab in the left sidebar (in the sidebars image above) saves the parameters you have set: sampler, schedule type, steps, CFG (and Distilled CFG on Flux), size and hires fix, optionally the seed and batch settings, never the prompts. **Apply** puts them back and leaves your prompt alone. Presets can be renamed, reordered, and saved straight from a history entry.
+
+### And the small things
+
+- **Image buttons under Generate**: open folder, save, zip, send to img2img and the rest sit right below **Generate** instead of under the gallery.
+- **Split previewer**, **prompt syntax highlighting**, **prompt editor** and **image info** are regular options now, no longer experimental.
+- **Works offline**: logo, favicons and fonts ship with the extension.
+- Chips and buttons keep readable text on any primary colour.
+- The UI no longer shows raw translation keys on first load.
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
+---
+
+<div align="center">
+
+**The original Lobe Theme**
+
+Everything below is the original Lobe Theme README, kept and updated for Redux.
+
+</div>
+
+
+![][cover]
 
 <details>
 <summary><kbd>Table of contents</kbd></summary>
 
 #### TOC
 
+- [🔥 What's New in Redux](#-whats-new-in-redux)
 - [👋🏻 Getting Started & Join Our Community](#-getting-started--join-our-community)
 - [📦 Extension Installation](#-extension-installation)
 - [✨ Feature Overview](#-feature-overview)
@@ -83,7 +253,7 @@ Please be aware that LobeTheme is currently under active development, and feedba
 
 > \[!NOTE]
 >
-> Before installing the extension, check that your WebUI runs on Gradio 4 (Stable Diffusion WebUI Forge or Forge Classic / Neo).
+> Redux is made for Stable Diffusion WebUI Forge, Forge Classic (Neo) and reForge.
 
 #### `A` Installation via SD WebUI Extension Market
 
