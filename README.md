@@ -523,7 +523,22 @@ Under the quick settings: CPU, RAM, GPU load, VRAM, GPU temperature and power, a
 
 #### `23` Extra Network Folder Tree
 
-Folders of LoRAs, embeddings and checkpoints show as a tree: only the top level at first, sub-folders when their parent is clicked. The buttons keep doing what the WebUI does with them (search that folder). On WebUIs with the A1111 1.8+ tree view (reForge), that tree goes above the cards in the sidebar. **Theme Settings → Sidebar → Folder tree** turns it off.
+Folders of LoRAs, embeddings and checkpoints show as a tree: one folder per line, indented by depth, only the top level at first; a folder with sub-folders has a caret and opens when clicked. The folder the cards are filtered to is highlighted. The buttons keep doing what the WebUI does with them (search that folder), with the folder text exactly as the WebUI wrote it, so Windows paths and the "Add a '/' to the Dir buttons" option work. On WebUIs that use the A1111 1.8+ tree view (reForge by default), that tree goes above the cards in the sidebar. **Theme Settings → Sidebar → Folder tree** turns it off.
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
+#### `24` Progress Effects
+
+Two independent options under **Theme Settings → Appearance**:
+
+- **Progress bar**: *Aurora* (default) is a taller bar with a flowing gradient, a moving sheen and a glowing head, labelled with the step, the batch position, the percent and the ETA ("Step 7/20 · 2/4" … "35% · ETA 00:12"). *Classic* keeps the WebUI's bar.
+- **Result frame**: an animated edge around the result box while an image is generated. *Glow edge* (default) is a slowly turning multi-coloured edge that lights up as progress grows; *Pulse* sends a ring outward on every sampling step; *Ambient* takes its colours from the live preview; *Scan* sweeps a line down the image; *Orbit* sends glowing motes round the border, one more for every eighth of the job. *Off* turns it off.
+
+Both follow the primary colour (a violet when the primary colour is a grey). The step count comes from the theme's `/lobe/state` route; without it, the label shows the percent and ETA only. With the system's "reduce motion" setting on, the effects stay still.
 
 <div align="right">
 
