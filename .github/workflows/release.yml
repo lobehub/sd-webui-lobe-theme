@@ -4,29 +4,28 @@ on:
     branches:
       - main
 
+# Checks every push to main: lint, types, tests and that the theme still builds.
+# Redux is published by committing the built javascript/ folder, so there is no
+# npm release step (the upstream semantic-release step needed a GH_TOKEN secret
+# and an npm package this fork does not have).
 jobs:
-  release:
-    name: Release
+  check:
+    name: Check
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Install bun
-        uses: oven-sh/setup-bun@v1
+        uses: oven-sh/setup-bun@v2
 
       - name: Install deps
         run: bun i
 
-      - name: CI
+      - name: Lint and type-check
         run: bun run ci
 
       - name: Test
-        run: bun run test
+        run: bun run test --run
 
-      #      - name: Build
-      #        run: bun run build
-
-      - name: Release
-        run: bun run release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Build
+        run: bun run build

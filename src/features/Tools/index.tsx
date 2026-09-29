@@ -81,8 +81,8 @@ const Tools = memo(() => {
         add: t('tools.sections.add'),
         merge: t('tools.sections.merge'),
         section: t('tools.sections.section'),
-        tokens: t('tools.sections.tokens'),
         toggle: t('tools.sections.toggle'),
+        tokens: t('tools.sections.tokens'),
       },
     });
   }, [setting.promptSections, i18n.language]);

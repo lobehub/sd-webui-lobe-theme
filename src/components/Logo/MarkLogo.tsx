@@ -7,8 +7,8 @@ import { selectors, useAppStore } from '@/store';
 export interface MarkLogoProps {
   size?: number;
   style?: CSSProperties;
-  /** 'mark': icon and name; 'wordmark': the name alone, in a gradient. */
-  type: 'mark' | 'wordmark';
+  /** 'mark': icon and name; 'wordmark': the name alone, in a gradient; 'icon': the icon alone. */
+  type: 'mark' | 'wordmark' | 'icon';
 }
 
 const NAME = 'Stable Diffusion';
@@ -60,7 +60,7 @@ const MarkLogo = memo<MarkLogoProps>(({ size = 32, style, type }) => {
           opacity="0.92"
         />
       </svg>
-      {text}
+      {type === 'mark' && text}
     </span>
   );
 });

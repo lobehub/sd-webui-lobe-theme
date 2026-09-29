@@ -7,6 +7,10 @@ import type { WebuiSetting } from '@/store';
 type Preset = WebuiSetting['layoutPreset'];
 
 const useStyles = createStyles(({ css, token }) => ({
+  active: css`
+    border-color: ${token.colorPrimary} !important;
+    box-shadow: 0 0 0 1px ${token.colorPrimary};
+  `,
   card: css`
     cursor: pointer;
 
@@ -34,9 +38,11 @@ const useStyles = createStyles(({ css, token }) => ({
       border-color: ${token.colorBorder};
     }
   `,
-  active: css`
-    border-color: ${token.colorPrimary} !important;
-    box-shadow: 0 0 0 1px ${token.colorPrimary};
+  desc: css`
+    font-size: 12px;
+    line-height: 1.4;
+    color: ${token.colorTextDescription};
+    text-align: end;
   `,
   label: css`
     font-size: 12px;
@@ -44,17 +50,17 @@ const useStyles = createStyles(({ css, token }) => ({
     font-weight: 600;
     color: ${token.colorText};
   `,
-  desc: css`
-    font-size: 12px;
-    line-height: 1.4;
-    color: ${token.colorTextDescription};
-    text-align: end;
-  `,
   list: css`
     display: flex;
     flex-wrap: nowrap;
     gap: 8px;
     justify-content: flex-end;
+  `,
+  svg: css`
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: ${token.borderRadius}px;
   `,
   wrap: css`
     display: flex;
@@ -63,12 +69,6 @@ const useStyles = createStyles(({ css, token }) => ({
     align-items: flex-end;
 
     max-width: 330px;
-  `,
-  svg: css`
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: ${token.borderRadius}px;
   `,
 }));
 

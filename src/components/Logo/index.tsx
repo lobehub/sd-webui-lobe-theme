@@ -22,18 +22,21 @@ const Logo = memo<LogoProps>(({ compact, size = 32, style }) => {
   const themeMode = useAppStore(selectors.themeMode);
 
   if (setting.logoType === 'kitchen') {
+    // the Kitchen logo is a wordmark: in a narrow place, the theme's own mark instead
+    if (compact) return <MarkLogo size={size} style={style} type="icon" />;
     return <KitchenLogo size={size * 0.75} style={style} themeMode={themeMode} />;
   }
 
   if (setting.logoType === 'none') return null;
 
   if (setting.logoType === 'mark' || setting.logoType === 'wordmark') {
-    return <MarkLogo size={size} style={style} type={compact ? 'mark' : setting.logoType} />;
+    return <MarkLogo size={size} style={style} type={compact ? 'icon' : setting.logoType} />;
   }
 
   if (setting.logoType === 'custom') {
     return (
       <CustomLogo
+        compact={compact}
         logoCustomTitle={setting.logoCustomTitle}
         logoCustomUrl={setting.logoCustomUrl}
         size={size}

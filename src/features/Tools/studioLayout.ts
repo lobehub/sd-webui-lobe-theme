@@ -69,9 +69,13 @@ ${root} #${tab}_results {
 }
 html.${MIRROR_CLASS} #tab_${tab}:not([style*="display: none"]) :is(.lobe-studio-switch, #${tab}_actions_column, #${tab}_prompt_container, #${tab}_settings) { grid-column: 2; }
 html.${MIRROR_CLASS} #tab_${tab}:not([style*="display: none"]) #${tab}_results { grid-column: 1; }
-${root} #${tab}_results > .panel, ${root} #${tab}_results_panel { flex: 1 1 auto; display: flex !important; flex-direction: column; min-height: 0; }
-${root} #${tab}_gallery_container { flex: 1 1 auto; min-height: 0; }
-${root} #${tab}_gallery { height: 100% !important; min-height: 320px; }
+/* the image fills the column; the generation info, the Impact ADetailer comparer and anything else
+   under the gallery come after it, and the column scrolls. Nothing may squeeze the gallery. */
+${root} #${tab}_results > .panel, ${root} #${tab}_results_panel { flex: none !important; display: flex !important; flex-direction: column; min-height: 100%; }
+${root} #${tab}_results_panel > * { flex-shrink: 0 !important; }
+${root} #${tab}_gallery_container { flex: none !important; height: auto !important; min-height: 0; }
+${root} #${tab}_gallery { flex: none !important; height: max(320px, calc(100vh - 72px)) !important; }
+${root} #${tab}_gallery_container:has(#iad-dock:not([style*="display: none"])) #${tab}_gallery { height: max(280px, 52vh) !important; }
 
 /* one panel at a time */
 ${root}[data-lobe-panel="prompt"] #${tab}_settings { display: none !important; }
@@ -134,7 +138,7 @@ export const startStudioLayout = (options: { mirror: boolean; text: StudioText }
     bar.className = 'lobe-studio-switch';
     bar.setAttribute('role', 'group');
     const set = (panel: Panel) => {
-      tabRoot.setAttribute('data-lobe-panel', panel);
+      tabRoot.dataset.lobePanel = panel;
       for (const button of bar.querySelectorAll('button')) {
         button.setAttribute('aria-pressed', String(button.dataset.panel === panel));
       }
@@ -166,11 +170,12 @@ export const startStudioLayout = (options: { mirror: boolean; text: StudioText }
   };
 
   const done = new Set<string>();
+  let timer: number | undefined;
   const tick = () => {
     for (const tab of TABS) if (!done.has(tab) && install(tab)) done.add(tab);
     if (done.size === TABS.length) window.clearInterval(timer);
   };
-  const timer = window.setInterval(tick, 500);
+  timer = window.setInterval(tick, 500);
   tick();
 
   return () => {

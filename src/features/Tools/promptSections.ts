@@ -21,8 +21,8 @@ export interface PromptSectionsText {
   add: string;
   merge: string;
   section: string;
-  tokens: string;
   toggle: string;
+  tokens: string;
 }
 
 // the WebUI's own rule: re.compile(r"\s*\bBREAK\b\s*", re.S)
@@ -144,9 +144,10 @@ export const startPromptSections = (options: { colors: string[]; text: PromptSec
     }
   };
 
-  const render = (state: Tab, parts: string[], focus?: number) => {
+  const render = (state: Tab, values: string[], focus?: number) => {
+    const parts = [...values];
     while (parts.length < 2) parts.push('');
-    parts = parts.slice(0, MAX);
+    parts.splice(MAX);
     state.host.replaceChildren();
     state.boxes = parts.map((part, index) => {
       const wrap = document.createElement('div');

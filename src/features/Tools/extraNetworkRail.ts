@@ -98,10 +98,10 @@ const install = (root: HTMLElement) => {
   const nav = root.querySelector(':scope > .tab-nav');
   if (!nav) return;
   root.classList.add('lobe-rail');
-  for (const button of nav.querySelectorAll(':scope > button')) {
+  for (const button of nav.querySelectorAll<HTMLButtonElement>(':scope > button')) {
     const { key, short } = railOf(button.textContent || '');
-    if (button.getAttribute('data-lobe-rail') !== key) button.setAttribute('data-lobe-rail', key);
-    if (button.getAttribute('data-lobe-short') !== short) button.setAttribute('data-lobe-short', short);
+    if (button.dataset.lobeRail !== key) button.dataset.lobeRail = key;
+    if (button.dataset.lobeShort !== short) button.dataset.lobeShort = short;
     if (!button.getAttribute('title')) button.setAttribute('title', (button.textContent || '').trim());
   }
   const controls = nav.querySelector(':scope > .extra-networks-controls-div');
@@ -112,10 +112,10 @@ const install = (root: HTMLElement) => {
   const box = footerBox(root);
   if (box) {
     const strays = [
-      ...[...nav.children].filter(
+      ...[...(nav.children as HTMLCollectionOf<HTMLElement>)].filter(
         (child) => child.tagName !== 'BUTTON' && !child.classList.contains('extra-networks-controls-div'),
       ),
-      ...[...root.children].filter(
+      ...[...(root.children as HTMLCollectionOf<HTMLElement>)].filter(
         (child) =>
           child !== nav &&
           !child.classList.contains('extra-networks-controls-div') &&
@@ -125,7 +125,7 @@ const install = (root: HTMLElement) => {
       ),
     ];
     for (const child of strays) {
-      child.setAttribute('data-lobe-moved', child.parentElement === nav ? 'nav' : 'root');
+      child.dataset.lobeMoved = child.parentElement === nav ? 'nav' : 'root';
       box.append(child);
     }
   }
@@ -139,13 +139,24 @@ const restore = (root: HTMLElement) => {
   const tab = root.id.replace(/_extra_tabs$/, '');
   const box = document.querySelector(`#lobe-extra-network-footer-slot > [data-tab="${tab}"]`);
   if (nav && box) {
-    for (const child of [...box.children]) {
-      const from = child.getAttribute('data-lobe-moved');
-      child.removeAttribute('data-lobe-moved');
+    // a copy: the loop moves them out of the live collection
+    const moved = [...(box.children as HTMLCollectionOf<HTMLElement>)];
+    for (const child of moved) {
+      const from = child.dataset.lobeMoved;
+      delete child.dataset.lobeMoved;
       (from === 'root' ? root : nav).append(child);
     }
     box.remove();
   }
+};
+
+const roots = () =>
+  ['txt2img', 'img2img']
+    .map((tab) => gradioApp().querySelector<HTMLElement>(`#${tab}_extra_tabs`))
+    .filter(Boolean) as HTMLElement[];
+
+const installAll = () => {
+  for (const root of roots()) install(root);
 };
 
 export const startExtraNetworkRail = () => {
@@ -155,18 +166,10 @@ export const startExtraNetworkRail = () => {
     style.textContent = css();
     document.head.append(style);
   }
-  const roots = () =>
-    ['txt2img', 'img2img']
-      .map((tab) => gradioApp().querySelector<HTMLElement>(`#${tab}_extra_tabs`))
-      .filter(Boolean) as HTMLElement[];
-
   // the WebUI moves the controls into the tab row once its cards load, extensions add tabs and
   // controls later, and the footer shows the open tab's: look again now and then (cheap)
-  const tick = () => {
-    for (const root of roots()) install(root);
-  };
-  tick();
-  const timer = window.setInterval(tick, 500);
+  installAll();
+  const timer = window.setInterval(installAll, 500);
 
   return () => {
     window.clearInterval(timer);

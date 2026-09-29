@@ -353,6 +353,9 @@ export const useStyles = createStyles(
         font-family: ${token.fontFamily};
       }
     `,
+    container: css`
+      height: calc(100vh - ${headerHeight}px);
+    `,
     footerSlot: css`
       display: flex;
       flex: 0 1 auto;
@@ -383,9 +386,6 @@ export const useStyles = createStyles(
       > [data-tab][hidden] {
         display: none;
       }
-    `,
-    container: css`
-      height: calc(100vh - ${headerHeight}px);
     `,
   }),
 );

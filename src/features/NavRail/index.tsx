@@ -18,6 +18,21 @@ import { selectors, useAppStore } from '@/store';
 export const RAIL_WIDTH = 60;
 
 const useStyles = createStyles(({ css, token }) => ({
+  active: css`
+    color: ${token.colorTextLightSolid} !important;
+    background: ${token.colorPrimary} !important;
+  `,
+  logo: css`
+    overflow: hidden;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+    margin-block-end: 6px;
+  `,
   rail: css`
     position: relative;
     z-index: 60;
@@ -40,16 +55,9 @@ const useStyles = createStyles(({ css, token }) => ({
       display: none;
     }
   `,
-  logo: css`
-    overflow: hidden;
-    display: flex;
-    flex: none;
-    align-items: center;
-    justify-content: center;
-
-    width: 40px;
-    height: 40px;
-    margin-block-end: 6px;
+  spacer: css`
+    flex: 1;
+    min-height: 8px;
   `,
   tab: css`
     cursor: pointer;
@@ -77,14 +85,6 @@ const useStyles = createStyles(({ css, token }) => ({
       color: ${token.colorText};
       background: ${token.colorFillTertiary};
     }
-  `,
-  active: css`
-    color: ${token.colorTextLightSolid} !important;
-    background: ${token.colorPrimary} !important;
-  `,
-  spacer: css`
-    flex: 1;
-    min-height: 8px;
   `,
 }));
 

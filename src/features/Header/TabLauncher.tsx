@@ -195,6 +195,21 @@ const useStyles = createStyles(({ css, token }) => ({
       background: ${token.colorFillTertiary};
     }
   `,
+  triggerBadge: css`
+    position: absolute;
+    inset-block-start: -6px;
+    inset-inline-end: -8px;
+
+    padding: 0 5px;
+
+    font-size: 10px;
+    line-height: 16px;
+    color: ${token.colorTextSecondary};
+
+    background: ${token.colorBgElevated};
+    border: 1px solid ${token.colorBorderSecondary};
+    border-radius: 8px;
+  `,
   triggerCompact: css`
     cursor: pointer;
 
@@ -217,21 +232,6 @@ const useStyles = createStyles(({ css, token }) => ({
       color: ${token.colorText};
       background: ${token.colorFillTertiary};
     }
-  `,
-  triggerBadge: css`
-    position: absolute;
-    inset-block-start: -6px;
-    inset-inline-end: -8px;
-
-    padding: 0 5px;
-
-    font-size: 10px;
-    line-height: 16px;
-    color: ${token.colorTextSecondary};
-
-    background: ${token.colorBgElevated};
-    border: 1px solid ${token.colorBorderSecondary};
-    border-radius: 8px;
   `,
   triggerCount: css`
     padding: 0 6px;
