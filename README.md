@@ -930,7 +930,7 @@ Every bit counts and your one-time donation sparkles in our galaxy of support! Y
 - cozy-nest: <https://github.com/Nevysha/Cozy-Nest>
 - Fonts bundled in `assets/fonts`: HarmonyOS Sans (Copyright 2021 Huawei Device Co., Ltd., HarmonyOS Sans Fonts License Agreement) and Hack (MIT / Bitstream Vera License); Inter, Geist, Geist Mono, Manrope, Be Vietnam Pro and JetBrains Mono (SIL Open Font License 1.1, via Fontsource; latin, latin-ext, vietnamese and cyrillic subsets). Each folder contains its license.
 - System monitor: GPU readings through NVIDIA's [nvidia-ml-py](https://pypi.org/project/nvidia-ml-py/) (BSD); the idea follows [ComfyUI-Crystools](https://github.com/crystian/ComfyUI-Crystools).
-- Thanks also to **Claude**, Anthropic's AI assistant, for help building this version.
+- Thanks also to Claude, for help building this version.
 - _before `1.0.0` version_
   - sd-web-ui-quickcs: <https://github.com/Gerschel/sd-web-ui-quickcss/>
   - Dark-Themes-SD-WebUI-Automatic1111: <https://github.com/Nacurutu/Dark-Themes-SD-WebUI-Automatic1111>
