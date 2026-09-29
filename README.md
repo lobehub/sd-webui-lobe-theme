@@ -1,7 +1,6 @@
 <a name="readme-top"></a>
 
 <div align="center">
-*Make Lobe theme great again*
 
 <img height="120" src="https://registry.npmmirror.com/@lobehub/assets-logo/1.0.0/files/assets/logo-3d.webp">
 <img height="120" src="https://gw.alipayobjects.com/zos/kitchen/qJ3l3EPsdW/split.svg">
@@ -43,6 +42,8 @@ English · [简体中文](./README.zh-CN.md) · [Changelog](./CHANGELOG.md) · [
 </div>
 
 ## 🔥 What's New in Redux
+
+*Make Lobe theme great again*
 
 The original Lobe Theme was made for AUTOMATIC1111 on Gradio 3. **Redux brings it back to life for the Forge family**: rebuilt for Gradio 4 on Forge and Neo, still at home on reForge's Gradio 3.41, and grown with the tools you reach for every day. Everything below is new in Redux; the original README follows further down.
 
