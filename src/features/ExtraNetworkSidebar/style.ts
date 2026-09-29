@@ -353,6 +353,37 @@ export const useStyles = createStyles(
         font-family: ${token.fontFamily};
       }
     `,
+    footerSlot: css`
+      display: flex;
+      flex: 0 1 auto;
+      gap: 8px;
+      align-items: center;
+
+      min-width: 0;
+
+      &:empty {
+        display: none;
+      }
+
+      > [data-tab] {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+      }
+
+      > [data-tab] > * {
+        position: static !important;
+        flex: 0 1 auto;
+        width: auto !important;
+        min-width: 0;
+        margin: 0 !important;
+      }
+
+      > [data-tab][hidden] {
+        display: none;
+      }
+    `,
     container: css`
       height: calc(100vh - ${headerHeight}px);
     `,

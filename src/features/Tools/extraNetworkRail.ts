@@ -78,6 +78,22 @@ const railOf = (label: string) => {
   return { key: found?.[1] || 'other', short: found?.[3] || label.trim() };
 };
 
+/** The per-tab holder in the sidebar's footer, for what extensions add to the tabs row. */
+const footerBox = (root: HTMLElement) => {
+  const slot = document.querySelector('#lobe-extra-network-footer-slot');
+  if (!slot) return null;
+  const tab = root.id.replace(/_extra_tabs$/, '');
+  let box = slot.querySelector<HTMLElement>(`:scope > [data-tab="${tab}"]`);
+  if (!box) {
+    box = document.createElement('div');
+    box.dataset.tab = tab;
+    slot.append(box);
+  }
+  // only the open tab's controls show
+  box.hidden = !root.offsetParent;
+  return box;
+};
+
 const install = (root: HTMLElement) => {
   const nav = root.querySelector(':scope > .tab-nav');
   if (!nav) return;
@@ -90,6 +106,29 @@ const install = (root: HTMLElement) => {
   }
   const controls = nav.querySelector(':scope > .extra-networks-controls-div');
   if (controls) nav.after(controls);
+  // anything else an extension put in the tabs row (a card-size slider, a button...) would be
+  // squeezed into the rail: it goes to the sidebar's footer, next to the card size slider
+  // (the same for what is added beside the tabs row: in the grid it would push the cards down)
+  const box = footerBox(root);
+  if (box) {
+    const strays = [
+      ...[...nav.children].filter(
+        (child) => child.tagName !== 'BUTTON' && !child.classList.contains('extra-networks-controls-div'),
+      ),
+      ...[...root.children].filter(
+        (child) =>
+          child !== nav &&
+          !child.classList.contains('extra-networks-controls-div') &&
+          !child.classList.contains('tabitem') &&
+          !(child instanceof HTMLStyleElement) &&
+          !(child instanceof HTMLScriptElement),
+      ),
+    ];
+    for (const child of strays) {
+      child.setAttribute('data-lobe-moved', child.parentElement === nav ? 'nav' : 'root');
+      box.append(child);
+    }
+  }
 };
 
 const restore = (root: HTMLElement) => {
@@ -97,6 +136,16 @@ const restore = (root: HTMLElement) => {
   const nav = root.querySelector(':scope > .tab-nav');
   const controls = root.querySelector(':scope > .extra-networks-controls-div');
   if (nav && controls) nav.append(controls);
+  const tab = root.id.replace(/_extra_tabs$/, '');
+  const box = document.querySelector(`#lobe-extra-network-footer-slot > [data-tab="${tab}"]`);
+  if (nav && box) {
+    for (const child of [...box.children]) {
+      const from = child.getAttribute('data-lobe-moved');
+      child.removeAttribute('data-lobe-moved');
+      (from === 'root' ? root : nav).append(child);
+    }
+    box.remove();
+  }
 };
 
 export const startExtraNetworkRail = () => {
@@ -111,13 +160,13 @@ export const startExtraNetworkRail = () => {
       .map((tab) => gradioApp().querySelector<HTMLElement>(`#${tab}_extra_tabs`))
       .filter(Boolean) as HTMLElement[];
 
-  // the WebUI moves the controls into the tab row once its cards load, and extensions add
-  // tabs later: look again now and then (cheap: two queries)
+  // the WebUI moves the controls into the tab row once its cards load, extensions add tabs and
+  // controls later, and the footer shows the open tab's: look again now and then (cheap)
   const tick = () => {
     for (const root of roots()) install(root);
   };
   tick();
-  const timer = window.setInterval(tick, 1000);
+  const timer = window.setInterval(tick, 500);
 
   return () => {
     window.clearInterval(timer);

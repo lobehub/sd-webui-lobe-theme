@@ -67,6 +67,8 @@ const Inner = memo(() => {
           style={{ flex: 1 }}
           value={size}
         />
+        {/* controls other extensions put in the model-type tabs row land here with the side rail */}
+        <div className={styles.footerSlot} id="lobe-extra-network-footer-slot" />
       </DraggablePanelFooter>
     </>
   );
