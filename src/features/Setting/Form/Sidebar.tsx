@@ -140,6 +140,14 @@ const SettingForm = memo(() => {
           name: 'extraNetworkFolderTree',
           valuePropName: 'checked',
         },
+        {
+          children: <Switch />,
+          desc: t('setting.extraNetworkSidebar.tabRail.desc'),
+          hidden: !rawSetting.enableExtraNetworkSidebar,
+          label: t('setting.extraNetworkSidebar.tabRail.title'),
+          name: 'extraNetworkTabRail',
+          valuePropName: 'checked',
+        },
       ],
 
       title: t('setting.group.extraNetworkSidebar'),

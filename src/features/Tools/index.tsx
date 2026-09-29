@@ -13,12 +13,14 @@ import { selectors, useAppStore } from '@/store';
 
 import { startSingleAccordion } from './accordions';
 import { bus } from './bus';
+import { startExtraNetworkRail } from './extraNetworkRail';
 import { startFolderTree } from './folderTree';
 import { startProgressFx } from './progressFx';
 import { startGenerationCapture } from './generation';
 import { installProgressHook } from './hook';
 import { startImageButtons } from './imageButtons';
 import { startLoraTools } from './loraTools';
+import { startPromptSections } from './promptSections';
 import { startSizeTools } from './sizeTools';
 import { startTabProgress } from './tabProgress';
 
@@ -52,6 +54,25 @@ const Tools = memo(() => {
     if (!setting.extraNetworkFolderTree) return;
     return startFolderTree();
   }, [setting.extraNetworkFolderTree]);
+
+  useEffect(() => {
+    if (!setting.enableExtraNetworkSidebar || !setting.extraNetworkTabRail) return;
+    return startExtraNetworkRail();
+  }, [setting.enableExtraNetworkSidebar, setting.extraNetworkTabRail]);
+
+  useEffect(() => {
+    if (!setting.promptSections) return;
+    return startPromptSections({
+      colors: [theme.colorPrimary, theme.colorSuccess, theme.colorWarning, theme.colorInfo, theme.colorError, theme.colorTextSecondary],
+      text: {
+        add: t('tools.sections.add'),
+        merge: t('tools.sections.merge'),
+        section: t('tools.sections.section'),
+        tokens: t('tools.sections.tokens'),
+        toggle: t('tools.sections.toggle'),
+      },
+    });
+  }, [setting.promptSections]);
 
   useEffect(() => {
     if (setting.accordionMode !== 'single') return;
