@@ -53,6 +53,7 @@ The original Lobe Theme was made for AUTOMATIC1111 on Gradio 3. **Redux brings i
 <summary><kbd>What's new, at a glance</kbd></summary>
 
 - [Runs on all three Forges](#runs-on-all-three-forges)
+- [Layout presets: Classic and Studio](#layout-presets-classic-and-studio)
 - [Aspect ratios and suggested settings](#aspect-ratios-and-suggested-settings)
 - [Prompt sections](#prompt-sections)
 - [A tab bar that stays short](#a-tab-bar-that-stays-short)
@@ -74,6 +75,18 @@ The original Lobe Theme was made for AUTOMATIC1111 on Gradio 3. **Redux brings i
 | <img alt="Neo" src="./docs/redux/host-neo.webp"> | <img alt="Forge" src="./docs/redux/host-forge.webp"> | <img alt="reForge" src="./docs/redux/host-reforge.webp"> |
 
 One extension, the same theme on each. Redux follows what each WebUI has: Neo's and Forge's **UI Preset** (sd, xl, flux...), Neo's model families, Flux's **Distilled CFG Scale**, reForge's folder tree view.
+
+### Layout presets: Classic and Studio
+
+<img alt="Studio layout" src="./docs/redux/layout-studio.webp">
+
+**Theme Settings → Appearance → Layout preset** moves the blocks, nothing else (colours, fonts and every other setting stay):
+
+- **Classic**: tabs across the top, the prompt above the settings and the result.
+- **Studio** (above): the tabs become a rail of icons on the left, with the theme's buttons at its foot, and the page gets the full height. txt2img and img2img become two columns as tall as the window: the controls and the result. The controls show one thing at a time, **Prompt**, **Parameters** or **Extensions**, with **Generate** always in view.
+- **Studio, mirrored**: the same, with the result on the left.
+
+Studio only lays out the WebUI's own blocks differently; nothing is moved or rebuilt, so extensions find everything where they expect it. Below 1000 px wide, and on phones, the pages fall back to the usual layout.
 
 ### Aspect ratios and suggested settings
 
@@ -201,6 +214,7 @@ The **Presets** tab in the left sidebar (in the sidebars image above) saves the 
 - **Split previewer**, **prompt syntax highlighting**, **prompt editor** and **image info** are regular options now, no longer experimental.
 - **Works offline**: logo, favicons and fonts ship with the extension.
 - Chips and buttons keep readable text on any primary colour.
+- **Every language complete**: German, Spanish, French, Japanese, Korean, Portuguese, Russian, Turkish and both Chinese translations cover all of Redux's settings and tools, and **Vietnamese** (Tiếng Việt) is new.
 - The UI no longer shows raw translation keys on first load.
 
 <div align="right">
@@ -752,6 +766,18 @@ The ▤ button among the tools under the prompt (txt2img and img2img) turns the 
 In the Extra Network sidebar, the model types (Textual Inversion, Hypernetworks, Checkpoints, Lora, and tabs added by extensions) become a narrow column on the side, an icon and a short name each, the full name on hover. The search and sort controls move above the cards, and the cards get the whole height of the sidebar. **Theme Settings → Sidebar → Model types as a side rail** brings the tabs back.
 
 <br clear="right"/>
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
+#### `27` Layout Presets
+
+**Theme Settings → Appearance → Layout preset**: *Classic*, *Studio* or *Studio, mirrored*, each shown as a small picture of where the blocks go. Only the layout changes.
+
+In the Studio layouts the WebUI's tabs become a rail on the left (pinned tabs as icons, extension tabs by their initials, **All tabs** below them, and the theme's history, palette, light/dark and settings buttons at the foot), and the header goes. In txt2img and img2img, the controls and the result sit side by side, each as tall as the window and scrolling on its own. At the top of the controls, **Prompt** shows the prompts with their tools and styles, **Parameters** the sampler, size, seed, Hires. fix and the rest (and img2img's image), **Extensions** the extensions' blocks and scripts; **Generate** stays in view. The choice is remembered per tab. The WebUI's blocks are laid out with a CSS grid and not moved, so extensions keep working. Windows narrower than 1000 px, and phones, get the usual layout. With a Studio layout, *Split previewer* has no effect.
 
 <div align="right">
 
