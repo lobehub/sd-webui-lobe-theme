@@ -2,6 +2,7 @@ import { Logo as LobeLogo } from '@lobehub/ui';
 import isEqual from 'fast-deep-equal';
 import { type CSSProperties, memo } from 'react';
 
+import { cdnUrl } from '@/app/assets';
 import { GITHUB_REPO_URL } from '@/const/url';
 import { selectors, useAppStore } from '@/store';
 
@@ -10,11 +11,13 @@ import KitchenLogo from './KitchenLogo';
 import MarkLogo from './MarkLogo';
 
 export interface LogoProps {
+  /** Only the mark, no wordmark: for narrow places such as the side rail. */
+  compact?: boolean;
   size?: number;
   style?: CSSProperties;
 }
 
-const Logo = memo<LogoProps>(({ size = 32, style }) => {
+const Logo = memo<LogoProps>(({ compact, size = 32, style }) => {
   const setting = useAppStore(selectors.currentSetting, isEqual);
   const themeMode = useAppStore(selectors.themeMode);
 
@@ -25,7 +28,7 @@ const Logo = memo<LogoProps>(({ size = 32, style }) => {
   if (setting.logoType === 'none') return null;
 
   if (setting.logoType === 'mark' || setting.logoType === 'wordmark') {
-    return <MarkLogo size={size} style={style} type={setting.logoType} />;
+    return <MarkLogo size={size} style={style} type={compact ? 'mark' : setting.logoType} />;
   }
 
   if (setting.logoType === 'custom') {
@@ -37,6 +40,12 @@ const Logo = memo<LogoProps>(({ size = 32, style }) => {
         style={style}
       />
     );
+  }
+
+  if (compact) {
+    // the 3D mark from the theme's own assets (the component's 3D type loads it from a fixed CDN)
+    const src = cdnUrl({ path: 'assets/logo-3d.webp', pkg: '@lobehub/assets-logo', version: '1.0.0' });
+    return <img alt="LobeHub" height={size} src={src} style={style} width={size} />;
   }
 
   return (

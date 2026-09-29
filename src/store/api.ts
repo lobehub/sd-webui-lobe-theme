@@ -21,6 +21,8 @@ const fetchWithTimeout = async(url: string, ms: number, init?: RequestInit) => {
 export const getSetting = async(): Promise<WebuiSetting | undefined> => {
   try {
     const res = await fetchWithTimeout('/lobe/config', 10_000);
+    // the theme's routes answer 404 until the WebUI has added them: no setting yet, not a setting
+    if (!res.ok) return undefined;
     const data = (await res.json()) as WebuiSetting;
     if (!data || (data as any)?.empty) return undefined;
     return data;

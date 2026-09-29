@@ -19,6 +19,7 @@ import {
   primaryColorsSwatches,
   settingColor,
 } from './data';
+import LayoutPresetPicker from './LayoutPresetPicker';
 import { SettingItemGroup } from './types';
 
 interface ColorChooserProps {
@@ -91,6 +92,12 @@ const SettingForm = memo(() => {
           desc: t('setting.language.desc'),
           label: t('setting.language.title'),
           name: 'i18n',
+        },
+        {
+          children: <LayoutPresetPicker />,
+          desc: t('setting.layoutPreset.desc'),
+          label: t('setting.layoutPreset.title'),
+          name: 'layoutPreset',
         },
         {
           children: <Switch />,

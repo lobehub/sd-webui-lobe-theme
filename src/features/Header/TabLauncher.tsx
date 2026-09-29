@@ -22,7 +22,7 @@ import { useTranslation } from 'react-i18next';
 
 import type { NavGroup, NavItem } from './genNavList';
 
-const ICONS: Record<string, LucideIcon> = {
+export const ICONS: Record<string, LucideIcon> = {
   tab_extensions: Puzzle,
   tab_extras: Maximize2,
   tab_img2img: Images,
@@ -195,6 +195,44 @@ const useStyles = createStyles(({ css, token }) => ({
       background: ${token.colorFillTertiary};
     }
   `,
+  triggerCompact: css`
+    cursor: pointer;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    color: ${token.colorTextSecondary};
+
+    background: transparent;
+    border: 1px dashed ${token.colorBorder};
+    border-radius: ${token.borderRadius}px;
+
+    &:hover {
+      color: ${token.colorText};
+      background: ${token.colorFillTertiary};
+    }
+  `,
+  triggerBadge: css`
+    position: absolute;
+    inset-block-start: -6px;
+    inset-inline-end: -8px;
+
+    padding: 0 5px;
+
+    font-size: 10px;
+    line-height: 16px;
+    color: ${token.colorTextSecondary};
+
+    background: ${token.colorBgElevated};
+    border: 1px solid ${token.colorBorderSecondary};
+    border-radius: 8px;
+  `,
   triggerCount: css`
     padding: 0 6px;
     font-size: 11px;
@@ -206,7 +244,7 @@ const useStyles = createStyles(({ css, token }) => ({
 }));
 
 /** Initials for an extension tab without an icon of its own. */
-const initials = (label: string) => {
+export const initials = (label: string) => {
   const words = label.replaceAll(/[^\d\sA-Za-z]/g, ' ').split(/\s+/).filter(Boolean);
   if (words.length === 0) return label.slice(0, 1).toUpperCase();
   return (words.length === 1 ? words[0].slice(0, 2) : words[0][0] + words[1][0]).toUpperCase();
@@ -214,6 +252,8 @@ const initials = (label: string) => {
 
 interface TabLauncherProps {
   activeKey: string;
+  /** An icon-only button, for the side rail of the Studio layouts. */
+  compact?: boolean;
   hiddenCount: number;
   items: NavItem[];
   onOpen: (id: string) => void;
@@ -223,7 +263,7 @@ interface TabLauncherProps {
 }
 
 const TabLauncher = memo<TabLauncherProps>(
-  ({ items, pins, activeKey, hiddenCount, onOpen, onTogglePin, onReset }) => {
+  ({ items, pins, activeKey, hiddenCount, onOpen, onTogglePin, onReset, compact }) => {
     const { t } = useTranslation();
     const { styles, cx } = useStyles();
     const [open, setOpen] = useState(false);
@@ -315,14 +355,21 @@ const TabLauncher = memo<TabLauncherProps>(
         }}
         open={open}
         overlayInnerStyle={{ padding: 0 }}
-        placement={'bottomLeft'}
+        placement={compact ? 'rightBottom' : 'bottomLeft'}
         trigger={'click'}
       >
+        {compact ? (
+          <button className={styles.triggerCompact} id="lobe-all-tabs" title={t('header.nav.allTabs')} type="button">
+            <Icon icon={LayoutGrid} size={{ fontSize: 18 }} />
+            {hiddenCount > 0 && <span className={styles.triggerBadge}>+{hiddenCount}</span>}
+          </button>
+        ) : (
         <button className={styles.trigger} id="lobe-all-tabs" type="button">
           {t('header.nav.allTabs')}
           {hiddenCount > 0 && <span className={styles.triggerCount}>+{hiddenCount}</span>}
           <Icon icon={ChevronDown} size={{ fontSize: 14 }} />
         </button>
+        )}
       </Popover>
     );
   },

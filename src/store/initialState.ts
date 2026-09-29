@@ -33,6 +33,7 @@ export interface WebuiSetting {
   i18n: I18n;
   layoutHideFooter: boolean;
   layoutImageButtonsTop: boolean;
+  layoutPreset: 'classic' | 'studio' | 'studioMirror';
   layoutSplitPreview: boolean;
   liteAnimation: boolean;
   localAssets: boolean;
@@ -85,6 +86,7 @@ export const DEFAULT_SETTING: WebuiSetting = {
   i18n: 'en_US',
   layoutHideFooter: false,
   layoutImageButtonsTop: true,
+  layoutPreset: 'classic',
   layoutSplitPreview: false,
   liteAnimation: true,
   localAssets: true,

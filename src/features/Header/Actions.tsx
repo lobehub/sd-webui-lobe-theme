@@ -23,9 +23,11 @@ const Setting = lazy(() => import('@/features/Setting'));
 
 interface ActionsProps {
   themeMode: 'dark' | 'light';
+  /** One above the other, for the side rail of the Studio layouts. */
+  vertical?: boolean;
 }
 
-const Actions = memo<ActionsProps>(() => {
+const Actions = memo<ActionsProps>(({ vertical }) => {
   const [isSettingOpen, setIsSettingOpen] = useState(false);
   const [settingLoaded, setSettingLoaded] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -59,8 +61,8 @@ const Actions = memo<ActionsProps>(() => {
 
   return (
     <>
-      <Space.Compact>
-        {!mobile && (
+      <Space.Compact direction={vertical ? 'vertical' : 'horizontal'}>
+        {!mobile && !vertical && (
           <>
             <a href="https://civitai.com/" rel="noreferrer" target="_blank">
               <ActionIcon icon={CivitaiLogo} title="Civitai" />

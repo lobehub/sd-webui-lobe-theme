@@ -36,7 +36,7 @@ export default () => {
   try {
     PromptHighlight('#txt2img_prompt', '#lobe_txt2img_prompt');
     PromptHighlight('#img2img_prompt', '#lobe_img2img_prompt');
-    window.ignore_ids_for_localization['lobe_highlighter'] = 'SPAN';
+    if (window.ignore_ids_for_localization) window.ignore_ids_for_localization['lobe_highlighter'] = 'SPAN';
     consola.success('🤯 [module] inject - PromptHighlight');
   } catch (error) {
     consola.error('🤯 [module] inject - PromptHighlight', error);

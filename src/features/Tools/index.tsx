@@ -22,6 +22,7 @@ import { startImageButtons } from './imageButtons';
 import { startLoraTools } from './loraTools';
 import { startPromptSections } from './promptSections';
 import { startSizeTools } from './sizeTools';
+import { startStudioLayout } from './studioLayout';
 import { startTabProgress } from './tabProgress';
 
 const CommandPalette = lazy(() => import('./CommandPalette'));
@@ -33,7 +34,7 @@ const isPaletteShortcut = (event: KeyboardEvent) =>
 const Tools = memo(() => {
   const setting = useAppStore(selectors.currentSetting, isEqual);
   const theme = useTheme();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [paletteOpen, setPaletteOpen] = useState(false);
   const [paletteLoaded, setPaletteLoaded] = useState(false);
   const [historyOpen, setHistoryOpen] = useState(false);
@@ -56,6 +57,18 @@ const Tools = memo(() => {
   }, [setting.extraNetworkFolderTree]);
 
   useEffect(() => {
+    if (setting.layoutPreset === 'classic') return;
+    return startStudioLayout({
+      mirror: setting.layoutPreset === 'studioMirror',
+      text: {
+        extensions: t('tools.studio.extensions'),
+        parameters: t('tools.studio.parameters'),
+        prompt: t('tools.studio.prompt'),
+      },
+    });
+  }, [setting.layoutPreset, i18n.language]);
+
+  useEffect(() => {
     if (!setting.enableExtraNetworkSidebar || !setting.extraNetworkTabRail) return;
     return startExtraNetworkRail();
   }, [setting.enableExtraNetworkSidebar, setting.extraNetworkTabRail]);
@@ -72,7 +85,7 @@ const Tools = memo(() => {
         toggle: t('tools.sections.toggle'),
       },
     });
-  }, [setting.promptSections]);
+  }, [setting.promptSections, i18n.language]);
 
   useEffect(() => {
     if (setting.accordionMode !== 'single') return;
