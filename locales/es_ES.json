@@ -2,7 +2,10 @@
   "brand": {
     "custom": "Personalizado",
     "kitchen": "Kitchen",
-    "lobe": "LobeHub"
+    "lobe": "LobeHub",
+    "mark": "Marca Spark",
+    "none": "Ninguno",
+    "wordmark": "Logotipo de texto"
   },
   "cancel": "Cancelar",
   "confirm": "Confirmar",
@@ -18,7 +21,24 @@
   "header": {
     "feedback": "Comentarios",
     "setting": "Configuración",
-    "switchTheme": "Cambiar tema claro/oscuro"
+    "switchTheme": "Cambiar tema claro/oscuro",
+    "history": "Historial de generación",
+    "commandPalette": "Paleta de comandos (Ctrl+K)",
+    "nav": {
+      "allTabs": "Todas las pestañas",
+      "search": "Buscar una pestaña",
+      "pin": "Fijar en la barra",
+      "unpin": "Quitar de la barra",
+      "reset": "Restablecer barra",
+      "empty": "Ninguna pestaña coincide",
+      "hint": "Las pestañas fijadas permanecen en la barra · Ctrl+K lo busca todo",
+      "groups": {
+        "generate": "Generar",
+        "tools": "Herramientas",
+        "extensions": "Extensiones",
+        "system": "Sistema"
+      }
+    }
   },
   "modal": {
     "themeFeedback": {
@@ -35,10 +55,10 @@
       "object": "Selección de Objeto",
       "tag": "Selección de Etiqueta"
     },
-    "load": "Cargar aviso",
+    "load": "Cargar prompt",
     "negative": "Negativo",
     "positive": "Positivo",
-    "set": "Establecer aviso"
+    "set": "Establecer prompt"
   },
   "setting": {
     "button": {
@@ -81,15 +101,24 @@
       "enable": {
         "desc": "Habilitar la barra lateral de red adicional en el lado derecho",
         "title": "Habilitar"
+      },
+      "folderTree": {
+        "desc": "Mostrar solo las carpetas de primer nivel; haz clic en una carpeta para abrir sus subcarpetas",
+        "title": "Árbol de carpetas"
+      },
+      "tabRail": {
+        "title": "Tipos de modelo en un riel lateral",
+        "desc": "Textual Inversion, Checkpoints, Lora... como una columna en el lateral de la barra en lugar de pestañas que ocupan varias líneas"
       }
     },
     "group": {
       "experimental": "Funciones experimentales",
       "extraNetworkSidebar": "Barra lateral de red adicional",
       "layout": "Configuración de diseño",
-      "promptTextarea": "Cuadro de texto de aviso",
+      "promptTextarea": "Cuadro de texto de prompt",
       "quickSettingSidebar": "Barra lateral de configuración rápida",
-      "theme": "Configuración del tema"
+      "theme": "Configuración del tema",
+      "tools": "Herramientas"
     },
     "hideFooter": {
       "desc": "Ocultar el pie de página del tema y solo mostrar el pie de página predeterminado de stable diffusion webui",
@@ -120,15 +149,15 @@
       "desc": "Altura fija o altura automática con soporte de redimensionamiento arrastrable",
       "resizable": "Redimensionable",
       "scroll": "Desplazamiento",
-      "title": "Modo de visualización de aviso"
+      "title": "Modo de visualización de prompt"
     },
     "promptEditor": {
-      "desc": "Proporcionar un editor de aviso simple en la parte superior de la barra lateral de configuración rápida",
-      "title": "Editor de aviso"
+      "desc": "Proporcionar un editor de prompt simple en la parte superior de la barra lateral de configuración rápida",
+      "title": "Editor de prompt"
     },
     "promptHighlight": {
-      "desc": "Colorear automáticamente la visualización del aviso según las reglas de sintaxis de Stable Diffusion",
-      "title": "Resaltado de sintaxis de aviso"
+      "desc": "Colorear automáticamente la visualización del prompt según las reglas de sintaxis de Stable Diffusion",
+      "title": "Resaltado de sintaxis de prompt"
     },
     "quickSettingSidebar": {
       "defaultExpand": {
@@ -153,7 +182,7 @@
       "title": "Reducir animación"
     },
     "splitPreviewer": {
-      "desc": "Colocar el cuadro de entrada de aviso a la izquierda y el botón de generación a la derecha, asegurando que la imagen generada se muestre siempre en la parte superior al desplazarse (experimental)",
+      "desc": "Colocar el cuadro de entrada de prompt a la izquierda y el botón de generación a la derecha, asegurando que la imagen generada se muestre siempre en la parte superior al desplazarse (experimental)",
       "title": "Dividir previsualización"
     },
     "svgIcons": {
@@ -164,7 +193,124 @@
       "appearance": "Apariencia",
       "experimental": "Experimental",
       "layout": "Diseño",
-      "sidebar": "Barra lateral"
+      "sidebar": "Barra lateral",
+      "tools": "Herramientas"
+    },
+    "commandPalette": {
+      "title": "Paleta de comandos",
+      "desc": "Pulsa Ctrl+K (⌘K en Mac) para buscar y ejecutar acciones, pestañas, samplers, checkpoints, LoRAs, preajustes, historial y ajustes de la WebUI"
+    },
+    "history": {
+      "title": "Historial de generación",
+      "desc": "Guarda cada resultado de txt2img e img2img con sus parámetros y una miniatura, en la carpeta lobe_data de la extensión"
+    },
+    "presets": {
+      "title": "Preajustes de parámetros",
+      "desc": "Un panel de preajustes en la barra lateral izquierda para guardar y aplicar sampler, pasos, CFG, tamaño y Hires. fix"
+    },
+    "loraTools": {
+      "title": "Herramientas de tarjetas LoRA",
+      "desc": "Favoritos, un peso por LoRA, insignias de familia de modelo, palabras clave y filtros en las tarjetas LoRA"
+    },
+    "tabProgress": {
+      "title": "Progreso en el icono de la pestaña",
+      "desc": "Un anillo de progreso en el icono de la pestaña mientras se genera, y una marca de verificación cuando termina una pestaña en segundo plano"
+    },
+    "notification": {
+      "title": "Notificación de escritorio",
+      "desc": "Avisa cuando termina una generación mientras la página está en segundo plano (el navegador pide permiso)"
+    },
+    "localAssets": {
+      "title": "Recursos locales",
+      "desc": "Carga el logotipo, los iconos y las fuentes desde la extensión en lugar de un CDN, para que el tema funcione sin conexión a internet"
+    },
+    "customColor": "Personalizado",
+    "resetColor": "Restablecer",
+    "imageButtonsTop": {
+      "title": "Botones de imagen bajo Generar",
+      "desc": "Mueve los botones de imagen (abrir carpeta, guardar, zip, enviar a img2img, inpaint, extras...) de debajo de la galería a justo debajo de Generar / Interrumpir / Omitir"
+    },
+    "sizeTools": {
+      "title": "Relaciones de aspecto y ajustes sugeridos",
+      "desc": "Bajo Ancho y Alto: relaciones de aspecto sobre un tamaño base que sigue al modelo, un bloqueo de proporción, y pasos / escala CFG adecuados al modelo cargado"
+    },
+    "cornerStyle": {
+      "desc": "Esquinas de botones, campos, paneles y tarjetas",
+      "round": "Redondeadas",
+      "sharp": "Rectas",
+      "soft": "Suaves",
+      "title": "Esquinas"
+    },
+    "density": {
+      "compact": "Compacta",
+      "comfortable": "Cómoda",
+      "desc": "Compacta reduce pestañas, acordeones, campos y espaciado para que quepa más en pantalla",
+      "title": "Densidad"
+    },
+    "surfaceStyle": {
+      "desc": "Plana: paneles simples. Cristal: cabecera y barras laterales translúcidas y esmeriladas. Elevada: tarjetas con sombras suaves",
+      "elevated": "Elevada",
+      "flat": "Plana",
+      "glass": "Cristal",
+      "title": "Superficies"
+    },
+    "fontFamily": {
+      "desc": "Fuente de la interfaz. Todas vienen incluidas, así que funcionan sin conexión; Be Vietnam Pro está diseñada para el vietnamita",
+      "title": "Fuente"
+    },
+    "fontMono": {
+      "desc": "Fuente para prompts y código",
+      "title": "Fuente monoespaciada"
+    },
+    "sidebarSwap": {
+      "desc": "Configuración rápida a la derecha, Red adicional a la izquierda",
+      "title": "Intercambiar barras laterales"
+    },
+    "accordionMode": {
+      "desc": "Uno a la vez: al abrir un acordeón se pliegan los contiguos. Plegar nunca desactiva una extensión",
+      "free": "Libre",
+      "single": "Uno a la vez",
+      "title": "Acordeones"
+    },
+    "systemMonitor": {
+      "desc": "Carga de CPU, RAM y GPU, VRAM, temperatura y disco bajo la configuración rápida",
+      "title": "Monitor del sistema"
+    },
+    "progressBarStyle": {
+      "aurora": "Aurora",
+      "classic": "Clásica",
+      "desc": "Aurora: un degradado fluido con una punta brillante, y paso, porcentaje y ETA en la barra",
+      "title": "Barra de progreso"
+    },
+    "resultFrameStyle": {
+      "ambient": "Ambiente",
+      "desc": "Marco animado alrededor del resultado mientras se genera una imagen. Borde brillante: un borde de color que gira. Pulso: un anillo en cada paso. Ambiente: los colores de la vista previa brillan detrás. Escaneo: una línea barre hacia abajo. Órbita: luces que rodean el marco",
+      "glow": "Borde brillante",
+      "off": "Desactivado",
+      "orbit": "Órbita",
+      "pulse": "Pulso",
+      "scan": "Escaneo",
+      "title": "Marco del resultado"
+    },
+    "promptSections": {
+      "title": "Secciones del prompt",
+      "desc": "Un botón bajo el prompt divide el prompt positivo en secciones unidas con BREAK; el prompt que se genera y se guarda sigue usando BREAK"
+    },
+    "layoutPreset": {
+      "title": "Diseño predefinido",
+      "desc": "Dónde va cada bloque. Solo cambia el diseño: los colores, las fuentes y el resto de ajustes se mantienen",
+      "classic": {
+        "title": "Clásico",
+        "desc": "Pestañas en la parte superior, el prompt encima de los ajustes y el resultado"
+      },
+      "studio": {
+        "title": "Estudio",
+        "desc": "Pestañas en un riel a la izquierda; controles y resultado uno junto al otro, cada uno con la altura de la ventana"
+      },
+      "studioMirror": {
+        "title": "Estudio, invertido",
+        "desc": "Como Estudio, con el resultado a la izquierda y los controles a la derecha"
+      }
     }
   },
   "share": "Compartir",
@@ -192,6 +338,131 @@
       "fixed": "Fijo",
       "float": "Flotante"
     },
-    "quickSetting": "Configuración rápida"
+    "quickSetting": "Configuración rápida",
+    "presets": "Preajustes",
+    "system": {
+      "disk": "Disco",
+      "noNvml": "La carga y temperatura de la GPU requieren nvidia-ml-py",
+      "noNvmlHint": "Reinicia la WebUI una vez para que el tema pueda instalar nvidia-ml-py, o ejecuta: pip install nvidia-ml-py",
+      "temp": "Temp.",
+      "title": "Sistema"
+    },
+    "tabs": {
+      "prompt": "Prompt",
+      "settings": "Ajustes"
+    }
+  },
+  "tools": {
+    "palette": {
+      "placeholder": "Buscar acciones, pestañas, ajustes, LoRAs, preajustes…",
+      "empty": "Sin coincidencias",
+      "hint": "↑ ↓ mover · Enter ejecutar · Esc cerrar",
+      "groups": {
+        "action": "Acciones",
+        "tab": "Pestañas",
+        "preset": "Preajustes",
+        "sampler": "Samplers",
+        "scheduler": "Tipos de programación",
+        "checkpoint": "Checkpoints",
+        "lora": "LoRAs",
+        "history": "Historial",
+        "setting": "Ajustes de la WebUI"
+      },
+      "generate": "Generar",
+      "interrupt": "Interrumpir",
+      "skip": "Omitir",
+      "toggleTheme": "Cambiar tema claro/oscuro",
+      "themeSettings": "Configuración del tema",
+      "openHistory": "Historial de generación",
+      "openPresets": "Preajustes",
+      "savePreset": "Guardar los parámetros actuales como preajuste",
+      "setSampler": "Usar sampler",
+      "setScheduler": "Usar tipo de programación",
+      "loadCheckpoint": "Cargar checkpoint",
+      "addLora": "Añadir al prompt",
+      "applyPreset": "Aplicar preajuste",
+      "reuse": "Reutilizar parámetros",
+      "openSetting": "Abrir ajuste"
+    },
+    "history": {
+      "title": "Historial de generación",
+      "search": "Buscar prompts y parámetros",
+      "all": "Todo",
+      "empty": "Aún no hay nada. Las generaciones terminadas de txt2img e img2img aparecen aquí.",
+      "loadMore": "Cargar más",
+      "today": "Hoy",
+      "yesterday": "Ayer",
+      "reuseAll": "Reutilizar todo",
+      "reusePrompt": "Prompt",
+      "reuseSeed": "Semilla",
+      "copy": "Copiar parámetros",
+      "copied": "Copiado",
+      "savePreset": "Guardar como preajuste",
+      "delete": "Eliminar",
+      "clear": "Borrar historial",
+      "clearConfirm": "¿Eliminar todas las entradas del historial? Las imágenes ya guardadas en disco se conservan.",
+      "compare": "Comparar",
+      "compareHint": "Marca dos entradas para compararlas",
+      "applied": "Parámetros aplicados",
+      "prompt": "Prompt",
+      "negative": "Prompt negativo",
+      "parameter": "Parámetro",
+      "onlyIn": "Solo en {{name}}",
+      "images": "{{count}} imágenes"
+    },
+    "presets": {
+      "title": "Preajustes",
+      "empty": "Aún no hay preajustes. Configura los parámetros que te gusten y guárdalos aquí.",
+      "name": "Nombre del preajuste",
+      "save": "Guardar actual",
+      "includeSeed": "Incluir semilla",
+      "includeBatch": "Incluir número y tamaño de lote",
+      "apply": "Aplicar",
+      "applied": "Preajuste aplicado",
+      "rename": "Renombrar",
+      "delete": "Eliminar",
+      "deleteConfirm": "¿Eliminar este preajuste?",
+      "moveUp": "Subir",
+      "moveDown": "Bajar",
+      "overwrite": "Sobrescribir con los parámetros actuales",
+      "saved": "Preajuste guardado",
+      "defaultName": "Preajuste {{n}}",
+      "for": "Para {{tab}}"
+    },
+    "lora": {
+      "all": "Todos",
+      "favorites": "Favoritos",
+      "recent": "Recientes",
+      "compatible": "Compatibles",
+      "favorite": "Favorito",
+      "weight": "Peso (desplaza para ajustar, haz clic para restablecer)",
+      "triggerWords": "Añadir palabras clave"
+    },
+    "notify": {
+      "done": "Generación terminada"
+    },
+    "size": {
+      "ratio": "Proporción",
+      "base": "Base",
+      "auto": "Auto",
+      "lock": "Mantener esta forma al mover un control deslizante",
+      "suggested": "Sugerido",
+      "noSuggestions": "No hay sugerencias para esta familia de modelos",
+      "steps": "pasos",
+      "cfg": "CFG",
+      "distilled": "CFG destilado"
+    },
+    "sections": {
+      "add": "Añadir sección",
+      "merge": "Quitar esta sección (su texto pasa a la anterior)",
+      "section": "Sección",
+      "tokens": "tokens",
+      "toggle": "Secciones del prompt: divide el prompt en BREAK en cuadros separados"
+    },
+    "studio": {
+      "prompt": "Prompt",
+      "parameters": "Parámetros",
+      "extensions": "Extensiones"
+    }
   }
 }

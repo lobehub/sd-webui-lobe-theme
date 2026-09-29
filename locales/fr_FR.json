@@ -2,7 +2,10 @@
   "brand": {
     "custom": "Personnalisé",
     "kitchen": "Kitchen",
-    "lobe": "LobeHub"
+    "lobe": "LobeHub",
+    "mark": "Symbole étincelle",
+    "none": "Aucun",
+    "wordmark": "Logotype"
   },
   "cancel": "Annuler",
   "confirm": "Confirmer",
@@ -18,7 +21,24 @@
   "header": {
     "feedback": "Retour",
     "setting": "Réglage",
-    "switchTheme": "Changer de thème clair/sombre"
+    "switchTheme": "Changer de thème clair/sombre",
+    "history": "Historique des générations",
+    "commandPalette": "Palette de commandes (Ctrl+K)",
+    "nav": {
+      "allTabs": "Tous les onglets",
+      "search": "Rechercher un onglet",
+      "pin": "Épingler à la barre",
+      "unpin": "Détacher de la barre",
+      "reset": "Réinitialiser la barre",
+      "empty": "Aucun onglet correspondant",
+      "hint": "Les onglets épinglés restent dans la barre · Ctrl+K recherche partout",
+      "groups": {
+        "generate": "Générer",
+        "tools": "Outils",
+        "extensions": "Extensions",
+        "system": "Système"
+      }
+    }
   },
   "modal": {
     "themeFeedback": {
@@ -81,6 +101,14 @@
       "enable": {
         "desc": "Activer la barre latérale réseau supplémentaire sur le côté droit",
         "title": "Activer"
+      },
+      "folderTree": {
+        "desc": "Afficher uniquement les dossiers de premier niveau ; cliquer sur un dossier ouvre ses sous-dossiers",
+        "title": "Arborescence des dossiers"
+      },
+      "tabRail": {
+        "title": "Types de modèles en rail latéral",
+        "desc": "Textual Inversion, Checkpoints, Lora... en colonne sur le côté de la barre latérale au lieu d'onglets répartis sur plusieurs lignes"
       }
     },
     "group": {
@@ -89,7 +117,8 @@
       "layout": "Réglages de mise en page",
       "promptTextarea": "Zone de texte de la demande",
       "quickSettingSidebar": "Barre latérale de réglage rapide",
-      "theme": "Paramètres du thème"
+      "theme": "Paramètres du thème",
+      "tools": "Outils"
     },
     "hideFooter": {
       "desc": "Masquer le pied de page du thème et afficher uniquement le pied de page par défaut de stable diffusion webui",
@@ -164,7 +193,124 @@
       "appearance": "Apparence",
       "experimental": "Expérimental",
       "layout": "Disposition",
-      "sidebar": "Barre latérale"
+      "sidebar": "Barre latérale",
+      "tools": "Outils"
+    },
+    "commandPalette": {
+      "title": "Palette de commandes",
+      "desc": "Appuyez sur Ctrl+K (⌘K sur Mac) pour rechercher et exécuter actions, onglets, samplers, checkpoints, LoRAs, préréglages, historique et paramètres de la WebUI"
+    },
+    "history": {
+      "title": "Historique des générations",
+      "desc": "Conserver chaque résultat txt2img et img2img avec ses paramètres et une miniature, dans le dossier lobe_data de l'extension"
+    },
+    "presets": {
+      "title": "Préréglages de paramètres",
+      "desc": "Un panneau Préréglages dans la barre latérale gauche pour enregistrer et appliquer sampler, étapes, CFG, taille et Hires. fix"
+    },
+    "loraTools": {
+      "title": "Outils des cartes LoRA",
+      "desc": "Favoris, un poids par LoRA, badges de famille de modèle, mots déclencheurs et filtres sur les cartes LoRA"
+    },
+    "tabProgress": {
+      "title": "Progression sur l'icône de l'onglet",
+      "desc": "Un anneau de progression sur l'icône de l'onglet pendant la génération, et une coche quand un onglet en arrière-plan termine"
+    },
+    "notification": {
+      "title": "Notification de bureau",
+      "desc": "Notifier la fin d'une génération quand la page est en arrière-plan (le navigateur demande l'autorisation)"
+    },
+    "localAssets": {
+      "title": "Ressources locales",
+      "desc": "Charger le logo, les icônes et les polices depuis l'extension plutôt qu'un CDN, pour que le thème fonctionne sans accès à Internet"
+    },
+    "customColor": "Personnalisé",
+    "resetColor": "Réinitialiser",
+    "imageButtonsTop": {
+      "title": "Boutons d'image sous Générer",
+      "desc": "Déplace les boutons d'image (ouvrir le dossier, enregistrer, zip, envoyer vers img2img, inpaint, extras...) de sous la galerie à juste sous Générer / Interrompre / Passer"
+    },
+    "sizeTools": {
+      "title": "Formats d'image et réglages suggérés",
+      "desc": "Sous Largeur et Hauteur : formats à une taille de base adaptée au modèle, un verrouillage du format, et étapes / échelle CFG adaptées au modèle chargé"
+    },
+    "cornerStyle": {
+      "desc": "Coins des boutons, champs, panneaux et cartes",
+      "round": "Arrondi",
+      "sharp": "Carré",
+      "soft": "Doux",
+      "title": "Coins"
+    },
+    "density": {
+      "compact": "Compact",
+      "comfortable": "Confortable",
+      "desc": "Compact resserre onglets, accordéons, champs et espacements pour afficher davantage à l'écran",
+      "title": "Densité"
+    },
+    "surfaceStyle": {
+      "desc": "Plat : panneaux simples. Verre : en-tête et barres latérales dépolis et translucides. Surélevé : cartes avec ombres douces",
+      "elevated": "Surélevé",
+      "flat": "Plat",
+      "glass": "Verre",
+      "title": "Surfaces"
+    },
+    "fontFamily": {
+      "desc": "Police de l'interface. Toutes sont incluses et fonctionnent hors ligne ; Be Vietnam Pro est conçue pour le vietnamien",
+      "title": "Police"
+    },
+    "fontMono": {
+      "desc": "Police pour les demandes et le code",
+      "title": "Police à chasse fixe"
+    },
+    "sidebarSwap": {
+      "desc": "Réglage rapide à droite, Réseau supplémentaire à gauche",
+      "title": "Inverser les barres latérales"
+    },
+    "accordionMode": {
+      "desc": "Un seul à la fois : ouvrir un accordéon replie ses voisins. Replier ne désactive jamais une extension",
+      "free": "Libre",
+      "single": "Un seul à la fois",
+      "title": "Accordéons"
+    },
+    "systemMonitor": {
+      "desc": "CPU, RAM, charge GPU, VRAM, température et disque sous les réglages rapides",
+      "title": "Moniteur système"
+    },
+    "progressBarStyle": {
+      "aurora": "Aurore",
+      "classic": "Classique",
+      "desc": "Aurore : un dégradé fluide à la tête lumineuse, avec étape, pourcentage et ETA sur la barre",
+      "title": "Barre de progression"
+    },
+    "resultFrameStyle": {
+      "ambient": "Ambiance",
+      "desc": "Cadre animé autour du résultat pendant la création d'une image. Bord lumineux : un bord coloré qui tourne. Pulsation : un anneau à chaque étape. Ambiance : les couleurs de l'aperçu rayonnent derrière lui. Balayage : une ligne descend. Orbite : des lumières tournent autour du cadre",
+      "glow": "Bord lumineux",
+      "off": "Désactivé",
+      "orbit": "Orbite",
+      "pulse": "Pulsation",
+      "scan": "Balayage",
+      "title": "Cadre du résultat"
+    },
+    "promptSections": {
+      "title": "Sections de la demande",
+      "desc": "Un bouton sous la demande découpe la demande positive en sections jointes par BREAK ; la demande générée et enregistrée contient toujours BREAK"
+    },
+    "layoutPreset": {
+      "title": "Modèle de disposition",
+      "desc": "L'emplacement des blocs. Seule la disposition change : couleurs, polices et tous les autres réglages restent inchangés",
+      "classic": {
+        "title": "Classique",
+        "desc": "Onglets en haut, la demande au-dessus des réglages et du résultat"
+      },
+      "studio": {
+        "title": "Studio",
+        "desc": "Onglets dans un rail à gauche ; commandes et résultat côte à côte, chacun de la hauteur de la fenêtre"
+      },
+      "studioMirror": {
+        "title": "Studio, inversé",
+        "desc": "Comme Studio, avec le résultat à gauche et les commandes à droite"
+      }
     }
   },
   "share": "Partager",
@@ -192,6 +338,131 @@
       "fixed": "Fixe",
       "float": "Flottant"
     },
-    "quickSetting": "Réglage rapide"
+    "quickSetting": "Réglage rapide",
+    "presets": "Préréglages",
+    "system": {
+      "disk": "Disque",
+      "noNvml": "La charge et la température GPU nécessitent nvidia-ml-py",
+      "noNvmlHint": "Redémarrez la WebUI une fois pour que le thème installe nvidia-ml-py, ou exécutez : pip install nvidia-ml-py",
+      "temp": "Temp.",
+      "title": "Système"
+    },
+    "tabs": {
+      "prompt": "Demande",
+      "settings": "Paramètres"
+    }
+  },
+  "tools": {
+    "palette": {
+      "placeholder": "Rechercher actions, onglets, paramètres, LoRAs, préréglages…",
+      "empty": "Aucun résultat",
+      "hint": "↑ ↓ naviguer · Enter exécuter · Esc fermer",
+      "groups": {
+        "action": "Actions",
+        "tab": "Onglets",
+        "preset": "Préréglages",
+        "sampler": "Samplers",
+        "scheduler": "Types de planification",
+        "checkpoint": "Checkpoints",
+        "lora": "LoRAs",
+        "history": "Historique",
+        "setting": "Paramètres de la WebUI"
+      },
+      "generate": "Générer",
+      "interrupt": "Interrompre",
+      "skip": "Passer",
+      "toggleTheme": "Changer de thème clair/sombre",
+      "themeSettings": "Paramètres du thème",
+      "openHistory": "Historique des générations",
+      "openPresets": "Préréglages",
+      "savePreset": "Enregistrer les paramètres actuels comme préréglage",
+      "setSampler": "Utiliser le sampler",
+      "setScheduler": "Utiliser le type de planification",
+      "loadCheckpoint": "Charger le checkpoint",
+      "addLora": "Ajouter à la demande",
+      "applyPreset": "Appliquer le préréglage",
+      "reuse": "Réutiliser les paramètres",
+      "openSetting": "Ouvrir le réglage"
+    },
+    "history": {
+      "title": "Historique des générations",
+      "search": "Rechercher dans les demandes et paramètres",
+      "all": "Tout",
+      "empty": "Rien pour l'instant. Les générations txt2img et img2img terminées apparaissent ici.",
+      "loadMore": "Charger plus",
+      "today": "Aujourd'hui",
+      "yesterday": "Hier",
+      "reuseAll": "Tout réutiliser",
+      "reusePrompt": "Demande",
+      "reuseSeed": "Graine",
+      "copy": "Copier les paramètres",
+      "copied": "Copié",
+      "savePreset": "Enregistrer comme préréglage",
+      "delete": "Supprimer",
+      "clear": "Effacer l'historique",
+      "clearConfirm": "Supprimer toutes les entrées de l'historique ? Les images déjà enregistrées sur le disque sont conservées.",
+      "compare": "Comparer",
+      "compareHint": "Cochez deux entrées pour les comparer",
+      "applied": "Paramètres appliqués",
+      "prompt": "Demande",
+      "negative": "Demande négative",
+      "parameter": "Paramètre",
+      "onlyIn": "Uniquement dans {{name}}",
+      "images": "{{count}} images"
+    },
+    "presets": {
+      "title": "Préréglages",
+      "empty": "Aucun préréglage pour l'instant. Réglez les paramètres souhaités, puis enregistrez-les ici.",
+      "name": "Nom du préréglage",
+      "save": "Enregistrer l'actuel",
+      "includeSeed": "Inclure la graine",
+      "includeBatch": "Inclure le nombre et la taille des lots",
+      "apply": "Appliquer",
+      "applied": "Préréglage appliqué",
+      "rename": "Renommer",
+      "delete": "Supprimer",
+      "deleteConfirm": "Supprimer ce préréglage ?",
+      "moveUp": "Monter",
+      "moveDown": "Descendre",
+      "overwrite": "Écraser avec les paramètres actuels",
+      "saved": "Préréglage enregistré",
+      "defaultName": "Préréglage {{n}}",
+      "for": "Pour {{tab}}"
+    },
+    "lora": {
+      "all": "Tout",
+      "favorites": "Favoris",
+      "recent": "Récents",
+      "compatible": "Compatibles",
+      "favorite": "Favori",
+      "weight": "Poids (défiler pour ajuster, cliquer pour réinitialiser)",
+      "triggerWords": "Ajouter les mots déclencheurs"
+    },
+    "notify": {
+      "done": "Génération terminée"
+    },
+    "size": {
+      "ratio": "Format",
+      "base": "Base",
+      "auto": "Auto",
+      "lock": "Conserver ces proportions quand un curseur bouge",
+      "suggested": "Suggéré",
+      "noSuggestions": "Aucune suggestion pour cette famille de modèles",
+      "steps": "étapes",
+      "cfg": "CFG",
+      "distilled": "CFG distillé"
+    },
+    "sections": {
+      "add": "Ajouter une section",
+      "merge": "Supprimer cette section (son texte va dans la précédente)",
+      "section": "Section",
+      "tokens": "jetons",
+      "toggle": "Sections de la demande : découper la demande à chaque BREAK en zones séparées"
+    },
+    "studio": {
+      "prompt": "Demande",
+      "parameters": "Paramètres",
+      "extensions": "Extensions"
+    }
   }
 }

@@ -2,7 +2,10 @@
   "brand": {
     "custom": "사용자 정의",
     "kitchen": "Kitchen",
-    "lobe": "LobeHub"
+    "lobe": "LobeHub",
+    "mark": "스파크 마크",
+    "none": "없음",
+    "wordmark": "워드마크"
   },
   "cancel": "취소",
   "confirm": "확인",
@@ -18,7 +21,24 @@
   "header": {
     "feedback": "피드백",
     "setting": "설정",
-    "switchTheme": "밝은/어두운 테마 전환"
+    "switchTheme": "밝은/어두운 테마 전환",
+    "history": "생성 기록",
+    "commandPalette": "명령 팔레트 (Ctrl+K)",
+    "nav": {
+      "allTabs": "모든 탭",
+      "search": "탭 찾기",
+      "pin": "바에 고정",
+      "unpin": "바에서 고정 해제",
+      "reset": "바 초기화",
+      "empty": "일치하는 탭이 없습니다",
+      "hint": "고정된 탭은 바에 유지됩니다 · Ctrl+K로 모든 항목 검색",
+      "groups": {
+        "generate": "생성",
+        "tools": "도구",
+        "extensions": "확장 기능",
+        "system": "시스템"
+      }
+    }
   },
   "modal": {
     "themeFeedback": {
@@ -81,6 +101,14 @@
       "enable": {
         "desc": "오른쪽에 추가 네트워크 사이드바 활성화",
         "title": "활성화"
+      },
+      "folderTree": {
+        "desc": "최상위 폴더만 표시하고, 폴더를 클릭하면 하위 폴더가 열립니다",
+        "title": "폴더 트리"
+      },
+      "tabRail": {
+        "title": "모델 유형을 사이드 레일로 표시",
+        "desc": "Textual Inversion, Checkpoint, Lora 등을 여러 줄로 줄바꿈되는 탭 대신 사이드바 옆의 세로 열로 표시합니다"
       }
     },
     "group": {
@@ -89,7 +117,8 @@
       "layout": "레이아웃 설정",
       "promptTextarea": "프롬프트 텍스트 상자",
       "quickSettingSidebar": "빠른 설정 사이드바",
-      "theme": "테마 설정"
+      "theme": "테마 설정",
+      "tools": "도구"
     },
     "hideFooter": {
       "desc": "테마 푸터를 숨기고 Stable Diffusion 웹UI의 기본 푸터만 표시",
@@ -164,7 +193,124 @@
       "appearance": "외관",
       "experimental": "실험적 기능",
       "layout": "레이아웃",
-      "sidebar": "사이드바"
+      "sidebar": "사이드바",
+      "tools": "도구"
+    },
+    "commandPalette": {
+      "title": "명령 팔레트",
+      "desc": "Ctrl+K(Mac에서는 ⌘K)를 눌러 작업, 탭, 샘플러, Checkpoint, LoRA, 프리셋, 기록 및 WebUI 설정을 검색하고 실행합니다"
+    },
+    "history": {
+      "title": "생성 기록",
+      "desc": "모든 txt2img 및 img2img 결과를 매개변수와 썸네일과 함께 확장 기능의 lobe_data 폴더에 저장합니다"
+    },
+    "presets": {
+      "title": "매개변수 프리셋",
+      "desc": "왼쪽 사이드바에 프리셋 패널을 추가하여 샘플러, 스텝, CFG, 크기 및 Hires. fix 설정을 저장하고 적용합니다"
+    },
+    "loraTools": {
+      "title": "LoRA 카드 도구",
+      "desc": "LoRA 카드에 즐겨찾기, LoRA별 가중치, 모델 계열 배지, 트리거 단어 및 필터를 추가합니다"
+    },
+    "tabProgress": {
+      "title": "탭 아이콘에 진행률 표시",
+      "desc": "생성 중에는 탭 아이콘에 진행률 링을 표시하고, 백그라운드 탭에서 완료되면 체크 표시를 합니다"
+    },
+    "notification": {
+      "title": "데스크톱 알림",
+      "desc": "페이지가 백그라운드에 있을 때 생성이 완료되면 알립니다 (브라우저가 권한을 요청합니다)"
+    },
+    "localAssets": {
+      "title": "로컬 에셋",
+      "desc": "로고, 아이콘, 글꼴을 CDN 대신 확장 기능에서 로드하여 인터넷 연결 없이도 테마가 작동하도록 합니다"
+    },
+    "customColor": "사용자 정의",
+    "resetColor": "초기화",
+    "imageButtonsTop": {
+      "title": "생성 버튼 아래에 이미지 버튼",
+      "desc": "이미지 버튼(폴더 열기, 저장, zip, img2img로 보내기, 인페인트, 기타...)을 갤러리 아래에서 Generate / Interrupt / Skip 바로 아래로 옮깁니다"
+    },
+    "sizeTools": {
+      "title": "화면 비율 및 권장 설정",
+      "desc": "너비와 높이 아래에 모델에 맞춘 기본 크기의 화면 비율, 비율 고정, 로드된 모델에 맞는 스텝 / CFG 스케일을 표시합니다"
+    },
+    "cornerStyle": {
+      "desc": "버튼, 입력란, 패널 및 카드의 모서리",
+      "round": "둥글게",
+      "sharp": "각지게",
+      "soft": "부드럽게",
+      "title": "모서리"
+    },
+    "density": {
+      "compact": "조밀하게",
+      "comfortable": "여유롭게",
+      "desc": "조밀하게는 탭, 아코디언, 입력란 및 간격을 줄여 화면에 더 많이 표시합니다",
+      "title": "밀도"
+    },
+    "surfaceStyle": {
+      "desc": "플랫: 단순한 패널. 글래스: 반투명한 불투명 유리 느낌의 헤더와 사이드바. 엘리베이티드: 부드러운 그림자가 있는 카드",
+      "elevated": "엘리베이티드",
+      "flat": "플랫",
+      "glass": "글래스",
+      "title": "표면"
+    },
+    "fontFamily": {
+      "desc": "인터페이스 글꼴. 모두 내장되어 있어 오프라인에서도 작동합니다. Be Vietnam Pro는 베트남어용으로 디자인되었습니다",
+      "title": "글꼴"
+    },
+    "fontMono": {
+      "desc": "프롬프트와 코드용 글꼴",
+      "title": "고정폭 글꼴"
+    },
+    "sidebarSwap": {
+      "desc": "빠른 설정을 오른쪽에, Extra Network를 왼쪽에 배치",
+      "title": "사이드바 위치 바꾸기"
+    },
+    "accordionMode": {
+      "desc": "한 번에 하나: 아코디언을 열면 옆의 다른 아코디언이 접힙니다. 접어도 확장 기능이 꺼지지는 않습니다",
+      "free": "자유",
+      "single": "한 번에 하나",
+      "title": "아코디언"
+    },
+    "systemMonitor": {
+      "desc": "빠른 설정 아래에 CPU, RAM, GPU 부하, VRAM, 온도 및 디스크 표시",
+      "title": "시스템 모니터"
+    },
+    "progressBarStyle": {
+      "aurora": "오로라",
+      "classic": "클래식",
+      "desc": "오로라: 빛나는 머리를 가진 흐르는 그라데이션, 바 위에 스텝, 퍼센트 및 ETA 표시",
+      "title": "진행률 표시줄"
+    },
+    "resultFrameStyle": {
+      "ambient": "앰비언트",
+      "desc": "이미지를 생성하는 동안 결과 주위에 표시되는 애니메이션 프레임. 글로우 테두리: 회전하는 색상 테두리. 펄스: 스텝마다 나타나는 링. 앰비언트: 미리보기 자체의 색상이 뒤에서 빛남. 스캔: 선이 위에서 아래로 훑음. 오빗: 빛이 프레임을 따라 돎",
+      "glow": "글로우 테두리",
+      "off": "끄기",
+      "orbit": "오빗",
+      "pulse": "펄스",
+      "scan": "스캔",
+      "title": "결과 프레임"
+    },
+    "promptSections": {
+      "title": "프롬프트 섹션",
+      "desc": "프롬프트 아래의 버튼으로 긍정 프롬프트를 BREAK로 연결된 섹션으로 나눕니다. 생성 및 저장되는 프롬프트는 여전히 BREAK를 포함합니다"
+    },
+    "layoutPreset": {
+      "title": "레이아웃 프리셋",
+      "desc": "각 블록의 배치입니다. 레이아웃만 바뀌며 색상, 글꼴 및 다른 모든 설정은 그대로 유지됩니다",
+      "classic": {
+        "title": "클래식",
+        "desc": "상단에 탭, 설정과 결과 위에 프롬프트"
+      },
+      "studio": {
+        "title": "스튜디오",
+        "desc": "왼쪽 레일에 탭, 컨트롤과 결과를 나란히 배치하고 각각 창 높이만큼 표시"
+      },
+      "studioMirror": {
+        "title": "스튜디오 (반전)",
+        "desc": "스튜디오와 같지만 결과를 왼쪽, 컨트롤을 오른쪽에 배치"
+      }
     }
   },
   "share": "공유",
@@ -192,6 +338,131 @@
       "fixed": "고정",
       "float": "부유"
     },
-    "quickSetting": "빠른 설정"
+    "quickSetting": "빠른 설정",
+    "presets": "프리셋",
+    "system": {
+      "disk": "디스크",
+      "noNvml": "GPU 부하와 온도를 표시하려면 nvidia-ml-py가 필요합니다",
+      "noNvmlHint": "테마가 nvidia-ml-py를 설치할 수 있도록 WebUI를 한 번 재시작하거나 다음을 실행하세요: pip install nvidia-ml-py",
+      "temp": "온도",
+      "title": "시스템"
+    },
+    "tabs": {
+      "prompt": "프롬프트",
+      "settings": "설정"
+    }
+  },
+  "tools": {
+    "palette": {
+      "placeholder": "작업, 탭, 설정, LoRA, 프리셋 검색…",
+      "empty": "일치하는 항목이 없습니다",
+      "hint": "↑ ↓ 이동 · Enter 실행 · Esc 닫기",
+      "groups": {
+        "action": "작업",
+        "tab": "탭",
+        "preset": "프리셋",
+        "sampler": "샘플러",
+        "scheduler": "스케줄 유형",
+        "checkpoint": "Checkpoint",
+        "lora": "LoRA",
+        "history": "기록",
+        "setting": "WebUI 설정"
+      },
+      "generate": "생성",
+      "interrupt": "중단",
+      "skip": "건너뛰기",
+      "toggleTheme": "밝은/어두운 테마 전환",
+      "themeSettings": "테마 설정",
+      "openHistory": "생성 기록",
+      "openPresets": "프리셋",
+      "savePreset": "현재 매개변수를 프리셋으로 저장",
+      "setSampler": "샘플러 사용",
+      "setScheduler": "스케줄 유형 사용",
+      "loadCheckpoint": "Checkpoint 로드",
+      "addLora": "프롬프트에 추가",
+      "applyPreset": "프리셋 적용",
+      "reuse": "매개변수 재사용",
+      "openSetting": "설정 열기"
+    },
+    "history": {
+      "title": "생성 기록",
+      "search": "프롬프트 및 매개변수 검색",
+      "all": "전체",
+      "empty": "아직 아무것도 없습니다. 완료된 txt2img 및 img2img 생성 결과가 여기에 표시됩니다.",
+      "loadMore": "더 불러오기",
+      "today": "오늘",
+      "yesterday": "어제",
+      "reuseAll": "모두 재사용",
+      "reusePrompt": "프롬프트",
+      "reuseSeed": "시드",
+      "copy": "매개변수 복사",
+      "copied": "복사됨",
+      "savePreset": "프리셋으로 저장",
+      "delete": "삭제",
+      "clear": "기록 지우기",
+      "clearConfirm": "모든 기록 항목을 삭제할까요? 디스크에 이미 저장된 이미지는 유지됩니다.",
+      "compare": "비교",
+      "compareHint": "비교할 두 항목을 선택하세요",
+      "applied": "매개변수가 적용되었습니다",
+      "prompt": "프롬프트",
+      "negative": "부정적 프롬프트",
+      "parameter": "매개변수",
+      "onlyIn": "{{name}}에만 있음",
+      "images": "이미지 {{count}}장"
+    },
+    "presets": {
+      "title": "프리셋",
+      "empty": "아직 프리셋이 없습니다. 원하는 매개변수를 설정한 후 여기에 저장하세요.",
+      "name": "프리셋 이름",
+      "save": "현재 설정 저장",
+      "includeSeed": "시드 포함",
+      "includeBatch": "배치 횟수 및 크기 포함",
+      "apply": "적용",
+      "applied": "프리셋이 적용되었습니다",
+      "rename": "이름 변경",
+      "delete": "삭제",
+      "deleteConfirm": "이 프리셋을 삭제할까요?",
+      "moveUp": "위로 이동",
+      "moveDown": "아래로 이동",
+      "overwrite": "현재 매개변수로 덮어쓰기",
+      "saved": "프리셋이 저장되었습니다",
+      "defaultName": "프리셋 {{n}}",
+      "for": "{{tab}}용"
+    },
+    "lora": {
+      "all": "전체",
+      "favorites": "즐겨찾기",
+      "recent": "최근",
+      "compatible": "호환",
+      "favorite": "즐겨찾기",
+      "weight": "가중치 (스크롤로 조정, 클릭하여 초기화)",
+      "triggerWords": "트리거 단어 추가"
+    },
+    "notify": {
+      "done": "생성이 완료되었습니다"
+    },
+    "size": {
+      "ratio": "비율",
+      "base": "기본",
+      "auto": "자동",
+      "lock": "슬라이더를 움직이는 동안 이 비율 유지",
+      "suggested": "권장",
+      "noSuggestions": "이 모델 계열에 대한 권장 설정이 없습니다",
+      "steps": "스텝",
+      "cfg": "CFG",
+      "distilled": "Distilled CFG"
+    },
+    "sections": {
+      "add": "섹션 추가",
+      "merge": "이 섹션 삭제 (텍스트는 이전 섹션으로 이동)",
+      "section": "섹션",
+      "tokens": "토큰",
+      "toggle": "프롬프트 섹션: BREAK 위치에서 프롬프트를 별도의 상자로 분할"
+    },
+    "studio": {
+      "prompt": "프롬프트",
+      "parameters": "매개변수",
+      "extensions": "확장 기능"
+    }
   }
 }

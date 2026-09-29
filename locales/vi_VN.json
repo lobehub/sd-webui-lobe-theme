@@ -1,0 +1,468 @@
+{
+  "brand": {
+    "custom": "Tùy chỉnh",
+    "kitchen": "Kitchen",
+    "lobe": "LobeHub",
+    "mark": "Biểu tượng Spark",
+    "none": "Không có",
+    "wordmark": "Chữ logo"
+  },
+  "cancel": "Hủy",
+  "confirm": "Xác nhận",
+  "custom": {
+    "initializing": "Stable Diffusion / Lobe Theme Redux đang khởi động, vui lòng chờ..."
+  },
+  "footer": {
+    "community": "Cộng đồng",
+    "help": "Trợ giúp",
+    "moreProducts": "Sản phẩm khác",
+    "resources": "Tài nguyên"
+  },
+  "header": {
+    "feedback": "Góp ý",
+    "setting": "Cài đặt",
+    "switchTheme": "Chuyển giao diện sáng/tối",
+    "history": "Lịch sử tạo ảnh",
+    "commandPalette": "Bảng lệnh (Ctrl+K)",
+    "nav": {
+      "allTabs": "Tất cả tab",
+      "search": "Tìm tab",
+      "pin": "Ghim lên thanh",
+      "unpin": "Bỏ ghim khỏi thanh",
+      "reset": "Đặt lại thanh",
+      "empty": "Không có tab nào khớp",
+      "hint": "Tab đã ghim luôn nằm trên thanh · Ctrl+K để tìm mọi thứ",
+      "groups": {
+        "generate": "Tạo ảnh",
+        "tools": "Công cụ",
+        "extensions": "Tiện ích mở rộng",
+        "system": "Hệ thống"
+      }
+    }
+  },
+  "modal": {
+    "themeFeedback": {
+      "title": "Góp ý về theme"
+    },
+    "themeSetting": {
+      "desc": "Tùy chọn và bố cục",
+      "title": "Cài đặt theme"
+    }
+  },
+  "prompt": {
+    "area": {
+      "attribute": "Chọn thuộc tính",
+      "object": "Chọn đối tượng",
+      "tag": "Chọn tag"
+    },
+    "load": "Tải prompt",
+    "negative": "Negative",
+    "positive": "Positive",
+    "set": "Áp dụng prompt"
+  },
+  "setting": {
+    "button": {
+      "reset": "Khôi phục mặc định",
+      "submit": "Áp dụng và tải lại giao diện"
+    },
+    "confirmPageUnload": {
+      "desc": "Giúp tránh mất dữ liệu chưa lưu",
+      "title": "Xác nhận khi rời trang"
+    },
+    "customFont": {
+      "desc": "Khi bật, tự động tải phông web để hiển thị chữ và mã đẹp hơn",
+      "title": "Phông tùy chỉnh"
+    },
+    "customLogo": {
+      "desc": "Hỗ trợ URL / Base64 / Emoji",
+      "title": "Logo tùy chỉnh"
+    },
+    "customTitle": {
+      "desc": "Tiêu đề đi kèm logo",
+      "title": "Tiêu đề tùy chỉnh"
+    },
+    "extraNetworkSidebar": {
+      "defaultCardSize": {
+        "desc": "Kích thước ảnh bìa model khi khởi động",
+        "title": "Kích thước ảnh bìa model"
+      },
+      "defaultExpand": {
+        "desc": "Mở thanh bên ngay khi khởi động",
+        "title": "Mở sẵn"
+      },
+      "defaultWidth": {
+        "desc": "Độ rộng thanh bên khi khởi động",
+        "title": "Độ rộng mặc định"
+      },
+      "displayMode": {
+        "desc": "Cố định: luôn hiển thị. Nổi: tự mở khi đưa chuột ra mép màn hình",
+        "title": "Kiểu hiển thị"
+      },
+      "enable": {
+        "desc": "Bật thanh Extra Network ở bên phải",
+        "title": "Bật"
+      },
+      "folderTree": {
+        "desc": "Chỉ hiện thư mục cấp đầu; bấm vào một thư mục để mở thư mục con",
+        "title": "Cây thư mục"
+      },
+      "tabRail": {
+        "title": "Loại model thành cột dọc",
+        "desc": "Textual Inversion, Checkpoint, Lora... thành một cột dọc bên cạnh thanh bên, thay cho các tab tràn xuống nhiều dòng"
+      }
+    },
+    "group": {
+      "experimental": "Tính năng thử nghiệm",
+      "extraNetworkSidebar": "Thanh Extra Network",
+      "layout": "Bố cục",
+      "promptTextarea": "Ô prompt",
+      "quickSettingSidebar": "Thanh cài đặt nhanh",
+      "theme": "Cài đặt theme",
+      "tools": "Công cụ"
+    },
+    "hideFooter": {
+      "desc": "Ẩn chân trang của theme, chỉ giữ chân trang mặc định của WebUI",
+      "title": "Ẩn chân trang"
+    },
+    "imageInfo": {
+      "desc": "Hiện thông số tạo ảnh của kết quả thành một bảng gọn gàng, có nút sao chép",
+      "title": "Thông tin ảnh kiểu mới"
+    },
+    "language": {
+      "desc": "Ngôn ngữ của Lobe Theme",
+      "title": "Ngôn ngữ"
+    },
+    "logoType": {
+      "desc": "Kiểu logo",
+      "preview": "Xem trước",
+      "title": "Kiểu logo"
+    },
+    "neutralColor": {
+      "desc": "Tông của các màu xám dùng cho nền và viền. Chọn màu có sẵn, hoặc bất kỳ tông nào với Tùy chỉnh.",
+      "title": "Màu trung tính"
+    },
+    "primaryColor": {
+      "desc": "Màu nhấn của nút, liên kết và điểm nổi bật. Chọn màu có sẵn, hoặc bất kỳ màu nào với Tùy chỉnh.",
+      "title": "Màu chủ đạo"
+    },
+    "promptDisplayMode": {
+      "desc": "Chiều cao cố định, hoặc tự giãn và kéo được để đổi cỡ",
+      "resizable": "Kéo đổi cỡ",
+      "scroll": "Cuộn",
+      "title": "Kiểu hiển thị prompt"
+    },
+    "promptEditor": {
+      "desc": "Trình sửa tag cho prompt positive và negative trong tab Prompt của thanh cài đặt nhanh (bộ chọn tag ở đó luôn bật)",
+      "title": "Trình sửa prompt"
+    },
+    "promptHighlight": {
+      "desc": "Tự tô màu prompt theo cú pháp của Stable Diffusion",
+      "title": "Tô màu cú pháp prompt"
+    },
+    "quickSettingSidebar": {
+      "defaultExpand": {
+        "desc": "Mở thanh bên ngay khi khởi động",
+        "title": "Mở sẵn"
+      },
+      "defaultWidth": {
+        "desc": "Độ rộng thanh bên khi khởi động",
+        "title": "Độ rộng mặc định"
+      },
+      "displayMode": {
+        "desc": "Cố định: luôn hiển thị. Nổi: tự mở khi đưa chuột ra mép màn hình",
+        "title": "Kiểu hiển thị"
+      },
+      "enable": {
+        "desc": "Bật thanh cài đặt nhanh ở bên trái",
+        "title": "Bật"
+      }
+    },
+    "reduceAnimation": {
+      "desc": "Giảm hiệu ứng mờ và màu nền chuyển động, giúp mượt hơn và đỡ tốn CPU",
+      "title": "Giảm hiệu ứng"
+    },
+    "splitPreviewer": {
+      "desc": "Đặt ô prompt bên trái và nút Generate bên phải, để ảnh vừa tạo luôn nằm trên cùng khi cuộn trang",
+      "title": "Chia đôi khung xem"
+    },
+    "svgIcons": {
+      "desc": "Thay mọi icon emoji trong WebUI bằng icon SVG",
+      "title": "Icon SVG"
+    },
+    "tab": {
+      "appearance": "Giao diện",
+      "experimental": "Thử nghiệm",
+      "layout": "Bố cục",
+      "sidebar": "Thanh bên",
+      "tools": "Công cụ"
+    },
+    "commandPalette": {
+      "title": "Bảng lệnh",
+      "desc": "Nhấn Ctrl+K (⌘K trên Mac) để tìm và chạy thao tác, tab, sampler, checkpoint, LoRA, preset, lịch sử và cài đặt WebUI"
+    },
+    "history": {
+      "title": "Lịch sử tạo ảnh",
+      "desc": "Lưu mọi kết quả txt2img và img2img cùng thông số và ảnh thu nhỏ, trong thư mục lobe_data của extension"
+    },
+    "presets": {
+      "title": "Preset thông số",
+      "desc": "Bảng Presets ở thanh bên trái để lưu và áp dụng sampler, số bước, CFG, kích thước và Hires. fix"
+    },
+    "loraTools": {
+      "title": "Công cụ thẻ LoRA",
+      "desc": "Yêu thích, trọng số riêng cho từng LoRA, nhãn dòng model, trigger word và bộ lọc trên thẻ LoRA"
+    },
+    "tabProgress": {
+      "title": "Tiến độ trên icon tab",
+      "desc": "Vòng tiến độ trên icon tab trình duyệt khi đang tạo ảnh, và dấu tích khi tab nền chạy xong"
+    },
+    "notification": {
+      "title": "Thông báo trên máy",
+      "desc": "Báo khi tạo ảnh xong lúc trang đang ở nền (trình duyệt sẽ xin quyền)"
+    },
+    "localAssets": {
+      "title": "Tài nguyên cục bộ",
+      "desc": "Tải logo, icon và phông từ extension thay vì CDN, để theme chạy được khi không có mạng"
+    },
+    "customColor": "Tùy chỉnh",
+    "resetColor": "Đặt lại",
+    "imageButtonsTop": {
+      "title": "Nút ảnh dưới Generate",
+      "desc": "Chuyển các nút ảnh (mở thư mục, lưu, zip, gửi sang img2img, inpaint, extras...) từ dưới gallery lên ngay dưới Generate / Interrupt / Skip"
+    },
+    "sizeTools": {
+      "title": "Tỉ lệ khung hình và thông số gợi ý",
+      "desc": "Dưới Width và Height: tỉ lệ khung hình theo kích thước gốc của model, khóa tỉ lệ, và số bước / CFG hợp với model đang nạp"
+    },
+    "cornerStyle": {
+      "desc": "Góc của nút, ô nhập, khung và thẻ",
+      "round": "Tròn",
+      "sharp": "Vuông",
+      "soft": "Mềm",
+      "title": "Góc bo"
+    },
+    "density": {
+      "compact": "Gọn",
+      "comfortable": "Thoáng",
+      "desc": "Gọn: thu nhỏ tab, accordion, ô nhập và khoảng cách để chứa được nhiều hơn",
+      "title": "Mật độ"
+    },
+    "surfaceStyle": {
+      "desc": "Phẳng: khung trơn. Kính: header và thanh bên mờ, trong suốt. Nổi: thẻ có bóng đổ nhẹ",
+      "elevated": "Nổi",
+      "flat": "Phẳng",
+      "glass": "Kính",
+      "title": "Bề mặt"
+    },
+    "fontFamily": {
+      "desc": "Phông giao diện. Tất cả đều có sẵn nên dùng được khi không có mạng; Be Vietnam Pro được thiết kế cho tiếng Việt",
+      "title": "Phông chữ"
+    },
+    "fontMono": {
+      "desc": "Phông cho prompt và mã",
+      "title": "Phông đơn cách"
+    },
+    "sidebarSwap": {
+      "desc": "Cài đặt nhanh bên phải, Extra Network bên trái",
+      "title": "Đổi bên hai thanh"
+    },
+    "accordionMode": {
+      "desc": "Từng cái một: mở một accordion sẽ thu gọn các accordion bên cạnh. Thu gọn không bao giờ tắt extension",
+      "free": "Tự do",
+      "single": "Từng cái một",
+      "title": "Accordion"
+    },
+    "systemMonitor": {
+      "desc": "CPU, RAM, tải GPU, VRAM, nhiệt độ và ổ đĩa, dưới phần cài đặt nhanh",
+      "title": "Theo dõi hệ thống"
+    },
+    "progressBarStyle": {
+      "aurora": "Aurora",
+      "classic": "Cổ điển",
+      "desc": "Aurora: dải màu chuyển động với đầu phát sáng, hiện bước, phần trăm và ETA ngay trên thanh",
+      "title": "Thanh tiến độ"
+    },
+    "resultFrameStyle": {
+      "ambient": "Hắt sáng",
+      "desc": "Khung động quanh kết quả khi đang tạo ảnh. Viền sáng: viền nhiều màu xoay vòng. Nhịp: một vòng sóng mỗi bước. Hắt sáng: màu của ảnh xem trước tỏa ra phía sau. Quét: một đường quét từ trên xuống. Quỹ đạo: các đốm sáng chạy quanh khung",
+      "glow": "Viền sáng",
+      "off": "Tắt",
+      "orbit": "Quỹ đạo",
+      "pulse": "Nhịp",
+      "scan": "Quét",
+      "title": "Khung kết quả"
+    },
+    "promptSections": {
+      "title": "Chia ô prompt",
+      "desc": "Một nút dưới ô prompt chia prompt positive thành nhiều ô nối với nhau bằng BREAK; prompt được tạo và lưu vẫn có BREAK như thường"
+    },
+    "layoutPreset": {
+      "title": "Bố cục có sẵn",
+      "desc": "Vị trí các khối. Chỉ đổi bố cục: màu, phông và mọi cài đặt khác giữ nguyên",
+      "classic": {
+        "title": "Cổ điển",
+        "desc": "Tab nằm ngang phía trên, prompt ở trên, cài đặt và kết quả ở dưới"
+      },
+      "studio": {
+        "title": "Studio",
+        "desc": "Tab thành cột bên trái; bảng điều khiển và kết quả đặt cạnh nhau, cao bằng cửa sổ"
+      },
+      "studioMirror": {
+        "title": "Studio, đảo bên",
+        "desc": "Như Studio, nhưng kết quả bên trái, bảng điều khiển bên phải"
+      }
+    }
+  },
+  "share": "Chia sẻ",
+  "shareModal": {
+    "download": "Tải ảnh chụp",
+    "imageType": "Định dạng ảnh",
+    "info": "Thông tin ảnh",
+    "screenshot": "Ảnh chụp",
+    "settings": "Tùy chọn xuất",
+    "showAllImages": "Hiện mọi ảnh",
+    "showConfig": "Hiện thông số tạo ảnh",
+    "showNegative": "Hiện prompt negative",
+    "tabs": {
+      "info": "Thông tin",
+      "settings": "Cài đặt"
+    },
+    "title": "Tên ảnh",
+    "warn": "Hãy tạo ảnh trước",
+    "withBackground": "Kèm ảnh nền",
+    "withFooter": "Kèm chân trang"
+  },
+  "sidebar": {
+    "extraNetwork": "Extra Network",
+    "mode": {
+      "fixed": "Cố định",
+      "float": "Nổi"
+    },
+    "quickSetting": "Cài đặt nhanh",
+    "presets": "Presets",
+    "system": {
+      "disk": "Ổ đĩa",
+      "noNvml": "Tải GPU và nhiệt độ cần nvidia-ml-py",
+      "noNvmlHint": "Khởi động lại WebUI một lần để theme cài nvidia-ml-py, hoặc chạy: pip install nvidia-ml-py",
+      "temp": "Nhiệt độ",
+      "title": "Hệ thống"
+    },
+    "tabs": {
+      "prompt": "Prompt",
+      "settings": "Cài đặt"
+    }
+  },
+  "tools": {
+    "palette": {
+      "placeholder": "Tìm thao tác, tab, cài đặt, LoRA, preset…",
+      "empty": "Không có kết quả",
+      "hint": "↑ ↓ di chuyển · Enter chạy · Esc đóng",
+      "groups": {
+        "action": "Thao tác",
+        "tab": "Tab",
+        "preset": "Preset",
+        "sampler": "Sampler",
+        "scheduler": "Schedule type",
+        "checkpoint": "Checkpoint",
+        "lora": "LoRA",
+        "history": "Lịch sử",
+        "setting": "Cài đặt WebUI"
+      },
+      "generate": "Tạo ảnh",
+      "interrupt": "Dừng",
+      "skip": "Bỏ qua",
+      "toggleTheme": "Chuyển giao diện sáng/tối",
+      "themeSettings": "Cài đặt theme",
+      "openHistory": "Lịch sử tạo ảnh",
+      "openPresets": "Presets",
+      "savePreset": "Lưu thông số hiện tại thành preset",
+      "setSampler": "Dùng sampler",
+      "setScheduler": "Dùng schedule type",
+      "loadCheckpoint": "Nạp checkpoint",
+      "addLora": "Thêm vào prompt",
+      "applyPreset": "Áp dụng preset",
+      "reuse": "Dùng lại thông số",
+      "openSetting": "Mở cài đặt"
+    },
+    "history": {
+      "title": "Lịch sử tạo ảnh",
+      "search": "Tìm trong prompt và thông số",
+      "all": "Tất cả",
+      "empty": "Chưa có gì. Các lần tạo ảnh txt2img và img2img đã xong sẽ hiện ở đây.",
+      "loadMore": "Tải thêm",
+      "today": "Hôm nay",
+      "yesterday": "Hôm qua",
+      "reuseAll": "Dùng lại tất cả",
+      "reusePrompt": "Prompt",
+      "reuseSeed": "Seed",
+      "copy": "Sao chép thông số",
+      "copied": "Đã sao chép",
+      "savePreset": "Lưu thành preset",
+      "delete": "Xóa",
+      "clear": "Xóa lịch sử",
+      "clearConfirm": "Xóa toàn bộ lịch sử? Ảnh đã lưu trên ổ đĩa vẫn được giữ.",
+      "compare": "So sánh",
+      "compareHint": "Tích hai mục để so sánh",
+      "applied": "Đã áp dụng thông số",
+      "prompt": "Prompt",
+      "negative": "Prompt negative",
+      "parameter": "Thông số",
+      "onlyIn": "Chỉ có ở {{name}}",
+      "images": "{{count}} ảnh"
+    },
+    "presets": {
+      "title": "Presets",
+      "empty": "Chưa có preset nào. Chỉnh thông số theo ý, rồi lưu lại ở đây.",
+      "name": "Tên preset",
+      "save": "Lưu hiện tại",
+      "includeSeed": "Kèm seed",
+      "includeBatch": "Kèm batch count và batch size",
+      "apply": "Áp dụng",
+      "applied": "Đã áp dụng preset",
+      "rename": "Đổi tên",
+      "delete": "Xóa",
+      "deleteConfirm": "Xóa preset này?",
+      "moveUp": "Chuyển lên",
+      "moveDown": "Chuyển xuống",
+      "overwrite": "Ghi đè bằng thông số hiện tại",
+      "saved": "Đã lưu preset",
+      "defaultName": "Preset {{n}}",
+      "for": "Cho {{tab}}"
+    },
+    "lora": {
+      "all": "Tất cả",
+      "favorites": "Yêu thích",
+      "recent": "Gần đây",
+      "compatible": "Tương thích",
+      "favorite": "Yêu thích",
+      "weight": "Trọng số (cuộn để chỉnh, bấm để đặt lại)",
+      "triggerWords": "Thêm trigger word"
+    },
+    "notify": {
+      "done": "Đã tạo ảnh xong"
+    },
+    "size": {
+      "ratio": "Tỉ lệ",
+      "base": "Gốc",
+      "auto": "Tự động",
+      "lock": "Giữ tỉ lệ này khi kéo thanh trượt",
+      "suggested": "Gợi ý",
+      "noSuggestions": "Chưa có gợi ý cho dòng model này",
+      "steps": "bước",
+      "cfg": "CFG",
+      "distilled": "Distilled CFG"
+    },
+    "sections": {
+      "add": "Thêm ô",
+      "merge": "Xóa ô này (chữ trong ô được chuyển sang ô phía trước)",
+      "section": "Ô",
+      "tokens": "token",
+      "toggle": "Chia ô prompt: tách prompt tại BREAK thành các ô riêng"
+    },
+    "studio": {
+      "prompt": "Prompt",
+      "parameters": "Thông số",
+      "extensions": "Tiện ích"
+    }
+  }
+}

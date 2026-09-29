@@ -2,7 +2,10 @@
   "brand": {
     "custom": "カスタム",
     "kitchen": "Kitchen",
-    "lobe": "LobeHub"
+    "lobe": "LobeHub",
+    "mark": "スパークマーク",
+    "none": "なし",
+    "wordmark": "ワードマーク"
   },
   "cancel": "キャンセル",
   "confirm": "確認",
@@ -18,7 +21,24 @@
   "header": {
     "feedback": "フィードバック",
     "setting": "設定",
-    "switchTheme": "ライト/ダークテーマの切り替え"
+    "switchTheme": "ライト/ダークテーマの切り替え",
+    "history": "生成履歴",
+    "commandPalette": "コマンドパレット (Ctrl+K)",
+    "nav": {
+      "allTabs": "すべてのタブ",
+      "search": "タブを検索",
+      "pin": "バーに固定",
+      "unpin": "バーから固定解除",
+      "reset": "バーをリセット",
+      "empty": "一致するタブがありません",
+      "hint": "固定したタブはバーに残ります · Ctrl+K ですべてを検索",
+      "groups": {
+        "generate": "生成",
+        "tools": "ツール",
+        "extensions": "拡張機能",
+        "system": "システム"
+      }
+    }
   },
   "modal": {
     "themeFeedback": {
@@ -81,6 +101,14 @@
       "enable": {
         "desc": "右側に追加のネットワークサイドバーを有効にする",
         "title": "有効にする"
+      },
+      "folderTree": {
+        "desc": "最上位のフォルダのみを表示し、フォルダをクリックするとサブフォルダを開きます",
+        "title": "フォルダツリー"
+      },
+      "tabRail": {
+        "title": "モデルの種類をサイドレールに表示",
+        "desc": "Textual Inversion、Checkpoint、Lora などを、複数行に折り返すタブではなくサイドバー横の縦列に表示します"
       }
     },
     "group": {
@@ -89,7 +117,8 @@
       "layout": "レイアウト設定",
       "promptTextarea": "プロンプトテキストボックス",
       "quickSettingSidebar": "クイック設定サイドバー",
-      "theme": "テーマ設定"
+      "theme": "テーマ設定",
+      "tools": "ツール"
     },
     "hideFooter": {
       "desc": "テーマのフッターを非表示にし、Stable Diffusion WebUI のデフォルトフッターのみを表示",
@@ -164,7 +193,124 @@
       "appearance": "外観",
       "experimental": "実験的",
       "layout": "レイアウト",
-      "sidebar": "サイドバー"
+      "sidebar": "サイドバー",
+      "tools": "ツール"
+    },
+    "commandPalette": {
+      "title": "コマンドパレット",
+      "desc": "Ctrl+K（Mac では ⌘K）で、アクション、タブ、サンプラー、Checkpoint、LoRA、プリセット、履歴、WebUI 設定を検索・実行します"
+    },
+    "history": {
+      "title": "生成履歴",
+      "desc": "txt2img と img2img のすべての結果をパラメータとサムネイル付きで保存します（拡張機能の lobe_data フォルダに保存）"
+    },
+    "presets": {
+      "title": "パラメータプリセット",
+      "desc": "左サイドバーにプリセットパネルを追加し、サンプラー、ステップ数、CFG、サイズ、Hires. fix の設定を保存・適用できます"
+    },
+    "loraTools": {
+      "title": "LoRA カードツール",
+      "desc": "LoRA カードにお気に入り、LoRA ごとの重み、モデルファミリーのバッジ、トリガーワード、フィルターを追加します"
+    },
+    "tabProgress": {
+      "title": "タブアイコンに進捗を表示",
+      "desc": "生成中はタブアイコンに進捗リングを表示し、バックグラウンドのタブで完了するとチェックマークを表示します"
+    },
+    "notification": {
+      "title": "デスクトップ通知",
+      "desc": "ページがバックグラウンドにある間に生成が完了すると通知します（ブラウザが許可を求めます）"
+    },
+    "localAssets": {
+      "title": "ローカルアセット",
+      "desc": "ロゴ、アイコン、フォントを CDN ではなく拡張機能から読み込み、インターネット接続なしでもテーマが動作するようにします"
+    },
+    "customColor": "カスタム",
+    "resetColor": "リセット",
+    "imageButtonsTop": {
+      "title": "画像ボタンを生成ボタンの下に",
+      "desc": "画像ボタン（フォルダを開く、保存、zip、img2img に送る、インペイント、その他…）をギャラリーの下から Generate / Interrupt / Skip のすぐ下に移動します"
+    },
+    "sizeTools": {
+      "title": "アスペクト比と推奨設定",
+      "desc": "幅と高さの下に、モデルに合わせたベースサイズでのアスペクト比、比率ロック、読み込まれたモデルに適したステップ数 / CFG スケールを表示します"
+    },
+    "cornerStyle": {
+      "desc": "ボタン、入力欄、パネル、カードの角",
+      "round": "丸",
+      "sharp": "シャープ",
+      "soft": "ソフト",
+      "title": "角"
+    },
+    "density": {
+      "compact": "コンパクト",
+      "comfortable": "ゆったり",
+      "desc": "コンパクトではタブ、アコーディオン、入力欄、余白を詰めて、画面により多く表示します",
+      "title": "密度"
+    },
+    "surfaceStyle": {
+      "desc": "フラット：シンプルなパネル。ガラス：すりガラス風の半透明なヘッダーとサイドバー。エレベート：柔らかい影付きのカード",
+      "elevated": "エレベート",
+      "flat": "フラット",
+      "glass": "ガラス",
+      "title": "サーフェス"
+    },
+    "fontFamily": {
+      "desc": "インターフェースのフォント。すべて同梱されているためオフラインでも動作します。Be Vietnam Pro はベトナム語向けにデザインされています",
+      "title": "フォント"
+    },
+    "fontMono": {
+      "desc": "プロンプトとコード用のフォント",
+      "title": "等幅フォント"
+    },
+    "sidebarSwap": {
+      "desc": "クイック設定を右側、Extra Network を左側に配置",
+      "title": "サイドバーを入れ替え"
+    },
+    "accordionMode": {
+      "desc": "一度に1つ：アコーディオンを開くと隣のアコーディオンが折りたたまれます。折りたたんでも拡張機能が無効になることはありません",
+      "free": "自由",
+      "single": "一度に1つ",
+      "title": "アコーディオン"
+    },
+    "systemMonitor": {
+      "desc": "クイック設定の下に CPU、RAM、GPU 負荷、VRAM、温度、ディスクを表示",
+      "title": "システムモニター"
+    },
+    "progressBarStyle": {
+      "aurora": "オーロラ",
+      "classic": "クラシック",
+      "desc": "オーロラ：光る先端を持つ流れるグラデーションで、バー上にステップ、パーセント、ETA を表示",
+      "title": "プログレスバー"
+    },
+    "resultFrameStyle": {
+      "ambient": "アンビエント",
+      "desc": "画像の生成中に結果の周りに表示されるアニメーションフレーム。グローエッジ：回転する色付きの縁。パルス：ステップごとにリング。アンビエント：プレビュー自体の色が背後で光る。スキャン：線が上から下へ走る。オービット：光がフレームを周回する",
+      "glow": "グローエッジ",
+      "off": "オフ",
+      "orbit": "オービット",
+      "pulse": "パルス",
+      "scan": "スキャン",
+      "title": "結果フレーム"
+    },
+    "promptSections": {
+      "title": "プロンプトセクション",
+      "desc": "プロンプトの下のボタンで、ポジティブプロンプトを BREAK で区切られたセクションに分割します。生成・保存されるプロンプトは BREAK を含んだままです"
+    },
+    "layoutPreset": {
+      "title": "レイアウトプリセット",
+      "desc": "各ブロックの配置です。変わるのはレイアウトのみで、色、フォント、その他の設定はそのままです",
+      "classic": {
+        "title": "クラシック",
+        "desc": "上部にタブ、設定と結果の上にプロンプト"
+      },
+      "studio": {
+        "title": "スタジオ",
+        "desc": "左側のレールにタブ。コントロールと結果を横に並べ、それぞれウィンドウの高さいっぱいに表示"
+      },
+      "studioMirror": {
+        "title": "スタジオ（反転）",
+        "desc": "スタジオと同様で、結果を左側、コントロールを右側に配置"
+      }
     }
   },
   "share": "共有",
@@ -192,6 +338,131 @@
       "fixed": "固定",
       "float": "フロート"
     },
-    "quickSetting": "クイック設定"
+    "quickSetting": "クイック設定",
+    "presets": "プリセット",
+    "system": {
+      "disk": "ディスク",
+      "noNvml": "GPU 負荷と温度の表示には nvidia-ml-py が必要です",
+      "noNvmlHint": "テーマが nvidia-ml-py をインストールできるよう WebUI を一度再起動するか、次を実行してください：pip install nvidia-ml-py",
+      "temp": "温度",
+      "title": "システム"
+    },
+    "tabs": {
+      "prompt": "プロンプト",
+      "settings": "設定"
+    }
+  },
+  "tools": {
+    "palette": {
+      "placeholder": "アクション、タブ、設定、LoRA、プリセットを検索…",
+      "empty": "一致するものがありません",
+      "hint": "↑ ↓ 移動 · Enter 実行 · Esc 閉じる",
+      "groups": {
+        "action": "アクション",
+        "tab": "タブ",
+        "preset": "プリセット",
+        "sampler": "サンプラー",
+        "scheduler": "スケジュールタイプ",
+        "checkpoint": "Checkpoint",
+        "lora": "LoRA",
+        "history": "履歴",
+        "setting": "WebUI 設定"
+      },
+      "generate": "生成",
+      "interrupt": "中断",
+      "skip": "スキップ",
+      "toggleTheme": "ライト/ダークテーマの切り替え",
+      "themeSettings": "テーマ設定",
+      "openHistory": "生成履歴",
+      "openPresets": "プリセット",
+      "savePreset": "現在のパラメータをプリセットとして保存",
+      "setSampler": "サンプラーを使用",
+      "setScheduler": "スケジュールタイプを使用",
+      "loadCheckpoint": "Checkpoint を読み込む",
+      "addLora": "プロンプトに追加",
+      "applyPreset": "プリセットを適用",
+      "reuse": "パラメータを再利用",
+      "openSetting": "設定を開く"
+    },
+    "history": {
+      "title": "生成履歴",
+      "search": "プロンプトとパラメータを検索",
+      "all": "すべて",
+      "empty": "まだ何もありません。完了した txt2img と img2img の生成がここに表示されます。",
+      "loadMore": "さらに読み込む",
+      "today": "今日",
+      "yesterday": "昨日",
+      "reuseAll": "すべて再利用",
+      "reusePrompt": "プロンプト",
+      "reuseSeed": "シード",
+      "copy": "パラメータをコピー",
+      "copied": "コピーしました",
+      "savePreset": "プリセットとして保存",
+      "delete": "削除",
+      "clear": "履歴をクリア",
+      "clearConfirm": "すべての履歴を削除しますか？ディスクに保存済みの画像は残ります。",
+      "compare": "比較",
+      "compareHint": "比較する2つの項目にチェックを入れてください",
+      "applied": "パラメータを適用しました",
+      "prompt": "プロンプト",
+      "negative": "ネガティブプロンプト",
+      "parameter": "パラメータ",
+      "onlyIn": "{{name}} のみ",
+      "images": "{{count}} 枚の画像"
+    },
+    "presets": {
+      "title": "プリセット",
+      "empty": "プリセットはまだありません。好みのパラメータを設定して、ここに保存してください。",
+      "name": "プリセット名",
+      "save": "現在の設定を保存",
+      "includeSeed": "シードを含める",
+      "includeBatch": "バッチ回数とサイズを含める",
+      "apply": "適用",
+      "applied": "プリセットを適用しました",
+      "rename": "名前を変更",
+      "delete": "削除",
+      "deleteConfirm": "このプリセットを削除しますか？",
+      "moveUp": "上へ移動",
+      "moveDown": "下へ移動",
+      "overwrite": "現在のパラメータで上書き",
+      "saved": "プリセットを保存しました",
+      "defaultName": "プリセット {{n}}",
+      "for": "{{tab}} 用"
+    },
+    "lora": {
+      "all": "すべて",
+      "favorites": "お気に入り",
+      "recent": "最近",
+      "compatible": "互換",
+      "favorite": "お気に入り",
+      "weight": "重み（スクロールで調整、クリックでリセット）",
+      "triggerWords": "トリガーワードを追加"
+    },
+    "notify": {
+      "done": "生成が完了しました"
+    },
+    "size": {
+      "ratio": "比率",
+      "base": "ベース",
+      "auto": "自動",
+      "lock": "スライダーを動かしてもこの形状を維持",
+      "suggested": "推奨",
+      "noSuggestions": "このモデルファミリーの推奨設定はありません",
+      "steps": "ステップ",
+      "cfg": "CFG",
+      "distilled": "Distilled CFG"
+    },
+    "sections": {
+      "add": "セクションを追加",
+      "merge": "このセクションを削除（テキストは前のセクションに移動）",
+      "section": "セクション",
+      "tokens": "トークン",
+      "toggle": "プロンプトセクション：BREAK でプロンプトを個別のボックスに分割"
+    },
+    "studio": {
+      "prompt": "プロンプト",
+      "parameters": "パラメータ",
+      "extensions": "拡張機能"
+    }
   }
 }

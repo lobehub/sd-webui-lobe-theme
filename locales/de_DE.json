@@ -2,7 +2,10 @@
   "brand": {
     "custom": "Benutzerdefiniert",
     "kitchen": "Kitchen",
-    "lobe": "LobeHub"
+    "lobe": "LobeHub",
+    "mark": "Funken-Symbol",
+    "none": "Keins",
+    "wordmark": "Wortmarke"
   },
   "cancel": "Abbrechen",
   "confirm": "Bestätigen",
@@ -18,7 +21,24 @@
   "header": {
     "feedback": "Feedback",
     "setting": "Einstellung",
-    "switchTheme": "Wechseln Sie das Licht-/Dunkel-Thema"
+    "switchTheme": "Wechseln Sie das Licht-/Dunkel-Thema",
+    "history": "Generierungsverlauf",
+    "commandPalette": "Befehlspalette (Ctrl+K)",
+    "nav": {
+      "allTabs": "Alle Tabs",
+      "search": "Tab suchen",
+      "pin": "An die Leiste anheften",
+      "unpin": "Von der Leiste lösen",
+      "reset": "Leiste zurücksetzen",
+      "empty": "Kein passender Tab",
+      "hint": "Angeheftete Tabs bleiben in der Leiste · Ctrl+K durchsucht alles",
+      "groups": {
+        "generate": "Generieren",
+        "tools": "Werkzeuge",
+        "extensions": "Erweiterungen",
+        "system": "System"
+      }
+    }
   },
   "modal": {
     "themeFeedback": {
@@ -81,6 +101,14 @@
       "enable": {
         "desc": "Aktivieren Sie die zusätzliche Netzwerkseitenleiste auf der rechten Seite",
         "title": "Aktivieren"
+      },
+      "folderTree": {
+        "desc": "Nur Ordner der obersten Ebene anzeigen; Klick auf einen Ordner öffnet seine Unterordner",
+        "title": "Ordnerbaum"
+      },
+      "tabRail": {
+        "title": "Modelltypen als Seitenleiste",
+        "desc": "Textual Inversion, Checkpoints, Lora... als Spalte am Rand der Seitenleiste statt Tabs, die über mehrere Zeilen umbrechen"
       }
     },
     "group": {
@@ -89,7 +117,8 @@
       "layout": "Layout-Einstellungen",
       "promptTextarea": "Prompt-Textfeld",
       "quickSettingSidebar": "Schnelle Einstellungsseitenleiste",
-      "theme": "Themen-Einstellungen"
+      "theme": "Themen-Einstellungen",
+      "tools": "Werkzeuge"
     },
     "hideFooter": {
       "desc": "Blenden Sie die Themenfußzeile aus und zeigen Sie nur die Standardfußzeile von Stable Diffusion WebUI an",
@@ -164,7 +193,124 @@
       "appearance": "Erscheinungsbild",
       "experimental": "Experimentell",
       "layout": "Layout",
-      "sidebar": "Seitenleiste"
+      "sidebar": "Seitenleiste",
+      "tools": "Werkzeuge"
+    },
+    "commandPalette": {
+      "title": "Befehlspalette",
+      "desc": "Ctrl+K (⌘K auf dem Mac) drücken, um Aktionen, Tabs, Sampler, Checkpoints, LoRAs, Presets, Verlauf und WebUI-Einstellungen zu durchsuchen und auszuführen"
+    },
+    "history": {
+      "title": "Generierungsverlauf",
+      "desc": "Jedes txt2img- und img2img-Ergebnis mit Parametern und Vorschaubild behalten, gespeichert im Ordner lobe_data der Erweiterung"
+    },
+    "presets": {
+      "title": "Parameter-Presets",
+      "desc": "Ein Presets-Bereich in der linken Seitenleiste zum Speichern und Anwenden von Sampler, Schritten, CFG, Größe und Hires. fix"
+    },
+    "loraTools": {
+      "title": "LoRA-Kartenwerkzeuge",
+      "desc": "Favoriten, eine Gewichtung pro LoRA, Modellfamilien-Abzeichen, Trigger-Wörter und Filter auf LoRA-Karten"
+    },
+    "tabProgress": {
+      "title": "Fortschritt im Tab-Symbol",
+      "desc": "Ein Fortschrittsring im Tab-Symbol während der Generierung und ein Häkchen, wenn ein Hintergrund-Tab fertig ist"
+    },
+    "notification": {
+      "title": "Desktop-Benachrichtigung",
+      "desc": "Benachrichtigen, wenn eine Generierung fertig ist, während die Seite im Hintergrund ist (der Browser fragt nach der Berechtigung)"
+    },
+    "localAssets": {
+      "title": "Lokale Ressourcen",
+      "desc": "Logo, Symbole und Schriftarten aus der Erweiterung statt von einem CDN laden, damit das Thema ohne Internetzugang funktioniert"
+    },
+    "customColor": "Benutzerdefiniert",
+    "resetColor": "Zurücksetzen",
+    "imageButtonsTop": {
+      "title": "Bildschaltflächen unter Generieren",
+      "desc": "Verschiebt die Bildschaltflächen (Ordner öffnen, Speichern, Zip, an img2img senden, Inpaint, Extras...) von unter der Galerie direkt unter Generieren / Unterbrechen / Überspringen"
+    },
+    "sizeTools": {
+      "title": "Seitenverhältnisse und empfohlene Einstellungen",
+      "desc": "Unter Breite und Höhe: Seitenverhältnisse bei einer zum Modell passenden Basisgröße, eine Verhältnissperre sowie Schritte / CFG-Skala passend zum geladenen Modell"
+    },
+    "cornerStyle": {
+      "desc": "Ecken von Schaltflächen, Feldern, Bereichen und Karten",
+      "round": "Rund",
+      "sharp": "Eckig",
+      "soft": "Weich",
+      "title": "Ecken"
+    },
+    "density": {
+      "compact": "Kompakt",
+      "comfortable": "Komfortabel",
+      "desc": "Kompakt verdichtet Tabs, Akkordeons, Felder und Abstände, damit mehr auf den Bildschirm passt",
+      "title": "Dichte"
+    },
+    "surfaceStyle": {
+      "desc": "Flach: schlichte Bereiche. Glas: mattierte, durchscheinende Kopfzeile und Seitenleisten. Erhöht: Karten mit weichen Schatten",
+      "elevated": "Erhöht",
+      "flat": "Flach",
+      "glass": "Glas",
+      "title": "Oberflächen"
+    },
+    "fontFamily": {
+      "desc": "Schriftart der Oberfläche. Alle sind mitgeliefert und funktionieren offline; Be Vietnam Pro ist für Vietnamesisch gestaltet",
+      "title": "Schriftart"
+    },
+    "fontMono": {
+      "desc": "Schriftart für Prompts und Code",
+      "title": "Monospace-Schriftart"
+    },
+    "sidebarSwap": {
+      "desc": "Schnelleinstellung rechts, Zusätzliches Netzwerk links",
+      "title": "Seitenleisten tauschen"
+    },
+    "accordionMode": {
+      "desc": "Nur eins gleichzeitig: Beim Öffnen eines Akkordeons werden die benachbarten eingeklappt. Einklappen schaltet nie eine Erweiterung aus",
+      "free": "Frei",
+      "single": "Nur eins gleichzeitig",
+      "title": "Akkordeons"
+    },
+    "systemMonitor": {
+      "desc": "CPU, RAM, GPU-Last, VRAM, Temperatur und Festplatte unter den Schnelleinstellungen",
+      "title": "Systemmonitor"
+    },
+    "progressBarStyle": {
+      "aurora": "Aurora",
+      "classic": "Klassisch",
+      "desc": "Aurora: ein fließender Verlauf mit leuchtender Spitze sowie Schritt, Prozent und ETA auf dem Balken",
+      "title": "Fortschrittsbalken"
+    },
+    "resultFrameStyle": {
+      "ambient": "Umgebungslicht",
+      "desc": "Animierter Rahmen um das Ergebnis, während ein Bild erstellt wird. Leuchtrand: ein umlaufender farbiger Rand. Puls: ein Ring bei jedem Schritt. Umgebungslicht: die Farben der Vorschau leuchten dahinter. Scan: eine Linie läuft nach unten. Kreisbahn: Lichter umkreisen den Rahmen",
+      "glow": "Leuchtrand",
+      "off": "Aus",
+      "orbit": "Kreisbahn",
+      "pulse": "Puls",
+      "scan": "Scan",
+      "title": "Ergebnisrahmen"
+    },
+    "promptSections": {
+      "title": "Prompt-Abschnitte",
+      "desc": "Eine Schaltfläche unter dem Prompt teilt den positiven Prompt in Abschnitte, die mit BREAK verbunden sind; der generierte und gespeicherte Prompt enthält weiterhin BREAK"
+    },
+    "layoutPreset": {
+      "title": "Layout-Vorlage",
+      "desc": "Wo die Blöcke platziert werden. Nur das Layout ändert sich: Farben, Schriftarten und alle anderen Einstellungen bleiben unverändert",
+      "classic": {
+        "title": "Klassisch",
+        "desc": "Tabs oben, der Prompt über den Einstellungen und dem Ergebnis"
+      },
+      "studio": {
+        "title": "Studio",
+        "desc": "Tabs in einer Leiste links; Steuerung und Ergebnis nebeneinander, jeweils so hoch wie das Fenster"
+      },
+      "studioMirror": {
+        "title": "Studio, gespiegelt",
+        "desc": "Wie Studio, mit dem Ergebnis links und der Steuerung rechts"
+      }
     }
   },
   "share": "Teilen",
@@ -192,6 +338,131 @@
       "fixed": "Fixiert",
       "float": "Schwebend"
     },
-    "quickSetting": "Schnelleinstellung"
+    "quickSetting": "Schnelleinstellung",
+    "presets": "Presets",
+    "system": {
+      "disk": "Festplatte",
+      "noNvml": "GPU-Last und Temperatur benötigen nvidia-ml-py",
+      "noNvmlHint": "Die WebUI einmal neu starten, damit das Thema nvidia-ml-py installieren kann, oder ausführen: pip install nvidia-ml-py",
+      "temp": "Temp.",
+      "title": "System"
+    },
+    "tabs": {
+      "prompt": "Prompt",
+      "settings": "Einstellungen"
+    }
+  },
+  "tools": {
+    "palette": {
+      "placeholder": "Aktionen, Tabs, Einstellungen, LoRAs, Presets suchen…",
+      "empty": "Keine Treffer",
+      "hint": "↑ ↓ bewegen · Enter ausführen · Esc schließen",
+      "groups": {
+        "action": "Aktionen",
+        "tab": "Tabs",
+        "preset": "Presets",
+        "sampler": "Sampler",
+        "scheduler": "Zeitplantypen",
+        "checkpoint": "Checkpoints",
+        "lora": "LoRAs",
+        "history": "Verlauf",
+        "setting": "WebUI-Einstellungen"
+      },
+      "generate": "Generieren",
+      "interrupt": "Unterbrechen",
+      "skip": "Überspringen",
+      "toggleTheme": "Helles/dunkles Thema wechseln",
+      "themeSettings": "Themen-Einstellungen",
+      "openHistory": "Generierungsverlauf",
+      "openPresets": "Presets",
+      "savePreset": "Aktuelle Parameter als Preset speichern",
+      "setSampler": "Sampler verwenden",
+      "setScheduler": "Zeitplantyp verwenden",
+      "loadCheckpoint": "Checkpoint laden",
+      "addLora": "Zum Prompt hinzufügen",
+      "applyPreset": "Preset anwenden",
+      "reuse": "Parameter wiederverwenden",
+      "openSetting": "Einstellung öffnen"
+    },
+    "history": {
+      "title": "Generierungsverlauf",
+      "search": "Prompts und Parameter durchsuchen",
+      "all": "Alle",
+      "empty": "Noch nichts hier. Abgeschlossene txt2img- und img2img-Generierungen erscheinen hier.",
+      "loadMore": "Mehr laden",
+      "today": "Heute",
+      "yesterday": "Gestern",
+      "reuseAll": "Alles wiederverwenden",
+      "reusePrompt": "Prompt",
+      "reuseSeed": "Seed",
+      "copy": "Parameter kopieren",
+      "copied": "Kopiert",
+      "savePreset": "Als Preset speichern",
+      "delete": "Löschen",
+      "clear": "Verlauf leeren",
+      "clearConfirm": "Alle Verlaufseinträge löschen? Bereits auf der Festplatte gespeicherte Bilder bleiben erhalten.",
+      "compare": "Vergleichen",
+      "compareHint": "Zwei Einträge ankreuzen, um sie zu vergleichen",
+      "applied": "Parameter angewendet",
+      "prompt": "Prompt",
+      "negative": "Negativer Prompt",
+      "parameter": "Parameter",
+      "onlyIn": "Nur in {{name}}",
+      "images": "{{count}} Bilder"
+    },
+    "presets": {
+      "title": "Presets",
+      "empty": "Noch keine Presets. Stelle die gewünschten Parameter ein und speichere sie hier.",
+      "name": "Preset-Name",
+      "save": "Aktuelle speichern",
+      "includeSeed": "Seed einbeziehen",
+      "includeBatch": "Batch-Anzahl und -Größe einbeziehen",
+      "apply": "Anwenden",
+      "applied": "Preset angewendet",
+      "rename": "Umbenennen",
+      "delete": "Löschen",
+      "deleteConfirm": "Dieses Preset löschen?",
+      "moveUp": "Nach oben",
+      "moveDown": "Nach unten",
+      "overwrite": "Mit aktuellen Parametern überschreiben",
+      "saved": "Preset gespeichert",
+      "defaultName": "Preset {{n}}",
+      "for": "Für {{tab}}"
+    },
+    "lora": {
+      "all": "Alle",
+      "favorites": "Favoriten",
+      "recent": "Zuletzt",
+      "compatible": "Kompatibel",
+      "favorite": "Favorit",
+      "weight": "Gewichtung (scrollen zum Anpassen, klicken zum Zurücksetzen)",
+      "triggerWords": "Trigger-Wörter hinzufügen"
+    },
+    "notify": {
+      "done": "Generierung abgeschlossen"
+    },
+    "size": {
+      "ratio": "Verhältnis",
+      "base": "Basis",
+      "auto": "Auto",
+      "lock": "Diese Form beim Verschieben eines Schiebereglers beibehalten",
+      "suggested": "Empfohlen",
+      "noSuggestions": "Keine Empfehlungen für diese Modellfamilie",
+      "steps": "Schritte",
+      "cfg": "CFG",
+      "distilled": "Destilliertes CFG"
+    },
+    "sections": {
+      "add": "Abschnitt hinzufügen",
+      "merge": "Diesen Abschnitt entfernen (der Text geht an den vorherigen)",
+      "section": "Abschnitt",
+      "tokens": "Tokens",
+      "toggle": "Prompt-Abschnitte: den Prompt bei BREAK in separate Felder aufteilen"
+    },
+    "studio": {
+      "prompt": "Prompt",
+      "parameters": "Parameter",
+      "extensions": "Erweiterungen"
+    }
   }
 }

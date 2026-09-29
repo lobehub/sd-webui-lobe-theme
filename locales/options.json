@@ -42,5 +42,9 @@
   {
     "label": "Turkish",
     "value": "tr_TR"
+  },
+  {
+    "label": "Tiếng Việt",
+    "value": "vi_VN"
   }
 ]

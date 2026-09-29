@@ -2,7 +2,10 @@
   "brand": {
     "custom": "自定義",
     "kitchen": "Kitchen",
-    "lobe": "LobeHub"
+    "lobe": "LobeHub",
+    "mark": "火花標誌",
+    "none": "無",
+    "wordmark": "文字標誌"
   },
   "cancel": "取消",
   "confirm": "確認",
@@ -18,7 +21,24 @@
   "header": {
     "feedback": "反饋",
     "setting": "設置",
-    "switchTheme": "切換明/暗主題"
+    "switchTheme": "切換明/暗主題",
+    "history": "生成記錄",
+    "commandPalette": "命令面板 (Ctrl+K)",
+    "nav": {
+      "allTabs": "所有分頁",
+      "search": "尋找分頁",
+      "pin": "釘選到列",
+      "unpin": "從列中取消釘選",
+      "reset": "重設列",
+      "empty": "沒有符合的分頁",
+      "hint": "已釘選的分頁會保留在列中 · Ctrl+K 可搜尋全部內容",
+      "groups": {
+        "generate": "生成",
+        "tools": "工具",
+        "extensions": "擴充功能",
+        "system": "系統"
+      }
+    }
   },
   "modal": {
     "themeFeedback": {
@@ -81,6 +101,14 @@
       "enable": {
         "desc": "在右側啟用額外的網絡側邊欄",
         "title": "啟用"
+      },
+      "folderTree": {
+        "desc": "僅顯示頂層資料夾；點擊資料夾可開啟其子資料夾",
+        "title": "資料夾樹"
+      },
+      "tabRail": {
+        "title": "模型類型側欄",
+        "desc": "將 Textual Inversion、Checkpoint、Lora 等以直列顯示在側邊欄一側，而非折成多行的分頁"
       }
     },
     "group": {
@@ -89,7 +117,8 @@
       "layout": "佈局設置",
       "promptTextarea": "提示文本框",
       "quickSettingSidebar": "快速設置側邊欄",
-      "theme": "主題設置"
+      "theme": "主題設置",
+      "tools": "工具"
     },
     "hideFooter": {
       "desc": "隱藏主題頁腳，僅顯示 Stable Diffusion webui 的默認頁腳",
@@ -164,7 +193,124 @@
       "appearance": "外觀",
       "experimental": "實驗性",
       "layout": "佈局",
-      "sidebar": "側邊欄"
+      "sidebar": "側邊欄",
+      "tools": "工具"
+    },
+    "commandPalette": {
+      "title": "命令面板",
+      "desc": "按 Ctrl+K（Mac 上為 ⌘K）搜尋並執行操作、分頁、取樣器、Checkpoint、LoRA、預設、記錄及 WebUI 設定"
+    },
+    "history": {
+      "title": "生成記錄",
+      "desc": "保存每次 txt2img 及 img2img 的結果連同參數和縮圖，儲存在擴充功能的 lobe_data 資料夾中"
+    },
+    "presets": {
+      "title": "參數預設",
+      "desc": "在左側邊欄加入預設面板，用於儲存及套用取樣器、步數、CFG、尺寸及 Hires. fix 設定"
+    },
+    "loraTools": {
+      "title": "LoRA 卡片工具",
+      "desc": "在 LoRA 卡片上提供最愛、個別權重、模型系列標記、觸發詞及篩選"
+    },
+    "tabProgress": {
+      "title": "分頁圖示顯示進度",
+      "desc": "生成時在分頁圖示上顯示進度環，背景分頁完成時顯示剔號"
+    },
+    "notification": {
+      "title": "桌面通知",
+      "desc": "頁面在背景時，生成完成後發出通知（瀏覽器會要求權限）"
+    },
+    "localAssets": {
+      "title": "本機資源",
+      "desc": "從擴充功能而非 CDN 載入標誌、圖示及字體，讓主題在沒有網絡時也能使用"
+    },
+    "customColor": "自定義",
+    "resetColor": "重設",
+    "imageButtonsTop": {
+      "title": "圖片按鈕置於生成下方",
+      "desc": "將圖片按鈕（開啟資料夾、儲存、壓縮、傳送到 img2img、局部重繪、附加功能等）從圖庫下方移到生成 / 中斷 / 略過按鈕正下方"
+    },
+    "sizeTools": {
+      "title": "長寬比與建議設定",
+      "desc": "在寬度和高度下方：按模型基礎尺寸提供長寬比、比例鎖定，以及適合目前模型的步數 / CFG 比例"
+    },
+    "cornerStyle": {
+      "desc": "按鈕、輸入欄、面板及卡片的圓角",
+      "round": "圓潤",
+      "sharp": "直角",
+      "soft": "柔和",
+      "title": "圓角"
+    },
+    "density": {
+      "compact": "緊湊",
+      "comfortable": "舒適",
+      "desc": "緊湊模式會收緊分頁、摺疊面板、輸入欄及間距，讓畫面容納更多內容",
+      "title": "密度"
+    },
+    "surfaceStyle": {
+      "desc": "扁平：純色面板。玻璃：磨砂半透明的頂欄及側邊欄。立體：帶柔和陰影的卡片",
+      "elevated": "立體",
+      "flat": "扁平",
+      "glass": "玻璃",
+      "title": "表面"
+    },
+    "fontFamily": {
+      "desc": "介面字體。所有字體均已內置，可離線使用；Be Vietnam Pro 專為越南文設計",
+      "title": "字體"
+    },
+    "fontMono": {
+      "desc": "用於提示詞及程式碼的字體",
+      "title": "等寬字體"
+    },
+    "sidebarSwap": {
+      "desc": "快速設置在右側，額外網絡在左側",
+      "title": "對調側邊欄"
+    },
+    "accordionMode": {
+      "desc": "一次一個：展開一個摺疊面板時會收起旁邊的其他面板。摺疊不會停用擴充功能",
+      "free": "自由",
+      "single": "一次一個",
+      "title": "摺疊面板"
+    },
+    "systemMonitor": {
+      "desc": "在快速設置下方顯示 CPU、RAM、GPU 負載、VRAM、溫度及磁碟",
+      "title": "系統監察器"
+    },
+    "progressBarStyle": {
+      "aurora": "極光",
+      "classic": "經典",
+      "desc": "極光：流動的漸變及發光的前端，並在進度列上顯示步數、百分比及 ETA",
+      "title": "進度列"
+    },
+    "resultFrameStyle": {
+      "ambient": "氛圍",
+      "desc": "生成圖片時結果周圍的動畫邊框。發光邊緣：旋轉的彩色邊緣。脈衝：每一步出現一個光環。氛圍：預覽本身的顏色在其後發光。掃描：一條線向下掃過。環繞：光點繞邊框移動",
+      "glow": "發光邊緣",
+      "off": "關閉",
+      "orbit": "環繞",
+      "pulse": "脈衝",
+      "scan": "掃描",
+      "title": "結果邊框"
+    },
+    "promptSections": {
+      "title": "提示詞分段",
+      "desc": "提示詞下方的按鈕可將正向提示詞拆分為以 BREAK 連接的分段；實際生成及儲存的提示詞仍包含 BREAK"
+    },
+    "layoutPreset": {
+      "title": "佈局預設",
+      "desc": "決定各區塊的位置。只改變佈局：顏色、字體及其他所有設定維持不變",
+      "classic": {
+        "title": "經典",
+        "desc": "分頁位於頂部，提示詞位於設定及結果上方"
+      },
+      "studio": {
+        "title": "工作室",
+        "desc": "分頁位於左側欄；控制項與結果並排，高度與視窗一致"
+      },
+      "studioMirror": {
+        "title": "工作室（鏡像）",
+        "desc": "與工作室相同，但結果在左側，控制項在右側"
+      }
     }
   },
   "share": "分享",
@@ -192,6 +338,131 @@
       "fixed": "固定",
       "float": "浮動"
     },
-    "quickSetting": "快速設置"
+    "quickSetting": "快速設置",
+    "presets": "預設",
+    "system": {
+      "disk": "磁碟",
+      "noNvml": "GPU 負載及溫度需要 nvidia-ml-py",
+      "noNvmlHint": "重新啟動一次 WebUI 讓主題安裝 nvidia-ml-py，或執行：pip install nvidia-ml-py",
+      "temp": "溫度",
+      "title": "系統"
+    },
+    "tabs": {
+      "prompt": "提示詞",
+      "settings": "設定"
+    }
+  },
+  "tools": {
+    "palette": {
+      "placeholder": "搜尋操作、分頁、設定、LoRA、預設…",
+      "empty": "沒有符合的結果",
+      "hint": "↑ ↓ 移動 · Enter 執行 · Esc 關閉",
+      "groups": {
+        "action": "操作",
+        "tab": "分頁",
+        "preset": "預設",
+        "sampler": "取樣器",
+        "scheduler": "排程類型",
+        "checkpoint": "Checkpoint",
+        "lora": "LoRA",
+        "history": "記錄",
+        "setting": "WebUI 設定"
+      },
+      "generate": "生成",
+      "interrupt": "中斷",
+      "skip": "略過",
+      "toggleTheme": "切換明/暗主題",
+      "themeSettings": "主題設置",
+      "openHistory": "生成記錄",
+      "openPresets": "預設",
+      "savePreset": "將目前參數儲存為預設",
+      "setSampler": "使用取樣器",
+      "setScheduler": "使用排程類型",
+      "loadCheckpoint": "載入 Checkpoint",
+      "addLora": "加入提示詞",
+      "applyPreset": "套用預設",
+      "reuse": "重用參數",
+      "openSetting": "開啟設定"
+    },
+    "history": {
+      "title": "生成記錄",
+      "search": "搜尋提示詞及參數",
+      "all": "全部",
+      "empty": "暫無內容。完成的 txt2img 及 img2img 生成會顯示在這裡。",
+      "loadMore": "載入更多",
+      "today": "今天",
+      "yesterday": "昨天",
+      "reuseAll": "全部重用",
+      "reusePrompt": "提示詞",
+      "reuseSeed": "種子",
+      "copy": "複製參數",
+      "copied": "已複製",
+      "savePreset": "儲存為預設",
+      "delete": "刪除",
+      "clear": "清除記錄",
+      "clearConfirm": "刪除所有記錄？已儲存到磁碟的圖片會保留。",
+      "compare": "比較",
+      "compareHint": "剔選兩項記錄進行比較",
+      "applied": "參數已套用",
+      "prompt": "提示詞",
+      "negative": "負面提示詞",
+      "parameter": "參數",
+      "onlyIn": "僅在 {{name}} 中",
+      "images": "{{count}} 張圖片"
+    },
+    "presets": {
+      "title": "預設",
+      "empty": "暫無預設。設定好你喜歡的參數，然後在這裡儲存。",
+      "name": "預設名稱",
+      "save": "儲存目前",
+      "includeSeed": "包含種子",
+      "includeBatch": "包含批次數及批次大小",
+      "apply": "套用",
+      "applied": "預設已套用",
+      "rename": "重新命名",
+      "delete": "刪除",
+      "deleteConfirm": "刪除此預設？",
+      "moveUp": "上移",
+      "moveDown": "下移",
+      "overwrite": "以目前參數覆寫",
+      "saved": "預設已儲存",
+      "defaultName": "預設 {{n}}",
+      "for": "用於 {{tab}}"
+    },
+    "lora": {
+      "all": "全部",
+      "favorites": "最愛",
+      "recent": "最近",
+      "compatible": "相容",
+      "favorite": "加入最愛",
+      "weight": "權重（捲動調整，點擊重設）",
+      "triggerWords": "加入觸發詞"
+    },
+    "notify": {
+      "done": "生成完成"
+    },
+    "size": {
+      "ratio": "比例",
+      "base": "基礎",
+      "auto": "自動",
+      "lock": "拖動滑桿時保持此比例",
+      "suggested": "建議",
+      "noSuggestions": "此模型系列暫無建議",
+      "steps": "步數",
+      "cfg": "CFG",
+      "distilled": "蒸餾 CFG"
+    },
+    "sections": {
+      "add": "新增分段",
+      "merge": "移除此分段（其文字併入前一段）",
+      "section": "分段",
+      "tokens": "token",
+      "toggle": "提示詞分段：在 BREAK 處將提示詞拆分為獨立的輸入欄"
+    },
+    "studio": {
+      "prompt": "提示詞",
+      "parameters": "參數",
+      "extensions": "擴充功能"
+    }
   }
 }

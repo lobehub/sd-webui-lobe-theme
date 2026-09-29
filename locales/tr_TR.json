@@ -2,7 +2,10 @@
   "brand": {
     "custom": "Özel",
     "kitchen": "Mutfak",
-    "lobe": "LobeHub"
+    "lobe": "LobeHub",
+    "mark": "Spark işareti",
+    "none": "Yok",
+    "wordmark": "Yazı logosu"
   },
   "cancel": "İptal",
   "confirm": "Onayla",
@@ -18,7 +21,24 @@
   "header": {
     "feedback": "Geribildirim",
     "setting": "Ayarlar",
-    "switchTheme": "Aydınlık/Karanlık Tema Değiştir"
+    "switchTheme": "Aydınlık/Karanlık Tema Değiştir",
+    "history": "Oluşturma geçmişi",
+    "commandPalette": "Komut paleti (Ctrl+K)",
+    "nav": {
+      "allTabs": "Tüm sekmeler",
+      "search": "Sekme bul",
+      "pin": "Çubuğa sabitle",
+      "unpin": "Çubuktan kaldır",
+      "reset": "Çubuğu sıfırla",
+      "empty": "Eşleşen sekme yok",
+      "hint": "Sabitlenen sekmeler çubukta kalır · Ctrl+K her şeyde arar",
+      "groups": {
+        "generate": "Oluştur",
+        "tools": "Araçlar",
+        "extensions": "Eklentiler",
+        "system": "Sistem"
+      }
+    }
   },
   "modal": {
     "themeFeedback": {
@@ -81,6 +101,14 @@
       "enable": {
         "desc": "Sağ tarafta ek ağ kenar çubuğunu etkinleştir",
         "title": "Etkinleştir"
+      },
+      "folderTree": {
+        "desc": "Yalnızca üst düzey klasörleri göster; alt klasörlerini açmak için bir klasöre tıklayın",
+        "title": "Klasör ağacı"
+      },
+      "tabRail": {
+        "title": "Model türleri yan sütunda",
+        "desc": "Textual Inversion, Checkpoints, Lora... birkaç satıra taşan sekmeler yerine kenar çubuğunun yanında bir sütun olarak"
       }
     },
     "group": {
@@ -89,7 +117,8 @@
       "layout": "Düzen Ayarları",
       "promptTextarea": "İsteğe Bağlı Metin Kutusu",
       "quickSettingSidebar": "Hızlı Ayar Kenar Çubuğu",
-      "theme": "Tema Ayarları"
+      "theme": "Tema Ayarları",
+      "tools": "Araçlar"
     },
     "hideFooter": {
       "desc": "Tema altbilgisini gizle ve sadece stable diffusion webui'nin varsayılan altbilgisini göster",
@@ -164,7 +193,124 @@
       "appearance": "Görünüm",
       "experimental": "Deneysel",
       "layout": "Düzen",
-      "sidebar": "Kenar Çubuğu"
+      "sidebar": "Kenar Çubuğu",
+      "tools": "Araçlar"
+    },
+    "commandPalette": {
+      "title": "Komut paleti",
+      "desc": "Eylemleri, sekmeleri, örnekleyicileri, Checkpoint'leri, LoRA'ları, hazır ayarları, geçmişi ve WebUI ayarlarını aramak ve çalıştırmak için Ctrl+K (Mac'te ⌘K) tuşuna basın"
+    },
+    "history": {
+      "title": "Oluşturma geçmişi",
+      "desc": "Her txt2img ve img2img sonucunu parametreleri ve bir küçük resimle birlikte eklentinin lobe_data klasöründe saklar"
+    },
+    "presets": {
+      "title": "Parametre hazır ayarları",
+      "desc": "Örnekleyici, adım, CFG, boyut ve Hires. fix ayarlarını kaydetmek ve uygulamak için sol kenar çubuğunda bir Hazır Ayarlar paneli"
+    },
+    "loraTools": {
+      "title": "LoRA kart araçları",
+      "desc": "LoRA kartlarında favoriler, LoRA başına ağırlık, model ailesi rozetleri, tetikleyici kelimeler ve filtreler"
+    },
+    "tabProgress": {
+      "title": "Sekme simgesinde ilerleme",
+      "desc": "Oluşturma sırasında sekme simgesinde bir ilerleme halkası ve arka plandaki bir sekme bittiğinde onay işareti"
+    },
+    "notification": {
+      "title": "Masaüstü bildirimi",
+      "desc": "Sayfa arka plandayken bir oluşturma bittiğinde bildir (tarayıcı izin ister)"
+    },
+    "localAssets": {
+      "title": "Yerel kaynaklar",
+      "desc": "Logo, simge ve yazı tiplerini CDN yerine eklentiden yükler, böylece tema internet erişimi olmadan da çalışır"
+    },
+    "customColor": "Özel",
+    "resetColor": "Sıfırla",
+    "imageButtonsTop": {
+      "title": "Görüntü düğmeleri Oluştur'un altında",
+      "desc": "Görüntü düğmelerini (klasörü aç, kaydet, zip, img2img'ye gönder, inpaint, extras...) galerinin altından doğrudan Generate / Interrupt / Skip düğmelerinin altına taşır"
+    },
+    "sizeTools": {
+      "title": "En boy oranları ve önerilen ayarlar",
+      "desc": "Width ve Height altında: modele uyan bir temel boyutta en boy oranları, oran kilidi ve yüklenen modele uygun adım / CFG scale değerleri"
+    },
+    "cornerStyle": {
+      "desc": "Düğme, alan, panel ve kartların köşeleri",
+      "round": "Yuvarlak",
+      "sharp": "Keskin",
+      "soft": "Yumuşak",
+      "title": "Köşeler"
+    },
+    "density": {
+      "compact": "Sıkı",
+      "comfortable": "Rahat",
+      "desc": "Sıkı mod, ekrana daha fazlası sığsın diye sekmeleri, akordeonları, alanları ve boşlukları daraltır",
+      "title": "Yoğunluk"
+    },
+    "surfaceStyle": {
+      "desc": "Düz: sade paneller. Cam: buzlu, yarı saydam üst bar ve kenar çubukları. Yükseltilmiş: yumuşak gölgeli kartlar",
+      "elevated": "Yükseltilmiş",
+      "flat": "Düz",
+      "glass": "Cam",
+      "title": "Yüzeyler"
+    },
+    "fontFamily": {
+      "desc": "Arayüz yazı tipi. Hepsi pakete dahildir, bu yüzden çevrimdışı çalışır; Be Vietnam Pro Vietnamca için tasarlanmıştır",
+      "title": "Yazı Tipi"
+    },
+    "fontMono": {
+      "desc": "İstekler ve kod için yazı tipi",
+      "title": "Eş aralıklı yazı tipi"
+    },
+    "sidebarSwap": {
+      "desc": "Hızlı Ayar sağda, Extra Network solda",
+      "title": "Kenar çubuklarını değiştir"
+    },
+    "accordionMode": {
+      "desc": "Tek seferde bir: bir akordeonu açmak yanındakileri kapatır. Kapatmak hiçbir zaman bir eklentiyi devre dışı bırakmaz",
+      "free": "Serbest",
+      "single": "Tek seferde bir",
+      "title": "Akordeonlar"
+    },
+    "systemMonitor": {
+      "desc": "Hızlı ayarların altında CPU, RAM, GPU yükü, VRAM, sıcaklık ve disk",
+      "title": "Sistem monitörü"
+    },
+    "progressBarStyle": {
+      "aurora": "Aurora",
+      "classic": "Klasik",
+      "desc": "Aurora: parlayan uçlu akan bir gradyan ve çubuk üzerinde adım, yüzde ve ETA",
+      "title": "İlerleme çubuğu"
+    },
+    "resultFrameStyle": {
+      "ambient": "Ortam",
+      "desc": "Görüntü oluşturulurken sonucun etrafında animasyonlu çerçeve. Parlak kenar: dönen renkli bir kenar. Nabız: her adımda bir halka. Ortam: önizlemenin kendi renkleri arkasında parlar. Tarama: bir çizgi aşağı doğru ilerler. Yörünge: ışıklar çerçevenin etrafında döner",
+      "glow": "Parlak kenar",
+      "off": "Kapalı",
+      "orbit": "Yörünge",
+      "pulse": "Nabız",
+      "scan": "Tarama",
+      "title": "Sonuç çerçevesi"
+    },
+    "promptSections": {
+      "title": "İstek bölümleri",
+      "desc": "İsteğin altındaki bir düğme, pozitif isteği BREAK ile birleştirilen bölümlere ayırır; oluşturulan ve kaydedilen istek yine BREAK ile okunur"
+    },
+    "layoutPreset": {
+      "title": "Düzen şablonu",
+      "desc": "Blokların yeri. Yalnızca düzen değişir: renkler, yazı tipleri ve diğer tüm ayarlar olduğu gibi kalır",
+      "classic": {
+        "title": "Klasik",
+        "desc": "Sekmeler üstte, istek ayarların ve sonucun üzerinde"
+      },
+      "studio": {
+        "title": "Stüdyo",
+        "desc": "Sekmeler solda bir sütunda; kontroller ve sonuç yan yana, her biri pencere yüksekliğinde"
+      },
+      "studioMirror": {
+        "title": "Stüdyo, aynalı",
+        "desc": "Stüdyo gibi, ancak sonuç solda ve kontroller sağda"
+      }
     }
   },
   "share": "Paylaş",
@@ -192,6 +338,131 @@
       "fixed": "Sabit",
       "float": "Yüzer"
     },
-    "quickSetting": "Hızlı Ayar"
+    "quickSetting": "Hızlı Ayar",
+    "presets": "Hazır Ayarlar",
+    "system": {
+      "disk": "Disk",
+      "noNvml": "GPU yükü ve sıcaklığı için nvidia-ml-py gerekir",
+      "noNvmlHint": "Temanın nvidia-ml-py kurabilmesi için WebUI'yi bir kez yeniden başlatın veya şunu çalıştırın: pip install nvidia-ml-py",
+      "temp": "Sıcaklık",
+      "title": "Sistem"
+    },
+    "tabs": {
+      "prompt": "İstek",
+      "settings": "Ayarlar"
+    }
+  },
+  "tools": {
+    "palette": {
+      "placeholder": "Eylem, sekme, ayar, LoRA, hazır ayar ara…",
+      "empty": "Eşleşme yok",
+      "hint": "↑ ↓ gezin · Enter çalıştır · Esc kapat",
+      "groups": {
+        "action": "Eylemler",
+        "tab": "Sekmeler",
+        "preset": "Hazır Ayarlar",
+        "sampler": "Örnekleyiciler",
+        "scheduler": "Zamanlama türleri",
+        "checkpoint": "Checkpoint'ler",
+        "lora": "LoRA'lar",
+        "history": "Geçmiş",
+        "setting": "WebUI ayarları"
+      },
+      "generate": "Oluştur",
+      "interrupt": "Durdur",
+      "skip": "Atla",
+      "toggleTheme": "Aydınlık/karanlık tema değiştir",
+      "themeSettings": "Tema ayarları",
+      "openHistory": "Oluşturma geçmişi",
+      "openPresets": "Hazır Ayarlar",
+      "savePreset": "Geçerli parametreleri hazır ayar olarak kaydet",
+      "setSampler": "Örnekleyiciyi kullan",
+      "setScheduler": "Zamanlama türünü kullan",
+      "loadCheckpoint": "Checkpoint yükle",
+      "addLora": "İsteğe ekle",
+      "applyPreset": "Hazır ayarı uygula",
+      "reuse": "Parametreleri yeniden kullan",
+      "openSetting": "Ayarı aç"
+    },
+    "history": {
+      "title": "Oluşturma geçmişi",
+      "search": "İstek ve parametrelerde ara",
+      "all": "Tümü",
+      "empty": "Henüz bir şey yok. Tamamlanan txt2img ve img2img oluşturmaları burada görünür.",
+      "loadMore": "Daha fazla yükle",
+      "today": "Bugün",
+      "yesterday": "Dün",
+      "reuseAll": "Tümünü yeniden kullan",
+      "reusePrompt": "İstek",
+      "reuseSeed": "Tohum",
+      "copy": "Parametreleri kopyala",
+      "copied": "Kopyalandı",
+      "savePreset": "Hazır ayar olarak kaydet",
+      "delete": "Sil",
+      "clear": "Geçmişi temizle",
+      "clearConfirm": "Tüm geçmiş kayıtları silinsin mi? Diske zaten kaydedilmiş görüntüler korunur.",
+      "compare": "Karşılaştır",
+      "compareHint": "Karşılaştırmak için iki kaydı işaretleyin",
+      "applied": "Parametreler uygulandı",
+      "prompt": "İstek",
+      "negative": "Negatif istek",
+      "parameter": "Parametre",
+      "onlyIn": "Yalnızca {{name}} içinde",
+      "images": "{{count}} görüntü"
+    },
+    "presets": {
+      "title": "Hazır Ayarlar",
+      "empty": "Henüz hazır ayar yok. İstediğiniz parametreleri ayarlayın, sonra buraya kaydedin.",
+      "name": "Hazır ayar adı",
+      "save": "Geçerliyi kaydet",
+      "includeSeed": "Tohumu dahil et",
+      "includeBatch": "Toplu iş sayısını ve boyutunu dahil et",
+      "apply": "Uygula",
+      "applied": "Hazır ayar uygulandı",
+      "rename": "Yeniden adlandır",
+      "delete": "Sil",
+      "deleteConfirm": "Bu hazır ayar silinsin mi?",
+      "moveUp": "Yukarı taşı",
+      "moveDown": "Aşağı taşı",
+      "overwrite": "Geçerli parametrelerle üzerine yaz",
+      "saved": "Hazır ayar kaydedildi",
+      "defaultName": "Hazır ayar {{n}}",
+      "for": "{{tab}} için"
+    },
+    "lora": {
+      "all": "Tümü",
+      "favorites": "Favoriler",
+      "recent": "Son kullanılanlar",
+      "compatible": "Uyumlu",
+      "favorite": "Favori",
+      "weight": "Ağırlık (ayarlamak için kaydırın, sıfırlamak için tıklayın)",
+      "triggerWords": "Tetikleyici kelimeleri ekle"
+    },
+    "notify": {
+      "done": "Oluşturma tamamlandı"
+    },
+    "size": {
+      "ratio": "Oran",
+      "base": "Temel",
+      "auto": "Otomatik",
+      "lock": "Bir kaydırıcı hareket ederken bu şekli koru",
+      "suggested": "Önerilen",
+      "noSuggestions": "Bu model ailesi için öneri yok",
+      "steps": "adım",
+      "cfg": "CFG",
+      "distilled": "Distilled CFG"
+    },
+    "sections": {
+      "add": "Bölüm ekle",
+      "merge": "Bu bölümü kaldır (metni bir öncekine geçer)",
+      "section": "Bölüm",
+      "tokens": "token",
+      "toggle": "İstek bölümleri: isteği BREAK noktalarında ayrı kutulara böl"
+    },
+    "studio": {
+      "prompt": "İstek",
+      "parameters": "Parametreler",
+      "extensions": "Eklentiler"
+    }
   }
 }

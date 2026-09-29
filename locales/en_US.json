@@ -295,6 +295,22 @@
     "promptSections": {
       "title": "Prompt sections",
       "desc": "A button under the prompt splits the positive prompt into sections joined with BREAK; the prompt that is generated and saved still reads with BREAK"
+    },
+    "layoutPreset": {
+      "title": "Layout preset",
+      "desc": "Where the blocks go. Only the layout changes: colours, fonts and every other setting stay as they are",
+      "classic": {
+        "title": "Classic",
+        "desc": "Tabs across the top, the prompt above the settings and the result"
+      },
+      "studio": {
+        "title": "Studio",
+        "desc": "Tabs in a rail on the left; controls and result side by side, each as tall as the window"
+      },
+      "studioMirror": {
+        "title": "Studio, mirrored",
+        "desc": "Like Studio, with the result on the left and the controls on the right"
+      }
     }
   },
   "share": "Share",
@@ -442,6 +458,11 @@
       "section": "Section",
       "tokens": "tokens",
       "toggle": "Prompt sections: split the prompt at BREAK into separate boxes"
+    },
+    "studio": {
+      "prompt": "Prompt",
+      "parameters": "Parameters",
+      "extensions": "Extensions"
     }
   }
 }

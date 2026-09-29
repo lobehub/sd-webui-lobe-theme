@@ -2,7 +2,10 @@
   "brand": {
     "custom": "Personalizado",
     "kitchen": "Kitchen",
-    "lobe": "LobeHub"
+    "lobe": "LobeHub",
+    "mark": "Marca Spark",
+    "none": "Nenhum",
+    "wordmark": "Logotipo de Texto"
   },
   "cancel": "Cancelar",
   "confirm": "Confirmar",
@@ -18,7 +21,24 @@
   "header": {
     "feedback": "Feedback",
     "setting": "Configuração",
-    "switchTheme": "Alternar Tema Claro/Escuro"
+    "switchTheme": "Alternar Tema Claro/Escuro",
+    "history": "Histórico de Geração",
+    "commandPalette": "Paleta de Comandos (Ctrl+K)",
+    "nav": {
+      "allTabs": "Todas as Abas",
+      "search": "Encontrar uma aba",
+      "pin": "Fixar na barra",
+      "unpin": "Desafixar da barra",
+      "reset": "Redefinir barra",
+      "empty": "Nenhuma aba corresponde",
+      "hint": "Abas fixadas ficam na barra · Ctrl+K pesquisa tudo",
+      "groups": {
+        "generate": "Gerar",
+        "tools": "Ferramentas",
+        "extensions": "Extensões",
+        "system": "Sistema"
+      }
+    }
   },
   "modal": {
     "themeFeedback": {
@@ -81,6 +101,14 @@
       "enable": {
         "desc": "Habilitar a barra lateral de rede extra no lado direito",
         "title": "Habilitar"
+      },
+      "folderTree": {
+        "desc": "Mostrar apenas as pastas de nível superior; clique em uma pasta para abrir suas subpastas",
+        "title": "Árvore de Pastas"
+      },
+      "tabRail": {
+        "title": "Tipos de Modelo em Trilho Lateral",
+        "desc": "Textual Inversion, Checkpoints, Lora... como uma coluna na lateral da barra, em vez de abas que quebram em várias linhas"
       }
     },
     "group": {
@@ -89,7 +117,8 @@
       "layout": "Configurações de Layout",
       "promptTextarea": "Caixa de Texto do Prompt",
       "quickSettingSidebar": "Barra Lateral de Configuração Rápida",
-      "theme": "Configurações do Tema"
+      "theme": "Configurações do Tema",
+      "tools": "Ferramentas"
     },
     "hideFooter": {
       "desc": "Ocultar o rodapé do tema e exibir apenas o rodapé padrão do stable diffusion webui",
@@ -164,7 +193,124 @@
       "appearance": "Aparência",
       "experimental": "Experimental",
       "layout": "Layout",
-      "sidebar": "Barra lateral"
+      "sidebar": "Barra lateral",
+      "tools": "Ferramentas"
+    },
+    "commandPalette": {
+      "title": "Paleta de Comandos",
+      "desc": "Pressione Ctrl+K (⌘K no Mac) para pesquisar e executar ações, abas, samplers, checkpoints, LoRAs, predefinições, histórico e configurações da WebUI"
+    },
+    "history": {
+      "title": "Histórico de Geração",
+      "desc": "Mantém cada resultado de txt2img e img2img com seus parâmetros e uma miniatura, armazenados na pasta lobe_data da extensão"
+    },
+    "presets": {
+      "title": "Predefinições de Parâmetros",
+      "desc": "Um painel de Predefinições na barra lateral esquerda para salvar e aplicar sampler, passos, CFG, tamanho e Hires. fix"
+    },
+    "loraTools": {
+      "title": "Ferramentas dos Cartões LoRA",
+      "desc": "Favoritos, um peso por LoRA, selos de família do modelo, palavras-gatilho e filtros nos cartões LoRA"
+    },
+    "tabProgress": {
+      "title": "Progresso no Ícone da Aba",
+      "desc": "Um anel de progresso no ícone da aba durante a geração e uma marca de verificação quando uma aba em segundo plano termina"
+    },
+    "notification": {
+      "title": "Notificação na Área de Trabalho",
+      "desc": "Notifica quando uma geração termina enquanto a página está em segundo plano (o navegador pede permissão)"
+    },
+    "localAssets": {
+      "title": "Recursos Locais",
+      "desc": "Carrega o logotipo, os ícones e as fontes da extensão em vez de um CDN, para que o tema funcione sem acesso à internet"
+    },
+    "customColor": "Personalizado",
+    "resetColor": "Redefinir",
+    "imageButtonsTop": {
+      "title": "Botões de Imagem sob Gerar",
+      "desc": "Move os botões de imagem (abrir pasta, salvar, zip, enviar para img2img, inpaint, extras...) de baixo da galeria para logo abaixo de Gerar / Interromper / Pular"
+    },
+    "sizeTools": {
+      "title": "Proporções e Configurações Sugeridas",
+      "desc": "Abaixo de Largura e Altura: proporções em um tamanho base que acompanha o modelo, um bloqueio de proporção e passos / escala CFG adequados ao modelo carregado"
+    },
+    "cornerStyle": {
+      "desc": "Cantos de botões, campos, painéis e cartões",
+      "round": "Arredondados",
+      "sharp": "Retos",
+      "soft": "Suaves",
+      "title": "Cantos"
+    },
+    "density": {
+      "compact": "Compacta",
+      "comfortable": "Confortável",
+      "desc": "Compacta aperta abas, acordeões, campos e espaçamentos para caber mais na tela",
+      "title": "Densidade"
+    },
+    "surfaceStyle": {
+      "desc": "Plana: painéis simples. Vidro: cabeçalho e barras laterais translúcidos e foscos. Elevada: cartões com sombras suaves",
+      "elevated": "Elevada",
+      "flat": "Plana",
+      "glass": "Vidro",
+      "title": "Superfícies"
+    },
+    "fontFamily": {
+      "desc": "Fonte da interface. Todas vêm incluídas, então funcionam offline; Be Vietnam Pro foi desenhada para o vietnamita",
+      "title": "Fonte"
+    },
+    "fontMono": {
+      "desc": "Fonte para prompts e código",
+      "title": "Fonte Monoespaçada"
+    },
+    "sidebarSwap": {
+      "desc": "Configuração Rápida à direita, Rede Extra à esquerda",
+      "title": "Trocar Barras Laterais"
+    },
+    "accordionMode": {
+      "desc": "Um por vez: abrir um acordeão recolhe os vizinhos. Recolher nunca desativa uma extensão",
+      "free": "Livre",
+      "single": "Um por Vez",
+      "title": "Acordeões"
+    },
+    "systemMonitor": {
+      "desc": "Carga de CPU, RAM e GPU, VRAM, temperatura e disco abaixo da configuração rápida",
+      "title": "Monitor do Sistema"
+    },
+    "progressBarStyle": {
+      "aurora": "Aurora",
+      "classic": "Clássica",
+      "desc": "Aurora: um gradiente fluido com uma ponta brilhante, e passo, porcentagem e ETA na barra",
+      "title": "Barra de Progresso"
+    },
+    "resultFrameStyle": {
+      "ambient": "Ambiente",
+      "desc": "Moldura animada ao redor do resultado enquanto uma imagem é gerada. Borda Brilhante: uma borda colorida que gira. Pulso: um anel a cada passo. Ambiente: as cores da própria prévia brilham atrás dela. Varredura: uma linha desce pela imagem. Órbita: luzes circulam a moldura",
+      "glow": "Borda Brilhante",
+      "off": "Desativado",
+      "orbit": "Órbita",
+      "pulse": "Pulso",
+      "scan": "Varredura",
+      "title": "Moldura do Resultado"
+    },
+    "promptSections": {
+      "title": "Seções do Prompt",
+      "desc": "Um botão abaixo do prompt divide o prompt positivo em seções unidas com BREAK; o prompt gerado e salvo continua com BREAK"
+    },
+    "layoutPreset": {
+      "title": "Layout Predefinido",
+      "desc": "Onde ficam os blocos. Só o layout muda: cores, fontes e todas as outras configurações permanecem como estão",
+      "classic": {
+        "title": "Clássico",
+        "desc": "Abas no topo, o prompt acima das configurações e do resultado"
+      },
+      "studio": {
+        "title": "Estúdio",
+        "desc": "Abas em um trilho à esquerda; controles e resultado lado a lado, cada um com a altura da janela"
+      },
+      "studioMirror": {
+        "title": "Estúdio, Espelhado",
+        "desc": "Como Estúdio, com o resultado à esquerda e os controles à direita"
+      }
     }
   },
   "share": "Compartilhar",
@@ -192,6 +338,131 @@
       "fixed": "Fixo",
       "float": "Flutuante"
     },
-    "quickSetting": "Configuração Rápida"
+    "quickSetting": "Configuração Rápida",
+    "presets": "Predefinições",
+    "system": {
+      "disk": "Disco",
+      "noNvml": "A carga e a temperatura da GPU precisam do nvidia-ml-py",
+      "noNvmlHint": "Reinicie a WebUI uma vez para que o tema possa instalar o nvidia-ml-py, ou execute: pip install nvidia-ml-py",
+      "temp": "Temp.",
+      "title": "Sistema"
+    },
+    "tabs": {
+      "prompt": "Prompt",
+      "settings": "Configurações"
+    }
+  },
+  "tools": {
+    "palette": {
+      "placeholder": "Pesquisar ações, abas, configurações, LoRAs, predefinições…",
+      "empty": "Nenhum resultado",
+      "hint": "↑ ↓ mover · Enter executar · Esc fechar",
+      "groups": {
+        "action": "Ações",
+        "tab": "Abas",
+        "preset": "Predefinições",
+        "sampler": "Samplers",
+        "scheduler": "Tipos de Agendamento",
+        "checkpoint": "Checkpoints",
+        "lora": "LoRAs",
+        "history": "Histórico",
+        "setting": "Configurações da WebUI"
+      },
+      "generate": "Gerar",
+      "interrupt": "Interromper",
+      "skip": "Pular",
+      "toggleTheme": "Alternar tema claro/escuro",
+      "themeSettings": "Configurações do Tema",
+      "openHistory": "Histórico de Geração",
+      "openPresets": "Predefinições",
+      "savePreset": "Salvar os parâmetros atuais como predefinição",
+      "setSampler": "Usar sampler",
+      "setScheduler": "Usar tipo de agendamento",
+      "loadCheckpoint": "Carregar checkpoint",
+      "addLora": "Adicionar ao prompt",
+      "applyPreset": "Aplicar predefinição",
+      "reuse": "Reutilizar parâmetros",
+      "openSetting": "Abrir configuração"
+    },
+    "history": {
+      "title": "Histórico de Geração",
+      "search": "Pesquisar prompts e parâmetros",
+      "all": "Tudo",
+      "empty": "Nada aqui ainda. As gerações concluídas de txt2img e img2img aparecem aqui.",
+      "loadMore": "Carregar mais",
+      "today": "Hoje",
+      "yesterday": "Ontem",
+      "reuseAll": "Reutilizar tudo",
+      "reusePrompt": "Prompt",
+      "reuseSeed": "Seed",
+      "copy": "Copiar parâmetros",
+      "copied": "Copiado",
+      "savePreset": "Salvar como predefinição",
+      "delete": "Excluir",
+      "clear": "Limpar histórico",
+      "clearConfirm": "Excluir todas as entradas do histórico? As imagens já salvas no disco são mantidas.",
+      "compare": "Comparar",
+      "compareHint": "Marque duas entradas para compará-las",
+      "applied": "Parâmetros aplicados",
+      "prompt": "Prompt",
+      "negative": "Prompt negativo",
+      "parameter": "Parâmetro",
+      "onlyIn": "Apenas em {{name}}",
+      "images": "{{count}} imagens"
+    },
+    "presets": {
+      "title": "Predefinições",
+      "empty": "Nenhuma predefinição ainda. Ajuste os parâmetros que preferir e salve-os aqui.",
+      "name": "Nome da predefinição",
+      "save": "Salvar atual",
+      "includeSeed": "Incluir seed",
+      "includeBatch": "Incluir quantidade e tamanho do lote",
+      "apply": "Aplicar",
+      "applied": "Predefinição aplicada",
+      "rename": "Renomear",
+      "delete": "Excluir",
+      "deleteConfirm": "Excluir esta predefinição?",
+      "moveUp": "Mover para cima",
+      "moveDown": "Mover para baixo",
+      "overwrite": "Sobrescrever com os parâmetros atuais",
+      "saved": "Predefinição salva",
+      "defaultName": "Predefinição {{n}}",
+      "for": "Para {{tab}}"
+    },
+    "lora": {
+      "all": "Todos",
+      "favorites": "Favoritos",
+      "recent": "Recentes",
+      "compatible": "Compatíveis",
+      "favorite": "Favorito",
+      "weight": "Peso (role para ajustar, clique para redefinir)",
+      "triggerWords": "Adicionar palavras-gatilho"
+    },
+    "notify": {
+      "done": "Geração concluída"
+    },
+    "size": {
+      "ratio": "Proporção",
+      "base": "Base",
+      "auto": "Auto",
+      "lock": "Manter esta forma ao mover um controle deslizante",
+      "suggested": "Sugerido",
+      "noSuggestions": "Nenhuma sugestão para esta família de modelos",
+      "steps": "passos",
+      "cfg": "CFG",
+      "distilled": "CFG destilado"
+    },
+    "sections": {
+      "add": "Adicionar seção",
+      "merge": "Remover esta seção (o texto vai para a anterior)",
+      "section": "Seção",
+      "tokens": "tokens",
+      "toggle": "Seções do prompt: divide o prompt em BREAK em caixas separadas"
+    },
+    "studio": {
+      "prompt": "Prompt",
+      "parameters": "Parâmetros",
+      "extensions": "Extensões"
+    }
   }
 }

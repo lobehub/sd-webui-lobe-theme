@@ -2,7 +2,10 @@
   "brand": {
     "custom": "自定义",
     "kitchen": "Kitchen",
-    "lobe": "LobeHub"
+    "lobe": "LobeHub",
+    "mark": "火花标志",
+    "none": "无",
+    "wordmark": "文字标志"
   },
   "cancel": "取消",
   "confirm": "确认",
@@ -18,15 +21,32 @@
   "header": {
     "feedback": "反馈",
     "setting": "设置",
-    "switchTheme": "切换浅色/深色主题"
+    "switchTheme": "切换浅色/深色主题",
+    "history": "生成历史",
+    "commandPalette": "命令面板 (Ctrl+K)",
+    "nav": {
+      "allTabs": "所有标签页",
+      "search": "查找标签页",
+      "pin": "固定到栏",
+      "unpin": "从栏中取消固定",
+      "reset": "重置栏",
+      "empty": "没有匹配的标签页",
+      "hint": "已固定的标签页会保留在栏中 · Ctrl+K 可搜索全部内容",
+      "groups": {
+        "generate": "生成",
+        "tools": "工具",
+        "extensions": "扩展",
+        "system": "系统"
+      }
+    }
   },
   "modal": {
     "themeFeedback": {
       "title": "主题反馈"
     },
     "themeSetting": {
-      "title": "主题设置",
-      "desc": "偏好与布局设置"
+      "desc": "偏好与布局设置",
+      "title": "主题设置"
     }
   },
   "prompt": {
@@ -81,6 +101,14 @@
       "enable": {
         "desc": "在右侧启用额外的网络侧边栏",
         "title": "启用"
+      },
+      "folderTree": {
+        "desc": "仅显示顶层文件夹；点击文件夹可打开其子文件夹",
+        "title": "文件夹树"
+      },
+      "tabRail": {
+        "title": "模型类型侧栏",
+        "desc": "将 Textual Inversion、Checkpoint、Lora 等以竖列显示在侧边栏一侧，而不是折成多行的标签页"
       }
     },
     "group": {
@@ -89,7 +117,8 @@
       "layout": "布局设置",
       "promptTextarea": "提示文本框",
       "quickSettingSidebar": "快速设置侧边栏",
-      "theme": "主题设置"
+      "theme": "主题设置",
+      "tools": "工具"
     },
     "hideFooter": {
       "desc": "隐藏主题页脚，仅显示 Stable Diffusion webui 的默认页脚",
@@ -164,7 +193,124 @@
       "appearance": "外观",
       "experimental": "实验性",
       "layout": "布局",
-      "sidebar": "侧边栏"
+      "sidebar": "侧边栏",
+      "tools": "工具"
+    },
+    "commandPalette": {
+      "title": "命令面板",
+      "desc": "按 Ctrl+K（Mac 上为 ⌘K）搜索并执行操作、标签页、采样器、Checkpoint、LoRA、预设、历史记录和 WebUI 设置"
+    },
+    "history": {
+      "title": "生成历史",
+      "desc": "保存每次 txt2img 和 img2img 的结果及其参数和缩略图，存储在扩展的 lobe_data 文件夹中"
+    },
+    "presets": {
+      "title": "参数预设",
+      "desc": "在左侧边栏添加预设面板，用于保存和应用采样器、步数、CFG、尺寸及 Hires. fix 设置"
+    },
+    "loraTools": {
+      "title": "LoRA 卡片工具",
+      "desc": "在 LoRA 卡片上提供收藏、单独权重、模型系列标记、触发词和筛选"
+    },
+    "tabProgress": {
+      "title": "标签页图标显示进度",
+      "desc": "生成时在标签页图标上显示进度环，后台标签页完成时显示对勾"
+    },
+    "notification": {
+      "title": "桌面通知",
+      "desc": "页面处于后台时，生成完成后发送通知（浏览器会请求权限）"
+    },
+    "localAssets": {
+      "title": "本地资源",
+      "desc": "从扩展而非 CDN 加载标志、图标和字体，使主题在无网络时也能使用"
+    },
+    "customColor": "自定义",
+    "resetColor": "重置",
+    "imageButtonsTop": {
+      "title": "图像按钮置于生成下方",
+      "desc": "将图像按钮（打开文件夹、保存、打包、发送到 img2img、局部重绘、附加功能等）从图库下方移到生成 / 中断 / 跳过按钮正下方"
+    },
+    "sizeTools": {
+      "title": "宽高比与建议设置",
+      "desc": "在宽度和高度下方：按模型基础尺寸提供宽高比、比例锁定，以及适合当前模型的步数 / CFG 比例"
+    },
+    "cornerStyle": {
+      "desc": "按钮、输入框、面板和卡片的圆角",
+      "round": "圆润",
+      "sharp": "直角",
+      "soft": "柔和",
+      "title": "圆角"
+    },
+    "density": {
+      "compact": "紧凑",
+      "comfortable": "舒适",
+      "desc": "紧凑模式会收紧标签页、折叠面板、输入框和间距，让屏幕容纳更多内容",
+      "title": "密度"
+    },
+    "surfaceStyle": {
+      "desc": "扁平：纯色面板。玻璃：磨砂半透明的顶栏和侧边栏。立体：带柔和阴影的卡片",
+      "elevated": "立体",
+      "flat": "扁平",
+      "glass": "玻璃",
+      "title": "表面"
+    },
+    "fontFamily": {
+      "desc": "界面字体。所有字体均已内置，可离线使用；Be Vietnam Pro 专为越南语设计",
+      "title": "字体"
+    },
+    "fontMono": {
+      "desc": "用于提示词和代码的字体",
+      "title": "等宽字体"
+    },
+    "sidebarSwap": {
+      "desc": "快速设置在右侧，额外网络在左侧",
+      "title": "交换侧边栏"
+    },
+    "accordionMode": {
+      "desc": "一次一个：展开一个折叠面板时会收起旁边的其他面板。折叠不会关闭扩展",
+      "free": "自由",
+      "single": "一次一个",
+      "title": "折叠面板"
+    },
+    "systemMonitor": {
+      "desc": "在快速设置下方显示 CPU、RAM、GPU 负载、VRAM、温度和磁盘",
+      "title": "系统监视器"
+    },
+    "progressBarStyle": {
+      "aurora": "极光",
+      "classic": "经典",
+      "desc": "极光：流动的渐变和发光的前端，并在进度条上显示步数、百分比和 ETA",
+      "title": "进度条"
+    },
+    "resultFrameStyle": {
+      "ambient": "氛围",
+      "desc": "生成图像时结果周围的动画边框。发光边缘：旋转的彩色边缘。脉冲：每一步出现一个光环。氛围：预览自身的颜色在其后发光。扫描：一条线向下扫过。环绕：光点绕边框移动",
+      "glow": "发光边缘",
+      "off": "关闭",
+      "orbit": "环绕",
+      "pulse": "脉冲",
+      "scan": "扫描",
+      "title": "结果边框"
+    },
+    "promptSections": {
+      "title": "提示词分段",
+      "desc": "提示词下方的按钮可将正向提示词拆分为以 BREAK 连接的分段；实际生成和保存的提示词仍包含 BREAK"
+    },
+    "layoutPreset": {
+      "title": "布局预设",
+      "desc": "决定各区块的位置。只改变布局：颜色、字体和其他所有设置保持不变",
+      "classic": {
+        "title": "经典",
+        "desc": "标签页位于顶部，提示词位于设置和结果上方"
+      },
+      "studio": {
+        "title": "工作室",
+        "desc": "标签页位于左侧栏；控件与结果并排，高度与窗口一致"
+      },
+      "studioMirror": {
+        "title": "工作室（镜像）",
+        "desc": "与工作室相同，但结果在左侧，控件在右侧"
+      }
     }
   },
   "share": "分享",
@@ -192,6 +338,131 @@
       "fixed": "固定",
       "float": "浮动"
     },
-    "quickSetting": "快速设置"
+    "quickSetting": "快速设置",
+    "presets": "预设",
+    "system": {
+      "disk": "磁盘",
+      "noNvml": "GPU 负载和温度需要 nvidia-ml-py",
+      "noNvmlHint": "重启一次 WebUI 以便主题安装 nvidia-ml-py，或运行：pip install nvidia-ml-py",
+      "temp": "温度",
+      "title": "系统"
+    },
+    "tabs": {
+      "prompt": "提示词",
+      "settings": "设置"
+    }
+  },
+  "tools": {
+    "palette": {
+      "placeholder": "搜索操作、标签页、设置、LoRA、预设…",
+      "empty": "无匹配结果",
+      "hint": "↑ ↓ 移动 · Enter 执行 · Esc 关闭",
+      "groups": {
+        "action": "操作",
+        "tab": "标签页",
+        "preset": "预设",
+        "sampler": "采样器",
+        "scheduler": "调度类型",
+        "checkpoint": "Checkpoint",
+        "lora": "LoRA",
+        "history": "历史记录",
+        "setting": "WebUI 设置"
+      },
+      "generate": "生成",
+      "interrupt": "中断",
+      "skip": "跳过",
+      "toggleTheme": "切换浅色/深色主题",
+      "themeSettings": "主题设置",
+      "openHistory": "生成历史",
+      "openPresets": "预设",
+      "savePreset": "将当前参数保存为预设",
+      "setSampler": "使用采样器",
+      "setScheduler": "使用调度类型",
+      "loadCheckpoint": "加载 Checkpoint",
+      "addLora": "添加到提示词",
+      "applyPreset": "应用预设",
+      "reuse": "复用参数",
+      "openSetting": "打开设置"
+    },
+    "history": {
+      "title": "生成历史",
+      "search": "搜索提示词和参数",
+      "all": "全部",
+      "empty": "暂无内容。完成的 txt2img 和 img2img 生成会显示在这里。",
+      "loadMore": "加载更多",
+      "today": "今天",
+      "yesterday": "昨天",
+      "reuseAll": "全部复用",
+      "reusePrompt": "提示词",
+      "reuseSeed": "种子",
+      "copy": "复制参数",
+      "copied": "已复制",
+      "savePreset": "保存为预设",
+      "delete": "删除",
+      "clear": "清空历史",
+      "clearConfirm": "删除所有历史记录？已保存到磁盘的图像会保留。",
+      "compare": "对比",
+      "compareHint": "勾选两条记录进行对比",
+      "applied": "参数已应用",
+      "prompt": "提示词",
+      "negative": "反向提示词",
+      "parameter": "参数",
+      "onlyIn": "仅在 {{name}} 中",
+      "images": "{{count}} 张图像"
+    },
+    "presets": {
+      "title": "预设",
+      "empty": "暂无预设。设置好你喜欢的参数，然后在这里保存。",
+      "name": "预设名称",
+      "save": "保存当前",
+      "includeSeed": "包含种子",
+      "includeBatch": "包含批次数和批次大小",
+      "apply": "应用",
+      "applied": "预设已应用",
+      "rename": "重命名",
+      "delete": "删除",
+      "deleteConfirm": "删除此预设？",
+      "moveUp": "上移",
+      "moveDown": "下移",
+      "overwrite": "用当前参数覆盖",
+      "saved": "预设已保存",
+      "defaultName": "预设 {{n}}",
+      "for": "用于 {{tab}}"
+    },
+    "lora": {
+      "all": "全部",
+      "favorites": "收藏",
+      "recent": "最近",
+      "compatible": "兼容",
+      "favorite": "收藏",
+      "weight": "权重（滚动调整，点击重置）",
+      "triggerWords": "添加触发词"
+    },
+    "notify": {
+      "done": "生成完成"
+    },
+    "size": {
+      "ratio": "比例",
+      "base": "基础",
+      "auto": "自动",
+      "lock": "拖动滑块时保持此比例",
+      "suggested": "建议",
+      "noSuggestions": "此模型系列暂无建议",
+      "steps": "步数",
+      "cfg": "CFG",
+      "distilled": "蒸馏 CFG"
+    },
+    "sections": {
+      "add": "添加分段",
+      "merge": "移除此分段（其文本并入前一段）",
+      "section": "分段",
+      "tokens": "token",
+      "toggle": "提示词分段：在 BREAK 处将提示词拆分为独立的输入框"
+    },
+    "studio": {
+      "prompt": "提示词",
+      "parameters": "参数",
+      "extensions": "扩展"
+    }
   }
 }
