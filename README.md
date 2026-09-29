@@ -54,6 +54,7 @@ The original Lobe Theme was made for AUTOMATIC1111 on Gradio 3. **Redux brings i
 
 - [Runs on all three Forges](#runs-on-all-three-forges)
 - [Aspect ratios and suggested settings](#aspect-ratios-and-suggested-settings)
+- [Prompt sections](#prompt-sections)
 - [A tab bar that stays short](#a-tab-bar-that-stays-short)
 - [Extra Network, redesigned](#extra-network-redesigned)
 - [Quick Setting sidebar](#quick-setting-sidebar)
@@ -65,12 +66,6 @@ The original Lobe Theme was made for AUTOMATIC1111 on Gradio 3. **Redux brings i
 - [And the small things](#and-the-small-things)
 
 </details>
-
-## Installation.
-
-```shell
-git clone "https://github.com/sca-285/sd-webui-lobe-theme-redux.git"
-```
 
 ### Runs on all three Forges
 
@@ -93,6 +88,23 @@ Under **Width** and **Height**:
 
 <br clear="right"/>
 
+### Prompt sections
+
+<img align="right" width="420" alt="Prompt sections" src="./docs/redux/prompt-sections.webp">
+
+The ▤ button under the prompt splits the positive prompt into **sections**, one box each, instead of one long box with `BREAK` typed by hand. Each section is its own 75-token chunk, so a concept at the end no longer drifts away from the start.
+
+- **＋ Add section** (up to six); ✕ removes one and moves its text to the section before.
+- Each section shows about how many tokens it holds, highlighted past 75.
+- The prompt that is generated is still the usual one: the sections joined with `BREAK`, so the infotext, PNG Info, styles and every extension see it as always.
+- A prompt pasted, sent from PNG Info or set by an extension is split at its `BREAK`s; typing `BREAK` in a section splits it there.
+- Press ▤ again to go back to one box, with `BREAK` where the sections met.
+- <kbd>Ctrl</kbd>+<kbd>↑</kbd> / <kbd>↓</kbd> weights and <kbd>Ctrl</kbd>+<kbd>Enter</kbd> work in the sections.
+
+This is not regional prompting: the whole image still gets the whole prompt.
+
+<br clear="right"/>
+
 ### A tab bar that stays short
 
 <img alt="Tab bar" src="./docs/redux/tab-bar.webp">
@@ -105,6 +117,7 @@ With many extensions installed, the header used to fill up with tabs. Now it hol
 
 The right sidebar (on the right in the image above) keeps LoRAs, embeddings and checkpoints one glance away:
 
+- **Model types as a side rail**: Embedding, Checkpoint, LoRA... in a column down the side of the sidebar, with an icon each, instead of tabs wrapping over two or three lines. The cards get the full height.
 - **Folder tree**: one folder per line, sub-folders open on click, the active folder highlighted. Works with Windows paths and with reForge's own tree view.
 - **LoRA cards**: a ☆ for favourites; a badge with the model family the LoRA was trained for, red when it does not match the loaded model; a weight control on hover (<kbd>−</kbd> / <kbd>+</kbd> or the mouse wheel), remembered per LoRA; a button that adds its trigger words.
 - **Filter bar**: All, Favorites, Recent, and Compatible with the loaded model.
@@ -276,7 +289,7 @@ If you prefer to manage extensions using Git, you can clone the repository to yo
 - Run the following command in the command line to clone the repository:
 
 ```shell
-git clone "https://github.com/lobehub/sd-webui-lobe-theme" extensions/lobe-theme
+git clone "https://github.com/sca-285/sd-webui-lobe-theme-redux.git"
 ```
 
 > Once you have completed these steps, the Lobe Theme extension will be successfully installed in Stable Diffusion WebUI.
@@ -715,6 +728,30 @@ Two independent options under **Theme Settings → Appearance**:
 - **Result frame**: an animated edge around the result box while an image is generated. *Glow edge* (default) is a slowly turning multi-coloured edge that lights up as progress grows; *Pulse* sends a ring outward on every sampling step; *Ambient* takes its colours from the live preview; *Scan* sweeps a line down the image; *Orbit* sends glowing motes round the border, one more for every eighth of the job. *Off* turns it off.
 
 Both follow the primary colour (a violet when the primary colour is a grey). The step count comes from the theme's `/lobe/state` route; without it, the label shows the percent and ETA only. With the system's "reduce motion" setting on, the effects stay still.
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
+#### `25` Prompt Sections
+
+The ▤ button among the tools under the prompt (txt2img and img2img) turns the positive prompt into sections: one box per `BREAK` chunk, at least two, up to six. The WebUI's own prompt box stays the real prompt: every change in a section writes all sections back into it, joined with `BREAK` on its own line, so generation, the infotext, PNG Info, styles and other extensions see the usual prompt. Changes made from outside (paste, Send to txt2img, PNG Info, styles, other extensions) rebuild the sections from the prompt, split at each `BREAK`. Each section shows an estimate of its tokens, highlighted past 75; the WebUI's counter keeps the exact total. The switch is remembered per tab. It is not regional prompting. **Theme Settings → Tools → Prompt sections** removes the button.
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
+#### `26` Extra Network Side Rail
+
+<img align="right" width="300" alt="Side rail" src="./docs/redux/network-rail.webp">
+
+In the Extra Network sidebar, the model types (Textual Inversion, Hypernetworks, Checkpoints, Lora, and tabs added by extensions) become a narrow column on the side, an icon and a short name each, the full name on hover. The search and sort controls move above the cards, and the cards get the whole height of the sidebar. **Theme Settings → Sidebar → Model types as a side rail** brings the tabs back.
+
+<br clear="right"/>
 
 <div align="right">
 

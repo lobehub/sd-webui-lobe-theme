@@ -105,6 +105,10 @@
       "folderTree": {
         "desc": "Show top-level folders only; click a folder to open its sub-folders",
         "title": "Folder tree"
+      },
+      "tabRail": {
+        "title": "Model types as a side rail",
+        "desc": "Textual Inversion, Checkpoints, Lora... as a column down the side of the sidebar instead of tabs that wrap over several lines"
       }
     },
     "group": {
@@ -287,6 +291,10 @@
       "pulse": "Pulse",
       "scan": "Scan",
       "title": "Result frame"
+    },
+    "promptSections": {
+      "title": "Prompt sections",
+      "desc": "A button under the prompt splits the positive prompt into sections joined with BREAK; the prompt that is generated and saved still reads with BREAK"
     }
   },
   "share": "Share",
@@ -427,6 +435,13 @@
       "steps": "steps",
       "cfg": "CFG",
       "distilled": "Distilled CFG"
+    },
+    "sections": {
+      "add": "Add section",
+      "merge": "Remove this section (its text goes to the one before)",
+      "section": "Section",
+      "tokens": "tokens",
+      "toggle": "Prompt sections: split the prompt at BREAK into separate boxes"
     }
   }
 }
