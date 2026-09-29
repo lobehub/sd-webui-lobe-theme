@@ -27,6 +27,7 @@ export interface WebuiSetting {
   extraNetworkFolderTree: boolean;
   extraNetworkSidebarExpand: boolean;
   extraNetworkSidebarWidth: number;
+  extraNetworkTabRail: boolean;
   fontFamily: 'harmony' | 'inter' | 'geist' | 'manrope' | 'beVietnam' | 'system';
   fontMono: 'harmony' | 'geistMono' | 'jetbrains' | 'system';
   i18n: I18n;
@@ -42,6 +43,7 @@ export interface WebuiSetting {
   primaryColor: PrimaryColor | undefined;
   progressBarStyle: 'classic' | 'aurora';
   promptEditor: boolean;
+  promptSections: boolean;
   promptTextareaType: 'scroll' | 'resizable';
   resultFrameStyle: 'off' | 'glow' | 'pulse' | 'ambient' | 'scan' | 'orbit';
   sidebarExpand: boolean;
@@ -77,6 +79,7 @@ export const DEFAULT_SETTING: WebuiSetting = {
   extraNetworkFolderTree: true,
   extraNetworkSidebarExpand: true,
   extraNetworkSidebarWidth: 340,
+  extraNetworkTabRail: true,
   fontFamily: 'harmony',
   fontMono: 'harmony',
   i18n: 'en_US',
@@ -92,6 +95,7 @@ export const DEFAULT_SETTING: WebuiSetting = {
   primaryColor: undefined,
   progressBarStyle: 'aurora',
   promptEditor: false,
+  promptSections: true,
   promptTextareaType: 'resizable',
   resultFrameStyle: 'glow',
   sidebarExpand: true,
