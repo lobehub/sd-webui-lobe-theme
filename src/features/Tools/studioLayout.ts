@@ -58,9 +58,11 @@ ${root} #${tab}_prompt_container, ${root} #${tab}_settings {
   margin: 0 !important; padding-inline-end: 4px; flex-wrap: nowrap !important;
 }
 ${root} #${tab}_settings > * { flex-shrink: 0 !important; }
-${root} #${tab}_prompt_container { display: flex !important; flex-direction: column; gap: 10px; }
+${root} #${tab}_prompt_container { display: flex !important; flex-direction: column; gap: 14px; padding-top: 12px !important; }
 ${root} #${tab}_prompt_container > .prompt-row { flex: 1 1 0; min-height: 120px; }
-${root} #${tab}_prompt_container > .prompt-row :is(.form, .block, label, .lobe-sections) { height: 100%; }
+${root} #${tab}_prompt_container > .prompt-row :is(.form, .block, label, .lobe-sections):not(.token-counter, .token-counter *) { height: 100%; }
+/* the WebUI's token counters float in the prompt's corner: their own size, not the prompt's */
+${root} #${tab}_prompt_container .token-counter, ${root} #${tab}_prompt_container .token-counter * { height: auto !important; min-height: 0 !important; }
 ${root} #${tab}_prompt_container > .prompt-row textarea { height: 100% !important; max-height: none !important; }
 ${root} #${tab}_render > .gap > .gradio-row > .resize-handle { display: none !important; }
 ${root} #${tab}_results {

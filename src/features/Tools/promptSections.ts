@@ -42,6 +42,8 @@ const CSS = `
 .lobe-section-tokens { margin-left: auto; font-variant-numeric: tabular-nums; }
 /* the WebUI's own token counter (the whole prompt) floats over the first section's corner */
 .lobe-section:first-child .lobe-section-head { padding-right: 76px; }
+/* with the sections shown, that counter sits in the first section's head, beside its name */
+.prompt-row:has(.lobe-sections:not([hidden])) .token-counter { top: 0 !important; bottom: auto !important; right: 0 !important; margin: 0 !important; }
 .lobe-section-tokens.lobe-over { color: var(--color-accent, #f59e0b); font-weight: 600; }
 .lobe-section textarea {
   box-sizing: border-box; width: 100%; min-height: 64px; resize: vertical; margin: 0;
