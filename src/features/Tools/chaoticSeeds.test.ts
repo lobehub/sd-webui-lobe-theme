@@ -1,28 +1,25 @@
 import { describe, expect, it } from 'vitest';
 
-import { MAX_DIGITS, rollChaoticSeed } from './chaoticSeeds';
+import { type TabState, parse, serialize } from './chaoticSeeds';
 
-const digitsOf = (n: number) => String(n).length;
+const OFF: TabState = { enabled: false, max: 15, min: 4 };
 
-describe('rollChaoticSeed', () => {
-  it('stays within the digit range', () => {
-    for (let i = 0; i < 2000; i++) {
-      const seed = rollChaoticSeed(4, 15);
-      expect(Number.isSafeInteger(seed)).toBe(true);
-      expect(digitsOf(seed)).toBeGreaterThanOrEqual(4);
-      expect(digitsOf(seed)).toBeLessThanOrEqual(15);
-    }
+describe('chaotic seeds state box', () => {
+  it('writes "" when off and "min-max" when on', () => {
+    expect(serialize(OFF)).toBe('');
+    expect(serialize({ enabled: true, max: 12, min: 6 })).toBe('6-12');
+    expect(serialize({ enabled: true, max: 3, min: 9 })).toBe('3-9');
   });
 
-  it('takes the ends of the range from the random source', () => {
-    expect(rollChaoticSeed(4, 15, () => 0)).toBe(1000);
-    expect(rollChaoticSeed(4, 15, () => 0.999_999_999_999_999_9)).toBe(999_999_999_999_999);
-    expect(rollChaoticSeed(1, 1, () => 0)).toBe(0);
+  it('reads a pasted range, ordered and clamped to 1..15 digits', () => {
+    expect(parse('5-10', OFF)).toEqual({ enabled: true, max: 10, min: 5 });
+    expect(parse(' 12 - 3 ', OFF)).toEqual({ enabled: true, max: 12, min: 3 });
+    expect(parse('0-40', OFF)).toEqual({ enabled: true, max: 15, min: 1 });
   });
 
-  it('swaps a min above the max and clamps to 1..15 digits', () => {
-    expect(digitsOf(rollChaoticSeed(9, 3, () => 0))).toBe(3);
-    expect(digitsOf(rollChaoticSeed(30, 30))).toBe(MAX_DIGITS);
-    expect(digitsOf(rollChaoticSeed(-5, 0, () => 0.5))).toBe(1);
+  it('turns off on anything else and keeps the range', () => {
+    const on: TabState = { enabled: true, max: 9, min: 2 };
+    expect(parse('', on)).toEqual({ ...on, enabled: false });
+    expect(parse('abc', on)).toEqual({ ...on, enabled: false });
   });
 });

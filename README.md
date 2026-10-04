@@ -106,7 +106,7 @@ Under **Width** and **Height**:
 
 ### Chaotic seeds
 
-Under **Seed**, 🎲 **Chaotic seeds**: every **Generate** rolls a seed with a random number of digits, between **Digits** min and max (4 to 15 by default), so seeds jump across magnitudes instead of always landing around ten digits as `-1` does. The Seed box is skipped while it is on and keeps its value; the seed used is in the infotext, and ♻️ brings it back. With **Variation seed** strength above 0, that seed is rolled too.
+Under **Seed**, 🎲 **Chaotic seeds**: every image gets a seed with a random number of digits, between **Digits** min and max (4 to 15 by default), so seeds jump across magnitudes instead of always landing around ten digits as `-1` does. Each image of a batch gets its own, and the infotext records `Chaotic seeds: 4-15` beside the seed.
 
 ### Prompt sections
 
@@ -796,11 +796,11 @@ In the Studio layouts the WebUI's tabs become a rail on the left (pinned tabs as
 
 Under **Seed**, in txt2img and img2img (the reForge *Chaotic Seeds* extension, built into the theme):
 
-- 🎲 **Chaotic seeds** turns it on for that tab. Every **Generate** (and <kbd>Ctrl</kbd>+<kbd>Enter</kbd>, and Generate forever) first picks a number of digits between **Digits** min and max, then a seed with that many digits: with 4–15, a 5-digit seed is as likely as a 15-digit one.
-- The roll goes into the Seed box right before the WebUI reads it, and the box gets its own value back once the job has started, so turning it off leaves your seed as it was. The seed used is in the infotext; ♻️ brings it back.
-- With **Variation seed** strength above 0, the variation seed is rolled too, so a batch does not all vary the same way.
-- The choice and the range are remembered per tab, in the browser.
-- In a batch, the WebUI gives images 2, 3... the seed after the one before, as usual: it is the batch's first seed that is chaotic.
+- 🎲 **Chaotic seeds** turns it on for that tab. For each image, the theme's script (`scripts/chaotic_seeds.py`) first picks a number of digits between **Digits** min and max, then a seed with that many digits: with 4–15, a 5-digit seed is as likely as a 15-digit one.
+- Every image of a batch gets its own seed, and so does **Variation seed** when its strength is above 0, so a batch does not all vary the same way.
+- The Seed box is skipped while it is on and keeps its value. Each image's seed is in its infotext, with `Chaotic seeds: 4-15`; ♻️ brings the seed back, and pasting the parameters (PNG Info, ↙️, history) turns the tool on with that range, or off when the key is missing.
+- The choice and the range are remembered per tab, in the browser. Through the API, the script takes one argument: `"4-15"` to turn it on, `""` for off.
+- Remove the old extension if it is installed, or both will roll.
 
 **Theme Settings → Tools → Chaotic seeds** turns it off.
 

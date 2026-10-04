@@ -1,18 +1,14 @@
 /**
- * Chaotic seeds, under Seed in txt2img and img2img (from the reForge
- * extension of the same name, done in the browser):
- * - each Generate rolls a seed with a random number of digits, between a
- *   min and a max (4 to 15 by default), so seeds jump across magnitudes
- *   instead of all landing around ten digits as -1 does;
- * - the roll goes into the Seed box (and Variation seed, when its strength is
- *   above 0) right before the WebUI reads it, and the box gets its old value
- *   back once the job has started: the seed used is in the infotext, ♻️
- *   brings it back as usual.
+ * Chaotic seeds, under Seed in txt2img and img2img (the reForge extension of
+ * the same name, built into the theme): a toggle and a min-max number of
+ * digits. The seeds are rolled by scripts/chaotic_seeds.py, one per image of
+ * the job, so seeds jump across magnitudes instead of all landing around ten
+ * digits as -1 does; this side draws the controls and keeps the script's
+ * hidden state box ("" off, "4-15" on) in step with them, both ways: pasted
+ * parameters set the box, and the controls follow.
  */
 import { readableColor } from 'polished';
-import { $, type GenTab, numberInput, readNumber, setInputValue } from '@/scripts/webui';
-
-import { bus } from './bus';
+import { $, type GenTab, setInputValue } from '@/scripts/webui';
 
 export interface ChaoticSeedsText {
   digits: string;
@@ -24,19 +20,7 @@ export interface ChaoticSeedsText {
 export const MIN_DIGITS = 1;
 export const MAX_DIGITS = 15;
 
-/** A seed of min to max digits: the number of digits first, then a value of that many digits. */
-export const rollChaoticSeed = (minDigits: number, maxDigits: number, random: () => number = Math.random) => {
-  let lo = Math.min(MAX_DIGITS, Math.max(MIN_DIGITS, Math.round(minDigits)));
-  let hi = Math.min(MAX_DIGITS, Math.max(MIN_DIGITS, Math.round(maxDigits)));
-  if (lo > hi) [lo, hi] = [hi, lo];
-  const between = (a: number, b: number) => a + Math.floor(random() * (b - a + 1));
-  const digits = between(lo, hi);
-  const min = digits === 1 ? 0 : 10 ** (digits - 1);
-  const max = Math.min(10 ** digits - 1, Number.MAX_SAFE_INTEGER);
-  return between(min, max);
-};
-
-interface TabState {
+export interface TabState {
   enabled: boolean;
   max: number;
   min: number;
@@ -57,6 +41,21 @@ const load = (): Record<GenTab, TabState> => {
     txt2img: { ...DEFAULT_STATE, ...saved.txt2img },
   };
 };
+
+/** The script's state box value: "" off, "min-max" on. */
+export const serialize = ({ enabled, max, min }: TabState) => (enabled ? `${Math.min(min, max)}-${Math.max(min, max)}` : '');
+
+/** The controls from a state box value; a value that is not a range turns it off. */
+export const parse = (value: string, current: TabState): TabState => {
+  const match = value.trim().match(/^(\d+)\s*-\s*(\d+)$/);
+  if (!match) return { ...current, enabled: false };
+  const clamp = (n: number) => Math.min(MAX_DIGITS, Math.max(MIN_DIGITS, n));
+  const [lo, hi] = [clamp(Number(match[1])), clamp(Number(match[2]))];
+  return { enabled: true, max: Math.max(lo, hi), min: Math.min(lo, hi) };
+};
+
+const stateBox = (tab: GenTab) =>
+  $<HTMLTextAreaElement>(`#lobe_chaotic_seeds_${tab} textarea`) || $<HTMLInputElement>(`#lobe_chaotic_seeds_${tab} input`);
 
 const DICE = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.2" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.2" fill="currentColor"/><circle cx="15.5" cy="8.5" r="1.2" fill="currentColor"/><circle cx="8.5" cy="15.5" r="1.2" fill="currentColor"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></svg>';
 
@@ -107,6 +106,14 @@ export const startChaoticSeeds = ({ colors, text }: { colors: { border: string; 
     }
   };
 
+  const written: Partial<Record<GenTab, string>> = {};
+  const write = (tab: GenTab) => {
+    const value = serialize(state[tab]);
+    written[tab] = value;
+    const box = stateBox(tab);
+    if (box && box.value !== value) setInputValue(box, value);
+  };
+
   const draw = (panel: Panel) => {
     const { enabled, max, min } = state[panel.tab];
     panel.root.classList.toggle('on', enabled);
@@ -126,7 +133,8 @@ export const startChaoticSeeds = ({ colors, text }: { colors: { border: string; 
 
   const build = (tab: GenTab) => {
     const seed = $(`#${tab}_seed`);
-    if (!seed) return false;
+    // no state box: the WebUI has not loaded the script (restart it after an update)
+    if (!seed || !stateBox(tab)) return false;
     const row = $(`#${tab}_seed_row`) || seed;
     if (row.parentElement?.querySelector(':scope > .lobe-chaos')) return true;
     const root = document.createElement('div');
@@ -151,11 +159,13 @@ export const startChaoticSeeds = ({ colors, text }: { colors: { border: string; 
       max: select(state[tab].max, (value) => {
         state[tab].max = value;
         save();
+        write(tab);
         draw(panel);
       }),
       min: select(state[tab].min, (value) => {
         state[tab].min = value;
         save();
+        write(tab);
         draw(panel);
       }),
       root,
@@ -167,6 +177,7 @@ export const startChaoticSeeds = ({ colors, text }: { colors: { border: string; 
       event.preventDefault();
       state[tab].enabled = !state[tab].enabled;
       save();
+      write(tab);
       draw(panel);
     });
     panel.hint.className = 'lobe-chaos-hint';
@@ -175,42 +186,22 @@ export const startChaoticSeeds = ({ colors, text }: { colors: { border: string; 
     root.append(toggle, digits, panel.hint);
     row.after(root);
     panels.push(panel);
+    write(tab);
     draw(panel);
     return true;
   };
 
-  // The roll goes in on the click's way down, before Gradio reads the boxes;
-  // Ctrl+Enter and Generate forever click the same button.
-  const pending = new Map<GenTab, { seed?: string; subseed?: string }>();
-  const onClick = (event: MouseEvent) => {
-    const target = event.target as Element | null;
-    const button = target?.closest?.('#txt2img_generate, #img2img_generate');
-    if (!button) return;
-    const tab: GenTab = button.id === 'img2img_generate' ? 'img2img' : 'txt2img';
-    const { enabled, max, min } = state[tab];
-    if (!enabled) return;
-    const seedBox = numberInput(`${tab}_seed`);
-    if (!seedBox) return;
-    const before: { seed?: string; subseed?: string } = pending.get(tab) || { seed: seedBox.value };
-    setInputValue(seedBox, String(rollChaoticSeed(min, max)));
-    // otherwise every image varies the same way while the seeds go chaotic
-    const subseedBox = numberInput(`${tab}_subseed`);
-    if (subseedBox && (readNumber(`${tab}_subseed_strength`) || 0) > 0) {
-      if (!pending.has(tab)) before.subseed = subseedBox.value;
-      setInputValue(subseedBox, String(rollChaoticSeed(min, max)));
+  // Pasted parameters (PNG Info, ↙️, history) set the box: the controls follow.
+  const follow = setInterval(() => {
+    for (const panel of panels) {
+      const value = stateBox(panel.tab)?.value;
+      if (value === undefined || value === written[panel.tab]) continue;
+      state[panel.tab] = parse(value, state[panel.tab]);
+      written[panel.tab] = value;
+      save();
+      draw(panel);
     }
-    pending.set(tab, before);
-  };
-  document.addEventListener('click', onClick, true);
-
-  // Once the job has started the WebUI has read the boxes: put back what was there.
-  const offStart = bus.on('gen:start', ({ tab }) => {
-    const before = pending.get(tab as GenTab);
-    if (!before) return;
-    pending.delete(tab as GenTab);
-    if (before.seed !== undefined) setInputValue(numberInput(`${tab}_seed`), before.seed);
-    if (before.subseed !== undefined) setInputValue(numberInput(`${tab}_subseed`), before.subseed);
-  });
+  }, 1000);
 
   let tries = 0;
   const mount = setInterval(() => {
@@ -220,10 +211,11 @@ export const startChaoticSeeds = ({ colors, text }: { colors: { border: string; 
 
   return () => {
     clearInterval(mount);
-    document.removeEventListener('click', onClick, true);
-    offStart();
+    clearInterval(follow);
     style.remove();
     for (const panel of panels) {
+      const box = stateBox(panel.tab);
+      if (box) setInputValue(box, '');
       panel.root.remove();
       panel.row.classList.remove('lobe-chaos-on');
     }

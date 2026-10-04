@@ -1,0 +1,5 @@
+/* The state box of the theme's Chaotic seeds (scripts/chaotic_seeds.py): the theme sets it, nobody types in it. */
+#lobe_chaotic_seeds_txt2img,
+#lobe_chaotic_seeds_img2img {
+  display: none !important;
+}
