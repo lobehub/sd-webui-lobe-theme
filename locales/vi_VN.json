@@ -234,6 +234,10 @@
       "title": "Tỉ lệ khung hình và thông số gợi ý",
       "desc": "Dưới Width và Height: tỉ lệ khung hình theo kích thước gốc của model, khóa tỉ lệ, và số bước / CFG hợp với model đang nạp"
     },
+    "chaoticSeeds": {
+      "title": "Seed hỗn loạn",
+      "desc": "Dưới Seed: mỗi lần Generate có thể tung một seed với số chữ số ngẫu nhiên (mặc định 4 đến 15) thay cho -1, để seed nhảy qua nhiều cấp độ lớn"
+    },
     "cornerStyle": {
       "desc": "Góc của nút, ô nhập, khung và thẻ",
       "round": "Tròn",
@@ -451,6 +455,12 @@
       "steps": "bước",
       "cfg": "CFG",
       "distilled": "Distilled CFG"
+    },
+    "chaotic": {
+      "title": "Seed hỗn loạn",
+      "toggle": "Mỗi lần Generate tung một seed mới với số chữ số ngẫu nhiên; bỏ qua ô Seed",
+      "digits": "Chữ số",
+      "hint": "Đang bật: mỗi lần Generate tung một seed mới trong khoảng này và bỏ qua ô Seed. Seed đã dùng nằm trong infotext; ♻️ lấy lại nó."
     },
     "sections": {
       "add": "Thêm ô",

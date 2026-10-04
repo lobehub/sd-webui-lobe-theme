@@ -34,6 +34,7 @@ const SettingForm = memo(() => {
         ['enablePresets', 'presets'],
         ['enableLoraTools', 'loraTools'],
         ['enableSizeTools', 'sizeTools'],
+        ['enableChaoticSeeds', 'chaoticSeeds'],
         ['promptSections', 'promptSections'],
         ['enableTabProgress', 'tabProgress'],
         ['enableNotification', 'notification'],

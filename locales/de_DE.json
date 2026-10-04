@@ -234,6 +234,10 @@
       "title": "Seitenverhältnisse und empfohlene Einstellungen",
       "desc": "Unter Breite und Höhe: Seitenverhältnisse bei einer zum Modell passenden Basisgröße, eine Verhältnissperre sowie Schritte / CFG-Skala passend zum geladenen Modell"
     },
+    "chaoticSeeds": {
+      "title": "Chaotische Seeds",
+      "desc": "Unter Seed: Jedes Generieren kann statt -1 einen Seed mit zufälliger Stellenzahl würfeln (standardmäßig 4 bis 15), damit Seeds über Größenordnungen springen"
+    },
     "cornerStyle": {
       "desc": "Ecken von Schaltflächen, Feldern, Bereichen und Karten",
       "round": "Rund",
@@ -451,6 +455,12 @@
       "steps": "Schritte",
       "cfg": "CFG",
       "distilled": "Destilliertes CFG"
+    },
+    "chaotic": {
+      "title": "Chaotische Seeds",
+      "toggle": "Jedes Generieren würfelt einen neuen Seed mit zufälliger Stellenzahl; das Seed-Feld wird übergangen",
+      "digits": "Stellen",
+      "hint": "An: Jedes Generieren würfelt einen neuen Seed in diesem Bereich und ignoriert das Seed-Feld. Der verwendete Seed steht im Infotext; ♻️ holt ihn zurück."
     },
     "sections": {
       "add": "Abschnitt hinzufügen",

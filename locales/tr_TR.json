@@ -234,6 +234,10 @@
       "title": "En boy oranları ve önerilen ayarlar",
       "desc": "Width ve Height altında: modele uyan bir temel boyutta en boy oranları, oran kilidi ve yüklenen modele uygun adım / CFG scale değerleri"
     },
+    "chaoticSeeds": {
+      "title": "Kaotik seed'ler",
+      "desc": "Seed altında: her Oluştur, -1 yerine basamak sayısı rastgele (varsayılan 4 ile 15) bir seed çekebilir; seed'ler büyüklük mertebeleri arasında sıçrar"
+    },
     "cornerStyle": {
       "desc": "Düğme, alan, panel ve kartların köşeleri",
       "round": "Yuvarlak",
@@ -451,6 +455,12 @@
       "steps": "adım",
       "cfg": "CFG",
       "distilled": "Distilled CFG"
+    },
+    "chaotic": {
+      "title": "Kaotik seed'ler",
+      "toggle": "Her Oluştur, basamak sayısı rastgele yeni bir seed çeker; Seed kutusu yok sayılır",
+      "digits": "Basamak",
+      "hint": "Açık: her Oluştur bu aralıkta yeni bir seed çeker ve Seed kutusunu yok sayar. Kullanılan seed infotext'te yazar; ♻️ geri getirir."
     },
     "sections": {
       "add": "Bölüm ekle",

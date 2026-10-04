@@ -9,6 +9,7 @@ export interface WebuiSetting {
   confirmPageUnload: boolean;
   cornerStyle: 'sharp' | 'soft' | 'round';
   density: 'comfortable' | 'compact';
+  enableChaoticSeeds: boolean;
   enableCommandPalette: boolean;
   enableExtraNetworkSidebar: boolean;
   enableHighlight: boolean;
@@ -62,6 +63,7 @@ export const DEFAULT_SETTING: WebuiSetting = {
   confirmPageUnload: false,
   cornerStyle: 'soft',
   density: 'comfortable',
+  enableChaoticSeeds: true,
   enableCommandPalette: true,
   enableExtraNetworkSidebar: true,
   enableHighlight: true,

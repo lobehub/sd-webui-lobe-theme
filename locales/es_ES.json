@@ -234,6 +234,10 @@
       "title": "Relaciones de aspecto y ajustes sugeridos",
       "desc": "Bajo Ancho y Alto: relaciones de aspecto sobre un tamaño base que sigue al modelo, un bloqueo de proporción, y pasos / escala CFG adecuados al modelo cargado"
     },
+    "chaoticSeeds": {
+      "title": "Semillas caóticas",
+      "desc": "Bajo Seed: cada Generar puede tirar una semilla con un número aleatorio de dígitos (de 4 a 15 por defecto) en lugar de -1, para que las semillas salten entre magnitudes"
+    },
     "cornerStyle": {
       "desc": "Esquinas de botones, campos, paneles y tarjetas",
       "round": "Redondeadas",
@@ -451,6 +455,12 @@
       "steps": "pasos",
       "cfg": "CFG",
       "distilled": "CFG destilado"
+    },
+    "chaotic": {
+      "title": "Semillas caóticas",
+      "toggle": "Cada Generar tira una semilla nueva con un número aleatorio de dígitos; se ignora la casilla Seed",
+      "digits": "Dígitos",
+      "hint": "Activado: cada Generar tira una semilla nueva en este rango e ignora la casilla Seed. La semilla usada queda en el infotext; ♻️ la recupera."
     },
     "sections": {
       "add": "Añadir sección",

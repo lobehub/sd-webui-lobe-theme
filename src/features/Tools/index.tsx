@@ -1,7 +1,7 @@
 /**
  * The theme's tools that are not tied to one panel: the progress hook, tab
  * progress, history capture, LoRA card tools, image buttons under Generate,
- * aspect ratios and suggested settings, and the lazily loaded command
+ * aspect ratios and suggested settings, chaotic seeds, and the lazily loaded command
  * palette and history drawer.
  */
 import { useTheme } from 'antd-style';
@@ -13,6 +13,7 @@ import { selectors, useAppStore } from '@/store';
 
 import { startSingleAccordion } from './accordions';
 import { bus } from './bus';
+import { startChaoticSeeds } from './chaoticSeeds';
 import { startExtraNetworkRail } from './extraNetworkRail';
 import { startFolderTree } from './folderTree';
 import { startProgressFx } from './progressFx';
@@ -144,6 +145,19 @@ const Tools = memo(() => {
       },
     });
   }, [setting.enableSizeTools]);
+
+  useEffect(() => {
+    if (!setting.enableChaoticSeeds) return;
+    return startChaoticSeeds({
+      colors: { border: theme.colorBorder, fill: theme.colorFillQuaternary, primary: theme.colorPrimary },
+      text: {
+        digits: t('tools.chaotic.digits'),
+        hint: t('tools.chaotic.hint'),
+        title: t('tools.chaotic.title'),
+        toggle: t('tools.chaotic.toggle'),
+      },
+    });
+  }, [setting.enableChaoticSeeds]);
 
   useEffect(() => {
     const offPalette = bus.on('open:palette', () => {

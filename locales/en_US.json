@@ -234,6 +234,10 @@
       "title": "Aspect ratios and suggested settings",
       "desc": "Under Width and Height: aspect ratios at a base size that follows the model, a ratio lock, and steps / CFG scale suited to the loaded model"
     },
+    "chaoticSeeds": {
+      "title": "Chaotic seeds",
+      "desc": "Under Seed: each Generate can roll a seed with a random number of digits (4 to 15 by default) instead of -1, so seeds jump across magnitudes"
+    },
     "cornerStyle": {
       "desc": "Corners of buttons, fields, panels and cards",
       "round": "Round",
@@ -451,6 +455,12 @@
       "steps": "steps",
       "cfg": "CFG",
       "distilled": "Distilled CFG"
+    },
+    "chaotic": {
+      "title": "Chaotic seeds",
+      "toggle": "Each Generate rolls a new seed with a random number of digits; the Seed box is skipped",
+      "digits": "Digits",
+      "hint": "On: every Generate rolls a new seed in this range and ignores the Seed box. The seed used is in the infotext; ♻️ brings it back."
     },
     "sections": {
       "add": "Add section",

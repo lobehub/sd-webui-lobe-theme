@@ -234,6 +234,10 @@
       "title": "Proporções e Configurações Sugeridas",
       "desc": "Abaixo de Largura e Altura: proporções em um tamanho base que acompanha o modelo, um bloqueio de proporção e passos / escala CFG adequados ao modelo carregado"
     },
+    "chaoticSeeds": {
+      "title": "Seeds caóticas",
+      "desc": "Abaixo de Seed: cada Gerar pode sortear uma seed com número aleatório de dígitos (4 a 15 por padrão) em vez de -1, para as seeds saltarem entre magnitudes"
+    },
     "cornerStyle": {
       "desc": "Cantos de botões, campos, painéis e cartões",
       "round": "Arredondados",
@@ -451,6 +455,12 @@
       "steps": "passos",
       "cfg": "CFG",
       "distilled": "CFG destilado"
+    },
+    "chaotic": {
+      "title": "Seeds caóticas",
+      "toggle": "Cada Gerar sorteia uma nova seed com número aleatório de dígitos; a caixa Seed é ignorada",
+      "digits": "Dígitos",
+      "hint": "Ligado: cada Gerar sorteia uma nova seed nesta faixa e ignora a caixa Seed. A seed usada fica no infotext; ♻️ a traz de volta."
     },
     "sections": {
       "add": "Adicionar seção",

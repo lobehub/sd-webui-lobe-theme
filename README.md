@@ -57,6 +57,7 @@ The original Lobe Theme was made for AUTOMATIC1111 on Gradio 3. **Redux brings i
 - [Runs on all three Forges](#runs-on-all-three-forges)
 - [Layout presets: Classic and Studio](#layout-presets-classic-and-studio)
 - [Aspect ratios and suggested settings](#aspect-ratios-and-suggested-settings)
+- [Chaotic seeds](#chaotic-seeds)
 - [Prompt sections](#prompt-sections)
 - [A tab bar that stays short](#a-tab-bar-that-stays-short)
 - [Extra Network, redesigned](#extra-network-redesigned)
@@ -102,6 +103,10 @@ Under **Width** and **Height**:
 - **Suggested**: steps and CFG for the loaded model's family, including Lightning, Turbo, LCM, Hyper, DMD2 and Schnell checkpoints.
 
 <br clear="right"/>
+
+### Chaotic seeds
+
+Under **Seed**, 🎲 **Chaotic seeds**: every **Generate** rolls a seed with a random number of digits, between **Digits** min and max (4 to 15 by default), so seeds jump across magnitudes instead of always landing around ten digits as `-1` does. The Seed box is skipped while it is on and keeps its value; the seed used is in the infotext, and ♻️ brings it back. With **Variation seed** strength above 0, that seed is rolled too.
 
 ### Prompt sections
 
@@ -780,6 +785,24 @@ In the Extra Network sidebar, the model types (Textual Inversion, Hypernetworks,
 **Theme Settings → Appearance → Layout preset**: *Classic*, *Studio* or *Studio, mirrored*, each shown as a small picture of where the blocks go. Only the layout changes.
 
 In the Studio layouts the WebUI's tabs become a rail on the left (pinned tabs as icons, extension tabs by their initials, **All tabs** below them, and the theme's history, palette, light/dark and settings buttons at the foot), and the header goes. In txt2img and img2img, the controls and the result sit side by side, each as tall as the window and scrolling on its own. At the top of the controls, **Prompt** shows the prompts with their tools and styles, **Parameters** the sampler, size, seed, Hires. fix and the rest (and img2img's image), **Extensions** the extensions' blocks and scripts; **Generate** stays in view. The choice is remembered per tab. The WebUI's blocks are laid out with a CSS grid and not moved, so extensions keep working. Windows narrower than 1000 px, and phones, get the usual layout. With a Studio layout, *Split previewer* has no effect.
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
+#### `28` Chaotic Seeds
+
+Under **Seed**, in txt2img and img2img (the reForge *Chaotic Seeds* extension, built into the theme):
+
+- 🎲 **Chaotic seeds** turns it on for that tab. Every **Generate** (and <kbd>Ctrl</kbd>+<kbd>Enter</kbd>, and Generate forever) first picks a number of digits between **Digits** min and max, then a seed with that many digits: with 4–15, a 5-digit seed is as likely as a 15-digit one.
+- The roll goes into the Seed box right before the WebUI reads it, and the box gets its own value back once the job has started, so turning it off leaves your seed as it was. The seed used is in the infotext; ♻️ brings it back.
+- With **Variation seed** strength above 0, the variation seed is rolled too, so a batch does not all vary the same way.
+- The choice and the range are remembered per tab, in the browser.
+- In a batch, the WebUI gives images 2, 3... the seed after the one before, as usual: it is the batch's first seed that is chaotic.
+
+**Theme Settings → Tools → Chaotic seeds** turns it off.
 
 <div align="right">
 

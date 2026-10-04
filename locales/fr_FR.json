@@ -234,6 +234,10 @@
       "title": "Formats d'image et réglages suggérés",
       "desc": "Sous Largeur et Hauteur : formats à une taille de base adaptée au modèle, un verrouillage du format, et étapes / échelle CFG adaptées au modèle chargé"
     },
+    "chaoticSeeds": {
+      "title": "Seeds chaotiques",
+      "desc": "Sous Seed : chaque génération peut tirer une seed au nombre de chiffres aléatoire (4 à 15 par défaut) au lieu de -1, pour que les seeds sautent d'un ordre de grandeur à l'autre"
+    },
     "cornerStyle": {
       "desc": "Coins des boutons, champs, panneaux et cartes",
       "round": "Arrondi",
@@ -451,6 +455,12 @@
       "steps": "étapes",
       "cfg": "CFG",
       "distilled": "CFG distillé"
+    },
+    "chaotic": {
+      "title": "Seeds chaotiques",
+      "toggle": "Chaque génération tire une nouvelle seed au nombre de chiffres aléatoire ; le champ Seed est ignoré",
+      "digits": "Chiffres",
+      "hint": "Activé : chaque génération tire une nouvelle seed dans cette plage et ignore le champ Seed. La seed utilisée figure dans l'infotext ; ♻️ la rappelle."
     },
     "sections": {
       "add": "Ajouter une section",
