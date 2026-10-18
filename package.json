@@ -114,7 +114,7 @@
     "@types/semver": "^7.5.8",
     "@vitejs/plugin-react-swc": "^3.7.0",
     "@vitest/coverage-v8": "^1.6.0",
-    "commitlint": "^19.3.0",
+    "commitlint": "^21.0.0",
     "dotenv": "^16.4.5",
     "eslint": "^8.57.0",
     "fast-deep-equal": "^3.1.3",
