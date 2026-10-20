@@ -93,7 +93,7 @@
     "react-rnd": "^10.4.10",
     "react-tag-input": "6.9.0",
     "semver": "^7.6.2",
-    "shiki": "^1.6.0",
+    "shiki": "^4.0.0",
     "split-smartly2": "^2.0.1",
     "swr": "^2.2.5",
     "url-join": "^5.0.0",
