@@ -10,7 +10,7 @@ module.exports = {
   entryLocale: 'en_US',
   output: 'locales',
   outputLocales: outputLocales,
-  modelName: 'gpt-3.5-turbo-0125',
+  modelName: 'gpt-5.6-terra',
   experimental: {
     jsonMode: true,
   },
