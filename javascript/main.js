@@ -2034,13 +2034,19 @@ ld=cd,function(){var A={}.hasOwnProperty;function e(){for(var A="",e=0;e<argumen
         overflow: hidden auto;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(${n}px, 1fr));
-        flex: none !important;
+        flex: 1 1 auto !important;
+        width: 100% !important;
+        min-width: 0 !important;
         gap: 8px;
 
         max-height: 100%;
         padding: 16px;
 
         border: unset !important;
+
+        .extra-network-dirs {
+          grid-column: 1 / -1;
+        }
 
         .name {
           background: unset !important;

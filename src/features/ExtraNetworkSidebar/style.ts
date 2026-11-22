@@ -45,13 +45,18 @@ export const useStyles = createStyles(
         overflow: hidden auto;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(${size}px, 1fr));
-        flex: none !important;
+        flex: 1 1 auto !important;
         gap: 8px;
 
+        width: 100% !important;
+        min-width: 0 !important;
         max-height: 100%;
         padding: 16px;
-
         border: unset !important;
+
+        .extra-network-dirs {
+          grid-column: 1 / -1;
+        }
 
         .name {
           background: unset !important;
@@ -132,9 +137,9 @@ export const useStyles = createStyles(
               flex: none;
 
               height: 32px;
+              border-radius: ${token.borderRadius}px;
 
               background: ${token.colorFillTertiary};
-              border-radius: ${token.borderRadius}px;
             }
           }
         }
@@ -213,10 +218,10 @@ export const useStyles = createStyles(
           width: 100% !important;
           height: ${size * 1.5}px !important;
           margin: 0 !important;
-
-          background-size: cover;
           border: 1px solid ${token.colorBorderSecondary};
           border-radius: ${token.borderRadiusSM}px;
+
+          background-size: cover;
           outline: none;
 
           transition:
@@ -249,8 +254,8 @@ export const useStyles = createStyles(
 
         .button-row {
           padding: 0 4px;
-          background: rgba(0, 0, 0, 50%);
           border-bottom-left-radius: ${token.borderRadius}px;
+          background: rgba(0, 0, 0, 50%);
 
           > div {
             font-size: var(--text-md) !important;

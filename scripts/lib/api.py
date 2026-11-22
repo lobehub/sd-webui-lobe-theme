@@ -8,9 +8,10 @@ from scripts.lib.package import LobePackage
 from scripts.lib.prompt import LobePrompt
 from scripts.lib.locale import LobeLocale
 from scripts.lib.lobe_log import LobeLog
+from scripts.lib.lora_tags import LoraTagManager
 
 class LobeApi:
-    def __init__(self, config: LobeConfig, package: LobePackage, prompt:LobePrompt, locale: LobeLocale):
+    def __init__(self, config: LobeConfig, package: LobePackage, prompt: LobePrompt, locale: LobeLocale):
         self.package = package
         self.prompt = prompt
         self.config = config
@@ -70,4 +71,26 @@ class LobeApi:
             return Response(
                 content=json.dumps({"message": "Config deleted successfully"}),
                 media_type="application/json", status_code=200
+            )
+
+        @app.get("/lobe/lora-tags")
+        async def lobe_lora_tags_get(force: bool = False):
+            LobeLog.debug("lobe_lora_tags_get")
+            mgr = LoraTagManager.instance()
+            data = mgr.scan_all(force=force)
+            return Response(
+                content=json.dumps(data, ensure_ascii=False),
+                media_type="application/json",
+                status_code=200
+            )
+
+        @app.get("/lobe/lora-tag")
+        async def lobe_lora_tag_get(name: str):
+            LobeLog.debug(f"lobe_lora_tag_get: {name}")
+            mgr = LoraTagManager.instance()
+            tags = mgr.get_tags_for_lora(name)
+            return Response(
+                content=json.dumps({"name": name, "tags": tags}, ensure_ascii=False),
+                media_type="application/json",
+                status_code=200
             )
